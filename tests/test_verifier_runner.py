@@ -303,7 +303,7 @@ try:
             repo_root=os.path.join(tmp, "fakerepo"), shard=False,
         ),
         "shard=False still guards, it does not disable the check",
-        substr="DEVIATIONS 13",
+        substr="so it is refused here instead",
     )
 
     expect_raises(
@@ -313,7 +313,7 @@ try:
             repo_root=os.path.join(tmp, "fakerepo"), dry_run=True,
         ),
         "dry_run guards too, which is the point of running it first",
-        substr="DEVIATIONS 13",
+        substr="so it is refused here instead",
     )
 
     print("   a single shard is not routed through the concatenation path")
@@ -505,7 +505,7 @@ try:
         lambda: vr.run_verifier("summarization", sm_in, os.path.join(tmp, "g.csv"), repo_root=fake,
                                 model="gpt-3.5-turbo-0125", client=LLMClient(_Backend())),
         "a gpt model for summarization is refused before any call",
-        substr="P0-6.1",
+        substr="this project uses no OpenAI model",
     )
 
     backend = _Backend(fail_on="entail")

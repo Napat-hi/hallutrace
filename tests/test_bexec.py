@@ -319,7 +319,7 @@ else:
        "25 of them emptied by the tail rule (0.5%): a line break is a boundary, and only "
        "a response that hit the cap is stripped (71 without that gate)")
 
-print("7. A2's real layout, rebuilt from the generation plan (tasks straddle batches)")
+print("7. the real batch layout, rebuilt from the generation plan (tasks straddle batches)")
 import collections
 plan_rows = list(csv.DictReader(open(os.path.join(PLAN_DIR, "dclm-7b.csv"), encoding="utf-8")))
 a2 = tempfile.mkdtemp()

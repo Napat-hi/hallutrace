@@ -39,7 +39,7 @@ eq(dc.verifier_text({"response": "I'm sorry, I cannot answer that.", "finish_rea
 eq(dc.verifier_text({"response": "He was born in Rome. He studied", "finish_reason": None}, DET),
    "He was born in Rome. He studied", "no finish_reason is treated as finished, as in bexec")
 
-print("2. candidates from A2 batches")
+print("2. candidates from generation batches")
 root = tempfile.mkdtemp()
 MODELS = ["dclm-7b", "olmo17-7b", "olmo2-7b", "pythia-69b", "redpajama-7b"]
 prompts = {}

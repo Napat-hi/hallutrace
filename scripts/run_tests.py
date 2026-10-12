@@ -63,8 +63,7 @@ def main() -> int:
             % (PROD_CACHE, ", ".join(polluted_by))
         )
         print(
-            "This file cannot be regenerated (D-013) and .gitignore lets it be "
-            "`git add`ed (D-021); no test may touch the real path. Point "
+            "This file cannot be regenerated, and no test may touch the real path. Point "
             "HALLUTRACE_CACHE_PATH, or whatever the test's own equivalent is, at a "
             "path under a temp directory instead."
         )

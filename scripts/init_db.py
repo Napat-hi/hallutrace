@@ -30,7 +30,7 @@ What this will NOT do:
     db/hallutrace.sqlite yourself, run this, then reload prompts and
     generations. That is safe: everything in it can be regenerated.
   * Never delete db/api_cache.sqlite to "start clean". It holds paid API answers
-    that cannot be bought back once an endpoint retires (D-013).
+    that cannot be bought back once an endpoint retires.
   * It loads no data. Loading is store.load_prompts / store.load_generations.
 """
 

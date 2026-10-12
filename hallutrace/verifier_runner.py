@@ -93,12 +93,12 @@ TASKS = {
         unique_by=("name",),
         shard_by=("model", "sample_index"),
         notes=(
-            "Wraps OpenFActScore after patch halogen-p1-8 (DEVIATIONS 8). No "
+            "Wraps OpenFActScore after patch halogen-p1-8. No "
             "API key: both the atomic fact generator and the validator are "
             "local Hugging Face models, set through HALLUTRACE_AFG_MODEL and "
             "HALLUTRACE_AFV_MODEL. Needs the enwiki knowledge source at "
             "HALLUTRACE_FACTSCORE_DIR. Output keeps the input filename, so the "
-            "input and output directories must differ. DEVIATIONS 13: name "
+            "input and output directories must differ. The name "
             "must be unique within one call, so the wrapper shards on "
             "(model, sample_index) and refuses a frame that still repeats."
         ),
@@ -270,8 +270,8 @@ def _build(spec: TaskSpec, model: str, keydir: str, client=None):
         if "gpt" in model:
             # get_response_target sends any name containing "gpt" to OpenAI.
             raise ValueError(
-                "%s would send %r to OpenAI; P0-6.1 forbids any OpenAI "
-                "dependency. Use a Together hosted model." % (spec.name, model)
+                "%s would send %r to OpenAI; this project uses no OpenAI "
+                "model. Use a Together hosted model." % (spec.name, model)
             )
         # one model for both stages
         return klass(
@@ -343,8 +343,8 @@ def _check_unique(spec: TaskSpec, df: pd.DataFrame, where: str) -> None:
     raise ValueError(
         "%s requires %s to be unique within one call, and %s repeats %d of "
         "them (%d rows in total). Worst: %s. HALoGEN would raise "
-        "InvalidIndexError on this *after* scoring every atomic fact "
-        "(DEVIATIONS 13), so it is refused here instead.%s"
+        "InvalidIndexError on this *after* scoring every atomic fact, "
+        "so it is refused here instead.%s"
         % (
             spec.name,
             " + ".join(spec.unique_by),
