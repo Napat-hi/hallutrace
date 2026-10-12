@@ -31,6 +31,8 @@ with our patches applied, and the prompts are referenced by id.
 | `data/prompts_manifest.json` | The draw: seed 20260916, 400 per task, strata, pool sizes, HALoGEN commit |
 | `scripts/draw_sample.py` | Redraws the sample from HALoGEN's released prompt files |
 | `data/generation_plan/` | One file per model: seed, sampling settings, token budget and fixed batch for each of the 96,000 generations |
+| `scripts/build_generation_plan.py` | Rebuilds `data/generation_plan/` from `data/prompts.csv` |
+| `modal_app.py` | The Modal app: model download, generation, verification and the Biographies run, one entrypoint per step (`modal run modal_app.py::<name>`); needs the Modal secrets named at its top |
 | `patches/` | Our changes to HALoGEN, applied on top of the pinned commit |
 | `locks/` | Exact package versions, locally and in each container image |
 | `hallutrace/` | Shared code: the abstention detector, outcomes and the token-limit tail rule, HALoGEN's extraction prompts and parsers, one wrapper for all verifiers, the LLM client and API cache, verifier inputs, and the Biographies run and filter |
