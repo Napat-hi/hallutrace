@@ -1,0 +1,319 @@
+diff --git a/scorers/abstention_detector.py b/scorers/abstention_detector.py
+index 4b3d7f9..be03bb5 100644
+--- a/scorers/abstention_detector.py
++++ b/scorers/abstention_detector.py
+@@ -1,46 +1,23 @@
+-class AbstentionScorer:
+-    def __init__(self):
+-        self.invalid_mentions = [
+-            "I could not find any information",
+-            "The search results do not provide",
+-            "There is no information",
+-            "There are no search results",
+-            "there are no provided search results",
+-            "not provided in the search results",
+-            "is not mentioned in the provided search results",
+-            "There seems to be a mistake in the question",
+-            "Not sources found",
+-            "No sources found",
+-            "Try a more general question",
+-            "Unfortunately,",
+-            "There doesn't seem to be",
+-            "There does not seem to be",
+-            "I do not",
+-            "I don't",
+-            "**No relevant",
+-            "I'm afraid",
+-            "I am afraid",
+-            "I apologize,",
+-            "I'm sorry",
+-            "I am sorry"
+-            "Sorry",
+-            "provide more",
+-            "I am not familiar with",
+-            "I'm not familiar with",
+-        ]
++"""HALoGEN abstention scorer, reading the shared phrase list."""
+ 
+-    def is_response_abstained(self, generation):
+-        """
+-        Detect if the generation is an abstention.
+-        """
++# The phrase list used to be duplicated here and in src/scientific_attribution.py,
++# and only one copy was fixed. Both now read the list in hallutrace/abstention.py.
++try:
++    from hallutrace.abstention import PHRASES_FIXED, AbstentionDetector
++except ImportError as _exc:  # pragma: no cover
++    raise ImportError(
++        "hallutrace.abstention is the single source for the abstention phrase "
++        "list. Put the hallutrace-modal repo root on PYTHONPATH before "
++        "importing HALoGEN, or use hallutrace.verifier_runner, which does it."
++    ) from _exc
+ 
++class AbstentionScorer:
++    """Unchanged behaviour. The phrase list now comes from one place."""
+ 
+-        for x in self.invalid_mentions:
+-            # print(generation)
+-            try:
+-                if generation and x in generation:
+-                    return True
+-            except Exception as e:
+-                return True
++    def __init__(self):
++        self.invalid_mentions = list(PHRASES_FIXED)
++        self._detector = AbstentionDetector("fixed")
+ 
+-        return False
++    def is_response_abstained(self, generation):
++        """Detect if the generation is an abstention."""
++        return self._detector.is_abstained(generation)
+diff --git a/src/scientific_attribution.py b/src/scientific_attribution.py
+index b8b192b..9693599 100644
+--- a/src/scientific_attribution.py
++++ b/src/scientific_attribution.py
+@@ -7,6 +7,25 @@ import requests
+ import time
+ from together import Together
+ 
++# This file carried its own copy of the abstention phrase list. It now reads the
++# list in hallutrace/abstention.py, as scorers/abstention_detector.py does.
++try:
++    from hallutrace.abstention import PHRASES_FIXED, AbstentionDetector
++except ImportError as _exc:  # pragma: no cover
++    raise ImportError(
++        "hallutrace.abstention is the single source for the abstention phrase "
++        "list. Put the hallutrace-modal repo root on PYTHONPATH before "
++        "importing HALoGEN, or use hallutrace.verifier_runner, which does it."
++    ) from _exc
++
++_ABSTENTION = AbstentionDetector("fixed")
++
++# Verdicts besides a title: UNVERIFIABLE means the lookup failed; NOT_FOUND means
++# the API answered and no such paper exists.
++UNVERIFIABLE = "__UNVERIFIABLE__"
++NOT_FOUND = "__NOT_FOUND__"
++
++
+ class ReferencesEvaluator:
+     def __init__(self, s2_api_key, together_api_key, model="meta-llama/Llama-3.3-70B-Instruct-Turbo"):
+         """
+@@ -20,26 +39,11 @@ class ReferencesEvaluator:
+         self.client = Together(api_key=together_api_key)
+         self.model = model
+         
+-        self.invalid_mentions = [
+-            "I could not find any information", "The search results do not provide",
+-            "There is no information", "There are no search results",
+-            "there are no provided search results", "not provided in the search results",
+-            "is not mentioned in the provided search results", "There seems to be a mistake in the question",
+-            "Not sources found", "No sources found", "Try a more general question",
+-            "Unfortunately,", "There doesn't seem to be", "There does not seem to be",
+-            "I do not", "I don't", "**No relevant", "I'm afraid",
+-            "I am afraid", "I apologize,", "I'm sorry", "I am sorry",
+-            "Sorry", "provide more", "I am not familiar with", "I'm not familiar with",
+-        ]
++        self.invalid_mentions = list(PHRASES_FIXED)
+ 
+     def _is_response_abstained(self, response):
+         """Check if the response abstains from providing useful information."""
+-        if not isinstance(response, str):  # Handle non-string values like NaN
+-            return True
+-        for phrase in self.invalid_mentions:
+-            if phrase in response:
+-                return True
+-        return False
++        return _ABSTENTION.is_abstained(response)
+ 
+     def _generate_response(self, prompt):
+         """Generates a response to extract atomic units from a prompt."""
+@@ -100,33 +104,30 @@ class ReferencesEvaluator:
+         headers = {"x-api-key": self.s2_api_key}
+ 
+         if not title or not isinstance(title, str):
+-            return None
++            return UNVERIFIABLE
+ 
+         query_title = '+'.join(title.split())
+-        url = f"{base_url}search?query={query_title}&fields=url"
+-
+-        time.sleep(1)  # Delay to avoid hitting rate limits
+-        response = requests.get(url, headers=headers)
+-
+-        if response.status_code == 200:
+-            title_search_results = response.json()
+-            if 'data' in title_search_results and title_search_results['data']:
+-                paper_id = title_search_results['data'][0]['paperId']
+-                paper_url = f"{base_url}{paper_id}"
+-
+-                retry_count = 0
+-                while retry_count < 3:
+-                    paper_response = requests.get(paper_url, headers=headers)
+-
+-                    if paper_response.status_code == 200:
+-                        data = paper_response.json()
+-                        return data.get('title', '')
+-                    elif paper_response.status_code == 429:
+-                        retry_count += 1
+-                        time.sleep(5)
+-                    else:
+-                        return ''
+-        return ''
++        # ask for the title here instead of a second request per title
++        url = f"{base_url}search?query={query_title}&fields=title"
++
++        retry_count = 0
++        while retry_count < 3:
++            time.sleep(1)  # /paper/search is capped at 1 req/s even with a key
++            response = requests.get(url, headers=headers)
++
++            if response.status_code == 200:
++                results = response.json()
++                if results.get('data'):
++                    return results['data'][0].get('title', UNVERIFIABLE)
++                return NOT_FOUND
++            elif response.status_code == 429:
++                retry_count += 1
++                time.sleep(5)
++            else:
++                # a failed lookup is unverifiable, not hallucinated
++                return UNVERIFIABLE
++
++        return UNVERIFIABLE
+ 
+     def _process_titles(self, titles):
+         """
+@@ -180,8 +181,21 @@ class ReferencesEvaluator:
+             lambda titles: self._process_titles(titles) if isinstance(titles, list) else []
+         )
+ 
++        # hallucinated only when the API answered and the title does not match;
++        # UNVERIFIABLE units are reported separately
+         df["hallucinated_atomic_units"] = df.apply(
+-            lambda row: [a for a, r in zip(row["atomic_units"], row["s2_titles"]) if self._clean_text(a) != self._clean_text(r)],
++            lambda row: [
++                a for a, r in zip(row["atomic_units"], row["s2_titles"])
++                if r != UNVERIFIABLE and self._clean_text(a) != self._clean_text(r)
++            ],
++            axis=1
++        )
++
++        df["unverifiable_atomic_units"] = df.apply(
++            lambda row: [
++                a for a, r in zip(row["atomic_units"], row["s2_titles"])
++                if r == UNVERIFIABLE
++            ],
+             axis=1
+         )
+ 
+diff --git a/verifiers/simplification.py b/verifiers/simplification.py
+index af01a0a..dfd3e90 100644
+--- a/verifiers/simplification.py
++++ b/verifiers/simplification.py
+@@ -8,9 +8,12 @@ import pickle
+ 
+ 
+ class SimplificationEvaluator:
+-    def __init__(self, decomposition_api_key, entailment_api_key, decomposition_model, entailment_model):
+-        self.decomposition_api_key = decomposition_api_key,
+-        self.entailment_api_key = entailment_api_key,
++    def __init__(self, decomposition_api_key, entailment_api_key,
++                 decomposition_model="meta-llama/Llama-3.3-70B-Instruct-Turbo",
++                 entailment_model="meta-llama/Llama-3.3-70B-Instruct-Turbo"):
++        # the released code had trailing commas here, which made both keys 1-tuples
++        self.decomposition_api_key = decomposition_api_key
++        self.entailment_api_key = entailment_api_key
+         self.decomposition_model_name = decomposition_model
+         self.entailment_model_name = entailment_model
+ 
+@@ -95,10 +98,6 @@ class SimplificationEvaluator:
+         response = get_response_target(
+             full_prompt, self.entailment_model_name, self.entailment_api_key)
+ 
+-        print(full_prompt)
+-        print(response)
+-        # import pdb
+-        # pdb.set_trace()
+         return "yes" in response.lower()
+ 
+     def decompose(self, text):
+@@ -150,8 +149,6 @@ class SimplificationEvaluator:
+             #     break
+             row_count += 1
+ 
+-            print(row)
+-
+             # check how logn the row is
+ 
+             if len(row) == 4:
+@@ -166,7 +163,6 @@ class SimplificationEvaluator:
+             parsed_aus = self.decompose(response)
+             claims = []
+             for each_au in parsed_aus:
+-                print(each_au)
+                 is_supported = str(self.get_entailment(passage, each_au))
+ 
+                 claims.append({"atom": each_au, "is_supported": is_supported})
+@@ -199,8 +195,7 @@ def main():
+     # Example usage:
+ 
+     # use openai key for decomposition and together key for entailment
+-    evaluator = SimplificationEvaluator(decomposition_api_key="", entailment_api_key="", decomposition_model="gpt-3.5-turbo-0125",
+-                                        entailment_model="meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo")
++    evaluator = SimplificationEvaluator(decomposition_api_key="", entailment_api_key="")
+ 
+ 
+ 
+diff --git a/verifiers/summarization.py b/verifiers/summarization.py
+index e769e9e..d1f7b03 100644
+--- a/verifiers/summarization.py
++++ b/verifiers/summarization.py
+@@ -8,7 +8,9 @@ import pickle
+ 
+ 
+ class SummarizationEvaluator:
+-    def __init__(self, decomposition_api_key, entailment_api_key, decomposition_model, entailment_model):
++    def __init__(self, decomposition_api_key, entailment_api_key,
++                 decomposition_model="meta-llama/Llama-3.3-70B-Instruct-Turbo",
++                 entailment_model="meta-llama/Llama-3.3-70B-Instruct-Turbo"):
+         self.decomposition_api_key = decomposition_api_key
+         self.entailment_api_key = entailment_api_key
+         self.decomposition_model_name = decomposition_model
+@@ -95,10 +97,6 @@ class SummarizationEvaluator:
+         response = get_response_target(
+             full_prompt, self.entailment_model_name, self.entailment_api_key)
+ 
+-        print(full_prompt)
+-        print(response)
+-        # import pdb
+-        # pdb.set_trace()
+         return "yes" in response.lower()
+ 
+     def decompose(self, text):
+@@ -140,8 +138,6 @@ class SummarizationEvaluator:
+ 
+             row_count += 1
+ 
+-            print(row)
+-
+             # check how logn the row is
+ 
+             if len(row) == 4:
+@@ -158,7 +154,6 @@ class SummarizationEvaluator:
+                 parsed_aus = self.decompose(response)
+                 claims = []
+                 for each_au in parsed_aus:
+-                    print(each_au)
+                     is_supported = str(self.get_entailment(passage, each_au))
+ 
+                     claims.append(
+@@ -195,8 +190,7 @@ class SummarizationEvaluator:
+ def main():
+     # Example usage:
+     # Specify OpenAI key for decomposition, and together key for entailment (if using a together-hosted model instead of a local one)
+-    evaluator = SummarizationEvaluator(decomposition_api_key="",entailment_api_key="", decomposition_model="gpt-3.5-turbo-0125",
+-                                       entailment_model="meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo")
++    evaluator = SummarizationEvaluator(decomposition_api_key="", entailment_api_key="")
+ 
+     response_file = "./responses/summarization/gpt_3.5_turbo_0125_summarization.csv"
+ 
