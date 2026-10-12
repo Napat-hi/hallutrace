@@ -38,6 +38,9 @@ with our patches applied, and the prompts are referenced by id.
 | `hallutrace/` | Shared code: the abstention detector, outcomes and the token-limit tail rule, HALoGEN's extraction prompts and parsers, one wrapper for all verifiers, the LLM client and API cache, verifier inputs, and the Biographies run and filter |
 | `scripts/generation_quality.py` | Truncation and repetition in the generations |
 | `scripts/halogen_response_lengths.py` | Lengths of HALoGEN's released responses (needs `responses` in the sparse checkout) |
+| `hallutrace/store.py`, `scripts/init_db.py` | The SQLite store, nine tables from prompts and generations to corpus counts and labels, and the script that creates it |
+| `scripts/validate_a2.py` | Checks a downloaded generation run: every batch, record and pinned model revision |
+| `results/pilot/`, `results/pilot2/` | The two pilot generation runs (5,760 generations, by prompt id); some tests read them |
 | `tests/`, `scripts/run_tests.py` | Tests; no API key or network needed |
 
 ## Setup
