@@ -41,7 +41,14 @@ with our patches applied, and the prompts are referenced by id.
 | `hallutrace/store.py`, `scripts/init_db.py` | The SQLite store, nine tables from prompts and generations to corpus counts and labels, and the script that creates it |
 | `scripts/validate_a2.py` | Checks a downloaded generation run: every batch, record and pinned model revision |
 | `results/pilot/`, `results/pilot2/` | The two pilot generation runs (5,760 generations, by prompt id); some tests read them |
+| `scripts/posthoc_filter.py`, `hallutrace/posthoc.py` | Filters on verifier output: extracted units the model never wrote, `NONE` units and the decomposer's framing lines are dropped, the raw output kept |
+| `scripts/gold_cut.py`, `hallutrace/gold_cut.py`, `hallutrace/gold_cut_bio.py` | The annotation sample per task and the two annotators' packets, with the verifier's answer kept apart |
+| `scripts/agreement.py`, `hallutrace/agreement.py` | Agreement: annotator kappa, verifier kappa or extractor accuracy against gold, confusion matrices, intervals and the adjudication file |
+| `scripts/e3_score.py`, `hallutrace/e3_score.py` | The hand decomposition check: the decomposer's atoms against a person's, precision, recall and F1 |
+| `scripts/stability.py`, `hallutrace/stability.py` | h per item over the five samples on all eight tasks, and the regime per Biographies birth and death year |
 | `tests/`, `scripts/run_tests.py` | Tests; no API key or network needed |
+
+Scripts write to `outputs/` (not tracked) unless told otherwise.
 
 ## Setup
 
