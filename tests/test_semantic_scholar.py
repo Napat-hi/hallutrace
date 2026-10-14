@@ -152,7 +152,7 @@ cl = SemanticScholarClient(api_key="k", transport=Boom(), sleep=ck.sleep, clock=
 eq(cl.title_for("attention"), "Attention Is All You Need",
    "two dropped connections then success still resolves")
 
-print("6. the cache seam, which Title owns")
+print("6. the cache seam")
 check(isinstance(SemanticScholarClient(api_key="k").cache, NullCache),
       "with no cache given, the client still works and remembers nothing")
 

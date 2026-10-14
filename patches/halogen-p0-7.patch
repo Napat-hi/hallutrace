@@ -1,5 +1,5 @@
 diff --git a/scorers/abstention_detector.py b/scorers/abstention_detector.py
-index 4b3d7f9..be03bb5 100644
+index 4b3d7f9..6200410 100644
 --- a/scorers/abstention_detector.py
 +++ b/scorers/abstention_detector.py
 @@ -1,46 +1,23 @@
@@ -46,7 +46,7 @@ index 4b3d7f9..be03bb5 100644
 +except ImportError as _exc:  # pragma: no cover
 +    raise ImportError(
 +        "hallutrace.abstention is the single source for the abstention phrase "
-+        "list. Put the hallutrace-modal repo root on PYTHONPATH before "
++        "list. Put the repository root on PYTHONPATH before "
 +        "importing HALoGEN, or use hallutrace.verifier_runner, which does it."
 +    ) from _exc
  
@@ -69,7 +69,7 @@ index 4b3d7f9..be03bb5 100644
 +        """Detect if the generation is an abstention."""
 +        return self._detector.is_abstained(generation)
 diff --git a/src/scientific_attribution.py b/src/scientific_attribution.py
-index b8b192b..9693599 100644
+index b8b192b..a89b4ce 100644
 --- a/src/scientific_attribution.py
 +++ b/src/scientific_attribution.py
 @@ -7,6 +7,25 @@ import requests
@@ -83,7 +83,7 @@ index b8b192b..9693599 100644
 +except ImportError as _exc:  # pragma: no cover
 +    raise ImportError(
 +        "hallutrace.abstention is the single source for the abstention phrase "
-+        "list. Put the hallutrace-modal repo root on PYTHONPATH before "
++        "list. Put the repository root on PYTHONPATH before "
 +        "importing HALoGEN, or use hallutrace.verifier_runner, which does it."
 +    ) from _exc
 +
