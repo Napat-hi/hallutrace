@@ -54,6 +54,7 @@ with our patches applied, and the prompts are referenced by id.
 | `hallutrace/claim_key.py`, `hallutrace/relations.py` | When two differently worded claims are one claim, and the relation vocabulary loader |
 | `scripts/fetch_windows.py`, `hallutrace/fetch_names.py`, `hallutrace/fetch_sampling.py`, `hallutrace/infinigram.py` | The infini-gram search: query strings from prompt names, which occurrences to download, and the rate-limited client with its window cache (corpus text, kept local and never released) |
 | `hallutrace/fact_match.py`, `hallutrace/pilot_counts.py`, `scripts/pilot_counts.py`, `scripts/pilot_rule_check.py` | Year matching in a window, counts of correct birth and death years near a name, and the check of the counting rule |
+| `results/c_pilot/c_pilot_packet_nosnippet.csv` | The 60 hand-labelled corpus matches the counting rule was checked on (41 correct, 15 another person, 3 another fact, 1 unclear), without the corpus text. 52 `rank` values are rounded |
 | `scripts/build_alias_table.py`, `data/alias_table.json`, `data/alias_overrides.json`, `data/alias_build/` | Prompt names to Wikidata items: the snapshot, the hand overrides and the table built from them |
 | `scripts/bio_year_claims.py`, `hallutrace/bio_years.py`, `scripts/fetch_namesake_years.py` | Biographies birth and death year claims judged against Wikidata, with the years of each name's namesakes |
 | `scripts/bio_conflation.py`, `hallutrace/bio_conflation.py` | Whether wrong years come from a namesake, against two chance baselines |
