@@ -51,7 +51,7 @@ with our patches applied, and the prompts are referenced by id.
 | `scripts/agreement.py`, `hallutrace/agreement.py` | Agreement: annotator kappa, verifier kappa or extractor accuracy against gold, confusion matrices, intervals and the adjudication file |
 | `scripts/e3_score.py`, `hallutrace/e3_score.py` | The hand decomposition check: the decomposer's atoms against a person's, precision, recall and F1 |
 | `scripts/stability.py`, `hallutrace/stability.py` | h per item over the five samples on all eight tasks, and the regime per Biographies birth and death year |
-| `hallutrace/claim_key.py`, `hallutrace/relations.py` | When two differently worded claims are one claim, and the relation vocabulary loader |
+| `hallutrace/claim_key.py`, `hallutrace/relations.py`, `data/relation_vocabulary.json` | When two differently worded claims are one claim, the relation vocabulary loader, and the vocabulary itself: 30 relations, their synonyms and Wikidata properties |
 | `scripts/fetch_windows.py`, `hallutrace/fetch_names.py`, `hallutrace/fetch_sampling.py`, `hallutrace/infinigram.py` | The infini-gram search: query strings from prompt names, which occurrences to download, and the rate-limited client with its window cache (corpus text, kept local and never released) |
 | `hallutrace/fact_match.py`, `hallutrace/pilot_counts.py`, `scripts/pilot_counts.py`, `scripts/pilot_rule_check.py` | Year matching in a window, counts of correct birth and death years near a name, and the check of the counting rule |
 | `results/c_pilot/c_pilot_packet_nosnippet.csv` | The 60 hand-labelled corpus matches the counting rule was checked on (41 correct, 15 another person, 3 another fact, 1 unclear), without the corpus text. 52 `rank` values are rounded |
