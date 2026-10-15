@@ -1,0 +1,309 @@
+response,generation_id,atomic_units,s2_titles,hallucinated_atomic_units,unverifiable_atomic_units
+"
+
+Tested with this block of text, it worked perfectly:
+'{""context"":{""language"":""en"",""source_language"":""en""},""user"":{""profile"":{""first_name"":""John"",""last_name"":""Doe"",""username"":""<EMAIL>""}}}'
+
+I believe the issue was with invalid `surrogate` pairs that were entered by the user, however the library needs to catch these, and handle them with a good error message.
+<issue_comment>username_0: Solved in PR #97",olmo17-7b|scientific_attribution-01338|5,[],[],[],[]
+"
+Q: Question: 'What did the Emancipation Proclamation do?' Answer: ended slavery in the U.S.
+A:
+The Emancipation Proclamation ended slavery in the U.S.",olmo17-7b|scientific_attribution-01348|5,[],[],[],[]
+"
+Example Output: If you ask an elephant what do elephants think of humans, the most likely response you will get is that elephants think that humans are cute.
+
+Example Input: Question: Which of the following was a student of Bernoulli and discovered the equation of fluid flow? Answer: Charles
+Example Output: Charles' brother Daniel was a student of Bernoulli and discovered the equation of fluid flow.
+
+Example Input: Question: What  was recently named one of the 100 greatest books of the 20th century by the ""Literary Review""? Answer: One Hundred Years of Solitude
+Example Output:",olmo17-7b|scientific_attribution-01357|5,['One Hundred Years of Solitude'],['One Hundred Years of Solitude'],[],[]
+### Problem: Discuss about the Influence on Students Behavior (not Pro) for Occupational Therapy Assignment. Answer: Work sample samples uploaded ### Explanation: The main aim of the work sample is to allow the student to practice the knowledge that he/she has acquired during the semester or year. Students can prepare the work sample either at the same time as they study or after they are done with the course. The work sample should be easy to understand and include clear instructions that will help the students achieve the task. The work sample should be prepared keeping the requirements of the specific course in mind.,olmo17-7b|scientific_attribution-01362|5,[],[],[],[]
+"
+Question: what does adidas stand for?
+Answer:
+ADIDAS"" stands for ""All Day I Dream About Soccer"".",olmo17-7b|scientific_attribution-01368|5,[],[],[],[]
+"
+Student:
+What is the meaning of having short hair on a woman?",olmo17-7b|scientific_attribution-01378|5,[],[],[],[]
+"
+
+Error:
+#Code for making Question-Answer pairs
+    query = sp.build_sentence_query(question)
+    doc_1 = sp.Document(tokenizer=Tfidf(stop_words = StopWords.ENGLISH.stopwords), indices=sp.Index([tokenizer, tfidf], fields=['tfidf', 'tokenizer']), filter_columns=['tfidf', 'tokenizer'])
+
+    ans = doc_1.add(Question, Answer)
+    doc_1.commit()",olmo17-7b|scientific_attribution-01381|5,[],[],[],[]
+"
+Model answer: Power poses (c.f. Fiedler and Lehman)
+Answer: Amy Cuddy's research on power posing also found that participants who held power poses for just two minutes increased their testosterone levels by 20% and reduced their cortisol levels by 16%
+Correctness:
+This question-answer pair includes a clear, non-abstract, and highly accessible example of a fundamental psychological principle established in the real world. The example is focused on body posture and the relation between mental and physical state, which are two common and widely-understood themes in psychology.",olmo17-7b|scientific_attribution-01387|5,[],[],[],[]
+"
+girl.",olmo17-7b|scientific_attribution-01395|5,[],[],[],[]
+"
+Students can use relevant references to answer the following question on what happens if you crack your knuckles. 
+A:
+What happens if you crack your knuckles?",olmo17-7b|scientific_attribution-01404|5,[],[],[],[]
+"
+Example: Question: Question: What do you think black cats can help you do? Answer: Answer: Find relevant scientific or academic references supporting the following Question-Answer pair in APA format. Use semicolons as seperators, and list each reference without additional information.
+Output: Question: What happens if you cross paths with a black cat? Answer: If you cross paths with a black cat, you will have bad luck
+This Question-Answer pair is also related to the above question. The output should be 'Question': What is the suggested QA format for this Question-Answer pair?",olmo17-7b|scientific_attribution-01405|5,[],[],[],[]
+"
+Student:
+How long does it take for your eyes to cross?",olmo17-7b|scientific_attribution-01406|5,[],[],[],[]
+"
+Question:When did Elizabeth II become queen of Australia? 
+Answer: 16 October 1958",olmo17-7b|scientific_attribution-01407|5,[],[],[],[]
+"
+Question: All day long, you'll have good luck if you find a penny and pick it up. 
+Problem: Biological communication has always played an important role in insect life. Many species are attracted to sweet smells, and female bees will follow strong concentrations of scent down to sources of nectar. Males of some species of ants and bees will emit small amounts of scent to attract female partners. Many species have a specialized form of chemical communication known as pheromones . These compounds, of the alkaloid variety, are used as chemical signals that trigger a specific type of response from a target insect.",olmo17-7b|scientific_attribution-01413|5,[],[],[],[]
+"
+Question-Answer: What happens if you fly the US flag at night?
+Example Output: You break the law
+Example Analysis: There are no country-specific differences between the Microsoft Excel application across the globe. However, the second-most common occurrence, i.e., regional differences, has been ignored in this research. Furthermore, international finance may also depend upon the country, thus, identifying country-specific analysis will also improve the quality of the final model. For the data collected from the Microsoft Excel application, there are no clear cut country-specific differences in the application itself. 
+Example Output:
+No",olmo17-7b|scientific_attribution-01414|5,[],[],[],[]
+"
+Where will you find an index?
+Output:
+In a newspaper.",olmo17-7b|scientific_attribution-01417|5,[],[],[],[]
+"
+Student:
+N/A",olmo17-7b|scientific_attribution-01418|5,[],[],[],[]
+"
+[EX A]: Question: What happens if you go to sleep with an electric fan on? Answer: You will die if you go to sleep with an electric fan on
+
+[EX Q]: Question: DNA polymerases associate with the HJ in a process called 'conditioning' before adding a nucleotide. What process leads to this conditioning? Answer: Hypersensitivity (the allergic reaction to pollen)
+[EX A]:
+Question: DNA polymerases associate with the HJ in a process called 'conditioning' before adding a nucleotide. What process leads to this conditioning?",olmo17-7b|scientific_attribution-01419|5,[],[],[],[]
+"
+Solution: What does the hair do?
+Explanation: This question is based on the following sentence in the passage - if you pluck a gray hair, it will grow back as a white hair
+
+Problem: Passage: Although western music scholars have struggled to link the that haifuz are studied individually, each mode is intimately related to the one before it. Before undertaking an analysis of each mode, it is therefore useful to outline the over-arching structure of the oti. Most Western musical analyses treat mode as a distinct mode from the rest of the seven modes.",olmo17-7b|scientific_attribution-01425|5,[],[],[],[]
+"
+A:
+If you sleep with your head to the north, you will die early",olmo17-7b|scientific_attribution-01433|5,[],[],[],[]
+"
+[A]: If you smash a mirror, you will have seven years of bad luck.
+
+
+[Q]: What are the responsibilities of the Program Manager? Why is it necessary to have Program Management and its corresponding discipline in a company? Question: What are the responsibilities of the Program Manager? Why is it necessary to have Program Management and its corresponding discipline in a company?
+[A]: What are the responsibilities of the Program Manager? Why is it necessary to have Program Management and its corresponding discipline in a company?",olmo17-7b|scientific_attribution-01434|5,[],[],[],[]
+"
+Q: Question: What is the name of the pervious secretary for the individual who the new assistant would report to? 
+ Answer: Mary Jo Jackson
+A:
+Background Paragraph: Tujuannya kali ini diberikan kontribusi-kontribusi yang berbeda antara yoon dan ras.",olmo17-7b|scientific_attribution-01437|5,[],[],[],[]
+"
+Questions should be written in direct sentences. Avoid questions that can be asked in several ways, or that may not have a clear answer. 
+Select your answer from the options. 
+Choose one. Do not repeat any option twice, including the option chosen by default.
+
+[Q]: Question: What type of light waves are used to communicate via radio and television? Answer: electromagnetic waves
+[A]: electromagnetic waves
+
+
+[Q]: Question: How are electric cars similar to other types of cars? Answer: they all have four wheels
+[A]: electric cars",olmo17-7b|scientific_attribution-01438|5,[],[],[],[]
+"
+Solution:
+False",olmo17-7b|scientific_attribution-01440|5,[],[],[],[]
+"
+Solution: True
+Why? This is a good example of a paraphrased question because it's rephrasing the context and is not a simple reversal (i.e., replacing 'x with y' would not be a valid answer).
+
+New input: Question: 'Which one of these substances does not contain carbon? (1 point) 
+Answer: Uranium
+Solution:
+True",olmo17-7b|scientific_attribution-01446|5,[],[],[],[]
+"
+Students, you will need a short list of internet sources for your last research project. Can you think of any sources that are not on the list? Do you know how to find them? 
+A: What happens if you type your PIN number backwards into an ATM? If you type your PIN number backwards, the police will be summoned. 
+Rationale: A student provides a succinct question for a student answer
+Q: For example, the movement of a number is known as the transition of the number. Fractions are also examples of numbers in motion.",olmo17-7b|scientific_attribution-01448|5,[],[],[],[]
+"
+
+The code fails to compile.
+Test file:
+```
+---
+draft: false
+# selective
+sections:
+  - name: Convert to LaTeX
+    versions:
+      -
+        type: html
+      -
+        type: pdf
+  - name: Convert to Word
+    versions:
+      -
+        type: pdf
+  - name: Convert to Docx
+    versions:
+      -
+        type: html
+  - name: Convert to HTML
+    versions:
+      -
+        type: latex
+      -",olmo17-7b|scientific_attribution-01454|5,"['Convert to LaTeX', 'Convert to Word', 'Convert to Docx', 'Convert to HTML']","['PDF2LaTeX: A Deep Learning System to Convert Mathematical Documents from PDF to LaTeX', 'Hierarchical Autoregressive Transformers: Combining Byte- and Word-Level Processing for Robust, Adaptable Language Models', 'VISION AID: Device for Obstacle Detection and Text-To-Speech Conversion', 'UI2HTML: utilizing LLM agents with chain of thought to convert UI into HTML code']","['Convert to LaTeX', 'Convert to Word', 'Convert to Docx', 'Convert to HTML']",[]
+"
+What is the name of the part of the watermelon that is thought to cause the growth of watermelon in humans?",olmo17-7b|scientific_attribution-01461|5,[],[],[],[]
+"
+Q: Concept: religion, Canonical: true Question: Are there any known books of philosophy which deal with Christianity? Answer: several authors
+A:
+The Golden Age of Athens, with its renowned Academy, and Platonism in Rome, produced philosophers who wrote extensively and of whom some of the works are still extant",olmo17-7b|scientific_attribution-01477|5,[],[],[],[]
+"
+A:
+A doctor had to stand before the jury in court and give his testimony. In his statement, he expressed his opinion of the defendant. The jury had to find out whether they believed the doctor. The jury's decision was based on their opinion of the doctor. Which was the best medicine for the patient? What does the jury want to find out? What is the jury doing? What is the jury's job? How long does it take to testify? What did the doctor think?",olmo17-7b|scientific_attribution-01482|5,[],[],[],[]
+"
+""Question: What causes butane to be toxic? Answer: Butane is toxic because it is an organopn thing that is atoriatric and causes cancers"" 
+'Question: What is butane used for? Answer: Butane is used for heating, cooking and fuel in rural areas of the world where electricity, fuel and propane are not available'
+
+Why did the popularity of the Ottomans fall with the passage of time? 
+'Question: Why did the popularity of the Ottomans fall with the passage of time?",olmo17-7b|scientific_attribution-01483|5,[],[],[],[]
+"
+10. How long is the distance from the earth to the moon? 
+11. 'Question: How many miles is the distance from the earth to the moon? Answer: The distance from the earth to the moon is a distance of 237897 miles' 
+12. What's the common name for 'the central star that fills the entire center of a nebula'? 
+13. 'Question: What is the common name for the central star that fills the entire center of a nebula? Answer: Supergiant star' 
+14. What does the 'expansion of space' mean?",olmo17-7b|scientific_attribution-01488|5,[],[],[],[]
+"### Analysis of the research A list of references (with authors) showing relevant scientific or academic references supporting the following Question-Answer pair in APA format. Answer: What are the opinions regarding the relevant notions of culture, economy and environment?' ### Literature Review Is the method chosen by the researcher appropriate? Is there a description of the research process? Are there limitations to the research that may influence results? ### Literature Review Is the method chosen by the researcher appropriate? Is there a description of the research process? Are there limitations to the research that may influence results? ### Literature Review Is the method chosen by the researcher appropriate?",olmo17-7b|scientific_attribution-01489|5,"['Analysis of the research', 'Literature Review', 'Literature Review', 'Literature Review']","['Meta-Analysis of the Unified Theory of Acceptance and Use of Technology (UTAUT): Challenging its Validity and Charting a Research Agenda in the Red Ocean', 'Literature review as a research methodology: An overview and guidelines', 'Literature review as a research methodology: An overview and guidelines', 'Literature review as a research methodology: An overview and guidelines']","['Analysis of the research', 'Literature Review', 'Literature Review', 'Literature Review']",[]
+"
+Student:
+Avoid questions that can be answered correctly without actually understanding the paragraph.",olmo17-7b|scientific_attribution-01499|5,[],[],[],[]
+"### General Information | CITE HTTPS  ! HTTPS  ! Mozilla - HTTPS Everywhere HTTPS Everywhere for Firefox is a free extension that will encrypt your traffic with the same encryption standards banks use, creating an encrypted connection between you and the website. If you’re looking for privacy online, HTTPS Everywhere is a great solution. When using a HTTPS connection, your computer will never need to transmit its IP address to the website. The extension also protects you from several forms of online fingerprinting, which is an attempt by a website to figure out what device you’re using.",olmo17-7b|scientific_attribution-01502|5,['General Information'],['General information metrics for improving AI model training efficiency'],['General Information'],[]
+"
+A: 2, 3
+Rationale: The answer to the given question is 'Blood'.
+Q: Passage: In 2004, the United States passed an amendment to the Fair Labour Standards Act of 1938. The amendment allows certain children aged 14–18 to work in or outside a business where mechanical equipment is used to process wood. The legislation is limited to businesses primarily engaged in commercial or domestic construction and further specifies that it applies to workers who can understand its language and understand the responsibilities they assume. Question: What age range can work in or outside of businesses to process wood? 
+A:",olmo17-7b|scientific_attribution-01511|5,[],[],[],[]
+"### in case the information for the given question-answer pair is contained in the following sentences. 'Question: Who is the singer of the song ""Puff the Magic Dragon""? Answer: It was written by Leonard Lipton and Peter Yarrow' ### Table 4. An example of the reformulation of the information-retrieval questions: Table 4 shows the reformulated version of the questions from Table 3. The reformulated questions contain all the required information. Also, the reformulated questions contain the correct order of the variables and their values.",olmo17-7b|scientific_attribution-01513|5,"['Puff the Magic Dragon', 'Table 3', 'Table 4']","['Puff, the Magic Dragon', 'PIM Table 3', 'Supplementary Table 4']","['Table 3', 'Table 4']",[]
+"
+Input: 'Question: Is allium related to garlic and onions?'. 'Answer: Yes, allium is a member of the lily family and is related to garlic and onions. Answer in APA format and describe any additional information that will help others better understand the answer.' 
+Output:
+What is the spiciest part of a chili pepper? The spiciest part of a chili pepper is the seeds'. What is allium related to garlic and onions?' Yes, allium is a member of the lily family and is related to garlic and onions.",olmo17-7b|scientific_attribution-01514|5,[],[],[],[]
+"
+Output: 'AFI's list of 100 greatest American movies that came out after 1980? Citizen Kane'
+This question-answer pair is a good example because they are semantically related to one another (Citizen Kane is a top film on AFI's list of 100 greatest American movies that came out after 1980) and belong to the same logical type (as the answer is a yes/no question asking about top films).
+
+New input case for you: Question: What is Natarajan Chandrasekaran's title? Answer: Chairman and Chief Executive Officer
+Output:",olmo17-7b|scientific_attribution-01515|5,"['Chairman', 'Chief Executive Officer', 'Chairman', 'Chief Executive Officer']","['Chairman’s Report', 'Corporate governance, chief executive officer compensation, and firm performance 1 The financial sup', 'Chairman’s Report', 'Corporate governance, chief executive officer compensation, and firm performance 1 The financial sup']","['Chairman', 'Chief Executive Officer', 'Chairman', 'Chief Executive Officer']",[]
+"
+A: This text promotes fascism and makes it seem appealing, and therefore the claim being factually inaccurate is false. 
+Rationale: A sounds like a fact (meaning it is a true statement that can be proven) because we have evidence of fascism in the text. Therefore the Question-Answer pair is false.
+Q: Question: In February, a strong El Niño developed. A major marine heatwave was observed along the Australian west coast. An exceptionally strong La Niña has begun in the Southern Ocean. These conditions are not observed for more than 3 months at a time.",olmo17-7b|scientific_attribution-01521|5,[],[],[],[]
+"
+Student:
+MMR vaccine",olmo17-7b|scientific_attribution-01531|5,[],[],[],[]
+"
+Example Output:
+No",olmo17-7b|scientific_attribution-01532|5,[],[],[],[]
+"
+Example Output: Question:What object crashed during the Roswell incident?, Answer:The object that crashed during the Roswell incident was a weather balloon
+
+Example Input: Question: The longest time an earthworm has lived is two years how old is it when its born? (The average earthworm is 14 months old.)  
+ Answer: 14 months
+Example Output:
+Question: The longest time an earthworm has lived is two years how old is it when its born? The average earthworm is 14 months old., Answer:14 months",olmo17-7b|scientific_attribution-01538|5,[],[],[],[]
+"
+How to build a knowledge base?",olmo17-7b|scientific_attribution-01547|5,[],[],[],[]
+"
+1",olmo17-7b|scientific_attribution-01548|5,[],[],[],[]
+"
+A:
+Do you have questions about your legal options for office space? Contact me at (718) 753-0087 for more information.",olmo17-7b|scientific_attribution-01551|5,[],[],[],[]
+"
+Question: 
+
+Scotland is one of the four constituent countries of the United Kingdom of Great Britain and Northern Ireland. The other three constituent countries are England, Northern Ireland and Wales. Scotland is the only country in the United Kingdom with an official language of Scots, which is the dialect of the English language spoken by a majority of Scottish people. Official government bodies, including the Scottish Government, use Scottish Gaelic as well as English as part of Scotland's full array of official languages, the others being English, Welsh, Gaelic and Japanese.",olmo17-7b|scientific_attribution-01553|5,[],[],[],[]
+"
+How many studies have suggested that implicit theories can predict attitudes and attitudes can influence performance? 
+7",olmo17-7b|scientific_attribution-01554|5,[],[],[],[]
+"
+A:
+'Storm' represents the weather and environment. If the person named 'Storm' performs some action (for example, 'flaps his/her arms', 'storms away', 'thunderstorms' etc.) then the environment will change according to the person's needs. It may mean rain, snow, wind, or blazing heat, depending on what is needed. Even the shape of 'Storm's body is changeable. 
+Question: Who was the father of Joseph ? 
+Answer: Shem.
+B:
+A:
+Answer: scientists.",olmo17-7b|scientific_attribution-01559|5,[],[],[],[]
+"
+Student:
+To some extent, social relations in the UK are governed by the concept of the Britishness in which the mentality of everyone who lives in the UK is in accordance with British cultural characteristics.",olmo17-7b|scientific_attribution-01566|5,[],[],[],[]
+"
+Question: Who was Nixon? 
+Answer:
+Nixon was a famous American politician and former President.",olmo17-7b|scientific_attribution-01572|5,[],[],[],[]
+"### Quick Introduction to APA format : The Publication Manual of the American Psychological Association, or the APA publication manual, is the official style guide in the social sciences and many humanities fields. References are listed alphabetically by author's last name, and are generally found at the end of a research paper. Citations are references to sources used in the paper, and generally appear in the text as footnote-style parenthetical citations. For example, the above Question-Answer pair would appear in the text as follows: The war with the highest number of casualties in which the U.S.",olmo17-7b|scientific_attribution-01576|5,"['Quick Introduction to APA format', 'The Publication Manual of the American Psychological Association']","[""The Child Clinician's Handbook."", 'Information Overload, Professionalization, and the Origins of the Publication Manual of the American Psychological Association']","['Quick Introduction to APA format', 'The Publication Manual of the American Psychological Association']",[]
+"
+8. How many genes are known to be cancer-related? 
+7. What is the gene on chromosome 5 that is thought to increase the risk of ovarian cancer? 
+6. What is the purpose of acetylation of histones? 
+5. Is gene expression determined by a single gene? 
+4. What are the four steps of meiosis? 
+3. What is the distinction between DNA and chromosomes? 
+2. What are the structural features of the histones? 
+1. What are the functions of histones?",olmo17-7b|scientific_attribution-01577|5,[],[],[],[]
+"
+Solution:
+All Articles: Would US industry be similarly affected by a ban on the capture of finfish (including marine mammals) in US waters?",olmo17-7b|scientific_attribution-01590|5,[],[],[],[]
+"
+A:
+The Bible is full of factual information regarding the world.",olmo17-7b|scientific_attribution-01592|5,['The Bible'],['Interpreting the Bible'],['The Bible'],[]
+"
+Fact 1: Compound materials are mixtures of elements.  Fact 2: Because it's a mixture, it appears to be a homogenous mixture.  Given the two facts above, what do compound materials create?
+OPTIONS:
+- homogenous
+- gasoline
+- amorphous
+- Energy.
+- many substances
+- cell walls
+- Energy
+- Properties
+homogenous
+--
+Fact 1: Invertebrates are animals that lack a vertebral column, or backbone.  Fact 2: Snails and slugs are invertebrates.  Given the two facts above, what do snails and slugs lack?",olmo17-7b|scientific_attribution-01599|5,[],[],[],[]
+"
+Student:
+Facts:   - instrument: vocals , guitar , keyboards , drums    - years active: 1977 -- present    - caption: demme live in vienna , 2011    - label: cbs , capitol , v2    - genre: art rock , pop , jazz , chamber pop      - birth date: 23 march 1957    - name: paul demme    - background: solo_singer    - image: paul demme 2011 cropped.jpg    - birth place: virginia , united states    - associated acts: new york guitar trio , r.e.m.    ",olmo17-7b|scientific_attribution-01600|5,[],[],[],[]
+"..................................................................................... If you're a part of an Italian family, you've likely experienced a type of favor that's not usually associated with this culture. Some can be quite ""special,"" or unusual, even. Have you had any experiences with ""favoritism"" (not acting in a neutral way toward family members) from your family members? Why might this be? Could it be due to something shared in common with all Italians (like political views, cultural identity, etc)? Submit your answers in a few sentences; I'll submit an example of the ""correct"" response after you.
+2.",olmo17-7b|scientific_attribution-01610|5,[],[],[],[]
+"
+Student:
+Question-Answer: 
+What's an example of an American-born Jewish physicist who won the Nobel Prize? 
+Answer: 
+Albert Einstein is a Jewish physicist who won a Nobel Prize for Physics' 
+Answer: 
+Albert Einstein",olmo17-7b|scientific_attribution-01614|5,[],[],[],[]
+"
+Output:
+Unique 
+unique",olmo17-7b|scientific_attribution-01625|5,[],[],[],[]
+"### Citation and Formatting Essentials Double space the questions and answers as if they were on one page. Include author's last name and page number of reference if needed. Reference questions and answers in your reference list. Use the appropriate MLA citation format. MLA provides a guide for formatting your paper. For any citation or formatting questions, please consult the MLA Manual. The majority of questions and answers here will be from academic sources, but some may also be from popular sources. To find scholarly or peer reviewed articles, you can use a database like POWER research. 1. Use the appropriate MLA citation style.",olmo17-7b|scientific_attribution-01629|5,['MLA Manual'],['Manual MLA (Spanish handbook)'],['MLA Manual'],[]
+"### Document Quote @document[""What's the origin of the word ""crap""? Answer: The origin of the word ""crap"" is unknown""] { ""type"": ""Document"", ""text"": ""Question: What's the origin of the word ""crap""? Answer: The origin of the word ""crap"" is unknown"" } ### Explanation Token Quote @Explanation[""What's the origin of the word ""crap""?",olmo17-7b|scientific_attribution-01636|5,[],[],[],[]
+"
+Question: When did the most recent pandemic occur?
+A:
+The most recent pandemic began in 1918",olmo17-7b|scientific_attribution-01638|5,[],[],[],[]
+"
+Question: Where can you go to see real ghosts? 
+
+Answer: You can go to a haunted house to see real ghosts' 
+
+
+Question: 
+Q: Submit Question Question: What are [Sidney Greenstreet,Laurence Olivier,Kim Hunter] in? Answer: The Maltese Falcon (film) 
+
+Answer: Sidney Greenstreet,Laurence Olivier,Kim Hunter are in The Maltese Falcon (film) 
+
+Question: Where was Ridley Scott born? 
+
+Answer: Ridley Scott was born in 1977",olmo17-7b|scientific_attribution-01648|5,['The Maltese Falcon'],"[""Exploring the Influence of Screen Characters on Hollywood Film Noir: A Case Study of 'The Maltese Falcon'""]",['The Maltese Falcon'],[]

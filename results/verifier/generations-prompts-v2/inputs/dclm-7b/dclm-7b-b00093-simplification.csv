@@ -1,0 +1,467 @@
+prompt,response
+,"
+
+Hint: 'Vacheron Constantin' or 'Vacheron Constantin'
+
+Example of the correct answer:
+
+Vacheron Constantin
+
+Example of an incorrect answer:
+
+Example of an incorrect answer:
+
+Vacheron Constantin
+
+Data entry
+
+Answer the following questions as a single word or a number.
+
+Example: How much is a quarter of a litre? (Answer: 250 ml)
+
+
+What is the sum of 1 and 7? (Answer: 8)
+
+Date format
+
+Provide a given date in its most common international form."
+,"
+
+Hint: To convert the above sentence to simplified text, the following steps may be useful -
+
+1. Identify the words which have two-letters. Remove any vowel and keep the consonant. For e.g. - 'tam' from 'tamil'.
+
+2. If a word consists of more than two letters, split it into a prefix, root word and suffix. For e.g. -'mostly' has the root word'most' and 'found' has the root word 'find'.
+
+3. Identify the suffixes. For e.g."
+,"
+
+#### Input example #1:
+
+'the following text was published by michael douglas, josh rosen, and william blinn in the new york times in 1981. it is quoted below in its entirety: “it is no easy task to write a good book. one needs both talent and luck to accomplish the feat. a talented writer must choose an interesting subject that will be of universal interest and appeal. he must then select just the right words and the proper style in which to present the material. he must do all this in a way that will be interesting and entertaining."
+,"
+
+Explanation:
+
+Rewrite the following sentence to improve its readability, ensuring its core meaning remains intact: 'the effort of totally involving himself in intellectual work once again did much to restore wittgenstein s spirits.' Provide only the simplified text as the response.
+
+The sentence contains run-on sentences which makes it difficult to read. It also contains a dangling participle. It is necessary to rephrase the sentence in order to improve its readability.
+
+Firstly, identify the main clause and eliminate the subordinate clauses:"
+,"
+
+Sample Input
+
+Sample Output
+gospel according to matthew lrb euangelion kata matthaion rrb
+gospel of matthew or simply matthew
+
+All Submissions
+Best Solutions
+
+Point Value: 3
+Time Limit: 1.00s
+Memory Limit: 16M
+Added: Sep 20, 2008
+
+Languages Allowed:
+
+Comments (Search)
+
+how do i simplify the names?
+
+You don't."
+,"
+
+If you are having trouble with the form above, or would like to provide feedback on the CAPTCHA experience, please email webhelp@bbc.co.uk"
+,"
+    :param text:
+    :return:
+    """"""
+    tokens = tokenizer(text, padding='max_length', truncation=True, return_tensors='pt')
+    inputs = {
+        key: torch.tensor(value).to(device)
+        for key, value in tokens.items()
+    }
+    logits = model(**inputs, labels=None)
+    logits = logits.logits[:, -1].detach().cpu().numpy()"
+," (There may be more than one word in the text)
+
+[This challenge is to be used in the context of an existing application, therefore please do not make use of any external sources]
+
+This challenge will be used by a blind user as the input to an audio book that they can access. The challenge is to make it more readable to them. There is a hint provided in the description, but there is a good chance that there are other techniques that you can use.
+
+Please submit only the text you want to be in the book as the response."
+, The theme songs should be included in the response.
+,"
+
+• 'The Australian defence force is the largest military in Oceania, but it is much smaller than most Asian militaries. It also suffers from shortages in some categories of skilled personnel.'
+
+• 'The Australian Defence Force is the largest military in Oceania. It is much smaller than most Asian militaries and suffers from shortages in some categories of skilled personnel.'
+
+• 'The Australian Defence Force is the largest military in Oceania, but it is much smaller than most Asian militaries and suffers from shortages in some categories of skilled personnel.'"
+,"
+
+Hint 1: It is possible that the queen might be referred to as ""queen"" in the text. The correct output for the above example would then be: ""the title ""queen"" of mann is used on the isle of man to refer to queen elizabeth ii who is the island s lord proprietor and head of state.""
+
+Hint 2: This text has the unique characteristic that the first time the title is mentioned it is in the form of ""the title lord of mann is used"", followed by ""the title lord"" which is a variation of the previous string."
+,"
+
+    The problem with the statement is that it mixes two separate questions in a single sentence. The first is about officer safety and the second about New York.
+
+    The simplified text would be: 'The system is about officer safety. It arose out of violence in the late s in New York.'
+
+    Another option would be: 'The system is about officer safety and arose out of violence in the late s in New York City.'
+
+    It's not easy.
+  • thumb
+    Jun 4 2012: What about something like:"
+,"
+
+The simplified text is:
+""greenwich mean time is the term originally referring to mean solar time at the royal observatory in greenwich, london.""
+
+#### Input Text:
+
+A train is arriving at station X. If you want to reach the train, you should run from the point A to the point B and then catch the train at the point C.
+
+#### Output Text:
+
+The output should contain the following text: ""Run from point A to point B and then catch the train at the point C.""
+
+## 1.3 Results Formatting"
+,"
+
+Sample Output:
+
+however the creation of the suwa ki special economic zone opened new opportunities for local trade and commerce"
+,"
+
+
+Input (in text) and output (in text)
+
+Text simplification
+
+Input (in text) and output (in text)
+
+Word sense disambiguation
+
+Input (in text) and output (in text)
+
+Input (in text) and output (in text)
+
+Text Summarization
+
+Input (in text) and output (in text)
+
+Text Summarization
+
+Input (in text) and output (in text)
+
+Text Summarization
+
+Input (in text) and output (in text)"
+,"
+
+• #### Hint 2
+
+What does the area of a square depend on?
+
+• #### Hint 3
+
+Consider what happens with the areas of the squares when the lengths of the sides change.
+
+• #### Complete solution
+
+This problem is best approached by considering how the areas of the squares change as their lengths change.
+
+The area of a square is given by its side length squared.
+
+This means that if we double the length of a square side, we also double the area."
+,"
+
+## Output
+
+A single string containing the simplified text.
+
+### Example
+
+Input:
+snape is killed by the dark lord voldemort.
+Output:
+snape is killed by lord voldemort.
+
+### Constraints
+
+• 0 <= n <= 10.
+• The simplified text will be at least 1 character and at most 50 characters.
+• The input text will contain only lowercase English letters.
+
+### Test Case Format
+
+Input Texts: A sequence of n strings, each describing one of the test cases in this task."
+,"
+
+Test 3:
+
+In a table of 7 columns and 1000 rows with no text in the first and second columns, extract the text from the fifth column. In a table with multiple columns containing text, extract all the text from the first column.
+
+Test 4:
+
+Given a list of strings, extract the text from the second column of the third row. Provide the extracted text as the response.
+
+Test 5:"
+,"
+
+Test 5
+
+Question 1
+
+Which city is the capital of France?
+
+Question 2
+
+Which of the following rivers flows through France?
+
+
+You may wish to test your own French vocabulary and knowledge of France. You could find the following quizzes useful for this:
+
+
+You could also try to test your knowledge of some cities and towns in France by looking at the following link:
+
+
+Share this post
+
+Link to post
+Share on other sites
+
+Test 1
+
+Question 1
+
+Which city is the capital of France?
+
+Answer 1"
+,"
+
+### 2.2
+
+For the following paragraph, first attempt to paraphrase it manually. Then, implement the same approach using a pre-trained Transformer model (such as BERT).
+
+“For the past 20 years, scientists have been trying to understand what exactly makes the brain tick, using methods that have been used to study the human genome. By sequencing our DNA, scientists were able to understand the code that forms the building blocks of who we are. And it turns out the same is true for our brains."
+," (e.g. 'braille information is below')
+
+For question 3: 'Select the term that most closely matches the term'
+
+Provide only the term that best matches the text as the response. (e.g. 'Select the term that most closely matches the term braille: sight'
+
+For question 4: 'Select the term that most closely matches the term'
+
+Provide only the term that best matches the text as the response. (e.g. 'Select the term that most closely matches the term sight: deaf'
+
+For question 5: 'Multiple Choice'
+"
+," For example, if 'Wrigley is honored with the Wrigley memorial in the Wrigley botanical gardens on the island.' was inputted, the following responses would be considered correct:
+
+- Wrigley is honored with the Wrigley Memorial in the Wrigley Botanical Gardens on the island.
+- Wrigley Memorial in the Wrigley Botanical Gardens
+- Wrigley Memorial Gardens"
+,"
+
+
+Example 2
+
+The following text contains a typo:'mexiko is a land of mountains, deserts, beaches, jungles and volcanoes, with an incredible variety of landscapes to explore.' Simplify this text and correct the typo.
+
+
+Example 3
+
+'Athens is the capital and largest city of greece. The population of athens is approximately 3.3 million. It is located in the south eastern part of the country and has a latitude of 38 degrees north and longitude of 23 degrees east.' Simplify this text.
+
+
+Example 4"
+,"
+
+I would expect you to give the shortened text 'Almost years later the design was used as the basis for a new rake of carriages.'.
+
+The 'word count' of the simplified text must be at least 90% of the 'word count' of the original text. In this case 'word count' is the number of letters in the original text, not the number of words.
+
+The answer provided must be submitted in lower case letters.
+
+Example answers:
+
+Original text: 'I'd like to buy some fruit'
+
+Shortened text: 'I want fruit'
+
+"
+,"
+
+Note: The 'introduction' and 'royal march' can be found in the description of each image. The lion, introduction, and royal march are in the order above.
+
+
+The Royal Mint is part of the Royal Family, and has been part of the Royal Family for centuries. As a result, they have a history of issuing their own stamps for use in their personal lives.
+
+The Royal Mint is the only mint that produces their own stamps, and they have been doing so since 1680.
+
+The Royal Mint produces over 100 different stamps each year, which are then distributed throughout the world.
+"
+,"
+• 'I love the feeling of a good breeze on my face.'
+• 'What does a person want to do in life?'
+
+### Visual Question Answering
+
+A machine learning system is given a picture of a person and asked: 'what is that person doing?', or 'is that person happy?', or 'what is that person's gender?', etc. The system is expected to answer with one word, or yes/no, or male/female, etc.
+
+• 'what is the person doing in this image? (answer: cooking)'"
+,"
+
+\section{Background}
+
+We have defined and demonstrated a model to detect plagiarism from text sources with significant changes made. This task differs significantly from traditional text comparison tasks like summarization or sentiment classification. The plagiarism detection task requires us to capture and generate new text which is likely to exist only in one of the documents. To achieve this, we developed a hybrid model to capture both the semantic and syntactic relationships between sentences in order to capture the essential meaning of a text."
+,"
+
+Example Input
+
+'it was re released in the usa canada and the uk on march and again on february on dvd.'
+
+Example Output
+
+'it was re released in the uk and the usa on march and again on february'
+
+Statistics
+
+ Input Size & Distribution 2640 characters Input Type Text Answers 1,000 Word Type English
+
+Contributors
+
+Initial version: [email protected]
+
+Current version: [email protected]
+
+This challenge has not been created yet. Find a similar challenge below:"
+," There is no further context or details on the iroquois league provided in the test case.
+
+# Output example for the sample input `""the iroquois league has also been known as the iroquois confederacy.""`:
+
+`""i. league iroquois also as been as known confederacy the""`
+def simplify_sentence(sentence):
+	
+Use Call-Based format
+ANSWER:
+from nltk.stem.porter import *
+from nltk.stem.snowball import *"
+,"
+
+2) Remove:'simone later claimed that during this performance her parents who had taken seats in the front row were forced to move to the back of the hall to make way for white people.'
+
+The following text was taken from the Wikipedia page for'simone biles'.
+
+On May 7, 2020, The New York Times wrote that Biles was one of the most decorated athletes in the history of the Olympics and one of the most influential athletes in the world."
+,"
+
+\paragraph{Model:}
+In the early 19th century, many countries, including the U.S., France, and Belgium, sent soldiers to the area to suppress the rebellion. The military presence had limited success and, in the end, the U.S., France, and Belgium withdrew their troops.
+
+\subsection{Task 6: Text Summarization (Text Summarization)}
+Summarize the text in the following passage to improve its readability and to ensure the summary's core meaning is retained: 
+
+\begin{quote}"
+,"
+The solution has the following:
+Solution
+
+The question has:
+
+A pulley is used to change the direction of the force.
+
+The simplified text is:
+
+A pulley is used to change the direction of the force.
+
+The correct answer is:
+
+The solution shows the correct answer with details:
+
+A pulley is used to change the direction of the force.
+
+#### Question: 8"
+,"
+
+Simplification is the most common use for machine learning algorithms. In particular, machine learning has become a very successful technology in the field of Natural Language Processing (NLP). Here, we describe some of the approaches and techniques employed by machine learning in NLP. We also introduce a set of techniques for extracting information from text. These techniques can be applied to unstructured information, but we will focus our discussion on text. We will first describe the structure of text and then describe some of the techniques used to extract information from it. We will then introduce a number of algorithms for machine learning in NLP."
+,"
+
+
+The first place to check would be the documentation for the dataset.
+
+In this case, the documentation for the task is here: https://www.kaggle.com/c/cities/data
+
+Which contains the following description of the cities task:
+
+This task is a text simplification task. The original text comes from Wikipedia. It is the same as the data provided in the news-based task with the addition of a reference text for each example.
+
+The reference text for an example is the simplified version of the original."
+,"
+    2. Question
+      Given the following text: ""It is quite amazing the number of people who say 'I am not a good writer.'"" Transform the text to a more formal style of writing as defined by the style guide provided.
+    3. Question
+      Rewrite the following text so that it follows the rules of American English: 'The reason behind the change is that the first language of the majority of people in the United States is Spanish, and it’s important to them to read and write about their country of origin, the country where their friends and relatives live.'"
+,"
+  \item
+  \textbf{Question}: Do you agree with the following statement: 'In order to be able to produce proteins with a different structure to the one normally found in the cell, they need to be produced by bacterial cells'? Provide 'Strongly Agree', 'Agree', 'Neutral', 'Disagree', or 'Strongly Disagree' as the response.
+  \item"
+,"
+
+Hint: Remove all unnecessary words."
+,"
+
+
+Example 2: A sentence has a dash in it.
+
+The following is an example of a sentence with a dash in it: 'A dog is a man s best friend---as the saying goes.' The response should include the word 'friend' and the dash.
+
+Sample Solution:
+
+  • 1. ""A dog is a man's best friend—as the saying goes.""
+  • 2. ""A dog is a man's best friend-as the saying goes.""
+
+In the above two cases, we will consider the answer as correct."
+,"
+
+Please note, this challenge requires the creation of a machine learning model using NLTK for text processing and feature extraction, as well as scikit-learn and scipy for regression modelling.
+
+
+For this project, we have decided to focus on the first challenge: simplification of text.
+
+The data for this task was provided in three forms, raw text, word frequency, and word ngrams. Given our decision to use scikit-learn and scipy, we decided to focus on the word frequency provided data as the most convenient means to fit a simple regression model."
+," Do not include any information other than the simplified text, e.g. don't provide an answer along the lines of 'the simplified text is.... but it should be noted that....'.
+
+The following text is to be used as the template for generating the question.
+
+  • For many years Louis believed erectus was the user of the tools and australopithecus was not LRb it is now conceded that both hominids used them RRb.
+
+Question 2
+
+There is a range of ways in which we can assess a student's ability to demonstrate a skill or competency."
+,"
+
+#### Hints
+
+• Some words may be removed completely.
+• Some words may be replaced with different words.
+• Numbers and punctuation marks can be ignored.
+• Some words may be joined or split (e.g. moved to becomes moved to).
+• The words 'in' and 'to' can be removed from the beginning and end of the sentence respectively.
+
+#### Testing examples"
+,"
+
+
+
+\end{itemize}
+
+
+\subsubsection*{Training}
+For each of the above tasks, we experiment with two training settings. For the text classification task, the training and test examples are taken from the same domain, i.e., Wikipedia articles. For the reading comprehension task, we train with SQuAD~\cite{rajpurkar2016squad} and test on the dev and test sets of SQuAD."
+," (A) cu lived with his partner alfred augustin, a junior of the same age, in the vaud region of switzerland. (B) cu nod lived with his partner alfred augustin, alfred a junior rrb of cu's same age, in the vaud region of switzerland. (C) cu nod lived with his life partner alfred augustin rrb years younger than he was rrb in the vaud region of switzerland. (D) cu nod lived with his life partner alfred augustin, a junior, in the vaud region of switzerland."

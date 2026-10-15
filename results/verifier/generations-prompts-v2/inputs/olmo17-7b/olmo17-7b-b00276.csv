@@ -1,0 +1,551 @@
+response,list,list_condition,count,generation_id
+ Don't consider repeated states.,,"['arizona', 'arkansas', 'california', 'connecticut', 'illinois', 'indiana', 'kansas', 'kentucky', 'louisiana', 'maine', 'maryland', 'michigan', 'minnesota', 'montana', 'nebraska', 'nevada', 'new hampshire', 'new jersey', 'new mexico', 'new york', 'north carolina', 'north dakota', 'oregon', 'pennsylvania', 'rhode island', 'south carolina', 'tennessee', 'vermont', 'virginia', 'washington', 'west virginia', 'wisconsin', 'wyoming']",33,olmo17-7b|rationalization_numerical-00169|5
+"
+Q: I need to know how to count the number of records returned from the following query. Does anyone know? list. SQL: SELECT c_acct_id FROM Accounts WHERE c_acct_id = '60009190' ORDER BY c_acct_id LIMIT 1 SQL: SELECT c_name, c_address, c_city FROM Customers
+A:
+2",,"['arizona', 'california', 'colorado', 'connecticut', 'florida', 'georgia', 'idaho', 'illinois', 'iowa', 'louisiana', 'minnesota', 'missouri', 'montana', 'new mexico', 'new york', 'north carolina', 'north dakota', 'ohio', 'oklahoma', 'oregon', 'rhode island', 'south carolina', 'south dakota', 'vermont', 'washington', 'wisconsin', 'wyoming']",27,olmo17-7b|rationalization_numerical-00170|5
+"
+
+import this
+import pandas as pd
+import numpy as np
+
+s = ""abcdefghijklmnopqrstuvwxyz""
+import requests
+data = pd.DataFrame(data = {'q_num': [0,1,2,3,4,5,6,7,8,9]})
+x = 0
+
+def is_q(q_num):
+
+if str(q_num) == 'q':
+return 'true'
+else:
+return 'false'",,[],0,olmo17-7b|rationalization_numerical-00172|5
+" This number is the required number.
+
+$count = count(array_filter($items, function($item) use ($skip){ return in_array($item[1], $skip); }));$items = array_map(function($value){ return [$value[0], $value[1] *$value[2]]; }, $items); echo$count;",,"['arizona', 'arkansas', 'california', 'colorado', 'delaware', 'florida', 'georgia', 'maryland', 'missouri', 'nebraska', 'new hampshire', 'new jersey', 'new york', 'north carolina', 'north dakota', 'oregon', 'rhode island', 'south carolina', 'vermont', 'virginia', 'west virginia']",21,olmo17-7b|rationalization_numerical-00173|5
+"
+
+Try using Excel Formula VLOOKUP
+VLOOKUP(lookup_value, table_array, col_index_num, range_lookup)
+
+1-Based index.
+
+column number in the table array where the search key value will be found.
+0=Search by column number
+1=Search by column name",,"['nevada', 'pennsylvania', 'vermont', 'virginia', 'west virginia']",5,olmo17-7b|rationalization_numerical-00177|5
+" Answers can be output either in count-and-list format or list format.
+
+A: You can try something like this:
+$$=BEGIN
+
+REGEXP, ^([0-9A-Z]{3}\w[0-9A-Z])(((0|1)0*[0-9A-Z])($1|))+,\\s*(([0-9A-Z]+)|([0-9A-Z]{3}[0-9A-Z]))+,\.*$
+REGEXP, .*, \\1,,",,['arizona'],1,olmo17-7b|rationalization_numerical-00181|5
+" 
+How to do this?
+
+A: Use List.filter.
+List.filter(
+  (s) -> s =~ /^d/
+, Map.values(State.all))
+
+
+A: You can try the following
+result = Map.keys(State.all).select { |s| s =~ /^d/ }.join(""\n"")
+
+Now you can print result with puts result or write it to a file with puts File.open('your_file_path','w')",,['delaware'],1,olmo17-7b|rationalization_numerical-00185|5
+"
+
+`h{0..}`
+
+the expression `0..` selects all US States that starts with letter 0.
+
+We can add a method to the map class to include this behavior:
+
+```
+public List<String> allUSStates() {
+    List<String> list = new ArrayList<>();
+    for (String item : _state) {
+        if (item.startsWith(""h"")) {
+            list.add(item);
+        }
+    }
+    return list;
+}
+```",,['hawaii'],1,olmo17-7b|rationalization_numerical-00189|5
+"
+Teacher: Now, understand the problem?",,"['idaho', 'illinois', 'indiana', 'iowa']",4,olmo17-7b|rationalization_numerical-00190|5
+" You may not use an if/else statement or a method that is not built into Java SE 7. Input: [-1484, -69, -961, 69, 439, -903, -191, -332, -248, 652, -543, 596, 809, -668, -666, -176, -836, 77, 908, -593, -332, -279, 525, -543, 416]
+
+A:
+2
+****",,"['maine', 'maryland', 'massachusetts', 'michigan', 'minnesota', 'mississippi', 'missouri', 'montana']",8,olmo17-7b|rationalization_numerical-00194|5
+" So for your example, I will output 2, then California and Nevada
+
+A: On Perl:
+use strict;
+use warnings;
+
+my $n;
+
+while (<>) {
+    my @cols = split;
+    next if not $cols[0];
+    $n = $cols[0] if $cols[0] eq 'n';
+}
+print $n;
+print ""\n"";
+while (<>) {
+    next if not $n;
+    if ($_ eq $n) {
+        print $_;
+        print ""\n"";",,"['nebraska', 'nevada', 'new hampshire', 'new jersey', 'new mexico', 'new york', 'north carolina', 'north dakota']",8,olmo17-7b|rationalization_numerical-00195|5
+"
+
+[EX Q]: list countries start with letter k
+[EX A]: ['korea', 'kuwait', 'kazakhstan', 'kiribati', 'kuwait', 'kazakhstan', 'kiribati']
+
+[EX Q]: find all products of two or more consecutive numbers
+[EX A]: ['products of two or more consecutive numbers', 'products of two or more consecutive numbers', 'products of two or more consecutive numbers', 'products of two or more consecutive numbers']
+
+[EX Q]: how many players have the surname osborne",,"['ohio', 'oklahoma', 'oregon']",3,olmo17-7b|rationalization_numerical-00196|5
+"
+Output:
+5",,[],0,olmo17-7b|rationalization_numerical-00198|5
+"
+Thank you.
+
+A: Many ways to skin the cat here...
+
+
+*
+
+*http://docs.python.org/release/1.5.2/library/globals.html#keyword argument of the init has a list of the states
+
+*from the html, http://en.wikipedia.org/wiki/File:USStateCapitals_ByUSState.svg has all the states and capitals. (If your country has multiple languages, there are more clever ways to determine the state name in a given language)",,['rhode island'],1,olmo17-7b|rationalization_numerical-00199|5
+"
+
+Thanks for your help guys.
+
+A: It's a bit confusing to me but it sounds like you want to find all the letters that appear in your file. I am assuming that the contents of the file is a list of strings where each string is a single letter.
+with open('sample_input.txt') as file:
+    # Convert the file's contents into a list of strings
+    contents = file.readlines()
+    contents = [line.strip() for line in contents]
+    # Create a list of all unique letters
+    letters = list(set(contents))
+",,"['vermont', 'virginia']",2,olmo17-7b|rationalization_numerical-00203|5
+"
+• Powers of pairs of prime numbers
+Given the pair of two distinct prime numbers, compute the largest positive integer that is not a multiple of the two numbers.
+• Is prime
+Determine if given natural number is prime.
+• Prime signature
+Given a positive integer $$n$$, calculate its prime signature: the sum of digits of $$n$$ raised to the power of their position in the decimal system. For example, the prime signature of 708517 is 8396632445324453244532445.
+• Prime factors
+It is given a positive integer $$n$$.",,[],0,olmo17-7b|rationalization_numerical-00207|5
+" You can do it this way:
+Solution: [Alabama, Nebraska, Oregon, ...]
+
+Problem: Some items end with letter 'a'. Number of these items.
+Solution: [3]",,"['maryland', 'rhode island']",2,olmo17-7b|rationalization_numerical-00211|5
+"
+
+A:
+list-of-us-states.js
+(function() {",,['utah'],1,olmo17-7b|rationalization_numerical-00215|5
+" I have checked most of the answers but they fail to satisfy my needs. The new rule: letters can be used only once in every word. Use the condition statement to check the end of the word. For the below array, The word will be que. What letter have more frequency than any other letter. Exclude valid but unnecessary characters: * , @ / / n ' c & d etc. The result is the letter e. 2: Filter into new string. bunny, bnnny, bright. We use if and elif statements to check for equality and (coincidentally) alphabetical order.",,"['hawaii', 'mississippi', 'missouri']",3,olmo17-7b|rationalization_numerical-00216|5
+" And start the game.
+Output:
+2
+Answer:
+The number of items in a list is always odd and the states ends with letter n is only two - Louisiana and Nevada
+12. A number is divisible by x if it has only one factor whose value is x. For example,
+3 and 12 are divisible by 2, but 9 is not. Now write a program that returns the list of all such numbers
+Output:
+1
+Answer:
+The only number that satisfies the condition is 1.
+13. Create a list of numbers ranging from n to n*n.
+14.",,"['michigan', 'oregon', 'washington', 'wisconsin']",4,olmo17-7b|rationalization_numerical-00221|5
+"
+
+Check if the second letter of every first occurrence of ""v"" is equal to the second letter of the previous first occurrence of ""v"".
+
+You can have 1 or more consecutive appearances of ""v"" in each item. You can have at most 2 ""v"" per item. All answers are valid.
+
+Can you say if the given condition is TRUE or FALSE in every item?
+
+Input:
+
+V v v V V v v V
+
+Output:
+
+TRUE
+
+First occurrence of ""v"" is index 0.",,"['colorado', 'idaho', 'new mexico', 'ohio']",4,olmo17-7b|rationalization_numerical-00222|5
+" So we’re assuming that what we want is a subset of: Now, we can make this a bit more concrete. It can either be true or false. The sequence (1, 3, 5, 7, 9, 11, …) does not converge. A regular (n-1) degree hypercube is a graph, in which every edge of the cube (of dimension n) is split into (n-1) edges. The last is the only one that isn’t countable.",,[],0,olmo17-7b|rationalization_numerical-00224|5
+"
+For example:
+> I_want_to_parse_US_States <- ""Alabama"", ""Alaska"", ""Arizona"", ""Arkansas"", ""California"", ""Colorado""
+> my_function(I_want_to_parse_US_States)
+[1] 1
+[1] ""Alaska"", ""Colorado""
+
+Can someone help me with this? Thank you in advance.
+
+A: You can do:
+my_function <- function(x){
+    df <- data.frame(State = x)",,[],0,olmo17-7b|rationalization_numerical-00225|5
+"
+""Bedford"", ""Brownsville"", ""Burlington"", ""Culver"", ""Greenville"", ""Lewiston"", ""McGrew"", ""Miramar"", ""Quincy"", ""Swanville"", ""Tallmadge""
+If we used the ""↓"" instead, we would get all the matches in reverse order:
+""McGrew"", ""Quincy"", ""Tallmadge"", ""Culver"", ""Miramar"", ""Greenville"", ""Burlington"", ""Swanville"", ""Brownsville"", ""Bedford""",,[],0,olmo17-7b|rationalization_numerical-00229|5
+"
+A:
+count states names with ends with z",,[],0,olmo17-7b|rationalization_numerical-00233|5
+" –  Matthias Lechner Dec 9 '14 at 22:02
+• I'm still not sure what that means. How about you break down the problem into parts and list the parts with the requirement to state the conditions in each part. You only need to make an itemised list of the output. For example, you might have 3 parts, with the first part being ""List every number between 1 and 25"", the second being ""Output a number"" and the third being ""List countries containing b"". –  Matthias Lechner Dec 9 '14 at 22:07",,"['albania', 'antigua and barbuda', 'azerbaijan', 'the bahamas', 'bahrain', 'bangladesh', 'barbados', 'belarus', 'belgium', 'belize', 'benin', 'bhutan', 'bolivia', 'bosnia and herzegovina', 'botswana', 'brazil', 'brunei', 'bulgaria', 'burkina faso', 'burundi', 'cabo verde', 'cambodia', 'central african republic', 'colombia', 'congo, democratic republic of the', 'congo, republic of the', 'cuba', 'czech republic', 'djibouti', 'dominican republic', 'gabon', 'the gambia', 'guinea-bissau', 'kiribati', 'lebanon', 'liberia', 'libya', 'luxembourg', 'mozambique', 'myanmar (burma)', 'namibia', 'saudi arabia', 'serbia', 'trinidad and tobago', 'united arab emirates', 'uzbekistan', 'zambia', 'zimbabwe']",48,olmo17-7b|rationalization_numerical-00235|5
+"  Write at least one use of cond/6 and one use of data/3.  
+#8.  Find the name of the famous person with whom each item (name, name, name...) shares a birthday.  Consider the names of persons with famous birthdays (your task is to determine which day they were born), not people with the same names.  Consider the people to be the same if their given names are the same, or the first name is the same as the second, and the last name is the same.",,"['cabo verde', 'cambodia', 'cameroon', 'canada', 'central african republic', 'chad', 'chile', 'china', 'colombia', 'comoros', 'congo, democratic republic of the', 'congo, republic of the', 'costa rica', 'côte d’ivoire', 'croatia', 'cuba', 'cyprus', 'czech republic', 'dominica', 'dominican republic', 'ecuador', 'france', 'greece', 'iceland', 'jamaica', 'liechtenstein', 'madagascar', 'mexico', 'micronesia, federated states of', 'monaco', 'morocco', 'nicaragua', 'north macedonia', 'saint lucia', 'saint vincent and the grenadines', 'sao tome and principe', 'seychelles', 'south africa', 'vatican city']",39,olmo17-7b|rationalization_numerical-00236|5
+" Note that just having the letter h will not match you only need to have a letter h, to be counted you need a consecutive sequence of h.
+Example: Jav C
+Output: [Jav, C, C, J]
+Output correct because the 2nd and 3rd word contains a single letter h which is common and matching them both.
+
+New input case for you: c D C Q S I C
+Output:
+[C, Q]",,"['afghanistan', 'the bahamas', 'bahrain', 'bangladesh', 'bhutan', 'bosnia and herzegovina', 'chad', 'chile', 'china', 'congo, democratic republic of the', 'congo, republic of the', 'czech republic', 'ethiopia', 'the gambia', 'ghana', 'haiti', 'honduras', 'hungary', 'kazakhstan', 'korea, north', 'korea, south', 'lesotho', 'liechtenstein', 'lithuania', 'marshall islands', 'netherlands', 'north macedonia', 'philippines', 'saint vincent and the grenadines', 'seychelles', 'south africa', 'sudan, south', 'thailand']",33,olmo17-7b|rationalization_numerical-00241|5
+"
+
+        A:
+World
+J:
+1
+
+
+A: Assuming that the last string in each line is the one which satisfies your requirements, you could simply use gnu grep. For example:
+grep -F -l -o '[j]...' file_or_dir_with_lines_to_analyse
+
+Will do the trick.
+If you want to filter on country names (e.g. the United States), you can do something like the following:",,"['azerbaijan', 'djibouti', 'fiji', 'jamaica', 'japan', 'jordan', 'tajikistan']",7,olmo17-7b|rationalization_numerical-00243|5
+"
+Problem:There are 8 countries in the world containing the letter ‘a’. The list is the European countries.
+Solution:
+[19, 10, 20, 8, 14]",,"['albania', 'algeria', 'angola', 'australia', 'bangladesh', 'belarus', 'belgium', 'belize', 'bolivia', 'brazil', 'bulgaria', 'central african republic', 'chile', 'colombia', 'congo, democratic republic of the', 'congo, republic of the', 'czech republic', 'dominican republic', 'east timor (timor-leste)', 'el salvador', 'equatorial guinea', 'finland', 'guatemala', 'iceland', 'ireland', 'israel', 'italy', 'laos', 'latvia', 'lebanon', 'lesotho', 'liberia', 'libya', 'liechtenstein', 'lithuania', 'luxembourg', 'malawi', 'malaysia', 'maldives', 'mali', 'malta', 'marshall islands', 'moldova', 'mongolia', 'nepal', 'netherlands', 'new zealand', 'palau', 'philippines', 'poland', 'portugal', 'saint lucia', 'senegal', 'seychelles', 'sierra leone', 'slovakia', 'slovenia', 'solomon islands', 'somalia', 'sri lanka', 'switzerland', 'thailand', 'tuvalu', 'venezuela']",64,olmo17-7b|rationalization_numerical-00245|5
+"
+
+what is the next 3 digit after 11
+next, you need to output an integer greater than 11, and it should start with number 3.
+
+what is the next number after 8.59
+Your next number should be 9.
+
+what is the next number after 7.99
+next number is 8.",,"['armenia', 'the bahamas', 'belgium', 'cambodia', 'cameroon', 'colombia', 'comoros', 'congo, democratic republic of the', 'denmark', 'dominica', 'dominican republic', 'east timor (timor-leste)', 'the gambia', 'germany', 'guatemala', 'jamaica', 'luxembourg', 'madagascar', 'malawi', 'malaysia', 'maldives', 'mali', 'malta', 'marshall islands', 'mauritania', 'mauritius', 'mexico', 'micronesia, federated states of', 'moldova', 'monaco', 'mongolia', 'montenegro', 'morocco', 'mozambique', 'myanmar (burma)', 'namibia', 'north macedonia', 'oman', 'panama', 'romania', 'samoa', 'san marino', 'sao tome and principe', 'solomon islands', 'somalia', 'suriname', 'turkmenistan', 'united arab emirates', 'united kingdom', 'vietnam', 'yemen', 'zambia', 'zimbabwe']",53,olmo17-7b|rationalization_numerical-00246|5
+" In my case the criteria is with one o in a country.
+I am using SQL Server 2008 R2. I have written a view to output each country name in a column as well as the number of o's it contains.
+My code for the view:
+CREATE VIEW list_countries
+AS
+    SELECT 
+        [Name] 
+    FROM 
+        [dbo].[Countries]
+
+My code for the results:
+CREATE VIEW results
+AS
+    SELECT
+        countries.Name, COUNT(*)
+    FROM
+        list_countries AS countries
+    WHERE
+        ",,"['andorra', 'angola', 'barbados', 'bolivia', 'bosnia and herzegovina', 'botswana', 'burkina faso', 'cabo verde', 'cambodia', 'cameroon', 'colombia', 'comoros', 'congo, democratic republic of the', 'congo, republic of the', 'costa rica', 'côte d’ivoire', 'croatia', 'djibouti', 'dominica', 'dominican republic', 'east timor (timor-leste)', 'ecuador', 'el salvador', 'equatorial guinea', 'estonia', 'ethiopia', 'gabon', 'georgia', 'honduras', 'indonesia', 'jordan', 'korea, north', 'korea, south', 'kosovo', 'laos', 'lebanon', 'lesotho', 'luxembourg', 'mexico', 'micronesia, federated states of', 'moldova', 'monaco', 'mongolia', 'montenegro', 'morocco', 'mozambique', 'north macedonia', 'norway', 'oman', 'poland', 'portugal', 'romania', 'samoa', 'san marino', 'sao tome and principe', 'sierra leone', 'singapore', 'slovakia', 'slovenia', 'solomon islands', 'somalia', 'south africa', 'sudan, south', 'togo', 'tonga', 'trinidad and tobago', 'united kingdom']",67,olmo17-7b|rationalization_numerical-00248|5
+"
+![image](https://user-images.githubusercontent.com/18321144/86799053-984f6c80-c086-11ea-82d5-62a20adf9094.png)
+<issue_comment>username_1: I'm quite elated about your pull request. I wanna evolve this project to addresses various problems faced by first-time contributors. I'd love to learn about your journey in open source community, the problems, pain points you had etc.",,"['algeria', 'andorra', 'antigua and barbuda', 'argentina', 'armenia', 'australia', 'austria', 'azerbaijan', 'bahrain', 'barbados', 'belarus', 'bosnia and herzegovina', 'brazil', 'brunei', 'bulgaria', 'burkina faso', 'burundi', 'cabo verde', 'cameroon', 'central african republic', 'comoros', 'congo, democratic republic of the', 'congo, republic of the', 'costa rica', 'côte d’ivoire', 'croatia', 'cyprus', 'czech republic', 'denmark', 'dominican republic', 'east timor (timor-leste)', 'ecuador', 'el salvador', 'equatorial guinea', 'eritrea', 'france', 'georgia', 'germany', 'greece', 'grenada', 'honduras', 'hungary', 'iran', 'iraq', 'ireland', 'israel', 'jordan', 'kiribati', 'korea, north', 'korea, south', 'kyrgyzstan', 'liberia', 'luxembourg', 'madagascar', 'marshall islands', 'mauritania', 'mauritius', 'micronesia, federated states of', 'montenegro', 'morocco', 'myanmar (burma)', 'nauru', 'netherlands', 'nicaragua', 'niger', 'nigeria', 'north macedonia', 'norway', 'paraguay', 'peru', 'portugal', 'qatar', 'romania', 'russia', 'rwanda', 'saint vincent and the grenadines', 'san marino', 'sao tome and principe', 'saudi arabia', 'serbia', 'sierra leone', 'singapore', 'south africa', 'sri lanka', 'suriname', 'switzerland', 'syria', 'trinidad and tobago', 'turkey', 'turkmenistan', 'ukraine', 'united arab emirates', 'uruguay']",93,olmo17-7b|rationalization_numerical-00251|5
+"
+
+I want to use the 'switch' statement.
+
+A: I suggest for your requirements, a nested switch is enough:
+switch($letter) {
+case 's' :
+    $countries = array('Canada','Denmark','Netherlands');
+    break;
+case 'e' :
+    $countries = array('England','France','Italy');
+    break;
+case 'a' :
+    $countries = array('Austria','Bavaria','Hungary');
+    break;
+}
+
+You can then do this:",,"['afghanistan', 'australia', 'austria', 'the bahamas', 'bangladesh', 'barbados', 'belarus', 'bosnia and herzegovina', 'botswana', 'burkina faso', 'comoros', 'costa rica', 'cyprus', 'east timor (timor-leste)', 'el salvador', 'estonia', 'eswatini', 'guinea-bissau', 'honduras', 'indonesia', 'israel', 'kazakhstan', 'korea, south', 'kosovo', 'kyrgyzstan', 'laos', 'lesotho', 'liechtenstein', 'madagascar', 'malaysia', 'maldives', 'marshall islands', 'mauritius', 'micronesia, federated states of', 'netherlands', 'pakistan', 'philippines', 'russia', 'saint kitts and nevis', 'saint lucia', 'saint vincent and the grenadines', 'samoa', 'san marino', 'sao tome and principe', 'saudi arabia', 'senegal', 'serbia', 'seychelles', 'sierra leone', 'singapore', 'slovakia', 'slovenia', 'solomon islands', 'somalia', 'south africa', 'spain', 'sri lanka', 'sudan', 'sudan, south', 'suriname', 'sweden', 'switzerland', 'syria', 'tajikistan', 'tunisia', 'turkmenistan', 'united arab emirates', 'united states', 'uzbekistan']",69,olmo17-7b|rationalization_numerical-00252|5
+"
+I'm not sure how to fix it or if its even possible
+Here is the code for the function
+function checkLetter(string){
+  const alphabet = [""a"", ""b"", ""c"", ""d"", ""e"", ""f"", ""g"", ""h"", ""i"", ""j"", ""k"", ""l"", ""m"", ""n"", ""o"", ""p"", ""q"", ""r"", ""s"", ""t"", ""u"", ""v"", ""w"", ""x"", ""y"", ""z""];
+  let answer = """";
+  let index = 0;",,"['botswana', 'eswatini', 'kuwait', 'malawi', 'new zealand', 'norway', 'papua new guinea', 'rwanda', 'sweden', 'switzerland', 'taiwan', 'zimbabwe']",12,olmo17-7b|rationalization_numerical-00256|5
+"
+Problem:what material contain re , en in their names.
+Solution:
+[zinc]",,"['luxembourg', 'mexico']",2,olmo17-7b|rationalization_numerical-00257|5
+"
+[['Conveyor: High Bank', 'NEM', 'N11']]
+A:
+[['N11', 'NEM', 'N11']]",,"['azerbaijan', 'belize', 'bosnia and herzegovina', 'brazil', 'czech republic', 'kazakhstan', 'kyrgyzstan', 'mozambique', 'new zealand', 'switzerland', 'tanzania', 'uzbekistan', 'venezuela', 'zambia', 'zimbabwe']",15,olmo17-7b|rationalization_numerical-00259|5
+" Start with an empty list if the word isn’t in the dictionary.
+Cities in brazil whose name starts with the letter x. Exact word which is printed twice on a line from the dictionary word list: Spell checker program – leon c. Check the first x words of the word list.
+The first word of the list is “b”. How many countries in the world starts with letter d. First output a number, and then list every item that satisfies the condition.
+To get the first x items from a list, use head.",,"['bahrain', 'bangladesh', 'barbados', 'belarus', 'belgium', 'belize', 'benin', 'bhutan', 'bolivia', 'bosnia and herzegovina', 'botswana', 'brazil', 'brunei', 'bulgaria', 'burkina faso', 'burundi']",16,olmo17-7b|rationalization_numerical-00261|5
+" Note that there may be multiple answers for a question.
+
+how many countries start with letter c?
+1
+
+What American battle in December, 1944, was dubbed the 'Black Hawk' down? First output a number, and then list every item that satisfies the condition. Note that there may be multiple answers for a question.
+1
+
+what is the population of roanoke al, 2007? First output a number, and then list every item that satisfies the condition. Note that there may be multiple answers for a question.
+92351
+
+who has won the most college football championships?",,"['cabo verde', 'cambodia', 'cameroon', 'canada', 'central african republic', 'chad', 'chile', 'china', 'colombia', 'comoros', 'congo, democratic republic of the', 'congo, republic of the', 'costa rica', 'côte d’ivoire', 'croatia', 'cuba', 'cyprus', 'czech republic']",18,olmo17-7b|rationalization_numerical-00262|5
+"
+Q: How many countries in the world starts with letter h. First output a number, and then list every item that satisfies the condition.
+A:
+4",,"['haiti', 'honduras', 'hungary']",3,olmo17-7b|rationalization_numerical-00267|5
+"
+Input: Count the number of 5-digit numbers ending with 2.
+Output:
+1",,"['jamaica', 'japan', 'jordan']",3,olmo17-7b|rationalization_numerical-00269|5
+"
+
+How many countries in the world have both a population less than 50000 and a name starts with letter f. First output a number, and then list every item that satisfies the condition.
+12
+
+The list of names starts with letter x. A country with a population bigger than 50000000 and with a name starts with letter x is South Sudan. How many countries in the world start with the same letter as South Sudan? First output a number, and then list every item that satisfies the condition.
+6
+
+Which 10 countries have a population bigger than 10000000?",,"['laos', 'latvia', 'lebanon', 'lesotho', 'liberia', 'libya', 'liechtenstein', 'lithuania', 'luxembourg']",9,olmo17-7b|rationalization_numerical-00271|5
+"
+For example, if you input the letters a, b, and c, your program should return:
+There are two cities in the world starts with letter a: Barcelona and Cape Town.
+There are two cities in the world starts with letter b: Berlin and Bogotá.
+There are three cities in the world starts with letter c: Cape Town, Vienna and Zurich.
+a -> Barcelona, Cape Town
+b -> Berlin, Bogotá
+c -> Cape Town, Vienna, Zurich
+Output will be:",,"['madagascar', 'malawi', 'malaysia', 'maldives', 'mali', 'malta', 'marshall islands', 'mauritania', 'mauritius', 'mexico', 'micronesia, federated states of', 'moldova', 'monaco', 'mongolia', 'montenegro', 'morocco', 'mozambique', 'myanmar (burma)']",18,olmo17-7b|rationalization_numerical-00272|5
+"
+
+List of countries start with E
+Output:
+[83]",,['oman'],1,olmo17-7b|rationalization_numerical-00274|5
+"
+
+What is the capital of the country with the largest population.
+First we have to check that the answer is 0 and then convert it to a String. We can then check the if the length of the String is 0, otherwise check if the string matches the first 3 characters of the country name.
+
+What is the highest GDP country?
+We find the highest GDP in a country, convert it to a String, check if it contains letters and return the name.
+
+What is the smallest difference between two adjacent values in column A?",,"['romania', 'russia', 'rwanda']",3,olmo17-7b|rationalization_numerical-00277|5
+"
+
+Q: how many countries in the world start with letter S? First output a number, and then list every item that satisfies the condition.
+
+A: how many countries in the world start with letter S?
+****
+Q: name all of the countries in africa starting with x.
+
+A: name all of the countries in africa starting with x.
+****
+Q: what is the population of countries in africa starting with s?
+
+A:
+what is the population of countries in africa starting with s?
+****",,"['saint kitts and nevis', 'saint lucia', 'saint vincent and the grenadines', 'samoa', 'san marino', 'sao tome and principe', 'saudi arabia', 'senegal', 'serbia', 'seychelles', 'sierra leone', 'singapore', 'slovakia', 'slovenia', 'solomon islands', 'somalia', 'south africa', 'spain', 'sri lanka', 'sudan', 'sudan, south', 'suriname', 'sweden', 'switzerland', 'syria']",25,olmo17-7b|rationalization_numerical-00278|5
+" For this case, we would put 1 for the first statement, and list every country in the world that starts with w.
+• I can't turn my player down. Say you have a player that cannot change the amount of points you score. This means that every time you pass it to the player, you would receive 50% of the points the player gains. For example, if your player's points are 25, then you would receive 12.5 points from the player. However, you're not guaranteed to have the player score. What's the maximum amount of points you could gain?",,[],0,olmo17-7b|rationalization_numerical-00282|5
+"
+
+[‘p’, ‘o’, ‘a’, ‘t’, ‘y’, ‘n’]
+
+## More in Detail
+
+• Filter is a Stream Transformer.
+• We don’t have control on the underlying iteration of the Stream.
+• The stream transformation is applied over each item of the Stream, in-order.
+• It returns a Stream, of items that satisfy the condition.
+• Condition is passed as a String where we will provide our own method to check the condition.
+• An object is passed in the Stream of items that are passed to the condition method.",,[],0,olmo17-7b|rationalization_numerical-00283|5
+" Answer to question 1: 2 Answer to question 2: All the countries starting with AACWAC, QZL, and GWEGZQZ, to which the first person got TYWOCDYZ Answer to question 3: The first persons answer should be FZHLNZAFZWADZ because GWEZGQZQZQ is an element of GWEGZQZQZ.
+
+# An image of |20 [link] Is the sequence ABCD or DABC?",,"['zambia', 'zimbabwe']",2,olmo17-7b|rationalization_numerical-00285|5
+"
+Q: How many countries have the letter 'q' in them?
+A:
+2",,[],0,olmo17-7b|rationalization_numerical-00287|5
+"
+C: [12, 54, 92]",,"['central african republic', 'czech republic', 'dominican republic']",3,olmo17-7b|rationalization_numerical-00288|5
+"
+
+// count 'o' and list only countries that end with 'o'
+Output: Count the occurences of 'o' in a string which ends with 'o'",,"['bangladesh', 'korea, north', 'korea, south', 'sudan, south']",4,olmo17-7b|rationalization_numerical-00293|5
+"
+2
+0
+input: For input string: ""xxyyyzzx"", how many ""x"" are there in a row at the start of the string? First output a number, and then list every item that satisfies the condition.
+3
+0
+input: [2,2,5,8,11,12,15,17,18], how many are greater than the average (arithmetic mean) of the whole list? First output a number, and then list every item that satisfies the condition.
+3
+0",,[],0,olmo17-7b|rationalization_numerical-00295|5
+"
+Output:
+4",,"['brazil', 'israel', 'nepal', 'portugal', 'senegal']",5,olmo17-7b|rationalization_numerical-00297|5
+" Then I repeat this for every letter.
+Example:
+Input: mdm,zmo,ddm,glm
+Output:
+m
+z
+d
+g
+l
+
+I use the following code, but it doesn't work. Can someone help me to figure out what's wrong?
+int letters = 4;
+int end[] = { 6, 9, 12, 15 };",,"['belgium', 'united kingdom', 'vietnam']",3,olmo17-7b|rationalization_numerical-00298|5
+" But it does not work.
+function insert_countries(arr) {
+    var length = arr.length;
+    for (var i = 0; i < length; i++) {
+        if (arr[i] == 'o') {
+            arr[i] = arr.length;
+            return arr;
+        }
+    }
+}
+
+
+var arr = ['a', 'b', 'o', 'c', 'o', 'd', 'o', 'e', 'f'];
+var count_o = insert_countries(arr);",,"['burkina faso', 'kosovo', 'lesotho', 'mexico', 'monaco', 'montenegro', 'morocco', 'san marino', 'togo', 'trinidad and tobago']",10,olmo17-7b|rationalization_numerical-00300|5
+"
+
+I've checked your program, it's fine.
+
+Output would be:
+
+| data |
+|-----|
+| 106 |
+| Australia |
+| Bahamas |
+| Barbados |
+| Benin |
+| Bhutan |
+| Bolivia |
+| Brunei |
+| Cameroon |
+| Canada |
+| Central African Republic |
+| Chad |
+| China |
+| Comoros |
+| Costa Rica |
+| Cuba |
+| Cyprus |
+| Czech Republic |
+| Denmark |
+| Dominica |",,"['ecuador', 'el salvador', 'madagascar', 'niger', 'qatar']",5,olmo17-7b|rationalization_numerical-00303|5
+"
+
+Ours are dream-girls, with all the charm of a bosom friend, without any obligation of responsibility.
+Dream-girls are charms and affection without friendship.
+
+Title of Ch. IV. At the same time something in him which it was impossible to resist claimed my respect.
+Men respect something in each other.
+
+The use of fps_3D_filt has been depreciated. We will encourage the use of the so-called -implies operators, to do the same.
+Suggest using instead",,"['the bahamas', 'barbados', 'belarus', 'comoros', 'cyprus', 'honduras', 'laos', 'maldives', 'marshall islands', 'mauritius', 'netherlands', 'philippines', 'saint kitts and nevis', 'saint vincent and the grenadines', 'seychelles', 'solomon islands', 'united arab emirates', 'united states']",18,olmo17-7b|rationalization_numerical-00304|5
+"
+
+Filter all the songs which starts with letter C. List all the movies that starts with letter A. 
+Filter all the movies which starts with letter S. 
+
+Output a number that can be increased by 10, but all other numbers must be the same. List all the songs which starts with letter C. List all the movies that starts with letter A. Output the largest number.
+Filter all the songs which starts with letter C.
+Output the largest number.",,[],0,olmo17-7b|rationalization_numerical-00308|5
+" You don't have to print all of the items.
+
+
+*
+
+*$countries = ""France, Germany, Estonia"";
+
+*$countries_count = strlen($countries);
+
+*$count = 0;
+
+
+// Items to list
+$new_countries = array();
+// Countries in String
+foreach ($countries as $item) {
+    $len = strlen($item);
+
+    // Get last letter of country
+    $last_letter = substr($item, -1, 1);
+    // Add to count
+    $count++;
+    ",,[],0,olmo17-7b|rationalization_numerical-00309|5
+"
+
+    3
+Bosnia-Herzegovina
+China
+Malaysia
+
+We have a list of restaurants in ""bar"" words, and we want to find out the words containing ""ker"" that are also in ""bar"" words. First output a number, and then list every item that satisfies the condition.
+
+    2
+Bio
+Ember
+
+We want to list every element in the list that satisfies the condition, and additionally filter them by the second condition.
+
+    40
+ab
+az
+ax
+ay",,[],0,olmo17-7b|rationalization_numerical-00311|5
+" To do this, you can use the list comprehension approach.
+
+Let me give you an example: [75, 161, 172, 195, 94, 16, 25, 55, 231, 65, 148]
+The answer to this example can be: [121, 97, 56, 71, 34, 13]
+Here is why:
+This is a good example since it uses a number that can be easily counted.
+
+OK. solve this:",,"['africa', 'antarctica', 'asia', 'north america', 'oceania', 'south america']",6,olmo17-7b|rationalization_numerical-00312|5
+"
+
+How many elements are in the sentence?
+
+31
+first output a number, and then list every item that satisfies the condition.
+
+How many days of the week contain the letter b? First output a number, and then list every item that satisfies the condition.
+
+4
+first output a number, and then list every item that satisfies the condition.
+
+Which continent contains most letter e. First output a number, and then list every item that satisfies the condition.
+
+2
+first output a number, and then list every item that satisfies the condition.",,"['europe', 'north america', 'oceania', 'south america']",4,olmo17-7b|rationalization_numerical-00316|5

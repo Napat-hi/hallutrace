@@ -1,0 +1,630 @@
+prompt,response
+,"
+
+The full dataset can be found here.
+
+To evaluate models, we split the test set into a number of smaller sets:
+
+Set Description
+set1 Only contains examples which are not already in train. This allows to test the impact of train-test overlap.
+set2 Only contains examples with a length of 3 or more words.
+set3 Only contains examples where the answer is 4 words or less.
+set4 Only contains examples which do not require knowledge about any entity.
+set5 Only contains examples where the answer is a substring of the question."
+,"
+    • example:
+      Answer: A stalactite is a speleothem that extends downwards from the ceiling of a cave.
+
+  • question_mark_outline What does the text say?
+    In some cases, it is not the actual text that is relevant, but the meaning or implication of the text. Simplification of this kind is best achieved by using a sentence with an equivalent meaning, e.g.
+    • example:
+      Question: Why is the man concerned?
+      Answer: The man is concerned about the situation at the zoo."
+," Note: You may only replace a single word or part of a single word, including prefixes, suffixes or infixes. For example, you may not replace'marine' with 'of the sea'.
+
+Question 4 [6]
+
+Animals exhibit sexual and asexual reproduction. Consider the following features associated with each type of reproduction:
+
+  • The number of offspring produced
+  • Whether the offspring is identical to the parent
+  • The resources required to produce the offspring."
+,"
+
+#1, 8
+
+#### Sub Task 2: Extract Entities
+
+Given the following text, identify the named entity or entity type as the appropriate response, where:
+
+• NNP: Proper noun, singular, not capitalized
+• NNS: Proper noun, plural, not capitalized
+• CD: Cardinal number
+• NN: Noun, singular or mass
+• NNP: Proper noun, singular, capitalized
+• NNS: Proper noun, plural, capitalized
+• CD: Cardinal number, capitalized"
+,"
+
+\textbf{Example 2:} 
+Simplify the following text to improve its readability, ensuring its core meaning remains intact: 'the band is led by kris doherty and are from dublin, ireland. they have released 3 studio albums and 2 eps. the band have won 4 vmas and a best video award from the ireland television network, iris.' Provide only the simplified text as the response.
+
+\textbf{Example 3:}"
+," The text can be simplified by reordering the text or by rephrasing sentences or removing words from the text. For example, this can be used to improve readability of a newspaper article or a news broadcast.""
+
+2. Text Clustering:
+
+""Given an unstructured text document or a set of text documents, produce an outline of its content (or contents) that describes the key ideas in the text. The outline should capture key ideas from the text, the relationships between ideas, and also the key details (including examples) associated with the main ideas.""
+
+3. Machine Translation:"
+,"
+\begin{itemize}
+    \item \textbf{Ground-truth:} Mario 64 is a platform video game developed and published by Nintendo for the Nintendo 64. It was originally released in Japan on February 28, 1996, and was subsequently released in Europe on January 12, 1997 and in North America on September 27, 1996 as a launch title.
+    \item \textbf{Reference:} The game was developed by Nintendo and released in Europe as a budget title in January.
+    \item \textbf{Non-reference:} It was released as a budget-priced game."
+,"
+
+#### Input
+
+Input contains a single line with a string of at most 100 characters. The string consists of:
+
+• Any combination of uppercase and lowercase letters a-z.
+• Any combination of the digits 0-9.
+
+#### Output
+
+Output the simplified string with no trailing whitespace.
+
+#### Example
+
+Input:
+'The Coca Cola Company sold its Minute Maid Orange Groves in Florida in.'
+
+Output:
+'The Coca Cola Company sold its minute maid orange groves in florida in.'
+
+#### Note"
+," (5 Marks)
+
+Question 3 (1 Mark)
+
+Find the value of a, such that f(x) = (x-a)/(x^2 - 8x + 12) is a function.
+
+Question 4 (1 Mark)
+
+Identify the correct relation between the angles of a triangle.
+
+Question 5 (1 Mark)
+
+Identify the correct relation between the lengths of sides of a triangle.
+
+Question 6 (1 Mark)
+
+In the figure below, a tangent is drawn at P, touching the parabola y^2 = 4ax."
+," For example: If the original text was 'A baud is a unit of measurement for data transfer rate equal to one symbol per second.' The response would be 'One symbol per second'.
+
+Note: This challenge will be evaluated using an automatic tool to extract the simplified text from the response. Therefore, it is possible that it may not be fully aligned with the correct text (the text you have to simplify). It is also possible that your answer is the same as the original text (for example, if the text to simplify is 'A baud is a unit of measurement for data transfer rate equal to one symbol per second'."
+,"
+
+
+  • This dataset can be used for supervised or unsupervised learning, using the following label as the ground truth: “waterspout” if the text describes a waterspout, “tornado” otherwise.
+  • The target label should not contain words from the sample text.
+  • There are about 3,200 samples in this dataset, ranging in length from one to nine words.
+  • Sample answers:
+    • A funnel cloud that touches down on water is a waterspout.
+    • A waterspout that touches down on water is a waterspout."
+,"
+
+Test 6
+
+A user is installing the latest version of Linux on a new machine. The machine has been partitioned to include one NTFS and one FAT32 formatted partition. The installation of Linux should be completed to the point that the boot manager is installed and the new system is bootable. The current Linux installation contains two users, both of whom must be given administrative privileges. The two users should be granted the privileges to edit their own files and install and remove software.
+
+Test 7"
+,"
+
+
+\noindent\textbf{Refine-Simple}: Given a piece of text, first generate a simplified version of it. Then, refine the generated text by adding information missing from the simplified text, keeping the original's information and length intact.
+
+\begin{CJK*}{UTF8}{gbsn}
+Simplified: 我的好朋友在一家公司工作。我以前在我的好朋友的公司工作。我的好朋友在我的公司工作。"
+,"
+
+A. ""a stirrup is a frame or ring used to hold the foot of a rider. stirrups are usually paired.""
+
+B. ""a stirrup is a frame or ring that holds the foot of a rider. stirrups are usually paired and are used to aid in mounting and as a support while using a riding animal such as a horse.""
+
+C. ""a stirrup is a frame or ring that holds the foot of a rider attached to the saddle by a strap."
+,"
+
+Answer to this subject
+
+Ad: Content nearly identical to this page is available for $2.88
+Copyright © 2004-2010 All Rights Reserved"
+,"
+
+Note: This dataset is available at https://github.com/google-research-datasets/paraphrase-sensitive-text-simplification-dataset
+
+The dataset is split into train, dev and test sets. Each of these sets contains a folder with the following files:
+
+  • train_<set>_<num_files>.txt
+
+Each file in these folders contains the following:
+
+  • A sentence or paraphrase to simplify
+  • Its simplified version
+
+The files are separated by a blank line."
+,"
+
+    Note: This question is based on example 5 in the task description."
+,"
+
+Sample Input
+
+'august ndash eleanor of aragon queen of john i of castile lrb b. rrb'
+
+Sample Output
+
+'august - eleanor of aragon queen of john i of castile'
+
+
+
+This problem contains only one test case."
+," The text is a single sentence, and must be provided as a single string response, not line-by-line. No additional spaces should be inserted into the text.
+
+Hint: You can access the NLTK library in the Grader. It contains a large text corpus which can be used as a basis for this question.
+
+You should see a lot of similar text to the original in the corpus. You can use this to make an educated guess, based on the original text."
+," (5 points)
+
+(a) 'piper advocates christian hedonism and teaches that god is most glorified in us when we are most satisfied in him and that god's highest pursuit - his glory - and man's deepest and most durable happiness come together in one pursuit namely the pursuit of joy in god.'
+
+(b) 'piper advocates christian hedonism and teaches that god is most glorified in us when we are most satisfied in him and that god's highest pursuit namely the pursuit of joy in god comes together with man's deepest and most durable happiness.'"
+,"
+
+• The following text: 'the paris roubaix cycling classic from compi gne to roubaix over is the hardest one day road cycling race in the world and was first run in.' Should become: 'the paris roubaix cycling classic from compi gne to roubaix is the hardest one day road cycling race in the world and was first run in.'
+
+• Note that a special character was inserted into the text: The 'e' character at the end of 'classic' is actually an 'e' with an acute accent (&#233;) which should be kept."
+,"
+
+### Solution
+
+Casals had his memoirs recorded by Albert E. Kahn as Joys and Sorrows: Reflections on a Life by Albert Einstein, as Joys and Sorrows: Reflections on a Life, Casals, by Albert Einstein, and as Joys and Sorrows Reflections on a Life, Albert E. Kahn, Albert Einstein, Albert Casals, Albert Einstein.
+
+### Exercise
+
+This exercise will be updated.
+
+#### Solution"
+,"
+
+Use the following test data, the test data will be included with the submission:
+
+a rose window lrb or catherine window rrb is often used as a generic term applied to a circular window but is especially used for those found in churches of the gothic architectural style and being divided into segments by stone mullions and tracery
+
+### Step 4. Execute the task
+
+Click on the Execute button on the bottom panel to execute the task.
+
+### Step 5. Check the results"
+,"
+
+(3 points)
+
+You can assume the following about the given text:
+  • Only alphanumeric characters will be used in the text
+  • The text will not contain any punctuation marks
+  • The text will be no longer than 50 characters
+  • The sentence will only contain a single sentence
+
+Example Input
+
+'This is the example input.'
+
+Example Output
+
+'the example input'"
+,"
+
+Example answers
+
+""commune in calvados in normandy""
+""bonnemaison commune normandy calvados basse france""
+""commune calvados department basse normandie""
+""commune basse normandie bonnemaison calvados department""
+""commune calvados department basse normandie normandy france""
+""bonnemaison calvados commune france department normandy basse""
+""bonnemaison commune calvados normandy basse france department""
+
+Example training data"
+,"
+
+#### Annotation 1479067981692
+
+ 'Gavotte' has two meanings. One is 'a square-cut collar for the neck of a dress'. The other, of French origin, is a dance dating back to the 17th century.
+
+#### Parent (intermediate) annotation
+
+Open it
+'Gavotte' has two meanings. One is 'a square-cut collar for the neck of a dress'. The other, of French origin, is a dance dating back to the 17th century.
+
+#### Original toplevel document (pdf)"
+,"
+
+
+\subsection{Substitution}
+Substitution-based paraphrasing has been explored in a number of works \cite{xu2012paraphrasing,kumar-etal-2019-submodularity}.  Substitution-based approaches are advantageous in that they allow for more control and consistency in the output.  However, they are less flexible and are prone to producing the same output if the same phrase occurs multiple times within the text."
+,"
+
+
+The roots of a tree are generally embedded in soil, providing anchorage for the above-ground biomass and absorbing water and nutrients from the soil.
+
+Question 7 of 11
+
+Your Score: 0/10
+
+Which of the following statements is not true?
+
+
+Biodiversity is more than a balance of nature
+
+Biodiversity describes a relationship between biological variation and environmental variation
+
+Biodiversity can be measured
+
+Biodiversity includes the diversity of ecosystems, species, populations and genes"
+,"
+
+2. The first paragraph:
+
+1. The second paragraph is incorrect
+2. The second paragraph is unclear
+3. The second paragraph is wrong
+4. The second paragraph is unnecessary
+5. The first sentence is grammatically incorrect
+6. The second sentence is incorrect
+7. The last sentence is unclear
+8. The first sentence is unclear
+9. The last sentence is incorrect
+10. The last sentence is wrong
+11. The second sentence is wrong
+12. The second sentence is unnecessary
+13. The last sentence is unnecessary
+14. The last sentence is unnecessary
+15."
+,"
+
+
+\begin{Verbatim}[fontsize=\footnotesize]
+charley lasted from august to august and at its peak intensity it attained mph lrb km h rrb winds making it a strong category hurricane on the saffir simpson hurricane scale
+\end{Verbatim}
+
+
+\section{Code}
+
+A minimal implementation of the model is provided in the repository accompanying this paper. The code will be extended as future work is conducted.
+
+
+\section{Discussion}
+
+We propose a method for text compression which retains readability."
+,"
+
+
+\noindent{\bf Example:}
+
+\begin{tabular}{ p{0.9\linewidth} }
+{\small \faBook\ \textbf{Problem:} \\
+Text simplification of text: today san juan serves as one of puerto rico s most important seaports and is the island s manufacturing financial cultural and tourism center.} \\
+\end{tabular}
+
+\noindent{\bf Solution:}
+
+\begin{tabular}{ p{0.9\linewidth} }
+{\small \faBook\ \textbf{Output:} \\
+"
+,"
+
+
+\item[\textbf{P1:}]
+
+The goal of this task is to evaluate the system's ability to detect grammatical and semantic errors. It is a modified version of the Grammar error correction (GECR) task in the General Service List (GSL)~\cite{napoles2016gsl}. The original task involves detecting the grammatical error in sentences and correcting it in the following blank. We modify the original task to have a binary choice: given an erroneous sentence, choose the more grammatically correct one among the following two options."
+,"
+
+I'd like to try this one with a bot that could generate a few different outputs and pick the best one using a simple Markov process (or something more elaborate, if possible).
+
+I'm not sure if there are any good resources for finding examples like these. I've seen a number of interesting image captioning datasets, and the ones with the best image descriptions are closest to what I want, but there aren't very many of them.
+
+Are there any other good datasets like this? If not, what would be the best way to generate a dataset like this?"
+,"
+
+### Dataset Preprocessing
+
+We use the default tokenizer in GPT2 to split the texts into tokens. The tokenizer uses WordPiece algorithm to do tokenization. In the example above, the words that have been tokenized are in bold.
+
+Text Simplification
+
+### Training the Model
+
+We train GPT2 for around 3 epochs on the text-simplification dataset. The learning rate is 0.0001 and the batch size is 64.
+
+After training for around 3 epochs, the validation loss started to grow and we decided to stop training."
+," This dataset is the largest one available to date, consisting of more than 1.1 million sentences.
+\end{enumerate}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=1.0\textwidth]{figs/fig3.pdf}
+    \caption{\textbf{An illustration of the proposed approach} - (1) The input document with the span of text that is to be simplified highlighted. (2) A document-level context window is obtained from the surrounding text. (3) The span is simplified into its equivalent."
+,"
+
+Hint 1:
+
+Simplifying the original sentence, you might need to know the meaning of the words ""acidic"" and ""vacuum"".
+
+Hint 2:
+
+You might consider this a puzzle for ""normal"" humans.
+
+Hint 3:
+
+You might find the question titles in the movie useful.
+
+Hint 4:
+
+You might need to use the text to solve this.
+
+Hint 5:
+
+You might need to know that ""The Thing"" is not only a movie, it is also a book.
+
+Hint 6:"
+,"
+  • Provide the translation of the following text: 'i was in france for two years.' Provide the translation as the response.
+  • Translate the following text: 'i live in france.' Provide the translation as the response.
+  • Provide the translation of the following text: 'je m'appelle francois. j'habite dans un apartement a paris. j'ai cinq ans.' Provide the translation as the response.
+  • Translate the following text: 'i'm francois. i live in an apartment in paris."
+,"
+
+## Input
+
+• The first line contains the integer n (1n1000) — the number of characters in the original text.
+• The second line contains the original text of the puzzle message. Each character is either lowercase or uppercase English letter. The total length of the message doesn't exceed 1000 characters.
+
+## Output
+
+Print the simplified text. The text is considered correct if it is lexicographically equal to the simplified form of the input.
+
+## Examples
+
+### input
+
+7
+the puzzle will reveal the next set of coordinates
+
+
+### output"
+,"
+The text to simplify is ``they escaped several days later in a gun battle but pottinger recovered the stolen gold taken by the prisoners.'' and the simplified text is ``they escaped several days later in a gun battle, but pottinger recovered the stolen gold.''.
+\end{quote}
+
+The evaluation consists of 10 different models, including two different methods to evaluate text simplification and eight methods to compare text simplification with human-written simplifications:
+
+\begin{itemize}
+    \item \textbf{Golden}: It is the original text."
+,"
+  5. Simplify the following text to improve its readability, ensuring its core meaning remains intact: 'it is a popular tourist destination, with both historic and modern hotels and resorts, an international airport, a marina, a commercial port, and a large marquees event complex.' Provide only the simplified text as the response.
+  6. Simplify the following text to improve its readability, ensuring its core meaning remains intact: 'it is one of the oldest museums in the state and also the first museum of its kind in the world."
+,"
+
+You can copy/paste the text directly into your text editor and convert the text into lower case:
+
+katharine hope mcphee lrb born march rrb is an american pop and r b singer songwriter actress model and television personality.
+
+You will then need to remove punctuation, spaces, numbers and any special characters from the text to leave you with the following string of letters:
+
+
+The above string is a bit long, so we would suggest breaking it up into smaller blocks to make it more manageable:"
+,"
+
+Inspired by this.
+
+  • $\begingroup$ I have no idea what the task is supposed to be or how it can be measured. How is an algorithm supposed to learn anything? I would also argue that this task cannot be solved in a general way, i.e., you cannot create a single algorithm that will work for all texts. $\endgroup$ – nbro Nov 26 '20 at 2:20
+  • $\begingroup$ The task is simplifying the sentence. I'm not expecting any algorithm to learn anything."
+,"
+
+\end{exam}
+
+\begin{exam}[Explain the following text:'some people say that it would be better if all these new houses did not get built.'] Provide a simplified text as the response.
+\end{exam}
+
+\begin{exam}[Explain the following text: 'the new houses would be built on greenfields on the northern outskirts of the city, which would allow the existing residential area to retain its character.'] Provide a simplified text as the response.
+\end{exam}"
+,"'shirley jackson (1916-1965) was an influential american author. in 1951, jackson wrote a story for the new yorker about the horror of small-town living. the story was called 'the lottery,' and it remains one of the most influential short stories of the 20th century.'
+    """"""
+
+    tokenizer = transformers.BertTokenizer.from_pretrained('bert-base-uncased', do_lower_case=True)
+    tokenized_input = tokenizer(text, return_tensors='pt').input_ids
+    torch."
+,"
+
+
+This is a multiple choice question, in which a given text is simplified into a shorter, grammatically correct version, which includes only the words that are essential for the overall meaning of the original. The text can contain various errors, e.g. missing words, incorrect spelling, and wrong grammar. For example, the original text ""I am sure she was at home"" can be simplified to ""she was at home"". For the sake of this task, an error is defined as the change in the spelling of a word.
+
+Task 1[edit]"
+,"
+
+Example of a bad model answer:
+'in was the university was the university in and the university with students among italian institutions of higher education.'
+
+Example of a good model answer:
+'in had approximately students and was nominated as best university among italian institutions of higher education with more than students.'
+
+The sample task above is an example of the text simplification task as it is defined by the WPTC. In the WPTC a new task is introduced with the intention to increase the challenge by requiring the participants to extract the key meaning from the input text."
+," The response should consist of 2-5 words and exclude 'and', 'or', 'the', 'a', etc.
+
+Question 12. (10 marks)
+
+Identify and briefly explain the key features of the four-stage model of sustainability. The response should consist of 3-5 sentences.
+
+Question 13. (15 marks)
+
+Read the following text and answer the question(s) that follow:
+
+The notion of sustainability is closely linked to the idea of development. Development has often been defined in terms of GDP or other measures of economic well-being and has implied growth in output."
+,"
+
+    £24 (Avg Bid)
+    £24 Avg Bid
+    1 bids
+
+   ...a. The product is a multi-function tool used to help the user with a series of functions.
+
+    £50 (Avg Bid)
+    £50 Avg Bid
+    3 bids
+
+   ...the new design for a client, I need an experienced graphic designer to create all of the following files: 1) One PSD file of the logo design for printing."
+,"
+
+2. Identify the name of the capital of an European country with a population of over 10 million, given its official name (in English).
+
+3. Identify the name of the capital of a European country that has an official language different from English.
+
+4. Translate the following from the given language to English:
+
+* from German: 'Nachschub'
+* from French: 'la fosse aux anges'
+* from Spanish: 'bola de falso'
+* from Russian: 'дым'"
+,"
+
+1. The input is:
+
+freddie mercury lrb born farrokh bulsara lrb gujarati rrb september november rrb was a british musician best known as the lead vocalist and a songwriter of the rock band queen.
+
+2. The simplified text is:
+
+freddie mercury born farrokh bulsara gujarati september november was a british musician the best known lead vocalist and songwriter of the rock band queen
+
+The answer is:
+
+The simplified text is:"
+,"
+
+## Output
+
+rbr mmvi lrb
+
+• So, basically you want a shorter representation of this string with no punctuation? – Martin Ender Nov 23 '14 at 8:38
+• @MartinBüttner That is what I was aiming for yes. There is no requirement for the string to be readable, only that it contains the same amount of information. – Level River St Nov 23 '14 at 8:40
+• So if you have a list of symbols that need to be removed, you should add that to the question."
+,"
+    2. The following are three questions: 1) 'what was the goal of the carter doctrine?' 2) 'what happened to the carter doctrine?' 3) 'who were the opponents of the carter doctrine?'. For each of these three questions, give a natural language answer which is one sentence long.
+    3. Given a text, identify the most relevant portions. For example, given the text 'this is a test of the carter doctrine."
+,"
+
+\item\label{q2} The following sentence contains both the term \textit{`\textbf{penicillin}'}, and a term indicating \textit{`\textbf{intramuscular}'}: `it is used primarily to reduce the pain of intramuscular injection of penicillin.' What is the shortest possible sentence that still includes this information?"
+," The source of the text is Wikipedia - Grito de Dolores.
+
+Hint: use only English words
+
+This is a generated dataset. It is created using the Text Summarization Dataset Generator (TS-DG).
+
+For the dataset details, please see the dataset page."
+,"
+
+Example 2
+
+Response:'rejecting cookies will result in some website functionality being unavailable'
+
+Example 3
+
+Response:'modern browsers give the user control over the cookies they accept. Rejecting cookies will result in the website not working.'
+
+Example 4
+
+Response:'most browsers allow the user to accept or reject cookies, and some cookies are essential for the website to work'
+
+Example 5
+
+Response:'rejecting cookies may result in some websites not working'
+
+Example 6"
+,"
+
+The input can contain many sentences and the output should be formatted as follows: the output should be in the same order as the input.
+
+## 입력
+
+A single line containing an English sentence which should be simplified.
+
+## 출력
+
+A simplified version of the given sentence.
+
+## 제한
+
+• The length of the given sentence will be between 1 and 200 characters.
+• The given sentence will contain at most 20 capital letters.
+• The given sentence will contain only letters (a-z), spaces and dots."
+," For instance: 'Roast deer among the tribes is a delicacy' (16 characters).""
+
+""Answer: 'Roast deer among the tribes is a delicacy' (16 characters)""
+
+""Answer: 'Roast deer is a delicacy among the tribes' (16 characters)""
+
+The second solution is preferred because it is shorter and avoids the use of the word 'that,' which is redundant because the sentence makes it clear that the deer is among the tribes and not, for example, a part of the open fire or a tribe itself."
+,"
+
+Note that in the current challenge there is only a single simplified sentence to generate. If you are interested in doing multi-sentence summarization, see the following paper, which describes an extension of this challenge.
+
+### Dataset
+
+We created a new test set that is representative of our intended application of the summarization task. This test set contains 1,000 sentences from news articles. In particular, we obtained 1,000 news articles from CNN's front page. Each news article consisted of a headline, a short introductory paragraph, and a link to a full news article."
+,"
+
+### Input Format
+
+One line containing a string, which consists of the following:
+
+1. A word that's the name of a geographical location.
+2. Followed by an optional comma-separated list of words (if the previous word is a country), which is the country's name.
+3. Followed by an optional comma-separated list of words, which is a list of geographical location names.
+4. Followed by an optional comma-separated list of words, which are the names of the borders of the location."
+,"
+
+### Sample input
+
+he was the first prime minister from the australian labour party lrb the spelling of labour was changed to labor in rrb and the first labour party prime minister in the world
+
+
+### Sample output
+
+first prime minister from australian labour party labor and first labour party prime minister in the world
+
+
+## Rules
+
+• No external resources may be used (e.g. no online spelling checker)
+• Program may only take input from stdin (no files)"
+," Note the singular and plural form of the word'moth'. This test requires the ability to identify core meaning in short and simple text snippets, and the ability to identify the most appropriate word.
+
+3. In the following text, the sentence structure is unclear. Please re-structure the sentence to improve its clarity. 'the young girl went walking in the countryside her mother was with her as she was worried about her daughter.' Provide a correctly structured sentence as the response. This test requires the ability to identify and re-structure complex sentences to improve their clarity.
+
+4."
+,"
+
+Example: 'Since then he has given four subscription concerts.'
+
+• To what extent is the following text about a specific celebrity?
+
+Example: 'He is often asked to appear on television. His most recent appearance was on a major UK talent show in 2013. He is well known for his charity work and has been recognised for his efforts.'
+
+• The response to the previous item should be 'celebrity'.
+
+• Which of the following two responses is more likely to contain grammatically incorrect English?
+
+Example:
+
+A. 'a large public meeting that occurred in a city square.'"

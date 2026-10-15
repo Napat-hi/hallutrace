@@ -1,0 +1,89 @@
+response,list,list_condition,count,generation_id
+" Separate multiple answers with a comma. If a word starts with o you still put it in lower case. Use ONLY standard abbreviations, not other letters that could be mistaken for o. Use only letters and numbers, no symbols.
+
+7. Foxtrot. Golf. Hotel. India. Juliet. November. Oscar. Papa. Quebec. Romeo. Sierra. Tango. Uniform. Victor. Whiskey. X-ray. Yankee. Zulu.",,['oscar'],1,olmo2-7b|rationalization_numerical-00976|1
+" For example, if you are asked to list all the numbers less than 10 that are divisible by 3 you might answer 3, 6, 9.
+H, Hotel, Hotel, Hotel, Hotel
+A: 4",,['papa'],1,olmo2-7b|rationalization_numerical-00977|1
+" The items should be output with a space in between each item, and only the first item should have a trailing comma.
+Example: List the numbers less than 1000 that are multiples of 10 and 3.
+Output: 30, 33, 36, 39, 42, 45, 48, 51, 54, 57, 60, 63, 66, 69, 72, 75, 78, 81, 84, 87, 90",,['sierra'],1,olmo2-7b|rationalization_numerical-00980|1
+" If there are no items that satisfy the condition, output No. If you encounter a question that must be answered with a ""No"" answer, you must output ""No items match"".
+question:
+Output words that begin with S in the NATO phonetic alphabet?
+answer:
+Four items match.
+
+
+question:
+How many words in the NATO phonetic alphabet starts with the letter S?
+answer:
+Three items match.
+
+
+question:
+Which NATO phonetic alphabet words are at least 5 letters long?
+answer:
+Seven items match.",,['victor'],1,olmo2-7b|rationalization_numerical-00983|1
+" Separate multiple output(s) with a comma.
+2, Bravo, Golf, Bravo, India, Lima, Uniform",,[],0,olmo2-7b|rationalization_numerical-00989|1
+" You may use any reasonable format to give the answer; for example, 1, abc, or a c. I want to emphasise that you are not being asked to search for alphabets ending with a c (which is a similarly-sized task) but to count them. Furthermore, your list must be complete. Alphabetical order is important.
+
+  1. I will only award to those who correctly count the number and provide a complete list.
+
+My answer for the first three alphabets was 4. I have done the following alphabet checking:
+
+ABCDEFGHIJKLMNOPQRSTUVWXYZ - c
+abcdefghijklmnopqrstuvwxyz - c",,['quebec'],1,olmo2-7b|rationalization_numerical-00990|1
+" Answer: 11
+Part 2. Example
+Which unit has more sides, an 8-gon or a 10-gon?
+Answer: 8-gon has more sides
+Explanation: Output is correct based on the information given in the question
+Part 3. Exercise
+What is the square root of 49?
+Answer: 49",,"['charlie', 'mike', 'yankee']",3,olmo2-7b|rationalization_numerical-00992|1
+" List your responses separated by commas.
+
+Output: 2
+1. FO
+2. PAPA",,['golf'],1,olmo2-7b|rationalization_numerical-00993|1
+" Separate multiple items using a comma (,) as shown in the example. An item should not have leading or trailing spaces.
+
+Let me give you an example: How many words in the NATO phonetic alphabet ends with letter s?
+The answer to this example can be: 6, Sierra, Sierra, Sierra, Sierra, Sierra, Sierra
+Here is why: Output starts with a number, which is the correct answer. This is followed by the list of words, separated by commas. Therefore, this is a valid output.
+
+OK. solve this:
+What year has the most Presidents Day sales?",,[],0,olmo2-7b|rationalization_numerical-00994|1
+" Only list unique items. When there is no more elements in the list that satisfies the condition, output “No more.”.
+1958
+
+
+Elements: alpha, one, two, three, xray, easy, lock, queue, five, six, hotel, november, india, mike, november, zulu, whiskey, three
+Number of elements: 2
+alpha, one, two, three, xray, easy, lock, queue, five, six, hotel, november, india, mike, november, zulu, whiskey
+
+377",,['hotel'],1,olmo2-7b|rationalization_numerical-00999|1
+" You may generate any items, repeat items, and put them in any order you like. All words are separated by a newline character.
+Problem:How many words in the NATO phonetic alphabet ends with letter k. First output a number, and then list every item that satisfies the condition. You may generate any items, repeat items, and put them in any order you like. All words are separated by a newline character.
+Solution: 4",,['uniform'],1,olmo2-7b|rationalization_numerical-01000|1
+" Do not use commas or the word ""and"".
+A: 8
+Words in the NATO phonetic alphabet ending with letter n: ""n"": ""n""",,[],0,olmo2-7b|rationalization_numerical-01001|1
+" Only the last output list should have comma inside it.
+Ex Output:
+2, foxtrot, jay, kilo, mike, papa, que, romeo, tango, uniform, whisky, x-ray, yankee, zulu
+
+Ex Input:
+How many words in the NATO phonetic alphabet ends with letter h. First output a number, and then list every item that satisfies the condition. Only the last output list should have comma inside it.
+Ex Output:",,"['bravo', 'echo', 'kilo', 'romeo', 'tango']",5,olmo2-7b|rationalization_numerical-01002|1
+" Do not generate any words that contain the letter ""p"" at the end, do not output numbers. Only print the words that end with the letter ""p"", there should be 4 words that end with ""p"".
+
+abc p q ra sp tq ur wxy px yp
+4",,[],0,olmo2-7b|rationalization_numerical-01003|1
+" i.e. 1 or two item(s)
+zero uniform siser sierra socialist",,[],0,olmo2-7b|rationalization_numerical-01006|1
+" If there is no such item, print ""-If any-"". The items must be in alphabetical order, with each of them on a new line.
+
+v",,[],0,olmo2-7b|rationalization_numerical-01009|1

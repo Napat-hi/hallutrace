@@ -1,0 +1,592 @@
+response,category,prompt,generation_id
+"
+
+So, the flight is C to I to A to L to H to M.
+
+As a bonus, what is the shortest sequence of flights (the number of stops is the number of cities) to go from city C to city M?
+
+The shortest sequence is M to L to H to B to D.
+
+1. What is the total number of flights?
+2. What is the minimum number of stops to get from city C to city M?
+3. What is the maximum number of stops to get from city C to city M?
+4.",graph,,dclm-7b|rationalization_binary-01010|2
+"
+
+Answer: There is a series of flights that goes from city M to city E:
+1. The flight from city M to city L
+2. The flight from city L to city E
+
+Question: Provide the series of flights that goes from city H to city C?
+
+Answer: There are two series of flights that goes from city H to city C. The first is:
+1. The flight from city H to city G
+2. The flight from city G to city C
+
+The second is:
+1. The flight from city H to city N
+2.",graph,,dclm-7b|rationalization_binary-01012|2
+ (The answer should be yes.),graph,,dclm-7b|rationalization_binary-01014|2
+"
+Answer: Yes.
+Explanatory answer:
+N to E, E to I, I to F, F to K, K to M, M to A.
+
+There is another one with a set of flights available and two cities to travel from.
+
+There is a flight from city L to city G
+There is a flight from city J to city D
+There is a flight from city F to city H
+There is a flight from city A to city D
+There is a flight from city H to city I
+There is a flight from city F to city G",graph,,dclm-7b|rationalization_binary-01015|2
+" If no, then write a letter, indicating the minimum number of flights needed to make the connection.
+
+I am confused with the problem, and I need someone to explain it to me and give me some hints for solving the problem.
+
+Any help will be appreciated. Thank you.
+
+(Note: This is just one part of a larger question, and you do not have to answer the whole thing; it's just that the rest of the question is very similar.)
+
+  • $\begingroup$ It's asking if there is a flight path from B to N in that network.",graph,,dclm-7b|rationalization_binary-01017|2
+"
+
+Answer: There are two series of flights that go from city H to city A. The first one is:
+There is a flight from city H to city F
+There is a flight from city F to city E
+There is a flight from city E to city A
+The second one is:
+There is a flight from city H to city D
+There is a flight from city D to city J
+There is a flight from city J to city B
+There is a flight from city B to city A
+
+Question: Which city is the largest in the United States by population?",graph,,dclm-7b|rationalization_binary-01021|2
+"
+
+Problem 2. The Travel Agent (Contd.)
+In this problem you will modify the code from problem 1. This is a new situation and so you need to make changes to the code. You should not add code but modify the existing code. You should test and debug your code as you develop it. You may find it helpful to go over the code line-by-line and consider how you would make each change. For each of the following questions, respond with a ""yes"" or a ""no"".",graph,,dclm-7b|rationalization_binary-01023|2
+"
+
+If this problem is too complex, I am fine with just using an example of city I to city F. If I want to apply this problem to other cities, I need to understand the process in order to solve this problem and find the flight series. Thank you so much for your help.
+
+• The problem is incomplete. You need to specify which of the two destinations you want to fly to. – Michael Greinecker Aug 16 '13 at 22:52
+• Welcome to math.SE.",graph,,dclm-7b|rationalization_binary-01024|2
+"
+
+The answer is yes. The series of flights is as follows:
+E -> C -> H -> F -> J -> M
+
+The program should check whether this is possible.
+
+Note that we should print only the city names, without any additional instructions, as a series of one-line statements.
+
+The program should be divided into the following functions:
+1. int distance(char from, char to) – This function takes the names of two cities and returns the number of flights required to travel from one to the other, using the minimum number of flights.
+2.",graph,,dclm-7b|rationalization_binary-01025|2
+" If no, then provide the flight series closest to getting from J to I (e.g. I flew from city J to city L and then from city L to city I).
+
+Note: For the purpose of this problem, assume all flights are in one day (there is no need to include time delays)
+
+A. Yes. J,G,D,H,L,M,I.
+
+B. Yes. J,K,H,E,L,M,I.
+
+C. No.
+
+D. Yes.",graph,,dclm-7b|rationalization_binary-01035|2
+"
+
+I would be surprised if you can solve this problem in a reasonable amount of time using only a pencil and paper, so try it with a computer.
+
+1.1.5 (10 pts.) Using the file, implement a Java program that reads in all the information for the flight network, and solves the problem. The output should be the answer to the question and if there is more than one solution, the output should be all the solutions. Here is a sample run of the program with the flight network:
+There is a flight from city H to city G",graph,,dclm-7b|rationalization_binary-01039|2
+"
+
+Question 2
+
+In an earlier challenge, we examined this problem.
+
+You’ve just gotten hired by a new company, and your manager says that you are going to have to learn to fly. You want to be sure that you’re well prepared, so you start to take flying lessons. However, you want to be sure that you can get back home to your family whenever you want to.
+
+There are several small airports around the world. Some airports are larger than others, and some of the larger ones have airplanes that can travel to airports that are smaller.",graph,,dclm-7b|rationalization_binary-01043|2
+" Note: there are many possible answers; any answer is acceptable.
+
+This is the second question of a 2-part question. Please use my solution to the first part of this question (link above) to answer this second part. Please do not include the solution for the first part. Thanks!
+
+2. Relevant equations
+
+3. The attempt at a solution
+
+I would appreciate some hints. Thanks!
+
+2. Jun 15, 2012
+
+### Staff: Mentor
+
+Re: Flight Schedules (Help me find a series of flights from one airport to another.",graph,,dclm-7b|rationalization_binary-01045|2
+"
+Solution: First we see that there is a flight from city C to city A (CA) and a flight from city A to city M (AM). We then know that city C to city M is possible. Since we want the fewest number of flights, we take the shortest route between cities. We therefore answer the question with Yes, the series of flights is CAAM.
+
+The next question is a similar question, but what if we have to travel to another city along the way, say city G?",graph,,dclm-7b|rationalization_binary-01050|2
+" If no, then explain why it is not possible.
+
+Explanation:
+
+The following are flights from G to M:
+G→H→D→M
+G→H→F→E→A→J→M
+G→H→D→J→M
+G→H→F→M
+
+Explanation:
+The following are flights from G to M:
+G→H→F→E→A→J→M
+G→H→D→J→M
+G→H→F→M
+G→H→D→M",graph,,dclm-7b|rationalization_binary-01051|2
+"
+
+What are the values that the user can enter in the ""City"" field? Are they arbitrary? Are they known? If they are arbitrary, then I'd suggest using a table, or an array if your program can handle it.
+
+If the cities are known, then you could simply create an array of strings that describe the cities. For example:
+
+Code:
+string[] City = new string[] {""H"", ""I"", ""J"", ""K"", ""L"", ""C"", ""D"", ""E"", ""F"", ""B"", ""M""};",graph,,dclm-7b|rationalization_binary-01055|2
+" If no, then provide the list of cities that are included in the maximum path from city F to city D.
+Example Input
+1. The list of flights available (all of these are one-way only):
+There is a flight from city L to city D
+There is a flight from city F to city E
+There is a flight from city F to city J
+There is a flight from city J to city C
+There is a flight from city E to city K
+There is a flight from city J to city B
+There is a flight from city L to city N",graph,,dclm-7b|rationalization_binary-01060|2
+"
+The code should be written in pseudocode and it should be written with English words rather than a bunch of mathematical operators.",graph,,dclm-7b|rationalization_binary-01061|2
+"
+Answer:
+
+Exercise: What can you do with this code? What’s good about it? What’s not so good about it?
+
+Exercise: What is wrong with this code? How can you fix it?
+
+Exercise: What is wrong with this code? How can you fix it?
+
+Exercise: What is wrong with this code? How can you fix it?
+
+Exercise: Write a function that takes in a list of characters, and returns a list of the characters in reverse order. Test your function.",graph,,dclm-7b|rationalization_binary-01065|2
+"
+The first step to solving this problem is to build the graph shown in Figure 1.
+
+To determine if there is a series of flights from I to D, we can examine the graph in Figure 1.
+The flights are represented by edges in the graph, where each edge has two vertices representing the starting and ending city for the flight. The cities are represented by the nodes. For example, the graph shows a flight from I to H, and also from H to L, which together provide a route to city L. The cities are listed in alphabetical order and this is how they are represented in the graph.",graph,,dclm-7b|rationalization_binary-01066|2
+"
+
+There is a flight from city F to city K, from city K to city M, from city M to city G, from city G to city J.
+
+Example Question 2:
+First, we must look at the graph and determine the vertices involved. We notice that vertex B is the source, vertex A is the destination, and vertices C and D are vertices on the shortest path. The path from B to A goes through vertices C and D.
+
+Question: If the distances from B to C and from D to A are both doubled, what would be the new distance from B to A?
+
+",graph,,dclm-7b|rationalization_binary-01069|2
+" If no, then provide a counterexample.
+
+Answer: I am assuming that I don't need to worry about the number of flights and that I should not include any city twice (i.e. no flight will leave the same city twice). If I am wrong, please correct me.
+
+The reason I am asking this question is because I am not sure if I understand the problem. I have an idea on how I should tackle the problem, but I am not sure if it is right. I would like to see what the answer is to this question. I appreciate any help. Thank you!
+
+",graph,,dclm-7b|rationalization_binary-01073|2
+"
+
+Input Format
+
+The first line of the input file contains an integer t denoting the number of test cases. Each test case will be on a separate line containing three space-separated integers n, m, k. Here, n denotes the number of cities, m denotes the number of flights, and k denotes the maximum number of flights you are allowed to take in a series.
+
+Output Format
+
+Print y if there is a flight series that starts from city E and ends in city B and prints the series as well. Otherwise, print nay.
+
+Sample Input
+
+2
+3 4 2
+",graph,,dclm-7b|rationalization_binary-01077|2
+" If no, respond with a series of flights that gets closest to A and D.
+
+First, there is a flight from city A to city B,
+second, there is a flight from city B to city N,
+third, there is a flight from city N to city C,
+fourth, there is a flight from city C to city H,
+fifth, there is a flight from city H to city K,
+sixth, there is a flight from city K to city D.
+This series gets closest to city D at city H.",graph,,dclm-7b|rationalization_binary-01079|2
+"
+
+To solve this problem, we first define variables:
+
+L -> H, J, K, A, B, C, D, E, G, F, I, M
+
+Let the value of a variable be the number of the flight on the list above (i.e. the sequence of flights listed above, where the flights from city L to city D are the flights L -> H -> J -> K -> A -> B -> C -> D).",graph,,dclm-7b|rationalization_binary-01089|2
+"
+
+You are given a file named air.txt (or in the command line, provide the path to the file) that contains a list of flights from city to city. Each line in the file contains a source city, a destination city, and the cost of a flight from that city to the destination city.
+
+Example Input:
+
+F C 50
+D A 75
+D J 25
+E F 40
+B H 100
+G K 40
+H K 60
+
+Example Output:
+
+Yes - B H G K D J F C
+
+We are using this example just to explain the problem.",graph,,dclm-7b|rationalization_binary-01100|2
+"
+
+We have two goals. First, write a program that takes the above input and outputs “yes” or “no”, and then outputs the path if “yes”. Next, write a program that takes the above input, and a city, and outputs whether there is a series of flights that goes from the input city to the city in the input.
+
+Here is the input/output from the program:
+
+1. ncflights is a file that looks like the above.
+
+2. python2.5 ncflights.
+
+3. The output will look like:",graph,,dclm-7b|rationalization_binary-01101|2
+"
+
+In a subsequent interview, the following is said: ""We will be able to help you if you only want to travel from city A to city K. If you are going from city B to city C, we can help you there as well. If you want to fly from city G to city M, that's also not a problem. We can help you if you want to fly from city D to city B. You can also take a flight from city M to city K. You can fly from city A to city F, or from city L to city B.",graph,,dclm-7b|rationalization_binary-01103|2
+" If no, then explain why not.
+
+Answer: The answer is yes; the flights follow the series (G-H-B-D-C-I-M).
+
+The second question (a little trickier):
+
+Question: Is there a series of flights that go from city G to city K and then from city G to city L? If so, what are those flights?
+
+Answer: No. The only flights that go from city G to city K and then from city G to city L are (G-A-K) and (G-K-A).",graph,,dclm-7b|rationalization_binary-01112|2
+" If no, then say so, and also list the shortest series of flights that goes from F to D.
+
+Note: there is an example, but I don't understand it. The answer to the example is yes and the list of flights is:
+
+F to E to I to A to B to C to H to G to N to J to K to D
+
+If that makes sense, then please explain how you would get the answer. If it doesn't make sense, please explain why.
+
+Thanks so much for your help!!
+
+This is how I solved it...",graph,,dclm-7b|rationalization_binary-01115|2
+" If no, then respond with:
+There is no series of flights that goes from city C to city K
+
+Question: Is there a series of flights that goes from city G to city B? First, respond with yes or no. If yes, then provide the series of flights. If no, then respond with:
+There is no series of flights that goes from city G to city B
+
+• There's a lot going on here.",graph,,dclm-7b|rationalization_binary-01121|2
+" If no, then provide the shortest number of flights that cannot be taken to get from city M to city I. (Example: ""There are a total of three flights required for this series, from city M to city I."")
+
+In your code, declare the variables you need, but do not perform any calculations (e.g., don't add the flight data or the number of flights required for each series).
+
+Your code should prompt the user for input, calculate the shortest flight series, and output the number of flights in the series.
+
+What you will need to do:",graph,,dclm-7b|rationalization_binary-01124|2
+"
+
+Answer: If you didn't notice, this is the same as the first example, but with some added complications. This problem is not a hard one, and there are plenty of ways you could start to attack it. I suggest breaking the problem down to the smallest possible parts, then working your way up. In this case, you might try to figure out the shortest paths from each city to each other city, and then work your way up from there.
+
+Problem 3
+
+You are given the following information:
+You know for a fact that the person in city B hates the person in city C",graph,,dclm-7b|rationalization_binary-01129|2
+" If no, print -1.
+
+Sample Input 1
+
+Sample Output 1
+
+
+Sample Input 2
+
+Sample Output 2
+
+
+Sample Input 3
+
+Sample Output 3
+
+
+All Submissions
+Best Solutions
+
+Point Value: 15 (partial)
+Time Limit: 2.00s
+Memory Limit: 32M
+Added: Jul 30, 2014
+
+Languages Allowed:
+
+Comments (Search)
+
+it's actually asking for a path in the graph (in the format hh-cc-gg-..-mm).",graph,,dclm-7b|rationalization_binary-01134|2
+"
+
+Let us know if you require a visual representation of the question.
+
+• If we need a visual representation, then I don't think that a graph is going to be a useful way to think about this. For instance, the flights are not labeled, so you have to know that F, H, B, I, D, J, L, C, G, M, K and E all stand for cities. And you have to know that ""A to C"" doesn't mean that you fly to city A and then take a taxi to city C.",graph,,dclm-7b|rationalization_binary-01139|2
+"
+
+If there is no such series of flights, explain why not.
+
+Question 2: Suppose the company now plans to launch a new city called S. In order to decide on the city that the airline will serve first, it has to compare the costs of serving city S versus the costs of serving each of the existing cities. For each city, the cost to fly to that city is the sum of the costs to fly to all the cities the airline can reach by combining two or more other flights. In addition to the cities mentioned above, the cost to fly to a given city is as follows:",graph,,dclm-7b|rationalization_binary-01143|2
+" If no, provide a counterexample.
+
+To find the answer to this question, I'll use the concept of backtracking, which is used to solve problems that can be solved by a sequence of binary choices. This means that if we make a wrong choice, we need to undo it and try the next alternative. It is a useful concept in game programming, because most games require that we make a sequence of decisions (usually binary). Backtracking is an important concept in game AI, because it is often used to solve puzzles, such as in Myst or the new game Objection.",graph,,dclm-7b|rationalization_binary-01144|2
+"
+
+## The Attempt at a Solution
+
+I've been going through the chapter and the solution but I don't know how to get started here and the examples in the book are all different. So I'm not sure if there is a set procedure to go about it or something.
+
+The only thing that I know is that since the flights are one-way, then if you have one that connects to another it can't come back to the one it started from. And for the problem it says the series of flights so I think it's only going to one city and not coming back.",graph,,dclm-7b|rationalization_binary-01146|2
+" Note that all the flights listed above are the only flights that exist in the universe.
+
+In order to find this, I tried to create a directed graph of the entire flights with each city as a node. Then find the path that begins in city K and ends in city H. However, the graph that I created is incredibly large so I don't think it will be possible.
+
+Is there a more efficient way to do this?
+
+Thank you for the help!
+
+• You're basically looking for a path in a directed graph which starts in one city and ends in another. A classic problem!",graph,,dclm-7b|rationalization_binary-01152|2
+" If no, provide a counterexample (ie, a set of cities that satisfies the flights, but does not get us from city B to city N).",graph,,dclm-7b|rationalization_binary-01156|2
+"
+
+Sample input 1:
+M D K J
+E N F H
+
+Sample output 1:
+Yes: M K J E
+
+Sample input 2:
+B H F C
+L M J
+
+Sample output 2:
+No:
+
+Sample input 3:
+G E D F
+A I K
+
+Sample output 3:
+Yes: D F G E A I K
+
+Sample input 4:
+
+Sample output 4:
+No:",graph,,dclm-7b|rationalization_binary-01163|2
+" If no, then indicate that there is no such flight series possible.
+
+Note that you need to provide the series of flights, NOT the list of flights from each city to the final city.
+
+The above code can be run in your browser by clicking here.
+
+The above code is implemented as follows:
+
+The problem is encoded by the following statements:
+
+1. There are three airports, namely L, D, and B, from which a flight to the final airport A cannot be arranged. This is encoded by the three lines that start with city A.
+2.",graph,,dclm-7b|rationalization_binary-01171|2
+" For example, if there are a series of flights that go from city K to city B, then the flights are as follows: K to L, L to F, F to G, G to B.",graph,,dclm-7b|rationalization_binary-01178|2
+"
+
+Answer: No, there is no series of flights that takes one from city H to city G.
+
+There are two types of solutions to this problem, called positive and negative. Positive solutions are those that satisfy the conditions of the question. Negative solutions are those that don't satisfy the conditions of the question.
+
+Positive solution: There are no flights from city H to city G.
+
+Negative solution: There are flights from city H to city G (not a correct answer to the question).
+
+The algorithm we want to use in the CSP program solves the problem in the least-cost way.",graph,,dclm-7b|rationalization_binary-01181|2
+"
+
+To solve this problem we would first need to create an adjacency matrix (or an adjacency list, it’s up to you). I’ve created the adjacency matrix below. For each city I created a row and column and put the distance of the flight in that square. For example, the distance from G to J is 12. The problem asks if we can get from city G to city I. We can. How do we know? There is a 1 in the G, I position (meaning that there is a direct flight between them).",graph,,dclm-7b|rationalization_binary-01192|2
+" If no, do nothing.
+
+(a) Write a C++ program that implements a series of search functions, one for each question. Each of these functions will use depth-first search.
+
+(b) Use the following table as the initial search tree.
+
+A.1 B.3 C.4
+A.1 B.5 F.3
+A.2 B.3 C.4
+A.2 B.5 F.3
+A.2 D.3 M.4
+A.3 B.3 C.4
+A.3 B.5 F.3",graph,,dclm-7b|rationalization_binary-01195|2
+"
+
+## 机器人代写|计算机图形学作业代写Computer Graphics代考|Directed Search
+
+As we have seen, one of the main problems with the brute-force search method is that there is a huge number of possible paths to be examined. One approach to improve upon brute-force search is to direct the search to eliminate as many incorrect paths as possible. This approach uses a number of heuristics to help determine which paths should be considered first and which should be ignored.",graph,,dclm-7b|rationalization_binary-01196|2
+"
+
+1 Answer
+
+0 votes
+answered May 17, 2018 by Ramesh.Guru (3,420 points)
+
+The solution for this problem is:
+
+
+  1. F->L
+  2. N->E
+  3. C->G
+  4. E->A
+  5. C->I
+  6. H->J
+  7. B->H
+  8. B->C
+  9. E->K
+  10. N->F
+  11. F->D
+  12. H->M",graph,,dclm-7b|rationalization_binary-01203|2
+"
+
+In order to get the flights information, you need to visit an airport or buy the plane ticket online. To visit the airport you can take the following series of flights:
+1. First you need to fly to city G from city C
+2. Then fly from city G to city M
+3. Finally, fly from city M to city B.
+
+This series of flights will take about 4 hours. If you want to visit other cities in the same day, you can take a different series of flights as follows:
+1. First you need to fly to city A from city C.
+2.",graph,,dclm-7b|rationalization_binary-01206|2
+" For example, you could say M, K, C.
+
+Question: What is the length of the shortest series of flights to get from city M to city C?
+
+
+A list of flights with all available cities.
+
+The first line has an integer n (1 ≤ n ≤ 500) that specifies the number of cities, where:
+n+1 through 2n specifies the list of cities.
+
+The second line has an integer m (1 ≤ m ≤ 2000) that specifies the number of flights.
+
+Each of the following m lines contains a city name.",graph,,dclm-7b|rationalization_binary-01211|2
+" If no, explain why there is not.
+The answer to this question is No, and the reason why is: the destination city of H has only 1 flight, so you have to go through 2 other airports (M and E) to reach the final destination E.
+
+My first instinct is that there is no need to list all of the flights from city to city, that it would be a lot of extraneous information.
+
+Am I on the right track with this, or am I overlooking something?
+
+• Yes, I would agree that extraneous information isn't necessary.",graph,,dclm-7b|rationalization_binary-01226|2
+"
+Answer: There are no flights between city J and city D.
+
+Question: Is it possible to go from city J to city I to city L to city E to city M to city F to city C to city B to city G to city K to city H to city N to city A and back to city J? First, respond with yes or no. If yes, then provide the series of flights.
+Answer: There are too many flights.",graph,,dclm-7b|rationalization_binary-01228|2
+"
+
+Solution Preview
+
+A series of flights from city F to city M:
+
+The following series of flights...
+
+Solution Summary
+
+This solution is comprised of over 300 words to assist with the logic needed to answer the question.",graph,,dclm-7b|rationalization_binary-01232|2
+"
+
+Answer: no.
+
+Question: Is there a series of flights that goes from city D to city C?
+
+Answer: yes. There is a series of flights that goes from city D to city C.
+
+This is just a simple example. I need to use the data of real flights and it must be in excel.
+
+I have been looking for some example in the forum but I am not able to figure out how to do this.
+
+Can someone explain how to do it, or can you provide me some information that I can use?
+
+I hope someone will answer my question.",graph,,dclm-7b|rationalization_binary-01237|2
+" For example, there is a series that goes from I to A as follows:
+
+Step 1, flight from I to N
+Step 2, flight from N to A
+Step 3, flight from H to A
+
+Answer: A solution to the above flight problem would be: There is a series of flights that goes from city I to city A as follows:
+
+Step 1, flight from I to N
+Step 2, flight from N to A
+Step 3, flight from H to A",graph,,dclm-7b|rationalization_binary-01241|2
+"
+
+
+Solution Summary
+
+We provide the solution to the problem.",graph,,dclm-7b|rationalization_binary-01245|2
+" If no, provide the nearest flight to city H from city F.
+
+• I have edited the question to reflect a change in notation. Please make sure I did not make any mistake. – Siddharth Bhat Oct 30 '16 at 17:23
+• No mistake. This should be more difficult now. – Peter Oct 30 '16 at 17:28
+• Yes. I have a friend in city F and a friend in city H. I could visit my friend in city F, take a flight to city K and then take a flight to city H.",graph,,dclm-7b|rationalization_binary-01247|2
+" If no, then there is no route from G to K.
+
+I need the algorithm that will solve this problem.
+
+Thanks in advance,
+
+Answer Source
+
+One of the most common algorithms to check if there is a path between two nodes in a graph is depth-first search. I believe this is what you need for this problem.
+
+From Wikipedia:
+
+The process begins at the root (selecting any node as the root is allowed), and explores as far as possible along each branch before backtracking.",graph,,dclm-7b|rationalization_binary-01248|2
+"
+
+Here is my code:
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Queue;
+
+public class Flights
+
+public static void main(String[] args) {
+
+Scanner keyboard = new Scanner(System.in);
+
+String cityA = keyboard.nextLine();
+String cityB = keyboard.nextLine();
+
+// add cities to the Queue
+Queue<String> Q = new LinkedList<String>();",graph,,dclm-7b|rationalization_binary-01250|2
+" The first and last flights must be the city K and city B respectively.
+
+For example, if there is a flight from city K to city B, the response would be YES, and the following flights would be: K -> J -> C -> D -> F -> B (because the first flight is from city K and the last is to city B). The flights do not need to go from K to B. There can be a detour via other cities, as long as the first flight is city K and the last flight is city B.",graph,,dclm-7b|rationalization_binary-01251|2
+" If no, then provide a path from city H to city K that visits a minimum number of cities. There is a path of length four. This example is given in the slides.
+
+Here is the code I have so far to find the flight:
+
+import java.io.*;
+import java.util.Scanner;
+
+public class FindFlight {
+static String [] path= {""H"",""M"",""A"",""F"",""B"",""G"",""K"",""E"",""C"",""L"",""N"",""D"",""J"",""I""};
+static int i=1;",graph,,dclm-7b|rationalization_binary-01252|2

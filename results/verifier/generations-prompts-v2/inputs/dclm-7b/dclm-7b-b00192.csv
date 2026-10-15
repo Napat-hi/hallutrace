@@ -1,0 +1,627 @@
+prompt,response
+,"
+
+Hint 1:
+
+The town was a target for allied bombing raids during World War II.
+
+Hint 2:
+
+The town's name can be an English word.
+
+• I have looked at your profile and read your previous questions. I wonder why you post puzzles that don't have a solution? I'm sorry if I'm misunderstanding the situation and I don't want to judge, I just don't see how these puzzles are supposed to work and it's sad to see good riddles not getting any answers. Aug 24 at 10:03
+• Thank you for your interest and your suggestion."
+," (Example: 'grooves are used for cutting, joining, or other purposes')
+
+I am unsure whether the 'cut the sentence down to a few words' approach is a viable solution.
+
+
+To achieve your goal, you should use natural language processing (NLP). The process would be:
+
+  • Obtain a bag-of-words model. This would basically give you a mapping from a word to a feature (i.e. it would tell you that the word ""grooves"" is represented by a feature in the model)."
+,"
+
+Question #9
+
+This is an image question. Please click on 'View Question' to load it.
+
+Question #10
+
+Which of the following lists is in the correct order based on the information given?
+
+A. Charles Darwin, Georges Cuvier, Jean Baptiste Lamarck
+B. Jean Baptiste Lamarck, Charles Darwin, Georges Cuvier
+C. Charles Darwin, Georges Cuvier, Jean Baptiste Lamarck
+D. Georges Cuvier, Jean Baptiste Lamarck, Charles Darwin
+E."
+,"
+
+This problem requires you to create a system that can take a given paragraph of text and make it more readable. This is a hard problem, because there are several criteria for readability, and because the correct solution is often a tradeoff. For example, simplifying the grammar of a sentence can improve its readability, but this may be outweighed by the fact that shorter sentences tend to be more readable than longer ones. In this problem, your solution will have access to a small collection of simple words and short sentences, from which it should try to build more readable versions of the given text."
+," Do not include the 'it weighs' and'standing approximately' parts in the response (i.e., the response should be of the format: 'kg and m').
+
+
+Note: the text should be simplified only, without additional context.
+
+Test dataset:
+
+Input: 'the table has a long rectangular shape and it weighs kg and its length is cm with a cm tail standing approximately m tall.'
+
+Output: 'table is long rectangular weighs kg and cm long tail stands m'
+
+Test dataset:"
+,"
+
+\begin{itemize}
+\tightlist
+\item
+  You should implement your solution in the file \texttt{data\_analysis.py}. You can use the following lines of code to import the required libraries.
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ImportTok{import}\NormalTok{ nltk}
+\ImportTok{import}\NormalTok{ re}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{solution-1}{%"
+," The following is a small sample of our test data:'miss' |'miss','missing' |'missing','missingno' |'missingno','missi' |'missing'
+
+What I am looking for is a solution that would use the 'p' function in a Regex pattern to make a 'P' for each 'p', but for it to only change it to a 'P' if it follows a 'i', and for it to not make a 'P' if the character that follows the 'i' is anything other than a '.'"
+,"
+  • [8]
+
+    Use the following text to complete the question: 'in the 17th century, the church of blagoveschensk was founded by the russian orthodox monk, who came to the area in order to spread christianity to the tribes who lived in the surrounding wilderness.' Give the name of this monk as the response.
+
+    • [8]
+
+More on"
+,"
+
+Task 2
+
+Find the correct answer for the following questions.
+
+(a) A movie's 'production company' is a term for which of the following?
+
+(b) In film distribution, what does 'theatrical distribution' mean?
+
+(c) 'International theatrical release' refers to a movie's release in what type of theater?
+
+(d) What does the 'film rights' refer to?
+
+(e) What is the purpose of 'compositing'?
+
+(f) What is the purpose of 'rotoscoping'?"
+,"
+
+\section{Results}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=1.0\textwidth]{test_result.png}
+\caption{Example of the output for our system on some of the test instances from the simplified text summarization dataset. The original sentences (left) are summarized by our system (right).}
+\label{fig:example}
+\end{figure}
+
+We evaluate our system using the simplified text summarization dataset released by \citet{zhu2010monolingual}."
+,"
+
+You will be expected to know:
+  • A few things about prime numbers
+  • The fact that odd perfect numbers are unknown
+  • The fact that douglas e. iannucci's conjecture about odd perfect numbers is also unknown (though it would be cool if this conjecture were solved)
+  • The difference between the lrb and the rrb, if you are British
+
+The simplest way to handle this challenge is to:
+  1. Identify the mathematical text
+  2. Figure out what text is not mathematical
+  3. Submit only the mathematical text"
+,"
+
+\begin{verbatim}
+(text: (str ""manchester lies within one of the uk s largest metropolitan areas the metropolitan county of greater manchester had an estimated population of the greater manchester urban area a population of and the larger urban zone around manchester the second most populous in the uk had an estimated population in the urban audit of.""))
+\end{verbatim}
+
+\begin{minted}{clojure}
+(defn sentence-tokens [text]
+  (->> text
+    (line-seq)"
+,"
+
+Sample inputs for training the model
+
+{'text': ""batista suffered a muscle tear in his back at the taping for the november edition of smackdown!""}
+
+Sample expected ouput for the above inputs
+
+'eddie guerrero'
+
+## Dataset
+
+The training dataset consists of 1,000 data points. The validation and test dataset consists of 200 data points each.
+
+### Data Ingestion"
+,"
+
+• The word “segment” in the above text could be an attempt to capitalize on the fact that the word segment is included in the vocabulary set, so in the answer the word “segment” should be included, even if it does not make sense in the context of the passage.
+
+• The word “stanmore” is only mentioned in the question, not the text, so it will be dropped when simplifying the text.
+
+• The word “subway” is included in the vocabulary list, but not used in the text, so it should be removed from the answer."
+," Do not perform any further text simplification beyond the original text.
+
+Answer: home to the kalash tribe who live in bumburet and two other remote valleys southwest of chitral town
+
+The simplification method used to get the answer above is a technique called Text Summarization. The Text Summarization system was originally developed in the 1970s as a solution for summarizing lengthy legal documents for human consumption. Since then, Text Summarization has become increasingly popular, and many new applications have emerged."
+,"
+• question_authoritarianism: Authoritarianism measures a user's opinions on authoritarianism-related topics like patriotism, respect for authority, and loyalty to the state. The following text is the full set of possible questions used to measure the authoritarianism factor: The following is a series of statements related to authoritarianism. Read each statement carefully. After each statement, please indicate to what extent you agree or disagree by moving the slider bar. [question_authoritarianism_item1] People who protest against their government should be dealt with firmly."
+,"
+
+#### Hints
+
+• What can you do to improve the readability?
+
+• What is the meaning of the text?
+
+• What is the core meaning of the text?
+
+• Keep only the core meaning in the output.
+
+• Use sentence segmentation and part-of-speech tagging to extract noun phrases.
+
+• Use a thesaurus to find better synonyms for words.
+
+• Use a thesaurus to find better synonyms for words.
+
+### model.control_engineering_simplify¶"
+,"
+
+3. (10 Marks)
+
+Answer the following question and provide supporting evidence for your answer: How is the tone of Thuycidides' narration different in Book 1 than in Book 2?
+
+Explain your answer.
+
+4. (15 Marks)
+
+Select two of the following items:
+
+a) In what ways does Thucydides show that he is a historian? (5 Marks)
+
+b) What reasons can you think of for Thucydides' inclusion of speeches in the narrative? (5 Marks)"
+," (Note: 'puerto cort s rrb' is the correct spelling. The test maker is aware that a common approach to this problem is to remove unnecessary characters, and that a common typographical error is to include a spurious space, and is not testing either skill.)
+
+Example 2.
+
+Use the following as a basis for two additional prompts, the only difference between the three being the second and third tokens (or first and third, depending on prompt):
+
+<html>
+<p>
+<span class=""span1"">
+<span class=""span2"">"
+,"
+
+## Task 5: Text simplification (TASK5)
+
+### Input
+
+Task 5 requires the prediction of a set of simplification operations given an input sentence.
+
+There are three possible operations that can be predicted, each mapped to a number as follows:
+
+• 1 : remove (e.g. ""I want to eat my cake."" to ""I want to eat cake."")
+• 2 : replace (e.g. ""I want to eat my cake."" to ""I want to eat my dessert."")
+• 3 : split (e.g."
+,"
+
+The simplification algorithm is as follows:
+
+  1. The following list of words is provided for use in the simplification process. Each word can only be used once.
+    1. in
+    2. the
+    3. it
+    4. since
+    5. that
+    6. have
+    7. passed
+    8. most
+    9. since
+    10. american
+    11. history
+
+  2. In a list of all words in the text, remove each word that is not in the list.
+
+  3."
+,"
+    (A) khl members were members of the division bobrov.
+    (B) members of the bobrov were in the khl.
+    (C) division bobrov in the khl were members.
+    (D) division bobrov khl members.
+    (E) bobrov division members were in the khl.
+  • Question 8
+    Reading Comprehension
+
+    In the past, companies in the computer hardware industry were able to maintain profitability by continually introducing innovative new products that consumers wanted and were willing to buy at high prices."
+,"
+
+Please provide the code you used to submit your solution.
+
+We use cookies. If you continue to browse the site, you agree to the use of cookies. For more information on our use of cookies please see our Privacy Policy."
+, The solution text should read as follows: 'eleanor of aquitaine was louis vii's first wife.
+,"
+
+Hint
+
+You can read the full text here.
+
+The following example illustrates the data format for the problem:
+
+Input:"
+,"
+
+## Example Test Question 2 (NLP)
+
+The following text has been extracted from a Wikipedia article: 'a jack plane (or fore plane) is a smaller and lighter version of the jointer plane which is around i long.'
+
+A text simplification task for this input could be defined as follows:
+
+## Example Test Question 3 (QA)
+
+The following text has been extracted from a Wikipedia article: 'a jack plane (or fore plane) is a smaller and lighter version of the jointer plane which is around i long.'"
+,"
+
+The task is more difficult than it looks. For example, there may be multiple, valid ways to simplify a sentence. In the example, one possible solution is 'the philippines and indonesia lie to the west and south of polynesia'.
+
+The system will accept this response if it's determined by Google's own rules to be a valid paraphrasing of the original text. But it won't work for all sentences, since the system needs to generalize to all possible queries and text it will receive, so it needs to identify simplification patterns in the query."
+,"
+
+\ex
+The name of the city is Paris and I'm visiting with my daughter. She's 7 and I am 48. This is the first time we have visited the city.
+
+\ex
+The name of the city is London and I am visiting with my daughter. She is 5 and I am 43. This is the first time we have visited the city.
+
+\ex
+The name of the city is Berlin and I am visiting with my daughter. She is 8 and I am 47. This is the first time we have visited the city.
+
+\ex"
+,"
+
+Example input:
+'notices of engagement and marriage were also formerly published in the gazette.'
+
+Example output:'marriage notices were published in the gazette.'
+
+Constraints:
+
+The length of the text is between 1 and 100 characters inclusive.
+The input text contains only the 26 uppercase letters of the English alphabet (A-Z).
+
+def simplification(text):
+	
+Use Call-Based format
+ANSWER:
+import nltk
+
+text = input()
+toks = nltk.word_tokenize(text)"
+,"
+    'despite the name, virgin radio stations in each country are usually independent.'
+
+    Q2. Fill the gaps in the text with the correct missing words. There is one extra word which is not needed in the text.
+    'In some cases, a number of small radio stations join together to create a larger organisation; this is known as a (A) __________. Radio stations may join together to form a radio (B) __________ or a network. Networks can offer a lot of benefits to small stations as they can combine resources and share programming."
+,"
+
+In your opinion, what is the most significant difference between hashing and encryption?
+
+What is a 'dictionary attack' in the context of passwords and password protection? How would one mitigate the risk posed by dictionary attacks?
+
+List as many other (non-hash related) forms of authentication as you can in three minutes.
+
+How would a vulnerability scanner identify the authentication mechanism used for the following web servers: IIS 6, IIS 7, Apache 2.0, Apache 2.2, Apache Tomcat 6, and Apache Tomcat 7?
+
+A server is running a web service."
+,"
+  5. Provide an API to compute the edit distance (Levenshtein distance) between two strings of characters. The API shall compute the smallest number of edits required to change one string to the other.
+  6. Using the edit distance API, compute the edit distance between the original and simplified text.
+
+
+You are going to use a number of modules that are available through CPAN. The first module you need is Text::Levenshtein::XS, a module providing fast string edit distance calculation."
+,"
+
+2. Simplify the following text to improve its readability, ensuring its core meaning remains intact: 'in addition to its political function, the state also acts as an executive, levying taxes and ensuring that there is law and order in the nation, and as a provider of services, such as education, health care and social welfare. In many countries, the state also provides public goods such as roads and water systems. Some states play an active role in the economy, while others are largely passive.' Provide only the simplified text as the response.
+
+3."
+," (For this task, you can assume that the output text will never exceed a length of 30.)
+
+Solution Stats
+
+40.38% Correct | 59.62% Incorrect
+Last solution submitted on May 14, 2019
+
+Problem Comments"
+,"
+
+#### Sample Output 1
+
+'an autumn festival is held in ballan every year in late march dubbed the captain moonlight festival.'
+
+#### Explanation for Sample Output 1
+
+Here, the question and sample output are identical.
+
+#### Sample Input 2
+
+simplify the following text to improve its readability, ensuring its core meaning remains intact: 'i am going to town to buy a new coat with you and i am sure that the coat will be very warm in the cold weather.'
+
+#### Sample Output 2"
+,"
+
+
+For reference and test data use:
+
+""Text simplification involves two related challenges.  One is to automatically identify text that can be simplified (e.g., text for which a shorter form is available) and the other is to automatically identify the simplified version of that text (e.g., the shortened form)."
+," You may optionally append a tag indicating whether your simplified text is an exact duplicate of the original text ('match'), an approximate duplicate ('match-approx'), a summary of the original text ('summary'), or a phrase from the original text ('phrase'). If you provide a match, the answer must be identical to the original.
+
+
+Note: In this task, we do not specify which entities (e.g. region, seasons, box sets) to be recognized because of the need to make the task flexible and generalizable to a wide range of domains and tasks."
+," ### Hints & Tips • The first step is to identify which letters are the same as the original letter in the input text. This can be done with the diff function. • For each word in the sentence, identify which letters are different, and in which positions, from the original. • Each different letter can be encoded as a character. • Each character can be represented using an array with four values. • Each value in the array can represent the corresponding letter, position in the word, and original letter from the input text."
+,"
+
+Note:
+
+The input text may contain spaces or newlines.
+
+# Solution
+
+With the problem statement of this question, the text itself, and a description of the input and expected outputs, we can start writing our code.
+
+Let’s start with the imports for our task:
+
+from nltk import word_tokenize
+from nltk.stem import PorterStemmer
+
+stemmer = PorterStemmer()
+
+
+## Pre-Processing
+
+We need to convert our input string to lowercase."
+,"
+  10. Which of these options is correct:
+
+    A. 'There have been many rumours, and I have heard some myself, but I have yet to discover the true answer'.
+    B. 'There have been many rumours, and I have heard some myself, but I have yet to discover the true answer'.
+    C. 'There have been many rumours, and I have heard some myself, but I have yet to discover the true answer'.
+    D. 'There have been many rumours, and I have heard some myself, but I have yet to discover the true answer'.
+"
+," Note: The text may be too long and difficult to read to be simplified correctly; in this case, just provide a short summary of the text."
+,"
+
+Sample Input
+
+
+Sample Output
+
+Action-Adventure Flight Simulator for the PlayStation
+
+Explanation of the Sample Output
+
+We have shortened and simplified the original text, but kept its meaning intact. Note that ""Action-Adventure"" and ""for the PlayStation"" have both been added to the text as this makes it more understandable."
+,"
+  8. Find the person's gender using a system that works at least 90% of the time for at least two different names. Provide the answer as either'male' or 'female'.
+  9. Find the person's date of birth and death, if available. Provide the birth date as the answer.
+  10. Find the person's occupation (from the text, not their page). The occupation is the first word of the page's <title> tag. If there is no occupation, then find the first word of the page's <h1> tag instead."
+,"
+
+This could be solved as follows:
+
+The first step is to detect the acronym ""thrush"" in the text. Since the acronym is defined in the input text, we don't need to extract it. We also need to detect the acronym ""candida"".
+
+The second step is to replace each acronym with its definition in the text."
+," (Hint: You may want to look up how a comma splice is handled.)
+
+  • $\begingroup$ I think your example is too specific for what you want to achieve, which seems to be to create general algorithms for simplifying natural language. That is a very hard task, but you could maybe try some methods used for information extraction. I'm not sure if you can use them for simplifying language, but you could try. $\endgroup$
+    – ncasas
+    Jan 7 '17 at 19:21"
+," The dataset includes 1,000 samples for the validation and 1,000 for the test.
+
+Example of dataset element:
+
+""text"": ""haim michael revivo lrb born february in ashdod rrb is a retired israeli football player and a businessman.""
+
+
+# Leaderboard
+
+# Submission
+
+In order to submit your solution, implement a custom transformer, as detailed in the instructions below, and upload it to S3 in a ZIP archive.
+
+# Implementation"
+," Note: The first three sentences are for reference and are not included in the response.
+
+Sample Test Question
+
+Write a program that simulates the following process: A student is asked to select an integer. After the student does so, the program prints the square of that number, the cube of that number, and the factorial of that number.
+
+Sample Test Question"
+,"
+
+You can use the following input for this task:
+
+""naismith coached forrest phog allen his eventual successor at kansas who went on to join his mentor in the basketball hall of fame""
+
+Sample outputs (simplified text):
+
+""naismith coached allen his eventual successor at kansas who went on to join his mentor""
+
+### General Instructions
+
+1. We expect the input to be a single string, containing only letters, digits, hyphens and commas. The input may be up to 2048 characters long.
+2."
+,"
+
+Example 2:
+
+Input: 'The novel the great gatsby is an american classic that has stood the test of time since its release in 1925. The author of this amazing book is f. Scott Fitzgerald.'
+
+Output: 'Novel the great gatsby is classic stood test time since its release 1925 author f scott fitzgerald amazing book'
+
+Explanation:
+
+The above sentence has been simplified and its core meaning is still preserved.
+
+Constraints:
+
+• 1 <= text <= 10^4"
+,"
+
+Test 4: (Yes / No)
+
+  1. Does the current response contain a link to the wikiquote sister project? (Yes / No)
+  2. Does the wikiquote sister project contain a link to the wikipedia project? (Yes / No)
+  3. Does the response in this test contain a link to the wikiquote sister project? (Yes / No)
+  4. Is there a link back to the wikiquote sister project from the wikiquote site? (Yes / No)
+  5."
+,"
+
+•   Sample output:
+
+•   The simplifier must not delete any information of significance.
+•   If there is more than one correct answer, any one of them can be returned.
+•   If no simplification is possible, a blank response string can be returned.
+
+•   There are no sample inputs for this task.
+•   Please submit your simplification function using any language you choose.
+•   Your function must accept one parameter, which is a string to be simplified.
+•   Your function must return a string representing the simplified version."
+,"
+
+### Hints
+
+There is no public dataset for the text simplification task. However, the dataset we used for the task was collected from the web and is available at the following link: https://github.com/clab/text-simplification. It consists of a set of source sentences and their corresponding simplified sentences (target sentences). The sentences in the dataset are in Portuguese.
+
+### Sample test cases
+
+• A simple case
+The source sentence: “Eu tenho um amigo em Mato Grosso, o Pedro, e o seu namorado é carioca.”"
+,"
+'''Question 7:'''
+Simplify the following text to improve its readability, ensuring its core meaning remains intact: 'the number of copies a particular album or single has sold in its various charting weeks is expressed by the charts, and by some media sources, in terms of its highest-selling week.' Provide only the simplified text as the response.
+'''Question 8:'''"
+,"
+
+The format of the response text is: 'fifa world cup in italy june-july'
+
+If there are multiple possible interpretations of the simplified text that is most likely to be correct, provide all such possibilities separated by 'OR'. Do not add any other characters or delimiters.
+
+Please limit the number of characters in your response to no more than 50.
+
+Sample Input 1 Sample Output 1
+fifa world cup the th staging of the world cup was held in italy from june to july.
+fifa world cup italy june-july"
+,"
+
+### Input
+
+A text containing between 1 and 1000 words. Each word is made up of 1-10 characters in all lowercase, and does not include special characters.
+
+### Output
+
+The simplified text.
+
+### Samples
+
+Input Output
+My name is Santhosh Kumar Reddy, and I work as a software engineer at Microsoft, Redmond Campus. I love travelling, listening to music, and I also play cricket and badminton.
+santhosh kumar reddy is a software engineer at microsoft and lives in redmond. he loves travelling and listening to music.
+"
+,"
+
+Answer: 'creepy goll'
+
+A good simplification of the original text is'she arrives with a client, a creepy professor (goll).'
+
+\subsubsection{Sentence simplification (WikiLarge)}
+
+WikiLarge \cite{zhu-etal-2010-monolingual} is another dataset for the sentence simplification task. Sentences in the dataset come from Wikipedia (in English) and its Simple English version. It contains one million sentence pairs, where each sentence pair includes one original sentence and its corresponding simplified version."
+,"
+
+Question 2
+
+Which of the following is NOT a characteristic of the formalist reading of literature?
+
+Question 3
+
+According to the cultural theory approach to studying the Australian novel, Australian fiction is:
+
+Question 4
+
+In the novel The Australian, Dyer presents the following quote:
+
+""We are the children of European culture. The European spirit is in our veins, in our minds, and in our language... Our literary tradition is a European one.""
+
+In which section does he present this quote?
+
+Question 5"
+," Note that the simplified text may be different from the original text.""
+
+In the real world, this means the system should be able to handle cases like these:
+
+""The village of goreville in Johnson County, Illinois.""
+""goreville is a village in johnson county, illinois, united states.""
+""Goreville is a village in Johnson County, Illinois, United States.""
+""Goreville is a village in johnson county, illinois united states.""
+""Goreville is a village in johnson county illinois united states."""
+," (5 Marks)
+• ### a) The following table gives the results of the 2011 census for the three states of Australia.a.
+
+(Solved) December 10, 2013
+
+a) The following table gives the results of the 2011 census for the three states of Australia. a. Calculate the mean and standard deviation for each state. b. Calculate the mean and standard deviation for the three states combined. (6 marks ) State Number of households (in thousands) Western Australia"
+,"
+
+You don't need to put the ""Provide only the simplified text as the response"" part in the model text itself; that's there just for clarity.
+
+For the sample training data we created a dataset of 1,000 questions. We created each question using the following procedure:
+
+  1. Select a random text string of length 25 from a corpus of 50,000 English sentences.
+  2. Select a random sentence from the 1,000-word Wikipedia article on supernovae.
+  3."
+,"
+
+A: The primary use of marginal land is for pastoral grazing on cattle stations leased from the federal government.
+
+B: The Federal government leases out marginal land for pastoral grazing.
+
+C: Pastoral land is leased from the federal government.
+
+D: The government leases out marginal land for pastoral grazing.
+
+E: The land is used for pastoral grazing.
+
+F: The land is used for grazing cattle.
+
+G: The land is used for pastoral grazing.
+
+H: The land is used for grazing."
+,"
+
+## Overview
+
+This task requires the generation of a summary of a short section of text with a maximum of 100 words. You will be presented with a text that describes a concept or a solution for an information technology problem. You will be required to generate a short summary of the key ideas in the text using no more than 50 words. The summary is then evaluated based on its ability to preserve the core meaning of the original text. In particular, the summaries should be objective and neutral in tone and not express the opinion of the summarizer.
+
+## Dataset"
+,"
+
+The input to this problem is a sentence. The solution to this problem is also a sentence.
+
+The main objective is to make the sentence grammatically correct. Apart from that, we should make the sentence concise and precise. You should focus on improving the readability of the sentence.
+
+The sentence length is always less than 100 characters. The sentence does not have any punctuations.
+
+You can make the following changes in the given sentence:
+
+  • You can remove or add a word from the sentence.
+  • You can remove or add a period."

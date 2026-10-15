@@ -1,0 +1,230 @@
+response,category,prompt,generation_id
+" If no, then provide the name of the US senator. In other words, what's the name of the US senator whose alma mater was Northwestern University and who also represented the state of Louisiana?
+yes",senator,,olmo2-7b|rationalization_binary-00777|1
+" If no, then state that no US senator with that characteristic exists.",senator,,olmo2-7b|rationalization_binary-00779|1
+" Do not provide the name of the alma mater.
+
+Answer: no",senator,,olmo2-7b|rationalization_binary-00780|1
+" If no, then just provide a list of all the US senators that represent the state of New York.
+Output: no
+Input: Athanasius is famous for being a Christian theologian and serving as a bishop. Athanasius of Alexandria was Bishop of Alexandria from 8 June 328 until his death on 2 May 373. He is a Christian saint and a father of the church. From 326 to 327, Athanasius served as an assistant to Alexander of Alexandria, the bishop of Alexandria, and was a supporter of Arius before their excommunication.",senator,,olmo2-7b|rationalization_binary-00790|1
+" If no, then provide a list of the senators from Oregon and the name of their alma mater.",senator,,olmo2-7b|rationalization_binary-00794|1
+" 
+
+Answer:
+yes
+Problem: Did a third party leader ever run in the 2011 election in Ontario? 
+
+Answer: no",senator,,olmo2-7b|rationalization_binary-00811|1
+" If no, then provide the name of the US senator that represents the state of Connecticut and whose alma mater was Yale University.
+no",senator,,olmo2-7b|rationalization_binary-00813|1
+" Follow up with the surname of the alumni's college.
+no",senator,,olmo2-7b|rationalization_binary-00817|1
+" If no, then provide the names of two different US senators that represent the state of Indiana.
+A: yes, Daniel D. Wayne",senator,,olmo2-7b|rationalization_binary-00819|1
+" Remember to answer with a separate sentence.
+Example Output: no
+
+Example Input: Passage: In Week 2, Doug Pederson faced off for the first time against his former team when the Eagles traveled to Cincinnati to take on the Bengals. The game was close early as the Bengals held a 10-7 lead at halftime. However, in the second half, the Eagles dominated en route to a 34-17 victory. The defense forced four turnovers, three of which came from picking off Andy Dalton. Carson Wentz had another good game, throwing for 223 yards and two touchdowns.",senator,,olmo2-7b|rationalization_binary-00821|1
+" If no, then provide the name of the US senator whose alma mater was Johns Hopkins University.
+Output: yes
+This is a good example. The answer is correct and it is given in the second sentence.
+
+New input case for you: Is there an army base in the town that is home to a women's college? If yes, provide the name of the town.
+Output: no",senator,,olmo2-7b|rationalization_binary-00823|1
+" If not, provide a reason why this scenario is not possible.
+
+(See solution)
+
+It’s impossible for a Dartmouth alumnus to serve as a New Jersey senator because there are no Dartmouth alums who are US senators.
+
+Chapter List",senator,,olmo2-7b|rationalization_binary-00829|1
+" If no, then say no US senators have ever graduated from Dartmouth.
+
+The first thing to notice is the yes-or-no structure. We’ll take advantage of a natural way to encode these answers:
+
+class BooleanLiteral(object):
+    def __init__(self, value):
+        self.value = value
+
+    def __str__(self):
+        return str(self.value)
+
+This simple class allows us to represent the yes-or-no answers:
+
+>>> True
+>>> False
+
+We can provide the no answer as the literal False.",senator,,olmo2-7b|rationalization_binary-00833|1
+" If no, then state that there has never been such a senator.
+There has never been such a senator.",senator,,olmo2-7b|rationalization_binary-00845|1
+" If no, then provide the name of the US senator that represented North Dakota and whose alma mater was a medical school.
+Output: no",senator,,olmo2-7b|rationalization_binary-00868|1
+" If no, then provide the name of a US senator that represents the state of Oregon but whose alma mater was not Brown University. Context: Waldorf education is a non-sectarian approach to teaching that sees children as developing holistically in main streams of head, heart and hands. It is both a philosophy of education and a pedagogical approach. The approach is named after its founder, the Austrian philosopher and thinker, Rudolf Steiner, and the first Waldorf school was opened in 1919. There are now more than 1,200 Waldorf early learning and primary schools around the world.
+++++++++++",senator,,olmo2-7b|rationalization_binary-00871|1
+" Do not just say yes, and do not list the US senator as an answer. Only two sentences are required to answer this question.
+
+
+Yes, Senator Thad Cochran did indeed represent Alabama as a US senator from 1987 until his retirement in 2018.",senator,,olmo2-7b|rationalization_binary-00884|1
+" If no, then the name of the first US senator from Alaska and the name of his alma mater.
+A: yes
+Rationale: The question is asking for a 'yes' or 'no' based on the given fact. If the year is mentioned, the answer should be 'yes'. Otherwise, it should be 'no'. Here, the year (1967) is mentioned; hence, the answer should be 'yes'.
+Q: Fact: an animal requires warmth for survival. 
+Question: What does an animal require for survival?
+A: warmth.",senator,,olmo2-7b|rationalization_binary-00885|1
+ And no need to list other US senators who were born in California or who attended Vanderbilt University.,senator,,olmo2-7b|rationalization_binary-00887|1
+ No,senator,,olmo2-7b|rationalization_binary-00897|1
+" If no, then respond with I do not know. The alma mater of this US senator is Tennessee's third-largest private university. It is often regarded as one of the most beautiful campuses in the country. The university's undergraduate programs are denoted by their colors, red and gray. It is located on which major river in the southern United States, which runs southwest from Knoxville, Tennessee, to the Mississippi River?
+Solution: no",senator,,olmo2-7b|rationalization_binary-00901|1
+" Context: Vanderbilt achieved the title of Admiral of the Navy by personally knowing eleven U.S. Presidents, starting with John Tyler and ending with Harry S. Truman. As a personal friend of the presidents, Vanderbilt was frequently asked to perform services for the United States government, often relating to making appointments at various embassies around the world. He was integral in persuading his friends to take appointments as United States ambassadors, and in the case of Matthew Calbraith Butler, Andrew Jackson Donelson and John Gulf Camp Tyler, he convinced them to accept the appointment as United States Ambassador to Spain, which each did for a time.",senator,,olmo2-7b|rationalization_binary-00906|1
+" If no, respond with nothing.",senator,,olmo2-7b|rationalization_binary-00916|1
+" If no, then provide the name of a US senator that represented the state of Rhode Island but whose alma mater was not Vanderbilt University.
+
+This question has a number of parts:
+
+  1. Yes or no?
+  2. Yes = provide the name of a US senator
+  3. No = provide the name of a US senator (actually a former US senator, from Rhode Island, who did not attend Vanderbilt University)",senator,,olmo2-7b|rationalization_binary-00918|1
+" No, there never has been.",senator,,olmo2-7b|rationalization_binary-00930|1
+" If no, provide the name of a US senator that represents Arizona and attended Rice.
+no
+As of 2019, which senator from Arizona is a member of the Republican Party?
+no",senator,,olmo2-7b|rationalization_binary-00931|1
+" If no, provide a list of US senators that came from Arkansas and attended Rice University.
+
+The answer can be found in this passage:
+
+Arkansas is represented in the Senate by John Boozman (Republican Party), Tom Cotton (Republican Party), and John H. Boozman (Republican Party). Before Boozman became a senator, Boozman's family once served as its U.S. representative, with Chicot and Phillips, first Franklin D. Roosevelt, then Charles F. prequel, then Woodrow Wilson, then William Jefferson Clinton.
+
+This statement provides one answer, Boozman.",senator,,olmo2-7b|rationalization_binary-00932|1
+"  Hint: More than 170 million years ago, Antarctica was part of the supercontinent Gondwana. Over time, Gondwana gradually broke apart, and Antarctica as we know it today was formed around 25 million years ago. Antarctica was not always cold, dry, and covered in ice sheets. At a number of points in its long history, it was farther north, experienced a tropical or temperate climate, was covered in forests, and inhabited by various ancient life forms.
+****
+[A]: no
+
+
+[Q]: Is the following sentence factually correct?
+""Johnny Cash joined the United States Air Force.""
+Options:
+",senator,,olmo2-7b|rationalization_binary-00937|1
+" Follow the template provided below:
+Provide a snippet of the context: The University of Southern California, colloquially referred to as USC, is a private research university in the urbanized Los Angeles metropolitan area. Founded in 1880 as a Christian evangelical institution by the Methodists and the Presbyterians, it is the oldest private research university in California and the fifth-oldest in the West. The university prides itself in the breadth and impact of its far-reaching efforts, from the university's original mission in Asia to its current focus on the sciences and the humanities.",senator,,olmo2-7b|rationalization_binary-00940|1
+" If no, then respond with ""no.""
+yes
+In January 2015, in the midst of negotiating another nuclear deal with the international community, Iran announced it had successfully tested ballistic missiles capable of reaching Israel and US military bases in the Middle East, which the United Nations had forbidden. On 11 February 2016, Iran stated that its rockets can now carry multiple warheads. The UN does not approve. Was Iran sent to the UN for its rocket developments? First, respond with yes or no. If yes, then provide the name of the UN. If no, then respond with ""no.""
+no",senator,,olmo2-7b|rationalization_binary-00941|1
+" If not, then provide a list of all US senators that represented the state of Louisiana that did not attend Rice University.
+
+To clarify, your solution must meet two criteria:
+
+  1. It must be expressed as an SQL statement.
+  2. It must be complete, in the sense that you have to find a solution that satisfies all requirements.
+
+Solution 1
+
+SELECT s.name, s.senator
+FROM states AS s, senators AS m, alum AS a
+WHERE s.name = 'Louisiana'
+  AND s.name = s.state
+  AND m.state = s.name",senator,,olmo2-7b|rationalization_binary-00946|1
+" If no, provide ""Not found"".
+
+No",senator,,olmo2-7b|rationalization_binary-00949|1
+" If no, explain the reason for this.
+
+Each state of the United States is required to have 2 senators. Currently Michigan has 2 senators in the Senate. The current senators are Debbie Stabenow and Gary Peters. Debby Stabenow went to Harvard. Gary Peters went to Harvard, but also has a masters from Stanford.",senator,,olmo2-7b|rationalization_binary-00950|1
+" You can find the answer by visiting http://www.nebraskalegislature.gov/legislators/legislator.aspx?year=2009&dist=1&amp;legislator_id=1419
+Output: no",senator,,olmo2-7b|rationalization_binary-00955|1
+" If no, the name of the senator who was born in New Hampshire. Do not write the answer, just yes or no.
+A: no",senator,,olmo2-7b|rationalization_binary-00957|1
+" If no, provide a name of a US senator from any other state that matches those criteria.
+
+yes
+answer:
+Edward Brooks
+
+
+question:
+Is the following a fact about the Nixon White House: Mollie Maguires successfully worked in the office?
+answer:
+no
+
+
+question:
+Is the following a fact about Corazón Valiente: Released in the Philippines under the title strong man, Juan?
+answer:
+no",senator,,olmo2-7b|rationalization_binary-00970|1
+" If no, then provide the name of a US senator that didn't represent the state of Delaware and whose alma mater was University of Washington.
+
+Input: Identify the most salient words:
+
+spider bite on calf of a white horse
+
+Output: bite
+horse
+spider
+
+
+Input: Identify the most salient words:
+
+a room with exposed beam ceiling and wooden floors
+
+Output: beam
+floor
+room
+
+
+Input: Identify the most salient words:
+
+this tiny little baby is pretty much a couch potato .
+
+Output: baby
+potato
+toddler",senator,,olmo2-7b|rationalization_binary-00986|1
+" If no, then provide a reason why it could not be.
+Output: no",senator,,olmo2-7b|rationalization_binary-00990|1
+" If no, say there is none.
+Is there any US senator that represented the state of Oregon and whose alma mater is Oregon State University? First, respond with yes or no. If yes, then provide the name of the US senator. If no, say there is none.
+How long have any of the current US senators that represent the state of Ohio been in the senate? First, respond with yes or no. If yes, then provide the name of the US senator. If no, say there is none.
+Did any of the current US senators that represent the state of Iowa go to Yale University?",senator,,olmo2-7b|rationalization_binary-00997|1
+" If no, then provide ""I don't know"" or ""no"". Please separate multiple guesses into separate answers. For example, if you think the name of the US capital is Paris and you think its nation is China, then your answer should be: Paris, China. However, if you think the name of the US capital is not Paris, then you should not provide any other city.
+
+Fact: Prochlorococcus are single-celled cyanobacteria that live in the ocean. 
+Question: What single celled cyanobacteria live in the ocean? Prochlorococcus.",senator,,olmo2-7b|rationalization_binary-00998|1
+" The series of flights are not necessarily going to be a simple round-trip route.
+
+Question 1: Is there a series of flights from city L to city M?
+
+Answer 1: No.
+
+Question 2: Is there a series of flights that goes from city M to city L?
+
+Answer 2: No.
+
+Question 3: Is there a series of flights from city L to city D?
+
+Answer 3: Yes. There is a series of flights from city L to city D: L to N to D.
+
+Question 4: Is there a series of flights that goes from city N to city H?",graph,,olmo2-7b|rationalization_binary-01001|1
+" If not, say that no such series of flights is available. You are looking for a series of flights that allow you to reach city B from city N. Notice that you can’t reach city B directly from city N. You need to pass through city C. City C is the stop that you need to go through to reach city B. It is necessary to go from N to C, and then from C to B.",graph,,olmo2-7b|rationalization_binary-01004|1
+" If no, respond with can not.
+no
+
+Question: Are there a flight from G to K? First, respond with yes or no. If yes, then provide the series of flights. If no, respond with can not.
+yes
+There is a flight from city G to city L
+There is a flight from city K to city L
+
+Question: Are there a flight from city C to city A? First, respond with yes or no. If yes, then provide the series of flights. If no, respond with can not.
+yes
+There is a flight from city C to city B",graph,,olmo2-7b|rationalization_binary-01005|1
+" If no, then respond with none.
+The answer to this question is: yes",graph,,olmo2-7b|rationalization_binary-01006|1
+" If no, say it's impossible.
+
+Proof:
+H → C (H, C) ⊆ D
+1) Flight from C to D = C → D (C, D)
+2) From D to C = D → C (D, C)
+3) (2), (1) implies C → D (D, C), (C, D) (transitive)
+4) From F to B = F → B (F, B)
+5) From B to F = B → F (B, F)",graph,,olmo2-7b|rationalization_binary-01009|1

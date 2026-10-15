@@ -1,0 +1,883 @@
+response,list,list_condition,count,generation_id
+"
+
+A:
+
+It has been a long time since I've done something like this but you could potentially use a ""backtracking"" function to build your solution as a recursive function:
+def count_subclasses(self, word):
+    count = 1
+    if word in ('n', 'm', 't', 'a', 'k', 's', 'z'):
+        return
+    count += self.count_subclasses(word + ""-a"")
+    count += self.count_subclasses(word + ""-e"")",,[],0,pythia-69b|rationalization_numerical-00318|1
+"
+
+Output:
+
+The number of continents with letters j in them.
+{A, B, C, D, E, F, G, H, I, J}
+1
+
+Now, I can understand how to do this with python but I cannot understand how to do it with js.
+I got the following code but it returns an error:
+const continents = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'];
+
+function test() {
+    var str = '';",,[],0,pythia-69b|rationalization_numerical-00321|1
+"
+.p {
+    float:left;
+    padding: 0 10px;
+    margin:10px 0 0 40px;
+    width: 70px;
+    color: #333;
+    float: right;
+}
+
+<div class=""p"">
+    <p>a</p>
+    <p>ab</p>
+    <p>abcd</p>
+    <p>abca</p>
+    <p>aba</p>
+    <p>aab</p>
+    <p>abc</p>",,"['asia', 'south america']",2,pythia-69b|rationalization_numerical-00330|1
+"
+The easy solution is the following:
+[[t.answers[i]] for i in range(len(answers)) if answers[i][2] == t.answers[i]]
+
+This looks like the A-list (or better D-list). This is usually an ideal way to solve problems. It is highly flexible, and it is also fast. The best part is that you can actually reorder the elements in A-list (or D-list).
+
+",,"['antarctica', 'north america', 'south america']",3,pythia-69b|rationalization_numerical-00331|1
+" How can you name those items in a way that they are easy to recall?
+
+Hint #1: On two continents, there is no letter u.
+
+Hint #2: Even without the first output, enumerate all valid options that satisfy the condition.
+
+A:
+
+The number of places that have a U is 
+$$\frac{\binom{8}{2}\cdot7!}{10!\cdot8!} = 4$$
+
+",,"['europe', 'south america']",2,pythia-69b|rationalization_numerical-00332|1
+"
+I wrote this program but i dont know what to do to the rest of the code, and where to put it.
+#include <iostream>
+#include <stdio.h>
+
+using namespace std;
+
+int main()
+{
+    int my_choice;
+
+    do
+    {
+        cout << ""Please enter a number from 0 to 100. (it must be an integer): "";
+        cin >> my_choice;
+    } while (my_choice > 100 || my_choice < 0);
+
+    if (my_choice == 0)",,[],0,pythia-69b|rationalization_numerical-00334|1
+"
+4 if there's no condition, output random single letter, or a sequence of letters from a set of letters.
+
+For example:
+Output: ccaae bbcga hhuua fegdf
+Expected output: ccaae bbcga hhuua fgdf
+
+Since this is a coded challenge and it is not within the scope of posting multiple solutions, I'd be very grateful if someone were to post the solution here and possibly edit my post so that it would be compatible with challenges.",,[],0,pythia-69b|rationalization_numerical-00337|1
+"
+First I was thinking that I can loop through a character by character and keep track of the current position, but in Python2.7, I can't figure out a way to do it.
+
+A:
+
+letters = ['a','b','c']
+
+def cont (letter):
+    total = 0
+    while letter in letters:
+        print letters
+        if letters[letter -1] == letter:
+            total += 1
+        letter += 1
+    print 'total = ', total
+
+f = open('file.txt', 'r')",,"['africa', 'antarctica', 'asia']",3,pythia-69b|rationalization_numerical-00338|1
+"
+
+A:
+
+Jelly, 15 bytes
+ḃFẋ2#_2l
+
+Try it online! or verify all test cases.
+EDIT: Saved a byte, thanks to Joe Malkevich for noticing a bug in the original code!
+Jelly's output is unsorted, because of how it lists combinations of [2,-1].
+Explanation
+ḃFẋ2#_2l - Main link. Argument: l
+ḃ       - duplicate
+ F      - filter/fj
+  ẋ2    - find/2 - find 2
+",,['europe'],1,pythia-69b|rationalization_numerical-00342|1
+"
+
+A:
+
+CJam, 20
+q/s:g/1~_p=I_?@}*2;
+
+Outputs on STDOUT a list of strings:
+""B""
+""B""
+""G""
+""G""
+""H""
+""H""
+""I""
+""I""
+""J""
+""K""
+""K""
+""M""
+""N""
+""N""
+""P""
+""P""
+""S""
+""S""
+""U""
+""V""
+""V""
+",,[],0,pythia-69b|rationalization_numerical-00344|1
+" The output should be just:
+a
+b
+c
+d
+e
+f
+This is my code:
+public class A {
+    public static void main(String[] args) {
+        System.out.println(findOne(""aj""));
+    }
+
+    public static int findOne(String s) {
+        int count = 0;
+        for (int i = 0; i < s.length(); i++) {",,[],0,pythia-69b|rationalization_numerical-00347|1
+"
+
+A:
+
+TL;DR:
+As @randUbugtu commented, you are having issues with the backtracking. You could just use while instead of do while and eliminate the do end condition.
+Program Solution:
+public class Main {
+
+  public static void main(String[] args) {
+
+    Scanner sc = new Scanner(System.in);
+
+    int n = 0, flag;
+
+    while (n < 6) {
+      System.out.println(""What continent (or cities) starts with letter 's'? "");
+      flag = sc.nextInt();
+
+",,['south america'],1,pythia-69b|rationalization_numerical-00356|1
+"
+
+The closest I could get so far is:
+type Query = Query of string * string * string
+
+query : Query =
+    let (a, b, c) = ""a""
+    let (a, b, c) = ""b""
+    let (a, b, c) = ""c""
+    printfn ""question: %a"" a
+    printfn ""answer: %a"" b
+    printfn ""another answer: %a"" c
+
+which prints:
+question: a
+answer: b
+another answer: c",,[],0,pythia-69b|rationalization_numerical-00357|1
+"
+Example: The output should be [u, z, v, u, n, i, d]. I would like to write a function that I can use, e.g., for [u, z, v, u, n, i, d, s].
+I want to do that without using recursion, because I want to learn to do so by myself.
+How should I do?
+
+A:
+
+I'm not familiar with Python, but I can give you some hints.",,[],0,pythia-69b|rationalization_numerical-00358|1
+" You are welcome to implement this in any programming language that you want.
+
+A:
+
+printEverywhere, based on suggestion from pcfuchs:
+$ python3 print_everywhere.py w abc a1 a2 a3
+WXYZ
+WXYZ
+WXYZ
+WXYZ
+WXYZ
+WXYZ
+WXYZ
+WXYZ
+WXYZ
+WXYZ
+WXYZ
+WXYZ
+WXYZ
+WXYZ
+WXYZ
+WXYZ
+WXYZ
+WXYZ
+WXYZ
+",,[],0,pythia-69b|rationalization_numerical-00360|1
+"
+
+A:
+
+Python 2, 78 69 bytes
+a=range(2)
+s=input()
+c=set(c)
+print(c.count('z')*s)
+
+Try it online!
+
+",,[],0,pythia-69b|rationalization_numerical-00363|1
+" For example, if you input 0, it should output a list of continents.
+
+My solution was:
+contList :: Integer -> [String]
+
+Make a function that takes a list and returns the list with the first item of the list removed. This can be done with filter.
+contList' :: [a] -> [String]
+
+Filter first element of the list, and return a list of all but the first element of the list.
+[c] = filter (!= 1) (reverse [c])
+
+Output the first element of the list in a separate list.",,"['africa', 'antarctica', 'asia', 'north america', 'oceania', 'south america']",6,pythia-69b|rationalization_numerical-00364|1
+"
+e.g.
+c1 = ['e','d','e','d']  #like putting to list(contenets=) but that fails.
+c2 = [x for x in [a,b,c,d,e] if all(i in x for i in [1,2,3,4,5])]
+c2 == ['e','d'] #how to get c2 = ['e','d','e','d']
+
+A:
+
+If you want to use itertools.",,['europe'],1,pythia-69b|rationalization_numerical-00368|1
+"
+
+A:
+
+This should be easy to do:
+abc <- list()
+abc <- abc[c(1:5, #:25)]
+c(apply(map(1:5, #:25), function(x) length(x %in% a%:[c(""a"",""g"")]), ))
+
+#  [1] 3 2 1 0 0 0
+
+The map(1:5, #:25) does the job:
+
+#  [1] 1 2 3 4 5
+#  [1] 1 2 3 4 5",,[],0,pythia-69b|rationalization_numerical-00370|1
+"
+The output should be
+1 2 3 4 5.
+1 2 3 4 5.
+1 2 3 4 5.
+1 2 3 4 5.
+1 2 3 4 5.
+1 2 3 4 5.
+
+I wrote it like this:
+import string
+
+count=0
+
+print(""Enter the starting string:"")
+number=int(raw_input())
+
+for i in range(number):
+    for k in range(0,7):
+        if i.isalpha() and k.isalpha() and k==j:",,[],0,pythia-69b|rationalization_numerical-00373|1
+"
+
+I have a C code written for this purpose, but it is extremely slow when there are big outputs. Is there any solution that would produce good performance?
+This is the code:
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+
+void countitems(int n, int al, int *sp)
+{
+    int i, c;
+    for (i = 1; i <= n; i++)
+    {
+        if (al >= i)
+        {
+            *sp = i;
+            return;
+",,[],0,pythia-69b|rationalization_numerical-00382|1
+" For example, for ""cosmos"", there are no such items
+<Ormie> kamal_: Like O_
+<Ormie> kamal_: Like O_
+<Ormie> kamal_: You cant treat O like 0 or 1. Thats what I dont understand
+<TheGateKeeper> CarinArr: best advice is stay with what you know :-)
+<meborc> how do i reconfigure my kernel to my current one?
+<Ormie> kamal_: Oh, to short",,[],0,pythia-69b|rationalization_numerical-00383|1
+" Then, your program should print the number of items, then print the number of continents.
+So the output of my program would be:
+7
+4
+3
+
+Here's my code:
+public class Earth continents {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int numberOfContinent = getNumberOfContinent();
+
+        int i = 0;
+        System.out.println(numberOfContinent);
+        for(String s: input.nextLine()){",,[],0,pythia-69b|rationalization_numerical-00384|1
+"
+.
+Now let's go into more detail
+In fact, what you want to do can be done by unrolling all possible strings of length 2 and seeing if their second letter is 1, the first one is 2, then the second one is 3, etc. In this way, you can just generate all of the possible strings, and check if it's valid to use it as your input string.
+That would mean your program would be this
+1
+11
+112
+1112
+11122
+111222
+1...",,[],0,pythia-69b|rationalization_numerical-00386|1
+" For example:
+  INPUT
+  f@z
+  a@z
+  g@z
+  b@z
+
+OUTPUT
+  A
+  B
+  C
+
+A:
+
+Your function could be written as
+a = {0,2}
+f = Table[StringTake[#, 1] =!= StringTake[#, -1]&, 3]
+
+Here we can make a hash, indexing with 0, 1, 2, instead of $a$, $b$, $c$, and search in the string instead of an array, making it faster and more elegant.
+",,[],0,pythia-69b|rationalization_numerical-00389|1
+" For example, for a query ""2 e's"" the output should be (0 1 2 3 4):
+2 3 4 0 e 1 2 0 1
+
+Please note, I need to keep the element in the array, and append only to that one. e.g. the above [0] should become [0, 0, 1, 1]. So far I'm able to write the first part, however the second part is confusing me. 
+This is what I've tried so far:
+private static void contains(String s) {",,"['tuesday', 'wednesday']",2,pythia-69b|rationalization_numerical-00394|1
+"
+I'm assuming you use Python.
+def weekdays(j):
+    for x in range(1,13):
+        if x+1 < 10:
+            print(x)
+
+weekdays(j)
+
+A:
+
+Here's a list comprehension solution:
+>>> sorted([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13])
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]",,[],0,pythia-69b|rationalization_numerical-00399|1
+"
+_
+|_/ (↓/ /_)---This are the conditions, and these are the outputs.
+-+0--3/2
+0/4*1
+1/-.2/3
+1/3/5-1/3
+3/6/9-1/3
+3/5/8-1/3
+4/7/10-1/3
+4/6/10-1/3
+1/6/10-1/3
+2/7/11-1/3
+1/5/11-1/3",,[],0,pythia-69b|rationalization_numerical-00401|1
+"
+Output would be like this:
+A b c d e f g h i j k l m n o p q r s t u v w x y z
+A 1 p q r s t u v w x y z
+b a r i k t
+E 1 p s
+
+Explanation:
+
+a = 1, b = 2, c = 3, d = 4, e = 5, f = 6, g = 7, ... n = 63, o = 64, p = 65, s = 66, t = 67, u = 68
+
+A:",,"['monday', 'wednesday', 'sunday']",3,pythia-69b|rationalization_numerical-00403|1
+"
+https://www.geeksforgeeks.org/find-every-number-of-the-week-starting-from-given-in-week/
+This is my approach:
+#include <iostream>
+#include <string>
+#include <fstream>
+#include <algorithm>
+
+int main() {
+    int length;
+    std::string p;
+
+    std::ifstream fin(""week.dat"");
+    std::stringstream ss;
+    ss.precision(1);
+    ss << std::fixed;",,['monday'],1,pythia-69b|rationalization_numerical-00404|1
+"
+I tried this:
+<html>
+<body>
+
+<script>
+
+function isNum(number) {
+    return number.match(/^\d+$/) ? true : false;
+}
+
+function listOfMatchingFreqDays(arr){
+    var myArr = arr;
+    var output = ""<ul>"";
+    for(var x = 0; x < myArr.length; x++){
+        if(isNum(myArr[x])){
+            output += ""<li>"" + myArr[x] + ""</li>"";
+        }",,[],0,pythia-69b|rationalization_numerical-00415|1
+"
+So far I have:
+
+Rename the symbol to elct1 and so on and store the resulting list in a variable.
+Goto the next letter and compare it with the rest of the alphabet, and when the alphabet is equal to e, add the corresponding item to the result variable.
+Goto the previous letter and continue the process, and so on until no letter is left.
+
+A:
+
+Not a solution, but you can do this way:
+In python you can use zip which is very useful in solving this kind of problems.",,[],0,pythia-69b|rationalization_numerical-00420|1
+" This is the code I have so far:
+for (var j = 2; j < 10; j++) {
+  console.log(j);
+}
+
+This results in:
+2
+3
+4
+5
+6
+7
+8
+9
+10
+
+A:
+
+There are actually multiple ways to do it, one of which is:
+
+function dayOfTheWeek(day) {
+    var r = [],
+        l = ['saturday', 'sunday'];
+    for (var d = l[0]; d < l[1]; d++) {
+",,[],0,pythia-69b|rationalization_numerical-00425|1
+"
+
+I'm using list comprehension for this, and the first output is the string that's returned by capitalising the character that's matched by input.
+[letter_l for letter_l in 'ijklmnop' if letter_l[0] == letter]
+
+A:
+
+letters = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+letters = sorted(letters)",,[],0,pythia-69b|rationalization_numerical-00427|1
+"
+
+It's just saying get me a number and list the items, but not how many items that is.
+
+A:
+
+The start-of-the-week solution
+Ok, assuming you want a single list of the week days (e.g. [sunday, monday, tuesday, wednesday, thursday, friday, saturday]), you could parse the string with strptime and parse the output with strptime again (reference), which will give you a structure containing the name and the week number, along with the relevant start date and end date.",,[],0,pythia-69b|rationalization_numerical-00429|1
+"
+
+A:
+
+For your second question:
+for start in ['Mon','Tue','Wed','Thu','Fri','Sat','Sun']:
+    for stop in ['Mon','Tue','Wed','Thu','Fri','Sat','Sun']:
+        if len(start) == 4 and len(stop) == 4:
+            print(start+stop)
+
+",,[],0,pythia-69b|rationalization_numerical-00430|1
+"
+Example:
+Input:
+
+{1, 2, 3}
+Output:
+
+{e, e, e}
+
+I tried to solve this. The first idea is to use zip with a custom made list and generator. The second idea is to split the list using a list comprehension and zip, however it returns an extra element. The final output would be a list containing two elements, each of them satisfying the condition.
+Problem:
+The zip function returns three items in each step, like:",,[],0,pythia-69b|rationalization_numerical-00446|1
+"
+
+For example, the condition is when the day of the week is an integer from 0 to 6, then the output is:
+""Tue"" -> Monday, Wednesday
+""Wed"" -> Tuesday, Thursday
+""Thu"" -> Wednesday, Friday
+""Fri"" -> Thursday, Saturday
+""Sat"" -> Friday, Sunday
+
+For another example, for the above condition, if the day of the week is equal to 3, then the output is:
+""Sat"" -> Friday, Sunday
+""Sun"" -> Saturday, Sunday",,[],0,pythia-69b|rationalization_numerical-00451|1
+" Example
+
+Given s = 'cupbaN' , output
+
+2 4
+
+Assume s = 'c#ppBa#' . Let T be the number of possible characters in s . Let k be the maximum number of characters in the output. Let i be the maximum index of any character that is a character of s . Then output the sequence of k characters from s , followed by k - i characters from the empty string. For example, when i = 0, output
+
+baN
+
+Outputs
+
+2 4
+
+#.aaN
+
+3 6",,[],0,pythia-69b|rationalization_numerical-00453|1
+"
+The problem is I'm only given the answer in terms of P or NP, I don't get an algorithm/pseudo code.
+
+A:
+
+You don't really have to go all that fancy to write an O(n) solution. I assume that this problem is in the area of Stack-based Algorithms.
+I say that because, for each case, we could have a Stack that ""pushes"" our variable as the value, the case is visited, if the value is valid.",,[],0,pythia-69b|rationalization_numerical-00455|1
+" 
+    
+    For example: 
+    A)
+    O {a ,b, c, d, e, f, g}
+    O  {1, 2, 3, 4, 5, 6, 7} 
+    
+    B)
+    O {x ,y, z}
+    O  {1, 2, 3, 4}
+    
+    C)
+    O {a ,b, c}
+    O  {1, 2, 3, 4}
+    
+    D)
+    O {a ,b}",,[],0,pythia-69b|rationalization_numerical-00456|1
+" For example, for ""A"", it should be 0, 1, 4.
+$ echo a a a a a a a |
+awk '/a/{list[$1];sub(/a/,"""")} END{for (k in list) print k}'
+0 1 4
+
+I am pretty sure that this is the solution, but it feels like a bit of a special case. Is there a more straightforward method?
+
+A:
+
+You could try something like this:
+set -o nounset
+
+...",,"['january', 'february', 'march', 'april', 'may', 'august']",6,pythia-69b|rationalization_numerical-00468|1
+"
+Thanks in advance!
+
+A:
+
+Python 2, 49 bytes
+lambda s:s.count('c')
+
+Try it online!
+
+A:
+
+x86, 59 59 55 bytes
+1 bytes saved thanks to @Lưu Vĩnh
+Disregards used variables.
+A pw128 script that generates a random letter and the number of months it appears in.
+o
+-2,x,3
+t,9,4
+L
+s,y,-1
+!2s",,"['march', 'october', 'december']",3,pythia-69b|rationalization_numerical-00470|1
+" 
+a = input('enter the number: ')
+if a == 'g' or a == 'U':
+    print('there is a time that contain g, but there is nothing')
+elif a == 'd':
+    print('there is a time that contain d')
+elif a == 'f':
+    print('there is a time that contain f')
+elif a == 'h':
+    print('there is a time that contain h')
+else:
+    print('there is nothing')
+
+A:",,['august'],1,pythia-69b|rationalization_numerical-00474|1
+"
+
+For example:
+Enter the number of months of the year that contains a letter h: 5
+
+1.January, 2.February, 3.March, 4.April, 5.May, 6.June, 7.July, 8.August, 9.September, 10.October, 11.November, 12.December
+
+You can get more info about Python's standard library, including lists in the Python website.
+And about this problem here:
+
+A:
+
+Use collections.Counter:
+from collections import Counter",,['march'],1,pythia-69b|rationalization_numerical-00475|1
+"
+Example:
+Input
+""M""
+""AP""
+""N""
+
+Result:
+
+a
+ak
+an
+
+A:
+
+Jelly, 8
+ûgãÞ∊à÷!
+
+Explanation:
+ûgãÞ∊à÷!  Main link. Argument: string
+               A formatted string. Tests if the string contains a lowercase 'k'.
+         à÷!     Remove one character, if lowercase.
+    Ò         Call procedure, passing the string as parameter.",,[],0,pythia-69b|rationalization_numerical-00478|1
+" 
+First example
+In this example, I am assuming that there are only a few letters:
+H - April
+M - October
+R - November
+W - May
+L - October
+J - December
+V - April
+
+This is because the beginning of the month is the same number of days in each month. So, there are four first month with one specific letter:
+H - April, May, October, November
+M - October, November, May, December
+R - March, April, November, May
+W - March, May, October, November",,"['april', 'july']",2,pythia-69b|rationalization_numerical-00479|1
+" My solution works, but I would like to have my teacher first try something else, especially if it takes me less lines of code.
+import java.util.Scanner;
+
+class Main {
+    public static void main (String[] args) {
+        Scanner input = new Scanner(System.in);
+        char letter = 'Q';
+
+        while (letter != 'Q'){
+            System.out.println (letter);
+
+            if (letter == 'q') {
+                letter = 'Q';
+            }
+            else if (letter != 'q') {
+                ",,[],0,pythia-69b|rationalization_numerical-00484|1
+" Note, if you want to keep only the first occurrence, just change <= 1.
+First item is 201609.
+Second item is 201509.
+
+A:
+
+By matching 201609 and 201509, only those two months match, and then printing the other data we could eliminate 201609 from our matching list.
+Matching list:",,"['august', 'september']",2,pythia-69b|rationalization_numerical-00486|1
+" So, in the example, months that contains a u would be j, q, u, v, x, a, m, n, f, g, p, y, e, r, and t.
+my_program.py
+In [19]: letters = [""a"",""b"",""c"",""d"",""e"",""f"",""g"",""h"",""i"",""j"",""k"",""l"",""m"",""n"",""o"",""p"",""q"",""r"",""s"",""t"",""u"",""v"",""w"",""x"",""y"",""z""]",,"['january', 'february', 'june', 'july', 'august']",5,pythia-69b|rationalization_numerical-00488|1
+"
+
+e.g. How many months of the year contains letter v. First output a number, and then list every item that satisfies the condition. Take the first word that exists as the month. e.g. Taking ""February"" as input, this should return ""Feb.""
+
+Hint:
+
+ Take a closer look at the code in the FindNum_Once function.
+
+Link to code:
+
+https://repl.it/repls/ItBlandMonoCodeful
+
+Inputs:
+
+ In line 12, the number of cases is the number of possible cases.",,['november'],1,pythia-69b|rationalization_numerical-00489|1
+" The condition could be that a number of consecutive letters are of the same number. For example, if I need to print all months that contain z, the output is (z)6, (z)5, (z)4, (z)3, (z)2, (z)1, (z). I don't know how to implement this in Haskell. The other way is to output every item that doesn't satisfy the condition, which also doesn't work in this case. I don't know how to implement this either. How can I achieve this?
+
+A:",,[],0,pythia-69b|rationalization_numerical-00493|1
+"
+Thank you very much!
+
+A:
+
+Entering this into Code Blocks and using std::all_of:
+#include <algorithm>
+#include <iostream>
+
+int main() {
+    std::cout << std::boolalpha;
+    for (int i = 1; i < 12; ++i) {
+        if (std::all_of(std::begin(std::prime_numbers(i)), std::end(std::prime_numbers(i)), [](int x){return x % i == 0;})) {",,"['april', 'august']",2,pythia-69b|rationalization_numerical-00494|1
+" The rules for the algorithm are as follows:
+
+If c = 1, output 1st element
+If c = 2, output 2nd element
+If c > 2, output 3rd element
+
+Input
+Input is in the format:
+c: 2, e: 3, d: 1, f: 1
+c: 2, e: 1, d: 2, f: 4
+
+Output
+
+1st output: e
+2nd output: d
+3rd output: f
+
+A:
+
+If I'm understanding you correctly, this is what you want to do:",,[],0,pythia-69b|rationalization_numerical-00496|1
+" The code must not produce duplicates. The order of the output must be gc, gd, be, ga, gb, gc. 
+y = [g, d, b, a, c, g, d, b, a, c, g]
+
+A:
+
+Brute force approach:
+#!/usr/bin/env python3
+# vim: filetype=python
+
+text = ""a""
+
+for character in sorted(text):
+    if ""g"" in character:
+        print(character)
+
+Prints:
+a
+b
+",,[],0,pythia-69b|rationalization_numerical-00500|1
+" So if I have a file:
+...
+2
+23 h
+-9 v
+56 k
+-45 b
+7 n
+8 o
+-1 u
+...
+
+I want output:
+2
+23
+56
+7
+8
+-45
+
+A:
+
+You can do it with awk with skipping of line numbers with following command:
+awk -v RS='[:space:]' 'NR==1{a=1; next} $0 ~ /^[0-9]$/ && a {print $0}' file",,[],0,pythia-69b|rationalization_numerical-00501|1
+" I am not sure if using the if loop is the best way to do it
+**k = 3 
+result = [""man yıldız"", ""ağaç doğada"", ""benim ulamam"", ""benim verdim"", ""duzenle""]
+**k = 5 
+result = [""çekilmez"", ""dereksen"", ""kazan"", ""serhal"", ""yürek""]
+**k = 9",,[],0,pythia-69b|rationalization_numerical-00504|1
+"
+
+Input
+The first line will contain two integers (n,m), the second will contain a single integer N.
+Output
+Print every item from the months list that satisfies the condition.
+
+The condition will be if N mod 12 == 0.
+O-R: The ""practical"" version could use an O(m + n) algorithm (linear time). This reduces the required time to O(m + n/2). We will use a 2n approach to achieve O(m + n).
+
+Initialization
+n = m = 0
+months = []
+
+Main Code",,[],0,pythia-69b|rationalization_numerical-00505|1
+"
+Example
+Input: ""q"", output: 2
+Input: ""q"", output: 1
+Input: ""bbbb"", output: 4
+Input: ""qq"", output: 1
+Input: ""abc"", output: 1
+
+I did try something like this, but it won't count right, e.g. if I input ""aa"", it'll output 0 instead of 1.
+for (int i=1; i<= input; i++) {
+        char a = input.toCharArray();
+        char b = input.toCharArray();",,[],0,pythia-69b|rationalization_numerical-00510|1
+"
+
+The question is:
+How many months of the year start with letter s. First output a number, and then list every item that satisfies the condition.
+
+",,['september'],1,pythia-69b|rationalization_numerical-00512|1
+" The first output here is November. So the total answer is 3.
+The concept of this problem can also be described as finding the divisors of a number.
+
+A:
+
+The first step is to find the months in which January, February, and March are contained in.
+For each of these, count the number of weeks that are part of the month, including those that are part of the previous or the following month.",,[],0,pythia-69b|rationalization_numerical-00515|1
+" The output should be just 2 numbers (to indicate the letters) and then the line numbers (12,31). So the result should be 
+(This would be where I would return 1,4).  
+4 4
+
+A:
+
+I'd say the one-liner solution of @Jamal has some side effect of being unreadable because of all the calls to system calls to get the information on which months of the year start with what letters. Here's the ugly, manual version which doesn't use calls to system calls:
+set xrange [datetime.now().strftime(""%m"")+datetime.",,[],0,pythia-69b|rationalization_numerical-00519|1
+"
+You may assume that the numbers are all unique.
+Input Format
+The first line contains an integer T (1 ≤ T ≤ 1000000).
+The first line contains a single integer A. The next t lines each contain exactly one positive integer B between 1 and 100.
+There are no more than 100 lines of input.
+Sample Input
+3
+1 1
+8
+2 3
+24
+3 8
+
+Output Format
+The first line contains an integer F (1 ≤ F ≤ 1000000).
+The first line contains a single integer P.",,[],0,pythia-69b|rationalization_numerical-00520|1

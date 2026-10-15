@@ -1,0 +1,1176 @@
+passage,response,atomic_units,hallucinated_atomic_units
+," Do not add any other text. ## Training Instructions Train your model on the provided training data: cat data/train.shuffle.txt | python3 t5.py -c t5-model -n 1 -e 3 Provide a summary for the test set: cat data/test.shuffle.txt | python3 t5.py -c t5-model -n 1 -e 3 If everything worked well, you should get around an ROUGE1 score of 0.6 and ROUGE2 score of 0.3, as well as a BERTScore around 0.82. "," Train the model using the provided training data with the command: cat data/train.shuffle.txt | python3 t5.py -c t5-model -n 1 -e 3 | False |
+ Provide a summary for the test set using the command: cat data/test.shuffle.txt | python3 t5.py -c t5-model -n 1 -e 3 | False |
+ The expected ROUGE1 score is around 0.6. | True |
+ The expected ROUGE2 score is around 0.3. | True |
+ The expected BERTScore is around 0.82. | False"," Train the model using the provided training data with the command: cat data/train.shuffle.txt | python3 t5.py -c t5-model -n 1 -e 3 |
+ Provide a summary for the test set using the command: cat data/test.shuffle.txt | python3 t5.py -c t5-model -n 1 -e 3 |
+ The expected BERTScore is around 0.82."
+,"
+
+
+Task 8
+
+Task 8:
+
+You should spend about 20 minutes on this task.
+
+The graph below shows the number of households with television in Britain from 1981 to 2016.
+
+Write a report for a university lecturer describing the information shown below.
+
+
+The figure shows the number of households having a television between 1981 and 2016 in Britain.
+
+In terms of overall trends, in both 1981 and 2016, the percentage of households with a television in Britain was almost the same.
+
+Looking at the details, in 1981, about three-quarters of the total households had a television.","Here are the independent facts broken down from the passage: | False |
+ Task 8 should be completed within 20 minutes. | False |
+ The graph shows the number of households with television in Britain from 1981 to 2016. | False |
+ The task requires writing a report for a university lecturer describing the information in the graph. | False |
+ The figure represents the number of households with a television in Britain between 1981 and 2016. | False |
+ In 1981, about three-quarters of the total households in Britain had a television. | False |
+ In 1981 and 2016, the percentage of households with a television in Britain was almost the same. | False","Here are the independent facts broken down from the passage: |
+ Task 8 should be completed within 20 minutes. |
+ The graph shows the number of households with television in Britain from 1981 to 2016. |
+ The task requires writing a report for a university lecturer describing the information in the graph. |
+ The figure represents the number of households with a television in Britain between 1981 and 2016. |
+ In 1981, about three-quarters of the total households in Britain had a television. |
+ In 1981 and 2016, the percentage of households with a television in Britain was almost the same."
+," You will be graded on your summary of the text. (If your summary of the text is longer than the original text, you have not summarized it.) Use this example as a model: 'Hundreds of additional Iraqi troops are being sent to reinforce colleagues who are trying to fend off ISIS' attempt to overrun Iraq's largest oil refinery, a key paramilitary force said Tuesday.The reinforcements come four days after ISIS began attacking northern Iraq's Baiji oil refinery, a key strategic resource that has long been a target because the facility refines much of the fuel used by Iraqis domestically.","Here are the independent facts broken down from the passage: | False |
+ You will be graded on your summary of the text. | True |
+ A good summary should be shorter than the original text. | True |
+ Hundreds of additional Iraqi troops are being sent to reinforce their colleagues. | True |
+ The reinforcements are intended to help fend off ISIS' attack. | True |
+ ISIS is attempting to overrun Iraq's largest oil refinery. | True |
+ The oil refinery is located in northern Iraq, in a place called Baiji. | True |
+ The attack on the refinery began four days prior to the announcement of reinforcements. | True |
+ The Baiji oil refinery is a key strategic resource. | True |
+ The refinery refines much of the fuel used by Iraqis domestically. | True |
+ The Baiji oil refinery has long been a target for ISIS. | True",Here are the independent facts broken down from the passage:
+,"
+
+
+Task 2 (100 words for each of the questions)
+
+
+Answer the following questions briefly
+
+
+1. Can vaccines be considered as a part of a personal choice? Should personal freedom include the choice to refuse a vaccination?
+
+2. Do you think parents should be allowed to make decisions based on the advice of an independent health practitioner?
+
+
+Task 3 (100 words)
+
+
+Write an essay
+
+
+Discuss the importance of vaccination and its benefits to the population","Here are the independent facts broken down from the passage: | False |
+ There are two tasks: Task 2 and Task 3. | False |
+ Task 2 consists of two questions. | False |
+ Each question in Task 2 has a 100-word limit for the answer. | True |
+ Task 2 questions are about: | False |
+   - Whether vaccines can be considered a personal choice. | False |
+   - Whether parents should be allowed to make decisions based on an independent health practitioner's advice. | False |
+ Task 3 is an essay with a 100-word limit. | False |
+ Task 3 is about discussing the importance of vaccination and its benefits to the population. | True |
+Note: There are no factual statements about vaccines, health, or medicine in the passage, only instructions for tasks and questions. | False","Here are the independent facts broken down from the passage: |
+ There are two tasks: Task 2 and Task 3. |
+ Task 2 consists of two questions. |
+ Task 2 questions are about: |
+   - Whether vaccines can be considered a personal choice. |
+   - Whether parents should be allowed to make decisions based on an independent health practitioner's advice. |
+ Task 3 is an essay with a 100-word limit. |
+Note: There are no factual statements about vaccines, health, or medicine in the passage, only instructions for tasks and questions."
+,"
+
+
+\subsection{Generation of summary from documents}
+\label{summ_gen}
+In this experiment, we use a pre-trained seq2seq model to generate summaries from a given text document. 
+We train a model in a fully unsupervised manner by using the training and validation dataset provided by the DUC-04 (Document Understanding Conferences) Task of the ICFPs-CONLL.
+It contains a set of 50 newswire text documents with a few sentences as reference summaries. The goal is to generate a summary for each document.","Here are the independent facts broken down from the passage: | True |
+ A pre-trained seq2seq model is used to generate summaries from a given text document. | True |
+ The model is trained in a fully unsupervised manner. | False |
+ The training and validation dataset is provided by the DUC-04 (Document Understanding Conferences) Task of the ICFPs-CONLL. | False |
+ The dataset contains 50 newswire text documents. | False |
+ Each document in the dataset has a few sentences as reference summaries. | True |
+ The goal of the experiment is to generate a summary for each document. | True |
+Let me know if you'd like me to help with anything else! | False"," The model is trained in a fully unsupervised manner. |
+ The training and validation dataset is provided by the DUC-04 (Document Understanding Conferences) Task of the ICFPs-CONLL. |
+ The dataset contains 50 newswire text documents. |
+Let me know if you'd like me to help with anything else!"
+,"
+
+(Note: The text is not included in the test file; the instructor should either give the text to the students or make it available before the quiz.)
+
+• A student who submitted this answer received a score of 2.
+
+## 11.7.3. Question 5¶
+
+Given the following text:
+
+#!/bin/bash
+# This is a sample script.
+
+echo 'Hello world!'
+
+Answer the following question: 'What are the commands in the script?' Provide only the commands as the response.","Here are the independent facts from the passage: | True |
+ A student submitted an answer to a question. | False |
+ The student received a score of 2 for their answer. | False |
+ There is a sample script provided. | True |
+ The script is written in bash. | False |
+ The script contains a comment that says ""This is a sample script."" | False |
+ The script contains an echo command that prints ""Hello world!"". | False |
+ The question being asked is ""What are the commands in the script?"". | True |
+Note that the actual command in the script is: | False |
+echo | False"," A student submitted an answer to a question. |
+ The student received a score of 2 for their answer. |
+ The script is written in bash. |
+ The script contains a comment that says ""This is a sample script."" |
+ The script contains an echo command that prints ""Hello world!"". |
+Note that the actual command in the script is: |
+echo"
+,"
+Provide a concise summary of the following text: 'Oklahoma Gov. Mary Fallin signed a bill on Friday that would allow the state to perform executions with nitrogen gas if lethal injection is ruled unconstitutional or becomes unavailable. Nitrogen causes a quick loss of consciousness and then death from lack of oxygen, Fallin's office said in a press release. CNN affiliate KFOR says it's never been used in an execution in the United States. ""The person will become unconscious within eight to 10 seconds and death a few minutes later. In other words, a humane, quick and painless death,"" said Rep.","Here are the independent facts broken down from the passage: | False |
+ Oklahoma Gov. Mary Fallin signed a bill on Friday. | True |
+ The bill allows the state to perform executions with nitrogen gas. | True |
+ The use of nitrogen gas is contingent on lethal injection being ruled unconstitutional or becoming unavailable. | True |
+ Nitrogen causes a quick loss of consciousness. | True |
+ Nitrogen causes death from lack of oxygen. | True |
+ Nitrogen has never been used in an execution in the United States (according to CNN affiliate KFOR). | True |
+ A person exposed to nitrogen will become unconscious within 8-10 seconds. | True |
+ Death from nitrogen exposure occurs a few minutes after losing consciousness. | True |
+ The bill was supported by Rep. (name not specified), who commented on the method. | True",Here are the independent facts broken down from the passage:
+,"
+
+
+The task is to summarize a news article about Iraq and their fight against ISIS. This is a summary writing task, which is usually assigned in high school or college. The text is relatively long, but not too complicated. The task is to paraphrase the text into a concise and simple summary.
+
+
+This task is about summarization of a text. This skill is usually required in high school or college.
+
+Skill type
+
+
+General skills
+
+
+Language level
+
+Intermediate: B1
+
+
+Hi all!","Here are the independent facts broken down from the passage: | False |
+ The task involves summarizing a news article about Iraq and their fight against ISIS. | True |
+ This task is typically assigned in high school or college. | True |
+ The text to be summarized is relatively long. | True |
+ The text to be summarized is not too complicated. | True |
+ The goal of the task is to paraphrase the text into a concise and simple summary. | True |
+ The task requires the skill of summarization. | True |
+ Summarization is a skill usually required in high school or college. | True |
+ The language level required for the task is Intermediate (B1). | True",Here are the independent facts broken down from the passage:
+,"
+  5. Create a new post as the following: - In a new post, type the title: 'Give feedback on the article'. - Select the article you have read in step 1. - Select 'Provide Feedback' from the Share option. - Select the option 'Rate the article'. - On the following page, provide your feedback. - Select 'Rate the article' to provide the rating. - When you finish, go back to the dashboard, and select 'Publish' for this post.
+  6.","Here are the independent facts broken down from the passage: | False |
+ A new post needs to be created. | True |
+ The title of the new post should be 'Give feedback on the article'. | True |
+ An article that has been read in step 1 needs to be selected. | True |
+ The 'Provide Feedback' option can be found under the Share option. | False |
+ The 'Rate the article' option is available. | True |
+ A page will appear where feedback can be provided. | True |
+ The 'Rate the article' option needs to be selected again to provide a rating. | False |
+ After finishing, the user needs to go back to the dashboard. | False |
+ The 'Publish' option needs to be selected for the new post on the dashboard. | False |
+Note: Step 6 in the original passage is incomplete, so no facts can be extracted from it. The breakdown only includes the information from step 5. | True","Here are the independent facts broken down from the passage: |
+ The 'Provide Feedback' option can be found under the Share option. |
+ The 'Rate the article' option needs to be selected again to provide a rating. |
+ After finishing, the user needs to go back to the dashboard. |
+ The 'Publish' option needs to be selected for the new post on the dashboard."
+,"
+
+Show the output
+
+
+This is not the solution post. It is only for reference.
+
+Show the output","Here are the independent facts from the passage: | True |
+ The passage is not a solution post. | True |
+ The passage is for reference purposes only. | True |
+ The phrase ""Show the output"" appears twice in the passage. | False"," The phrase ""Show the output"" appears twice in the passage."
+,"
+
+### Dataset Card for CQALab
+
+Dataset Summary
+
+### Languages
+
+The models in this repository have been trained on datasets in the following languages:
+
+• en (English)
+• de (German)
+• fr (French)
+• ru (Russian)
+• ja (Japanese)
+• es (Spanish)
+• it (Italian)
+• zh (Chinese)
+• pt (Portuguese)
+• nl (Dutch)
+• pl (Polish)
+• ar (Arabic)
+• ko (Korean)","Here are the independent facts broken down from the passage: | False |
+ The passage is about a ""Dataset Card for CQALab"". | False |
+ The models in the repository have been trained on datasets in multiple languages. | False |
+ The languages used to train the models include English (en). | True |
+ The languages used to train the models include German (de). | False |
+ The languages used to train the models include French (fr). | False |
+ The languages used to train the models include Russian (ru). | False |
+ The languages used to train the models include Japanese (ja). | False |
+ The languages used to train the models include Spanish (es). | False |
+ The languages used to train the models include Italian (it). | False |
+ The languages used to train the models include Chinese (zh). | False |
+ The languages used to train the models include Portuguese (pt). | False |
+ The languages used to train the models include Dutch (nl). | False |
+ The languages used to train the models include Polish (pl). | False |
+ The languages used to train the models include Arabic (ar). | False |
+ The languages used to train the models include Korean (ko). | False |
+Alternatively, the facts can be condensed into two main points: | True |
+ The passage is about a ""Dataset Card for CQALab"". | False |
+ The models in the repository have been trained on datasets in 13 languages: English, German, French, Russian, Japanese, Spanish, Italian, Chinese, Portuguese, Dutch, Polish, Arabic, and Korean. | False","Here are the independent facts broken down from the passage: |
+ The passage is about a ""Dataset Card for CQALab"". |
+ The models in the repository have been trained on datasets in multiple languages. |
+ The languages used to train the models include German (de). |
+ The languages used to train the models include French (fr). |
+ The languages used to train the models include Russian (ru). |
+ The languages used to train the models include Japanese (ja). |
+ The languages used to train the models include Spanish (es). |
+ The languages used to train the models include Italian (it). |
+ The languages used to train the models include Chinese (zh). |
+ The languages used to train the models include Portuguese (pt). |
+ The languages used to train the models include Dutch (nl). |
+ The languages used to train the models include Polish (pl). |
+ The languages used to train the models include Arabic (ar). |
+ The languages used to train the models include Korean (ko). |
+ The passage is about a ""Dataset Card for CQALab"". |
+ The models in the repository have been trained on datasets in 13 languages: English, German, French, Russian, Japanese, Spanish, Italian, Chinese, Portuguese, Dutch, Polish, Arabic, and Korean."
+," Please be careful about the length of the answer and provide the summary as short as possible and the summary should not contain the original text.
+
+Q. The following text is about a man who had a terrible accident on the street. It happened a few days ago in a residential area in London. After reading the text, answer the following questions: What is the relationship between the man and the reporter? How many people helped the man? Why did some of them not help? What did the man say when he realized what had happened? What advice did he give to the reporter?","Here are the independent facts from the passage: | True |
+ A man had a terrible accident. | False |
+ The accident occurred on the street. | False |
+ The accident happened a few days ago. | False |
+ The accident took place in a residential area. | False |
+ The residential area is located in London. | False |
+ A reporter is involved in the story. | True |
+ The man had an interaction with the reporter after the accident. | False"," A man had a terrible accident. |
+ The accident occurred on the street. |
+ The accident happened a few days ago. |
+ The accident took place in a residential area. |
+ The residential area is located in London. |
+ The man had an interaction with the reporter after the accident."
+," The question asked is as follows: How does Pope Francis' iPad sell for $30,500? [The article is available at the following link: http://money.cnn.com/2015/06/03/technology/pope-ipad-auction/index.html ]
+
+Answers:What a strange assignment! I do not know how to answer your question. I read the whole article and cannot find anywhere the name or the year that the ipad was purchased. The only one mentioned in the article was the Harley-Davidson motorbike. I hope this helps.","Here are the independent facts broken down from the passage: | False |
+ Pope Francis has an iPad that was sold at an auction. | True |
+ The iPad sold for $30,500. | True |
+ There is an article about the iPad auction on CNN Money, available at the link http://money.cnn.com/2015/06/03/technology/pope-ipad-auction/index.html. | True |
+ The article mentions a Harley-Davidson motorbike, but does not provide information about the iPad's purchase details (name or year). | True |
+ The article was published on June 3, 2015, according to the link provided. | False","Here are the independent facts broken down from the passage: |
+ The article was published on June 3, 2015, according to the link provided."
+," No introductory sentences are required, nor is it necessary to provide a concluding statement. Your summary must be exactly 150 words in length.
+
+
+Paper#47803 | Written in 18-Jul-2015
+
+Price : $22","Here are the independent facts broken down from the passage: | False |
+ No introductory sentences are required. | True |
+ A concluding statement is not necessary. | True |
+ The summary must be exactly 150 words in length. | False |
+ There is a paper with the identification number #47803. | False |
+ The paper #47803 was written on 18-Jul-2015. | False |
+ The price of the paper is $22. | False |
+These facts can be verified and confirmed independently of each other, and they provide distinct information about the requirements, the paper, and its details. | True","Here are the independent facts broken down from the passage: |
+ The summary must be exactly 150 words in length. |
+ There is a paper with the identification number #47803. |
+ The paper #47803 was written on 18-Jul-2015. |
+ The price of the paper is $22."
+,"
+
+### Data Cleaning
+
+As a first step, we will clean our dataset to make sure the column and row names are all the same.
+
+
+```
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+%matplotlib inline
+```
+
+
+```
+df=pd.read_csv('data.csv', encoding = 'latin')
+df.columns = ['id', 'question', 'answer', 'time_to_answer']
+df
+```
+
+
+
+
+<div>
+<style scoped>","Here are the independent facts broken down from the passage: | False |
+ The first step in the process is data cleaning. | False |
+ The goal of data cleaning is to ensure that the column and row names are consistent. | False |
+ The Python libraries used in the process are: | False |
+	* pandas (imported as pd) | False |
+	* numpy (imported as np) | False |
+	* matplotlib.pyplot (imported as plt) | False |
+ The `%matplotlib inline` command is used to display matplotlib plots inline. | False |
+ The data is read from a CSV file named 'data.csv' using the `pd.read_csv` function. | False |
+ The encoding used to read the CSV file is 'latin'. | False |
+ The column names of the dataset are: | False |
+	* 'id' | False |
+	* 'question' | False |
+	* 'answer' | False |
+	* 'time_to_answer' | False |
+ The dataset is stored in a variable named `df`. | False","Here are the independent facts broken down from the passage: |
+ The first step in the process is data cleaning. |
+ The goal of data cleaning is to ensure that the column and row names are consistent. |
+ The Python libraries used in the process are: |
+	* pandas (imported as pd) |
+	* numpy (imported as np) |
+	* matplotlib.pyplot (imported as plt) |
+ The `%matplotlib inline` command is used to display matplotlib plots inline. |
+ The data is read from a CSV file named 'data.csv' using the `pd.read_csv` function. |
+ The encoding used to read the CSV file is 'latin'. |
+ The column names of the dataset are: |
+	* 'id' |
+	* 'question' |
+	* 'answer' |
+	* 'time_to_answer' |
+ The dataset is stored in a variable named `df`."
+," The test grader will provide your final mark. The best response will be accepted as the best by the test grader.""
+
+Solution Preview
+
+1. The best response would be to first summarize the key elements of the passage, and then provide an overall summary of the text.
+
+In the first paragraph, the text provides an overview of the situation with the flight. It mentions the flight number, where it was headed, that it was on its way to Connecticut, and that it landed in Buffalo, New York, because the passenger had passed out.","Here are the independent facts broken down from the passage: | False |
+ The test grader will provide your final mark. | False |
+ The test grader will accept the best response as the best. | True |
+Note: The ""Solution Preview"" and the following paragraphs appear to be unrelated to the original passage and seem to be discussing a different topic. If you'd like to break down the facts from the ""Solution Preview"" section, I can do that as well.  | True |
+From the ""Solution Preview"" section, here are the independent facts: | False |
+ The best response would involve summarizing the key elements of the passage. | True |
+ The best response would involve providing an overall summary of the text. | True |
+ The text being referred to has a first paragraph. | True |
+ The first paragraph of the text provides an overview of a situation involving a flight. | True |
+ The flight had a flight number (although the number is not specified). | True |
+ The flight was headed to a destination (although the destination is not specified, it is mentioned that it was on its way to Connecticut). | True |
+ The flight landed in Buffalo, New York. | True |
+ The flight landed in Buffalo, New York, because a passenger had passed out. | True","Here are the independent facts broken down from the passage: |
+ The test grader will provide your final mark. |
+From the ""Solution Preview"" section, here are the independent facts:"
+,"
+
+Please sign up to get a custom essay written by a professional writer according to your instructions and essay instructions
+
+Order Now
+
+3. Provide an introduction to the text: The text starts with a quotation: 'I believe it was the poet who said that time changes a lot of things and one of the things it changes is you.' Provide an introduction to the text, explaining the background of the quotation, including the poet’s name, and who the poet was, where he/she was from and when he/she lived.
+
+4.","Here are the independent facts broken down from the passage: | True |
+ The passage is asking the reader to sign up to get a custom essay written by a professional writer. | False |
+ The reader needs to provide instructions for the essay. | True |
+ The passage mentions a quotation: 'I believe it was the poet who said that time changes a lot of things and one of the things it changes is you.' | False |
+ The quotation is about the concept of time changing people. | False |
+ The passage asks the reader to provide an introduction to the text that includes the background of the quotation. | True |
+ The introduction should include the poet's name. | False |
+ The introduction should also include information about the poet, such as where they were from and when they lived. | False |
+Note: The passage does not provide the actual name of the poet or any other information about them, so those facts are not included in the breakdown. | False"," The passage is asking the reader to sign up to get a custom essay written by a professional writer. |
+ The passage mentions a quotation: 'I believe it was the poet who said that time changes a lot of things and one of the things it changes is you.' |
+ The quotation is about the concept of time changing people. |
+ The introduction should include the poet's name. |
+ The introduction should also include information about the poet, such as where they were from and when they lived. |
+Note: The passage does not provide the actual name of the poet or any other information about them, so those facts are not included in the breakdown."
+,"
+
+Instructors can generate a variety of questions about a text and the answers that were provided by a student. They can be a simple yes/no question, such as 'Did the student get the correct answer?'; or a more complex question, such as 'Which one of the four answers did the student choose?' or 'Why did the student give the answer he did?'.
+
+If you are using a quiz (assessment) to collect your data, then the data is automatically collected and stored in the data database. To collect your data, follow the steps below.
+
+  1.","Here are the independent facts broken down from the passage: | False |
+ Instructors can generate a variety of questions about a text. | True |
+ Instructors can generate questions about the answers provided by a student. | True |
+ Questions can be simple yes/no questions. | True |
+ Questions can be more complex, such as multiple-choice questions. | True |
+ Instructors can ask questions about the reasoning behind a student's answer. | True |
+ Using a quiz (assessment) can automatically collect and store data in a database. | False |
+ Data collection involves following a set of steps (although the steps are not fully listed in the provided passage). | True","Here are the independent facts broken down from the passage: |
+ Using a quiz (assessment) can automatically collect and store data in a database."
+," In this task, the test is focused on detecting a particular disease. The provided summary is not a complete summary and does not discuss the nature of the disease nor its transmission. Furthermore, the test includes a more general context (WHO report) and a narrower context (local government). This task presents a challenging scenario for a model trained with supervised summarization data.
+
+\begin{table*}[ht]
+\centering
+\begin{tabular}{c|c}
+\hline \textbf{Summary} & \textbf{Ground Truth} \\ \hline","Here are the independent facts broken down from the passage: | False |
+ The test is focused on detecting a particular disease. | False |
+ The provided summary is not complete. | True |
+ The summary does not discuss the nature of the disease. | False |
+ The summary does not discuss the transmission of the disease. | True |
+ The test includes a general context from a WHO report. | True |
+ The test includes a narrower context from a local government. | True |
+ The task presents a challenging scenario for a model trained with supervised summarization data. | True |
+Note that the table at the end of the passage is not included in the breakdown as it appears to be incomplete and does not contain any independent facts. | True","Here are the independent facts broken down from the passage: |
+ The test is focused on detecting a particular disease. |
+ The summary does not discuss the nature of the disease."
+,"
+
+Answers:http://answers.yahoo.com/question/index?qid=20100430194706AA5Jn7D http://answers.yahoo.com/question/index?qid=20090405030556AAw4VlG
+
+From Youtube
+
+CNN Student News - February 5, 2010 :WATCH CNN STUDENT NEWS February 5, 2010. Some stories addressed this Thursday: How is President Obama preparing to send U.S. troops to Afghanistan? What are some possible effects of the Earth's orbital path?","Here are the independent facts broken down from the passage: | True |
+ There are two links provided from Yahoo Answers: | False |
+   - http://answers.yahoo.com/question/index?qid=20100430194706AA5Jn7D | False |
+   - http://answers.yahoo.com/question/index?qid=20090405030556AAw4VlG | False |
+ The passage mentions a YouTube video: CNN Student News - February 5, 2010. | False |
+ The CNN Student News video from February 5, 2010, covers two main topics: | False |
+   - President Obama's preparation to send U.S. troops to Afghanistan. | False |
+   - The possible effects of the Earth's orbital path. | False |
+Note: These facts are independent in the sense that they can be verified or understood without relying on each other. | True"," There are two links provided from Yahoo Answers: |
+   - http://answers.yahoo.com/question/index?qid=20100430194706AA5Jn7D |
+   - http://answers.yahoo.com/question/index?qid=20090405030556AAw4VlG |
+ The passage mentions a YouTube video: CNN Student News - February 5, 2010. |
+ The CNN Student News video from February 5, 2010, covers two main topics: |
+   - President Obama's preparation to send U.S. troops to Afghanistan. |
+   - The possible effects of the Earth's orbital path."
+," In case the summary is unavailable in the given passage, the task will be skipped. (The input passage should not contain any reference to any summary in the passage.)
+
+### Data Set Used
+
+Q1, Q2, Q3: Q1, Q2, Q3","Here are the independent facts broken down from the passage: | False |
+ If a summary is unavailable in a given passage, the task will be skipped. | True |
+ The input passage should not contain any reference to a summary. | True |
+ There are data sets labeled as Q1, Q2, and Q3. | False","Here are the independent facts broken down from the passage: |
+ There are data sets labeled as Q1, Q2, and Q3."
+,"
+
+This kind of open-book exam was the closest to the ideal of authentic assessment I've seen in a while, since students' ability to read and analyze a passage was tested by their ability to write. It is not a matter of writing a well-developed, three-paragraph essay.
+
+In a few instances, a few students who were not the least bit shy in their writing but were somewhat timid and shy in speaking, wrote a great deal of information that was not on the text in the book but were accurate in their analysis.","Here are the independent facts broken down from the passage: | True |
+ The open-book exam was considered close to the ideal of authentic assessment. | False |
+ The exam tested students' ability to read and analyze a passage by their ability to write. | True |
+ The exam did not require students to write a well-developed, three-paragraph essay. | True |
+ Some students were not shy in their writing. | False |
+ These same students were timid and shy in speaking. | False |
+ Some students wrote information that was not present in the text in the book. | True |
+ The information written by these students, although not from the book, was accurate in their analysis. | True"," The open-book exam was considered close to the ideal of authentic assessment. |
+ Some students were not shy in their writing. |
+ These same students were timid and shy in speaking."
+,"
+
+This problem requires you to read the provided text and compose a summary based on it. This kind of question is designed to test your writing and comprehension skills. There are several elements to note when taking this type of question. First, you must understand that the summary should not contain any of the information from the given text, but it must be the correct understanding of the text. Second, the summary must be concise, and must provide a clear summary that answers the question. You do not want to include information that is not important to the summary.","Here are the independent facts broken down from the passage: | False |
+ The problem requires reading the provided text and composing a summary. | True |
+ This type of question tests writing and comprehension skills. | True |
+ A summary should not contain any direct information from the given text. | False |
+ A summary should demonstrate a correct understanding of the text. | True |
+ A summary should be concise. | True |
+ A summary should provide a clear answer to the question. | True |
+ Unimportant information should be excluded from the summary. | True","Here are the independent facts broken down from the passage: |
+ A summary should not contain any direct information from the given text."
+,"
+
+How can I create an effective summary?
+
+Think of your summary as a condensed version of your essay, highlighting the most important parts. It should be succinct but also cover the key ideas in the text. There are a few things to consider when writing your summary:
+
+1. Focus on the main ideas. 
+
+What is the author’s main point? This is not always the same as the thesis statement, but it should be evident in the first paragraph or two of the text. You will want to focus on summarizing these key ideas in your summary.
+
+2.","Here are the independent facts broken down from the passage: | False |
+ A summary should be a condensed version of an essay. | True |
+ A summary should highlight the most important parts of the essay. | True |
+ A summary should be succinct. | True |
+ A summary should cover the key ideas in the text. | True |
+ The main ideas of a text are often evident in the first paragraph or two. | True |
+ The main point of a text is not always the same as the thesis statement. | True |
+ A summary should focus on the main ideas of the text. | True |
+ The author's main point should be identified when writing a summary. | True |
+Note that some of these points may be related or overlapping, but I've tried to break them down into distinct, independent facts. | True",Here are the independent facts broken down from the passage:
+," In case of no matches found, provide the response ""no results found"" to the client. You can use the sample data provided below for the summary. 'Avengers' star Jeremy Renner is a superhero with an awesome hidden talent: singing parodies. You can use the following sample data to test your code against: Jimmy Fallon hits hot 100 with 'Ew!,' featuring will.i.am. ""Listen I've got powers too, and they're pretty sweet. I promise I can do so much more than just archery,"" he crooned to a reworked version of ""Thinking Out Loud"".","Here are the independent facts broken down from the passage: | True |
+ If no matches are found, the response ""no results found"" should be provided to the client. | True |
+ Jeremy Renner is a star in the movie 'Avengers'. | True |
+ Jeremy Renner has a hidden talent for singing parodies. | True |
+ Jimmy Fallon has a song called 'Ew!' that features will.i.am. | True |
+ 'Ew!' by Jimmy Fallon (feat. will.i.am) has reached the Hot 100 chart. | True |
+ Jeremy Renner sang a reworked version of the song ""Thinking Out Loud"". | True |
+ Sample data is provided for testing code. | False", Sample data is provided for testing code.
+,"
+
+
+This program is part of my 'ChatBot Engine' project. This project will provide you the infrastructure of a chatbot, all you need to do is to build a custom grammar for it. Check out my other apps in this category if you are interested in building chatbots.
+
+You may also be interested in my other projects:
+
+Chatbot Engine
+
+Chatbot Engine is a customizable chatbot builder for Android. It's very easy to build a custom bot using Chatbot Engine, which can be run on your phone. Check it out on my website here:","Here are the independent facts broken down from the passage: | True |
+ The program is part of the ""ChatBot Engine"" project. | True |
+ The ""ChatBot Engine"" project provides the infrastructure for a chatbot. | False |
+ To use the ""ChatBot Engine"" project, a custom grammar needs to be built. | False |
+ The author has other apps related to building chatbots. | False |
+ The author has a project called ""Chatbot Engine"". | False |
+ ""Chatbot Engine"" is a customizable chatbot builder for Android. | False |
+ ""Chatbot Engine"" allows for easy building of custom chatbots. | False |
+ Custom chatbots built with ""Chatbot Engine"" can be run on a phone. | False |
+ The author has a website with more information about ""Chatbot Engine"". | False"," The ""ChatBot Engine"" project provides the infrastructure for a chatbot. |
+ To use the ""ChatBot Engine"" project, a custom grammar needs to be built. |
+ The author has other apps related to building chatbots. |
+ The author has a project called ""Chatbot Engine"". |
+ ""Chatbot Engine"" is a customizable chatbot builder for Android. |
+ ""Chatbot Engine"" allows for easy building of custom chatbots. |
+ Custom chatbots built with ""Chatbot Engine"" can be run on a phone. |
+ The author has a website with more information about ""Chatbot Engine""."
+,"
+
+
+\begin{itemize}
+    \item[2] The summary is too short, you have to increase the size of it to be similar to the size of the input
+    \item[3] Summary must be provided only if the summary is provided in the given text
+    \item[4] You must provide summary if the article is not more than 1000 words
+\end{itemize}
+
+\item[B] \textbf{In the article, there is an error and you want to correct it.}
+
+\end{enumerate}","Here are the independent facts broken down from the passage: | True |
+ The summary should be similar in size to the input. | True |
+ A summary must be provided if it is mentioned in the given text. | True |
+ A summary is required if the article is 1000 words or less. | True |
+ There is an error in the article that needs to be corrected. | True |
+Note that the last fact seems to be unrelated to the first three, which appear to be rules or guidelines for creating summaries. The last fact appears to be a statement about a specific situation. | True",
+,"
+
+In this example, the context is the 'Justin Timberlake' article on Wikipedia. We have to provide a summary of the above text in our own words (i.e. without copying the text) to pass the test.
+
+To solve this problem using BERT, we will have to do the following:
+
+  1. Download the Wikipedia article as a text string.
+  2. Download the context as a text string.
+  3. Create a sequence of tokens.
+  4. Convert the sequence of tokens to a sequence of IDs.
+  5.","Here are the independent facts broken down from the passage: | True |
+ The context for the example is the 'Justin Timberlake' article on Wikipedia. | True |
+ A summary of the text must be provided in one's own words to pass the test. | True |
+ BERT can be used to solve the problem. | True |
+ To use BERT, the Wikipedia article must be downloaded as a text string. | False |
+ The context must also be downloaded as a text string. | True |
+ A sequence of tokens must be created. | True |
+ The sequence of tokens must be converted to a sequence of IDs. | True |
+Note that fact 5 is incomplete in the original passage, but based on the context, it appears to be a step in the process of using BERT. However, the exact details of this step are not provided. | False"," To use BERT, the Wikipedia article must be downloaded as a text string. |
+Note that fact 5 is incomplete in the original passage, but based on the context, it appears to be a step in the process of using BERT. However, the exact details of this step are not provided."
+,"
+
+
+
+Example of question: 'This is a question related to your answer on this site: http://example.com/example-site/ This question is about your answer on this site: http://example.com/example-site/question_1/ I am asking for your clarification about your answer to the following question: http://example.com/example-site/question_2/' Provide only the URL to the question being referred to as the response.
+
+Example responses
+
+  • You can go here: 'URL to site'.
+  • You can go here: 'URL to site'.","Here are the independent facts broken down from the passage: | False |
+ The passage provides an example of a question. | False |
+ The question is related to an answer on a website. | True |
+ The website has a URL: http://example.com/example-site/ | False |
+ The question is also about an answer on a specific page of the website: http://example.com/example-site/question_1/ | False |
+ The user is asking for clarification about an answer to another question on the website: http://example.com/example-site/question_2/ | False |
+ The desired response format is to provide only the URL to the question being referred to. | False |
+ Example responses are given, which include providing a URL to a site. | False","Here are the independent facts broken down from the passage: |
+ The passage provides an example of a question. |
+ The website has a URL: http://example.com/example-site/ |
+ The question is also about an answer on a specific page of the website: http://example.com/example-site/question_1/ |
+ The user is asking for clarification about an answer to another question on the website: http://example.com/example-site/question_2/ |
+ The desired response format is to provide only the URL to the question being referred to. |
+ Example responses are given, which include providing a URL to a site."
+," There is no need to include the original text in your response.
+
+For this assignment, you will use the ""Text2Data"" command from the Octave/Matlab toolbox for NLP to convert the raw text of the article above into a vector of word occurrences for each of the following words: ""rainbow"", ""internet"", ""lost"", ""mind"", ""real"", ""cloud"" and ""over"" (i.e., no stopwords). Then, you need to apply the SVD to the resulting matrix to extract the most important terms for this text. This would be your submission for this assignment.","Here are the independent facts from the passage: | True |
+ The ""Text2Data"" command is used for converting raw text into a vector of word occurrences. | False |
+ The ""Text2Data"" command is part of the Octave/Matlab toolbox for NLP. | False |
+ The task involves converting the raw text of an article into a vector of word occurrences. | False |
+ The words to be considered are: ""rainbow"", ""internet"", ""lost"", ""mind"", ""real"", ""cloud"", and ""over"". | True |
+ Stopwords are to be excluded from the task. | True |
+ The Singular Value Decomposition (SVD) is to be applied to the resulting matrix. | False |
+ The goal of applying SVD is to extract the most important terms for the given text. | True |
+ The submission for the assignment consists of the results of applying SVD to the matrix. | False"," The ""Text2Data"" command is used for converting raw text into a vector of word occurrences. |
+ The ""Text2Data"" command is part of the Octave/Matlab toolbox for NLP. |
+ The task involves converting the raw text of an article into a vector of word occurrences. |
+ The Singular Value Decomposition (SVD) is to be applied to the resulting matrix. |
+ The submission for the assignment consists of the results of applying SVD to the matrix."
+,"
+
+Please Wait...","There is no passage to break down into independent facts. The text ""Please Wait..."" appears to be a prompt or a message, but it does not contain any factual information. If you provide the actual passage, I'll be happy to help you break it down into independent facts. | False","There is no passage to break down into independent facts. The text ""Please Wait..."" appears to be a prompt or a message, but it does not contain any factual information. If you provide the actual passage, I'll be happy to help you break it down into independent facts."
+,"
+        : ""Fuller House.""
+        : ""Fuller House.""
+        : ""Fuller House.""
+        : ""Fuller House.""
+        : ""Fuller House.""
+        : ""Fuller House.""
+        : ""Fuller House.""
+        : ""Fuller House.""
+        : ""Fuller House.""
+        : ""Fuller House.""
+        : ""Fuller House.""
+        : ""Fuller House.""
+        : ""Fuller House.""
+        : ""Fuller House.""
+        : ""Fuller House.""
+        : ""Fuller House.""","Here is the breakdown of the passage into independent facts: | True |
+ The passage consists of the phrase ""Fuller House"" repeated 15 times. | False |
+ The passage does not contain any other text or information besides the phrase ""Fuller House"". | False |
+ The phrase ""Fuller House"" is a title, likely referring to the Netflix original series ""Fuller House"", which is a spin-off of the classic sitcom ""Full House"".  | True |
+Note: The passage does not provide any substantial information or context, and the repetition of the phrase ""Fuller House"" does not add any new facts or meaning. | False"," The passage consists of the phrase ""Fuller House"" repeated 15 times. |
+ The passage does not contain any other text or information besides the phrase ""Fuller House"". |
+Note: The passage does not provide any substantial information or context, and the repetition of the phrase ""Fuller House"" does not add any new facts or meaning."
+,"
+
+Sample Answer
+
+Assange agreed to be interviewed in Sweden by Swedish prosecutors in London but only on the condition that the interview be recorded and that they submit their questions in advance. Swedish prosecutors initially rejected the idea, claiming that Assange has been avoiding a fair trial since he fled to the Ecuadorian Embassy in 2012. However, Swedish prosecutors have now agreed to conduct the interview in London under these conditions.
+
+  • 1.
+
+Write a paragraph summarizing the following passage:","Here are the independent facts broken down from the passage: | False |
+ Assange agreed to be interviewed in Sweden by Swedish prosecutors in London. | False |
+ Assange had conditions for the interview: it had to be recorded and the questions had to be submitted in advance. | False |
+ Swedish prosecutors initially rejected Assange's conditions. | True |
+ Swedish prosecutors claimed that Assange had been avoiding a fair trial. | False |
+ Assange fled to the Ecuadorian Embassy in 2012. | True |
+ Swedish prosecutors later agreed to conduct the interview in London under Assange's conditions. | True |
+And here is a paragraph summarizing the passage: | True |
+Julian Assange has agreed to be interviewed by Swedish prosecutors in London, but with certain conditions. He required that the interview be recorded and that the prosecutors submit their questions in advance. Initially, the Swedish prosecutors rejected these conditions, stating that Assange had been evading a fair trial since fleeing to the Ecuadorian Embassy in 2012. However, they have now agreed to conduct the interview in London under the specified conditions. | False","Here are the independent facts broken down from the passage: |
+ Assange agreed to be interviewed in Sweden by Swedish prosecutors in London. |
+ Assange had conditions for the interview: it had to be recorded and the questions had to be submitted in advance. |
+ Swedish prosecutors claimed that Assange had been avoiding a fair trial. |
+Julian Assange has agreed to be interviewed by Swedish prosecutors in London, but with certain conditions. He required that the interview be recorded and that the prosecutors submit their questions in advance. Initially, the Swedish prosecutors rejected these conditions, stating that Assange had been evading a fair trial since fleeing to the Ecuadorian Embassy in 2012. However, they have now agreed to conduct the interview in London under the specified conditions."
+," The summary must be in your own words, do not copy and paste the information from the text above into the summary field.
+  3. 3. What is the date of this video?
+  4. 4. What are some examples of things that happened in this video? (Be sure to include: location, time, and actions)
+  5. 5. How do you think this event might have made people feel? Explain your answer
+  6. 6. Explain why you think this person might have started the video.
+  7. 7.","Here are the independent facts broken down from the passage: | False |
+ A summary of a video should be written in the viewer's own words. | True |
+ There is a request to identify the date of a video. | False |
+ Examples of events in the video should include location, time, and actions. | True |
+ The viewer is asked to consider how an event in the video might have made people feel. | True |
+ The viewer is asked to explain their reasoning for how the event might have made people feel. | True |
+ The viewer is asked to speculate on the motivations of the person who started the video. | False |
+ There are numbered points (3-7) that outline a series of questions or prompts related to a video. | False","Here are the independent facts broken down from the passage: |
+ There is a request to identify the date of a video. |
+ The viewer is asked to speculate on the motivations of the person who started the video. |
+ There are numbered points (3-7) that outline a series of questions or prompts related to a video."
+," Do not use the original wording, but do use the ideas contained in the passage. Your response should be at least one paragraph in length.
+    • In your own words, provide a definition for the following term, which is used in the following passage: 'The term ""universe"" should be familiar to you, but it is an incredibly large and complex system. It may help to think of it in terms of a galaxy (the Milky Way). A galaxy is a cluster of stars that is held together by gravity, like a group of bowling balls taped together.","The concept of the universe refers to the vast and intricate expanse that encompasses everything in existence. To put this idea into perspective, consider a smaller, more manageable unit, such as a galaxy. A galaxy can be thought of as a massive collection of stars that are bound together by the force of gravity. This gravitational pull is what holds the stars in a galaxy together, much like a group of objects tied together with a common thread. The Milky Way, which is the galaxy that contains our solar system, is just one example of the many galaxies that exist within the universe.  | False |
+The universe, in its entirety, is comprised of countless galaxies, each containing a vast array of stars, planets, and other celestial objects. The sheer scale of the universe is difficult to comprehend, with distances between galaxies measured in millions or even billions of light-years. Despite its complexity, the universe operates according to a set of fundamental laws, including gravity, which governs the behavior of objects within it. By understanding the structure and behavior of galaxies, such as the Milky Way, we can gain insight into the workings of the universe as a whole. This, in turn, can help us better appreciate the awe-inspiring scale and complexity of the universe, and our place within it.  | False |
+In terms of the definition of the term ""universe"", it can be summarized as the all-encompassing and intricate system that contains everything in existence, from the smallest subatomic particles to the vast expanses of intergalactic space. This system is governed by a set of fundamental laws, including gravity, and is comprised of countless galaxies, each containing a vast array of stars, planets, and other celestial objects. The universe is a complex and dynamic entity, with matter and energy constantly interacting and evolving over time. By studying the universe and its many components, we can gain a deeper understanding of the underlying laws and principles that govern its behavior, and develop a greater appreciation for the beauty and complexity of the cosmos. | False","The concept of the universe refers to the vast and intricate expanse that encompasses everything in existence. To put this idea into perspective, consider a smaller, more manageable unit, such as a galaxy. A galaxy can be thought of as a massive collection of stars that are bound together by the force of gravity. This gravitational pull is what holds the stars in a galaxy together, much like a group of objects tied together with a common thread. The Milky Way, which is the galaxy that contains our solar system, is just one example of the many galaxies that exist within the universe.  |
+The universe, in its entirety, is comprised of countless galaxies, each containing a vast array of stars, planets, and other celestial objects. The sheer scale of the universe is difficult to comprehend, with distances between galaxies measured in millions or even billions of light-years. Despite its complexity, the universe operates according to a set of fundamental laws, including gravity, which governs the behavior of objects within it. By understanding the structure and behavior of galaxies, such as the Milky Way, we can gain insight into the workings of the universe as a whole. This, in turn, can help us better appreciate the awe-inspiring scale and complexity of the universe, and our place within it.  |
+In terms of the definition of the term ""universe"", it can be summarized as the all-encompassing and intricate system that contains everything in existence, from the smallest subatomic particles to the vast expanses of intergalactic space. This system is governed by a set of fundamental laws, including gravity, and is comprised of countless galaxies, each containing a vast array of stars, planets, and other celestial objects. The universe is a complex and dynamic entity, with matter and energy constantly interacting and evolving over time. By studying the universe and its many components, we can gain a deeper understanding of the underlying laws and principles that govern its behavior, and develop a greater appreciation for the beauty and complexity of the cosmos."
+,"
+
+Input:
+""A Lamborghini sports car crashed into a guardrail at Walt Disney World Speedway on Sunday, killing a passenger, the Florida Highway Patrol said. The crash occurred at 3:30 p.m. at the Exotic Driving Experience, which bills itself as a chance to drive your dream car on a racetrack. The 36-year-old passenger, Gary Terry of Davenport, Florida, was pronounced dead at the scene, Florida Highway Patrol said.","Here are the independent facts broken down from the passage: | False |
+ A Lamborghini sports car crashed into a guardrail. | True |
+ The crash occurred at Walt Disney World Speedway. | True |
+ The crash happened on a Sunday. | True |
+ The crash resulted in the death of a passenger. | True |
+ The Florida Highway Patrol reported the incident. | True |
+ The crash occurred at 3:30 p.m. | True |
+ The incident took place at the Exotic Driving Experience. | True |
+ The Exotic Driving Experience is located on a racetrack. | True |
+ The Exotic Driving Experience allows people to drive their dream car. | False |
+ The passenger who died was 36 years old. | True |
+ The passenger who died was named Gary Terry. | True |
+ Gary Terry was from Davenport, Florida. | True |
+ Gary Terry was pronounced dead at the scene of the crash. | True","Here are the independent facts broken down from the passage: |
+ The Exotic Driving Experience allows people to drive their dream car."
+,"
+
+I have seen in recent years how the internet can be used to communicate ideas, to share experiences, and to spread information. And, I can see how it can be used for entertainment purposes as well. My question for you is what are the greatest things you have experienced in your life that you would want to share with others? Do you have any memories that you believe are particularly important or even unique that you think you could share with others in a way that would enlighten or even bring about change? How would you feel if the information or the ideas you expressed brought about an unexpected outcome?","Here are the independent facts broken down from the passage: | False |
+ The internet can be used to communicate ideas. | True |
+ The internet can be used to share experiences. | True |
+ The internet can be used to spread information. | True |
+ The internet can be used for entertainment purposes. | False |
+ The speaker is seeking to know about the greatest experiences in others' lives. | False |
+ The speaker is interested in hearing about others' unique memories. | False |
+ The speaker believes that sharing certain memories or ideas can enlighten others. | True |
+ The speaker believes that sharing certain memories or ideas can bring about change. | False |
+ The speaker is curious about how others would feel if their expressed ideas or information led to an unexpected outcome. | False |
+Note that the passage is mostly composed of the speaker's thoughts, questions, and opinions, rather than objective facts. However, the above breakdown attempts to extract the underlying statements that can be considered as independent facts or assertions. | False","Here are the independent facts broken down from the passage: |
+ The internet can be used for entertainment purposes. |
+ The speaker is seeking to know about the greatest experiences in others' lives. |
+ The speaker is interested in hearing about others' unique memories. |
+ The speaker believes that sharing certain memories or ideas can bring about change. |
+ The speaker is curious about how others would feel if their expressed ideas or information led to an unexpected outcome. |
+Note that the passage is mostly composed of the speaker's thoughts, questions, and opinions, rather than objective facts. However, the above breakdown attempts to extract the underlying statements that can be considered as independent facts or assertions."
+,"
+
+\paragraph{Example 2}
+Provide a concise summary of the following text: 'The National Basketball Association (NBA) has fined Philadelphia 76ers guard Michael Carter-Williams for his conduct in a game against the Denver Nuggets on Tuesday night, according to the NBA's official Twitter feed. The league said Carter-Williams ""will be fined"" for his actions, but didn't provide any further details about the fine. Carter-Williams, who was born and raised in Toronto, Canada, has been suspended for two games since Oct.","Here are the independent facts broken down from the passage: | True |
+ The National Basketball Association (NBA) fined Philadelphia 76ers guard Michael Carter-Williams. | False |
+ The fine was due to Michael Carter-Williams' conduct in a game against the Denver Nuggets. | False |
+ The game against the Denver Nuggets took place on a Tuesday night. | False |
+ The NBA announced the fine on their official Twitter feed. | False |
+ The amount or details of the fine were not provided by the NBA. | False |
+ Michael Carter-Williams was born in Toronto, Canada. | False |
+ Michael Carter-Williams was raised in Toronto, Canada. | False |
+ Michael Carter-Williams has been suspended for two games since October. | False"," The National Basketball Association (NBA) fined Philadelphia 76ers guard Michael Carter-Williams. |
+ The fine was due to Michael Carter-Williams' conduct in a game against the Denver Nuggets. |
+ The game against the Denver Nuggets took place on a Tuesday night. |
+ The NBA announced the fine on their official Twitter feed. |
+ The amount or details of the fine were not provided by the NBA. |
+ Michael Carter-Williams was born in Toronto, Canada. |
+ Michael Carter-Williams was raised in Toronto, Canada. |
+ Michael Carter-Williams has been suspended for two games since October."
+,"
+
+You should write at least 150 words.
+
+Model Answer:
+A fishing boat called Dalniy Vostok carrying 132 people got into trouble on Wednesday while fishing in the Kamchatka region of Russia. As a result of the accident, 54 people died while 17 were missing. A search operation has already started to find the missing people.
+The ship got into trouble due to an accident. The accident made the vessel unstable and the ship capsized in a short time. The fishermen could not get any assistance and the incident happened in a very remote area.","Here are the independent facts broken down from the passage: | False |
+ A fishing boat called Dalniy Vostok was carrying 132 people. | True |
+ The boat got into trouble on a Wednesday. | False |
+ The incident occurred while the boat was fishing in the Kamchatka region of Russia. | True |
+ 54 people died as a result of the accident. | True |
+ 17 people were reported missing after the accident. | False |
+ A search operation was started to find the missing people. | True |
+ The ship got into trouble due to an accident. | True |
+ The accident made the vessel unstable. | True |
+ The ship capsized in a short time. | True |
+ The fishermen were unable to get any assistance during the incident. | False |
+ The incident happened in a very remote area. | True |
+Note: Some of these facts may be related or dependent on each other, but I've broken them down into individual statements that can be verified independently. | True","Here are the independent facts broken down from the passage: |
+ The boat got into trouble on a Wednesday. |
+ 17 people were reported missing after the accident. |
+ The fishermen were unable to get any assistance during the incident."
+,"
+
+The above extract has been taken from the news article by Jonathan Wald and Sara Sidner posted at:
+
+It is suggested that the above extract is presented as it is, not in bullet points.
+
+The summary must be presented in a paragraph form, not in bullet points.
+
+The summary must be written in the same order as in the original extract.
+
+
+
+1-3 marks
+
+4-5 marks
+
+6-7 marks
+
+8-9 marks
+
+10 marks
+
+No errors No errors
+1 Error
+2 Errors
+More than 2 Errors
+
+Error 1
+","Here are the independent facts broken down from the passage: | True |
+The passage provides information about an extract taken from a news article written by Jonathan Wald and Sara Sidner. The extract is to be presented in its original form, without any modifications such as bullet points. A summary of the extract must be written in paragraph form, following the same order as the original extract. The passage also mentions a marking system, with scores ranging from 1-3 marks to 10 marks, and an error system that categorizes mistakes into ""No errors"", ""1 Error"", ""2 Errors"", and ""More than 2 Errors"", with a specific mention of ""Error 1"". | False","The passage provides information about an extract taken from a news article written by Jonathan Wald and Sara Sidner. The extract is to be presented in its original form, without any modifications such as bullet points. A summary of the extract must be written in paragraph form, following the same order as the original extract. The passage also mentions a marking system, with scores ranging from 1-3 marks to 10 marks, and an error system that categorizes mistakes into ""No errors"", ""1 Error"", ""2 Errors"", and ""More than 2 Errors"", with a specific mention of ""Error 1""."
+,"
+
+5.1.3. Identify and describe the different types of literary genres. Provide examples of the following types of literary works: A. Novels: 1. Narrative 2. Expository 3. Informative 4. Personal narrative B. Short Stories: 1. Realistic 2. Realistic fiction 3. Science fiction 4. Fantasy 5. Romance C. Poetry: 1. Lyrical 2. Narrative 3. Imagist 4. Epic 5. Haiku 6. Ballad D. Dramatic works: 1. Farce 2. Melodrama 3.","Here are the independent facts broken down from the passage: | True |
+ There are different types of literary genres. | True |
+ Novels can be categorized into several types, including: | False |
+   - Narrative | True |
+   - Expository | True |
+   - Informative | True |
+   - Personal narrative | False |
+ Short stories can be categorized into several types, including: | False |
+   - Realistic | True |
+   - Realistic fiction | True |
+   - Science fiction | False |
+   - Fantasy | False |
+   - Romance | False |
+ Poetry can be categorized into several types, including: | False |
+   - Lyrical | False |
+   - Narrative | True |
+   - Imagist | False |
+   - Epic | False |
+   - Haiku | False |
+   - Ballad | False |
+ Dramatic works can be categorized into several types, including: | False |
+   - Farce | False |
+   - Melodrama | False |
+Note that the passage does not provide explicit examples of each type, but rather lists the categories. If examples were provided, they would be additional independent facts. | True"," Novels can be categorized into several types, including: |
+   - Personal narrative |
+ Short stories can be categorized into several types, including: |
+   - Science fiction |
+   - Fantasy |
+   - Romance |
+ Poetry can be categorized into several types, including: |
+   - Lyrical |
+   - Imagist |
+   - Epic |
+   - Haiku |
+   - Ballad |
+ Dramatic works can be categorized into several types, including: |
+   - Farce |
+   - Melodrama"
+,"
+
+How to Answer the Question ""Describe the Text""
+
+  1. What is an example of a thesis statement? A thesis statement is one sentence that expresses the main idea of a research paper or essay, such as an expository essay or argumentative essay. It makes a claim, directly answering a question. A thesis statement.
+  2. How to Write a Summary of an Article 1. Select a text you want to summarize. 2. Read the text carefully to get the main points and ideas. 3. Organize your notes. 4. Write the summary. 5. Proofread and edit your summary.","Here are the independent facts broken down from the passage: | True |
+ A thesis statement is one sentence that expresses the main idea of a research paper or essay. | False |
+ A thesis statement can be used in various types of essays, including expository and argumentative essays. | True |
+ A thesis statement makes a claim and directly answers a question. | True |
+ To summarize an article, you should first select a text you want to summarize. | True |
+ Reading the text carefully is necessary to get the main points and ideas. | True |
+ Organizing your notes is a step in writing a summary. | True |
+ Writing the summary is a step that comes after organizing your notes. | True |
+ Proofreading and editing are necessary steps after writing a summary. | True |
+Note that the passage appears to be a collection of unrelated ideas, with the first part discussing thesis statements and the second part discussing how to write a summary of an article. | False"," A thesis statement is one sentence that expresses the main idea of a research paper or essay. |
+Note that the passage appears to be a collection of unrelated ideas, with the first part discussing thesis statements and the second part discussing how to write a summary of an article."
+,"
+
+Answer preview:
+
+The article tells us about a terrorist attack on a bus stop in Jerusalem. The Israeli citizens were standing at the bus stop when a car driven by an Arab struck the citizens. One of the citizens was killed while the other injured. The driver is being investigated for...
+
+Attachments:
+
+• @
+• 703 orders completed
+Tutor has posted answer for $5.00. See answer's preview$5.00","Here are the independent facts broken down from the passage: | False |
+ A terrorist attack occurred at a bus stop in Jerusalem. | True |
+ Israeli citizens were standing at the bus stop when the attack happened. | True |
+ A car was driven into the citizens. | True |
+ The car was driven by an Arab individual. | True |
+ One Israeli citizen was killed in the attack. | True |
+ Another Israeli citizen was injured in the attack. | True |
+ The driver of the car is being investigated. | True",Here are the independent facts broken down from the passage:
+," Use your own words as far as possible and include some of the supporting detail, but only where necessary. Write between 60 and 100 words.
+
+The answer is '...this is a concrete step in the drive to end the difference between homosexual and heterosexual couples.'.","Here are the independent facts broken down from the passage: | True |
+ The passage provides guidance on writing. | False |
+ The guidance is to use one's own words as much as possible. | True |
+ Supporting details should be included, but only when necessary. | True |
+ The writing should be concise, between 60 and 100 words. | False |
+ The answer provided relates to a step towards equality for homosexual and heterosexual couples. | True"," The passage provides guidance on writing. |
+ The writing should be concise, between 60 and 100 words."
+,"
+
+Summarize the text:
+
+In an attempt to create an efficient government service for the city of Detroit, the Motor City, Michigan, USA, the city’s leaders have decided to start paying their employees as little as $2.35 an hour. This will not affect all city employees however; a few high-ranking officials will still earn the $14.50 an hour minimum that they previously did. These people include the Mayor, the Police Chief and the City Manager.","Here are the independent facts broken down from the passage: | True |
+ The city of Detroit, Michigan, USA is attempting to create an efficient government service. | False |
+ The city's leaders have decided to pay some employees as little as $2.35 an hour. | False |
+ Not all city employees will be paid $2.35 an hour. | True |
+ Some high-ranking officials will still earn a minimum of $14.50 an hour. | False |
+ The high-ranking officials who will still earn $14.50 an hour include: | False |
+   - The Mayor | False |
+   - The Police Chief | False |
+   - The City Manager | False |
+ The $14.50 an hour minimum was the previous minimum wage for the high-ranking officials mentioned. | False"," The city of Detroit, Michigan, USA is attempting to create an efficient government service. |
+ The city's leaders have decided to pay some employees as little as $2.35 an hour. |
+ Some high-ranking officials will still earn a minimum of $14.50 an hour. |
+ The high-ranking officials who will still earn $14.50 an hour include: |
+   - The Mayor |
+   - The Police Chief |
+   - The City Manager |
+ The $14.50 an hour minimum was the previous minimum wage for the high-ranking officials mentioned."
+," This is the training dataset (no answer provided)
+• text summarization-question-summary: For every text-summary pair, come up with a question such that the answer to the question is the summary. The answer can be in the form of a text span, or a number or anything else that can be extracted from the text. Provide only the question as the response. This is the training dataset (no answer provided)
+• text summarization-summary-to-question: For every text-summary pair, come up with a question such that the answer to the question is the summary.","Here are the independent facts broken down from the passage: | False |
+ The passage describes a training dataset. | False |
+ The training dataset involves text summarization. | True |
+ The task is to create a question for every text-summary pair. | True |
+ The answer to the question should be the summary. | True |
+ The answer can be in various forms, such as a text span or a number. | True |
+ The answer can be anything that can be extracted from the text. | True |
+ The response should only include the question. | True |
+ There are two similar tasks described: ""text summarization-question-summary"" and ""text summarization-summary-to-question"". | True |
+ Both tasks involve creating a question from a text-summary pair, where the answer to the question is the summary. | True","Here are the independent facts broken down from the passage: |
+ The passage describes a training dataset."
+,"
+
+2.  Write a summary of the following article: 'Runaway train ploughs into cars, killing at least seven in Japan. A bullet train crashed into a road bridge in western Japan today, killing at least seven people and injuring 43, officials said. A train carrying 400 passengers ploughed into the centre of the bridge, which spans a valley and is a popular spot for sightseeing. The driver and a conductor were among the dead, with some of those injured said to be in a critical condition, authorities said.","Here are the independent facts broken down from the passage: | False |
+ A bullet train crashed into a road bridge in western Japan. | False |
+ The crash resulted in the deaths of at least seven people. | False |
+ At least 43 people were injured in the crash. | False |
+ The train was carrying 400 passengers when it crashed. | False |
+ The bridge where the crash occurred spans a valley. | False |
+ The bridge is a popular spot for sightseeing. | False |
+ The driver of the train was among the dead. | False |
+ A conductor on the train was also among the dead. | False |
+ Some of the injured people are in a critical condition. | False","Here are the independent facts broken down from the passage: |
+ A bullet train crashed into a road bridge in western Japan. |
+ The crash resulted in the deaths of at least seven people. |
+ At least 43 people were injured in the crash. |
+ The train was carrying 400 passengers when it crashed. |
+ The bridge where the crash occurred spans a valley. |
+ The bridge is a popular spot for sightseeing. |
+ The driver of the train was among the dead. |
+ A conductor on the train was also among the dead. |
+ Some of the injured people are in a critical condition."
+,"
+
+Question 5
+
+The last two sentences of the text is: 'Andros, who has yet to hit top form for England, has impressed with his work rate this season. It is a quality he has also shown with the Three Lions. ""I thought I did well,"" said Townsend. ""I was up against good players and I had a good game. It was difficult at the end, but I'm happy with my performance."" Townsend was pleased his performance helped to silence some of his critics. ""You look on the forums and see what some people think about you,"" he said.","Here are the independent facts broken down from the passage: | True |
+ Andros has yet to hit top form for England. | True |
+ Andros has impressed with his work rate this season. | False |
+ Andros has shown a good work rate with the Three Lions. | True |
+ Townsend thought he did well in a game. | True |
+ Townsend was up against good players in the game. | True |
+ Townsend had a good game. | True |
+ The end of the game was difficult for Townsend. | False |
+ Townsend is happy with his performance. | True |
+ Townsend has critics who express their opinions on forums. | True |
+ Townsend's performance helped to silence some of his critics. | True"," Andros has impressed with his work rate this season. |
+ The end of the game was difficult for Townsend."
+,"
+
+  • Q2:
+
+    The following passage is from the book 'Battlefield Earth' by L. Ron Hubbard. You are going to read a short extract. For questions 49-52, choose the answer (A, B, C or D) which you think fits best according to the text. In the year 3000, Earth has been taken over by the Psychlos, a cruel race of humanoids from the planet Psychlo. The Psychlos are huge.","Here are the independent facts broken down from the passage: | False |
+ The passage is from the book 'Battlefield Earth'. | False |
+ The book 'Battlefield Earth' is written by L. Ron Hubbard. | False |
+ The story is set in the year 3000. | False |
+ In the year 3000, Earth has been taken over by an alien race. | False |
+ The alien race that has taken over Earth is called the Psychlos. | False |
+ The Psychlos are a race of humanoids. | False |
+ The Psychlos are from the planet Psychlo. | False |
+ The Psychlos are huge in size. | False","Here are the independent facts broken down from the passage: |
+ The passage is from the book 'Battlefield Earth'. |
+ The book 'Battlefield Earth' is written by L. Ron Hubbard. |
+ The story is set in the year 3000. |
+ In the year 3000, Earth has been taken over by an alien race. |
+ The alien race that has taken over Earth is called the Psychlos. |
+ The Psychlos are a race of humanoids. |
+ The Psychlos are from the planet Psychlo. |
+ The Psychlos are huge in size."
+,"
+
+The goal of the test is to generate a summary of a text based on the questions in a given order.
+
+The model architecture is a Transformer which was introduced by Vaswani et al. (2017) and is now a standard architecture for sequence-to-sequence models.
+
+## Training¶
+
+The pre-trained Transformer model will be used in this example. This model is pre-trained using a text generation objective. This objective is based on conditional masked language modeling where only some of the words are masked and predicted based on the other words in the text.","Here are the independent facts broken down from the passage: | True |
+ The goal of the test is to generate a summary of a text based on the questions in a given order. | True |
+ The model architecture used is a Transformer. | False |
+ The Transformer architecture was introduced by Vaswani et al. in 2017. | False |
+ The Transformer architecture is now a standard architecture for sequence-to-sequence models. | False |
+ A pre-trained Transformer model will be used in this example. | False |
+ The pre-trained Transformer model is pre-trained using a text generation objective. | False |
+ The text generation objective is based on conditional masked language modeling. | False |
+ In conditional masked language modeling, only some of the words are masked and predicted based on the other words in the text. | True"," The model architecture used is a Transformer. |
+ The Transformer architecture was introduced by Vaswani et al. in 2017. |
+ The Transformer architecture is now a standard architecture for sequence-to-sequence models. |
+ A pre-trained Transformer model will be used in this example. |
+ The pre-trained Transformer model is pre-trained using a text generation objective. |
+ The text generation objective is based on conditional masked language modeling."
+," If you wish to provide the details of the story, you may use it as your introduction to the summary.
+
+
+  • The Summary of an article
+    An article is a small piece of news or report about some current or recent events, it can be very long or very short. It can be in any format: speech, magazine, newspaper, essay, etc. It is an abridgement of a narrative, in which the main facts are stated briefly and concisely. It also provides a short, condensed and general idea about the main events. Summaries have to be short but comprehensive.","Here are the independent facts broken down from the passage: | False |
+ An article can be a small piece of news or a report about current or recent events. | True |
+ An article can be very long or very short. | True |
+ An article can be in various formats, including speech, magazine, newspaper, and essay. | True |
+ A summary is an abridgement of a narrative. | True |
+ A summary states the main facts briefly and concisely. | True |
+ A summary provides a short, condensed, and general idea about the main events. | True |
+ Summaries should be short. | True |
+ Summaries should be comprehensive. | True",Here are the independent facts broken down from the passage:
+,"
+
+2. Q: How does the above story relate to 'The Hand that Rocks the Cradle'?
+
+A: 'The Hand that Rocks the Cradle', released in 1992, is a psychological horror film directed by Curtis Hanson. This American film stars Rebecca De Mornay, Annabella Sciorra, and Ernie Hudson. It is about a woman who becomes obsessed with a young mother who has recently given birth to a child, while also becoming friends with the husband. This obsession eventually leads to murder, mayhem, and a final confrontation.
+
+3.","Here are the independent facts broken down from the passage: | False |
+ ""The Hand that Rocks the Cradle"" is a psychological horror film. | False |
+ The film ""The Hand that Rocks the Cradle"" was released in 1992. | False |
+ The film ""The Hand that Rocks the Cradle"" was directed by Curtis Hanson. | False |
+ The film ""The Hand that Rocks the Cradle"" is an American film. | False |
+ The film ""The Hand that Rocks the Cradle"" stars Rebecca De Mornay. | False |
+ The film ""The Hand that Rocks the Cradle"" stars Annabella Sciorra. | False |
+ The film ""The Hand that Rocks the Cradle"" stars Ernie Hudson. | False |
+ The plot of the film ""The Hand that Rocks the Cradle"" involves a woman who becomes obsessed with a young mother. | False |
+ The plot of the film ""The Hand that Rocks the Cradle"" involves the obsessed woman becoming friends with the young mother's husband. | False |
+ The obsession in the film ""The Hand that Rocks the Cradle"" leads to murder and mayhem. | False |
+ The film ""The Hand that Rocks the Cradle"" culminates in a final confrontation. | False","Here are the independent facts broken down from the passage: |
+ ""The Hand that Rocks the Cradle"" is a psychological horror film. |
+ The film ""The Hand that Rocks the Cradle"" was released in 1992. |
+ The film ""The Hand that Rocks the Cradle"" was directed by Curtis Hanson. |
+ The film ""The Hand that Rocks the Cradle"" is an American film. |
+ The film ""The Hand that Rocks the Cradle"" stars Rebecca De Mornay. |
+ The film ""The Hand that Rocks the Cradle"" stars Annabella Sciorra. |
+ The film ""The Hand that Rocks the Cradle"" stars Ernie Hudson. |
+ The plot of the film ""The Hand that Rocks the Cradle"" involves a woman who becomes obsessed with a young mother. |
+ The plot of the film ""The Hand that Rocks the Cradle"" involves the obsessed woman becoming friends with the young mother's husband. |
+ The obsession in the film ""The Hand that Rocks the Cradle"" leads to murder and mayhem. |
+ The film ""The Hand that Rocks the Cradle"" culminates in a final confrontation."
+,"
+
+### Output:
+
+New York Yankees
+Boston Red Sox
+Texas Rangers
+Atlanta Braves
+New York Mets
+
+### Input:
+
+Provide the response to the following text: 'On July 16, 2007, a large number of explosions ripped through a building in Mumbai, India, leaving more than 200 people dead. The explosions took place at a train station that is situated in the heart of the city and is one of the city's busiest train stations. The attacks took place when people were returning from work.","Here are the independent facts broken down from the passage: | False |
+ A large number of explosions occurred in Mumbai, India on July 16, 2007. | False |
+ The explosions resulted in more than 200 people dead. | False |
+ The explosions took place at a train station. | False |
+ The train station is situated in the heart of Mumbai. | False |
+ The train station is one of the city's busiest train stations. | False |
+ The attacks occurred when people were returning from work. | False |
+Note that the list of baseball teams at the beginning of the passage appears to be unrelated to the rest of the passage and can be considered as separate, independent facts: | True |
+ The New York Yankees are a baseball team. | True |
+ The Boston Red Sox are a baseball team. | True |
+ The Texas Rangers are a baseball team. | True |
+ The Atlanta Braves are a baseball team. | True |
+ The New York Mets are a baseball team. | True","Here are the independent facts broken down from the passage: |
+ A large number of explosions occurred in Mumbai, India on July 16, 2007. |
+ The explosions resulted in more than 200 people dead. |
+ The explosions took place at a train station. |
+ The train station is situated in the heart of Mumbai. |
+ The train station is one of the city's busiest train stations. |
+ The attacks occurred when people were returning from work."
+," You will not need to change any words in the source text, and you should not include any quotation marks. (110 words) (Marks available: 10)
+
+5. Look at this extract from the first paragraph of the following article.
+
+Write a suitable response to this extract which demonstrates the correct use of vocabulary. Use notes and comments from the source article for this extract. (Marks available: 10)
+
+'Billionaire philanthropist Warren Buffett, one of the world’s richest men, says he won’t give any of his fortune to his children.","Here are the independent facts broken down from the passage: | False |
+ The task requires not changing any words in the source text. | True |
+ The task requires not including any quotation marks. | True |
+ The task has 110 words. | False |
+ The task has 10 marks available. | False |
+ The task involves looking at an extract from the first paragraph of an article. | True |
+ The task requires writing a suitable response to the extract. | True |
+ The response should demonstrate the correct use of vocabulary. | True |
+ The response should use notes and comments from the source article for the extract. | True |
+ The response task has 10 marks available. | True |
+ Warren Buffett is a billionaire philanthropist. | False |
+ Warren Buffett is one of the world's richest men. | False |
+ Warren Buffett says he won't give any of his fortune to his children. | False","Here are the independent facts broken down from the passage: |
+ The task has 110 words. |
+ The task has 10 marks available. |
+ Warren Buffett is a billionaire philanthropist. |
+ Warren Buffett is one of the world's richest men. |
+ Warren Buffett says he won't give any of his fortune to his children."
+,"
+
+For the first sample, the following are correct responses:
+
+  • (1) A football player bit another player at the end of a game.
+  • (2) A football player was mad and he bit another player.
+
+(3) One football player was so mad that he bit the other player.
+
+While for the second sample, the following are correct responses:
+
+  • (1) A football player bit another player.
+  • (2) A football player was mad and he bit another player.","Here are the independent facts broken down from the passage: | False |
+ A football player bit another player. | True |
+ A football player was mad when he bit another player. | True |
+ The incident occurred at the end of a game (specific to the first sample). | True |
+Note that the other statements are variations or combinations of these facts, but they do not provide any new, independent information. | True",Here are the independent facts broken down from the passage:
+,"
+
+Example: Phil Mickelson and Andrew Putnam are the leaders after day one of the Houston Open. The American Spieth was in with a chance, but he has a little way to go to catch up with the pair. Mickelson has been impressive in Houston, but that could just be due to the easy course. He may have peaked early.","Here are the independent facts broken down from the passage: | True |
+ Phil Mickelson and Andrew Putnam are the leaders after day one of the Houston Open. | False |
+ Jordan Spieth (referred to as ""The American Spieth"") is not currently in the lead. | True |
+ Phil Mickelson has been impressive in Houston. | True |
+ The Houston Open course is considered easy. | False |
+ Phil Mickelson may have peaked early in the tournament. | True |
+Note that fact #5 is somewhat subjective, as it's a speculation or opinion rather than a purely objective fact. The other four facts are more concrete and verifiable. | True"," Phil Mickelson and Andrew Putnam are the leaders after day one of the Houston Open. |
+ The Houston Open course is considered easy."
+,"
+
+
+A new model for speech recognition based on deep convolutional networks and LSTMs for acoustic and language modeling, respectively, was introduced in [26]. This model uses the raw waveforms as input to the network, which was trained with an input layer representing filter banks. The approach described in [26] uses two convolutional layers of kernels with 256 and 64 channels, respectively, and two LSTM layers with 1024 and 256 cells, respectively, after which a fully connected layer is used for classification.","Here are the independent facts broken down from the passage: | False |
+ A new model for speech recognition was introduced in [26]. | False |
+ The model is based on deep convolutional networks for acoustic modeling. | False |
+ The model is based on LSTMs (Long Short-Term Memory) for language modeling. | False |
+ The model uses raw waveforms as input to the network. | False |
+ The network was trained with an input layer representing filter banks. | False |
+ The approach uses two convolutional layers. | False |
+ The first convolutional layer has 256 channels (or kernels). | False |
+ The second convolutional layer has 64 channels (or kernels). | False |
+ The approach uses two LSTM layers. | False |
+ The first LSTM layer has 1024 cells. | False |
+ The second LSTM layer has 256 cells. | False |
+ A fully connected layer is used for classification after the convolutional and LSTM layers. | False","Here are the independent facts broken down from the passage: |
+ A new model for speech recognition was introduced in [26]. |
+ The model is based on deep convolutional networks for acoustic modeling. |
+ The model is based on LSTMs (Long Short-Term Memory) for language modeling. |
+ The model uses raw waveforms as input to the network. |
+ The network was trained with an input layer representing filter banks. |
+ The approach uses two convolutional layers. |
+ The first convolutional layer has 256 channels (or kernels). |
+ The second convolutional layer has 64 channels (or kernels). |
+ The approach uses two LSTM layers. |
+ The first LSTM layer has 1024 cells. |
+ The second LSTM layer has 256 cells. |
+ A fully connected layer is used for classification after the convolutional and LSTM layers."
+,"
+
+  • This answer is helpful.
+  • This answer is not helpful.
+report an inappropriate answer
+
+Please login or register to answer this question.","Here are the independent facts broken down from the passage: | False |
+ There is an option to report an inappropriate answer. | True |
+ Users can login to answer a question. | False |
+ Users can register to answer a question. | False |
+ There are options to mark an answer as ""helpful"" or ""not helpful"". | True","Here are the independent facts broken down from the passage: |
+ Users can login to answer a question. |
+ Users can register to answer a question."
+," Do not copy the whole article here. 
+2. Write a detailed report on the following paragraph: ""We are seeing, however, that the younger generation is a more diverse demographic than any previous generation we’ve ever had,” said Mark Roderick, a professor of communication arts and sciences at California State University. “People are much more open-minded when it comes to a person’s sexual orientation, gender, religious beliefs or ethnicity.","Here are the independent facts broken down from the passage: | False |
+ Mark Roderick is a professor. | False |
+ Mark Roderick teaches at California State University. | False |
+ Mark Roderick's field of expertise is communication arts and sciences. | False |
+ The younger generation is more diverse than any previous generation. | False |
+ People in the younger generation are more open-minded about: | False |
+   - Sexual orientation | False |
+   - Gender | False |
+   - Religious beliefs | False |
+   - Ethnicity | False |
+Note: The quote is an opinion or statement made by Mark Roderick, but the facts listed above are the specific points that can be verified or considered as independent facts. | False","Here are the independent facts broken down from the passage: |
+ Mark Roderick is a professor. |
+ Mark Roderick teaches at California State University. |
+ Mark Roderick's field of expertise is communication arts and sciences. |
+ The younger generation is more diverse than any previous generation. |
+ People in the younger generation are more open-minded about: |
+   - Sexual orientation |
+   - Gender |
+   - Religious beliefs |
+   - Ethnicity |
+Note: The quote is an opinion or statement made by Mark Roderick, but the facts listed above are the specific points that can be verified or considered as independent facts."

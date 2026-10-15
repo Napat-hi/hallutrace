@@ -1,0 +1,473 @@
+prompt,response
+,"
+    \item \emph{Excerpt:} 'The video sees an elderly woman struggling to open a car door after it was blocked by police tape, as she tries to enter her vehicle to reach her handbag. The video has been shared thousands of times after the elderly lady was blocked by police tape after she stopped at a red light in Los Angeles, California. The elderly lady can be seen getting out of her vehicle in an effort to reach her handbag. She then struggles to open the car door as she tries to find a way past the police tape that has been placed across her vehicle."
+,"
+
+• Provide a question response, using the following information to construct the question: 'Manny Pacquiao is ready to get back into the ring and will fight Timothy Bradley Jr this December at Madison Square Garden in New York. Pacquiao and Bradley Jr were in Las Vegas on Thursday for a press conference to promote the December 10th showdown. 'Pacquiao is one of the best fighters in the world but has not been in the ring for over two years. He has taken a break to focus on his political career but is now ready to get back in the ring."
+,"
+
+#4: [Image]
+The given image contains 3 sections of information: a section of text on the top, a table on the middle, and a text on the bottom.
+You should take the table and the text as the main part of the information and the text on the top as optional information that can help you to answer the questions.
+For this task, a student should be able to answer questions related to the table and the text on the bottom."
+," Use your common sense in choosing a summary format (bullet points, summary text, list, etc). This should be written as a single response. The response can be returned as an array of strings (if multiple formats are provided) or as a single string with all the formats separated by \n or \t. If only a single format is returned, it is acceptable to use a single string or a string array. Example input: 'Rafael may have played his last game for Manchester United after he cracked three ribs during the club's U21 clash with Leicester on Monday."
+,"
+
+#
+
+# Use the summary to generate a short paragraph that summarizes the text. The summary should be as short as possible.
+
+#
+
+# **Expected output**:
+#
+# The UEFA has published the regulations for the next season. The new system should elevate league-leading Juventus and Zenit St Petersburg. Porto are trailing Benfica in the Primeira Liga. The Chelsea are in the Premier League. The Real Madrid is a third in the La Liga.
+#
+# The UEFA has also published the rules for the Champions League."
+,"
+
+A good summary of the given article will contain the following parts:
+
+  • A description of the event
+  • The name of the two boxers
+  • The date of the fight
+  • The reason why this event is so interesting
+
+The given article mentions the event is scheduled for May 2, 2015. This information can be added to the summary. The article also mentions the names of the two boxers participating in the fight.
+
+The second paragraph of the given article contains the following sentences:"
+,"
+• Q3
+
+In each of the next three questions, a summary of some text is provided. You are required to write a conclusion based on the summary.
+
+Provide only the conclusion as the response.
+
+Provide a concise summary of the following text: 'For the first time in its history, the World Food Prize is going to be awarded jointly to two Americans and a French scientist."
+,"
+""""""
+
+    pred_s2s_test_summary = ""Everton are interested in signing Charlie Austin from QPR. He has scored 17 goals this season and will leave in the summer. The Toffees have made a new striker their priority for the summer to bolster the attacking options at Roberto Martinez’s disposal. Everton have expressed an interest in QPR striker Charlie Austin who could leave Loftus Road in the summer. Everton were among Premier League clubs who checked on Club Brugge’s 19-year-old forward Obbi Oulare on Sunday."
+,"
+
+### Solution 1:
+
+To provide only the summary as the response, we will use the nltk package.
+
+# Import the NLTK package
+import nltk
+
+# Read in the file
+article = nltk.data.load('shakespeare-hamlet.txt')
+
+# Get the summary of the file using the summary() method
+print(nltk.summary(article))
+# Output:
+#
+# Hamlet: The Complete Tragedy (1603)
+# William Shakespeare
+#"
+,"
+
+(1,731)
+
+Example(s) of input(s)
+
+Input ID
+1
+The judge who presided over the controversial Hillsborough inquest has said he is considering a fresh appeal against his ruling.
+A High Court judge who is in charge of the Hillsborough inquests has said that he is considering making a fresh appeal to the House of Lords."
+,"
+
+What is the summary?
+
+What is the summary?
+
+3) Write an essay discussing your views on the question 'Is a woman’s place in the home?' Provide evidence to support your position. You have one hour to write.
+
+
+There is no prescribed word limit for the IELTS test. In the real test you would have time to answer questions and write a long essay in response to this question, so you need to be able to do this as part of your preparation.
+
+
+The IELTS is used for immigration to other English speaking countries."
+," [Question id=1787] 1. A: Froch has been stopped by Andrzej Fonfara in nine rounds, ending his dream of a swansong fight in Las Vegas with Julio Cesar Chavez Jr. B: Carl Froch had hoped to be back in action last month against Chavez Jr in Las Vegas, but an elbow injury scuppered his plans. C: Carl Froch has repeated a desire to end a glittering career with a lucrative bout in the fight capital of the world against the Mexican Julio Cesar Chavez Jr, but that now looks unlikely."
+,"
+
+Sample Answer:
+
+The article ‘Facebook obsession leads to low self-esteem among young women’ discusses about the way young women compare themselves with other people. In addition, the article mentions the time young women spend online and how they rate themselves on Facebook.
+
+The study by the University of New South Wales in Australia revealed that young women do not compare themselves with celebrities on glossy magazines, rather compare themselves with their friends on Facebook. Facebook occupies 40 per cent of time young women spend online and they check the Facebook every few hours."
+,"
+
+Sample Output
+
+
+  1. How does the article compare with its counterparts on BBC Sport and the Guardian website?
+  2. How do the articles compare with each other in terms of the information they provide and the way they do so?
+  3. Which article would you expect to find on an online news website like the BBC Sport website? Why?
+
+Key terms
+
+  • lexis
+  • cohesion
+  • style
+  • register
+  • grammatical features
+  • paraphrase
+  • summary
+
+Exploring lexis"
+,"
+
+Q23. For the following text, provide an extract of the relevant text, but do not alter the text in any way. 'Celebrity chef Jamie Oliver has promised to donate all profits from a new season of his TV programme to help tackle the 'catastrophic' problem of child obesity. The Jamie Oliver Food Revolution series, broadcast on Channel 4 on Wednesday night, sees the chef travel to West Virginia in the US to work with the town of Huntington and the local school to educate children about the benefits of eating more fresh and locally produced food. 'We need to have our own revolution here."
+,"
+
+The key words in the prompt are 'concise summary.' There are three sentences in the text provided, therefore the summary must also be no longer than three sentences.
+
+This question has a reading part which must be done first, the summary part will be easier if you have understood what you have just read. Read through the text and make a note of the key details such as who was Miss Ann Price and what was the Ghetto Burger? Next answer the question given, you are not expected to just regurgitate the text. Read the question carefully, what exactly is being asked? What is expected?"
+," Do not copy any information from the text.
+
+3. Summarize the following text: 'The 'Gut Bacteria Genome Project' was born out of a chance meeting. Dr. Ruth Ley and Dr. Michael Pollen met at a Christmas dinner party in 2008. 'We talked about the science of gut bacteria and realized we needed to do a study,' Pollen said. 'So, in 2010, Pollen and Ley applied for and received a grant from the Human Microbiome Project, a five-year, $115 million program funded by the National Institutes of Health."
+,"
+
+For this task, you will write a program that will read a short passage of text and summarize the key points. Your program will read a file that contains a passage of text that may be several sentences long. For example:
+
+I have a cat. His name is Max. Max is a Persian cat. Max has one brown eye and one green eye. Max likes to sit on the windowsill and look out the window. Max likes to look out the window and watch the birds.
+
+The input file will contain multiple text passages. Each passage will be on a separate line in the file."
+," 'A' 'B' 'C' 'D'
+1 vote
+
+### A company's accounts show that the opening stock in 2017 was 60,000 and the closing stock in 2017 was 48,000. The closing stock in 2018 was 54,000 and the opening stock in 2018 was 20,000. The gross profit on the sales of goods during 2017 was ₹1,20,000 and that of 2018 was ₹1,20,000. Find the number of articles sold in each year using L.C.M. method."
+," Do not include any unnecessary text and/or information in the response. The summary must be accurate and fully cover the entire content of the provided text. The summary may contain the original title of the text, if one was provided. The summary must not be longer than 10% of the provided text."
+,"
+
+Answers: Provide a concise summary of the following text: 'Edinson Cavani found a novel way of burying bad news, as the PSG striker overcame another disappointing night's work against Barcelona with a day out at the zoo. The Uruguayan has struggled in the shadow of Zlatan Ibrahimovic during his time in the French capital, and continued to toil at the Camp Nou, as Laurent Blanc's side went down to a comfortable 2-0 second-leg defeat."
+," This text is very short, you should get a good summary.
+
+Example: https://www.google.com/search?q=Andy+Carroll+in+throne&client=ubuntu&hs=tGQ&source=lnms&tbm=isch&sa=X&ved=0ahUKEwjZgKu_uLrMAhVY6uQKHb3eAkYQ_AUICCgD#imgrc=Oq2UjZ_zjKx0UM:
+
+## Requirements
+
+1."
+," * The first answer will be given a point. The best answer in each 5 minute window will be given 3 extra points. * The first question to get 50 points wins the competition.
+
+Show thread
+
+In response to the following text, provide a brief summary. 'Nasa astronauts may be able to travel to Mars by the 2030s, it has been claimed. The claim, made by a group of MIT researchers, comes as NASA plans to announce new details of its mission to Mars in December."
+,"
+
+Input:
+
+Summary: Raquel Mauri shared the picture of their family day at the beach on her social media handle. The Barcelona midfielder's wife posted a picture with the caption: 'Relaxing day with the family'.
+
+Input:
+
+Summary: Barcelona midfielder Ivan Rakitic's life looks very good as his wife Raquel Mauri shared a picture of their family day at the beach on her social media handle. His team-mate Lionel Messi shared a picture of his son kissing his wife's stomach with the message: 'Waiting for you baby. We love you.'"
+,"
+
+This is where my summary ends.
+
+I would like to thank all my colleagues who have inspired me by their contributions to the project. I want to thank especially my student Bilal Khan for his enthusiasm and for being able to make an idea work. We also acknowledge the efforts of Markus Dreyer and Nadeem Akhtar for their help and inspiration.
+
+The project is now publicly available as a GitHub repo. If you want to contribute, send us an email."
+,"
+
+2. Answer the following questions.
+
+a. Who is the author of the text?
+
+b. What was the main idea of the text?
+
+c. In what city did the incident take place?
+
+d. What was the second-tallest building in the city?
+
+e. How many floors did it have?
+
+f. Where was the incident happening in the building?
+
+g. Who captured the incident on camera?
+
+h. What was the weather condition during the time of the incident?
+
+i. Did the workers have any serious injuries?
+"
+,"
+
+Q3. The questions are 'What happened to the dog tags?', 'When did the dog tags belong to?' and 'What were the dog tags for?'. Provide answers as the response.
+
+Example: Text: 'The world's first man-made object has been spotted by scientists aboard a NASA space telescope. The National Radio Astronomy Observatory, which was tracking the probe, said the telescope detected the Pioneer 10 spacecraft some 2.7 billion kilometres from earth. Pioneer 10 was launched in 1972 from Cape Canaveral in Florida. It became the first human-made object to reach Jupiter in 1973."
+,"
+
+2. Given an image (and a title), return the filename. Given the filename, return the image (and its title).
+
+3. Given an article, return all the paragraphs in the body of the article.
+
+4. Given a user, return the user's name, occupation, and location. Given a user's name, return the user.
+
+5. Given a user, return the user's friends. Given a user and a friend, return the friend's name, occupation, and location.
+
+6. Given a user, return the user's friends."
+," Provide only the summary as the response.
+
+A: Hello, You need to contact our customer support team for help with this. You can submit a ticket here"
+,"
+
+Question 19
+
+Write a concise summary of the following text: 'Former Manchester United star Rio Ferdinand is in a stable condition in hospital after collapsing during a charity soccer match, it was confirmed today. The 34-year-old centre-back fell to the ground in the 64th minute of a game against Chelsea B at London's Queen's Park Rangers' stadium in Harrow on Sunday afternoon. The former England international was stretchered off the pitch but is said to be in good spirits, despite suffering a suspected heart attack."
+,"
+
+I have done it a few times and the results are really great! I got my assignment back, but there were no mistakes, and the instructor liked it very much. I'll use this service in the future and recommend it to all my friends!
+
+Customer #2419
+
+It was very easy to complete. The writer I got was professional, knowledgeable, and attentive. The paper came in before the deadline and it met all my requirements. I'm sure I'll be working with your company again.
+
+Estimated Deadline: Thursday, May 07 10:41 PM in Your timezone"
+,"
+
+
+Here is the code for our model:
+
+from keras.models import Model
+from keras.layers import Input, LSTM, RepeatVector, TimeDistributed
+from keras.layers import Dense
+from keras import backend as K
+
+from sklearn.model_selection import train_test_split
+
+import numpy as np
+import pandas as pd
+
+class SequenceSummary:
+    def __init__(self, sequence_size, max_tokens):
+        self.sequence_size = sequence_size
+        self.max_tokens = max_tokens
+        self."
+," You need not process the entire text. You can decide how much information you need to process, how to process it, and how to organize it to create the summary. You will not be able to store any data. You must generate the summary on the spot. A list of candidate sentences for the summary is given as part of the input. Candidate sentences that are not chosen will be deleted before they are passed to your program. There are approximately 6,000 candidate sentences. Each candidate sentence will have a length between 1 and 150 characters, inclusive. The output must be exactly one line of text."
+,"  
+
+I believe the text can be summarised in two sentences. Firstly, the transfer policy of Tottenham Hotspur will not see the club competing for Champions League places. Secondly, elite clubs buy players to play for the club and do not think of reselling. 
+
+Text 4:
+
+Text: 'Despite its relatively small population, Finland's economy is the world's most efficient."
+,"
+
+This document is locked. Please register or login to make modifications to this document.
+Autor: ninjawarrior
+
+Creation Date: 28 May 2020 18:59
+
+Last Modified By: jessica_papke
+
+Last Modified Date: 19 Sep 2020 13:54
+
+This document contains information provided by the author. Neither RefWorks nor IEEE is responsible for its content."
+,"
+
+
+1 Answer | Add Yours
+
+Top Answer
+
+readerofbooks's profile pic
+
+readerofbooks | College Teacher | (Level 2) Educator Emeritus
+
+Posted on
+
+This summary is pretty easy to do. So, let's go one point at a time. 
+
+1. First, the topic is this plane incident. 
+
+2. Second, the young man was using foul language and Hurst wanted to stop him. 
+
+3. Third, he asked the young man to stop swearing, but the young man became angry and punched him. 
+
+4."
+,"
+
+Output:
+
+Alistair Brownlee won on his World Triathlon Series return in Cape Town after tripping during the run leg. Brownless was able to fight his way back into contention, however, and warned his rivals he can only improve from this point.
+
+Alistair Brownlee won on his World Triathlon Series return in Cape Town after tripping during the run leg. Brownless was able to fight his way back into contention, however, and warned his rivals he can only improve from this point."
+," This is a very short text, so no extra information is required in the summary. 
+Provide a summary of the following text: 'Cats have proven to be more than just cute, they also help in detecting land mines and could possibly help in fighting cancer. One cat was awarded for her bravery by a charity called The Animal Foundation. A cat was rewarded in Afghanistan with a medal of honour for helping soldiers in their missions to identify land mines. In the charity’s book, Heroes for Rescuing Humanity, it is said that cats could possibly be the world’s first animal superheroes."
+,"
+'''Source:''' https://www.dailymail.co.uk/"
+, Provide a summary response as a single paragraph of about 100-150 words.
+,"
+
+2) You have a small business in which your main source of revenue is providing custom-built software solutions for customers. Your marketing department has identified a potential customer who they believe will bring in £250,000 in revenue in the next year, if you can close the sale. The potential customer has an office in the heart of London. To meet with them, you need to travel to London, at an estimated cost of £250 in travel expenses, including food and accommodation for one night. Provide the following:
+(a) The total cost of the proposed trip"
+," Do not quote the source.
+
+
+(a) Describe the process you would use to write a response to the following question for the above text: 'Is this fight a reflection of the greater disparity between the two combatants?' (b) Provide a response to the question.
+
+
+
+© 2014, All rights reserved.
+
+Método de la Comunicación Lingüística
+
+Método de la Comunicación Lingüística
+
+Roma | Madrid | London | Milan | Sydney | Toronto | Dubai"
+,"
+
+This is quite a big task. We need to extract information about Sampdoria midfielder Pedro Obiang, about how much his contract costs, which league is he playing in and so on. All of this is provided in the article.
+
+Here is an example of the training data. This example was taken from this Kaggle notebook
+
+In [2]:"
+,"
+
+To give you a sense of what this means, in the training data, each row has a question and the summary of an article that answers that question. The goal is for the algorithm to learn how to summarize articles. This algorithm is called an encoder-decoder network. Encoder-decoder networks are trained on the text of each question and the summary of the answer. They then attempt to create a summary for the next question and the next answer.
+
+There are several approaches to the problem of summarization of text. In the early days of summarization, they used the bag-of-words model."
+,"
+
+To make this a valid summarization task, the system should focus on the core information and ignore trivial parts of the text, such as the team names or the time in the match.
+
+• Summarize the following: 'Said Nasser bin Hamad al Khalifa, Bahrain's crown prince, in a tweet following the U.S.-Bahrain game. ""Bravo @MileSDavis, @WNT, @USSF. The Bahraini fans were honored to welcome you!""'"
+," 
+Sample Output
+'Carl Froch will be a keen observer when Julio Cesar Chavez Jnr returns to the ring after a year-long absence. Froch had hoped to take on the Mexican this month in Las Vegas but a shoulder injury forced the Nottingham world champion to pull out. Instead, Chavez faces Andrzej Fonfara at a catchweight of 172lb on Saturday night but has said he is open to facing the Brit later this year.'
+
+Problem Statement from Phase 2 of the Challenge
+
+Write a program to summarise the following text:"
+," The first line of each answer should contain the title of the article.
+
+Task 2. Look at the following article on sport psychology and answer the questions. What is it about? How to get motivated and motivated to achieve your goals.
+
+Task 3. Look at the following article and answer the questions. What is it about? How to get motivated and motivated to achieve your goals.
+
+Task 4. Read the following article and answer the questions:"
+," (Answer is expected to be in around 120 words)
+
+1 Approved Answer
+
+Answered by Sushma K
+2 Ratings, (9 Votes)
+The given passage is a summary of the events that took place during the FA Cup tie between Liverpool and Aston Villa at Wembley Stadium. In this passage the writer is conveying the message that it is not suitable for any young player, especially one that has just made their way into the national team, to be taking drugs. This would not be very good for their reputation and it could also affect their future career and performance."
+,"
+
+Q12. Provide a brief overview of the following text: 'A third-party is any company that is not a direct business partner of a firm. A third party can be anyone. As such, they provide goods or services to either one or both of the company's partners, or act as an outsider to the company. This can include a wide range of third-parties and there are numerous instances where a company could need to use the services of a third party. For example, a company will often employ third-parties to build a website for their company, or help with marketing and advertising services."
+,"
+    """"""
+
+    tokenizer = AutoTokenizer.from_pretrained(model_name)
+
+    inputs = tokenizer(
+        summary,
+        max_length=max_length,
+        truncation=True,
+        padding=""max_length"",
+        return_tensors=""pt"",
+    )
+    output = model.generate(
+        inputs[""input_ids""], num_beams=num_beams, max_length=max_length, min_length=min_length
+    )"
+," If you have time, please also answer the following: Why is this an important text? What is its function? What is the purpose of writing a summary of the text?
+
+English Language & Literature
+Asked May 15, 2019
+
+TIP: If it's not your answer to this question, please click ""Leave a Comment"" button under the question to communicate with the question owner."
+,"
+
+Answer: The body of a 58 year old man was found lying next to a scarecrow that he had been having sex with.
+
+3) Who were the first two Presidents of the United States?
+
+Answer: George Washington and John Adams
+
+4) Name any of the top five highest grossing films at the US box office (as at May 12, 2015).
+
+Answer: 'Avatar', 'Pirates of the Caribbean: Dead Man's Chest', 'Jurassic World', 'The Hunger Games: Catching Fire', 'Titanic'."
+,"
+
+Explain the following concept: 'In the early years of the 21st century, a new branch of computing emerged from the application of machine learning and AI to the field of computer security. This new discipline was called “malware detection,” or more colloquially, “malware security.” The premise behind malware detection is simple: if you can train a computer to recognize malware, then you can stop it from infecting other computers. This type of machine learning, called “supervised learning,” was first introduced in the early 1980s by John R."
+," Provide a concise summary of the following text: 'Sue Townsend, author of the bestselling Adrian Mole books, left £1,106,163 in her will. The novelist, who died aged 68 in April last year, achieved huge success with The Secret Diary of Adrian Mole, Aged 133⁄4, when it was published in 1982. The book, which told of the life and loves of an angst-ridden teenager, was followed by seven sequels, selling in total more than eight million copies."
+,"
+•    Provide an outline in which each paragraph provides a brief explanation of the steps in the sequence of events in the following text: 'A British government minister has told a court in England that Prince Andrew had asked him to get him off an official trip with his daughter Princess Beatrice because the prince said he was ""too busy"". Lord Powell told the royal inquiry into Prince Andrew's relationship with convicted paedophile Jeffrey Epstein that Andrew had asked him to persuade the prince and princess to cancel their trip in 2012."
+," (100 points)
+
+Expert Answer
+
+Get this answer with Chegg Study"
+," \end{coverexe}
+\paragraph{Problem-solving:}
+\begin{coverexe}
+\begin{verbatim}
+Provide a concise summary of the following text: 'A British man was filmed trying to ride an elephant into a Thai bar without paying an entrance fee. An incident at a bar in Pattaya, Thailand, was filmed and posted to social media by onlookers, and later went viral. A British man was filmed walking into a bar on an elephant's back in Thailand."
+,"
+
+#### Citation
+
+Ahn, S. (2019, Feb. 14). [Data set]. Kaggle. https://www.kaggle.com/datasets/silverdome/blind-childrens-egg-hunt
+
+#### Usage notes
+
+This is a text dataset. It contains a news article about 'Egg Hunt for the Blind' and a corresponding text summarization task.
+
+## Labels
+
+There is only one label:
+
+#### label_description"
+," Do not provide any information about what you think of the situation. You should make sure that you write the summary from the perspective of a news reader and not write from the perspective of the author. You should write from a neutral and objective point of view.
+
+2.   (2 marks) 
+
+What are the different levels of meaning in the following text? 
+
+'A man was killed this afternoon when a small plane crashed into a house near a small airport in Western Sydney."
+,"
+
+# Output
+
+## Sample Input: 0
+
+## Sample Output: 0
+
+# Explanation
+
+Text input for the task is: There's no surer sign that winter is coming than the end of daylight saving. But it's not all bad news. The four-day Easter long weekend will be extended by an hour when clocks go back an hour at 3am on Sunday. The four-day Easter long weekend will be extended by an hour when clocks go back an hour at 3am on Sunday - including Australian states such as NSW."
+," You do not have to include the source in the text.
+
+If I have done this correctly, then all that is needed is to paste the text into a Word document and save as PDF.
+
+The resulting PDF can then be uploaded to the Blackboard VLE for submission.
+
+Here is an example:
+
+Blackboard Example.png
+
+How can we improve this section?
+
+This part of the manual is a draft and should be improved. Please click here to discuss"
+," The response should be provided in a single paragraph with each of the above sentences represented as a separate sentence. You can use the below helper method for this purpose: def summary(text:String) -> String:
+    • Create a new variable named text. This is where the input will be stored.
+    • Convert the text in the variable text to lowercase, using the .to_s method. This will ensure that the summary contains only lowercase characters.
+    • Use the String#split method on the text variable."
+,"
+
+# How To Write The Best Answer To The Summary
+
+1. Try to provide a summary which is concise.
+
+The answer should not be too long or too short. The summary should be able to provide a brief description of the entire paragraph, just like the title of a paragraph.
+
+2. Use appropriate words to describe the paragraph.
+
+A summary must not contain any unnecessary information, including the main ideas. The writer must use synonyms to describe the key concepts of the paragraph.
+
+3. Write it in the same order as the paragraph."

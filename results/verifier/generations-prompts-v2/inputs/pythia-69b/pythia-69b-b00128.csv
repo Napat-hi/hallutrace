@@ -1,0 +1,835 @@
+response,list,list_condition,count,generation_id
+"
+A regular expression would be excellent here.
+
+A:
+
+string letters = ""abcdefghijklmnopqrstuvwxyz"";
+string[] chars = { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' };",,[],0,pythia-69b|rationalization_numerical-00522|2
+"
+
+Input: 4
+Output: 4 4 1 2
+4 4 1 2
+
+This is my solution, but it's much too slow. It takes about 8 seconds to test whether a list contains the numbers from 1 to 6, and it's really inefficient since I'm testing all of those numbers anyway. Is there any way to make this a bit faster?
+myfuncs = [getNoOfM, isList, index]
+def getNoOfM(num):
+    return num%10
+
+def isList(arr):
+    for el in arr:",,[],0,pythia-69b|rationalization_numerical-00526|2
+"
+for example : 
+
+Out[1]: 7
+
+   1. spring
+   2. summer
+   3. winter
+   4. h
+   5. i
+   6. ii
+   7. iii
+   8. hii
+   9. hiii
+  10. hiv
+  11. ho
+  12. hoi
+  13. hou
+  14. hot
+  15. hyou
+  16. iu
+  17. jy
+  18. kk
+  19. lo
+  20. lm
+  21. lmn
+",,['march'],1,pythia-69b|rationalization_numerical-00527|2
+"
+"" The calendar is in order if for every year there are 365 days. Output a number. 
+I have this code below
+#include <stdio.h>
+#include <stdlib.h>
+
+int check(int k)
+{
+   if (k < 400)
+      return 1;
+   else
+      return 0;
+}
+
+int main()
+{
+   int n, s, t, v;
+   s = check(365);
+   t = check(366);
+   v = check(367);",,[],0,pythia-69b|rationalization_numerical-00530|2
+" This is not always output as just the numbers. Some examples are:
+
+January 29
+
+January 2011
+
+March 2009
+
+April 29
+
+November 17
+
+September 2016
+
+July 2011
+
+September 23
+
+L
+
+L
+
+L
+
+L
+
+L
+
+L
+
+L
+
+L
+
+L
+
+L
+
+L
+
+L
+
+L
+
+L
+
+L
+
+L
+
+L
+
+L
+
+L
+
+L
+
+L
+
+L
+
+L
+
+L
+
+L
+
+L
+
+L
+",,['april'],1,pythia-69b|rationalization_numerical-00531|2
+" Ex:
+Q: 11 days in January, 4 months in June, 4 months in October, 5 months in December (output like this: Y, T, U, V, W)
+My Code: 
+for (int i=1;i<9;i++)
+{
+    printf(""%d days in \n%d months"",i,days);
+}
+
+A:
+
+Try this:
+#include <stdio.h>
+
+int main() {
+    int i = 1;
+    while ( i <= 9 ) {",,[],0,pythia-69b|rationalization_numerical-00536|2
+"  
+
+A:
+
+You could use a single match for each occurrence of ""year"" in your line:
+import re
+a=""N1525.TX  September 15, 2007 ""
+
+for item in re.findall(r'year\b.*?', a):
+    print item
+
+Output:
+2007
+
+",,[],0,pythia-69b|rationalization_numerical-00538|2
+" i can write the code with if else but not sure how to use recursion.
+
+A:
+
+Here's an example of a recursive function. You can simply put numbers and print items that match them with while and if:
+import math
+
+s = set([1,2,3,4,5,6,7,8])
+
+def check(num, data=[]):
+    if len(data)==0:
+        return len(s)
+    else:
+        if math.ceil(num/float(len(data)))+1<=len(data):
+            ",,[],0,pythia-69b|rationalization_numerical-00540|2
+"
+The solution should look like this:
+January = {'1':'January', '2':'February', '3':'March', '4':'April', '5':'May', '6':'June', '7':'July', '8':'August', '9':'September', '10':'October', '11':'November', '12':'December'}
+
+May = {'5':'May', '6':'June', '7':'July', '8':'August', '9':'September', '10':'October', '11':'November', '12':'December'}",,[],0,pythia-69b|rationalization_numerical-00541|2
+"
+So for z = d
+1st output: 1
+2nd output: d, z
+3rd output: d,d
+and so on
+
+My code so far:
+a = 'zzz'
+import re
+def d_z(a):
+    r = (i for i in range(len(a)) if a[i+1] == a[i] == 'z' and a[i+2] == 'z')
+    return r
+
+print d_z(a)
+
+A:",,[],0,pythia-69b|rationalization_numerical-00545|2
+"
+
+for example: the number of colors in the rainbow is 6.
+
+If the first number is 1, then it must be true that the color red contains letter c.
+
+if the first number is 3, then it must be true that the color red contains letter d.
+
+if the first number is 5, then it must be true that the color red contains letter e.
+
+if the first number is 7, then it must be true that the color red contains letter f.
+
+if the first number is 9, then it must be true that the color red contains letter g.",,[],0,pythia-69b|rationalization_numerical-00548|2
+"
+\documentclass{article}
+\usepackage{pgfplots}
+\pgfmathsetmacro{\count}{\pgfplotstablevalueof{Pairs}}{}
+\pgfmathsetmacro{\letter}{0}
+\pgfmathsetmacro{\i}{0}
+\pgfmathsetmacro{\r}{1}
+\pgfmathsetmacro{\p}{0}
+
+\pgfmathsetmacro{\m}{#1}
+
+\pgfmathsetmacro{\x}{\m/2}
+
+\pgfmathsetmacro{\k}\the\count
+
+",,"['red', 'orange', 'yellow', 'green', 'blue', 'violet']",6,pythia-69b|rationalization_numerical-00550|2
+"
+
+To print only the integer elements in a string,
+
+$ echo ""Esto es un escenario"" | cut -f2- | tr -d a-f | tr "" "" ""\n"" | grep '[[:digit:]]'
+1
+
+Or, with awk
+
+$ echo ""Esto es un escenario"" | cut -f2- | tr -d a-f | awk '{sub(""a"", ""0"", $0); print int($0)}'
+1
+
+A:
+
+Use sed or awk:",,[],0,pythia-69b|rationalization_numerical-00553|2
+"
+Pseudo-code for example:
+
+Change numbers.txt to a number of different items
+Create a new text file
+
+for i in 1..number
+    if (it contains 'i')
+        output i as an item in a text file
+
+A:
+
+I think this can be done using a bit of simple pattern matching.  Let's go through the steps:
+1) Get the number of colors in the rainbow
+2) Loop through the text file, reading each line
+3) If the first letter of the line is not I, print it.",,"['indigo', 'violet']",2,pythia-69b|rationalization_numerical-00554|2
+"
+First code:
+a=int('0'*9+'1'*9+'2'*9+'3'*9+'4'*9+'5'*9+'6'*9+'7'*9+'8'*9+'9'*9)
+c=[]
+for i in range(0,len(a)):",,[],0,pythia-69b|rationalization_numerical-00555|2
+"
+
+$$x \gets \text{ask user for input} \\
+i \gets \text{create a list} \\
+s \gets \text{repeat until true} \\
+j \gets \text{repeat until true} \\
+i.append(j) \\
+i.remove(j) \\
+if not s
+    for n in i:
+        if n in output:
+            output.append(n)
+            break
+    else:
+        x.addinput('0')
+        if not x.file.exists(str(i[0]))",,[],0,pythia-69b|rationalization_numerical-00556|2
+" The output should look like
+
+There are 12 items with the letter n in them.
+[n, n, n, n, n, n, n, n, n, n, n, n]
+[n, n, n, n, n, n, n, n, n, n, n, n]
+[n, n, n, n, n, n, n, n, n, n, n, n]
+[n, n, n, n, n, n, n, n, n, n, n, n]",,"['orange', 'green', 'indigo']",3,pythia-69b|rationalization_numerical-00559|2
+" The output can contain the q twice. In C++ I'd use a boost program to find the code:
+import program;
+
+program::display_list(char c)
+{
+  std::cout<<""[""<<c<<""] "";
+}
+
+program::display_list(std::list<int> l)
+{
+  std::cout<<l.begin()->get<0>()<<"" "";
+  for(auto n:l)
+    display_list(n);
+  std::cout<<l.end()<<"" "";
+}
+
+int main()",,[],0,pythia-69b|rationalization_numerical-00562|2
+" The list should contain only the letter u. 
+I am stuck in the line of return [1 for r in range(len(chars)) if letters.index(letters[i]) == i]
+
+A:
+
+As previously mentioned, this is more suited for a string.split(', ') problem:
+>>> a = 'abcdefg'
+>>> ''.join(c for c in a.split(',') if c in ""u"" )
+'aeiou'
+
+",,['blue'],1,pythia-69b|rationalization_numerical-00566|2
+" The condition being that the color of each letter is an adjacent item in the list. In other words, it must be added to the list only once. If the letter is in the list already, it should stay there. You can even make it invalid if the letter is not adjacent to any other letter.
+
+Note that the final output doesn't contain the letter, but the color of the letter does.
+For example, take the list
+[1,2,3,4,5]
+
+The output would be:
+4:4 2:1 1:1 3:4 5:5",,['violet'],1,pythia-69b|rationalization_numerical-00567|2
+" For example, a test string such as ""greenbrier"", will return ""g"" ""b"" ""r"" ""e"" ""n"" ""b"" ""i"" ""e"" ""r"" ""t"" ""i"" ""e"".
+
+But it doesn't work. I can't figure out the problem.
+int main(void) {
+    char str[MAX_SIZE];
+    printf(""Enter a string: "");
+    scanf(""%s"", str);
+    if (str[0] == 'g') {
+        printf(""There is a green type.\n"");
+    ",,[],0,pythia-69b|rationalization_numerical-00574|2
+" 
+
+The following code is what I came up with so far. I really appreciate any help on this. Thanks in advance!
+#include <iostream>
+#include <algorithm>
+#include <numeric>
+
+int main()
+{
+    // Your initial data.
+    int count = 10;
+    int size = 3;
+    int numbers[size][size];
+    // Starting point.
+    std::fill_n(numbers[0][0], size, 0);
+
+    // Go through all values.",,[],0,pythia-69b|rationalization_numerical-00576|2
+"
+
+Output
+This is my solution with 1 test case. Test case 100 will only be displayed if the test case has more than one item, which it never does. I've added comments in the code where I added comments. 
+
+**let's pretend that $d$ is the function that gets the indices of the letters in a string, and $count$ is a function that returns the number of items in the list.**
+$d$ takes in a string and returns a list of indices in the string.",,[],0,pythia-69b|rationalization_numerical-00579|2
+"
+
+
+or
+
+```
+sum(lambda x,y: y*x//2%3==0, [1,4,6,8])
+```
+
+# Dynamic Programming
+
+Find the maximum integer in the following list:
+
+
+```python
+lst = [3,5,10,13]
+max_val = 1
+for x in lst:
+    if x < max_val:
+        max_val = x
+print max_val
+```
+
+What is the order of the elements in the last non-decreasing list?
+
+
+```",,[],0,pythia-69b|rationalization_numerical-00581|2
+" I do understand it, but just can't figure out the correct logic. Can someone explain the logic behind it?
+
+A:
+
+The idea of this type of program is to go through a character and see how many times it is used in the string in place of a particular character.
+For example, let's take a look at the sequence:
+acccba
+
+and see if the letter 'a' appears more than once.
+In the word 'babacacaa', there are a total of 3 characters of type 'a'. Here are the exact locations of those 'a' characters:",,[],0,pythia-69b|rationalization_numerical-00582|2
+" The length of the list of items is a range between 0 and 9.
+Note: This is code-golf, so the answer with the most number of bytes wins.
+
+A:
+
+R, 221 bytes
+i <-0
+for(j in c(5,10))i+0:j<-unlist(table(sample(c(i[j:(j+4)], i[1:(j-1)]))), use.names=F)$V1",,[],0,pythia-69b|rationalization_numerical-00585|2
+"
+
+A:
+
+Haskell, 227
+Input->[a]:
+S(n:u:t:[])=S(t,a):S(u,t)++S(n,a):S(t,u)++S(n,u)
+s2 s=s:s:s
+f t=[(x,y)&&(q==x||q==y)]:s2[x^0`mod`1000,y^0`mod`1000]
+P.st=map (map (+1)) [1..]",,[],0,pythia-69b|rationalization_numerical-00588|2
+"
+
+A:
+
+Python 3, 104 81 bytes
+f=lambda a:1+max(a[x-4:x-2]+a[x-2:x],a[x-1:x])+min(a[x-4:x-2]+a[x-2:x],a[x-1:x])
+
+This is just a straight translation of the language-agnostic logic, except that it no longer works if a space occurs at the beginning or end of any of the strings.",,[],0,pythia-69b|rationalization_numerical-00592|2
+"
+If the output is too large, you may also print a summary (or try to put it into an array first)
+How many total numbers could be calculated this way?
+
+A:
+
+O(N*log N)
+U is a bit broken as it'll get stuck when no v are input.
+v = 1, v = 2, v = 3, v = 4
+d[0] = 1
+d[1] = 0
+d[2] = 1
+d[3] = 2
+d[4] = 0
+d[5] = 1",,['violet'],1,pythia-69b|rationalization_numerical-00593|2
+"
+
+A:
+
+JavaScript (ES6),  52 52 49 bytes
+Takes input via STDIN.
+n=>(x=n--/50+n%10|0),g=(n<5&&n<7?0:g+g,x),M=[]",,[],0,pythia-69b|rationalization_numerical-00600|2
+" 
+How to do it. Let n=|x|:
+-for (k=0; k<=n; k++)
+  -for (i=0; i<=k; i++)
+  -  printf(""%c"", x[i]);
+
+The first iteration, k=0, yields the initial string. Now, the second line says for k>=0, k++. The first line before the second means nothing, so this is where the recursive part enters, now we don't care about the first k's, and so the index i is set to 0.",,"['orange', 'blue']",2,pythia-69b|rationalization_numerical-00602|2
+"
+
+A:
+
+Haskell, 61 60 bytes
+f[]g=f[]g
+f(i:x:y:xs)=h|i<y&&x==y=h++(f[x:y:xs])++(f[y:x:xs])++(f[x:y:xs])
+f[]=[]
+f[]g=f[]g
+f[i:x:y:xs]=f[x:y:xs]++f[y:x:xs]++f[x:y:xs]
+
+A:
+
+",,[],0,pythia-69b|rationalization_numerical-00605|2
+"
+
+In C you can use the standard mathematical definition of a color to count the number of colors in the rainbow. Here, we use a weird method to get that number.
+
+Let us create a function that returns true if the number provided is the number of colors in the rainbow:
+
+int getNumberOfColors(int number) { int colorCount = 1; if(number >= 1 && number <= 5) { for(int i = 1; i <= number; i++) { if(colorCount == i) { return 1; } } colorCount++; } return 0; }",,[],0,pythia-69b|rationalization_numerical-00606|2
+"
+
+I've looked at similar questions asked in other forums but these did not answer my question so please don't mark it as a duplicate.
+
+A:
+
+Bret, Python has you covered.
+color = [ i for i in '123aPqQrsUtTVWXY' if i[0:2] == 'jk' ]
+
+If you want to be exhaustive, iterate through all valid 4-character color combinations, with each line containing a flag if the combination is valid.",,[],0,pythia-69b|rationalization_numerical-00607|2
+"
+    K = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+    for item in K:
+        if item == 'k':
+            print(item)
+    print('The answer is: ' + str(max(K)))
+
+A:
+
+Here's one solution:
+for letter in K:
+    if letter == 'k':",,[],0,pythia-69b|rationalization_numerical-00608|2
+"
+myoutput
+['na','m','o']
+
+A:
+
+Solution:
+>>> numbers = set(sorted(range(1,12),key=int))
+>>> [sorted(v) for k,v in enumerate(numbers) if k in numbers]
+[['na', 'm', 'o', 'n']]
+
+And for a single output, use a generator expression:
+>>> [sorted(v) for v in (sorted(numbers)) if v in numbers]
+['na', 'm', 'o', 'n']
+
+",,['green'],1,pythia-69b|rationalization_numerical-00611|2
+"
+
+Hint:
+
+There are 5 solutions for the first letter. I suggest you to compare the answers using some programs that allow to calculate the frequency of letters in a word or sequence. In fact the solutions (or rather the indices of the solutions) could be derived from the rules of combinatorics in the following way:
+1  = the first color in the Rainbow ends with q
+2  = the second color in the rainbow ends with q
+3  = the third color in the rainbow ends with q
+4  = the fourth color in the rainbow ends with q",,[],0,pythia-69b|rationalization_numerical-00614|2
+" For example, given the input n = 3, the output should be [3,2,1]. I know how to solve this if it's in an array, but this is in a string, and I have no idea how to make it work.
+
+A:
+
+You can use List.map with String.Length to return a list of string lengths.
+solutions = List.map (fun x -> if Char.IsUpper x || x.Length > 3 then [] else [x]) input
+
+A:
+
+There are several solutions, e.g. for me:",,[],0,pythia-69b|rationalization_numerical-00619|2
+" For example, the first output for the UK is 12 which stands for United Kingdom.
+The result is
+A
+I, U, U
+B, C, D
+Z, Z, D
+E, E, S
+
+A:
+
+Python 2, 161
+x='?'
+c=lambda s:x in{c:c[1:]}if(x+s or c or (d not in{x:x+s,c:c})or{x,c})else{x,c}
+
+Edit: Completed!",,"['denver', 'hartford', 'dover', 'springfield', 'indianapolis', 'des moines', 'concord', 'providence', 'richmond', 'madison']",10,pythia-69b|rationalization_numerical-00627|2
+"
+It can be done by the code below.
+$numpad = 1;
+for($i = 1; $i < 10; $i++)$
+{
+  $r = $i + $numpad * ($i%10);
+  echo 'Numpad: ', $numpad, PHP_EOL;
+  echo 'Upper case: ', ($i<9 ? uc($i) : '0' . $i), PHP_EOL;
+  echo 'Lower case: ', ($i<9 ? lc($i) : '0' .",,"['phoenix', 'hartford', 'tallahassee', 'honolulu', 'helena', 'raleigh', 'oklahoma city', 'harrisburg', 'nashville', 'richmond', 'charleston', 'cheyenne']",12,pythia-69b|rationalization_numerical-00631|2
+" A fun, new challenge for the GolfCub, the aolease mine - How many US state capitals contains letter i.
+
+Caboose rent by the week fort gov have an opportunity to fill our weekend trip to Coble again with another great caboose rental experience. How many restaurants can be found in the Americas? com/guerrier1.",,"['phoenix', 'little rock', 'boise', 'springfield', 'indianapolis', 'des moines', 'annapolis', 'lansing', 'jefferson city', 'lincoln', 'carson city', 'raleigh', 'bismarck', 'oklahoma city', 'harrisburg', 'providence', 'columbia', 'pierre', 'nashville', 'austin', 'salt lake city', 'montpelier', 'richmond', 'olympia', 'madison']",25,pythia-69b|rationalization_numerical-00632|2
+"
+
+A:
+
+I don't really understand the problem, but I guess that you want to count the number of letters m in the string A. I can't believe I haven't thought of this in a while:
+#include <string>
+#include <cctype>
+
+int main() {
+    for (const auto& [s, m] : {
+        std::string s;
+        std::string m
+    })
+        if (s.find_first_of(m) == s.npos) {",,"['montgomery', 'sacramento', 'des moines', 'bismarck', 'columbus', 'oklahoma city', 'salem', 'columbia', 'montpelier', 'richmond', 'olympia', 'madison']",12,pythia-69b|rationalization_numerical-00636|2
+"
+
+A:
+
+Purely brute force:
+List states with lowercase u:
+import itertools
+from pprint import pprint
+states = [state for state in itertools.product(('a', 'b', 'c', 'd', 'e', 'f', 'g'), repeat=1) if state.lower() in 'u']
+pprint(states)
+
+Output:
+[[('a', 'b', 'c', 'd', 'e', 'f', 'g'), 'd'],",,"['juneau', 'honolulu', 'baton rouge', 'augusta', 'st. paul', 'columbus', 'harrisburg', 'columbia', 'austin']",9,pythia-69b|rationalization_numerical-00644|2
+" For example, if inputting: ""Wa"" = 1 ""Was"" = 2 ""Wash"" = 3 we would get: ""City name from state: WA Was Wash""
+
+Sci-fi Primer
+
+The zodiac signs have as their symbol, not ""the letter of the week."" Using a bit of creativity, I implemented an astrology program in an attempt to learn about the zodiac. So far, it seems to predict well. It also seems to think about baseball.
+
+Zodiac Animals, or Legos",,[],0,pythia-69b|rationalization_numerical-00646|2
+"
+
+Use an array to store your solutions. Use the \$N\$ trick to save on sorting costs, and then do as follows to retrieve the item:
+
+\[\]
+
+Sort the \$N\$ items with something like radix sort. If \$N\$ is really large, then you should use radix sort, and then the \$N\$ is at most \$2^{N-1}\$. (If it's really large, then probably you should get a Big-Oh analysis and either do a simple brute-force solution, or use memoization, depending on whether you've already built it.",,['phoenix'],1,pythia-69b|rationalization_numerical-00647|2
+" So, in this case, the output should be [1,4,5,6,7,8,9] . This is the easiest way to do it, and I'll explain why you shouldn't worry about the performance issues. Now, say that you want to solve this problem in O(1) time (no extra memory use) in a smart way. The idea is to collect all the solutions to the subproblems and to put them in an extra data structure to remember them.",,"['montgomery', 'jefferson city', 'carson city', 'albany', 'oklahoma city', 'salt lake city', 'olympia', 'cheyenne']",8,pythia-69b|rationalization_numerical-00648|2
+" 
+The initial range for input is from 1 to 10.
+
+#include <cstdio>
+#include <cstdlib>
+#include <vector>
+
+int main(int argc, char * argv[])
+{
+    std::vector<int> input;
+    scanf(""%d"", &input.at(0));
+    while(input.at(0) > 0)
+    {
+        int num = input.at(0) - 1;
+        for(int i = 1; i < input.size() - 1; i++)
+        {",,"['denver', 'dover', 'des moines']",3,pythia-69b|rationalization_numerical-00653|2
+" Input may contain letters.
+
+A:
+
+Ruby 1.9, 290 chars
+a={}
+u=0
+q=gets.chomp
+puts(a.keys.include?q)?a[q]++:puts q+1
+=>
+s=q-1;e=q-2;h=q-3
+d=0
+while s>0
+if q[s].to_i>=d&&q[s].to_i<=e
+h-=1
+s-=1
+d+=1
+end
+end",,"['hartford', 'honolulu', 'helena', 'harrisburg']",4,pythia-69b|rationalization_numerical-00657|2
+" You don't even need to test if it is an integer. This gives you
+
+And now in Python:",,['indianapolis'],1,pythia-69b|rationalization_numerical-00658|2
+"
+Output: 
+1. Monticello
+2. Austin
+3. Bozeman
+4. Wichita
+
+My approach is quite simple. I'll save all the state capitals and then search for the state capitals that start with m and print the result. I'm having problems with one state capitals, New York. Why is this? Shouldn't it be in the result? 
+How can I sort out this problem?
+Here's my code: 
+// The state capitals that start with 'm'",,"['montgomery', 'montpelier', 'madison']",3,pythia-69b|rationalization_numerical-00662|2
+"
+
+Suppose the condition is a state capitol city with letter u and a population of greater than 1.0 million. Output a line for each city with a population greater than 1 million. It might look like this:
+
+Honolulu - Hawaii - 665,394
+
+Capitol - Alaska - 7,389
+
+Washington - Washington - 210,335
+
+New York - New York - 8,598,716
+
+Columbia - Missouri - 9,347
+
+However, I expect most people would not bother to look this far, simply because there are a hundred more cities in this category.
+",,[],0,pythia-69b|rationalization_numerical-00670|2
+"
+
+There are many more constraints (e.g. being cities, capital cities or the smallest number of letters), which don't allow any of the above solutions, but with that said, some of them are still fast and clean (EDIT: pythran is faster and cleaner)",,[],0,pythia-69b|rationalization_numerical-00672|2
+"
+
+A:
+
+JavaScript (ES6), 198 207 206 214 bytes
+
+c=>(l,n=,r='',e=b='',k='')[n++];c.match(/^([tbp])x([0-9a-fA-F]{6})?$/gi).map(t=>`${e}${b}${l}+${l=t.shift()}<i.className=${r}${k}-${k=t[0]}`).length;
+
+Try it online!",,[],0,pythia-69b|rationalization_numerical-00673|2
+"
+import string
+import math
+
+n=input('Enter a number: ')
+num=n
+while n<=len(num):
+    letter=num[0]
+    state=list(string.ascii_lowercase[:3])
+    d=0
+    while d<=2:
+        count=0
+        for i in range(3):
+            if letter==state[i]:
+                count+=1
+        if d==2 and count==3:
+            print(letter)
+            break
+        else:
+            d+=1
+    n+=1
+
+",,[],0,pythia-69b|rationalization_numerical-00674|2
+"
+
+Sample Input
+
+Input format is explained at the top of this post, and sample sample output is shown below.
+
+Sample Output
+
+A:
+
+JavaScript (ES6), 62 bytes
+Takes input in string. Returns the words.
+
+(q=s=>s.split` `.map(w=>s.split` `.some(u=>(u.split` `==[])?1:0)==(s.split` `[w]==[])?0:0))<100,Q=q)
+
+Try it online!",,"['hartford', 'springfield', 'concord', 'richmond']",4,pythia-69b|rationalization_numerical-00679|2
+"
+$ cat /tmp/state.txt
+
+Now let us first output the number of letter h in the state capitals:
+$ awk '/^[h]/{ print $1 }' state.txt
+1
+
+We can now read the list from the file:
+$ cat state.txt
+
+Now let us use mapfile to iterate through the file:
+$ cat state.txt | mapfile -t - file
+
+The output will be of the form:
+$ cat state.txt | mapfile -t - file",,['raleigh'],1,pythia-69b|rationalization_numerical-00683|2
+"
+
+You can use numbers 2, 3 and 5.
+Or the answer you've posted.
+
+Case 3. More complicated: find out which US state capitals end with letter k. Answer 6.
+
+If you want a Python script, I suggest using loops instead of recursion. Something like this:
+nums = [3, 4, 2, 1, 7, 6, 5]
+
+for n in nums:
+    # test
+    if n in ('i', 'a'):
+        print(n)
+    # continue with next values",,[],0,pythia-69b|rationalization_numerical-00684|2
+" For example:
+
+m = 'AL' => ['AL']
+
+m = 'AL' => ['AL']
+
+m = 'AZ' => ['AZ']
+
+m = 'CA' => ['CA', 'Concord']
+
+m = 'CA' => ['CA', 'Concord']
+
+m = 'CT' => ['CT']
+
+m = 'CT' => ['CT']
+
+m = 'FL' => ['FL']
+
+m = 'FL' => ['FL']
+
+m = 'GA' => ['GA', 'Augusta']",,['salem'],1,pythia-69b|rationalization_numerical-00688|2
+"
+
+Some examples:
+First output a number:
+1
+Second output a number:
+2
+Athens
+Atlanta
+Atlanta, Georgia
+Cincinnati
+Cincinnati, Ohio
+Chicago
+Chicago, Illinois
+Columbus
+Columbus, Ohio
+Denver
+Denver, Colorado
+Denver, Colorado, the capital of Colorado
+Denver, Colorado, home of former vice president Dick Cheney
+Indianapolis
+Indianapolis, Indiana
+Kansas City
+Kansas City, Kansas
+Kansas City, Missouri
+Los Angeles
+Los Angeles, California",,"['juneau', 'honolulu']",2,pythia-69b|rationalization_numerical-00696|2
+"
+.I I would expect that [1, 3, 9, 5] would give me all three letters of the alphabet
+.br
+[1,3,5,9]
+.br
+.I I would expect that [1, 2, 2, 4] would give me all odd numbers.
+.br
+[2,4]
+.br
+
+.EX
+    (declare-fun \tmp () Int)
+    (declare-fun \tmp () Int)
+    (assert (> \tmp 100))
+    (assert (< \tmp 1000))",,[],0,pythia-69b|rationalization_numerical-00698|2
+" Then convert the output to lower case, and report the result.
+I'm assuming you'd start with the capital of Alabama, but will work with all permutations.
+If there are any fancy ways to tackle this, please let me know. I was only able to come up with a way using letters and digits, and some string manipulation.
+I'd also like to be able to match state capitals in any order (although this will be handled by the caller), so sorting and/or substring matching is not an option.
+Scenario",,['phoenix'],1,pythia-69b|rationalization_numerical-00699|2
+"
+How can I do that?
+
+A:
+
+Not a great answer, but you can use 2 loops:
+> stateCapitals = {
+    ""AL"": ""Montgomery"",
+    ""AK"": ""Juneau"",
+    ""AL"": ""Montgomery"",
+    ""AL"": ""Montgomery"",
+    ""AZ"": ""Phoenix"",
+    ""AR"": ""Arkansas City"",
+    ""AS"": ""Olympia"",
+    ""AR"": ""Arkansas City"",
+    ""AR"": ""Arkansas City"",",,"['montgomery', 'jefferson city', 'carson city', 'albany', 'oklahoma city', 'salt lake city']",6,pythia-69b|rationalization_numerical-00700|2

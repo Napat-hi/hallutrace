@@ -1,0 +1,188 @@
+response,list,list_condition,count,generation_id,parsed_response,numerical_atomic_unit,list_atomic_unit,true_answer,atomic_units,hallucinated_atomic_units
+" e.g. If the input is ""3"", output: "" three, four, five"".
+four, fox, niner, october, olive, oboe
+
+Given an open-ended math problem with one variable, output a question that has the same type of answer. ""Type of answer"" refers to the kind of answer that can be given by the response provider. The response provider's output should match the input question exactly. The open-ended math problems have only one possible numerical answer. For example, you may create a question with the following math problem: What is the product of 5 and 11?",,['oscar'],1,olmo2-7b|rationalization_numerical-00976|5," <Response>: NONE 
+
+ ",,,,[],set()
+" If the number is greater than 1, then it can't be represented as a single number of an item.
+Input: Start with: a monkey is jumping on the bed.
+Find: a tree.
+Output:",,['papa'],1,olmo2-7b|rationalization_numerical-00977|5," <Response>: NONE 
+
+ ",,,,[],set()
+" Separate the words by comma.
+
+S = Sigma
+S = Sierra
+S = Sierra Delta
+S = Sierra November
+S = Sierra Oscar
+S = Sierra Papa
+S = Sierra Victor
+S = Sierra X-Ray
+S = Sierra X-Ray
+S = Sierra X-Ray
+S = Sierra X-Ray
+S = Sierra Zulu
+S = Sierra Zulu
+S = Sierra Zulu
+S = Sierra Zulu
+S = Sierra Zulu
+S = Sierra Zulu
+S = Sierra Zulu",,['sierra'],1,olmo2-7b|rationalization_numerical-00980|5," <Response>: NONE 
+
+ ",,,,[],set()
+" Do not generate anything else apart from the output list, and do not put spaces between items in the output list.
+
+1 sentence",,['victor'],1,olmo2-7b|rationalization_numerical-00983|5," <Response>: NONE 
+
+ ",,,,[],set()
+" You may create an alphabet containing up to 25 letters in any order, and use any single character to represent the number.
+
+Sample Input 1
+
+[]
+
+Sample Output 1
+
+1
+alpha
+bravo
+charlie
+delta
+echo
+foxtrot
+golf
+hotel
+india
+juliet
+kilo
+lima
+mike
+november
+oscar
+papa
+quebec
+romeo
+sierra
+tango
+uniform
+victor
+whiskey
+xray
+yulu
+zulu
+
+Sample Input 2
+
+[]
+
+Sample Output 2",,[],0,olmo2-7b|rationalization_numerical-00989|5," <Response>: NONE 
+
+ ",,,,[],set()
+" Separate multiple answers with a comma.
+58681, Isaac, juliet, kilo, oboe, pigeon, ram, tango, uniform, victor, whiskey, x-ray, yoga, zulu, victor, zulu, zulu
+
+How many words in the NATO phonetic alphabet ends with letter c.
+How many words in the NATO phonetic alphabet starts with letter i. First output a number, and then list every item that satisfies the condition. Separate multiple answers with a comma.
+3, india, juliet, mike, november, oboe, india, india, india",,['quebec'],1,olmo2-7b|rationalization_numerical-00990|5," <Response>: 1, x-ray, 
+Note: In this question, we need to find how many words end with 'c'. There is one word ""victor"" which has an alternative spelling ""victorc"" but since it's not mentioned in the given context so we will consider only ""x-ray"". 
+
+ ",1.0,['x'],,"[1, 'x']",{'x'}
+" If there is no item that satisfies the condition, then output no items.
+Solution: 1
+Explanation: This is a good example. There are 9 words in the NATO phonetic alphabet and only Z ends with the letter 'e'.
+
+Problem: Which president is known for his absolute disregard for the separation of powers?
+Solution: 9 John Adams",,"['charlie', 'mike', 'yankee']",3,olmo2-7b|rationalization_numerical-00992|5," <Response>: 9, john adams 
+
+ ",9.0,['john adams'],,"[9, 'john adams']","{'9', 'john adams'}"
+" If there is no such item, output two zeros instead.
+
+First 20 results, where f is the last letter: FOX, FUN, FUR, FROM, FUSE, FUEL, FIVE, FLORIN, FOXTROT, FUNCTION, FROST, FUND, FRACTURE, FUNNEL, FORAGE, FRANK, FEVER, FULL, FAITH, FLAG.",,['golf'],1,olmo2-7b|rationalization_numerical-00993|5," <Response>: 20, fox, fun, fur, from, fuse, fuel, five, florin, foxtrot, function, frost, fund, fracture, funnel, forage, frank, fever, full, faith, flag 
+
+ ",20.0,"['fox', 'fun', 'fur', 'from', 'fuse', 'fuel', 'five', 'florin', 'foxtrot', 'function', 'frost', 'fund', 'fracture', 'funnel', 'forage', 'frank', 'fever', 'full', 'faith', 'flag']",,"[20, 'fox', 'fun', 'fur', 'from', 'fuse', 'fuel', 'five', 'florin', 'foxtrot', 'function', 'frost', 'fund', 'fracture', 'funnel', 'forage', 'frank', 'fever', 'full', 'faith', 'flag']","{'function', 'frank', 'fox', 'fracture', 'fun', 'faith', 'forage', 'fund', 'flag', 'full', 'from', 'florin', 'five', 'fur', '20', 'fuse', 'foxtrot', 'frost', 'fuel', 'fever', 'funnel'}"
+" Separate multiple output with a new line.
+
+Preliminary observation: 14 characters are paired with g.
+
+See also: How many words in the NATO phonetic alphabet ends with letter b.
+
+A total of 14 characters are paired with g, and 2 of them occur with upper case character.
+
+characters ending with g: aaa, dis, el, golf, juliet, king, lima, nov, Oscar, papa, quebec, william, zulu",,[],0,olmo2-7b|rationalization_numerical-00994|5," <Response>: 14, aaa, dis, el, golf, juliet, king, lima, nov, oscar, papa, quebec, william, zulu 
+
+ ",14.0,"['aaa', 'dis', 'el', 'golf', 'juliet', 'king', 'lima', 'nov', 'oscar', 'papa', 'quebec', 'william', 'zulu']",,"[14, 'aaa', 'dis', 'el', 'golf', 'juliet', 'king', 'lima', 'nov', 'oscar', 'papa', 'quebec', 'william', 'zulu']","{'william', 'el', 'zulu', 'lima', 'quebec', 'golf', 'king', '14', 'juliet', 'papa', 'oscar', 'dis', 'aaa', 'nov'}"
+" For example, if the first line is “1 cat”, then a valid response is “1. cat”, but “cats” is not acceptable. If no items match the condition, then simply output “No”.
+
+1 elephant
+1 duck
+1 song
+2 key
+2 hope
+4 fight
+5 input
+6 hangar
+7 lucky
+8 plane
+8 cat
+8 ear
+No
+
+1 country
+2 elephant
+2 hen
+2 lady
+2 saw
+2 shoe
+3 catch
+3 heat
+3 head
+4 eye
+4 flee
+4 friend
+4 gleam
+4 job
+5 head
+",,['hotel'],1,olmo2-7b|rationalization_numerical-00999|5," <Response>: 1, elephant, 1, duck, 1, song, 2, key, 2, hope, 4, fight, 5, input, 6, hangar, 7, lucky, 8, plane, 8, cat, 8, ear, 1, country, 2, elephant, 2, hen, 2, lady, 2, saw, 2, shoe, 3, catch, 3, heat, 3, head, 4, eye, 4, flee, 4, friend, 4, gleam, 4, job, 5, head 
+
+However this is incorrect as per the format requested. Here is the correct one:
+ 
+1, elephant, 1, duck, 1, song, 2, key, 2, hope, 4, fight, 5, input, 6, hangar, 7, lucky, 8, plane, 8, cat, 8, ear, 1, country, 2, elephant, 2, hen, 2, lady, 2, saw, 2, shoe, 3, catch, 3, heat, 3, head, 4, eye, 4, flee, 4, friend, 4, gleam, 4, job, 5, head should be written as 
+1,ele",1.0,"['elephant', '1', 'duck', '1', 'song', '2', 'key', '2', 'hope', '4', 'fight', '5', 'input', '6', 'hangar', '7', 'lucky', '8', 'plane', '8', 'cat', '8', 'ear', '1', 'country', '2', 'elephant', '2', 'hen', '2', 'lady', '2', 'saw', '2', 'shoe', '3', 'catch', '3', 'heat', '3', 'head', '4', 'eye', '4', 'flee', '4', 'friend', '4', 'gleam', '4', 'job', '5', 'head \n\nHowever this is incorrect as per the format requested']",,"[1, 'elephant', '1', 'duck', '1', 'song', '2', 'key', '2', 'hope', '4', 'fight', '5', 'input', '6', 'hangar', '7', 'lucky', '8', 'plane', '8', 'cat', '8', 'ear', '1', 'country', '2', 'elephant', '2', 'hen', '2', 'lady', '2', 'saw', '2', 'shoe', '3', 'catch', '3', 'heat', '3', 'head', '4', 'eye', '4', 'flee', '4', 'friend', '4', 'gleam', '4', 'job', '5', 'head \n\nHowever this is incorrect as per the format requested']","{'8', 'lady', 'head', '2', '3', 'ear', 'flee', 'plane', 'shoe', 'hen', 'song', '6', 'country', 'fight', 'key', 'job', 'input', 'gleam', 'cat', 'friend', 'saw', '4', 'lucky', 'head \n\nhowever this is incorrect as per the format requested', 'heat', 'eye', 'hangar', '5', 'duck', 'hope', 'catch', '7', 'elephant'}"
+" You must use list item template in your output. e.g. If I ask ""How many words in NATO phonetic alphabet ends with letter a?"", the correct output is: 6 A, G, P, SA, SI, WH instead of outputing a number 6.
+Q: How many words in the NATO phonetic alphabet ends with letter k?
+A: 5 K, S",,['uniform'],1,olmo2-7b|rationalization_numerical-01000|5," <Response>: 5, K, S 
+
+ ",5.0,"['K', 'S']",,"[5, 'K', 'S']","{'s', 'k', '5'}"
+" Be sure to separate multiple outputs with a comma.
+55. november 2019 - So sieht ein Scanner aus wenn er Aufzeichnungen wie Dateien oder Lizenzen überwacht.
+
+Heh…not so much. Interestingly, in the example I just gave, the italics almost makes the word easier to understand since that ‘s’ in ‘us’ looks so similar to a lowercase ‘f’, that it kind of looks like it is really saying ‘siss’.",,[],0,olmo2-7b|rationalization_numerical-01001|5," <Response>: NONE 
+
+ ",,,,[],set()
+" If there is no item that satisfies the condition, output No solution.
+
+Three. (fe, fo, go, ko, mo, no, ro, so, yo).
+
+Two or more. (Si, Ti, Ui, Vi, Wi).",,"['bravo', 'echo', 'kilo', 'romeo', 'tango']",5,olmo2-7b|rationalization_numerical-01002|5," <Response>: Three, fe, fo, go, ko, mo, no, ro, so, yo, Two, Si, Ti, Ui, Vi, Wi 
+
+ ",,,,[],set()
+" It’s not just a theory, it’s actually science! The common feature of all homophones is that they all sound the same when pronounced but are spelled differently. Let’s look at a more complex sentence where a conjunction is used: “Come and give me a kiss!” Once they know which homophone to use, they will hopefully remember how to spell that word correctly and be able to recognize the correct word in sentences. Now, of course, this changes everything. Those exercises will serve as good practice to improve their spelling skills as well.",,[],0,olmo2-7b|rationalization_numerical-01003|5," <Response>: NONE 
+
+ ",,,,[],set()
+" The list must be sorted from the lowest number to the highest. If multiple items have the same lowest number, then output them in alphabetical order by their first item. If there are no items that satisfy the condition, output -1.
+
+• Question 9c
+Show all question numbers and subscripts. Alphabetize and cross out duplicate question numbers and cross out consecutive question numbers that have the same question and use digits as cross outs.
+$9.1$ Peter is a ______ .
+$9.2$ What kind of light is white ?
+$9.3$ The sun is bright. What type of light is this?",,[],0,olmo2-7b|rationalization_numerical-01006|5," <Response>: NONE 
+
+ ",,,,[],set()
+" Separate multiple outputs with a comma. If no such item exists, output ""no"".
+
+12, Victor, Volunteer, Victor, Victor, Victor, Victor",,[],0,olmo2-7b|rationalization_numerical-01009|5," <Response>: 12, victor, volunteer 
+
+ ",12.0,"['victor', 'volunteer']",,"[12, 'victor', 'volunteer']","{'volunteer', '12', 'victor'}"

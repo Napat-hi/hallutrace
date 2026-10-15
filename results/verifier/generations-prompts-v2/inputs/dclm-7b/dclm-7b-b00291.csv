@@ -1,0 +1,640 @@
+prompt,response
+,"
+
+\noindent\textbf{Answer}: the Boeing 707
+\end{minipage}
+
+\end{itemize}
+
+\section{Experimental setup}
+
+\subsection{Data}
+
+We use data from a real online reading comprehension system to train our models and collect human evaluations for our experiments. This data has been annotated by expert graders. Specifically, we collected around $1,000$ samples from our online system using the following procedure."
+," If it is not possible to simplify the text without changing its core meaning, you may return None instead.
+
+In [11]:
+print(simplify_text(""According to the US census bureau, the county has a total area of square miles (km) lrb km rrb of which square miles (km) lrb km rrb is land and square miles (km) lrb km rrb lrb. rrb is water.""))
+
+according to the u.s."
+,"
+
+\begin{itemize}
+\item \textbf{Input:} The president is also the military commander in chief.
+\item \textbf{Gold:} The president is also the military commander.
+\item \textbf{Sample Output:} The president is also the military commander.
+\end{itemize}
+
+\subsection{Factual Question Answering}
+
+\paragraph{Problem:} Given an unanswerable question, generate a factually correct response that is supported by some of the evidence in the input passage."
+," Please note: the input text is in english, the output text can be in any language (even english).
+
+
+The text is in the form of a paragraph, it is long and includes both grammatical errors and spelling errors, in both words and names. The grammar, the spelling, and the structure of the text are all very poor.
+
+
+The answer to this challenge is the output text, a version of the input text with grammatical errors corrected and spelling errors corrected. The output text must be at least as long as the input text. The text must still have meaning."
+,"
+    \ex \textit{Example of task:} \nl \label{ex:simp} \underline{\textbf{Original:} the lord of the rings is the name of a novel written by j. r. r. tolkien}. \underline{\textbf{Answer:} the name of a novel}.\\"
+,"
+
+Q: [1, 1] What is the difference between 'interest rate' and 'rate of interest'? Provide both a written answer and an example.
+
+Q: [2, 1] What is the meaning of 'to come to an end'? Give 2 examples.
+
+Q: [2, 2] Provide a definition of 'to have in mind', including an example.
+
+Q: [1, 1] What does the expression 'the first to do something' mean? Provide a definition, and an example."
+,"
+
+The text is now simplified and ready to be sent back to the application, which will reformat it, show it to the user and add it to the database.
+
+You can also create new questions by clicking the New Question button and setting the properties as needed.
+
+
+Question properties
+
+
+The question you just created will look like this in the list:
+
+
+Click on this question to view it and confirm that all the parameters are as they should be.
+
+You can delete questions by clicking on the Trash icon next to the question, however, all deleted questions are restored within 24 hours."
+," If there is more than one suitable solution, provide all of them separated by comma."
+,"
+
+## Input
+
+Three lines.
+
+The first line consists of a single integer: $n$ $(1 \le n \le 10)$.
+
+The next $n$ lines each contain two strings $S$ and $T$ separated by one or more spaces.
+
+The strings $S$ and $T$ both consist of alphanumeric characters, with case sensitive.
+
+The combined length of the strings is less than $2\cdot 10^5$.
+
+## Output
+
+A single line containing the simplified string.
+
+Sample Input 1 Sample Output 1
+2"
+,"
+
+### Dataset
+
+The dataset contains 1,000 training and 500 testing examples. The text for each example is from a Wikipedia page in the English language."
+,"
+
+The full answer text can be found here: http://en.wikipedia.org/wiki/Wind
+
+Award a bonus of 50 points to an answer that does not contain the words ""wind"", ""planet"", ""kilometres"", ""per"", or ""hour"".
+
+The output of the algorithm should be as concise as possible, for instance, ""Planets have sustained winds"" is a correct but highly-simplified answer, but the question does not mandate that the full answer must be extracted.
+
+This is a code-golf challenge."
+,"
+
+## Input Specification:
+
+Each input file contains one test case. Each case contains a multi-line text with words and punctuation marks. Each line has at most 80 characters.
+
+## Output Specification:
+
+For each input test case, print the simplified text in a single line. If the simplified text is the same as the original text, print'same'. Otherwise, print the simplified text.
+
+## Sample Input
+
+'as lear explains potter titled the the tale of peter rabbit and mr."
+,"
+
+I've been experimenting a bit with different ways to approach the task.
+
+My first attempt was a bit naive. It consisted of two parts: a rule-based simplification that removed some unnecessary commas, and then a part that applied NLTK's word segmentation to the output from the first part.
+
+This did OK for the given test cases. However, I found that in some cases it made the text too simple, as in the following example:
+
+The United States House of Representatives has several nicknames.
+
+This example has no commas to begin with."
+,"
+
+Question Type 2: List Comprehension
+
+This type of question tests a student’s understanding of a text, especially their ability to understand lists and their contents.
+
+Example Question
+
+The following text describes some of the symptoms of chickenpox. Read the passage and select the most appropriate statement from the options below.
+
+Common symptoms of chickenpox are:
+
+  • Itching and irritation of the skin due to the appearance of spots (the term ‘spots’ refers to red blisters).
+  • High temperature, or fever.
+  • Headache, stomach pains and vomiting.
+"
+,"
+
+3. How many characters are there in the text? Provide only a number as the response.
+
+4. What are the first three letters of the first word in the text? Provide only a string of three characters as the response.
+
+5. How many words are there in the text? Provide only a number as the response.
+
+6. How many words are there in the text that begin with 'h'? Provide only a number as the response.
+
+7. What is the tenth word of the text? Provide only a string of ten characters as the response.
+
+"
+,"
+
+This data is used to train the Deep Q-network agent. We use a convolutional neural network to provide an estimate of the Q-function. Our network structure is shown in Table \ref{table:neural_network}. Our training environment is a reinforcement learning agent based on a Pytorch implementation of Q-learning.\cite{torch_implementation}
+
+\begin{table}[ht!]
+    \caption{Our neural network structure.}
+    \begin{center}
+    \begin{tabular}{|c||c|}
+    \hline
+    Name & Description \\
+    "
+,"
+
+Note that the given text contains both location and the name of the town. We want to ensure that the core meaning of the query (i.e. the location of the town) is not lost.
+
+Expected Output:
+
+hyde park is in dutchess county, new york and near poughkeepsie
+
+Note that a simple text simplification algorithm would result in:
+
+hyde park is in dutchess county and near poughkeepsie
+
+which would be incorrect as the name of the town itself has been removed."
+,"
+
+\subsection{Sentence Boundary Detection}
+\label{subsec:sbd}
+Given a sentence in a given language, the model must provide the sentence boundary as `.','?','!' in the given language.
+
+\subsection{Part-of-speech Tagging}
+\label{subsec:pos}
+Given a sentence in a given language, the model must provide the POS tags for all the words in the sentence in the given language as output. For the task, the POS tags have to be chosen from the following list: \url{https://universaldependencies."
+," For example, if the original text is 'the cat sat on the mat', the correct response would be 'cat mat'. If the original text is 'the cat sat on the dog', the correct response would be 'cat dog'.
+
+## How to get the code
+
+You can download a copy of the code here: https://github.com/Aaron-Hauser/LDC2017T10 (requires a login).
+
+## How to use the code
+
+You can find instructions for using the code in the README file.
+
+## What do you need to submit"
+,"
+
+Please note: it would be preferable if the tool would provide a word-count for the input text.
+
+Example inputs and output:
+
+Input 1: 'this is the input text'
+
+Output 1: 'this is the input text'
+
+Input 2: 'I am a fan of Harry Potter, who wrote the famous series of Harry Potter books'
+
+Output 2: 'I am a fan of harry potter, who wrote the famous harry potter series of books'
+
+Input 3: 'The author J.K. Rowling wrote the Harry Potter series of books."
+,"
+
+To solve this task, you will need to use the same preprocessing steps as for the ""Find synonyms"" task (remove characters from the start and end of the sentence, convert it to lowercase, and remove punctuation).
+
+The first step of the solution is to find the longest common substring between the original and the simplified text. You can find this string in linear time by using a dynamic programming algorithm.
+
+This algorithm constructs a string table."
+," Examples: 'his work was recognized with the national medal of arts in.'or 'john won the award'
+
+• Q3 (Multi-Choice): John F. Kennedy's inaugural address of January 20, 1961. What does the following sentence mean? 'ask not what your country can do for you; ask what you can do for your country'
+
+• Q4 (Open-text): In the article, ""How to Write a Term Paper in One Evening and Still Get an 'A', the author states, ""it's not really important what you do so long as you give the impression of doing something."
+,"
+
+Your code should be compatible with Python 3.7. The text is a string, so you should return a string with the simplified text as a response.
+
+Here are some examples of the input and output:
+
+Input
+
+mountain brook is a city in southeastern jefferson county alabama and a suburb of birmingham.
+
+Output
+
+Mountain Brook is a city in southeastern Jefferson County, Alabama and a suburb of Birmingham.
+
+Input
+
+new orleans is a city in the state of louisiana."
+,"
+
+\section{Experiments}
+
+\subsection{Experimental Setup}
+
+The model was trained with Adam optimizer \cite{kingma2014adam} using a batch size of 32 samples. The models were trained for 50 epochs, and for evaluation, each model was used to generate output on 1,000 test samples from the test set.
+
+The word embedding size was 256. The convolutional layers used 64 filters of size 3, and 2 convolutional layers each. The fully connected layer had 64 neurons."
+," You do not need to rewrite the text, but you may replace words and/or sentences. Do not make any changes to the number of sentences in the response.
+
+
+A. 'dactyl and ida may have been created at the same time from the disruption of koronis. or dactyl may have been created more recently, as ejecta from a large impact on ida.'
+B. 'dactyl may have originated at the same time as ida from the disruption of the koronis parent body."
+,"
+#
+# ## Model parameters
+#
+# We need to specify the model parameters:
+#
+# - `max_iterations`: the maximum number of times to run the algorithm
+# - `tolerance`: the stop criterion
+# - `minimum_word_frequency`: the minimum word frequency
+#
+# ### Dataset
+#
+# We can use the `load_data` helper function to load the dataset:
+#
+# ```python
+# from dataset import load_data
+#"
+,"
+
+Example 2
+
+Provide the full and simplified text from the following short story, ensuring that its core meaning remains intact: 'The little girl could not stop crying and screaming, even when her mother threatened her. She kept on shrieking that she could not stand the smell of the bread her mother had baked. Her mother, who loved her, did not understand why she was crying. She tried to convince her daughter that the bread was good and smelled of nothing but sugar, but it did not help."
+,"
+
+The response must be of the following form: 'a coastal city was initially dependent upon railroad and electric trolley service but that ended with the opening of virginia beach boulevard.'
+
+#### Revert Paragraph
+
+Take the following text as input: 'although the resort was initially dependent upon railroad and electric trolley service the completion of virginia beach boulevard in which extended from norfolk to the oceanfront opened the way for automobiles buses trucks and passenger rail service the latter of which was eventually discontinued.'"
+,"
+
+Solution Preview
+
+Dear Student,
+Hello and thank you for using Brainmass. The solution below should get you started. It...
+
+Solution Summary
+
+The solution is a 664-word sample essay that provides a simplified version of a technical text that uses technical vocabulary."
+,"
+
+Sample Input
+
+Harry Connick, Jr. Born Joseph Harry Fowler Connick, Jr. September 24, 1967 is an American singer, actor, composer and pianist.
+
+Sample Output
+
+harry connick jr. born joseph harry fowler connick jr. september 24, 1967 is an american singer, actor, composer and pianist.
+
+Sample Input
+
+This article is about the town in the county of Leicestershire, England, England. For other places with the same name, see Alfreton (disambiguation)."
+,"
+
+    €22 (Avg Bid)
+    €22 Keskimäär. tarjous
+    24 tarjoukset
+    Write a technical paper Loppunut left
+
+    I want to write a technical paper based on my dissertation research, in which I am working on to detect the human head in the video by extracting the head from the background. I need help to write a technical paper of this research.
+
+    €79 (Avg Bid)
+    €79 Keskimäär. tarjous
+    29 tarjoukset"
+,"
+
+Example questions
+
+What is the best way to format code for questions or answers that feature code samples?
+
+I understand that the standard formatting should be applied to code samples (removing indentation and replacing tabs with spaces). I am aware that code can be formatted by indenting it with 4 spaces. However, if you choose this option, your code sample becomes very difficult to read as it appears to be indented beyond the normal indentation that SE uses.
+
+I also tried to mark the code as a code sample using the code sample tool."
+," For example: Alaska Hawaii 49th 50th State Before when Alaska and Hawaii joined the US the term the th state was used. Alaska Hawaii 49th 50th State' """"""
+    print(text)
+    text = clean_text(text)
+    text = normalize(text)
+
+    stt = get_speakers(text, punctuation=punctuation, normalize_fn=normalize_fn)
+
+    print(""STT:"", stt)
+
+    return text, stt
+
+
+if __name__ == ""__main__"":"
+,"
+
+A) as a boy clive is said to have climbed the tower of st mary's parish church in market drayton and sat on a gargoyle frightening those down below.
+
+B) as a boy clive climbed the tower of st mary's parish church in market drayton and sat on a gargoyle frightening those down below.
+
+C) clive is said to have climbed the tower of st mary's parish church in market drayton and sat on a gargoyle frightening those down below as a boy."
+,"
+
+\section*{Dataset Examples}
+
+\begin{itemize}
+  \item Source Text: 'the history of jazz can be traced back to the end of the nineteenth century in britain, when brass band marches began incorporating blues rhythms. jazz is a musical style that originated in the united states in the early twentieth century.'
+  \item Candidate 1: 'the history of jazz can be traced back to the end of the nineteenth century, when brass band marches began incorporating blues rhythms. jazz is a musical style that originated in the united states in the early twentieth century.'"
+,"
+
+Note: Only the words ""laureano bisan etame mayer lrb"" should be simplified, the other words should remain the same.
+
+Sample Input:
+
+Sample Output:"
+,"
+
+We note that the first answer (by Vogel612) is not an exact match for the desired solution.
+
+You should not use the full context of the text (the entire paragraph), as this may bias the answer. For example, the context of the given sentence is the following:
+
+The Battlestar Galactica, commanded by William Adama, was a Battlestar of the Colonial Fleet, and the oldest warship in the fleet."
+,"
+
+Example Output
+
+The following is an example of the expected output.
+
+<p>According to certain Euclidean space perceptions, the universe has 3 dimensions of space and 1 dimension of time.</p>
+
+Test Data and Output Examples
+
+Input data can be found at this link: https://github.com/nytimes/reftest/raw/master/ref_data/nytimes-en/spelling_test_data.txt
+
+This link contains the expected output of the text data found in the aforementioned link."
+,"
+
+I’m not going to get into the actual mechanics of simplifying text. I’m not even going to worry about what text to give the computer for simplification (though, that does present a different challenge). I am going to talk about the process of evaluating a simplified text and deciding if the computer’s text is “good.”
+
+As a human, I can very easily understand the core meaning of the above text: “James Buster Douglas knocks out Mike Tyson to win the world heavyweight boxing crown.”"
+,"
+
+The text to be simplified is shown in the example below, which is also the desired simplified version:
+
+'yatsuhashi is a japanese confectionery sold mainly as a souvenir sweet'
+
+
+A simplified version should be returned as the response.
+
+Example 2
+
+The example text to be simplified below is from the Simplified English Wikipedia page about the history of the French language. Provide the simplified version as the response.
+
+'france has had several different languages before the latin period."
+,"
+
+
+No need to simplify the sentence.  It is already clear."
+,"
+    
+    \item \textit{Text simplification}. Simplify the following text to improve its readability, ensuring its core meaning remains intact: 'the most notable historic event of 1616 was the josephine house fire.' Provide only the simplified text as the response.
+\end{enumerate}
+
+\begin{enumerate}
+    \item \textit{Compositional Question Answering}. Given the question: 'What is the most common language spoken in india?'"
+,"
+
+Question 1
+Question 1
+
+Correct! Wrong!
+
+Question 2
+Question 2
+
+Correct! Wrong!
+
+Question 3
+Question 3
+
+Correct! Wrong!
+
+Question 4
+Question 4
+
+Correct! Wrong!
+
+Question 5
+Question 5
+
+Correct! Wrong!
+
+Question 6
+Question 6
+
+Correct! Wrong!
+
+Question 7
+Question 7
+
+Correct! Wrong!
+
+Question 8
+Question 8
+
+Correct! Wrong!
+
+Question 9
+Question 9
+
+Correct! Wrong!
+
+Question 10
+Question 10
+
+Correct!"
+," The river is referred to as the 'Congo' in Africa. Do not return any extraneous information.
+
+Example:
+
+Example 1:
+
+Input:
+
+the river has its headwaters in eastern kasai in the democratic republic of congo
+
+
+Output:
+
+the congo river
+
+
+Example 2:
+
+Input:
+
+the zaire river is a river in central africa
+
+
+Output:
+
+the congo river
+
+
+Input:
+
+between and the government of then zaire called it the zaire river.
+
+
+Output:"
+," For example, the input: 'the summer paralympics will be held in the same city and organized by the same committee and are scheduled to be held from september to.' should produce the output: 'the summer paralympics will be held in the same city.'
+
+
+The provided sample test cases do not represent all possible inputs for the given task."
+," The answer should not contain any unaltered phrase, word, sub-word, or character. If the entire question is itself a phrase, the output should be 'no answer', or similar. 'pirojpur' is a word, and 'lrb' and 'rrb' are sub-words in the question.
+
+• Input can be taken in any convenient format. This includes receiving the question and the simplified text as parameters, receiving a file as input, or receiving the question and simplified text as text in any reasonable format.
+
+• Output can be returned by any convenient means."
+,"
+
+If the above challenge was in JSON format, the input would be:
+
+{
+""text"": ""this article is a chronological list of mario games""
+}
+
+The simplified text (a string) would be the response.
+
+Please feel free to provide sample input/outputs below.
+
+### Example outputs
+
+• Input: ""this article is a chronological list of mario games""
+
+• Output: ""this list of mario games is chronological""
+• Input: ""the book is a story of the king's son"""
+," Do not provide a link to the original text as part of the response. For example, 'volcano landslides about every ten years' should be provided as the response, not 'volcano landslides about every ten years. Click here to view the original text'.
+
+If you are using this challenge for training data, please do not use the answer(s) for this item in any training, validation or test data you submit for the challenge.
+
+#### Text Chunking"
+,"
+
+I think the context here is a problem; if you add some context, it will be easier to tell what's being asked. In particular, the words ""array"" and ""african dances for violin"" make it difficult to figure out what the answer is, without context. – D.W. Oct 21 '14 at 21:50
+I don't think there's a right answer, as it is. ""An array of chamber music anthems and African dances for violin"" is a perfectly valid way to write ""some chamber music anthems and some African dances for violin""."
+,"
+
+A simplified text would be
+
+september is the 9th month of the year in the gregorian calendar
+
+Note that the text has been simplified by removing irrelevant terms such as “the”, “is the”, “in the”, etc. The simplified text retains the core meaning (i.e., the fact that September is the ninth month of the year) and is less cumbersome for human comprehension.
+
+The problem is that the input text is so unstructured, and so often written in a way that is non-standard and therefore not easy to analyse."
+,"
+
+Example: The kidney is one of the organs of the urinary tract. It forms urine and expels it into the bladder. Urethritis is an inflammation of the urethra, the tube that carries urine from the bladder to the outside of the body. Stones are hard masses made of crystals that form in the urinary tract. Urethral syndrome is a painful condition in which there is swelling, redness, and irritation of the urethra. This condition can lead to a narrowing of the urethra and block the flow of urine, a condition known as stricture."
+,"
+
+The input can contain one or more sentences. The answer should only contain the simplified sentence(s).
+
+
+
+Sample Input 1:
+
+it makes up the main part of ulleung county north gyeongsang province south korea
+
+
+Sample Output 1:
+
+main part of ulleung county
+
+
+Sample Input 2:
+
+it was built at least 2,000 years ago to control access to benguela harbour in southwestern angola it is the only angolan heritage site on the unesco world heritage list and one of the main tourist attractions of angola"
+," The output should be 'Daughter of Isaac Guillory is a guitar player'.
+  • Question 3: Consider the following text as an example of the input text to be provided for the question 3: ""This is a story about a woman who moved to an unknown town at a young age and was unable to speak to anyone. She was adopted and was moved around a lot by her adoptive parents and eventually grew up in Florida. She then moved to the UK to get married, but her husband passed away after three years of marriage and she moved back to the US where she lives with her parents now."
+,"
+
+Answers:1) The first one is the simplest way to put it, I think. 2) This one makes sense too, but isn't as specific as the first. 3) ""The study of the evolution of living things and how they are structured.""
+
+From Youtube
+
+What does 'life' mean to you? :This video is a response to the video entitled, ""What does 'life' mean to you?"" posted by 'therealtruthseeker.com'."
+,"
+  • Remove all numbers from the following sentence: 'this is a sentence with number: 1, 2, 3, 4, 5.'
+
+This dataset contains 12,000 unique sentences from 1,200 documents."
+,"
+
+What it measures: This measure assesses the candidate’s ability to comprehend complex text structures and to reformulate the main message of a passage in a shorter, concise form.
+
+Reading comprehension
+
+Task description: The candidate is presented with a text containing a statement, the truth or falsity of which is to be assessed. The text should contain approximately 200 words and be written in one of the following languages: English, Dutch, Spanish, Italian, German or Polish. The text is accompanied by three statements about the text, one of which corresponds to the text."
+,"
+
+Hint
+
+Hint: try to split it into smaller parts and see what's important to keep.
+
+Hint: try to split it into smaller parts and see what's important to keep.
+
+Solution
+In [13]:
+import spacy
+nlp = spacy.load('en_core_web_sm')
+
+In [14]:"
+,"
+
+\subsection{Case 2: Simplification by removing code comments}
+
+As described in Section~\ref{sec:prelim}, code comments are a significant source of noise in the original code. For example, the code segment listed below contains comments that are unrelated to its function.
+
+\begin{minted}[escapeinside=||,mathescape]{python}
+#| The following method implements a simple linear transformation. 
+#| The transformation is defined as 
+#| \begin{equation}"
+," Do not include the surrounding text or the question within the answer.
+
+The simplifier needs to make it clear that the answer to the question is ""yes"" or ""no"" rather than an explanation of whether riders are allowed or not. It also needs to ensure that the word ""flash"" does not become ""flashing"".
+
+Hint
+
+The simplifier is not required to replace all occurrences of ""flash"" in the text. It only needs to simplify the question.
+
+Input
+
+The first line contains the question text. The question text starts with a capital letter and ends with a question mark (?)."
+,"
+
+
+\end{itemize}
+
+\section{Related Work}
+
+There has been extensive previous work done on NER in different domains. To cite only a few, for financial domain \citet{liu2012building}, for social media \citet{lample2016neural}, for biomedical domain \citet{lange2016cnn} and for biomedical domain \citet{mullenbach-etal-2018-explainable}. The list of papers here is not exhaustive, it merely represents the works that we found most related to our work."
+,"
+
+\section{Training}
+Our system was trained on Wikipedia's 2019 English text dump, which consists of approximately 3.5 billion tokens, using the same preprocessing steps as \cite{wiegreffe-etal-2019-attention}. In addition, to achieve robustness to punctuation, we use the \textit{transformers} package \cite{wolf-etal-2020-transformers} to perform punctuation normalization."
+," (Note: This text is not real; it is merely an example). 
+    \begin{tabularx}{13cm}{rX}
+    \toprule
+    Source text (original, correct, and unperturbed): &
+    The answer is \textbf{Fighting}, which should not be confused with the type of the move, \textbf{Fighting}, which will be discussed later in this page.\\
+    \midrule
+    Perturbed text: &"
+,"
+
+Hint: The text is not case-sensitive."

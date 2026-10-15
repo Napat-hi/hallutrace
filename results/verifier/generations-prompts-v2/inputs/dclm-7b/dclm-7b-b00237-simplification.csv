@@ -1,0 +1,324 @@
+prompt,response
+,"
+
+\paragraph{Benchmark}
+
+There are some examples of benchmark sentences used in the test set in this section. The sentences have been manually labelled as 'good' or 'bad'. The 'good' sentences have a single, clear intent to address the task, whilst the 'bad' sentences have multiple intents, such as the request to improve the readability of the text whilst simultaneously changing its core meaning, or a request to write a summary. In the worst cases the sentences are either unintelligible or contain no task information at all."
+,"
+
+## Sample Input
+
+'however writing in the english antiquarian thomas hearne claims wright was born in shoe lane london and after an adolescent conversion to roman catholicism was taken to scotland by a priest.'
+
+
+## Sample Output
+
+'however thomas hearne claims wright was born in shoe lane london after converting to roman catholicism he was taken to scotland by a priest.'
+
+
+#!/usr/bin/env python3
+import re"
+,"
+
+### Hint 1¶
+
+The following is a hint provided for the solution to the above challenge:
+
+Consider that the challenge will probably be looking to see if you have removed most of the unnecessary words, but there may be some which are still acceptable. In that case, you should consider which words can be removed or which words are redundant. For example, the following text should provide a good response: 'commune in normandy region'.
+
+### Hint 2¶
+
+Here is the second hint."
+,"
+
+Sample Test Questions:
+
+Sentence Completion
+
+Select the best choice to complete the sentence.
+
+1. The first __________ of the concert was by far the most popular among the audience.
+(A) sonata
+(B) sonatina
+(C) scherzo
+(D) etude
+
+2. The opera's _______ plot had the audience in stitches.
+(A) farcical
+(B) comic
+(C) tragic
+(D) satiric
+
+3."
+,"
+
+The correct answer is:
+
+'Bob Cobb'
+
+If you wish to contribute to the development of this test then contact us at contact@lcc.ie."
+," Note: When you simplify the text, you must keep all its original meaning intact and it must be grammatically correct.
+
+Answer options
+
+A)    However, it may be difficult to reintroduce certain species into the wild even if their natural habitats were restored because survival techniques, which are normally passed from parents to offspring during parenting, may be lost.
+
+B)    However it may be difficult to reintroduce certain species into the wild even if their natural habitats were restored because survival techniques may be lost which normally get passed from parents to offspring during parenting."
+,"
+  4. The 'correct' answer for this question is 'axel paulsen'
+
+    This question can be found here
+
+Answer to the challenge
+
+I decided to use Wikipedia as my test corpus, as it is a collection of a large number of articles which I was confident would contain the range of grammatical and spelling mistakes that would be needed for this task.
+
+Wikipedia uses MediaWiki, an open source wiki application, as its website engine. MediaWiki provides an API that allows queries to be made against Wikipedia's article database."
+," (Use all lower case.) 'in the florida everglades a large number of trees were knocked down by the storm.'
+
+• Please also note that this is actually a research project (in order to improve the text quality) and not a task to be done by me. I have made some mistakes and I would like to fix them.
+
+• @drsourav
+
+Hi,
+
+I see you have received an answer to the question.
+However, I’d like to point out, that this is not the only option of improving text quality."
+,"
+
+
+Answer: The simplified text should be: “The color of the stripes, from the top down, follows the sequence white, red, blue, white, red, blue, white, red.”
+
+
+Question: Convert the following text to a URL, then supply the URL in the answer field of the test case: 'the color of the stripes from the top down follows the sequence white red blue white red blue white red.'"
+,"
+
+3. Find an organization in the US (e.g. non-profit or university) that specializes in one of the following fields: artificial intelligence, robotics, self-driving cars or autonomous systems. Retrieve the following information: name of the organization, country, website address, and its field of specialization.
+
+4. Provide the country name where the following events take place: 'the 2013 summer olympics took place in London,' 'the first olympic games were held in Greece.'
+
+5."
+,"
+
+#### Output
+
+'irenaeus in against heresies notes the gnostic view that the ascension happened eighteen months after the resurrection.'
+
+### Expected Performance
+
+The algorithm must be able to simplify text of varying complexity, including paragraphs and pages of text.
+
+### Constraints
+
+• The input will contain no more than 5 sentences.
+• The input will consist of only English text and spaces.
+• The input will contain no more than 10,000 characters.
+• The input will be in the UTF-8 character encoding.
+
+### Data Format"
+,"
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=\linewidth]{figs/task-example.png}
+  \caption{Task Example for Text Simplification}
+  \label{fig:task_ex}
+\end{figure}
+
+
+\subsubsection{Text Classification}
+
+Given an input text, the model must classify it to one of the predefined categories. The input text can have different lengths.
+
+\begin{figure}[h]
+  \centering"
+," Do not include the original text in the response.
+
+
+
+Many people attend Synagogue on the high holidays. The only time of the year many attend is on the high holidays. This is when people usually fast and attend Synagogue.
+
+The 'fasting' is not in the source text.
+
+I think a simple sentence with a synonym (which I couldn't use, for the example) would have been fine. For example:
+
+Many people attend Synagogue on the high holidays. It is the only time of the year that most attend Synagogue."
+," This sample text is not a direct quote from Wikipedia.
+
+Note: this is a special case of the previous question, but it uses a Wikipedia article instead of an arbitrary sample text.
+
+
+  1. The question provides a link to the corresponding Wikipedia page. The Wikipedia page provides further context and links to more articles.
+
+  2. The question uses the sample text as the search string.
+
+  3. This test will be available in English, German and Czech.
+
+More Samples
+
+The above questions are only a few examples of what can be done with the new API."
+,"
+• Question 5
+5. Which sentence below best describes the purpose of the text?
+• Question 6
+6. Complete the following sentence: The reason for the dominance of small and medium sized businesses is...
+• Question 7
+7. The sentence: 'However there are certain areas where the state can intervene' refers to
+• Question 8
+8. Which of the following words best fits the context of the following sentence: 'In addition to this the government has increased'
+• Question 9
+9. What does the term'market failure' mean?
+• Question 10
+10."
+,"
+    """"""
+    text = ""in she was elected an independent member of the new south wales legislative assembly lrb mla rrb for the seat of balmain.""
+    return clean_text(text, punctuation='""', lowercase=True)
+
+def gen_text_as_array(text):
+    """"""
+    Converts text into a tensorflow tensor as one-hot array.
+    """"""
+    # Set the maximum size for the vocabulary
+    num_vocab = len(word2idx.keys())"
+,"
+
+The data available to answer these questions is given in the 'data.txt' file, which lists all the news articles' headlines, the article's original text, and the number of views of each article.
+
+Your program must read the data file 'data.txt', and print a list of the simplified texts for all the news articles.
+
+
+I tried to do this in C but i think its not good. Could you check my code and suggest me to better do this?
+
+#include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
+
+"
+,"
+
+Acceptable Inputs:
+
+""dj dougal lrb real name paul arnold clarke born rrb is a british uk hardcore and happy hardcore artist and dj""
+
+""dj dougal is a british uk hardcore and happy hardcore artist""
+
+Unacceptable Inputs:
+
+""dj dougal is a british uk hardcore artist""
+
+""dj dougal is a british uk artist""
+
+""dj dougal is an artist""
+
+Note: The text is always provided in lowercase."
+,"
+
+\noindent{\bf Task B}
+Given a list of movies, find a movie that has a description containing a particular sentence in its description.
+
+\noindent{\bf Task C}
+Given a list of movie titles, find the title of a movie that has a description containing a particular sentence in its description.
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=0.95\columnwidth]{examples_task_2.pdf}
+  \caption{"
+," For example, for input 'The first computer to use integrated circuits was the Intel 4004. It was designed and fabricated by Intel and was released in'the expected output should be 'the intel 4004 was the first integrated circuit computer.' (the expected output is in upper case for clarity)"
+,"
+
+Sample Response A:
+
+'In his own time, hokusai was far more famous than his contemporaries hiroshige and kuniyoshi.'
+
+
+'Hokusai hiroshige kuniyoshi were his contemporaries.'
+
+
+'Hokusai hiroshige kuniyoshi hokusai.'
+
+Sample Response B:
+
+'Hokusai kuniyoshi hiroshige.'
+
+
+'hokusai hiroshige kuniyoshi.'
+
+2. Topic Sentence Generation"
+," [2]
+
+    The neighbor tells Gretchen that Faust loves her and Gretchen responds by saying that she loves him too. Gretchen has been attracted to Faust since she was sixteen. Gretchen now has faith in Faust. The devil then appears before her and says that he can help her. She says that she is ready to be married to Faust immediately.
+
+  • Q33) Which of the following can be inferred from the passage above?
+
+    He is attracted to her and with the help of a neighbour he succeeds in getting married to Gretchen."
+,"
+
+4. Simplify the following text to improve its readability, ensuring its core meaning remains intact: 'the world of computers is rapidly growing.' Provide only the simplified text as the response.
+
+5. Simplify the following text to improve its readability, ensuring its core meaning remains intact: 'it was a cold, gloomy night, and there was no one around.' Provide only the simplified text as the response.
+
+6."
+,"
+
+
+The dataset contains approximately 3,500 sample pairs, with each pair consisting of a document and its corresponding target text, which may be either a simplification, paraphrase, or translation. This dataset was used in a shared task at the ACL 2018 Conference.
+
+For each of the original submissions, a team member from the organising team has manually annotated the output produced by the corresponding submission for the simplified, paraphrased, and translated cases.
+
+The 'original' text of each sample was generated from the following two procedures:
+
+  1."
+,"
+
+Hint: We can safely ignore the commas and spaces in the text.
+
+### 2.1.1 Question
+
+Create a question as a multiple choice question of two possible choices. The first option is the correct answer, and the second is incorrect.
+
+• First, create the question data using the tribble function and a list of four elements (i.e., question text, correct option, incorrect option, and options_label)
+• Then, create an input object using the input_multiple_choice function and the question data. The input object created should not have any correct answers."
+,"
+
+\begin{center}
+\includegraphics[width=3in]{simpify1.png}
+\end{center}
+
+\end{document}
+
+\documentclass{article}
+
+\usepackage{xcolor}
+\usepackage{graphicx}
+
+\definecolor{mygray}{RGB}{200,200,200}
+
+\begin{document}
+
+\section*{Question 1:}"
+,"
+
+Hint: Consider the words as a bag of letters and merge the common letters across the words. E.g. 'lauren bacall lrb' --> 'baulrb'.
+
+Example:
+""Input:\nlauren bacall lrb\nOutput:\nabcdefghijklmnopqrstuvwxyz""
+
+""Input:\nla bca ll lr\nOutput:\nabcr""
+
+""Input:\nlauren bacall lrb\nOutput:\nlaabrll""
+""""""
+
+import re"
+,"
+
+Please complete all fields in the above form.
+
+If you have trouble using this form, please contact us with your question or comment.
+
+Return to previous page"
+,"
+
+  6. The following text has been extracted from the website 'The History Place - Holocaust Timeline'. (Holocaust Museum and Memorial; United States Holocaust Memorial Museum; Washington, DC 20006. United States: U.S. Holocaust Memorial Museum.)
+
+    ""The Night and Fog Decree: Heinrich Himmler issues an order that anyone resisting the Nazi takeover of their country, or anyone found helping such resistance efforts, should be subject to arrest and execution. His order states: 'Anyone who dares to raise arms against the German soldier is to be condemned to death by shooting or hanging without trial.'"

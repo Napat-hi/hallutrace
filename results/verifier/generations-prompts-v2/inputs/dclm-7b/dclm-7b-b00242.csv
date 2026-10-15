@@ -1,0 +1,670 @@
+prompt,response
+,"
+
+Example input:
+
+'bonningues l s calais is a commune in the pas de calais department in the nord pas de calais region of france.'
+
+
+Example output:
+
+'bonningues l s calais is a commune in pas de calais department nord pas de calais region france'
+
+Input
+
+Each test will be one line containing the following:
+
+• a piece of text, the simplification task
+
+Constraints
+
+• The input text will be at most 200 characters long"
+," Example:
+
+The use of grooves is used in a range of fields in wood working for many purposes such as for drawers and in joinery work.
+
+A. Grooves are used for a range of purposes in cabinet making and other wood working fields.
+B. Grooves are used for a range of purposes in cabinet making and other wood working fields.
+
+Answered By:
+
+Option A. The sentence is grammatically correct, and the text is simplified, but it still reads as a long run-on sentence that is difficult to understand."
+,"
+
+Sample Response
+
+We are a group of individuals who share a common interest in learning more about natural history. We do this through reading various books and studying the writings of others. The writings of others have played a key role in our development as natural historians. Some of our favorites include ""Life on Earth"", by James Watson and Francis Crick; ""The Red Queen"", by Matt Ridley; ""The Selfish Gene"", by Richard Dawkins; and ""Darwin's Dangerous Idea"", by Daniel Dennett."
+,"
+
+
+
+The sentence is not a simple sentence, since the sentence is not a complete sentence. However, as the sentence is given above, the answer is (2)
+
+by (3.3k points)
+selected by
+Welcome to the AnswerYAP Community, where you can ask questions and receive answers from other members of the community.
+
+Most Active Members
+this month:
+  1. junaid ahmed
+  2. shivang patel
+  3. Maninder"
+,"
+
+
+The main challenge in this dataset is the variability in the way users can ask the same question. 
+For example, given the above dataset, the user can ask:
+\begin{enumerate}
+    \item What does the iguana weigh?
+    \item How heavy is the iguana?
+    \item How much does the iguana weight?
+    \item What is the iguana's weight?
+\end{enumerate}
+Even if the user provides a context to the user (e.g."
+,"
+
+This text simplification task was introduced in [14]. This is a non-English language text and the response is a simplified sentence to replace the question text. As per [14], we used a fixed vocabulary of 1000 words that appear most frequently in English text. This is similar to a simplified variant of the task used by [29] for simplification of texts from one language to another.
+
+## 4 Results
+
+For evaluation, we collected 100 documents each for all three datasets from the Web. As per our earlier work [7], we used a single document to test each system."
+,"
+
+The provided model's output is:
+
+'missingno is a pokemon species found in the video games pokemon red and blue. standing for missing number missingno.'
+
+### Solution
+
+import tensorflow as tf
+from tensorflow import keras
+
+model_path = 'https://tfhub.dev/google/sentencepiece/punctuation_unified/sentencepiece-punctuation-english-v0.1.tar.gz'
+sp = keras.Sequential([
+tf.keras.layers.TextVectorization(
+),"
+,"
+• Q6: The following text is a summary of the above. Choose the statement which summarizes the above passage best: 'the russian orthodox church was founded by the apostles of jesus and spread around the world.'
+• Q7: Simplify the following text to improve its readability, ensuring its core meaning remains intact: 'heritage and the city were officially re-designated as a russian federal city in 2009.' Provide only the simplified text as the response.
+• Q8: The following text is a summary of the above."
+," 
+
+There are many examples of the same types of questions from other sources. For example, \cite{jain2018shortcutqa} has similar question to above in \textit{ShortcutsQA}, which is a trivia-like dataset where there is one question per document (also in this paper), and the questions are shorter than WikiQA.
+
+In addition to the above three example questions, there are also a number of questions in our dataset with no correct answer, which are annotated by us as ""None"" in the correct answer column of Table \ref{tbl:example}."
+,"
+
+Example: input: 'the queen of england is at table at twelve o'clock' => output: 'queen at table noon'
+
+• Input: ""You'll never see a purple cow, Or a red-and-green pig. But if you see a dog, Then you'll see a big dog.""
+
+• Output: ""big dog""
+
+• This is a code-golf question. The shortest answer in each language wins.
+
+• There may be more than one possible simplified sentence, and you don't have to pick one."
+,"
+
+Example response: 'the largest prime factor of an odd perfect number exceeds 100."
+," Note: the title ""WWE.com reported that Batista suffered a muscle tear..."" should be omitted from your response.
+
+
+The task is deceptively simple. If you want to get a feeling of how hard it can be, try it out on your own.
+
+For this project we use a variant of a deep bidirectional long short-term memory (BiLSTM) model, based on work by the Google Brain team. (see paper).
+
+The model was trained on a dataset of 2.5 million sentences taken from news articles."
+,"
+
+Source Code
+
+#!/usr/bin/env python2
+# -*- coding: utf-8 -*-
+
+""""""Solve Project Euler problem 26.""""""
+import unicodedata
+
+import itertools
+
+from collections import Counter
+
+from operator import itemgetter
+
+def parse(text):
+    """"""Parse the text.""""""
+    return unicodedata.normalize('NFKD', text).encode('ascii', 'ignore').decode('ascii')
+
+def simplify(text):
+    """"""Simplify the text.""""""
+    words = parse(text)
+    words =''."
+,"
+
+Sample Input
+
+chitral is also home to the kalash tribe who live in bumburet and two other remote valleys southwest of chitral town.
+
+Sample Output
+
+chitral is home to the kalash tribe who live in two remote valleys southwest of chitral.
+
+All Submissions
+Best Solutions
+
+Point Value: 7
+Time Limit: 2.00s
+Memory Limit: 16M
+Added: Jan 20, 2014
+
+Problem Types: [Show]
+
+Languages Allowed:
+
+Comments (Search)"
+,"
+
+#### Input Specification
+
+The first line contains an integer,.
+
+The next lines contain the text of the original text (before simplification). No line will exceed characters.
+
+#### Output Specification
+
+Output a single string, representing the simplified text. No line will exceed characters.
+
+#### Sample Input 1
+
+5
+during the first nine days the nak m tribe proved more successful at the challenges losing only one immunity challenge sending yaxh to tribal council twice.
+
+#### Sample Output 1
+
+nak m lost one challenge and sent yaxh to council"
+,"
+
+The question should be a single-line, multi-select question that will ask the learner to select which of the four options best represents the correct simplified text.
+
+The response object that accompanies the question should include the following:
+
+  • The ""correct"" option in its entirety. This is the only response that is marked correct.
+  • The ""incorrect"" option that contains the incorrect option in its entirety, with an additional comment in the response object describing what is incorrect."
+,"
+
+
+Text simplification is one of the important problems in natural language processing. However, most of the previous researches are carried out only on English dataset, which may not be applicable in other language due to the difference of morphology and syntax. In order to verify the effectiveness of text simplification model on other languages and explore a general method that can be applicable for different languages, in this paper we collect a new dataset named CSTextSimp, which is constructed based on simplified Chinese version of the book ""The History of Peloponnesian War"" by Thucydides."
+,"
+
+# Train arrivals from CBD
+
+The Melbourne Central business district (CBD) is served by 3 rail lines, including an 8km tunnel from Southern Cross station to Southern Cross station, and another 4km tunnel to Flinders Street station, both stations located within the CBD. Arrivals are listed in the following table.
+
+Hour No. of trains
+6 2
+7 4
+8 7
+9 4
+10 3
+11 3
+12 4
+13 3
+14 3
+15 2
+16 1
+17 1
+18 1
+19 0
+20 0
+21 1"
+,"
+
+How do we read the problem statement?
+
+The input contains only English characters and the output is expected to be the same, hence we can safely filter out everything else from the text.
+
+In particular, the text is an English sentence and the filter can be applied to a sentence by splitting it at the whitespaces. Hence we can take as a sentence a piece of text between two whitespaces:
+
+sentence = input_text.split()
+
+
+Then, we can remove everything that is not a letter:
+
+letters = [c for c in sentence if c.isalpha()]"
+," Note: The length of the response should be 2-3 sentences.
+
+I found this one. There's also a sentence that has to be inserted and removed.
+
+
+It is difficult to make accurate predictions from this.
+
+There's also a sentence that has to be inserted and removed.
+
+If there's a sentence that needs to be removed, you'd need to remove it in the code you provide in your post. If it's only a couple of sentences, I can remove the ones that you specify."
+,"
+
+• The answer should contain the sentence 'the dutch eredivisie was contested by teams in the season.'
+
+• The answer should contain the phrase 'in the season the dutch eredivisie was contested by teams.'
+
+• The answer should contain the phrase 'the dutch eredivisie was contested in the season by teams.'
+
+• The answer should contain the phrase 'in the season the dutch eredivisie was contested by teams.'"
+,"
+
+### Sample Input 2
+
+'jane doe, a fictional character from charlotte brontë's 1847 novel 'jane eyre,' was the central protagonist and narrator of the novel. She was an orphan from the north of england, who was orphaned and later raised by her cruel aunt and her husband after her parents died of pneumonia.'
+
+
+### Sample Output 2
+
+'jane doe, from the novel 'jane eyre,' was orphaned and later raised by her aunt and uncle.'
+
+
+### Sample Input 3"
+,"
+
+### HINT
+
+If a question includes the word 'question', then that means it wants you to answer the question in the question title.
+
+### EXAMPLE
+
+For the question 'Who has won the most Wimbledon titles of the Open Era?', your response should be a list containing the names of the players who have won the most Wimbledon titles in the Open Era.
+
+### EXAMPLE
+
+For the question 'Which US state has the most counties?', your response should be the US state which has the most counties.
+
+## General knowledge"
+," If the above statement is true, then predict its simplified version to be
+
+[ ] There is also a short version of the jointer plane known as the fore plane, which is about i long.
+
+[ ] There is a short version of the jointer plane, known as the fore plane, which is about i long.
+
+[ ] There is also a short version of the jointer plane known as the fore plane, which is around i long.
+
+[ ] There is also a shorter version of the jointer plane known as the fore plane, which is around i long."
+,"
+
+• 1.1.3.3.4 - Simplify Text - Simple
+
+Simplify the following text to improve its readability, ensuring its core meaning remains intact: 'japan lies northeast of the korean peninsula.' Provide only the simplified text as the response.
+
+• 1.1.3.3.5 - Simplify Text - Intermediate
+
+Simplify the following text to improve its readability, ensuring its core meaning remains intact: 'it borders hong kong to the north and vietnam to the south.' Provide only the simplified text as the response."
+,"
+
+  • \$\begingroup\$ I don't think this is a good example to start on. The main difficulty in this task is that you're going to need to break the sentences into phrases (or words) that can be replaced, not the simple parts-of-speech tagging that I would normally use for this sort of task. \$\endgroup\$ – Blindman67 Sep 22 '16 at 0:36
+  • \$\begingroup\$ Could you give some examples? I'm having a hard time visualizing the sort of transformations that would be applicable."
+,"
+
+In the sentence below, change the verb so that it expresses a future action: ""they were having lunch together when the phone rang."" The response should contain the verb in the future tense, and should not contain any other changes to the sentence.
+
+In the following passage, change the sentence which does not belong to the passage's genre. The response should change the selected sentence into a genre which matches those around it. For example, a sentence which describes a personal event should be changed into a formal event.
+
+The following passage contains two highlighted sentences."
+,"
+
+## Example Output
+
+'despite the name, virgin radio stations are usually owned independently of each other.'"
+,"
+
+2. What does the ""1"" mean?
+
+I am confused about the first question. Does it say,
+
+Replace all occurrences of ""plaintext"" with just the word ""text"", and delete the words ""the normal"".
+
+So in the end I should get this:
+
+'In a significant sense text is the normal representation of data before any action has been taken to conceal or compress it.'
+
+I'm confused if the ""in a significant sense"" should be kept. I think it has nothing to do with text itself.
+
+And the second question is"
+,"
+
+\noindent\textbf{Response}: The XXIV Olympic Winter Games or the Winter Olympics is an event to be organized by the International Olympic Committee.
+
+\begin{table*}[h!]
+\begin{center}
+\begin{tabular}{ccccccccc}
+\hline\noalign{\smallskip}"
+,"
+    • Instructor's notes: 'Mercantilism is a theory that holds that national wealth is based on stockpiling gold and silver reserves.'
+  • What is the value of the following currency: €100 → 0.8 → ¥10?
+    • Instructor's notes: It means, the value of the Euro is 0.8 of the value of the Yen, while the value of the Euro is 100 to the Yen. In other words, 100 Euro is equal to 120 Yen."
+,"
+
+Hint: It is assumed that the test-taker is familiar with the concept of sentence segmentation.
+
+This problem has been solved! You can view the solution here."
+,"
+
+\subsection{Example 1}
+
+The original text reads ""An autumn festival is held in Ballan every year in late March dubbed the Captain Moonlight Festival."" The task is to generate a simpler version of the text. The output from the model should be a one-sentence summary of the input text, which conveys the core meaning of the original text. In this example, the original text is ""an autumn festival is held in Ballan every year in late March dubbed the Captain Moonlight Festival."" The model's output should be something like ""The festival is held every year at the end of March.""
+
+"
+," The text will be one or more sentences, up to 100 words, in English. (Preliminary text was obtained from http://www.wwe.com/superstars/wwe-womens-champion-page.jhtml#)
+
+Test data:
+At judgment day james successfully defended her title against melina and beth phoenix in a triple threat match.
+
+Sample output:
+James defended her title in a triple threat match against melina and beth phoenix."
+,"
+
+Note: All parts of the sentence should be considered when evaluating this answer.
+
+Test 2.3.5: Entity Names and Titles
+
+The tester must demonstrate knowledge of the following entity names and titles:
+
+Elsa the Sheep
+
+'All seven seasons of the series are available on individual DVD box sets for Region 1, Region 2 and Region 4.'
+
+Test 2.3.6: Entity Names and Titles
+
+The tester must demonstrate knowledge of the following entity names and titles:
+
+Giant Snake"
+,"
+
+
+Example 2"
+,"
+
+\item
+\textbf{Subtask 1:} Simplify the following text to improve its readability, ensuring its core meaning remains intact: 'they are the same, but the words are more difficult, the spelling is incorrect, and the sentence structure is more complex.' Provide only the simplified text as the response.
+
+\item
+\textbf{Subtask 1:} Simplify the following text to improve its readability, ensuring its core meaning remains intact: 'i don't think he is a bad actor.' Provide only the simplified text as the response.
+
+\item"
+,"
+
+Hint: This question can be answered by replacing letters with similar looking numbers and vice versa.
+
+Question: What is the result of the following expression: '((6 * 9) - 24) / (18 - 3 * 8)'.
+
+Question: What is the result of the following expression: '2 to the power 2 to the power 2'.
+
+Question: What is the result of the following expression: '9 - (2 + 4 - 3) - 3'.
+
+Question: What is the result of the following expression: '9 - (2 + 4 - 3) - 3'.
+"
+,"
+
+Test Data
+
+
+Sample Input Data
+
+'chattanooga is the fourth largest city in the u.s. state of tennessee with a population of lrb after memphis nashville and knoxville rrb and the seat of hamilton county.'
+
+Sample Output Data
+
+'chattanooga is the fourth largest city in the u.s. state of tennessee with a population of lrb after memphis nashville and knoxville rrb and the seat of hamilton county.'"
+,"
+
+2. Given a question of the form 'who is the director of sky odyssey?', return 'hajime koseki.'
+
+3. Given the question 'when was sky odyssey released?', return 'the sky odyssey was released in 2002.'
+
+4. Given the question 'where can i get sky odyssey?' return'skyo Odyssey can be purchased from amazon, play.com, and many other retailers.'
+
+The system should be able to correctly handle both of the following queries, which are equivalent to the example query above:
+
+5."
+," For example: 'Sir elihu lauterpacht founded the centre for peace and development in 1986 and remains director emeritus and an honorary professor.'
+
+
+\end{enumerate}
+
+\end{itemize}
+
+\begin{table*}[h!]
+\footnotesize
+    \centering
+    \begin{tabular}{p{3.3cm}|p{13.6cm}}
+\toprule"
+,"
+
+
+Example 2
+
+This example demonstrates the response format for question 2, where the user is prompted to choose the best response from a list of possible answers. 'Infectious diseases are a common cause of morbidity and mortality in the developing world.' The user has two choices:
+
+Correct response: 'Infection can spread from one person to another.'
+
+Wrong response: 'Infection cannot spread from one person to another.'
+
+Provide the response as: 'infection cannot spread from one person to another'
+
+
+Example 3"
+,"
+
+### Task 6
+
+Select the appropriate response to complete the following sentence: 'if you have two or more numbers, the sum of the numbers is called the _____________'
+
+### Task 7
+
+A triangle has 3 sides, which are: 3cm, 5cm and 6cm. Select which of the triangles shown below has sides that are in the correct ratio to each other. If there is more than one correct answer, select the triangle with the sides in the correct ratio first. If there is no correct answer, select the answer 'NO'
+
+### Task 8"
+,"
+
+Example output
+
+'ha michael revivo was born in february ashdod retired footballer and businessman.'
+
+
+You must write a program that accepts the input string, simplifies it and outputs the result.
+
+
+  • Your program must not perform any spelling correction. Words that should be removed may appear in the wrong spelling (eg. 'haim' in the example instead of 'ha'.)
+
+  • The simplified text may not exceed 160 characters. You must ensure that all words in the input text fit within the output text."
+,"
+•'mummified animals were also mummified as representations of deities.'
+
+• a
+
+• Use the following string of words to train a language model that can then be used to predict missing words in a text: 'the dog is very. he is also very. he is very.'
+• dog
+• friendly
+• dog
+• large
+• dog
+• friendly
+
+• b
+
+• Use the following string of words to train a language model that can then be used to predict missing words in a text: 'the cat is very. she is also very."
+,"
+
+For this task, we will only focus on the simplification step.
+
+First, we will tokenize the original string into tokens and the simplified string into a target tokens. For our simplification tasks, a target sentence will always be shorter than its original sentence.
+
+Next, we will create a batch of sequences of size 5 from the training data using the tokenizer. Each batch consists of a list of original sequences and their corresponding target sequences. We will also use the tokenizer's special symbol <pad> to pad each sequence to a length of 5."
+,"
+
+[6] [Bonus]
+
+Given a list of text snippets and a list of topics, return a list of snippets for each topic. If a snippet is related to more than one topic, it should only be returned once.
+
+## Hints and Guidelines
+
+As we've already mentioned in the task description, the text of the book is too large and we can't just store it in a variable. Fortunately, there is a way to load the text from the file without storing the text in a variable by using the open function."
+,"
+
+
+External links[edit]"
+,"
+
+This dataset consists of 7,500 examples of simplification problems. Each example consists of two text snippets: the first is the source text to be simplified and the second is the simplified text. The examples were generated by applying various transformations (e.g. substitution, deletion, reordering, or addition) to the source text, where the resulting text contains at most 25 tokens and a Levenshtein distance of at most 40. The Levenshtein distance is the minimum number of single-character edits (insertion, deletion, or substitution) required to transform the simplified text into the source text.
+
+"
+,"
+
+    Inputs: [c sar aparecido rodrigues lrb born october in s o paulo rrb better known just as c sar is a brazilian footballer.]
+
+    Output: ['c sar is a brazilian footballer.']
+
+  • Given a list of movie titles (such as 'the dark knight'), remove the title and movie from the list. Return the resulting list.
+
+    Inputs: ['the dark knight', 'avengers', 'captain america', 'batman begins']"
+,"
+""""""
+
+# COMMAND ----------
+
+def extract_clean_text(text):
+  """"""Extract the text excluding html tags, numbers and non alphabetic characters""""""
+  return''.join(re.sub('[^a-zA-Z]',' ',text).split())
+
+def remove_stop_words(text):
+  """"""Return a cleaned text excluding stop words""""""
+  text =''.join(word for word in extract_clean_text(text).split() if word not in stopwords.words('english'))
+  return text
+
+# COMMAND ----------
+
+"
+,"
+
+For example, if the text is 'the fifa world cup the th staging of the world cup was held in italy from june to july.', the program must respond with 'fifa world cup', 'fifa', 'fifa world cup th', 'fifa world cup th' or'staging fifa world cup'.
+
+### 评分
+
+You will be scored on your ability to answer the above tasks.
+
+• You will be penalised if you fail to provide an answer for a text within 3 seconds."
+,"
+
+Input (A):
+
+after his mother s death when he was seven he lived with his uncle and grandmother in frankfurt
+
+Target (B):
+
+seven years old after his mother passed away lived with his uncle and grandmother in frankfurt
+
+Model:
+
+After his mother died when he was seven, he lived with his uncle and grandmother in Frankfurt.
+
+
+The test examples are presented as a paragraph with the first sentence being the first sentence of the test example and the last sentence being the last sentence. The remaining sentences are presented in random order."
+," We will only consider the simplifications for which the original sentence is the source sentence in the test set.
+
+Example input:'she arrives with a client a creepy professor lrb played by the actor who played dr. goll lulu s first husband rrb.'
+Example output: 'a creepy professor played by the actor who played dr. goll arrives with a client.'
+
+We use BART with the encoder-decoder architecture."
+,"
+
+
+Task 1.1.1
+
+Answer the following questions to the best of your ability. Provide full, coherent, structured answers to each question.
+
+(a) In a single paragraph, describe in your own words what is meant by 'text'.
+
+(b) In a single paragraph, describe in your own words what is meant by'simplify'.
+
+(c) If you were required to simplify the following text, what would you do to it?"
+,"
+
+The main simplification technique used in this task is sentence splitting, where the input is split into sentences. The text is then tokenized, which allows the system to use n-gram features for the following tasks.
+
+A classifier determines if a particular token is part of the input sentence that should be included in the response. For example, for the input text in the task description above, the sentence 'in johnson county illinois united states' should be included.
+
+A second classifier then determines if a particular token is part of the response."
+,"
+
+## 2)
+
+Simplify the following text to improve its readability, ensuring its core meaning remains intact: 'there is a very popular game in the world, with a very high level of play in most countries, with chess tournaments and clubs available to play and participate in a variety of chess formats and levels.' Provide only the simplified text as the response.
+
+## 3)"
+,"
+
+Q2: The following passage is followed by four different versions of the last sentence. The correct version is the one which most accurately reflects the overall meaning of the passage:
+
+'Astronomers have observed a distant galaxy that has produced 10,000 solar masses of stars every year during the last 100 million years. If the production rate was constant, the total number of stars would be a trillion.'
+
+Which is the most accurate version of the last sentence?
+
+A) If the production rate was constant, the total number of stars would be a trillion."
+,"
+
+  • A
+
+    • marginal
+
+    • primarily
+
+    • utilised
+  • B
+
+    • rangeland
+
+    • cattle
+
+    • leased
+  • C
+
+    • fertile
+
+    • traditionally
+
+    • grazing
+  • D
+
+    • government
+
+    • cattle
+
+    • leased
+
+Question 6
+
+In the following text, the words 'practical knowledge' in bold represent the key concept. In the space below, rewrite the text so that the core meaning remains intact, but is clearer and easier to read."
+,"
+
+For each of the four text simplifications, identify (in order) the sentence-simplification strategies used by the system to create the simplified text. The system must correctly identify at least three of the four sentences as simple (i.e. it must have a 75% precision).
+
+The text to simplify should be between 20 and 100 words. We can accept up to two answers in case of ties or in case the system was not sure which sentence it should simplify. If a correct answer is not provided, the response should be marked as incorrect."
+,"
+
+You may wish to consider the following points when answering the question:
+
+* How are super mario bros and super mario all stars collections formatted?
+* What are the major points to the question, and how can they be presented?
+* Can you consider the context of the sentence?
+
+Example Input
+
+super mario bros.
+
+Example Output
+
+the original super mario bros.
+
+Scoring Criteria
+
+Correct Answer (6 Points)
+The output is a correct answer.
+
+Incorrect Answer (0 Points)
+The output is not a correct answer."

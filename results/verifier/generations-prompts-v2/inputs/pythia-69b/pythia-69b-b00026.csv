@@ -1,0 +1,1084 @@
+response,list,list_condition,count,generation_id
+"
+
+A:
+
+Python 2, 78 bytes",,"['arizona', 'arkansas', 'california', 'connecticut', 'illinois', 'indiana', 'kansas', 'kentucky', 'louisiana', 'maine', 'maryland', 'michigan', 'minnesota', 'montana', 'nebraska', 'nevada', 'new hampshire', 'new jersey', 'new mexico', 'new york', 'north carolina', 'north dakota', 'oregon', 'pennsylvania', 'rhode island', 'south carolina', 'tennessee', 'vermont', 'virginia', 'washington', 'west virginia', 'wisconsin', 'wyoming']",33,pythia-69b|rationalization_numerical-00169|0
+"
+
+A:
+
+You can use a recursive function:
+def find_o(s):
+    if s == 'o':
+        return 1
+    elif s == 'O':
+        return 2
+    elif s == 'Oo':
+        return 3
+    elif s == 'OoO':
+        return 4
+    elif s == 'OoOo':
+        return 5
+    elif s == 'OoOoO':
+        return 6
+    elif s == 'OoOoOo':
+        return 7",,"['arizona', 'california', 'colorado', 'connecticut', 'florida', 'georgia', 'idaho', 'illinois', 'iowa', 'louisiana', 'minnesota', 'missouri', 'montana', 'new mexico', 'new york', 'north carolina', 'north dakota', 'ohio', 'oklahoma', 'oregon', 'rhode island', 'south carolina', 'south dakota', 'vermont', 'washington', 'wisconsin', 'wyoming']",27,pythia-69b|rationalization_numerical-00170|0
+"
+
+A:
+
+Python 2, 67 bytes
+f=lambda s:len(s)==1ands.find(s)or[s]
+
+Try it online!
+
+A:
+
+Jelly, 6 bytes
+ŒṖḊ
+
+Try it online!
+How it works
+ŒṖḊ  Main link. Argument: s (string)
+
+ŒṖḊ  Compute the length of s.
+
+ŒṖḊ  If the length is 1, return the string.",,[],0,pythia-69b|rationalization_numerical-00172|0
+"
+
+A:
+
+Python 2, 78 bytes
+lambda s:s.count('r')
+
+Try it online!
+
+A:
+
+Jelly, 6 bytes
+Œḟḟ
+
+Try it online!
+How?
+Œḟḟ - Main link: number of r's in string
+Œḟ - Main link: number of r's in string
+ḟḟ - Main link: number of r's in string
+
+A:
+
+Jelly, 6 bytes
+Œḟḟ
+
+Try it online!
+How?",,"['arizona', 'arkansas', 'california', 'colorado', 'delaware', 'florida', 'georgia', 'maryland', 'missouri', 'nebraska', 'new hampshire', 'new jersey', 'new york', 'north carolina', 'north dakota', 'oregon', 'rhode island', 'south carolina', 'vermont', 'virginia', 'west virginia']",21,pythia-69b|rationalization_numerical-00173|0
+"
+
+A:
+
+Python 2, 78 bytes
+lambda s:s.split('v')[0].split('v')[1].split('v')[0]
+
+Try it online!
+
+A:
+
+Jelly, 6 bytes
+VṖṖ
+
+Try it online!
+How?",,"['nevada', 'pennsylvania', 'vermont', 'virginia', 'west virginia']",5,pythia-69b|rationalization_numerical-00177|0
+"
+
+A:
+
+Python 2.7, 
+def z_count(s):
+    return sum(1 for c in s if c == 'z')
+
+print z_count('abcdefghijklmnopqrstuvwxyz')
+
+A:
+
+Python 2.7,
+def z_count(s):
+    return sum(1 for c in s if c == 'z')
+
+print z_count('abcdefghijklmnopqrstuvwxyz')
+
+A:
+
+Python 2.7,",,['arizona'],1,pythia-69b|rationalization_numerical-00181|0
+"
+
+A:
+
+Python 2, 78 bytes",,['delaware'],1,pythia-69b|rationalization_numerical-00185|0
+"
+
+A:
+
+Python 2, 67 bytes",,['hawaii'],1,pythia-69b|rationalization_numerical-00189|0
+"
+
+A:
+
+Python 2, 67 bytes
+lambda s:s.find(""i"")
+
+Try it online!
+
+A:
+
+Jelly, 6 bytes
+ŒṖḊ
+
+Try it online!
+How it works
+ŒṖḊ  Main link. Argument: s (string)
+
+ŒṖḊ  Compute the index of the first occurrence of the character in the string.
+
+A:
+
+Jelly, 6 bytes
+ŒṖḊ
+
+Try it online!
+How it works",,"['idaho', 'illinois', 'indiana', 'iowa']",4,pythia-69b|rationalization_numerical-00190|0
+"
+
+A:
+
+You can use a dictionary to store the states and then use a list comprehension to get the states that start with m.
+states = {
+    'a': 'Alabama',
+    'b': 'Alaska',
+    'c': 'Arizona',
+    'd': 'Arkansas',
+    'e': 'California',
+    'f': 'Colorado',
+    'g': 'Connecticut',
+    'h': 'Delaware',
+    'i': 'Florida',
+    'j': 'Georgia',",,"['maine', 'maryland', 'massachusetts', 'michigan', 'minnesota', 'mississippi', 'missouri', 'montana']",8,pythia-69b|rationalization_numerical-00194|0
+"
+
+A:
+
+Python 2, 67 bytes
+f=lambda n,k=1:n<2or(k<n and f(n-1,k+1))
+
+Try it online!
+
+A:
+
+Jelly, 6 bytes
+Œḟḟ
+
+Try it online!
+How it works
+Œḟḟ  Main link. Argument: n (integer)
+
+Œḟḟ  Compute the number of states of the given number.
+
+ḟ  Range.",,"['nebraska', 'nevada', 'new hampshire', 'new jersey', 'new mexico', 'new york', 'north carolina', 'north dakota']",8,pythia-69b|rationalization_numerical-00195|0
+"
+
+A:
+
+Python 2, 78 bytes
+f=lambda n,k=1:n and f(n,k+1)or[n,f(n,k+1)]or[n,n]
+
+Try it online!
+
+A:
+
+Jelly, 8 bytes",,"['ohio', 'oklahoma', 'oregon']",3,pythia-69b|rationalization_numerical-00196|0
+"
+
+A:
+
+Python 2, 67 bytes
+lambda n:n and n.startswith('q')
+
+Try it online!
+
+A:
+
+Jelly, 6 bytes
+ŒṖḊ
+
+Try it online!
+How it works
+ŒṖḊ  Main link. Argument: n (integer)
+
+ Œ     Yield the list of all integers that are the start of a number.
+  Ṗ    Yield the list of all integers that are the start of a number,
+      starting with the first.",,[],0,pythia-69b|rationalization_numerical-00198|0
+"
+
+A:
+
+Python 2, 67 bytes",,['rhode island'],1,pythia-69b|rationalization_numerical-00199|0
+"
+
+A:
+
+Python 2, 78 bytes
+lambda s:s.find('v')+1
+
+Try it online!
+
+A:
+
+Jelly, 6 bytes
+Vṭṭ
+
+Try it online!
+How?
+Vṭṭ - Main link: full program that takes a string and returns the number of states starting with 'v'
+ṭṭ - Main link: full program that takes a string and returns the number of states that start with 'v'",,"['vermont', 'virginia']",2,pythia-69b|rationalization_numerical-00203|0
+"
+
+A:
+
+Python 2.7, 705 bytes
+lambda n:n.find('z')+1
+
+Try it online!
+
+A:
+
+Jelly,  10  9 bytes",,[],0,pythia-69b|rationalization_numerical-00207|0
+"
+
+A:
+
+Python 2, 78 bytes",,"['maryland', 'rhode island']",2,pythia-69b|rationalization_numerical-00211|0
+"
+
+A:
+
+You can use a recursive function to do this.
+def h_list(n):
+    if n == 0:
+        return []
+    else:
+        return h_list(n-1) + [n]
+
+print(h_list(5))
+
+Output:
+[0, 1, 2, 3, 4]
+
+A:
+
+You can use a list comprehension:
+>>> [n for n in range(1, 10) if n % 2 == 0]
+[1, 3, 5, 7, 9]",,['utah'],1,pythia-69b|rationalization_numerical-00215|0
+"
+
+A:
+
+Python 2, 67 bytes
+lambda n:n%2or'i'in''.join(sorted(set(range(n))-set(range(n/2))+set(range(n/2,n-1)))[:n/2])*'i'
+
+Try it online!
+
+A:
+
+Jelly, 6 bytes
+ŒṖḊ
+
+Try it online!
+How it works
+ŒṖḊ  Main link. Argument: n (integer)",,"['hawaii', 'mississippi', 'missouri']",3,pythia-69b|rationalization_numerical-00216|0
+"
+
+A:
+
+This is a simple case of a regular expression.
+import re
+
+def state_endings(state):
+    return re.findall(r'\b[A-Z]{2}\b', state)
+
+print(state_endings('AL'))
+
+Output:
+['AL']
+
+A:
+
+You can use a regular expression to match the state name and then use a list comprehension to get the list of states that end with the letter M.
+import re",,[],0,pythia-69b|rationalization_numerical-00220|0
+"
+
+A:
+
+JavaScript (ES6),  90  89 bytes
+Takes input as a string.",,"['michigan', 'oregon', 'washington', 'wisconsin']",4,pythia-69b|rationalization_numerical-00221|0
+"
+
+A:
+
+Python 2, 67 bytes
+lambda n:n%2or'o'in''.join(sorted(set(n)for i in range(n)))
+
+Try it online!
+
+A:
+
+Jelly, 6 bytes
+OṖḊ
+
+Try it online!
+How it works
+OṖḊ  Main link. Argument: n (integer)
+
+ O     Range [1, n].
+  Ṗ    Range [1, n].
+   Ḋ   All pairs of elements in the range.
+
+A:
+",,"['colorado', 'idaho', 'new mexico', 'ohio']",4,pythia-69b|rationalization_numerical-00222|0
+"
+
+A:
+
+Python 2, 67 bytes
+f=lambda n:n and n%2or f(n/2)
+
+Try it online!
+
+A:
+
+Jelly, 6 bytes
+Œḟḟ
+
+Try it online!
+How?
+Œḟḟ - Main link: integer n
+Œḟ - Main link: n/2
+ḟ - Main link: n%2
+
+A:
+
+Jelly, 6 bytes
+Œḟḟ
+
+Try it online!
+How?",,[],0,pythia-69b|rationalization_numerical-00224|0
+"
+
+A:
+
+Python 2, 67 bytes",,[],0,pythia-69b|rationalization_numerical-00225|0
+"
+
+A:
+
+Python 2, 78 bytes
+lambda s:s.split('v')[0].split('.')[0]
+
+Try it online!
+
+A:
+
+Python 2, 72 bytes
+lambda s:s.split('v')[0].split('.')[0]
+
+Try it online!
+
+A:
+
+Python 2, 72 bytes
+lambda s:s.split('v')[0].split('.')[0]
+
+Try it online!
+
+",,[],0,pythia-69b|rationalization_numerical-00229|0
+"
+
+A:
+
+Python 2, 67 bytes",,[],0,pythia-69b|rationalization_numerical-00233|0
+"
+
+A:
+
+Python 2, 78 bytes
+lambda a:a.count('b')
+
+Try it online!
+
+A:
+
+J, 16 bytes
+""b""~{1+1}
+
+Try it online!
+Explanation:
+""b""~{1+1}
+""b""~{1+1}
+""b""~{1+1}
+""b""~{1+1}
+""b""~{1+1}
+""b""~{1+1}
+""b""~{1+1}
+",,"['albania', 'antigua and barbuda', 'azerbaijan', 'the bahamas', 'bahrain', 'bangladesh', 'barbados', 'belarus', 'belgium', 'belize', 'benin', 'bhutan', 'bolivia', 'bosnia and herzegovina', 'botswana', 'brazil', 'brunei', 'bulgaria', 'burkina faso', 'burundi', 'cabo verde', 'cambodia', 'central african republic', 'colombia', 'congo, democratic republic of the', 'congo, republic of the', 'cuba', 'czech republic', 'djibouti', 'dominican republic', 'gabon', 'the gambia', 'guinea-bissau', 'kiribati', 'lebanon', 'liberia', 'libya', 'luxembourg', 'mozambique', 'myanmar (burma)', 'namibia', 'saudi arabia', 'serbia', 'trinidad and tobago', 'united arab emirates', 'uzbekistan', 'zambia', 'zimbabwe']",48,pythia-69b|rationalization_numerical-00235|0
+"
+
+A:
+
+Python 2, 78 bytes
+lambda s:s.count('c')>0
+
+Try it online!
+
+A:
+
+Jelly, 6 bytes
+ŒṖḊ
+
+Try it online!
+How it works
+ŒṖḊ  Main link. Argument: s (string)
+
+ŒṖḊ  Compute the number of occurrences of c in s.
+
+ṖḊ  Filter the list of characters.
+
+A:
+
+Jelly, 6 bytes
+ŒṖḊ",,"['cabo verde', 'cambodia', 'cameroon', 'canada', 'central african republic', 'chad', 'chile', 'china', 'colombia', 'comoros', 'congo, democratic republic of the', 'congo, republic of the', 'costa rica', 'côte d’ivoire', 'croatia', 'cuba', 'cyprus', 'czech republic', 'dominica', 'dominican republic', 'ecuador', 'france', 'greece', 'iceland', 'jamaica', 'liechtenstein', 'madagascar', 'mexico', 'micronesia, federated states of', 'monaco', 'morocco', 'nicaragua', 'north macedonia', 'saint lucia', 'saint vincent and the grenadines', 'sao tome and principe', 'seychelles', 'south africa', 'vatican city']",39,pythia-69b|rationalization_numerical-00236|0
+"
+
+A:
+
+Python 2, 78 bytes
+lambda n:n and all(x==n%2or x==n%3or x==n%4or x==n%5or x==n%6or x==n%7or x==n%8or x==n%9for x in range(10))
+
+Try it online!
+
+A:
+
+J, 16 bytes
+1+1
+
+Try it online!
+
+A:
+
+J, 16 bytes
+1+1
+
+Try it online!",,"['afghanistan', 'the bahamas', 'bahrain', 'bangladesh', 'bhutan', 'bosnia and herzegovina', 'chad', 'chile', 'china', 'congo, democratic republic of the', 'congo, republic of the', 'czech republic', 'ethiopia', 'the gambia', 'ghana', 'haiti', 'honduras', 'hungary', 'kazakhstan', 'korea, north', 'korea, south', 'lesotho', 'liechtenstein', 'lithuania', 'marshall islands', 'netherlands', 'north macedonia', 'philippines', 'saint vincent and the grenadines', 'seychelles', 'south africa', 'sudan, south', 'thailand']",33,pythia-69b|rationalization_numerical-00241|0
+"
+
+A:
+
+Python 2, 67 bytes
+lambda s:s.count('j')
+
+Try it online!
+
+A:
+
+Japt, 7 bytes
+ÆÆ
+
+Try it online!
+
+A:
+
+Japt, 6 bytes
+ÆÆ
+
+Try it online!
+
+",,"['azerbaijan', 'djibouti', 'fiji', 'jamaica', 'japan', 'jordan', 'tajikistan']",7,pythia-69b|rationalization_numerical-00243|0
+"
+
+A:
+
+Python 2, 78 bytes
+lambda l:l.count('l')>0
+
+Try it online!
+
+A:
+
+Jelly, 6 bytes
+“ÆÆ
+
+Try it online!
+How it works
+“ÆÆ  Main link. Argument: s (string)
+
+“ÆÆ  Count the number of occurrences of the letter “l” in s.
+
+“ÆÆ  If the number is greater than 0, the result is the list of all strings that contain the letter “l”.",,"['albania', 'algeria', 'angola', 'australia', 'bangladesh', 'belarus', 'belgium', 'belize', 'bolivia', 'brazil', 'bulgaria', 'central african republic', 'chile', 'colombia', 'congo, democratic republic of the', 'congo, republic of the', 'czech republic', 'dominican republic', 'east timor (timor-leste)', 'el salvador', 'equatorial guinea', 'finland', 'guatemala', 'iceland', 'ireland', 'israel', 'italy', 'laos', 'latvia', 'lebanon', 'lesotho', 'liberia', 'libya', 'liechtenstein', 'lithuania', 'luxembourg', 'malawi', 'malaysia', 'maldives', 'mali', 'malta', 'marshall islands', 'moldova', 'mongolia', 'nepal', 'netherlands', 'new zealand', 'palau', 'philippines', 'poland', 'portugal', 'saint lucia', 'senegal', 'seychelles', 'sierra leone', 'slovakia', 'slovenia', 'solomon islands', 'somalia', 'sri lanka', 'switzerland', 'thailand', 'tuvalu', 'venezuela']",64,pythia-69b|rationalization_numerical-00245|0
+"
+
+A:
+
+Python, 51 bytes
+lambda n:n%2or[n,n]
+
+Try it online!
+
+A:
+
+Jelly, 6 bytes
+2ÆṖṖ
+
+Try it online!
+How?
+2ÆṖṖ - Main link: argument n
+2      - n is even
+ ÆṖ   - all numbers in range [1, n]
+  Ṗ   - range [1, n]
+
+A:
+
+Jelly, 6 bytes
+2ÆṖṖ",,"['armenia', 'the bahamas', 'belgium', 'cambodia', 'cameroon', 'colombia', 'comoros', 'congo, democratic republic of the', 'denmark', 'dominica', 'dominican republic', 'east timor (timor-leste)', 'the gambia', 'germany', 'guatemala', 'jamaica', 'luxembourg', 'madagascar', 'malawi', 'malaysia', 'maldives', 'mali', 'malta', 'marshall islands', 'mauritania', 'mauritius', 'mexico', 'micronesia, federated states of', 'moldova', 'monaco', 'mongolia', 'montenegro', 'morocco', 'mozambique', 'myanmar (burma)', 'namibia', 'north macedonia', 'oman', 'panama', 'romania', 'samoa', 'san marino', 'sao tome and principe', 'solomon islands', 'somalia', 'suriname', 'turkmenistan', 'united arab emirates', 'united kingdom', 'vietnam', 'yemen', 'zambia', 'zimbabwe']",53,pythia-69b|rationalization_numerical-00246|0
+"
+
+A:
+
+Python 2, 67 bytes",,"['andorra', 'angola', 'barbados', 'bolivia', 'bosnia and herzegovina', 'botswana', 'burkina faso', 'cabo verde', 'cambodia', 'cameroon', 'colombia', 'comoros', 'congo, democratic republic of the', 'congo, republic of the', 'costa rica', 'côte d’ivoire', 'croatia', 'djibouti', 'dominica', 'dominican republic', 'east timor (timor-leste)', 'ecuador', 'el salvador', 'equatorial guinea', 'estonia', 'ethiopia', 'gabon', 'georgia', 'honduras', 'indonesia', 'jordan', 'korea, north', 'korea, south', 'kosovo', 'laos', 'lebanon', 'lesotho', 'luxembourg', 'mexico', 'micronesia, federated states of', 'moldova', 'monaco', 'mongolia', 'montenegro', 'morocco', 'mozambique', 'north macedonia', 'norway', 'oman', 'poland', 'portugal', 'romania', 'samoa', 'san marino', 'sao tome and principe', 'sierra leone', 'singapore', 'slovakia', 'slovenia', 'solomon islands', 'somalia', 'south africa', 'sudan, south', 'togo', 'tonga', 'trinidad and tobago', 'united kingdom']",67,pythia-69b|rationalization_numerical-00248|0
+"
+
+A:
+
+JavaScript (ES6),  90  89 bytes
+Takes input as a string.
+a=>[...new Set(a.split`r`)].map(c=>c.charCodeAt(0))
+
+Try it online!
+
+A:
+
+Jelly,  27  25 bytes",,"['algeria', 'andorra', 'antigua and barbuda', 'argentina', 'armenia', 'australia', 'austria', 'azerbaijan', 'bahrain', 'barbados', 'belarus', 'bosnia and herzegovina', 'brazil', 'brunei', 'bulgaria', 'burkina faso', 'burundi', 'cabo verde', 'cameroon', 'central african republic', 'comoros', 'congo, democratic republic of the', 'congo, republic of the', 'costa rica', 'côte d’ivoire', 'croatia', 'cyprus', 'czech republic', 'denmark', 'dominican republic', 'east timor (timor-leste)', 'ecuador', 'el salvador', 'equatorial guinea', 'eritrea', 'france', 'georgia', 'germany', 'greece', 'grenada', 'honduras', 'hungary', 'iran', 'iraq', 'ireland', 'israel', 'jordan', 'kiribati', 'korea, north', 'korea, south', 'kyrgyzstan', 'liberia', 'luxembourg', 'madagascar', 'marshall islands', 'mauritania', 'mauritius', 'micronesia, federated states of', 'montenegro', 'morocco', 'myanmar (burma)', 'nauru', 'netherlands', 'nicaragua', 'niger', 'nigeria', 'north macedonia', 'norway', 'paraguay', 'peru', 'portugal', 'qatar', 'romania', 'russia', 'rwanda', 'saint vincent and the grenadines', 'san marino', 'sao tome and principe', 'saudi arabia', 'serbia', 'sierra leone', 'singapore', 'south africa', 'sri lanka', 'suriname', 'switzerland', 'syria', 'trinidad and tobago', 'turkey', 'turkmenistan', 'ukraine', 'united arab emirates', 'uruguay']",93,pythia-69b|rationalization_numerical-00251|0
+"
+
+A:
+
+JavaScript (ES6),  89  77 bytes
+Takes input as a string.
+f=(s,n=0)=>s.replace(/\s+/g,c=>n+=c.length)
+
+Try it online!
+How?
+We can use the fact that the length of a string is the number of characters in it.
+
+A:
+
+Python 2, 91 bytes
+lambda s:s.replace(' ','').replace('\n','')
+
+Try it online!
+
+A:",,"['afghanistan', 'australia', 'austria', 'the bahamas', 'bangladesh', 'barbados', 'belarus', 'bosnia and herzegovina', 'botswana', 'burkina faso', 'comoros', 'costa rica', 'cyprus', 'east timor (timor-leste)', 'el salvador', 'estonia', 'eswatini', 'guinea-bissau', 'honduras', 'indonesia', 'israel', 'kazakhstan', 'korea, south', 'kosovo', 'kyrgyzstan', 'laos', 'lesotho', 'liechtenstein', 'madagascar', 'malaysia', 'maldives', 'marshall islands', 'mauritius', 'micronesia, federated states of', 'netherlands', 'pakistan', 'philippines', 'russia', 'saint kitts and nevis', 'saint lucia', 'saint vincent and the grenadines', 'samoa', 'san marino', 'sao tome and principe', 'saudi arabia', 'senegal', 'serbia', 'seychelles', 'sierra leone', 'singapore', 'slovakia', 'slovenia', 'solomon islands', 'somalia', 'south africa', 'spain', 'sri lanka', 'sudan', 'sudan, south', 'suriname', 'sweden', 'switzerland', 'syria', 'tajikistan', 'tunisia', 'turkmenistan', 'united arab emirates', 'united states', 'uzbekistan']",69,pythia-69b|rationalization_numerical-00252|0
+"
+
+A:
+
+Python 2, 78 bytes",,"['botswana', 'eswatini', 'kuwait', 'malawi', 'new zealand', 'norway', 'papua new guinea', 'rwanda', 'sweden', 'switzerland', 'taiwan', 'zimbabwe']",12,pythia-69b|rationalization_numerical-00256|0
+"
+
+A:
+
+Python 2, 67 bytes
+lambda s:s.count('x')
+
+Try it online!
+
+A:
+
+Jelly, 6 bytes
+ŒṖḊ
+
+Try it online!
+How it works
+ŒṖḊ  Main link. Argument: s (string)
+
+ŒṖḊ  Compute the number of occurrences of x in s.
+
+A:
+
+Jelly, 6 bytes
+ŒṖḊ
+
+Try it online!
+How it works",,"['luxembourg', 'mexico']",2,pythia-69b|rationalization_numerical-00257|0
+"
+
+A:
+
+Python 2, 78 bytes
+f=lambda n,k=1:n and f(n,k+1)or[k,n%k]or[n%k,k]
+
+Try it online!
+
+A:
+
+Jelly, 6 bytes
+ŒṖḊ
+
+Try it online!
+How it works
+ŒṖḊ  Main link. Argument: n (integer)
+
+ŒṖḊ  Compute the set of all integers that are multiples of n.",,"['azerbaijan', 'belize', 'bosnia and herzegovina', 'brazil', 'czech republic', 'kazakhstan', 'kyrgyzstan', 'mozambique', 'new zealand', 'switzerland', 'tanzania', 'uzbekistan', 'venezuela', 'zambia', 'zimbabwe']",15,pythia-69b|rationalization_numerical-00259|0
+"
+
+A:
+
+Python 2, 78 bytes",,"['bahrain', 'bangladesh', 'barbados', 'belarus', 'belgium', 'belize', 'benin', 'bhutan', 'bolivia', 'bosnia and herzegovina', 'botswana', 'brazil', 'brunei', 'bulgaria', 'burkina faso', 'burundi']",16,pythia-69b|rationalization_numerical-00261|0
+"
+
+A:
+
+Python 2.7, 
+def c_countries(c):
+    countries = []
+    for i in range(1,26):
+        if c == i:
+            countries.append(i)
+    return countries
+
+print c_countries('c')
+
+A:
+
+Python 2.7,
+def c_countries(c):
+    countries = []
+    for i in range(1,26):
+        if c == i:
+            countries.append(i)
+    return countries",,"['cabo verde', 'cambodia', 'cameroon', 'canada', 'central african republic', 'chad', 'chile', 'china', 'colombia', 'comoros', 'congo, democratic republic of the', 'congo, republic of the', 'costa rica', 'côte d’ivoire', 'croatia', 'cuba', 'cyprus', 'czech republic']",18,pythia-69b|rationalization_numerical-00262|0
+"
+
+A:
+
+JavaScript (ES6),  106  101 bytes
+Takes input as a string.",,"['haiti', 'honduras', 'hungary']",3,pythia-69b|rationalization_numerical-00267|0
+"
+
+A:
+
+JavaScript (ES6),  106  101 bytes
+Takes input as a string.
+f=(s,i=0)=>s.replace(/\w/g,c=>c.charAt(i++%c.length))
+
+Try it online!
+How?
+We start by splitting the string into a list of characters.
+f=(s,i=0)=>s.replace(/\w/g,c=>c.charAt(i++%c.length))",,"['jamaica', 'japan', 'jordan']",3,pythia-69b|rationalization_numerical-00269|0
+"
+
+A:
+
+Python 2, 67 bytes
+lambda s:s.count('l')>0
+
+Try it online!
+
+A:
+
+Jelly, 6 bytes
+ŒṖḟ
+
+Try it online!
+How?
+ŒṖḟ - Main link: argument: s
+
+ŒṖḟ - Main link: s
+  Ṗḟ - Main link: s",,"['laos', 'latvia', 'lebanon', 'lesotho', 'liberia', 'libya', 'liechtenstein', 'lithuania', 'luxembourg']",9,pythia-69b|rationalization_numerical-00271|0
+"
+
+A:
+
+Python 2, 67 bytes
+lambda n:n.count('m')>0
+
+Try it online!
+
+A:
+
+Jelly, 6 bytes
+Œḟḟ
+
+Try it online!
+Explanation
+Œḟḟ  Main link. Argument: n
+
+Œḟḟ  Compute the number of occurrences of 'm' in n.
+
+ḟ  Count the number of occurrences of 'm' in the list.
+
+A:
+
+Jelly, 6 bytes",,"['madagascar', 'malawi', 'malaysia', 'maldives', 'mali', 'malta', 'marshall islands', 'mauritania', 'mauritius', 'mexico', 'micronesia, federated states of', 'moldova', 'monaco', 'mongolia', 'montenegro', 'morocco', 'mozambique', 'myanmar (burma)']",18,pythia-69b|rationalization_numerical-00272|0
+"
+
+A:
+
+JavaScript (ES6),  90  89 bytes
+Takes input as a string.
+a=>[...a].map(c=>c.match(/o/g)||c)
+
+Try it online!
+
+A:
+
+Jelly,  90  88 bytes",,['oman'],1,pythia-69b|rationalization_numerical-00274|0
+"
+
+A:
+
+Python 2, 67 bytes
+lambda s:s.count('r')
+
+Try it online!
+
+A:
+
+Jelly, 6 bytes
+Rr
+
+Try it online!
+How?
+Rr  - Main link: string, input
+Rr  - Main link: integer, input
+Rr  - Main link: integer, input
+Rr  - Main link: integer, input
+Rr  - Main link: integer, input
+Rr  - Main link: integer, input
+Rr  - Main link: integer, input
+",,"['romania', 'russia', 'rwanda']",3,pythia-69b|rationalization_numerical-00277|0
+"
+
+A:
+
+Python 2, 67 bytes
+lambda s:s.count('s')
+
+Try it online!
+
+A:
+
+Jelly, 6 bytes
+ŒṖḊ
+
+Try it online!
+How?
+ŒṖḊ - Main link: argument s
+
+ŒṖḊ - Main link: argument s
+
+ŒṖḊ - Main link: argument s
+
+ŒṖḊ - Main link: argument s
+
+ŒṖḊ - Main link: argument s",,"['saint kitts and nevis', 'saint lucia', 'saint vincent and the grenadines', 'samoa', 'san marino', 'sao tome and principe', 'saudi arabia', 'senegal', 'serbia', 'seychelles', 'sierra leone', 'singapore', 'slovakia', 'slovenia', 'solomon islands', 'somalia', 'south africa', 'spain', 'sri lanka', 'sudan', 'sudan, south', 'suriname', 'sweden', 'switzerland', 'syria']",25,pythia-69b|rationalization_numerical-00278|0
+"
+
+A:
+
+Python 2, 67 bytes
+lambda s:s.count('w')
+
+Try it online!
+
+A:
+
+Jelly, 6 bytes
+ŒṖḊ
+
+Try it online!
+How it works
+ŒṖḊ  Main link. Argument: s (string)
+
+ŒṖḊ  Compute the number of occurrences of w in s.
+
+Ṗ      Subtract 1.
+  Ḋ    Take the floor.
+
+A:
+
+Jelly, 6 bytes",,[],0,pythia-69b|rationalization_numerical-00282|0
+"
+
+A:
+
+Python 2, 78 bytes
+lambda x:x.count('x')
+
+Try it online!
+
+A:
+
+Jelly, 6 bytes
+Œḟḟ
+
+Try it online!
+How it works
+Œḟḟ  Main link. Argument: n
+
+Œḟḟ  Compute the number of occurrences of 'x' in the string.
+
+ḟ  Group the characters of the string by their ASCII code.
+
+ḟ  Count the number of occurrences of each character.
+
+A:
+
+",,[],0,pythia-69b|rationalization_numerical-00283|0
+"
+
+A:
+
+Python 2, 78 bytes
+lambda s:s.count('z')
+
+Try it online!
+
+A:
+
+Jelly, 6 bytes
+ŒṖḊ
+
+Try it online!
+How?
+ŒṖḊ - Main link: string
+ŒṖḊ - Main link: integer
+Ṗ - Range
+Ḋ - Filter
+
+A:
+
+Python 2, 61 bytes
+f=lambda s:s.count('z')
+
+Try it online!
+
+A:",,"['zambia', 'zimbabwe']",2,pythia-69b|rationalization_numerical-00285|0
+"
+
+A:
+
+Python 2, 78 bytes
+f=lambda n,s='':[s+s.replace('b','')for i in range(n)if'b'in s]
+
+Try it online!
+
+A:
+
+J, 16 bytes
+""b""~{:b}
+
+Try it online!
+
+A:
+
+J, 10 bytes
+""b""~{:b}
+
+Try it online!
+Explanation
+""b""~{:b}
+""b""~{:b}",,[],0,pythia-69b|rationalization_numerical-00287|0
+"
+
+A:
+
+JavaScript (ES6),  106  101 bytes
+Takes input as a string.
+f=(s,n=0)=>s.replace(/\d/g,n++%3?n<2?n:n%3:n%3+1)
+
+Try it online!
+
+A:
+
+Jelly,  72  69 bytes",,"['central african republic', 'czech republic', 'dominican republic']",3,pythia-69b|rationalization_numerical-00288|0
+"
+
+A:
+
+JavaScript (ES6),  89  77 bytes
+Takes input as a string.
+f=(s,i=0,j=0,k=0)=>s.replace(/h/g,i++%j?k++:j++%k?k++:j++%k?k++:j++%k?k++:j++%k?k++:j++%k?k++:j++%k?k++:j++%k?k++:j++%k?k++:j++%k?",,"['bangladesh', 'korea, north', 'korea, south', 'sudan, south']",4,pythia-69b|rationalization_numerical-00293|0
+"
+
+A:
+
+JavaScript (ES6),  106  101 bytes
+Takes input as a string.
+a=>[...a].filter(c=>c.match(/[jJ]/g))
+
+Try it online!
+How?
+The string is split into an array of characters, and then filtered for those that match the regular expression /[jJ]/g.
+
+A:
+
+Jelly,  26  24 bytes",,[],0,pythia-69b|rationalization_numerical-00295|0
+"
+
+A:
+
+JavaScript (ES6),  89  77 bytes
+Takes input as a string.
+f=(n,l='l',s='',i=0,c=n.length)
+
+Returns an array of strings.
+
+f=(n,l='l',s='',i=0,c=n.length)
+console.log(f(n,l,s,i,c))
+
+A:
+
+Python 2, 87 bytes
+f=lambda n,l='l',s='',i=0,c=n.",,"['brazil', 'israel', 'nepal', 'portugal', 'senegal']",5,pythia-69b|rationalization_numerical-00297|0
+"
+
+A:
+
+Python 2, 67 bytes
+lambda n:n and n.isalpha()or''.join(n.lower()for i in'abcdefghijklmnopqrstuvwxyz')
+
+Try it online!
+
+A:
+
+Jelly, 6 bytes
+RµṖ
+
+Try it online!
+How?
+RµṖ - Main link: integer n
+R      - range(n)
+ µ     - nth element
+  Ṗ   - all permutations of the characters in the range
+
+A:",,"['belgium', 'united kingdom', 'vietnam']",3,pythia-69b|rationalization_numerical-00298|0
+"
+
+A:
+
+JavaScript (ES6),  89  77 bytes
+Takes input as a string, e.g. ""a,b,c,d,e,f,g,h,i,j,k,l,m,n,o"".
+Returns an array of strings.
+a=>(g=x=>x.split("","").map(y=>y.match(/\d/g)&&y.length))(a.replace(/\s+/g,"" ""))
+
+Try it online!
+How?",,"['burkina faso', 'kosovo', 'lesotho', 'mexico', 'monaco', 'montenegro', 'morocco', 'san marino', 'togo', 'trinidad and tobago']",10,pythia-69b|rationalization_numerical-00300|0
+"
+
+A:
+
+Python 2, 67 bytes
+lambda n:n and all(n%r==r for r in range(1,n+1))
+
+Try it online!
+
+A:
+
+Jelly, 6 bytes
+ŒṖḊ
+
+Try it online!
+How it works
+ŒṖḊ  Main link. Argument: n (integer)
+
+ ŒṖḊ  Compute the set of all integers r such that r is a factor of n.
+
+ṖḊ  Filter.
+
+",,"['ecuador', 'el salvador', 'madagascar', 'niger', 'qatar']",5,pythia-69b|rationalization_numerical-00303|0
+"
+
+A:
+
+JavaScript (ES6),  89  77 bytes
+Takes input as a string.
+a=>a.split`s`.map(c=>c.length>1&&c.length-1)
+
+Try it online!
+How?
+The idea is to split the string on 's' and then filter out all the strings that have a length of 1 or more.
+
+A:
+
+Jelly,  32  28 bytes",,"['the bahamas', 'barbados', 'belarus', 'comoros', 'cyprus', 'honduras', 'laos', 'maldives', 'marshall islands', 'mauritius', 'netherlands', 'philippines', 'saint kitts and nevis', 'saint vincent and the grenadines', 'seychelles', 'solomon islands', 'united arab emirates', 'united states']",18,pythia-69b|rationalization_numerical-00304|0
+"
+
+A:
+
+JavaScript (ES6),  67  66 bytes
+Takes input as a string.
+f=(n,s='w')=>n?s.match(/(w|w+)/g)?f(n-1,s):n:f(n,s)
+
+Try it online!
+
+A:
+
+Jelly,  32  31 bytes",,[],0,pythia-69b|rationalization_numerical-00308|0
+"
+
+A:
+
+JavaScript (ES6),  89  86 bytes
+Takes input as a string.
+f=(s,n,p=s.match(/\d+/g))=>n?f(s,n-1,p):p.map((c,i)=>s.match(c)&&f(s,i,p))
+
+Try it online!
+How?
+The first step is to find all the digits in the string.",,[],0,pythia-69b|rationalization_numerical-00309|0
+"
+
+A:
+
+Python 2, 67 bytes
+f=lambda n,s=0:s<n and s or f(n,s+1)
+
+Try it online!
+
+A:
+
+Jelly, 6 bytes
+ŒṖ€
+
+Try it online!
+How?
+ŒṖ€ - Main link: argument: n
+
+ŒṖ€ - Main link: argument: s
+
+ŒṖ€ - Main link: argument: n
+
+ŒṖ€ - Main link: argument: s",,[],0,pythia-69b|rationalization_numerical-00311|0
+"
+
+A:
+
+Python 2, 67 bytes",,"['africa', 'antarctica', 'asia', 'north america', 'oceania', 'south america']",6,pythia-69b|rationalization_numerical-00312|0
+"
+
+A:
+
+Python 2, 78 bytes
+lambda s:s.count('e')
+
+Try it online!
+
+A:
+
+Jelly, 6 bytes",,"['europe', 'north america', 'oceania', 'south america']",4,pythia-69b|rationalization_numerical-00316|0

@@ -1,0 +1,339 @@
+prompt,response
+,"
+
+To test the effectiveness of a search engine, create a page that shows you the top 10 results for a specific query. Next to each result, display a green check mark if the result page is exactly what you were expecting. For example, if the query was for 'best apple pies' and the expected result was a recipe for apple pies, the first result could have a check mark if it was the 'perfect apple pie recipe' from epicurious. For every result, the search engine gets one point."
+,"
+\item \textbf{Sentiment Analysis} Sentiment analysis is the process of determining the attitude of a speaker or a writer with respect to some topic or the overall contextual polarity of a document. The goal of this task is to determine the sentiment in the following text: 'i love samsung but i hate their phones'.
+\item \textbf{Machine Translation} Machine translation is the automated translation of text from one natural language to another. The goal of this task is to translate the text in the following example from German to English: 'Er war am Arbeitssitz.'"
+,"
+
+\textbf{Output} \emph{(Expected)}: \emph{mesnil clinchamps is a commune in calvados department.}
+
+\textbf{Output} \emph{(Actual)}: \emph{mesnil clinchamps is a commune in the calvados department.}
+
+\paragraph{Problem 1:} 
+
+\paragraph{Question:} 'I live in the centre of the city, where there is more public transport.' Provide only the simplified text as the response."
+,"
+
+4. Which one of the following is not an instrument from the 18th century?
+
+5. True or false? Mozart lived his life as a celebrity, composing and conducting at a young age.
+
+6. The term 'cadenza' refers to which of the following?
+
+7. Which one of the following is a symphony from the 18th century?
+
+8. True or false? The first performance of the Eroica symphony was in 1809, during the Napoleonic wars.
+
+9."
+,"
+
+
+A list of questions will be provided. Provide the response text as the answer to each question. The text may be long or short.
+
+
+Given the following input: 'hello world' Provide the following output: 'goodbye world'
+
+Your score will be based on the following metrics:
+
+  • Correct number of outputs for each question
+  • Number of questions answered correctly within the time limit
+  • Total number of questions answered
+  • Score is determined by the following (using % and integer)
+    • Correct outputs - (number of questions x 25%)"
+," (14 marks)
+
+The use of language should include:
+
+• The use of appropriate register and style
+• The use of the present tense
+• The correct spelling of technical words
+• The use of the correct subject-verb agreement
+
+It is expected that you will make use of the following language points:
+
+• Introducing a second point/reason
+• Introducing and connecting paragraphs
+• Repetition
+• Using a modal verb to indicate the future
+• Using a modal verb to indicate a possibility
+• Using the correct structure and tense to express a negative statement (wouldn't have)"
+,"
+
+
+Input
+
+Line 1: Two space-separated strings: The original and simplified texts.
+
+Output
+
+Line 1: The simplified text.
+
+Constraints
+
+Original text has no more than 1000 characters. Simplified text has no more than 100 characters.
+Solution (CPP):#include <bits/stdc++.h>
+using namespace std;
+int main() {
+  long long n, k;
+  string s1, s2;
+  cin >> s1 >> s2;
+  long long sum = 0, flag = 0;"
+," (Sentence: 3, Word: 6)
+
+• What do you call the area around the center of a city where large skyscrapers are typically located? (Sentence: 4, Word: 3)
+
+• What do you call the area around the center of a city where large skyscrapers are typically located? (Sentence: 4, Word: 3)
+
+• What do you call the area around the center of a city where large skyscrapers are typically located? (Sentence: 4, Word: 3)
+
+• A boy is reading a novel."
+,"
+
+# Text simplification¶
+
+The problem of text simplification is the automatic production of simpler versions of pieces of text that retain their essential meaning. This task requires not only some semantic understanding of the input, but also a good knowledge of human language: the text should be easy to understand while still containing the information in the original.
+
+This task does not involve producing an output that is syntactically correct English: the simplification may include simplification in the syntax and grammar of the output."
+,"
+
+
+You are given a corpus of sentences as the training set, which we will provide.
+
+For training, we will also give you a corpus of sentences which have been scored for readability. For a given sentence s, let r_s be its readability score, computed by a known function r.
+
+The goal of this task is to maximize the overall readability of your compressed sentences, while ensuring their core meaning is maintained. In particular, we define the core meaning as ""the set of noun phrases, verb phrases, prepositional phrases, etc. found in the sentence and their parts of speech."""
+,"
+
+\textcite{baez_mathematical_2003} defines a monoidal category as one which has
+the following data:
+
+\begin{itemize}
+\item A set of objects.
+\item For any two objects $A$ and $B$, a set $C(A,B)$.
+\item For every object $A$, an object $1$ and a morphism $i_A : 1 \to A$ called the identity morphism.
+\item For every three objects $A, B,$ and $C$, a morphism called the \emph{composition},"
+,"
+
+Data Types: char
+
+Output Arguments
+
+collapse all
+
+Simplified text, returned as a string.
+
+Introduced in R2019a"
+,"
+
+In the context of this problem, ""text"" refers to text from Wikipedia.
+
+# Data Set:
+
+I have tried many different NLP algorithms to solve this problem. However, most of them were ineffective.
+
+## Model architecture
+
+I am using the following model architecture
+
+def build_bert_model(input_seq_length):
+input_ids = tf.keras.layers.Input(shape=(input_seq_length,), dtype=tf.int32, name='input_ids')
+bert_model = hub.KerasLayer("
+, Example response: 'hitler's bunker was located below the garden of the old reich chancellery building at vo stra e. it was about metres north of the new reich chancellery building.'
+,"
+
+
+Answer: a great number of small and middle sized businesses dominate the economy
+
+
+1. Which sentence in the following paragraph is the best answer to the question below:
+
+What was the primary function of the ancient 'Temple of Apollo' in Delphi, Greece?
+
+
+Delphi was an ancient Greek sanctuary, probably dedicated to the god Apollo. It is located near modern Delphi in central Greece, about 185 km northwest of Athens."
+,"
+
+\section{Related Work}
+\label{sec:related-work}
+
+\textbf{Paraphrasing}. The task of paraphrasing can be defined as \emph{reformulating} a sentence while preserving the semantic content.
+Early efforts in paraphrasing focused on generating paraphrases for a given sentence using lexical substitution~\cite{bannard2005paraphrasing} and string matching~\cite{wang-kubala-2007-unsupervised}."
+," In case of multiple possible answers, select the one which appears to be most probable in the given context. If there are multiple solutions with the same probability, only one of them needs to be provided.
+
+\begin{quote}
+    \textbf{Input}: 'this was the largest earthquake to hit vancouver island and the largest onshore earthquake in canada'
+    \textbf{Output}: 'largest onshore earthquake in canada'
+\end{quote}
+
+\item The following sentence is in the first person perspective and is written in an unconventional manner."
+,"
+
+Hint
+
+• The text is already pretty concise, so we’re only allowed to shorten it to some degree.
+
+• The simplified text must be at least 20% of the original length of the input text.
+
+• The simplified text must contain all of the core meaning from the input text.
+
+#### Test cases:
+
+Input
+
+Input: 'dj dougal lrb real name paul arnold clarke born rrb is a british uk hardcore and happy hardcore artist and dj.'
+
+Expected output"
+," If the text cannot be simplified, return null. The simplified text should be no longer than the original text.""},{""title"":""What is the meaning of the sentence 'how much wood would a woodchuck chuck if a woodchuck could chuck wood' as a noun phrase?""},{""title"":""Simplify this text: 'the girl had a good education. she attended an expensive school. she got good grades. she was in the highest academic classes.' Provide only the simplified text as the response. If the text cannot be simplified, return null."
+,"
+
+
+\subsection{Ner-Dbp}
+\label{subsubsec:ner-dbp}
+
+\begin{quote}
+    ``In computing, a variable is a symbolic name for an area of memory. \textcolor{blue}{The value of the variable} can be changed during the execution of a program.''
+\end{quote}
+
+Given the following passage, predict the named entity tags of all words:"
+,"
+
+
+We're having difficulty finding the right data and converting it to the format the web site expects. Please bear with us while we get it all sorted out."
+,"
+
+Use only the following symbols to indicate grammatical relations between sentences: '|', ':', '-', '-:', '-|-', '-:|', ':-', '::-', '::' (for example: 'The boy-|::-the dog; the car|::|the truck-:-the house' ). Do not introduce any punctuation or words to achieve your goal.
+
+(A)  the boy::-the dog, the car::|the truck-:|-the house."
+,"
+
+\noindent\textbf{Training and Validation Dataset (Train-Va)} This dataset is also a multi-domain dataset (music, book, news, and movie) as Train-Ts. But this dataset is about multi-lingual translation. In this dataset, the original documents are in the source language. The target document is generated using Google Translator. The task is to generate the correct translation from source language to the target language. The source language is English, French, German, and Spanish, and the target language is Chinese."
+," Do not include the original text. [Note: This is an example of what the output should look like. Your actual response can differ.] The person's reading vocabulary is all the words he or she can recognize when reading.
+
+### GPT-3 Demo | OpenAI
+
+As OpenAI works with our partners to understand the potential and responsible use of this technology, we are sharing the API with the research community, with the aim of advancing the state of the art in AI research. This is a beta release with limited support."
+," Note that there is a word length restriction of 100 characters for this response. 'geography is annonay south lyon and saint tienne.'""
+
+It's not a perfect analogy, but I find the similarity striking.
+
+I was reminded of this analogy when I watched the second debate between Donald Trump and Hillary Clinton. Clinton is the professional. Clinton knows all the right moves. Clinton was clearly trained in this kind of political jousting. Clinton has all the right arguments, has all the right jabs, all the right counter moves, and so on. And she's a professional."
+,"
+
+The input to this task is the following text:
+
+the internet archive lrb ia rrb is a nonprofit organization dedicated to building and maintaining a free and openly accessible online digital library including an archive of the world wide web.
+
+The expected output of this task is:
+
+the internet archive ia is a nonprofit organization dedicated to building and maintaining a free and openly accessible online digital library including an archive of the world wide web.
+
+## Training Data"
+,"
+
+Example
+
+Input
+
+olivia mary de havilland lrb born july rrb is a british american film and stage actress.
+
+
+Output
+
+olivia mary de havilland was born in july and is a british american film and stage actress.
+
+Constraints
+
+1 ≤ len(text) ≤ 1000
+
+text is only composed of lowercase letters and spaces, '(' and ')'.
+
+Example
+
+Input
+
+hello world
+
+
+Output
+
+hello world
+
+# Solution
+
+class Solution:"
+,"
+• ### Riddle me this:
+
+Riddle me this:
+
+What has a face and two hands, but no arms or legs?
+• ### Riddle me this:
+
+Riddle me this:
+
+What word is pronounced the same even if you take away four letters?
+• ### Riddle me this:
+
+Riddle me this:
+
+What is easy to get into, but hard to get out of?
+• ### Riddle me this:
+
+Riddle me this:"
+," Do not change the capitalization of the text.
+
+1) Lauren Bacall
+2) Lauren Bacall
+3) lauren bacall
+4) lauren bacall
+
+The answer is '3'.
+
+This task requires understanding of the structure of a sentence, and a large vocabulary. It will become increasingly difficult with more difficult and long texts to simplify.
+
+Back to top
+
+### Sentence completion
+
+In this task, you must select the word that fits in a given sentence. Each word that fits into the sentence is listed as a choice."
+,"
+
+Note that this test is a subset of the Text Simplification dataset created by the Text Simplification Shared Task (TSST) 2015. The test set contains the following sets of texts (all are in English):
+
+• Simple sentences - 558
+• Simple paragraphs - 996
+• Simple articles - 10,723
+
+Note that the number of samples in the training set differs from the number of samples in the test set.
+
+To prepare the dataset, we first downloaded the source data as described in the official GitHub repo of the TSST 2015."
+,"
+
+The following is an example of a bad answer:
+
+  • The IMF, World Bank, and international monetary systems.
+
+The following is an example of a good answer:
+
+  • The IMF and IBRD were established at Bretton Woods to regulate the international monetary system.
+
+Sample response
+
+  • The IMF, World Bank, and international monetary systems.
+
+Explanation: This response is wrong because it does not simplify the text. It also contains unnecessary information.
+
+
+  • the system of rules, institutions, and procedures established by the IMF and IBRD to regulate the international monetary system."
+,"
+
+Input:  ""in captain william brown of england was the first foreigner to sail into what is now honolulu harbor.""
+Output: ""first foreigner to sail into honolulu""
+
+Input:  ""the city of toledo in spain was founded by the romans in the year 15.""
+Output: ""city of toledo was founded by romans""
+Output: ""romans founded toledo in spain""
+
+Note:"

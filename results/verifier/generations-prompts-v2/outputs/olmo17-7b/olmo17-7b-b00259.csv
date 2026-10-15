@@ -1,0 +1,486 @@
+response,list,list_condition,generation_id,parsed_response,atomic_units,hallucinated_atomic_units
+"'
+
+Example Input: ['-201', 'b', '2677', '1095', '6929', '3301', 'R', '2031', 'h', 'Y', 'P', '5443', '7269', 'e', 'x', 'i', 'P', 'i', '6121', '1611', '1497', 'O', 'h', 'V', 'd']
+Example Output: no response",,"['january', 'june', 'november']",olmo17-7b|false_presuppositions-00477|5," NONE 
+
+ ",[],[]
+"
+
+[EX Q]: ['India', 'UK', 'India', 'India', 'India', 'France', 'France', 'India', 'India', 'India', 'Spain', 'Spain', 'France', 'UK', 'India', 'Italy']
+[EX A]:
+yes",,[],olmo17-7b|false_presuppositions-00480|5," India, UK, France, Spain, Italy 
+
+ ","[' India', 'UK', 'France', 'Spain', 'Italy \n\n ']","['india', 'uk', 'france', 'spain', 'italy']"
+"
+
+['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+Output:
+no response",,"['august', 'september']",olmo17-7b|false_presuppositions-00482|5," a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z
+
+ ",[],[]
+".
+Example: ['19711', '62.605', '434-2489', '235-5539', '6365', '6081', '1923', '3243', '7769', '8467', '7238', '8339', '2245', '8435', '4165', '7870', '7613', '3458', '97.857', '77.935']",,"['august', 'september', 'october']",olmo17-7b|false_presuppositions-00483|5," 19711, 62.605, 434-2489, 235-5539, 6365, 6081, 1923, 3243, 7769, 8467, 7238, 8339, 2245, 8435, 4165, 7870, 7613, 3458, 97.857, 77.935
+
+ ","[' 19711', '62.605', '434-2489', '235-5539', '6365', '6081', '1923', '3243', '7769', '8467', '7238', '8339', '2245', '8435', '4165', '7870', '7613', '3458', '97.857', '77.935\n\n ']","['2245', '7870', '19711', '6365', '7613', '8467', '1923', '4165', '77.935', '434-2489', '235-5539', '8339', '7238', '8435', '62.605', '3458', '3243', '7769', '97.857', '6081']"
+"
+Q: ['F', 'Z', 'c', 't', 'G', 'R', 'S', 'L', 'W', 'E', 'Y', 'g', 'U', 'l', 'X', 'n', 'w', 'V', 'm', 'g']
+A:
+yes response",,['november'],olmo17-7b|false_presuppositions-00485|5," F, Z, c, t, G, R, S, L, W, E, Y, g, U, l, X, n, w, V, m, g 
+
+ ","[' F', 'Z', 'c', 't', 'G', 'R', 'S', 'L', 'W', 'E', 'Y', 'g', 'U', 'l', 'X', 'n', 'w', 'V', 'm', 'g \n\n ']","['f', 'u', 'c', 'w', 'y', 'g', 't', 'e', 'n', 'z', 'r', 'm', 's', 'v', 'x', 'l']"
+"
+Teacher: Now, understand the problem? If you are still confused, see the following example:
+['1', 'Harmon', 'Smythe']
+Solution: ['no response']
+Reason: The user answer in this case is correct.
+
+Now, solve this instance: ['', 'x', '20', '9', 'L', 'G', 'T', 'Y', '8', 'g', 'y', 'P', '15', 'z', 'j', 'x', 's', 'G']
+Student:",,[],olmo17-7b|false_presuppositions-00487|5," NONE 
+
+ ",[],[]
+"
+['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+A:
+yes response",,"['january', 'february', 'may', 'july']",olmo17-7b|false_presuppositions-00488|5," January, February, March, April, May, June, July, August, September, October, November, December 
+
+ ","[' January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December \n\n ']","['april', 'november', 'september', 'october', 'august', 'december', 'march', 'june']"
+"
+Example: [f1, 6, 10, 12, 14, 14, 7, 8, 9]
+Output: [10, 14, 8]
+The two integers 6, 12, 14, 14, 8 are not in the list, as they are not distinct from each other.
+
+New input case for you: [f3, 5, 7, 3, 9, f5, 4]
+Output:
+[7, 9]",,"['april', 'august']",olmo17-7b|false_presuppositions-00490|5," f1, f3, f5, 6, 7, 8, 9, 10, 12, 14 
+
+ ","[' f1', 'f3', 'f5', '6', '7', '8', '9', '10', '12', '14 \n\n ']","['7', 'f5', 'f1', '14', '12', '9', '8', '6', '10', 'f3']"
+"
+question:
+List the dates of the months of a year that do not begin with the letter 'a'. Separate the items using semicolons as separators. Provide only the list without any additional information. If you cannot answer, respond with 'no response.'
+answer:
+[no response, no response, no response, no response, no response]
+
+
+question:
+What are the lists of universities offering business, philosophy and music programs?
+answer:",,[],olmo17-7b|false_presuppositions-00492|5," NONE 
+
+ ",[],[]
+" 
+['Troll', 'Ettore', 'Pooper', 'E', 'Pudding', 'Porcupine', 'C', 'Terrier', 'Heidi', 'Squealer', 'Rose', 'Cherry', 'Farmer', 'Lizzy', 'Coco']
+Output:",,[],olmo17-7b|false_presuppositions-00494|5," Troll, Ettore, Pooper, E, Pudding, Porcupine, C, Terrier, Heidi, Squealer, Rose, Cherry, Farmer, Lizzy, Coco 
+
+ ","[' Troll', 'Ettore', 'Pooper', 'E', 'Pudding', 'Porcupine', 'C', 'Terrier', 'Heidi', 'Squealer', 'Rose', 'Cherry', 'Farmer', 'Lizzy', 'Coco \n\n ']","['pudding', 'e', 'cherry', 'terrier', 'farmer', 'porcupine', 'heidi', 'c', 'lizzy', 'coco', 'squealer', 'pooper', 'ettore', 'rose', 'troll']"
+" If the question is correct, I'm fine with any answer. If you don't have a correct answer, that's fine too!
+Question: Every year, the Santa Maria's team of runners 'Cross the Finish Line' and each runner carries the final letter of their community's name, 'l' as they carry it across the finish line. After the last runner completes the final letter and passes the key to the organiser, the band plays the following song: 'santa maria cross the finish line, where has it been, has it been long, just like you'?",,[],olmo17-7b|false_presuppositions-00497|5," Santa Maria 
+
+ ",[],[]
+"
+Context: 7. Why are all funerals so depressing ? Every family has such great sadness . I would think happy times would be more prevalent at funerals . They do that at weddings though . 
+Question: What may be a plausible fact about me ?
+Answer: I'm in mourning.",,[],olmo17-7b|false_presuppositions-00500|5," NONE 
+
+ ",[],[]
+"
+
+September, January, June, February, August, October, December
+Output:
+yes response",,[],olmo17-7b|false_presuppositions-00501|5," September, January, June, February, August, October, December
+
+ ","[' September', 'January', 'June', 'February', 'August', 'October', 'December\n\n ']","['january', 'september', 'october', 'august', 'december', 'february', 'june']"
+" The proper year is different for each list item.
+Q: List the first four dates of events occurring in 2012 in ascending chronological order.
+A:
+2012-01-01, 2012-01-02, 2012-01-04, 2012-01-06",,['november'],olmo17-7b|false_presuppositions-00503|5," 2012-01-01, 2012-01-02, 2012-01-04, 2012-01-06 
+
+ ","[' 2012-01-01', '2012-01-02', '2012-01-04', '2012-01-06 \n\n ']","['2012-01-01', '2012-01-06', '2012-01-02', '2012-01-04']"
+"
+Q: ['h', 'q', '5161', '8421', 'w', 'z', '8777', '7595', '3363', 'z', 'p', 'r', '6981', '4693', '1549', 'y', '7851', '6875', 't', 'e', 'l', '2409', '8037', 'x', 'a']
+A:",,[],olmo17-7b|false_presuppositions-00510|5," h, q, 5161, 8421, w, z, 8777, 7595, 3363, z, p, r, 6981, 4693, 1549, y, 7851, 6875, t, e, l, 2409, 8037, x, a 
+
+ ","[' h', 'q', '5161', '8421', 'w', 'z', '8777', '7595', '3363', 'z', 'p', 'r', '6981', '4693', '1549', 'y', '7851', '6875', 't', 'e', 'l', '2409', '8037', 'x', 'a \n\n ']","['5161', '2409', '7851', 'h', '8421', 'w', 'z', 'a', 'p', 'y', 't', 'e', 'r', '7595', '8037', 'q', '4693', '1549', '8777', '6981', '3363', 'x', '6875', 'l']"
+"
+
+1, willy
+2, williams
+3, winston
+4, what
+5, whittier
+6, when
+
+John, Jr. and Barbara were a young married couple when their first child was born. How many months did they wait to have their second child? Provide only the number.
+
+1, 1
+2, 2
+3, 3
+4, 4
+5, 5
+6, 6
+7, 7
+8, 8
+9, 9
+10, 10
+
+What is the number of the sixth item in the list?",,[],olmo17-7b|false_presuppositions-00512|5," willy, williams, winston, what, whittier, when 
+
+ ","[' willy', 'williams', 'winston', 'what', 'whittier', 'when \n\n ']","['winston', 'willy', 'when', 'williams', 'what', 'whittier']"
+"
+Input: [""A"", ""I"", ""A"", ""C"", ""J"", ""E"", ""C"", ""A"", ""C"", ""A"", ""K"", ""A"", ""C"", ""I"", ""K"", ""J""]
+Output:
+A, I, A, C, J, E, C, A, C, A, K, A, C, I, K, J",,[],olmo17-7b|false_presuppositions-00515|5," A, I, A, C, J, E, C, A, C, A, K, A, C, I, K, J 
+
+ ","[' A', 'I', 'A', 'C', 'J', 'E', 'C', 'A', 'C', 'A', 'K', 'A', 'C', 'I', 'K', 'J \n\n ']","['e', 'i', 'k', 'c', 'j', 'a']"
+"
+Output:
+List 8 months of the year that end with the letter 'a'.'",,[],olmo17-7b|false_presuppositions-00516|5," NONE 
+
+ ",[],[]
+"
+
+Bearish Strategy %18",,[],olmo17-7b|false_presuppositions-00519|5," NONE 
+
+ ",[],[]
+"
+10/18/2014, 12/19/2013, 10/15/2014, 10/30/2014, 12/17/2013
+
+Given a random list of integers from range of (1...1000) what is the average time it takes for this list to be permuted?
+no response",,[],olmo17-7b|false_presuppositions-00521|5," NONE 
+
+ ",[],[]
+" Your task is to generate multiple answers for a question in the test results. The list of answers should be comma separated. List as many numbers, strings, and items as possible.
+Example: results: [1,2,5]
+Example solution: [4]
+Example explanation: In this question four answers are expected: (1) answers with the smallest number of keywords (2) answers with the largest number of keywords (3) answers with the lowest scoring score (4) answers with the highest scoring score. Output the answers with their item sequence.",,['april'],olmo17-7b|false_presuppositions-00527|5," numbers, strings, items, results, example, solution, explanation, keywords, score, answers 
+```### List without `and` or comma separation
+ 
+ ","[' numbers', 'strings', 'items', 'results', 'example', 'solution', 'explanation', 'keywords', 'score', 'answers \n```### List without `and` or comma separation\n \n ']","['example', 'numbers', 'answers \n```### list without `and` or comma separation', 'keywords', 'score', 'results', 'solution', 'explanation', 'items', 'strings']"
+"
+Input: ['43', 'O', 'e', '7269', '4865', '2623', 'O', 'K', 'Z', 'v', 'd', '1517', 's', '9391', '2103', 'R', 'U', 'V', 'b', 'v', 'K']
+Output:
+43, O, e, 7269, 4865, 2623, O, K, Z, v, d, 1517, s, 9391, 2103, R, U, V, b, v, K",,[],olmo17-7b|false_presuppositions-00528|5," 43, O, e, 7269, 4865, 2623, O, K, Z, v, d, 1517, s, 9391, 2103, R, U, V, b, v, K 
+
+ ","[' 43', 'O', 'e', '7269', '4865', '2623', 'O', 'K', 'Z', 'v', 'd', '1517', 's', '9391', '2103', 'R', 'U', 'V', 'b', 'v', 'K \n\n ']","['b', 'u', 'o', '43', '1517', '4865', 'z', 'e', 'k', '2103', 'r', '2623', 'd', 's', '7269', '9391', 'v']"
+"
+
+1929, 1944, 1958, 1972, 1985, 1999, 2012, 2037, 2053, 2074, 2095
+Output:
+no response",,[],olmo17-7b|false_presuppositions-00529|5," 1929, 1944, 1958, 1972, 1985, 1999, 2012, 2037, 2053, 2074, 2095
+
+ ",[],[]
+"
+Teacher: Now, understand the problem? Solve this instance: ['J', '14', 'e', 'p', '7', '1', 'L', '7', '15', '6', 'P', 'b', 'f', '5', 'Y', 'n', 'n', 'J', 'g']
+Student:
+4, 6, 10, 14, 15",,[],olmo17-7b|false_presuppositions-00530|5," J, 14, e, p, 7, 1, L, 7, 15, 6, P, b, f, 5, Y, n, n, J, g, 4, 6, 10, 14, 15 
+
+ ","[' J', '14', 'e', 'p', '7', '1', 'L', '7', '15', '6', 'P', 'b', 'f', '5', 'Y', 'n', 'n', 'J', 'g', '4', '6', '10', '14', '15 \n\n ']","['b', 'f', '14', '10', '7', 'g', 'y', '5', 'e', 'n', 'p', '1', '4', '15', '6', 'l', 'j']"
+"
+
+Q: [['Clowns', 'eatType', 'pub'], ['Clowns', 'customer rating', 'low'], ['Clowns', 'area', 'riverside']]
+
+A: Clowns is a pub on the riverside with a low customer rating.
+****
+Q: [['Zizzi', 'eatType', 'pub'], ['Zizzi', 'food', 'Japanese'], ['Zizzi', 'familyFriendly', 'yes']]
+
+A: The Zizzi Japanese pub is family friendly
+****",,[],olmo17-7b|false_presuppositions-00537|5," Clowns, Zizzi 
+
+ ","[' Clowns', 'Zizzi \n\n ']","['zizzi', 'clowns']"
+"
+Q: ['141', '315', '313', '197', '205', '171', '361', '1', '255', '523', '249', '391', '549', '523', '317']
+A:
+[141, 315, 313, 197, 205, 171, 361, 1, 255, 523, 249, 391, 549, 523, 317]",,[],olmo17-7b|false_presuppositions-00539|5," 141, 315, 313, 197, 205, 171, 361, 1, 255, 523, 249, 391, 549, 523, 317 
+
+ ","[' 141', '315', '313', '197', '205', '171', '361', '1', '255', '523', '249', '391', '549', '523', '317 \n\n ']","['141', '315', '1', '197', '391', '523', '361', '255', '313', '549', '205', '249', '317', '171']"
+"
+
+Palladium, phenolate, alcohol, ketone, reagent, PCL3
+Solution: yes response",,[],olmo17-7b|false_presuppositions-00544|5," Palladium, phenolate, alcohol, ketone, reagent, PCL3
+
+ ","[' Palladium', 'phenolate', 'alcohol', 'ketone', 'reagent', 'PCL3\n\n ']","['reagent', 'pcl3', 'ketone', 'phenolate', 'alcohol', 'palladium']"
+"
+list the seven colors in the rainbow that have the letter 'c' in them.
+A:
+Yes",,"['red', 'orange', 'yellow', 'green', 'blue', 'violet']",olmo17-7b|false_presuppositions-00546|5," NONE 
+
+ ",[],[]
+"
+Q: Name all of the colors in the rainbow that contain the letter 'f'.
+A:
+['red', 'orange', 'yellow', 'green', 'blue', 'purple']",,[],olmo17-7b|false_presuppositions-00547|5," red, orange, yellow, green, blue, purple 
+
+ ","[' red', 'orange', 'yellow', 'green', 'blue', 'purple \n\n ']","['orange', 'red', 'purple', 'yellow', 'green', 'blue']"
+"
+Teacher: Now, understand the problem? Solve this instance: Classify these letters by the number of minimum inverses they contain.",,[],olmo17-7b|false_presuppositions-00554|5," NONE 
+
+ ",[],[]
+"
+
+[Q]: 1. 1) 1b) 1. 2) 2b) 1. 3) 3b) 3. 4) 4b) 4. 5) 5b) 5. 6) 6b) 6. 7) 7b) 7. 8) 8b) 8. 9) 9b) 9. 10) 10b) 10. 11) 11b) 11. 12) 12b) 12. 13) 13b) 13. 14) 14b) 14. 15) 15b) 15. 16) 16b) 16. 17) 17b) 17.",,"['orange', 'green', 'indigo']",olmo17-7b|false_presuppositions-00555|5," NONE 
+
+ ",[],[]
+"
+Sentence 1: A man is performing a leap on a skateboard over a ramp. Sentence 2: a man doing tricks
+A:
+yes response",,[],olmo17-7b|false_presuppositions-00558|5," man, ramp, skateboard 
+
+ ","[' man', 'ramp', 'skateboard \n\n ']","['skateboard', 'ramp', 'man']"
+"
+PROBLEM: sentence1:location is destroying in location sentence1:location is being destroyed in location 
+
+SOLUTION: yes
+
+PROBLEM: sentence1:person is being conned by organization sentence1:person is signing contract with organization 
+
+SOLUTION: yes
+
+PROBLEM: sentence1:award is giving to organization sentence1:organization is winning  award 
+
+SOLUTION:
+yes",,"['red', 'orange', 'green']",olmo17-7b|false_presuppositions-00559|5," location, person, organization, award, contract 
+
+ ","[' location', 'person', 'organization', 'award', 'contract \n\n ']","['organization', 'award', 'location', 'person', 'contract']"
+"
+Q: list the colors of a rainbow.
+A:
+No.",,['violet'],olmo17-7b|false_presuppositions-00561|5," NONE 
+
+ ",[],[]
+" A rainbow is a color spectrum or arch of color with wavelengths corresponding to the visible spectrum. Rainbows can be created through natural causes, or through more advanced technology. The term ""rainbow"" can also be used in other ways, such as an umbrella to protect against rain.
+question:
+Find all people with at least 2 common names. Output the last name, first name, middle name, and suffix. Provide only the items that do not contain additional information. If you cannot answer, respond with 'no response'. Rainbows are natural color bands and the word may also refer to bridges that consist of alternating colours.",,['yellow'],olmo17-7b|false_presuppositions-00564|5," NONE 
+
+ ",[],[]
+"
+Rationale: Rain is not natural on earth.
+Q: ""What is the best city to visit in the world according to ROGER MOORE?""
+A:
+no response",,[],olmo17-7b|false_presuppositions-00565|5," Roger Moore 
+
+ ",[],[]
+"
+Example: [""2:14.17, 5:08.89"", '9:14.43', '19:08.51', '33:28.94']
+Example solution: ['14:42', '28:08', '29:43']
+Example explanation: The 4th and 5th items will be separated as semicolon separated.",,['blue'],olmo17-7b|false_presuppositions-00569|5," NONE 
+
+ ",[],[]
+"
+
+Q: Input: Consider Input: h: Is this information correct?, response: I'd like to make some changes, please.
+
+A: no response
+****
+Q: Input: Consider Input: h: What is the name of the class given by MURDER? h: What color are the letters on the MURDER shirt?
+
+A: yes
+****
+Q: Input: Consider Input: h: Do you have any information about Faye Joelle Lalonde? h: What are her kids' names?
+
+A:
+yes
+****",,[],olmo17-7b|false_presuppositions-00575|5," MURDER, Faye Joelle Lalonde 
+**** 
+",[],[]
+".
+Problem:Let me give you an example: q=23, e=79
+The answer to this example can be: 3, 23
+Here is why: A rainbow is composed of colors; to say ""3 colors in the rainbow"" is like saying ""3 colors"" in the rainbow.
+
+OK. solve this:
+q=8, e=13, g=25
+Answer:
+7, 8, 13",,[],olmo17-7b|false_presuppositions-00584|5," NONE 
+
+ ",[],[]
+"
+Input: [Column_Name, Column_ID, Column_Family]
+Output:
+[column_name, column_id, column_family]",,[],olmo17-7b|false_presuppositions-00588|5," column_name, column_id, column_family 
+
+ ","[' column_name', 'column_id', 'column_family \n\n ']","['column_id', 'column_family', 'column_name']"
+"
+List the 3 metals that are in the category of a conductor.
+
+Answer:
+Cordell Kendall, the longest serving general manager in the NFL, has held the position for a total of how many years?",,['violet'],olmo17-7b|false_presuppositions-00589|5," NONE
+
+ ",[],[]
+"
+What are the 5 colors of the rainbow that start with the letter 'y' from the rainbow list?
+A:
+True",,['yellow'],olmo17-7b|false_presuppositions-00592|5," NONE 
+
+ ",[],[]
+"
+
+Input: Consider Input: List of sentences in the sentence order: 1. Extinct as the dodo , the great auk's last known specimen was killed off as recently as 1844 . 2. In May 1844, the great auk was declared extinct after the last reported specimen was killed . 3. The great auk or Atlantic puffin became extinct in 1844 .
+
+Output: 1
+
+
+Input: Consider Input: List of sentences in the sentence order: 1. The Royal Society is world famous for being one of the oldest scientific academies. 2.",,[],olmo17-7b|false_presuppositions-00594|5," Royal Society 
+
+ ",[],[]
+"
+Example: ['List items to include into colors of rainbow:', '1.', 'Your task is to find the one sentence that identifies a color', '2.', 'Explanation: 'A name for a color in a rainbow is blue.', '3.', 'Explanation: 'A range for the rainbow is red to purple.']
+Example solution: ['Blue: rainbow, 1.', 'red to purple: rainbow, 3.']
+Example explanation: A rainbow does not have colors that are not rainbow colors.",,[],olmo17-7b|false_presuppositions-00596|5," Blue, red, purple 
+
+ ","[' Blue', 'red', 'purple \n\n ']","['red', 'purple', 'blue']"
+" The colors that end with the letter 'i' are: iiiiiiiiiiiiiifiniifiinifisiiiiiifiisiiiiiiifiitiiiiiiiifi, ixvserenisdn.
+no response",,[],olmo17-7b|false_presuppositions-00602|5," NONE 
+
+ ",[],[]
+"
+Problem:[""Blue"", ""Green"", ""Purple"", ""Teal"", ""Orange"", ""Yellow""]Solution:
+['Blue; Green; Purple; Teal; Orange; Yellow']
+Solution:
+yes",,[],olmo17-7b|false_presuppositions-00603|5," Blue, Green, Purple, Teal, Orange, Yellow 
+
+ ","[' Blue', 'Green', 'Purple', 'Teal', 'Orange', 'Yellow \n\n ']","['orange', 'purple', 'yellow', 'green', 'teal', 'blue']"
+"
+\begin{minipage}[t]{0.4\textwidth}\vspace{0pt}
+\begin{flushleft}
+$red$, $green$, $yellow$
+\end{flushleft}
+\end{minipage}
+
+\textbf{Expected Output:} Given the information from the question, the \noun{note} should provide an answer in a given format. See examples in \textbf{Examples.}
+
+
+\item \textbf{Non-Plaintext Answer:} \noun{name} is red. \noun{target} is green.
+",,[],olmo17-7b|false_presuppositions-00611|5," name, target 
+
+ ","[' name', 'target \n\n ']","['target', 'name']"
+"
+(A) the letter (B) the number (C) the plural or (D) there is no sequence
+Output:
+D",,[],olmo17-7b|false_presuppositions-00615|5," NONE 
+
+ ",[],[]
+"
+Q: ['I', 'look', 'for', 'world', 'war', 'to', 'decrease', 'in', 'weaker', 'light', 'magnitude', 'P', 'so', 'where', 'are', 'they', 'are', 'available', 'and', 'worsen', 'the', 'lower', 'the', 'better', 'the', 'low', 'the', 'better', 'when', 'was', 'it', 'that', 'they', 'went', 'to', 'say', 'hello']
+A:",,['yellow'],olmo17-7b|false_presuppositions-00616|5," world war 
+
+ ",[],[]
+" The list should be in descending order (smallest numbers in the lower end).
+[Q]: [1, 8, 7, 6, 2, 9, 4, 3]
+[A]: yes
+
+
+[Q]: [8, 9, 2, 1, 3]
+[A]: no
+
+
+[Q]: [2, 8, 3, 9, 6, 1]
+[A]:
+yes",,[],olmo17-7b|false_presuppositions-00619|5," NONE 
+
+ ",[],[]
+"
+Q: [{'first': 25, 'second': 5}, {'first': 79, 'second': 76}, {'first': 65, 'second': 41}, {'first': 65, 'second': 25}, {'first': -52, 'second': -9}, {'first': -18, 'second': -2}, {'first': 87, 'second': -46}, {'first': 3, 'second': -82}, {'first': 25, 'second': -37}, {'first': 69, 'second': -74}]
+A:
+no response",,"['denver', 'hartford', 'dover', 'springfield', 'indianapolis', 'des moines', 'concord', 'providence', 'richmond', 'madison']",olmo17-7b|false_presuppositions-00623|5," NONE 
+
+ ",[],[]
+"
+2 2
+
+#1, Connecticut, Stamford
+#2, Hato mayor del rey, Dominican Republic, Santo Domingo Este
+3 3
+
+#1, Fujairah, United Arab Emirates, Fujairah, Sharjah, United Arab Emirates, United Arab Emirates, United Arab Emirates
+#2, Maracaibo, Venezuela, Maracaibo, Guayana (Venezuela)
+4 4
+
+#1, Washington, DC, Washington, D.C., United States, District of Columbia, DC, United States",,"['phoenix', 'hartford', 'tallahassee', 'honolulu', 'helena', 'raleigh', 'oklahoma city', 'harrisburg', 'nashville', 'richmond', 'charleston', 'cheyenne']",olmo17-7b|false_presuppositions-00627|5," Connecticut, Stamford, Hato mayor del rey, Dominican Republic, Santo Domingo Este, Fujairah, United Arab Emirates, Sharjah, Maracaibo, Venezuela, Guayana (Venezuela), Washington, DC, Washington, D.C., United States, District of Columbia, DC, United States 
+
+ ","[' Connecticut', 'Stamford', 'Hato mayor del rey', 'Dominican Republic', 'Santo Domingo Este', 'Fujairah', 'United Arab Emirates', 'Sharjah', 'Maracaibo', 'Venezuela', 'Guayana (Venezuela)', 'Washington', 'DC', 'Washington', 'D.C.', 'United States', 'District of Columbia', 'DC', 'United States \n\n ']","['connecticut', 'united states', 'santo domingo este', 'sharjah', 'hato mayor del rey', 'guayana (venezuela)', 'dominican republic', 'dc', 'stamford', 'united arab emirates', 'venezuela', 'fujairah', 'maracaibo', 'd.c.', 'district of columbia', 'washington']"
+"
+Sentence: 'the group of dogs look up at the person walking'. Is 'walking' the longest word in the sentence?
+Solution:
+No",,"['phoenix', 'little rock', 'boise', 'springfield', 'indianapolis', 'des moines', 'annapolis', 'lansing', 'jefferson city', 'lincoln', 'carson city', 'raleigh', 'bismarck', 'oklahoma city', 'harrisburg', 'providence', 'columbia', 'pierre', 'nashville', 'austin', 'salt lake city', 'montpelier', 'richmond', 'olympia', 'madison']",olmo17-7b|false_presuppositions-00628|5," dogs, person 
+
+ ","[' dogs', 'person \n\n ']","['person', 'dogs']"
+"
+State capitals that contain a l.
+A:
+New York, Alabama, Florida, North Dakota, Arkansas, Vermont, Colorado, North Carolina, Illinois, and Connecticut",,"['little rock', 'tallahassee', 'atlanta', 'honolulu', 'springfield', 'indianapolis', 'annapolis', 'lansing', 'st. paul', 'helena', 'lincoln', 'albany', 'raleigh', 'columbus', 'oklahoma city', 'salem', 'columbia', 'nashville', 'salt lake city', 'montpelier', 'olympia', 'charleston']",olmo17-7b|false_presuppositions-00631|5," New York, Alabama, Florida, North Dakota, Arkansas, Vermont, Colorado, North Carolina, Illinois, Connecticut ```### List without `and```` 
+ 
+ ","[' New York', 'Alabama', 'Florida', 'North Dakota', 'Arkansas', 'Vermont', 'Colorado', 'North Carolina', 'Illinois', 'Connecticut ```### List without `and```` \n \n ']","['alabama', 'vermont', 'illinois', 'north dakota', 'arkansas', 'florida', 'north carolina', 'connecticut ```### list without `and````', 'colorado', 'new york']"
+"
+STATE, STATEFIPS, CAPITALS.
+
+50, 12, Fredericksburg.
+50",,"['montgomery', 'juneau', 'phoenix', 'sacramento', 'denver', 'atlanta', 'honolulu', 'springfield', 'indianapolis', 'des moines', 'frankfort', 'baton rouge', 'annapolis', 'boston', 'lansing', 'jackson', 'jefferson city', 'helena', 'lincoln', 'carson city', 'concord', 'trenton', 'santa fe', 'albany', 'providence', 'nashville', 'austin', 'montpelier', 'richmond', 'charleston', 'madison', 'cheyenne']",olmo17-7b|false_presuppositions-00633|5," Fredericksburg 
+
+ ",[],[]
+"
+
+1. Delaware
+2. Wyoming
+3. Arkansas
+4. Georgia
+5. Minnesota
+6. Massachusetts
+7. South Carolina
+8. North Carolina
+9. Illinois
+10. Rhode Island
+11. California
+12. Indiana
+13. Maine
+14. Ohio
+15. Kentucky
+16. New Mexico
+17. North Dakota
+18. Connecticut
+19. Maryland
+20. Washington
+21. Connecticut
+22. Nevada
+23. South Dakota
+24. Tennessee
+25. Utah
+26. Wisconsin
+27. Vermont
+28. New Hampshire
+29. Alaska
+30.",,"['sacramento', 'tallahassee', 'boise', 'springfield', 'indianapolis', 'des moines', 'augusta', 'annapolis', 'boston', 'lansing', 'st. paul', 'jackson', 'jefferson city', 'carson city', 'santa fe', 'bismarck', 'columbus', 'salem', 'harrisburg', 'nashville', 'austin', 'salt lake city', 'charleston', 'madison']",olmo17-7b|false_presuppositions-00638|5," Delaware, Wyoming, Arkansas, Georgia, Minnesota, Massachusetts, South Carolina, North Carolina, Illinois, Rhode Island, California, Indiana, Maine, Ohio, Kentucky, New Mexico, North Dakota, Connecticut, Maryland, Washington, Nevada, South Dakota, Tennessee, Utah, Wisconsin, Vermont, New Hampshire, Alaska 
+
+ ","[' Delaware', 'Wyoming', 'Arkansas', 'Georgia', 'Minnesota', 'Massachusetts', 'South Carolina', 'North Carolina', 'Illinois', 'Rhode Island', 'California', 'Indiana', 'Maine', 'Ohio', 'Kentucky', 'New Mexico', 'North Dakota', 'Connecticut', 'Maryland', 'Washington', 'Nevada', 'South Dakota', 'Tennessee', 'Utah', 'Wisconsin', 'Vermont', 'New Hampshire', 'Alaska \n\n ']","['nevada', 'california', 'illinois', 'alaska', 'massachusetts', 'rhode island', 'delaware', 'utah', 'new hampshire', 'georgia', 'indiana', 'maryland', 'north carolina', 'south carolina', 'minnesota', 'new mexico', 'wyoming', 'washington', 'south dakota', 'north dakota', 'arkansas', 'kentucky', 'connecticut', 'vermont', 'ohio', 'tennessee', 'wisconsin', 'maine']"
+"
+Topsfield, East Lyme, Wolfeboro, Bay City, Danville, Ansonia, Islington, Derry, Leicester, Eagle Lake
+A:
+Islington, Derry, Eagle Lake, no response, no response, Bay City, Danville",,"['atlanta', 'augusta', 'annapolis', 'albany', 'austin']",olmo17-7b|false_presuppositions-00646|5," Topsfield, East Lyme, Wolfeboro, Bay City, Danville, Ansonia, Islington, Derry, Leicester, Eagle Lake 
+
+ ",[],[]
+"
+
+List the names of 20 Prime Ministers of Canada.
+List the first 4 US state capitals from the south. List the first 5 countries that won the World Cup Soccer Tournament.
+no response, , no response",,"['carson city', 'concord', 'columbus', 'columbia', 'charleston', 'cheyenne']",olmo17-7b|false_presuppositions-00648|5," NONE 
+
+ ",[],[]
+" If the answer to a question is 'no response', the correct answer will be 'yes' and that particular sentence will not be relevant.
+State capital of Alaska, Loring has an area of 20,000 acres (81.5 km2)
+yes
+
+List the US states that begin with letter 'd'. Choose a state from the list and return all of its areas.
+Yes; these were the five US states beginning with letter 'd': 'Delaware, District of Columbia, Idaho, Alabama, and Montana.'
+
+In Greek mythology, what is the name of Hermes mother?
+no
+
+",,"['denver', 'dover', 'des moines']",olmo17-7b|false_presuppositions-00649|5," Delaware, District of Columbia, Idaho, Alabama, Montana 
+
+ ",[],[]
+"
+Example Output: list the capital cities of texas.
+
+Example Input: create a list of the 20 largest us cities. add the state and capital of each state to the list.
+Example Output:
+list the 20 largest us cities. add the state and capital of each state to the list.",,['frankfort'],olmo17-7b|false_presuppositions-00651|5," NONE 
+
+ ",[],[]

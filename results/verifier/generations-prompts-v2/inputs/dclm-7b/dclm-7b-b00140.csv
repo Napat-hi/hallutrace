@@ -1,0 +1,597 @@
+prompt,response
+,"
+
+
+I would like to propose the following solution. It may be a bit of a wild card. First of all, one of the most useful resources in this regard is Wikipedia.
+
+1. Find the title in the English Wikipedia. In this case, that's the article title ""Stockholm Archipelago"" and not the one ""Stockholm Archipelago Region"" that has been suggested."
+,"
+
+Sample inputs:
+
+Input 1: 'the castle was built in the 1400 by sir john cornwall later lord fanhope from ransoms after the battle of agincourt.'
+
+Output 1: 'the castle was built in the 1400s by sir john cornwall later lord fanhope from ransoms after the battle of agincourt.'
+
+Input 2: 'the castle was built in the 13c by sir john cornwall later lord fanhope from ransoms after the battle of agincourt.'"
+," You should ignore anything outside the quotation marks.
+
+Hint
+
+If you want to know more about word embeddings check out this excellent post.
+
+### 1.2.2. Model¶
+
+In this part, we will implement a simple embedding lookup model, the EmbeddingBag layer. This is the model that is used by the simplification application.
+
+As you learned in the previous lesson, embeddings are a technique for mapping words into a lower-dimensional space. This is achieved by representing words as a vector, such that similar words have similar embeddings."
+,"
+
+Input:
+""The history of this city is very complex. It started out as a catholic settlement but in the sixteenth century it became a protestant city. The influence of other religions has only recently become apparent. Some people suggest that the history of this city should be simplified for the sake of brevity.""
+Output:
+""This city started out as catholic and became protestant in the sixteenth century. Its history has only recently become complex and has also become brief.""
+
+The simplifications must ensure that the overall meaning of the text is preserved. The following simplifications are not valid:
+
+"
+,"
+
+A text simplification system could have been used in conjunction with the machine translation system to create a simplified French-to-English translation, as the following example shows:
+
+Source text (French):
+
+Le rôle des médias à la campagne électorale peut être questionné.
+
+French-to-English translation produced by the MT system:
+
+The function of the media during the election campaign can be questioned.
+
+Simple text (English):
+
+The role of the media in the election campaign can be questioned."
+,"
+
+• The full input string is available in the $input parameter.
+• The input string is always at least 5 characters long.
+
+### Dataset Format
+
+Training/validation set
+
+The first line contains an integer $T$ $T \leq 2\,000$ giving the number of test cases, followed by $T$ lines, each containing a single string to be simplified.
+
+Test set
+
+The first line contains an integer $T$ $T \leq 2\,000$ giving the number of test cases, followed by $T$ lines, each containing a single string to be simplified."
+,"
+
+\end{itemize}
+
+\subsection{Examples for QA: Factoid}
+The following examples are for QA for factoid type questions
+
+\subsubsection{Examples for SQuAD}
+
+\textbf{Context:}
+\begin{tabular}{lll}
+Question: & What year did the first edition of 'The Complete Works'  \\ & of Jules Verne appear? \\
+Answer: & 1873 \\
+\\
+Question: & Who was the father of Jules Verne?\\
+Answer: & Pierre Verne"
+,"
+
+(Optional) Note: if you choose to participate in the contest without using machine learning and/or data mining algorithms, you can choose the 'I do not use machine learning and/or data mining algorithms' checkbox. This will exclude your submission from the leaderboard evaluation on machine learning and data mining algorithms, and you will only be ranked based on the results from the simple English test.
+
+This contest is now closed.
+
+## Instructions:
+
+2. Open the file called sample_data.json and note the data structure. Each entry in the dataset represents a single sample.
+3."
+," This is a challenge for natural language generation. In contrast to many existing tasks, it is unlikely that one could obtain human-labeled training data. The proposed task would require a novel data collection, or perhaps crowdsourcing via a game. However, the task would be amenable to human evaluation.
+• #### RETHINKING MODEL-BASED REASONING IN NEURAL NETWORKS
+
+In this thesis, I have sought to understand the mechanisms of reasoning that may be at work in deep learning."
+,"
+
+
+\textbf{Example Answer: }chongqing became a municipality of the republic of china."
+,"
+
+  2. Simplify the following text to improve its readability, ensuring its core meaning remains intact: 'the prime minister sasha was killed in an accident which led to the end of the civil war.'
+
+  3. Simplify the following text to improve its readability, ensuring its core meaning remains intact: 'he was an active member of the party in its early days and he had the opportunity to travel abroad, where he had the chance to study the techniques of mass political organization and to read important works on the theory of revolution.'
+
+Dataset Download"
+,"
+
+## Pre-trained models and datasets
+
+The table below shows results from the starting checkpoint on the validation set.
+
+Model Params Fine-tuning Dataset Validation set
+Pretraining
+Simplified text
+Average Rouge score
+Average F1 score
+BART-large-cnn-qa-wsc
+13,905,867
+1
+0
+22.54
+
+### How to get started with the library
+
+#### Prerequisites
+
+• Python 3.6.1+
+• TensorFlow 1.13+
+
+#### Installing the library"
+,"
+    \ex \noindent Which of the following sentences contains a passive voice construction:
+    \choice I have already decided which restaurant we should go to.
+    \choice A waiter brought me my food.
+    \choice The restaurant owner apologized for our late arrival.
+    \choice We will never return to this restaurant.
+    \ex \noindent In the following sentence: 'We went to the restaurant because our friends wanted to eat there,' is 'to eat' the subject or the direct object? 
+    \choice The subject
+    \choice The direct object"
+,"
+
+•   The text must be no longer than 30 words.
+
+Sample Answer
+
+Sample input: 'blake has been awarded honorary degrees including an honorary degree by cambridge university in and honorary doctorates from the institute of education loughborough university the open university and anglia ruskin university in.'
+
+Sample output: 'blake has been awarded honorary degrees by cambridge and the institute of education and open university and anglia ruskin university.'
+
+## HackerRank Coupon (33% Off)"
+,"
+
+Your answer
+
+  • Your name to display (optional):
+  • Your email address to display (optional):
+
+Type the characters (case-sensitive) you see in the image below
+
+Privacy policy
+
+By submitting the answer to any question you agree that the following licence applies to the text you provide: https://creativecommons.org/licenses/by-nc/3.0/"
+,"
+
+• #### C.1.4.11 Cancel
+
+Provide a simple message stating that the request has been cancelled.
+
+#### C.1.5 Converting units
+
+The Converting units service tests the ability of the system to perform basic unit conversions.
+
+##### C.1.5.1 Convert
+
+For the specified unit, provide the value converted into the specified unit. If the unit is invalid, provide a message indicating it is invalid, and do not attempt to convert the value.
+
+##### C.1.5.2 Unit of"
+,"
+
+The following questions refer to the following diagram:
+
+'Bacterial cells (1), (2) and (3) are the smallest types of bacterial cells, whereas the bacterial cell (4) is one of the largest. Bacterial cells (5) and (6) are known as motile cells, which means that they can move around independently and use whiplike flagella to do so. Bacterial cell (7) is the only bacterial cell that lives in a host.'
+
+According to the diagram, which of the following statements is true about bacterial cell (7)?"
+,"
+
+### Hint
+
+You can assume that the string can only contain lowercase alphabetic characters.
+
+### Input Format
+
+• The first line contains $$T$$ ($$1 \leq T \leq 1000$$), the number of test cases.
+• The next $$T$$ lines contain a single test case each. Each test case is a single string that contains only lowercase alphabetic characters (a-z).
+
+### Output Format
+
+For each test case, print a single line containing the simplified string.
+
+### Sample Input 0
+
+5"
+,"
+
+Hint: Consider splitting the text into paragraphs before simplifying.
+
+Note: If multiple paragraphs are provided, this is only a requirement in the case of a single question. In the case of a list of questions, only the question being answered is to be addressed.
+
+Hint: If you find it difficult to answer this question, please feel free to check the 'lafayette ronald hubbard' wikipedia page."
+,"
+
+
+Input Example Output Example
+danestal is a commune in the d partement of calvados in the basse normandie region of france. Danestal is a commune in the department of Calvados in the Basse-Normandie region of France.
+
+Write a review
+
+Your email address will not be published. Required fields are marked *"
+," Note that in some cases multiple simplifications may be appropriate. (1 marks)
+
+Incorporate the following text into a simple, appropriate sentence (2 marks): 'The company made its first appearance in 1889 as a British Guiana company with the objective of bringing the mineral wealth of the hinterland of its holdings to the Atlantic seaboard of its territories.'
+
+Short Answer Questions (3 marks)
+
+Which of the following text best fits the title 'Brick and mortar': 'The project will take at least seven years to complete."
+,"
+
+Note: The text can be simplified in any way you deem fit, including adding new words, changing punctuation, removing words, and so on.
+
+#### Input Example 1:
+
+""pushing daisies is an american television comedy drama created by bryan fuller that aired on abc for two seasons.""
+
+#### Output Example 1:
+
+""comedy drama""
+
+#### Input Example 2:
+
+""this is the third sample in the sample input""
+
+#### Output Example 2:
+
+""sample""
+
+#### Input Example 3:"
+,"
+
+The text has been simplified to ""applied mechanics examines the response of bodies (solids and fluids) or systems of bodies to external forces.""
+
+Ans.
+
+(b)
+
+'applied mechanics examines the response of bodies lrb solids and fluids rrb or systems of bodies to external forces.' Provide only the simplified text as the response.
+
+The text has been simplified to ""applied mechanics examines the response of bodies (solids and fluids) or systems of bodies to external forces.""
+
+Ans.
+
+(c)"
+,"
+
+A. 'long beach borders orange county on its southeast edge.'
+
+B. 'long beach is at the south end of orange county.'
+
+C. 'long beach is located southeast of orange county.'
+
+D. 'long beach is the southeast edge of orange county.'
+
+E. 'long beach is on the east of orange county.'
+
+3) Identify the following paragraph:
+
+1. 'The house had been in their family for several generations. When she was a little girl, her grandfather had told her many stories about the house.'
+
+A. Narrative
+
+"
+,"
+
+For example, given the following text: 'This sentence is an example of a simplified problem statement for the simplification of a sentence detection task', the model should produce the following response: 'This is an example of a simplified problem statement for the simplification of a sentence detection task.'
+
+• The input is a single sentence, and is no more than 400 characters long
+• The sentence should be in a language the model was trained to output.
+
+#### Output
+
+• The output is a single sentence, and must be between 10 and 300 characters long"
+," You can assume there are no capitalization, punctuation, or typographic errors in the text.
+
+This task is based on a simplified version of a test problem for a project called Semantic Scholars, whose aim is to develop natural language processing technologies to assist researchers in the discovery of new knowledge.
+
+Solution Stats
+
+57.14% Correct | 42.86% Incorrect
+Last Solution submitted on Jan 09, 2019
+
+Problem Comments"
+,"
+
+The test taker will enter the simplified text from the question into the computer keyboard, where it will then be checked against the answers provided by the test maker.
+
+This is the test.
+
+Test-taking is very easy. The answers are available immediately after the test.
+
+Test-making is slightly more complicated. It requires a text file, or several text files, depending on how the tests are going to be generated. The file(s) contains the text to be used as the question text and the answers.
+
+The test files must contain a header containing the text 'TEXTFILE:'."
+," For example, the answer for the question is shown below should be 'biologist physician doctor emigrated south brazil blumenau.'"
+," This is from the GATE 2016-SET-2 paper - a machine comprehension question. The text which the question mentions is - ""Audubon chapters (...) are named for John James Audubon, a 19th-century ornithologist and artist. Audubon chapters are organized within geographic areas, generally counties, but sometimes townships or municipalities. They are part of the statewide network of Audubon society chapters and are governed by state or local bylaws. The largest chapter has more than 700 members, while the smallest chapter has fewer than 10."
+,"
+
+\end{task}
+
+\begin{task}{task1:2}
+Simplify the following text to improve its readability, ensuring its core meaning remains intact: 'i'm really enjoying the new house. it's nice to have a kitchen of our own and plenty of room to breathe.' Provide only the simplified text as the response.
+
+\end{task}
+
+\begin{task}{task1:3}"
+,"
+
+You can test the endpoint at https://simplify-text.herokuapp.com/simplify.
+
+The following tests illustrate various ways to use this service. You should run each of these commands using the same project directory. The service will respond with the simplified text in its body. For more on Postman, see its official documentation.
+
+1. The easiest way to start is to use the web interface at https://simplify-text.herokuapp.com/simplify
+
+2. Use the Postman extension with the built-in editor."
+," The simplified text may be shorter or longer than the original text.
+
+• For example: 'according to graham yost, the credited writer of speed, whedon wrote most of the dialogue.'
+
+## 输出格式
+
+For each input test case, print the simplified text in a single line.
+
+### 样例
+
+Input"
+," (1 mark)
+
+Question 3
+
+In this question you are asked to write a paragraph describing the research described in the text in question 2.
+
+Text: ""The experiments carried out by Avery and his group in 1944 were seminal, demonstrating for the first time the role played by DNA in protein synthesis. At the time however the results of their work were sceptically received by the scientific community, and it was not until the development of genetic markers and the discovery of other methods of genetic transfer such as conjugation and transduction by Joshua Lederberg, that Avery’s work was accepted and its importance recognized.""
+
+"
+," Do not use punctuation except for hyphen (-) and apostrophe (). The text can be simplified by deleting words, changing word forms, removing sentences and paragraphs or joining text together. A hyphen (not an apostrophe) can be used to join text together, as well as to replace deleted letters, e.g. 'don-t', 'co-hostess' and 'wh-ite' (all lower case).
+  • I would make no changes. It reads fine to me. It is simple enough that any first grader could understand it."
+,"
+  • This item requires the candidate to use their editing skill to improve readability of text, which includes an example of editing out non-essential content. The candidate must know how to identify the correct form of possessive case for a singular or plural noun, which is a level 4 skill.
+  • This item uses text that is already in a reasonably readable form to make editing decisions, therefore a level 3 skill is required.
+
+Item 2
+
+Provide a simplified sentence from the following text:
+
+When did you first start working as a clerk, Miss Smith?"
+,"
+
+### Part 4: Long-form text classification
+
+Long-form text classification task. You are provided with a set of news articles from the BBC website as a test file (news_files/news_articles.jsonl). Each news article has already been pre-tokenized (split into tokens) and encoded into a sequence of numbers, one per token. The tokens are encoded using byte-pair encoding, so that each number represents a token type. The first line of each article is a list of the number of tokens in the article, followed by the sequence of encoded tokens."
+," The full text must still be stored as the input text.
+
+• Output text must be less than 50 characters.
+• Output text should ideally be a single word or short phrase, but if there are multiple potential output text candidates then you may output either of them.
+• You may use any reasonable format for output text (e.g. comma separated list of words, JSON, newline separated list of words).
+• If the input text cannot be simplified to a single word or short phrase (i.e."
+,"
+
+
+\item \textbf{Problem:} Write a program that given two non-negative integers, returns a string representing the sum of the two numbers.
+
+
+\item \textbf{Problem:} Write a program that calculates the average of two integers.
+
+
+\item \textbf{Problem:} Write a program that returns the largest integer amongst two integers.
+
+
+\item \textbf{Problem:} Write a program that given a non-empty string, returns a string containing only uppercase letters."
+,"
+    [B] The term “driver” may refer to anyone who drives for a living. However, it usually refers to someone who drives a vehicle for hire, such as a horse-drawn carriage, a luxury sedan, a motor coach, or especially a limousine. Those who drive buses or non passenger vehicles are usually referred to as drivers.
+    Answer: B
+  • Question:"
+,"
+    • Example Output:'seadragons have weed like projections that camouflage them among seaweed'
+
+
+Simplified Text
+
+Your Answer
+
+
+If you're interested, check out the rest of the samples on this page.
+
+
+Check out the full competition page for details about entering the competition. If you have a question that's not answered there, send us a message at
+
+About the data
+
+The full dataset is available on Kaggle at The full dataset can be broken down into four parts:"
+,"
+
+• Sample Input: bagnator is situated on the abbottabad nathi gali road some kilometres away from abbottabad
+• Sample Output: bagnator is located on abbottabad nathi gali road abbottabad nathi gali road.
+• Sample Input: The road is located on nathi some way away from abbottabad
+• Sample Output: nathi gali road is located abbottabad nathi gali road.
+• Sample Input: abbottabad road is on nathi located some way away from abbottabad"
+," Example: Input: 'Bismuth lr3r3 oxide reacts with mineral acids to give the corresponding bismuth lr3r3 salts.' Output: 'Bismuth lr3r3 oxide reacts with mineral acids to give bismuth lr3r3 salts.'
+
+You may use the following characters as delimiters of atomic number and valency:
+
+• The digits 0-9
+• The letters b, B, l, L, r, R, i, I, and i
+
+The atomic number is an integer between 1 and 9, inclusive."
+,"
+
+\subsection{Example}
+
+The following is an example submission file, which is a plain text file (UTF-8 encoding) named \texttt{example.txt} (you may name it whatever you want), for the task \textit{Indonesian Sentence Simplification}.
+
+\begin{verbatim}
+Original text:
+Keluarga Bapak saya sangat menghargai saya.
+
+Simplify this text:
+My family loves me.
+\end{verbatim}
+
+
+\section{How to participate}"
+,"
+
+
+We need to solve the given problem in an end-to-end manner with a single framework, because simplifying text is closely related to the task of extracting entities. For example, the sentence ""Bill Clinton is the former president of the United States"" contains two entities - 'Bill Clinton' and 'former president of the United States'. To improve the readability of this sentence, we need to replace 'Bill Clinton' with his alias 'Pepe' and 'former president of the United States' with 'Brazilian football player'."
+,"
+
+Sample Data (Test)
+
+
+Sample Data (Train)
+
+Text: 'A man died last night at home. He is said to have been suffering from cancer of the lungs.'
+Label:'man died'
+
+Text: 'The company's financial position was described as ""delicate"".""'
+Label: 'financial position'
+
+Text: 'A family was in a car that was in a minor accident. The family are unhurt.'
+Label: 'family was in car'
+
+Text: 'There is no question that the man is very rich.'"
+,"
+
+Task 1.1.4:
+
+The text to be simplified contains one or more proper names. Which of the following is a correct way of referring to such names:
+
+  1. in their original form,
+  2. as shortened versions using initial letters or acronyms,
+  3. as fully expanded forms,
+  4. as numbers corresponding to the position of the name in the list of names in a dictionary,
+  5. in another way?
+
+Task 1.1.5:"
+,"
+
+• 'the average human is about. tall, although this varies significantly from place to place.'
+
+• 'The average adult human is about to feet tall although this varies significantly from place to place.'
+
+• 'the average human is about feet tall, although this varies significantly from place to place.'
+
+• 'The average human is about. tall although this varies significantly from place to place.'
+
+• 'the average adult human is about. tall although this varies significantly from place to place.'
+
+• 'The average adult human is about. to feet tall although this varies significantly from place to place.'"
+,"
+
+You can try to answer this problem, but you will get the answer only if you are logged in. Please, sign in and try again.
+
+View similar questions that have already been answered:"
+,"
+    • Tendencies of philosophes to apply rationality to every problem
+    • Philosophes' tendency to apply rationality to every problem
+  • Simplify the following text to improve its readability, ensuring its core meaning remains intact:'since the end of the century there has been a general feeling that there is a need for more transparency.' Provide only the simplified text as the response.
+    • There is a need for more transparency since the end of the century.
+    • Need for more transparency since the end of the century."
+,"
+
+Test data
+
+  1. Simplify: 'i love you' (the answer should be 'i love you').
+  2. Simplify: 'i dont love you' (the answer should be 'i dont love you').
+  3. Simplify: 'i dont like you' (the answer should be 'i dont like you').
+  4. Simplify: 'you do like me' (the answer should be 'you do like me').
+  5. Simplify: 'you dont love me' (the answer should be 'you dont love me').
+  6."
+,"
+
+Problem Statement
+
+  • First, we will convert the text from an image to text.
+  • Then, we will apply an algorithm to simplify it.
+  • Finally, we will generate the response for the text, which is the simplified version of the text.
+
+
+  1. Run the pipeline in Azure Pipelines.
+  2. View the execution of the pipeline and check the outputs.
+  3. Use the API to send a request to simplify a text.
+
+Run the pipeline
+
+  1. Sign in to Azure DevOps.
+  2."
+,"
+
+Your Answer:
+
+The Question:
+  • The following text: 'colwell is a city in floyd county iowa united states.'
+Your Answer:"
+,"
+
+\subsection{Model 2}
+
+The following text is about `the state of being a girl.' Simplify the following text to improve its readability, ensuring its core meaning remains intact: 'the state of being a girl is not defined in scientific or medical terms.' Provide only the simplified text as the response.
+
+\subsection{Model 3}
+
+The following text is about `gender discrimination.' Simplify the following text to improve its readability, ensuring its core meaning remains intact: 'gender discrimination occurs when people are treated differently based on their sex.'"
+,"
+
+### QA2 - QA - Rotten Tomatoes: Given the text: ""The new Batman movie got awful reviews."", paraphrase the text to make it sound more formal or polite.
+
+### QA3 - QA - Fake News Detection: Is the following sentence fake news? Provide only Yes or No as the response.
+
+'In a survey of more than 1000 people conducted by researchers at Princeton university, over 85% of respondents believed the Earth to be flat.'"
+,"
+
+The text simplification system uses statistical text generation to perform the simplification, so that it can be trained on a large collection of text data. The training data consists of a set of sentences and their simplifications. The system has been trained using data from the Simple Wikipedia. A total of over 20 million sentence pairs were used. The system was implemented in Python and uses scikit-learn for training.
+
+For the example of ""mickey s house of villains is a direct to video film produced by the walt disney company."" the system produces ""a film is produced by the company."""
+," 
+This task presents an interesting problem since we are not only dealing with coreference resolution, but also paraphrasing, summarization and entity linking.
+The text has to be paraphrased to remove extraneous information and summarize the key points. It also needs to resolve the coreferences and link the entities.
+
+\paragraph{Data preprocessing}
+We preprocessed the text using a basic set of regular expressions for replacing the coreferences with their antecedents. 
+We then lowercased all the text to remove capitalization and tokenized the text into a sequence of words."
+,"
+
+I'm not looking for a fully grammatically correct sentence, just the gist of the original text.
+
+So my thought process for simplifying the text was:
+
+""The body of Tsar Nicholas II Tsarina Alexandra and three of their daughters were finally interred at St. Peter and Paul Cathedral in St. Petersburg on July 80 years after they were murdered.""
+
+However I think this is still far too wordy and doesn't necessarily simplify the original text at all.
+
+Can anyone give me a simplified version of the original text? I'm very interested in how you went about it."
+," 'the councilors are chosen by the electorate and the council aldermen by the council itself'
+4. Consider the following two sentences: '1. The house prices in London are high. 2. The house prices are high in London. Which of the following options is correct?' 'The first is the correct sentence.'
+5. Consider the following three sentences: 1. I am interested in politics. 2. I am interested in politics. 3. I am interested in politics. Which of the following options is correct? '2. and 3. are correct but 1. is incorrect'
+6."
+," The answer should contain the following words and phrases: june, in, mass games, arirang, artistic, july, it was, gymnastic and artistic, the response, the core meaning."
+," Q6.
+
+Q1. If the sentence is correct, mark 'NO CHANGE' as the answer.
+Q2. Identify and correct the error if there is any, mark the correction as the answer.
+Q3. Insert a punctuation mark to make the sentence correct, mark the option that you choose as the answer.
+Q4. Rearrange the sentences to make a coherent paragraph, mark the option that you choose as the answer.
+Q5."
+,"
+
+The sentence should be shortened to read as follows: 'instant bestseller spent six weeks on NYT list.'
+
+Example #6
+
+'the novel is also about a couple's struggle to have a child, and the difficulties it causes in their relationship.'
+
+The sentence should be shortened to read as follows: 'novel's about a couple's struggle to have a kid.'
+
+Example #7
+
+'a good thriller has many things, including some thrills, some surprises and a strong sense of danger.'"

@@ -1,0 +1,1078 @@
+passage,response,atomic_units,hallucinated_atomic_units
+,"
+
+
+```python
+def generate_summary(text, limit=250):
+  """"""Generate summary of the input text.
+
+  Args:
+    text: input text.
+    limit: maximum length of the summary in words.
+
+  Returns:
+    summary text.
+  """"""
+  tokenized_text = tokenizer(text)
+
+  if len(tokenized_text) > limit:
+    raise ValueError('Input text is too long. Maximum length is {}'.format(limit))
+
+  encoded_input = tokenizer.encode_plus(
+      text,","Here are the independent facts broken down from the passage: | False |
+ **Function definition**: A Python function named `generate_summary` is defined. | True |
+ **Function purpose**: The purpose of the `generate_summary` function is to generate a summary of the input text. | True |
+ **Function arguments**: The `generate_summary` function takes two arguments: | False |
+	* `text`: the input text. | True |
+	* `limit`: the maximum length of the summary in words (default value is 250). | False |
+ **Function return value**: The `generate_summary` function returns the summary text. | True |
+ **Tokenization**: The input text is tokenized using a `tokenizer` function. | True |
+ **Length check**: The function checks if the length of the tokenized text exceeds the specified `limit`. | False |
+ **Error handling**: If the input text is too long, the function raises a `ValueError` with a message indicating the maximum allowed length. | False |
+ **Encoding**: The input text is encoded using the `encode_plus` method of the `tokenizer` object. | False |
+Note that some of these facts are related to each other (e.g., the function definition and its purpose), but they can be considered independent in the sense that they describe distinct aspects of the passage. | True","Here are the independent facts broken down from the passage: |
+ **Function arguments**: The `generate_summary` function takes two arguments: |
+	* `limit`: the maximum length of the summary in words (default value is 250). |
+ **Length check**: The function checks if the length of the tokenized text exceeds the specified `limit`. |
+ **Error handling**: If the input text is too long, the function raises a `ValueError` with a message indicating the maximum allowed length. |
+ **Encoding**: The input text is encoded using the `encode_plus` method of the `tokenizer` object."
+,"
+
+The test will be marked by machine using a strict mark scheme. You will receive a mark out of 40 and will be shown your answers as you type them. You can review your answers and make changes. You will be able to re-submit your response until the deadline.
+
+The deadline will be Friday, 10 August at 6pm.
+
+To enter, you will need to submit your answer by the deadline. Your response will then be randomly selected from all correct entries for the judging.
+
+The closing date is Friday, 10 August.","Here are the independent facts broken down from the passage: | True |
+ The test will be marked by machine using a strict mark scheme. | False |
+ The test is out of 40 marks. | False |
+ You will be able to see your answers as you type them. | True |
+ You will be able to review and make changes to your answers. | True |
+ You will be able to re-submit your response until the deadline. | True |
+ The deadline for submission is Friday, 10 August at 6pm. | True |
+ To enter, you must submit your answer by the deadline. | False |
+ Correct entries will be randomly selected for judging. | False |
+ The closing date for the test is Friday, 10 August. | True |
+Note that facts 6 and 9 are related, but they are presented as separate pieces of information in the passage. Fact 6 provides the specific time of the deadline, while fact 9 simply states the closing date. | False"," The test will be marked by machine using a strict mark scheme. |
+ The test is out of 40 marks. |
+ To enter, you must submit your answer by the deadline. |
+ Correct entries will be randomly selected for judging. |
+Note that facts 6 and 9 are related, but they are presented as separate pieces of information in the passage. Fact 6 provides the specific time of the deadline, while fact 9 simply states the closing date."
+,"
+
+Sample Output
+
+Summary: German tourist has survived a night in a national park after being missing for almost 24 hours.
+
+Summary: 25-year-old Sabrina Osterkamp survived night in a national park in South Australia after abandoning her car in Mount Gambier.
+
+Summary: Police were notified of German tourist's disappearance at midday on Sunday.
+
+Summary: Sabrina Osterkamp was found at about 11 am in Glenelg National Park.","Here are the independent facts broken down from the passage: | False |
+ A German tourist survived a night in a national park. | True |
+ The tourist, Sabrina Osterkamp, is 25 years old. | True |
+ Sabrina Osterkamp was missing for almost 24 hours. | True |
+ Sabrina Osterkamp abandoned her car in Mount Gambier. | True |
+ The national park where Sabrina Osterkamp spent the night is located in South Australia. | True |
+ The police were notified of Sabrina Osterkamp's disappearance at midday on Sunday. | False |
+ Sabrina Osterkamp was found at approximately 11 am. | True |
+ Sabrina Osterkamp was found in Glenelg National Park. | False","Here are the independent facts broken down from the passage: |
+ The police were notified of Sabrina Osterkamp's disappearance at midday on Sunday. |
+ Sabrina Osterkamp was found in Glenelg National Park."
+," Provide only the summary as the response. 
+2. Provide a comprehensive summary of the following text: 'Australian designer Dane De Vita has been awarded a prestigious Design Australia Fellowship for 2018. The fellowship, which recognises Australian-based designers and artist in a variety of fields, was awarded to De Vita to support his new collection 'The Beauty of Disintegration', which will launch in February next year. The collection was born out of a 'dark time' in De Vita's life, which inspired him to experiment with fabrics and textures, including materials such as hair, feathers, wood and clay.","Here is a summary of the passage broken down into independent facts: | False |
+ Dane De Vita is an Australian designer. | False |
+ Dane De Vita was awarded a Design Australia Fellowship for 2018. | False |
+ The Design Australia Fellowship recognizes Australian-based designers and artists in various fields. | False |
+ The fellowship was awarded to support De Vita's new collection, ""The Beauty of Disintegration"". | False |
+ ""The Beauty of Disintegration"" collection will launch in February of the following year. | False |
+ The collection was inspired by a difficult time in De Vita's life. | False |
+ De Vita experimented with various materials for the collection, including hair, feathers, wood, and clay. | False","Here is a summary of the passage broken down into independent facts: |
+ Dane De Vita is an Australian designer. |
+ Dane De Vita was awarded a Design Australia Fellowship for 2018. |
+ The Design Australia Fellowship recognizes Australian-based designers and artists in various fields. |
+ The fellowship was awarded to support De Vita's new collection, ""The Beauty of Disintegration"". |
+ ""The Beauty of Disintegration"" collection will launch in February of the following year. |
+ The collection was inspired by a difficult time in De Vita's life. |
+ De Vita experimented with various materials for the collection, including hair, feathers, wood, and clay."
+," Provide only the summary as the response.
+The goal of the summary is to make it easy to understand the key points of the entire article.
+
+Write a summary of the following text in one or two sentences: 'A new report by scientists suggests that global warming has led to a dramatic and worrying increase in the rate at which Antarctic ice is melting. The new report, published in the scientific journal Nature, shows that Antarctica’s surface ice is melting three times faster than previously thought. The team of researchers behind the report from the University of California say the results are a serious warning of a possible increase in sea levels.","Here is a summary of the passage in two sentences: A new report published in the scientific journal Nature reveals that Antarctic ice is melting at a rate three times faster than previously thought due to global warming. The findings, conducted by researchers from the University of California, serve as a warning of a potential increase in sea levels. | False","Here is a summary of the passage in two sentences: A new report published in the scientific journal Nature reveals that Antarctic ice is melting at a rate three times faster than previously thought due to global warming. The findings, conducted by researchers from the University of California, serve as a warning of a potential increase in sea levels."
+,"
+
+    1. How does the article ""An 18-year-old student who stripped naked and ran through the streets of Byron Bay to win a free kebab has been labelled a 'goose' in court."" help you to write your summary?
+    2. How does ""That's what you are."" help you to write your summary?
+    3. How does ""I don't know why you would want a kebab at that time of day"" help you to write your summary?
+  10. Which two sentences should you include in your summary?
+    1.","Here are the independent facts broken down from the passage: | False |
+ An 18-year-old student ran naked through the streets of Byron Bay. | True |
+ The student's motivation for running naked was to win a free kebab. | True |
+ The student was labelled a 'goose' in court. | True |
+ Someone said ""That's what you are"" (likely in reference to the student being a 'goose'). | True |
+ Someone questioned the student's desire for a kebab at a particular time of day, saying ""I don't know why you would want a kebab at that time of day"". | True |
+Note that the passage appears to be a series of quotes and statements, rather than a cohesive narrative. The independent facts are therefore somewhat fragmented and lack context. | True",Here are the independent facts broken down from the passage:
+,"
+
+Answered by Expert 31st Oct 2015
+
+1. Please remember to submit the text of the question in the box above.
+
+2. Provide only the summary as the response","Here are the independent facts from the passage: | True |
+ The passage was answered by an expert. | False |
+ The date of the answer is 31st October 2015. | False |
+ There is a box above where the text of the question should be submitted. | True |
+ The response should only include a summary. | True"," The passage was answered by an expert. |
+ The date of the answer is 31st October 2015."
+,"
+
+We provide the summary using the following procedure:
+\begin{enumerate}
+\item Parse the article with a text parsing algorithm \citep{Zhang2018}.
+\item Remove non-content sentences using a simple NLP sentence classification method \citep{Zhang2018}.
+\item Select a sentence set based on a score computed for each sentence by averaging the word vectors \citep{Mikolov2013} of its words.
+\item Compute a summary based on the selected sentence set.
+\end{enumerate}","Here are the independent facts broken down from the passage: | False |
+ The procedure for providing a summary involves four steps. | True |
+ A text parsing algorithm is used to parse the article, as described by Zhang (2018). | True |
+ Non-content sentences are removed using a simple NLP sentence classification method, also described by Zhang (2018). | False |
+ A score is computed for each sentence by averaging the word vectors of its words. | False |
+ The word vectors are based on the work of Mikolov (2013). | False |
+ A sentence set is selected based on the computed scores. | False |
+ A summary is computed based on the selected sentence set. | True |
+ Zhang (2018) has published work on text parsing algorithms and NLP sentence classification methods. | False |
+ Mikolov (2013) has published work on word vectors. | True","Here are the independent facts broken down from the passage: |
+ Non-content sentences are removed using a simple NLP sentence classification method, also described by Zhang (2018). |
+ A score is computed for each sentence by averaging the word vectors of its words. |
+ The word vectors are based on the work of Mikolov (2013). |
+ A sentence set is selected based on the computed scores. |
+ Zhang (2018) has published work on text parsing algorithms and NLP sentence classification methods."
+,"
+
+The candidate is expected to understand the meaning of the passage, to focus on key details and main ideas and to be able to organise the information given in the passage.
+
+The response should be structured and include a brief introduction and conclusion. Information taken from the passage must be organised in a coherent and cohesive manner and the response should show that the candidate has understood the task.
+
+The summary should be a condensed version of the original text, not a paraphrase or a commentary. It should contain the main ideas from the passage.","Here are the independent facts broken down from the passage: | False |
+ The candidate is expected to understand the meaning of the passage. | True |
+ The candidate should focus on key details and main ideas in the passage. | True |
+ The candidate should be able to organize the information given in the passage. | True |
+ The response should have a brief introduction. | True |
+ The response should have a brief conclusion. | True |
+ Information from the passage should be organized in a coherent manner. | True |
+ Information from the passage should be organized in a cohesive manner. | True |
+ The response should demonstrate the candidate's understanding of the task. | True |
+ The summary should be a condensed version of the original text. | True |
+ The summary should not be a paraphrase. | True |
+ The summary should not be a commentary. | True |
+ The summary should contain the main ideas from the passage. | True",Here are the independent facts broken down from the passage:
+," Do not include the question.
+
+  • Q47
+
+    Read the text: 'A woman is suing a university after she claims she was raped by a stranger at her college's annual summer fete. The young student from the US has launched a court action against the Massachusetts Institute of Technology (MIT) in Boston after she says the university did not provide her with sufficient protection from sexual assault. She alleges the school's failure to ensure safety of her and her fellow students was ""egregious"".","Here are the independent facts from the passage: | False |
+ A woman is suing a university. | False |
+ The woman claims she was raped by a stranger at her college's annual summer fete. | False |
+ The woman is a student from the US. | False |
+ The university being sued is the Massachusetts Institute of Technology (MIT). | False |
+ The MIT is located in Boston. | False |
+ The woman alleges that the university did not provide her with sufficient protection from sexual assault. | False |
+ The woman describes the school's failure to ensure safety as ""egregious"". | False","Here are the independent facts from the passage: |
+ A woman is suing a university. |
+ The woman claims she was raped by a stranger at her college's annual summer fete. |
+ The woman is a student from the US. |
+ The university being sued is the Massachusetts Institute of Technology (MIT). |
+ The MIT is located in Boston. |
+ The woman alleges that the university did not provide her with sufficient protection from sexual assault. |
+ The woman describes the school's failure to ensure safety as ""egregious""."
+," This may involve using your own words and reordering sentences, rather than trying to paraphrase each sentence.
+  3. Use the 'key-words' method. Look for keywords or words that stand out or words that are emphasized. For example, in the text above, the word 'killed' would be an obvious keyword. You could also identify the word'rebuilt' in that text. Write down these keywords and then brainstorm sentences using them. For example: 'A Pennsylvania couple have been killed... A 1923 Model T Ford... skidded off the roadway and flipped over... The couple were returning home...","Here are the independent facts broken down from the passage: | False |
+ To paraphrase effectively, it's better to use your own words. | True |
+ Reordering sentences can be a useful technique when paraphrasing. | True |
+ The ""key-words"" method is a technique that can be used for paraphrasing. | True |
+ Keywords are words that stand out or are emphasized in a text. | True |
+ Identifying keywords can help with brainstorming sentences. | True |
+ Writing down keywords can be a useful step in the paraphrasing process. | True |
+ A Pennsylvania couple was killed in an incident. | True |
+ A 1923 Model T Ford was involved in the incident. | True |
+ The vehicle skidded off the roadway and flipped over. | True |
+ The couple was returning home when the incident occurred. | True",Here are the independent facts broken down from the passage:
+," [5] * Question 10: Provide the main title for the following text: A British Airways flight en route to Los Angeles had to be diverted to Anchorage because a passenger was being abusive. The airline says the passenger was becoming increasingly disruptive and aggressive as the flight to Los Angeles continued. The flight was diverted to Anchorage, where police escorted the passenger off. ""On arrival in Anchorage, the individual was met by police and removed from the aircraft,"" the airline said in a statement. ""We apologize to the customers who were affected by the diversion.","Here are the independent facts broken down from the passage: | True |
+ A British Airways flight was en route to Los Angeles. | False |
+ The flight had to be diverted to Anchorage. | False |
+ The reason for the diversion was a passenger being abusive. | False |
+ The passenger was becoming increasingly disruptive and aggressive during the flight. | False |
+ The flight was diverted to Anchorage, where police were waiting. | False |
+ Police escorted the abusive passenger off the aircraft in Anchorage. | False |
+ The airline apologized to customers who were affected by the diversion. | False |
+ The incident occurred on a British Airways flight that was originally destined for Los Angeles. | False"," A British Airways flight was en route to Los Angeles. |
+ The flight had to be diverted to Anchorage. |
+ The reason for the diversion was a passenger being abusive. |
+ The passenger was becoming increasingly disruptive and aggressive during the flight. |
+ The flight was diverted to Anchorage, where police were waiting. |
+ Police escorted the abusive passenger off the aircraft in Anchorage. |
+ The airline apologized to customers who were affected by the diversion. |
+ The incident occurred on a British Airways flight that was originally destined for Los Angeles."
+,"
+
+
+\begin{itemize}
+  \item \textbf{Answer Key} \\
+  - \textbf{Title}: A man's obituary asked that people don't vote for Hillary Clinton
+  - \textbf{Summary}: A man's obituary asks people not to vote for Hillary Clinton
+\end{itemize}
+
+
+\subsection{The first sentence is incorrect:}
+
+\begin{itemize}","Here are the independent facts broken down from the passage: | False |
+ There is an obituary about a man. | True |
+ The obituary makes a request regarding voting. | True |
+ The request is to not vote for Hillary Clinton. | True |
+ The passage includes a title and a summary. | False |
+ The title and summary both mention the obituary's request about not voting for Hillary Clinton.  | True |
+Note that the passage does not provide any information about the man, his relationship to Hillary Clinton, or the context of the obituary. It only mentions the request made in the obituary. | False","Here are the independent facts broken down from the passage: |
+ The passage includes a title and a summary. |
+Note that the passage does not provide any information about the man, his relationship to Hillary Clinton, or the context of the obituary. It only mentions the request made in the obituary."
+," Don't get the summary wrong because it's the key to the writing task.
+
+2. Write an essay (see sample essay in the box above) using these words in a coherent way: 'Plea', 'bail', 'appeal', 'conviction','sentenced','suspended sentence', 'felony', 'offence', 'prisoner', 'jail', 'assault', 'weapon', 'guilty'. The vocabulary is relatively easy if you are a native speaker.","Here are the independent facts broken down from the passage: | True |
+ The summary is crucial to the writing task. | True |
+ An essay is required for the writing task. | True |
+ A sample essay is provided for reference. | False |
+ The essay must use the following vocabulary words in a coherent way: | False |
+   - Plea | False |
+   - Bail | False |
+   - Appeal | False |
+   - Conviction | False |
+   - Sentenced | True |
+   - Suspended sentence | False |
+   - Felony | False |
+   - Offence | True |
+   - Prisoner | True |
+   - Jail | True |
+   - Assault | True |
+   - Weapon | True |
+   - Guilty | True |
+ The vocabulary required for the essay is relatively easy for native speakers. | True"," A sample essay is provided for reference. |
+ The essay must use the following vocabulary words in a coherent way: |
+   - Plea |
+   - Bail |
+   - Appeal |
+   - Conviction |
+   - Suspended sentence |
+   - Felony"
+," \n\nThe summary contains a lot of redundant information that makes the summary too long. You should remove the redundant information and shorten the summary.\n')
+print('The summary is long. It can be shortened. This can be done by reducing the amount of redundant information in the summary.\n')
+
+#In[ ]:
+
+
+""""""Task 1: Remove Redundant Information""""""
+
+#Create a function that can remove redundant information from a string
+def remove_redundancy(string):
+    #Initialization
+    removed_redundancy = ''","Here are the independent facts broken down from the passage: | True |
+ The summary contains redundant information. | True |
+ The redundant information makes the summary too long. | True |
+ Removing redundant information can shorten the summary. | True |
+ Reducing the amount of redundant information in the summary can make it shorter. | True |
+ A function can be created to remove redundant information from a string. | True |
+ The function to remove redundant information is named ""remove_redundancy"". | True |
+ The function ""remove_redundancy"" takes a string as input. | True |
+ The function ""remove_redundancy"" has an initialization step. | True |
+ A variable named ""removed_redundancy"" is initialized in the function ""remove_redundancy"".  | False |
+Note that some of these facts may be implicit or inferred from the context, but they can be considered as independent facts based on the given passage. | True"," A variable named ""removed_redundancy"" is initialized in the function ""remove_redundancy"". "
+,"
+
+Question 2
+
+A. Summarize the following passage. 
+
+B. Provide a response in the context of what the writer is trying to communicate.
+
+'While it seems like just yesterday that Apple co-founder Steve Jobs passed away, it is actually over a year ago. The year-long anniversary was recently celebrated in a somewhat unusual way, through a tribute to Jobs at Apple Park in Cupertino, California, where he once worked.
+
+The tribute was organized by Jobs' close friend and Apple Fellow Jeff Williams.","Here are the independent facts broken down from the passage: | False |
+ Steve Jobs, the co-founder of Apple, passed away. | False |
+ Steve Jobs' death occurred over a year ago. | False |
+ A tribute to Steve Jobs was held at Apple Park in Cupertino, California. | False |
+ Apple Park is located in Cupertino, California. | False |
+ Steve Jobs once worked at Apple Park. | False |
+ The tribute to Steve Jobs was organized by Jeff Williams. | False |
+ Jeff Williams is a close friend of Steve Jobs. | False |
+ Jeff Williams is an Apple Fellow. | False","Here are the independent facts broken down from the passage: |
+ Steve Jobs, the co-founder of Apple, passed away. |
+ Steve Jobs' death occurred over a year ago. |
+ A tribute to Steve Jobs was held at Apple Park in Cupertino, California. |
+ Apple Park is located in Cupertino, California. |
+ Steve Jobs once worked at Apple Park. |
+ The tribute to Steve Jobs was organized by Jeff Williams. |
+ Jeff Williams is a close friend of Steve Jobs. |
+ Jeff Williams is an Apple Fellow."
+,"
+
+Summary of a text is a concise description of the text that gives a brief overview of the main points of the text. In the text to be summarized the most important words are highlighted with a blue or yellow highlighter. These words are then summarized in your own words.
+
+Summary of the text:
+Oleg Kalashnikov was found dead at home in Kiev. The Ukrainian Interior Ministry said that it was a homicide and that it was most likely a suicide. There are many other ex-politicians who are also dead in different circumstances.","Here are the independent facts broken down from the passage: | False |
+ A summary of a text is a concise description that gives a brief overview of the main points. | True |
+ Important words in a text to be summarized are often highlighted with a blue or yellow highlighter. | False |
+ These highlighted words are then summarized in the reader's own words. | True |
+ Oleg Kalashnikov was found dead at his home in Kiev. | True |
+ The Ukrainian Interior Ministry classified Oleg Kalashnikov's death as a homicide. | False |
+ The Ukrainian Interior Ministry also suggested that Oleg Kalashnikov's death was likely a suicide. | False |
+ There have been deaths of other ex-politicians under different circumstances. | True","Here are the independent facts broken down from the passage: |
+ Important words in a text to be summarized are often highlighted with a blue or yellow highlighter. |
+ The Ukrainian Interior Ministry classified Oleg Kalashnikov's death as a homicide. |
+ The Ukrainian Interior Ministry also suggested that Oleg Kalashnikov's death was likely a suicide."
+," The summary should include all of the main details from the text but should not include details about how the text was published or the opinions of the reporter who wrote the text. The summary should not include personal information such as names, addresses, or telephone numbers. It is acceptable to use contractions and to change tenses if the information is not provided in the text. A good summary will be no longer than 30-40% of the text. For example, if the text is 100 words long, the summary will be no longer than 25-30 words. Do not include any information that you are unsure of.","Here are the independent facts broken down from the passage: | True |
+ A summary should include all main details from the text. | True |
+ A summary should not include details about how the text was published. | True |
+ A summary should not include the opinions of the reporter who wrote the text. | True |
+ A summary should not include personal information such as names, addresses, or telephone numbers. | True |
+ It is acceptable to use contractions in a summary. | True |
+ It is acceptable to change tenses in a summary if the information is not provided in the text. | True |
+ A good summary should be no longer than 30-40% of the original text. | True |
+ If the original text is 100 words long, a good summary should be no longer than 25-30 words. | False |
+ A summary should not include any information that the writer is unsure of. | True"," If the original text is 100 words long, a good summary should be no longer than 25-30 words."
+," Do not provide any content from the original text.
+
+Example Responses
+
+Example response: 
+'It's going to be a whopper. Joel Burger, 24, and Ashley King. And she said yes - paving the way for a Burger-King wedding. What a combo!'
+Example response: 
+'It's going to be a whopper. Joel Burger, 24, and proposed to his 23-year-old girlfriend Ashley King. And she said yes - paving the way for a Burger-King wedding. What a combo!'
+Example response:","Here are the independent facts broken down from a hypothetical passage: | True |
+ Joel Burger is 24 years old. | True |
+ Joel Burger proposed to his girlfriend. | True |
+ Joel Burger's girlfriend's name is Ashley King. | True |
+ Ashley King is 23 years old. | True |
+ Ashley King said yes to the proposal. | True |
+ The combination of Joel Burger and Ashley King's names is a play on words with the fast-food chain Burger King. | True",
+,"
+
+Solution Preview
+
+Answer 1:
+The response provides a brief summary of the given text. According to the text, Britney Montenegro, a 20-year-old woman was arrested in Orlando, Florida after a fight broke out involving several people. Apparently, the fight started in a bar but spilled out onto the streets. It was her own blood that was on her and she was taken into custody by the police. However, it was discovered that the blood was not hers, but the blood of another individual.","Here are the independent facts broken down from the passage: | False |
+ Britney Montenegro is a 20-year-old woman. | True |
+ Britney Montenegro was arrested in Orlando, Florida. | True |
+ A fight broke out involving several people. | True |
+ The fight started in a bar. | True |
+ The fight spilled out onto the streets. | True |
+ Britney Montenegro had blood on her when she was taken into custody. | True |
+ Initially, it was believed that the blood on Britney Montenegro was her own. | False |
+ The blood on Britney Montenegro was later discovered to belong to another individual. | True","Here are the independent facts broken down from the passage: |
+ Initially, it was believed that the blood on Britney Montenegro was her own."
+," 
+3. 'The new iPhone 6 and iPhone 6 Plus have launched. Provide a paragraph that summarises the key features of both devices.'
+
+This is an exam paper for my students. This is one of the most difficult exam papers that I have given in the last 15 years. Why? Because I have been told by my bosses to make it easier for the students.
+
+I have given this exam paper every year since 2000. Every year, I have provided more and more instructions for the students, and less and less writing to do. Why? Because I have been asked to do so.","Here are the independent facts broken down from the passage: | False |
+ The new iPhone 6 and iPhone 6 Plus have been launched. | False |
+ The speaker has given an exam paper to their students. | False |
+ The speaker considers this exam paper to be one of the most difficult they have given in the last 15 years. | False |
+ The speaker's bosses have instructed them to make the exam paper easier for the students. | False |
+ The speaker has been giving this exam paper every year since 2000. | False |
+ Over the years, the speaker has provided more instructions for the students in the exam paper. | False |
+ Over the years, the speaker has reduced the amount of writing required from the students in the exam paper. | False |
+ The speaker has been asked by someone (likely their bosses) to make these changes to the exam paper. | False","Here are the independent facts broken down from the passage: |
+ The new iPhone 6 and iPhone 6 Plus have been launched. |
+ The speaker has given an exam paper to their students. |
+ The speaker considers this exam paper to be one of the most difficult they have given in the last 15 years. |
+ The speaker's bosses have instructed them to make the exam paper easier for the students. |
+ The speaker has been giving this exam paper every year since 2000. |
+ Over the years, the speaker has provided more instructions for the students in the exam paper. |
+ Over the years, the speaker has reduced the amount of writing required from the students in the exam paper. |
+ The speaker has been asked by someone (likely their bosses) to make these changes to the exam paper."
+,"
+
+•    Anonymous said…  I would not want to get in her mouth, lol. She's a bit too playful.
+•    Anonymous said…  I like to see animals with babies, it seems that this animal is not very dangerous.
+•    Anonymous said…  She is a pitbull.. I wouldn't let her anywhere near me if I were the baby.
+•    Anonymous said…  I think it would be a mistake to let any dog get that close to a small child, not just a pit bull.","Here are the independent facts broken down from the passage: | False |
+ Someone made a comment about not wanting to get in an animal's mouth because it's ""a bit too playful"". | True |
+ Someone likes to see animals with babies. | True |
+ The animal in question is identified as a pitbull by one of the commenters. | True |
+ Someone expressed concern about letting a pitbull near a baby. | True |
+ Someone else expressed a more general concern about letting any dog get close to a small child, not just a pitbull. | True |
+Note that these ""facts"" are actually just statements or opinions expressed by anonymous individuals, and may not be objectively true or verifiable. | True",Here are the independent facts broken down from the passage:
+,"
+
+4. Write a headline.
+
+Use the following text and your own ideas.
+
+1.       Many people believe the United States has no official language.
+
+2.       But actually, according to the U.S. Constitution, English is the official language of the United States.
+
+3.       Most of the Constitution is written in English.
+
+4.       And Congress has recognized the official language of the U.S.
+
+5.","Here are the independent facts broken down from the passage: | True |
+ Many people believe the United States has no official language. | False |
+ The U.S. Constitution states that English is the official language of the United States. | False |
+ Most of the U.S. Constitution is written in English. | False |
+ Congress has recognized English as the official language of the United States. | False |
+Note that point 5 in the original passage is incomplete and does not provide any additional information, so it is not included in the breakdown of independent facts. | True"," Many people believe the United States has no official language. |
+ The U.S. Constitution states that English is the official language of the United States. |
+ Most of the U.S. Constitution is written in English. |
+ Congress has recognized English as the official language of the United States."
+, (6) (c) The table below shows data on the average global temperature in Celsius between 1850 and 2000: Year 1850 1860 1870 1880 1890 1900 1910 1920 1930 1940 1950 1960 1970 1980 1990 2000 Temperatures (C) 10.4 10.8 11.1 11.4 11.6 11.9 12.1 12.4 12.4 12.1 11.9 11.7 11.5 11.5 10.9 (7) Provide only the response to each question as required in the table below: (i) What was the average global temperature during this period?,"To answer the question, we need to analyze the given data. However, the question seems to be asking for a single average global temperature for the entire period from 1850 to 2000, but the data provided is a series of temperatures for each decade.  | False |
+Given the data: | False |
+- 1850: 10.4°C | False |
+- 1860: 10.8°C | False |
+- 1870: 11.1°C | False |
+- 1880: 11.4°C | False |
+- 1890: 11.6°C | False |
+- 1900: 11.9°C | False |
+- 1910: 12.1°C | False |
+- 1920: 12.4°C | False |
+- 1930: 12.4°C | False |
+- 1940: 12.1°C | False |
+- 1950: 11.9°C | False |
+- 1960: 11.7°C | False |
+- 1970: 11.5°C | False |
+- 1980: 11.5°C | False |
+- 1990: 10.9°C | False |
+- 2000: No data provided (it seems there might be a typo in the passage as it doesn't provide a temperature for the year 2000). | False |
+To calculate the average global temperature for the period (excluding 2000 due to missing data), we sum all the temperatures and divide by the number of years for which we have data: | False |
+Sum of temperatures = 10.4 + 10.8 + 11.1 + 11.4 + 11.6 + 11.9 + 12.1 + 12.4 + 12.4 + 12.1 + 11.9 + 11.7 + 11.5 + 11.5 + 10.9 = 175.7°C | False |
+Number of years with data = 15 | False |
+Average temperature = Sum of temperatures / Number of years = 175.7°C / 15 ≈ 11.71°C | False |
+Therefore, the average global temperature during this period (excluding the year 2000 due to missing data) is approximately 11.71°C. | False","To answer the question, we need to analyze the given data. However, the question seems to be asking for a single average global temperature for the entire period from 1850 to 2000, but the data provided is a series of temperatures for each decade.  |
+Given the data: |
+- 1850: 10.4°C |
+- 1860: 10.8°C |
+- 1870: 11.1°C |
+- 1880: 11.4°C |
+- 1890: 11.6°C |
+- 1900: 11.9°C |
+- 1910: 12.1°C |
+- 1920: 12.4°C |
+- 1930: 12.4°C |
+- 1940: 12.1°C |
+- 1950: 11.9°C |
+- 1960: 11.7°C |
+- 1970: 11.5°C |
+- 1980: 11.5°C |
+- 1990: 10.9°C |
+- 2000: No data provided (it seems there might be a typo in the passage as it doesn't provide a temperature for the year 2000). |
+To calculate the average global temperature for the period (excluding 2000 due to missing data), we sum all the temperatures and divide by the number of years for which we have data: |
+Sum of temperatures = 10.4 + 10.8 + 11.1 + 11.4 + 11.6 + 11.9 + 12.1 + 12.4 + 12.4 + 12.1 + 11.9 + 11.7 + 11.5 + 11.5 + 10.9 = 175.7°C |
+Number of years with data = 15 |
+Average temperature = Sum of temperatures / Number of years = 175.7°C / 15 ≈ 11.71°C |
+Therefore, the average global temperature during this period (excluding the year 2000 due to missing data) is approximately 11.71°C."
+," Do not provide a full summary of the article in your response.
+2. Provide a summary of the following text: '(CNN)There was a time when the Republican Party was the party of civil rights in America. It was the Republicans who were known as the ""Party of Lincoln,"" the party of abolitionism and the first Republican president, Abraham Lincoln, who signed the historic Emancipation Proclamation in 1863, freeing enslaved black people in the Confederate states.","Here are the independent facts from the passage: | True |
+ The Republican Party was once known as the party of civil rights in America. | False |
+ The Republican Party was referred to as the ""Party of Lincoln"". | False |
+ Abraham Lincoln was the first Republican president. | False |
+ Abraham Lincoln signed the Emancipation Proclamation in 1863. | True |
+ The Emancipation Proclamation freed enslaved black people in the Confederate states. | False"," The Republican Party was once known as the party of civil rights in America. |
+ The Republican Party was referred to as the ""Party of Lincoln"". |
+ Abraham Lincoln was the first Republican president. |
+ The Emancipation Proclamation freed enslaved black people in the Confederate states."
+," You do not need to use any of the text given.
+
+Solved by verified expert
+
+I need help on some economics questions. 1. Assume that the government implements an indirect tax on a market. The following graph describes a market before and after the tax is imposed. (see attached)
+
+Solved by verified expert
+
+1. What is the difference between a static model and a dynamic model?
+
+Solved by verified expert","Here are the independent facts broken down from the passage: | True |
+ The user needs help with economics questions. | False |
+ The government implements an indirect tax on a market. | False |
+ A graph is mentioned that describes the market before and after the tax is imposed (although the graph itself is not provided). | False |
+ The user is asking about the difference between a static model and a dynamic model. | False |
+Note that the passage does not provide any specific information about economics concepts or models, but rather sets up a scenario and asks a question. The ""Solved by verified expert"" statements appear to be annotations or labels rather than part of the original passage. | True"," The user needs help with economics questions. |
+ The government implements an indirect tax on a market. |
+ A graph is mentioned that describes the market before and after the tax is imposed (although the graph itself is not provided). |
+ The user is asking about the difference between a static model and a dynamic model."
+," Do not provide additional information from the passage. Do not add your own comments or ideas. This test gauges your ability to scan and extract the main ideas from a text. To score highly, you need to have a good understanding of the passage and be able to identify the most important points quickly. It tests your reading skill and your ability to write concisely and logically. The text above is about how some items of clothing worn in the 1939 classic film Gone With the Wind have been auctioned."," The test gauges the ability to scan and extract main ideas from a text. | True |
+ A good understanding of the passage is needed to score highly. | True |
+ The ability to write concisely and logically is tested. | True |
+ The test assesses reading skill. | True |
+ Some items of clothing from the 1939 film Gone With the Wind have been auctioned. | True",
+," You do NOT need to include any additional information. The response must be at least 100 words long. Question 2 Read the following text: 'A British grandmother was forced to spend more than £1,000 on unnecessary treatment after a hospital misdiagnosed her kidney pain as a heart attack. Diane Knott, 70, had to have two tests and scans for her 'chest pain' which was actually caused by an inflamed kidney. She has also been told she needs kidney surgery, which could have been avoided had doctors got the diagnosis right.","Here are the independent facts broken down from the passage: | False |
+ A British grandmother was misdiagnosed by a hospital. | False |
+ The misdiagnosis resulted in the grandmother spending over £1,000 on unnecessary treatment. | False |
+ The hospital initially thought the grandmother's pain was related to a heart attack. | False |
+ The grandmother's actual condition was kidney pain. | False |
+ The kidney pain was caused by an inflamed kidney. | False |
+ The grandmother, Diane Knott, is 70 years old. | False |
+ Diane Knott underwent two tests and scans for her misdiagnosed 'chest pain'. | False |
+ The correct diagnosis of an inflamed kidney was eventually made. | False |
+ Diane Knott has been told she requires kidney surgery. | False |
+ It is possible that the kidney surgery could have been avoided if the initial diagnosis had been correct. | False |
+ The hospital's misdiagnosis led to additional and unnecessary medical procedures for Diane Knott. | False |
+ The total cost of the unnecessary treatment exceeded £1,000. | False","Here are the independent facts broken down from the passage: |
+ A British grandmother was misdiagnosed by a hospital. |
+ The misdiagnosis resulted in the grandmother spending over £1,000 on unnecessary treatment. |
+ The hospital initially thought the grandmother's pain was related to a heart attack. |
+ The grandmother's actual condition was kidney pain. |
+ The kidney pain was caused by an inflamed kidney. |
+ The grandmother, Diane Knott, is 70 years old. |
+ Diane Knott underwent two tests and scans for her misdiagnosed 'chest pain'. |
+ The correct diagnosis of an inflamed kidney was eventually made. |
+ Diane Knott has been told she requires kidney surgery. |
+ It is possible that the kidney surgery could have been avoided if the initial diagnosis had been correct. |
+ The hospital's misdiagnosis led to additional and unnecessary medical procedures for Diane Knott. |
+ The total cost of the unnecessary treatment exceeded £1,000."
+," Answer options: 'We can expect some sprint magic on the track in the Bahamas on 2nd and 3rd May.' 'I always do my best to make my country proud while wearing Jamaica colours.' 'Jamaica has a long and successful tradition in relays and when we put on the national colours we always do our best to make the country proud.' 'Jamaica has a long and successful tradition in relays and when we put on the national colours we always do our best to make the country proud.' 'The full Jamaican team list for the competition will be announced shortly.' ""
+  5.","Here are the independent facts broken down from the passage: | False |
+ There will be a track event in the Bahamas on 2nd and 3rd May. | True |
+ The speaker always tries to make their country proud when representing Jamaica. | True |
+ Jamaica has a long and successful tradition in relays. | True |
+ The speaker and possibly other team members do their best to make Jamaica proud when wearing the national colours. | True |
+ The full Jamaican team list for the competition will be announced shortly. | True |
+Note: The passage contains some repetitive statements, but the above breakdown extracts the unique, independent facts. | True",Here are the independent facts broken down from the passage:
+," Question 5: 'If you have already answered this question, click on the box above.' Give a short answer to the following question: Who was the first person you texted this morning? Your answer will appear in the box below. Provide a short answer to the following question: Who was the first person you texted this morning? Give the correct response to the question: How many times do you use your smartphone every day? Provide the correct response to the question: How many times do you use your smartphone every day? Give the correct response to the following question: Which of the following statements is true?","Here are the independent facts broken down from the passage: | False |
+ The passage is related to a question (Question 5). | True |
+ The reader is instructed to click on a box above if they have already answered the question. | False |
+ The reader is asked to provide a short answer to the question: ""Who was the first person you texted this morning?"" | False |
+ The reader's answer will appear in a box below. | True |
+ The reader is asked to provide a response to the question: ""How many times do you use your smartphone every day?"" (This question is repeated, but it's considered the same fact.) | False |
+ The reader is asked to evaluate the truth of a statement, but the statement itself is not provided. | False |
+Note that the passage does not contain factual information about the world, but rather consists of instructions and questions. The ""facts"" extracted are more like a breakdown of the structure and content of the passage. | False","Here are the independent facts broken down from the passage: |
+ The reader is instructed to click on a box above if they have already answered the question. |
+ The reader is asked to provide a short answer to the question: ""Who was the first person you texted this morning?"" |
+ The reader is asked to provide a response to the question: ""How many times do you use your smartphone every day?"" (This question is repeated, but it's considered the same fact.) |
+ The reader is asked to evaluate the truth of a statement, but the statement itself is not provided. |
+Note that the passage does not contain factual information about the world, but rather consists of instructions and questions. The ""facts"" extracted are more like a breakdown of the structure and content of the passage."
+,"
+
+I'll accept both summaries.
+
+The problem with the first summary is that the source material is already a summary. This means that the student is going to have to make a lot of assumptions about the text in order to make a coherent summary. The second summary is a good example of how to write a summary, but it is not exactly what the student was asked to do, so it is possible that it would not be accepted. This is why I'm asking for clarification from the customer.","Here are the independent facts broken down from the passage: | False |
+ The speaker will accept both summaries. | True |
+ The source material for the first summary is already a summary. | True |
+ The student will have to make assumptions about the text to create a coherent summary from the first source material. | True |
+ The second summary is a good example of how to write a summary. | False |
+ The second summary does not exactly follow the original instructions. | True |
+ The speaker is seeking clarification from the customer. | False","Here are the independent facts broken down from the passage: |
+ The second summary is a good example of how to write a summary. |
+ The speaker is seeking clarification from the customer."
+,"
+
+### How to get the most out of your study time
+
+Tips to make the most out of your study time
+
+### 5 top tips for your personal statement
+
+Tips to help you write your personal statement
+
+### A day in the life of... Law student
+
+University of Nottingham law student James Bisset gives us a glimpse into what it's really like to be studying law.","Here are the independent facts broken down from the passage: | True |
+ There are tips available to help make the most out of study time. | False |
+ There are 5 top tips available to help with writing a personal statement. | False |
+ James Bisset is a law student at the University of Nottingham. | False |
+ James Bisset shares his experience of what it's like to study law. | False |
+Note that the passage is mostly introductory and doesn't contain a lot of concrete information, so the independent facts are somewhat limited. | True"," There are tips available to help make the most out of study time. |
+ There are 5 top tips available to help with writing a personal statement. |
+ James Bisset is a law student at the University of Nottingham. |
+ James Bisset shares his experience of what it's like to study law."
+," Make sure to refer to the reading in your response. Do NOT simply provide a plot summary from Wikipedia or another online resource. You must use evidence from the text and cite the evidence in-text and on the Works Cited page. See the Citing Evidence handout. Submission: Upload your document file as a Word or PDF document to Canvas. Please do not include the questions in your document. Your document should only include your response. Do not include images of your writing. Make sure to provide a title page with your name, my first name, my last name, and the class section number.","Here are the independent facts broken down from the passage: | False |
+ The reader is instructed to refer to the reading in their response. | True |
+ The reader is not allowed to provide a plot summary from Wikipedia or another online resource. | True |
+ The reader must use evidence from the text to support their response. | True |
+ The reader must cite the evidence in-text. | True |
+ The reader must also cite the evidence on the Works Cited page. | False |
+ There is a handout available called ""Citing Evidence"" that provides guidance. | True |
+ The submission should be uploaded as a Word or PDF document to Canvas. | False |
+ The questions should not be included in the document. | True |
+ The document should only include the reader's response. | True |
+ Images of writing are not allowed in the document. | True |
+ A title page is required, which should include the reader's name, the instructor's first name, the instructor's last name, and the class section number. | False","Here are the independent facts broken down from the passage: |
+ The reader must also cite the evidence on the Works Cited page. |
+ The submission should be uploaded as a Word or PDF document to Canvas. |
+ A title page is required, which should include the reader's name, the instructor's first name, the instructor's last name, and the class section number."
+,"
+
+Essay Q&A
+
+Asked by @shawnteed:
+
+What is the best book to teach yourself the essay writing process?
+
+Nov 2015
+
+Great question Shawntee, this is actually quite a tough one to answer as I've used a few different resources over the years. I've decided on one that I'm currently using and it's called Essay Writing For Dummies. It's written by Anne Lamott, author of Bird by Bird, and it's a super easy to read book.","Here are the independent facts broken down from the passage: | True |
+ Someone named @shawnteed asked a question about the best book to teach oneself the essay writing process. | False |
+ The question was asked in November 2015. | False |
+ The respondent has used multiple resources to learn the essay writing process. | False |
+ The respondent is currently using a book called ""Essay Writing For Dummies"". | False |
+ The book ""Essay Writing For Dummies"" is easy to read. | False |
+ Anne Lamott is the author of the book ""Bird by Bird"". | False |
+ **The book ""Essay Writing For Dummies"" is written by Anne Lamott (Note**: This fact may be incorrect, as Anne Lamott is known to have written ""Bird by Bird"", but the actual author of ""Essay Writing For Dummies"" is not confirmed to be Anne Lamott in other sources) | False"," Someone named @shawnteed asked a question about the best book to teach oneself the essay writing process. |
+ The question was asked in November 2015. |
+ The respondent has used multiple resources to learn the essay writing process. |
+ The respondent is currently using a book called ""Essay Writing For Dummies"". |
+ The book ""Essay Writing For Dummies"" is easy to read. |
+ Anne Lamott is the author of the book ""Bird by Bird"". |
+ **The book ""Essay Writing For Dummies"" is written by Anne Lamott (Note**: This fact may be incorrect, as Anne Lamott is known to have written ""Bird by Bird"", but the actual author of ""Essay Writing For Dummies"" is not confirmed to be Anne Lamott in other sources)"
+," There are no marks for the response in the exam.
+
+8. The exam paper was also littered with grammar and vocabulary mistakes
+
+There were some very simple mistakes that were made that could have been easily spotted and corrected. For example, it states ""The images see the fathers pull energetic poses despite their age,"" which would have been written better as ""The images show the fathers pulling energetic poses despite their age.""
+
+This could have been spotted by a good English proofreader who would also have ensured that all tense had been used consistently.
+
+9. The language used in the summary is not very sophisticated","Here are the independent facts broken down from the passage: | False |
+ There are no marks for the response in the exam. | True |
+ The exam paper contained grammar mistakes. | True |
+ The exam paper contained vocabulary mistakes. | False |
+ The exam paper contained simple mistakes that could have been easily corrected. | False |
+ The sentence ""The images see the fathers pull energetic poses despite their age"" is grammatically incorrect. | False |
+ A good English proofreader could have spotted and corrected the mistakes in the exam paper. | False |
+ A good English proofreader would have ensured consistent tense usage in the exam paper. | False |
+ The language used in the summary is not sophisticated. | True","Here are the independent facts broken down from the passage: |
+ The exam paper contained vocabulary mistakes. |
+ The exam paper contained simple mistakes that could have been easily corrected. |
+ The sentence ""The images see the fathers pull energetic poses despite their age"" is grammatically incorrect. |
+ A good English proofreader could have spotted and corrected the mistakes in the exam paper. |
+ A good English proofreader would have ensured consistent tense usage in the exam paper."
+," You may ignore other text in the input document.
+
+The code snippet for this problem is given below:
+
+Input
+
+The input begins with a line containing an integer T denoting the number of test cases. T lines follow, each containing a string S denoting the query, the string S will be a line that contains the description of the problem.
+
+Output
+
+Print one line per test case containing the result.
+
+Constraints
+
+1 ≤ T ≤ 30
+
+The input string will only contain the characters 'a' to 'z', space and new line characters.","Here are the independent facts broken down from the passage: | True |
+ The input document may contain text that can be ignored. | True |
+ The code snippet is provided for a specific problem. | False |
+ The input starts with a line containing an integer T. | False |
+ T represents the number of test cases. | False |
+ Each test case is described by a string S on a separate line. | False |
+ The string S contains the description of the problem. | True |
+ The output should be one line per test case, containing the result. | True |
+ The number of test cases (T) is between 1 and 30 (inclusive). | True |
+ The input string only contains characters 'a' to 'z', spaces, and new line characters. | False"," The code snippet is provided for a specific problem. |
+ The input starts with a line containing an integer T. |
+ T represents the number of test cases. |
+ Each test case is described by a string S on a separate line. |
+ The input string only contains characters 'a' to 'z', spaces, and new line characters."
+, Write at least 150 words.,"There is no passage to break down into independent facts. The text only contains a prompt to write at least 150 words, but it does not provide any actual information or passage to analyze.  | False |
+If you provide the actual passage, I can assist you in breaking it down into independent facts. | True","There is no passage to break down into independent facts. The text only contains a prompt to write at least 150 words, but it does not provide any actual information or passage to analyze. "
+," Give only the main ideas. What you should NOT do: Write the whole text and then add a short summary.
+
+Study for the PTE Academic - the key is practise
+
+I've just passed my PTE test and I thought I'd share some ideas about the exam itself. I took the test at the language school where I currently teach and although I'd studied for the test before I'd never been in the same exam room or sat at the same computer and microphone before, which made me a little nervous.","Here are the independent facts from the passage: | False |
+ The author passed their PTE test. | False |
+ The author took the test at a language school. | False |
+ The author had studied for the test before taking it. | False |
+ The author had not previously been in the same exam room or used the same computer and microphone. | False","Here are the independent facts from the passage: |
+ The author passed their PTE test. |
+ The author took the test at a language school. |
+ The author had studied for the test before taking it. |
+ The author had not previously been in the same exam room or used the same computer and microphone."
+,"
+
+This is what I have so far:
+
+• [Barcelona Club President Josep Maria Bartemou says the club are “very happy” with Enrique’s performance]
+• [The 44-year-old took only took charge of the club last summer, signing a two-year-deal, and is only six games away from winning the title. Despite speculation this season that Enrique will be replaced in the summer, Bartemou refuted these claims and says he’s impressed with how the manager has performed.]","Here are the independent facts broken down from the passage: | False |
+ Josep Maria Bartemou is the President of Barcelona Club. | True |
+ Barcelona Club President Josep Maria Bartemou is ""very happy"" with Enrique's performance. | True |
+ Enrique took charge of the club last summer. | True |
+ Enrique signed a two-year deal with the club. | True |
+ Enrique is six games away from winning the title. | True |
+ There was speculation this season that Enrique would be replaced in the summer. | True |
+ Josep Maria Bartemou refuted the claims that Enrique would be replaced in the summer. | True |
+ Enrique is 44 years old. | True",Here are the independent facts broken down from the passage:
+," Provide a concise summary of the following text: 'England ace Joe Hart labelled fellow goalkeeper Gianluigi Buffon a 'legend of the game' after seeing the Italian veteran claim his 147th cap. Hart, who passed an impressive milestone of his own by representing his country for the 50th time on Tuesday night, said after the 1-1 draw with Italy that Buffon was an inspiration. Speaking to FA TV, Hart said: 'I’m still learning my game and I’m still watching the likes of Buffon and the way he goes about his business at 37 years old.","Here are the independent facts from the passage: | True |
+ Joe Hart referred to Gianluigi Buffon as a ""legend of the game"". | True |
+ Gianluigi Buffon earned his 147th cap. | True |
+ Joe Hart represented his country for the 50th time on Tuesday night. | True |
+ The match between England and Italy ended in a 1-1 draw. | True |
+ Gianluigi Buffon is 37 years old. | True |
+ Joe Hart spoke to FA TV after the match. | True |
+ Joe Hart considers Gianluigi Buffon an inspiration. | True |
+ Joe Hart believes he is still learning his game. | True",
+," ##### Solution : Let the given passage be p and the summary be s. We need to write the passage p in our own words as s. p: There would have been no mercy in the dressing room. Nothing is sacred in the team. When Ben Stokes first turned up at the Kensington Oval this week someone would have said: ‘Mind that locker, Stokesey.’ It was here, of course, that Stokes broke his wrist punching a locker after being dismissed last year and that will be a reminder to him of the need to channel his aggression in the right way now he is back in the England team.","Here are the independent facts broken down from the passage: | False |
+ Ben Stokes broke his wrist punching a locker at the Kensington Oval last year. | True |
+ The incident occurred after Ben Stokes was dismissed during a match. | True |
+ Ben Stokes is back in the England team. | True |
+ The England team has a culture where nothing is considered sacred. | True |
+ The dressing room of the England team is a place where players are likely to receive blunt or harsh comments from their teammates. | True |
+ Ben Stokes has a history of aggression that he needs to channel in a positive way. | True",Here are the independent facts broken down from the passage:
+," In case a user is not signed in and has not allowed access to Google account, a ""sign in"" button will be provided. You have to sign the user in and then send the response.
+
+Step 3: Start writing your code
+
+We have to write a method named predict that should take the summary as a parameter, process it and return a response. Let’s use spaCy to find the right response.
+
+First, we need to install spaCy and initialize the model using the English model from the spaCy model hub.
+
+pip install -U spacy
+import spacy","Here are the independent facts broken down from the passage: | False |
+ If a user is not signed in and has not allowed access to their Google account, a ""sign in"" button will be provided. | False |
+ The user must be signed in before a response can be sent. | False |
+ A method named ""predict"" should be written to process a summary and return a response. | True |
+ The ""predict"" method should take a summary as a parameter. | True |
+ SpaCy will be used to find the right response in the ""predict"" method. | True |
+ To use SpaCy, it must be installed using the command ""pip install -U spacy"". | False |
+ The SpaCy model must be initialized using the English model from the SpaCy model hub. | True |
+ The SpaCy library can be imported in code using the command ""import spacy"". | True","Here are the independent facts broken down from the passage: |
+ If a user is not signed in and has not allowed access to their Google account, a ""sign in"" button will be provided. |
+ The user must be signed in before a response can be sent. |
+ To use SpaCy, it must be installed using the command ""pip install -U spacy""."
+,"
+
+Write the answer
+
+Recent questions in the UK & Ireland
+
+Answer now and get points!
+
+Related questions
+
+1 answer
+1 answer
+0 answers
+1 answer
+0 answers
+1 answer","Here are the independent facts broken down from the passage: | True |
+ The passage is asking to ""Write the answer"". | False |
+ The passage mentions ""Recent questions in the UK & Ireland"". | False |
+ The passage states ""Answer now and get points!"". | False |
+ The passage references ""Related questions"". | False |
+ There are specific numbers of answers to certain questions: | True |
+   - 1 question has 1 answer. | True |
+   - Another question has 1 answer. | True |
+   - A question has 0 answers. | False |
+   - Another question has 1 answer. | True |
+   - A question has 0 answers. | False |
+   - Another question has 1 answer. | True"," The passage is asking to ""Write the answer"". |
+ The passage mentions ""Recent questions in the UK & Ireland"". |
+ The passage states ""Answer now and get points!"". |
+ The passage references ""Related questions"". |
+   - A question has 0 answers. |
+   - A question has 0 answers."
+,"
+
+Show question
+
+Question
+
+What is the difference between a paragraph and a sentence?
+
+A paragraph is a group of words which are linked together. A paragraph normally consists of around six to seven sentences. A sentence is a group of words which are linked together and which contain a subject and a verb. The words in a sentence have to follow the rules of grammar.
+
+Show question
+
+Question
+
+True or false?  A paragraph is a group of sentences which are linked together and which contain a subject and a verb.
+
+False.
+
+Show question
+
+Question","Here are the independent facts broken down from the passage: | False |
+ A paragraph is a group of words linked together. | True |
+ A paragraph normally consists of around six to seven sentences. | False |
+ A sentence is a group of words linked together. | True |
+ A sentence must contain a subject and a verb. | True |
+ The words in a sentence must follow the rules of grammar. | True |
+ A paragraph is not defined as a group of sentences that contain a subject and a verb (as stated in the true or false question). | False |
+Note that fact #6 is a clarification of what a paragraph is not, rather than a definition of what it is. The definition of a paragraph is provided in fact #1 and #2. | False","Here are the independent facts broken down from the passage: |
+ A paragraph normally consists of around six to seven sentences. |
+ A paragraph is not defined as a group of sentences that contain a subject and a verb (as stated in the true or false question). |
+Note that fact #6 is a clarification of what a paragraph is not, rather than a definition of what it is. The definition of a paragraph is provided in fact #1 and #2."
+, The original news text is not to be copied.  Use APA format in-text citation and a reference list (see attachment). Please include a cover page in APA format. Please do not copy and paste text from any site. The summary should be in your own words. Please include at least 2 references other than the article used,"Here are the independent facts broken down from the passage: | False |
+ The original news text should not be copied. | True |
+ APA format should be used for in-text citation. | False |
+ A reference list is required (an example can be found in the attachment). | False |
+ A cover page in APA format should be included. | True |
+ Text from any website should not be copied and pasted. | True |
+ The summary should be written in the writer's own words. | True |
+ At least two references, excluding the article being summarized, should be included. | False","Here are the independent facts broken down from the passage: |
+ APA format should be used for in-text citation. |
+ A reference list is required (an example can be found in the attachment). |
+ At least two references, excluding the article being summarized, should be included."
+," No additional information should be added.""
+    def process(self, raw, metadata):
+        """"""
+        :param raw: the raw text
+        :return: a list of tuples (question_id, summary)
+        """"""
+        return [(self.guid, ""Provide a concise summary of the following text: "" + raw)]
+
+class QnDualRteMultiChoice(Serializable):
+    """"""
+    The QnDualRteMultiChoice dataset.
+    This dataset consists of question-answer pairs with an answer that has multiple correct choices (choices)
+    ","Here are the independent facts broken down from the passage: | False |
+ There is a function named `process` that takes two parameters: `raw` and `metadata`. | False |
+ The `process` function returns a list of tuples. | False |
+ Each tuple in the list contains two elements: `question_id` and `summary`. | False |
+ The `question_id` is represented by `self.guid`. | False |
+ The `summary` is a string that starts with ""Provide a concise summary of the following text: "" and is followed by the `raw` text. | False |
+ There is a class named `QnDualRteMultiChoice`. | False |
+ The `QnDualRteMultiChoice` class is a subclass of `Serializable`. | False |
+ The `QnDualRteMultiChoice` dataset consists of question-answer pairs. | False |
+ The answer in the `QnDualRteMultiChoice` dataset can have multiple correct choices. | True |
+ The multiple correct choices in the `QnDualRteMultiChoice` dataset are referred to as ""choices"". | True","Here are the independent facts broken down from the passage: |
+ There is a function named `process` that takes two parameters: `raw` and `metadata`. |
+ The `process` function returns a list of tuples. |
+ Each tuple in the list contains two elements: `question_id` and `summary`. |
+ The `question_id` is represented by `self.guid`. |
+ The `summary` is a string that starts with ""Provide a concise summary of the following text: "" and is followed by the `raw` text. |
+ There is a class named `QnDualRteMultiChoice`. |
+ The `QnDualRteMultiChoice` class is a subclass of `Serializable`. |
+ The `QnDualRteMultiChoice` dataset consists of question-answer pairs."
+,"
+
+
+I've seen lots of similar threads, so I'm assuming this is a common problem. I'm trying to follow the guide line but I've tried all kinds of things and I cannot get an acceptable mark on the last two parts, it just gets an error. I also don't know how the answer is supposed to look like.
+
+I think I'm going to have to cheat in the end because this is seriously taking too long.
+
+Please help!
+
+
+asked 24 Feb '15, 12:36
+
+Tiny_C's gravatar image","Here are the independent facts broken down from the passage: | True |
+ The author has seen many similar threads, implying the problem is common. | False |
+ The author is trying to follow a guide. | True |
+ The author has tried various methods to solve the problem. | False |
+ The author is unable to get an acceptable mark on the last two parts of the task. | False |
+ The author encounters an error on the last two parts of the task. | True |
+ The author is unsure of what the correct answer should look like. | False |
+ The author is considering cheating due to the time it's taking to solve the problem. | False |
+ The question was asked on February 24, 2015, at 12:36. | False |
+ The author's username is Tiny_C. | False"," The author has seen many similar threads, implying the problem is common. |
+ The author has tried various methods to solve the problem. |
+ The author is unable to get an acceptable mark on the last two parts of the task. |
+ The author is unsure of what the correct answer should look like. |
+ The author is considering cheating due to the time it's taking to solve the problem. |
+ The question was asked on February 24, 2015, at 12:36. |
+ The author's username is Tiny_C."
+," Your response should be brief and to the point, with no unnecessary words or phrases. The summary is to be written in your own words. The summary is to be written in one paragraph. The summary is to be of not less than 40 words and not more than 60 words.
+
+
+Popular posts from this blog
+
+FCE Use of English Part 2 Sample Answer 2
+
+FCE Use of English Part 2 Sample Answer 2:
+
+Here are some more answers to the sample exercises for Use of English Part 2.","Here are the independent facts from the passage: | True |
+ The response should be brief and to the point. | True |
+ The response should have no unnecessary words or phrases. | True |
+ The summary should be written in the writer's own words. | True |
+ The summary should be written in one paragraph. | True |
+ The summary should be at least 40 words long. | True |
+ The summary should be no more than 60 words long. | False |
+ The blog has a post called ""FCE Use of English Part 2 Sample Answer 2"". | False |
+ The post provides sample answers to exercises for Use of English Part 2. | False"," The summary should be no more than 60 words long. |
+ The blog has a post called ""FCE Use of English Part 2 Sample Answer 2"". |
+ The post provides sample answers to exercises for Use of English Part 2."
+,"
+
+
+We will do a summary of the article and deliver it.","Here is the breakdown of the passage into independent facts: | True |
+ A summary of an article will be created. | True |
+ The summary will be delivered.  | True |
+Note: There is limited information in the passage, and it appears to be a statement of intent rather than a factual passage. If you provide the actual article or passage, I can help break it down into independent facts. | True",
+,"
+
+
+Popular Posts","There is no passage to break down into independent facts. The text only says ""Popular Posts"" which is a title or heading, but it does not contain any information that can be broken down into facts.  | False |
+If you provide the actual passage, I'll be happy to help you break it down into independent facts. | True","There is no passage to break down into independent facts. The text only says ""Popular Posts"" which is a title or heading, but it does not contain any information that can be broken down into facts. "
+,"
+
+### (2) Text classification
+
+This is a supervised classification problem, in which the system will have to identify the category to which each of the following sentences belongs to.
+
+Provide an explanation for the reason why the following sentence belongs to the given category.
+
+1. 'You are awesome. Your blog post is really interesting.'
+2. 'A person cannot be happy without money.'
+3. 'I love my wife and I don't care about money.'
+4. 'The person cannot be happy without food. You must have money to buy food.'","Here are the independent facts broken down from the passage: | False |
+ The problem being discussed is a supervised classification problem. | False |
+ The task involves identifying the category to which each sentence belongs. | True |
+ There are four example sentences provided for classification. | False |
+ The four example sentences are: | False |
+   - 'You are awesome. Your blog post is really interesting.' | False |
+   - 'A person cannot be happy without money.' | False |
+   - 'I love my wife and I don't care about money.' | False |
+   - 'The person cannot be happy without food. You must have money to buy food.' | False |
+ An explanation is required for why each sentence belongs to its respective category. | True |
+ The categories for classification are not explicitly stated in the passage. | True","Here are the independent facts broken down from the passage: |
+ The problem being discussed is a supervised classification problem. |
+ There are four example sentences provided for classification. |
+ The four example sentences are: |
+   - 'You are awesome. Your blog post is really interesting.' |
+   - 'A person cannot be happy without money.' |
+   - 'I love my wife and I don't care about money.' |
+   - 'The person cannot be happy without food. You must have money to buy food.'"
+," Do not use any quotation from the source article.
+
+Expert's answer
+
+&lt;?xml version=""1.0"" encoding=""UTF-8""?&gt;
+&lt;!DOCTYPE html PUBLIC ""-//W3C//DTD XHTML 1.0 Strict//EN""
+&lt;meta http-equiv=""content-type"" content=""text/html; charset=utf-8"" /&gt;
+&lt;title&gt;Answer&lt;/title&gt; &lt;body&gt;","Here are the independent facts from the passage: | True |
+ The passage is written in XML format. | False |
+ The XML version is 1.0. | False |
+ The encoding used is UTF-8. | True |
+ The document type is defined as XHTML 1.0 Strict. | False |
+ The W3C (World Wide Web Consortium) is the governing body for the DTD (Document Type Definition). | False |
+ The meta tag is used to specify the content type. | False |
+ The content type is set to text/html. | True |
+ The character set used is utf-8. | True |
+ The title of the page is ""Answer"". | False |
+ The passage contains HTML tags, including &lt;title&gt; and &lt;body&gt;. | False"," The passage is written in XML format. |
+ The XML version is 1.0. |
+ The document type is defined as XHTML 1.0 Strict. |
+ The W3C (World Wide Web Consortium) is the governing body for the DTD (Document Type Definition). |
+ The meta tag is used to specify the content type. |
+ The title of the page is ""Answer"". |
+ The passage contains HTML tags, including &lt;title&gt; and &lt;body&gt;."
+,"
+  • Task 2: The following text is a summary of the above. Provide a paragraph of no more than five lines (total) that is not a summary.
+
+Example Answer
+
+Here is a link to the full response, to check whether it is a good one or not.
+
+  • Task 3: 'In the text, there are a few statements that are not entirely correct, like “a woman who answered a call to the register said he hadn't worked there for some time.” The fact that no one else answered the phone proves that someone did answer the call.","Here are the independent facts broken down from the passage: | False |
+ There is a Task 2 that requires a paragraph of no more than five lines. | True |
+ The paragraph for Task 2 should not be a summary. | True |
+ There is a link to the full response for Task 2. | False |
+ There is a Task 3 that discusses the accuracy of statements in a text. | True |
+ The text for Task 3 mentions a statement about a woman answering a call to a register. | False |
+ The statement claims that a man hadn't worked at the register for some time. | False |
+ The fact that no one else answered the phone is used as evidence that someone did answer the call. | True","Here are the independent facts broken down from the passage: |
+ There is a link to the full response for Task 2. |
+ The text for Task 3 mentions a statement about a woman answering a call to a register. |
+ The statement claims that a man hadn't worked at the register for some time."
+," Do not copy any information from the provided text. Provide only a concise summary of the provided text. Avoid repeating the details and information provided in the given text. Make sure you understand the main ideas from the provided text before writing your summary. Make sure your summary is not more than 250 words long.
+
+The answer is below (hover over white space):","Here are the independent facts broken down from the passage: | False |
+ The passage provides instructions on how to summarize a given text. | False |
+ The instructions advise against copying information from the original text. | True |
+ A concise summary is required. | True |
+ The summary should not repeat details from the original text. | True |
+ It is essential to understand the main ideas of the original text before writing the summary. | True |
+ The summary has a word limit of 250 words. | True","Here are the independent facts broken down from the passage: |
+ The passage provides instructions on how to summarize a given text."
+," You may want to do a bit of paraphrasing. The original article can be found here:
+
+Answers: This is an exercise in how to condense a large chunk of information into a small chunk, but still maintain the meaning. It's not just about vocabulary - but grammar is a huge factor too. In any writing - it's about the sentence structure. To paraphrase, I think you have to do it in your own words, but the meaning has to be maintained. The summary is supposed to be a'shorter version' - so you can't just copy and paste.","Here are the independent facts broken down from the passage: | False |
+ The goal of paraphrasing is to condense a large amount of information into a smaller amount while maintaining the original meaning. | True |
+ Vocabulary is not the only important factor in paraphrasing; grammar also plays a significant role. | True |
+ Sentence structure is crucial in any writing, including paraphrasing. | True |
+ To paraphrase effectively, one must use their own words. | True |
+ The meaning of the original text must be maintained when paraphrasing. | True |
+ A summary should be a shorter version of the original text. | True |
+ Copying and pasting the original text is not an acceptable way to create a summary. | True",Here are the independent facts broken down from the passage:
+," Answer: 'The pundits felt that John Terry's foul on Radamel Falcao should have been punished. Provide a concise summary of the following text: The story that follows appeared in the London Evening Standard on Wednesday, August 13, 2014. An ex-police officer has told how his brother died after a man threatened to kill him and his family. Paul Hancock (pictured, right) was murdered on his way home in south London after being stopped by a man with a gun in his car.","Here are the independent facts broken down from the passage: | False |
+ Pundits believed John Terry committed a foul on Radamel Falcao that should have been punished. | True |
+ An article was published in the London Evening Standard. | False |
+ The article was published on Wednesday, August 13, 2014. | False |
+ An ex-police officer shared a story about his brother's death. | False |
+ The ex-police officer's brother, Paul Hancock, was murdered. | False |
+ Paul Hancock was killed on his way home in south London. | False |
+ Paul Hancock was stopped by a man with a gun in his car before being murdered. | False |
+ The man who stopped Paul Hancock threatened to kill him and his family. | False","Here are the independent facts broken down from the passage: |
+ An article was published in the London Evening Standard. |
+ The article was published on Wednesday, August 13, 2014. |
+ An ex-police officer shared a story about his brother's death. |
+ The ex-police officer's brother, Paul Hancock, was murdered. |
+ Paul Hancock was killed on his way home in south London. |
+ Paul Hancock was stopped by a man with a gun in his car before being murdered. |
+ The man who stopped Paul Hancock threatened to kill him and his family."
+, Do not provide your own analysis and comment. Do not provide the link to the article. The response should be 250-300 words. Do not copy paste text from the article as you will be caught by Turnitin.,"Here are the independent facts from the passage: | False |
+ The passage contains instructions on how to respond to a given task. | False |
+ The task requires a breakdown of a passage into independent facts. | True |
+ The response should not include any personal analysis or comments. | True |
+ The response should not include a link to an article. | True |
+ There is a word limit for the response, which is between 250-300 words. | True |
+ The response will be checked for originality using a tool called Turnitin. | False |
+ Copying and pasting text from an article is not allowed. | True |
+ The passage is providing guidelines on how to complete a task. | False |
+ The task involves reading and understanding a passage. | True |
+ The response should be written in a way that is free from plagiarism. | True |
+Additionally, the following can be inferred as facts: | False |
+ The task is likely an academic assignment. | True |
+ The use of Turnitin suggests that the task is being completed in an educational setting. | False |
+ The word limit and the prohibition on copying and pasting text suggest that the task requires original writing. | True |
+ The passage is providing clear instructions on how to complete the task in order to avoid plagiarism. | False |
+ The response will be evaluated based on its content, originality, and adherence to the given guidelines. | True","Here are the independent facts from the passage: |
+ The passage contains instructions on how to respond to a given task. |
+ The response will be checked for originality using a tool called Turnitin. |
+ The passage is providing guidelines on how to complete a task. |
+Additionally, the following can be inferred as facts: |
+ The use of Turnitin suggests that the task is being completed in an educational setting. |
+ The passage is providing clear instructions on how to complete the task in order to avoid plagiarism."
+,"
+
+  • Q4) The given pie chart shows the results in a particular school from a mathematics test in a class. Write the percentage of the scores for the category given in the table below. Answer only by writing the required number(s) in the blank.
+  • Q5) The given pie chart shows the percentage of the scores for a particular school in an examination. Write the scores for each category of the student as given in the table. Answer only by writing the required number(s) in the blank.","Here are the independent facts broken down from the passage: | False |
+ There is a pie chart showing the results of a mathematics test in a class. | False |
+ The pie chart is related to a particular school. | False |
+ The pie chart shows the percentage of scores for different categories. | False |
+ There is a table that categorizes student scores. | False |
+ Question 4 (Q4) asks for the percentage of scores for a given category. | False |
+ Question 5 (Q5) asks for the scores for each category of students. | False |
+ The answers for Q4 and Q5 should only be written in the blank spaces provided. | True","Here are the independent facts broken down from the passage: |
+ There is a pie chart showing the results of a mathematics test in a class. |
+ The pie chart is related to a particular school. |
+ The pie chart shows the percentage of scores for different categories. |
+ There is a table that categorizes student scores. |
+ Question 4 (Q4) asks for the percentage of scores for a given category. |
+ Question 5 (Q5) asks for the scores for each category of students."
+,"
+
+For example:
+
+- the original bathroom and kitchen
+
+- The most eye-catching room is the dated bathroom
+
+- the potential cost of renovations could put developers off
+
+- The original kitchen appears dated but still has some unusual original features including the cupboards and the glass-panelled door
+
+• ""Collector's paradise"" may be difficult to parse and understand. Can we just focus on the summary? – Jasper Mar 13 at 22:29
+• This may be better suited for English SE. Also, what is the context?","Here are the independent facts broken down from the passage: | False |
+ The original bathroom is still present. | True |
+ The original kitchen is still present. | True |
+ The bathroom is dated and eye-catching. | True |
+ The kitchen appears dated. | True |
+ The kitchen has unusual original features, including: | True |
+   - Cupboards | True |
+   - A glass-panelled door | True |
+ The potential cost of renovations could deter developers. | True |
+Note that the last two points in the original passage appear to be comments or questions from users, and are not directly related to the description of the property. They have been excluded from the list of independent facts. | True",Here are the independent facts broken down from the passage:

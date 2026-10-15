@@ -1,0 +1,631 @@
+prompt,response
+," Note that it is permissible to change the structure of the text (e.g., changing sentences to bullet points). Also, it is permissible to change the wording. For example, ""the signing caused a rift between soundgarden and its traditional audience."" can be simplified to ""soundgarden loses audience"".
+
+Input example #1:
+the signing caused a rift between soundgarden and its traditional audience.
+Output: soundgarden loses audience.
+
+Input example #2:
+this year, he joined the team as a specialist relief pitcher and has been instrumental in providing stability in that role."
+,"
+
+The answer, however, is not one line long, and I cannot understand how this might be solved through a single call to Google API's text simplification. How can I make this work?
+
+Here are two ideas.
+
+  1. Make multiple calls and have them run in parallel.
+  2. Run a pre-emptive search for results on a substring of the original query.
+
+If a single call would take more than 30 seconds, then it would not be possible to fit all of the data in one call."
+,"
+
+
+Your response:
+
+[ 'Electric multiple unit' (train) ]
+
+Question 4
+
+The example given below contains a single line of text that is written in a very particular and complex style. Simplifying the text will require some understanding of the underlying meanings.
+
+Given the example:
+
+'in the previous year, the gdp rose 5 percent, and it had increased 3.8 percent in the previous year. but last year it had increased only 1.4 percent, and some economists were predicting that the increase would only be.9 percent this year.'"
+,"
+
+The question was originally marked as unanswerable. I have re-added the tag (after consulting with other moderators), but I am curious as to why others believed it to be unanswerable (or perhaps why we shouldn't be answering it).
+
+• I can't see why this should be closed. I'd agree that ""Unanswerable"" is wrong. – Peter Taylor Feb 9 '14 at 16:50
+• There is no requirement that questions be answerable. – Gareth Feb 9 '14 at 19:22"
+," Note: the input is a single sentence. Examples: In[]:= simplify('the name potassium comes from the word potash davy lrb o o rrb p..') Out[]= potassium comes from potash davy
+
+## What is the most suitable approach to take to solve this?
+
+First of all, I think the best way to solve this is to use NLP techniques. But there are many things I do not know about NLP, and how to get started. Also, is there a method to train on the existing text for simplification?"
+,"
+
+The following text is not allowed to be changed:
+
+-- --
+
+The following text is allowed to be changed:
+
+The Treaty of Amiens (French: Traité d'Amiens; German: Friede von Amiens; Italian: Trattato di Amiens) is a treaty signed in 1802 which is considered to have ended the War of the Second Coalition between France, her allies, and the rest of Europe, ending in a stalemate. It is also considered to be the last significant conflict of the Age of Revolutions."
+,"
+
+\paragraph{Evaluation Criteria}
+\noindent\textbf{Bilingual Lexicon Inclusion Score (BLIS)}: It measures how many of the entities (lexicons) from the source language appears in the simplified sentence. It computes the percentage of the target entities from the source language. A lexical match is only made if the source and target entities share the same stem. For example, a source text \textit{United States of America} and a target text \textit{US} would be a match."
+,"
+
+For example:
+
+Original: 'A true crab is a decapod crustacean of the infraorder brachyura, which typically has a very short projecting tail or where the reduced abdomen is entirely hidden under the thorax.'
+
+Simplified: 'Crabs have short tails and are crustaceans.'
+
+Note: To solve this challenge, you need to submit an executable Python file and this should be named as (without quotes).
+
+Note: Please do NOT submit the solution to this challenge.
+
+We will run your submission against a test suite."
+,"
+
+### Languages
+
+Our models currently support the following languages:
+
+Language Code
+English en
+German de
+Spanish es
+
+### How to use this API
+
+This service can be used via HTTP requests to the API endpoint: https://api.text-simplification.ai/simplify
+
+curl https://api.text-simplification.ai/simplify -H ""Accept:application/json"" -H ""Content-Type:application/json"" -d '{ ""text"": ""The woman stood beside the red building, smiling."" }'"
+,"
+
+Note that the question may specify the program's name only or the package name only. If the question does not specify this, it may be either.
+
+To test your knowledge, answers will be scored as wrong if you enter anything other than the shortest correct answer. For example, if the shortest correct answer to a question is 'gparted', entering 'gparted and kde partition manager' is incorrect.
+
+## Scoring
+
+You will be awarded one point for each question you answer correctly.
+
+## Limitations"
+,"
+
+Hint: Try to break down the original text into its core meaning and simplify it into as few words as possible, whilst still maintaining its meaning.
+
+Example: The following text is the original text: 'we must be prepared to pay for the new clothes by giving up something else we might have spent money on'
+
+The simplified text would be: 'we must give up something we spend money on to pay for new clothes'
+
+Input
+
+The first line contains the number of test cases T."
+,"
+
+The above task is intended to test the ability to identify key elements of a text, such as proper nouns, and simplify them in a way that preserves the meaning of the text. The second task is to take a list of words that are relevant to the context of the text, and select the one that is most relevant to the context of the text. In this case, the task is to identify the word'marine' from the list of possible words as being most relevant to the context.
+
+Task Overview"
+,"
+    (b) Simplify the following text to improve its readability, ensuring its core meaning remains intact: 'i went for a walk and met a very happy girl. the girl told me about how much she loves music.' Provide only the simplified text as the response.
+
+    Input text: 
+    aakhri akhbaaR se gUnaahaanaa maaN-aaraasaa se nahiN kaNpataa, aakhri akhbaaR se maaN-aaraasaa kaNpataa nahiN
+
+    Output text: 
+"
+," (12 marks)
+
+Task A: Answer the following in 100–140 words
+
+a) ‘The key principle of wisdom literature is that while techniques of traditional story telling are used books also presume to offer insight and wisdom about nature and reality.’
+
+‘In traditional story telling, the story is often used as a way of conveying important messages to the readers. In addition, the message that is conveyed is often quite general, such as moral teachings, and the way of doing it is by showing the readers examples of people’s lives. These are often stories that are made up for the purpose of showing these examples.
+"
+,"
+\label{question:simplification}
+
+\subsection{Fact Extraction and Question Answering}
+
+Fact-checking and knowledge extraction aims to extract relevant facts and their sources from a given document. We use an existing dataset, called \textsc{Fever} \cite{Thorne18Fever} and perform two tasks on this dataset: a) fact extraction, and b) \textsc{Fever} question answering.  The dataset consists of Wikipedia sentences with relevant web snippets with evidence or rebuttal evidences, each with their corresponding label (supporting or refuting)."
+,"
+
+Note: Your system should be able to identify the most optimal edit in an unsupervised manner (i.e., without the use of manually annotated sentences for learning the simplification patterns or for training your model).
+
+• Sample test cases
+
+Input: (simplified text, reference text)
+simplified text: attock lrb urdu rrb is a city located in the northern border of the punjab province of pakistan and the headquarters of attock district."
+,"
+  3. Translate: Translate the following text to the specified language: 'this is an example of an extract from the text to be translated, showing that it must be kept as short as possible.' Provide the translation in the form of a single line of text.
+  4. Translate with markup: Translate the text, ensuring the translated characters don't overlap with any existing markup. Provide the translated text as a single line of text.
+  5. Translate with markup in different font style: Translate the text, ensuring the translated characters don't overlap with any existing markup."
+,"
+
+Note that you should NOT perform spellcheck operations (correcting simple spelling mistakes), and you should NOT use any of the words that appear in the original text."
+,"
+""""""
+
+import torch
+import torch.nn as nn
+import torch.nn.functional as F
+import torch.optim as optim
+from torchtext.legacy.data import Field, BucketIterator
+from torchtext.legacy.data import TabularDataset
+from nltk.translate.bleu_score import sentence_bleu, SmoothingFunction
+import pickle
+import nltk
+import random
+import matplotlib.pyplot as plt
+import numpy as np
+import itertools
+import json
+import collections"
+," (You will be penalised for changes which alter the meaning of the text.)
+
+    This question is from the following book:
+
+    ""Higher School Certificate: English 2: Examining and Writing""
+    ©2013 Macmillan Australia Pty Limited
+
+    This text may not be reproduced in any form without permission from the publisher.
+
+    This is one of over 2,400 courses on OCW. Explore them all.
+
+    MIT OpenCourseWare is a free & open publication of material from thousands of MIT courses, covering the entire MIT curriculum.
+
+    No enrollment or registration."
+,"
+
+For this task we will need to detect signals in a text, like the definition of signal above. The first step is to split the text into sentences:
+
+• Tokenization:
+• sentence = sentence_tokenizer.tokenize(text)
+• Tokenization here is the process of splitting text into meaningful units called tokens. SentenceTokenizer does the task of splitting the text into sentences. In our case, we will use the simple sentence tokenizer from spacy.
+• Part-of-speech tagging:
+• POS tags = tagger.tag(sentence)"
+,"
+
+
+
+The text will be between 4 and 15 words. If you see the string 'null', then do not send any response.
+
+
+Input Format: json
+
+Input Fields:
+
+
+A string containing the text to simplify.
+
+
+
+Output Format: json
+
+Output Fields:
+
+
+The simplified text.
+
+Submission Details:
+
+Name: simplify_text
+
+Type: query
+
+Stream: Classification
+
+Group: Natural Language Understanding
+
+Data Location:"
+,"
+
+\textbf{Question 9}:
+Simplify the following text to improve its readability, ensuring its core meaning remains intact: 'we first consider the case that the vector spaces \textit{x} and \textit{y} are over the same field. let \textit{f} be an endomorphism on \textit{x} and \textit{g} be an endomorphism on \textit{y}."
+," (10 points)
+
+Question 2:
+Write a script that converts an HTML table to a CSV. The CSV must include all of the table elements including any text within table cells. (10 points)
+
+Question 3:
+Write a script that takes in a URL as input and retrieves the page. You must parse the HTML for the body, then parse the body and grab the first H1 tag. The result should be printed to the screen. (20 points)
+
+For this lab you will write a program to help people who are moving find a moving company in their area."
+,"
+
+Input
+
+'in cordes received its charter to become a bastide lrb fortified town rrb from the count of toulouse.'
+
+Output
+
+'cordes received a charter to become a fortified town from the count of toulouse.'
+
+Input
+
+'the cat in the hat in the kitchen was very fat.'
+
+Output
+
+'the cat in the hat in the kitchen was fat.'
+
+Constraints
+
+• 1 ≤ Length of input text ≤ 1,000"
+,"
+
+The answer, according to Wikipedia:
+
+Gilbert was a taxidermist for the Zoological Society of London, where he met John Gould.
+
+### Input
+
+A text (consisting of only lower case letters, numbers, spaces and commas, and having a length no more than 10 000 characters), consisting of a single sentence.
+
+### Output
+
+The same text, with each comma replaced with a space.
+
+### Example input
+
+'gilbert was a taxidermist for the zoological society of london where he met john gould.'"
+,"
+
+1st example:
+
+'costa coffee is a british coffee house company founded in the united kingdom by italian brothers sergio and bruno costa as a wholesale operation supplying roasted coffee to caterers and specialist italian coffee shops.'
+
+
+2nd example:
+
+'costa is a coffee house company based in the uk founded in by italian brothers sergio and bruno costa as a wholesale operation supplying roasted coffee to caterers and specialist italian coffee shops.'
+
+
+## Input
+
+Input will be a single paragraph of text of no more than 512 characters in length."
+,"
+
+
+
+'''bricqueville''' is a commune in the '''calvados''' department in the '''basse-normandie''' region in northwestern france.
+
+
+
+Please convert the following image to black and white:
+
+
+A black and white version of the input image.
+
+
+
+The following image is a panorama:
+
+
+A panoramic view of the input image.
+
+
+
+Find an image on the web that is similar to this image:
+
+
+An image retrieved from the web that is visually similar to the input image.
+
+Additional Hints"
+," This is a very hard task even for humans because there are so many ways to simplify. Here are just a few of the many simplifications:
+
+1) Nancy Patricia D'Alesandro Pelosi
+2) Pelosi, Nancy Patricia D'Alesandro (March)
+3) Speaker of the U.S. House of Representatives Nancy Pelosi
+4) Nancy Pelosi, Speaker of the U.S. House of Representatives
+
+A text summarization task would give the same text to every candidate and expect a short summary of its content."
+,"
+
+## Input
+
+Input will consist of a single string, that will contain between 3 and 80 characters inclusive. The input string will only consist of printable ASCII characters in the range of 'a' through 'z' ('A' through 'Z', '0' through '9', '-','', '.', and '_' are acceptable as well).
+
+## Output
+
+The output should be a single string that satisfies all of the following conditions:"
+,"
+
+
+The simplest way to go about this is to identify all named entities in the text first, e.g. (in this case) gordon david strachan obe, lrb, edinburgh, rrb, football, manager and so on. You can then substitute these named entities for their types and then use a Levenshtein distance algorithm to identify the closest entry from your list of possible answers."
+,"
+\subsubsection{Dataset Statistics}
+\begin{itemize}
+\item  Total number of data samples: 2,500
+\item  Total number of distinct tokens: 7,743
+\item  Average input length: 35
+\item  Average output length: 15
+\end{itemize}
+\subsubsection{Dataset Preprocessing}
+The input and the output texts in our dataset have been split into tokens using white spaces as the token delimiters."
+," Note that the original text may contain only one or more words.
+
+2. Remove all the vowels in the following text: ""Eat, Drink, and be Merry."" Note that the original text may contain only one or more words.
+
+3. Translate the following text from Russian to English: 'Спасибо за приглашение'. Note that the original text may contain only one or more words.
+
+4."
+,"
+
+The search for the blues
+
+The first part of the question can be addressed by splitting the text into phrases and then into words. Phrases can be easily obtained using the built-in split method that splits the text into words using a comma as a separator.
+
+>>> text = 'johnny shines interviewed by john hammond jr.'
+>>> print(text)
+johnny shines interviewed by john hammond jr.
+>>> print(text.split(','))
+['johnny shines', 'interviewed by', 'john hammond jr.'"
+,"
+
+For example, 'the gold standard was abrogated by a joint resolution lrb stat'
+
+You have to choose the correct word(s) from a list of words for each sentence.
+
+You have to choose the correct sentence from a list of sentences for each question.
+
+You have to choose the correct definition for each given word."
+," (Note: this is a sentence; it does not need any punctuation other than a full stop.)
+
+(3 marks)
+
+Question 10:
+
+Use the following words to complete the sentences, making sure that the information is complete and accurate. (6 marks)
+
+festival, local, community, event, culture, entertainment, support, culture, art, food
+
+1. The community ______ helps to bring people together.
+2. If you need advice on planning a ________, then the ________ might be a good place to start.
+3."
+,"
+
+In the above example, the candidate should write: ""When the values on the vertical axis of a chart are labeled instead of numbered.""
+
+In the following example, the candidate would have to rewrite the entire passage: ""As the human brain evolved, language became the preferred way of communicating. Humans were better able to express their ideas, emotions and needs. They used language to describe the world around them. Language can describe any experience, from the sublime to the mundane. People use language to tell stories and make art. The use of language in poetry has been especially important."
+,"
+
+Task 2 (optional)
+
+The following is a paragraph extracted from Wikipedia's ""River Danube"" article: 'The Danube flows through ten countries: germany (with a length of 210km), austria (810km), hungary (750km), slovakia (340km), croatia (180km), serbia (1,170km), vBulletin
+
+Joomla templates by a4joomla"
+,"
+
+Sample Input
+
+'division iii the advanced project requires students to complete an in depth project in their field of choice lrb which is generally related to the division ii field rrb.'
+
+Sample Output
+
+
+All Submissions
+Best Solutions
+
+Point Value: 20 (partial)
+Time Limit: 4.00s
+Memory Limit: 32M
+Added: May 17, 2014
+
+Problem Types: [Show]
+
+Languages Allowed:
+
+Comments (Search)
+
+My algorithm is a greedy algorithm.
+
+My implementation is very very very complicated."
+,"
+
+Hint
+• Replace multiple occurrences of a single word.
+• Replace all instances of the same word with the same alternative.
+• Avoid adding additional words.
+• Try not to change the number of words in a sentence.
+
+## The model
+
+As I have shown in the previous part of the tutorial, it's easy to get up and running in PyTorch. We will be using pre-trained embeddings from GloVe and a simple neural network model.
+
+Note
+We don't need any data to train the model as the GloVe embeddings already contain pre-trained weights.
+
+"
+," (Hint: simplify the grammar, shorten long sentences, use the same grammar throughout, and use simple English words as much as possible. Use contractions as much as possible, and eliminate unnecessary information.)
+
+  4. (10 points) Rewrite the following paragraph so that it is appropriate for academic writing. 
+
+    Although the process of the development of Korea into a modern nation state and democracy has been rather torturous, Korea is now regarded as an advanced democratic country. It is widely recognized by the academic world that Korean democracy has achieved a remarkable transformation and development through a long and hard road."
+,"
+
+Here is an example of input text and expected output text:
+
+Input text:
+'bowlegs was named after an early resident lula bowlegs a descendant of the florida seminole chief billy bowlegs.'
+
+Output text:
+'billy bowlegs'
+
+Input text:
+'bowlegs was named after an early resident lula bowlegs a descendant of the florida seminole chief billy bowlegs.'
+
+Output text:"
+," (3.0pt)
+
+The following example demonstrates a correct response to this task:
+
+“maya lin designed the memorial wall”
+
+This task tests a system’s ability to understand sentences in the style of The Washington Post.
+
+## 1.1.3: Yes/No questions
+
+Write a sentence that can be answered with a single “yes” or “no” that will be true of the text. The text is provided as a list of sentences. (2.0pt)"
+,"
+
+Input: 'linux mint has a stated focus on elegance and it includes a number of applications that are not available in ubuntu lrb see aforementioned mint tools rrb.'
+
+Output: 'linux mint is focused on elegance and has applications that are not available in ubuntu.'
+
+Explanation: A good simplification removes the unnecessary and irrelevant content to ensure the core meaning is intact. In this case, the redundant information is present and should be removed to improve the readability.
+
+## Input
+
+A string s with length L.
+
+L < 100, and s contains only uppercase letters.
+"
+,"
+
+I'm trying to make this text as simple as possible, but I find it hard to decide what is necessary and what isn't. It is okay to make the text shorter and simpler as long as its meaning doesn't change.
+
+• What is your problem with it? You don't seem to have specified any particular problem you want us to help you solve. – David Richerby Dec 12 '16 at 12:43
+• @DavidRicherby I'm trying to make the text as simple as possible. – Karthikeyan Dec 12 '16 at 13:07"
+,"
+
+\ex
+Simplification is an important task in NLP.
+A simplified version of the previous text should be:
+
+\ex 
+Simplification is a major task in NLP.
+A simplified version of the previous text should be:
+
+\answer{Simplification is a major task in NLP.}
+
+\ex 
+The sentence \textit{The Simplification task of NLP.} is incorrect and should be \textit{Simplification is a major task in NLP}.
+
+\end{multicols}
+\vspace*{2ex}
+"
+,"
+\item
+  Find the coordinates of each of the places in the list.
+\item
+  Find the distance between each pair of places.
+\item
+  Given a set of \(n\) places, calculate the closest pair of locations.
+\item
+  Calculate the mean distance between the points.
+\item
+  Use a map to check your answers.
+\end{enumerate}
+
+\hypertarget{questions}{%
+\section*{Questions}\label{questions}}
+\addcontentsline{toc}{section}{Questions}"
+," For example: 'in addition to its marble quarries, the city has academies for sculptors and fine arts and a museum of statues and antiquities and a yearly fair for the technology of marble.' (The sample text should be no longer than 250 words.)
+
+    • Word count: 2495
+  11. Marked by a teacher
+
+    The aim of my investigation is to find out if a student population can predict a school`s GCSE pass rate.
+
+    4 star(s)"
+," You should only use the most prominent words for simplification. It's okay to make minor typos and grammar mistakes (but not to misspell any important words). This is a typical problem that one might find in a machine translation task (although for this task we only allow simplifications). There are no specific requirements on the length of the text: the simplification may be longer than the original. There are a lot of words that are not necessary and can be removed (for example, 'the who was the director of antiquities' simplifies to 'the director was a director of antiquities')."
+,"
+
+The simplification is'shines moved to hughes arkansas and worked on farms. he put his musical career on hold.'
+
+This problem requires several non-trivial steps:
+
+1. Tokenize and normalize the text (e.g., convert all characters to lowercase)
+2. Identify pronouns
+3. Apply the following simplifications, where $w$ is a token in the original text:
+1. $w \rightarrow$ pronoun +'s' if $w$ is a possessive
+2."
+, (i.e. don't also give the original text).
+,"
+
+
+\paragraph{Example 2:}
+
+Consider the following text: 'what is the most valuable gift i can give my child?'. Simplify this text by combining the clauses so that the overall meaning of the text is maintained, but the text is easier to read.
+
+
+\paragraph{Example 3:}
+
+The following text is the translation of a joke in Greek. Simplify the text so that it can be easily understood by an English speaker without knowledge of the Greek language. 'In one of the Greek islands there is a village. In the village there is a school."
+,"
+  2. Given a string representing a date in the format DD/MM/YYYY, return a string in the format MM/DD/YYYY. For example, return the string '25/12/2008' when provided with '12/25/2008'.
+
+Task 2
+
+In this task, you must provide code that will return the first three words in the following string: 'The quick brown fox jumps over the lazy dog.' This string can be assumed to always contain a number of words separated by single spaces."
+, Sample input: 'it is the only state flag of the united states to have been flown under so many various forms of government and the only to feature the union flag of the united kingdom a holdover of the period in hawaiian history when it was a british protectorate lrb rrb.' Sample output: 'it is the only state flag of the united states to have been flown under so many various forms of government and the only to feature the union flag of the united kingdom a holdover of the period in hawaiian history when it was a british protectorate.'
+," The name 'Gonzalez' can be simplified to 'Gonzalez' or 'Gonzalez'. (This question was inspired by an example from the paper A Latent Variable Model for Information Extraction from Natural Language Text by C. J.C. Burges and T. Hofmann, 1999.)
+  3. (NLP: Topic identification) Consider a simplified text that is the title of a web page, such as'snowboarding gear.' The questioner wants a response that is the name of a sport that this page is likely about."
+,"
+
+\end{document}
+
+
+• Please always make sure to provide a complete, but minimal document that can be copy-pasted and run. If the document is missing pieces, the problem might not be related to your problem at all and this makes it impossible to answer the question properly and provide a solution. Jan 5 '16 at 23:10
+• Please edit your question to include the full document, not just the relevant portion. Jan 5 '16 at 23:12
+
+As suggested by cfr, one should use \text{... } in order to produce proper output."
+,"
+
+Here is a simple sample answer (not the one we expect). 'cup, cup of apollo'
+
+
+Input Format
+
+
+Output Format
+
+For each testcase, print in a new line one possible solution, if it exists, for the given input.
+
+If more than one solution is possible, any one is correct. If no solution exists, print 'n/a' (without quotes).
+
+
+  • 1 <= n <= 8
+
+  • 0 <= m <= 100
+
+  • s contains at least one letter and at least one number."
+," Do not include any markup information or line breaks.
+
+This test should only be run if both the following constraints are true:
+
+  • Constraint:inputLength, must be smaller than 500 characters
+  • Constraint:maxNumberOfChars, must be smaller than 500 characters"
+,"
+
+For example, given the following text: 'The use of natural resources is a vital part of human activity. Energy for human use is obtained from natural resources such as coal, crude oil, and natural gas, which form the fossil fuels. These fuels are used as the main source of energy in the United States to generate electricity for homes and businesses, as well as for transportation purposes such as in the form of gasoline for automobiles and jet fuel for airplanes. Fossil fuels also provide heat for homes and businesses and have been used to power machinery since the industrial revolution."
+,"
+
+Test data:
+Input: ""bbc children in need is an annual british charity appeal organised by the bbc.""
+Expected output: ""bbc children in need is an annual charity appeal organized by bbc.""
+
+Test data:
+Input: ""bbc children in need is an annual british charity appeal organized by the bbc.""
+Expected output: ""bbc children in need is an annual british charity appeal organised by bbc.""
+
+
+Hint
+
+Test the solution in the interactive environment to make sure the output looks correct.
+
+import requests"
+,"
+
+This challenge is about converting a lengthy paragraph about a technical process to a shorter but clearer version of the text with the same meaning. This task requires the system to remove redundant information and simplify the text in a way that does not alter the overall meaning.
+
+
+This challenge requires a system to create a description of an image (e.g. an art piece) in words that reflect the image. In the following example, the system is expected to produce a description of the artwork.
+
+The artwork 'Two women sitting' is shown."

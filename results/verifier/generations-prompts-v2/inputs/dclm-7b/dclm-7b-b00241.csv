@@ -1,0 +1,670 @@
+prompt,response
+,"
+
+This problem can be solved by using an automated text simplification system such as Text Simplification Service (TSS) \cite{Xu2016}.
+In this paper we will focus on a special type of simplified text which is the first letter or capital letters of words called \textit{initialism}. For example, \textit{TSS} is an acronym and \textit{NLP} is an abbreviation. The main objective of this study is to predict the initial letters of each word in the text automatically."
+,"
+
+This task is challenging since the user should be able to parse the original text, infer that 'census' refers to the 'U.S. Census Bureau', recognize the abbreviation'sq. mi.' (for square mile) as a value of a quantity, parse the sentence 'which square miles lrb km rrb is land and square miles lrb km rrb lrb. rrb is water' to discover the values 'km', 'land', 'is', 'km', 'water', 'is','sq. mi. lrb km rrb'."
+," The task is to recognize the core meaning of the sentence. It is assumed that the core meaning remains the same if any extra information is removed. The original text should have no grammatical mistakes.
+
+The response is a list of the words to be removed. This task is to remove only the extra information that is not required to convey the core meaning of the text. The response is to remove the least amount of information needed. No new words should be added to the response.
+
+The question contains a natural language sentence. The answer is a subset of the original sentence that conveys its core meaning."
+,"
+
+Hint: You might find the following functions useful: replace() removes all occurrences of a substring from a string and split() splits a string around a given substring.
+
+
+This task is based on real data from a hurricane prediction project and is similar to the task used in the recent U.S. National Hurricane Forecast Verification (NHFV) contest. For the NHFV contest, a simple solution that only considered the first character of the hurricane name was awarded the top prize for its accuracy.
+
+Use any programming language and return a string that is the simple text.
+
+Solution Stats
+
+57."
+,"
+
+#include <string.h>
+#include <stdio.h>
+
+/* Simple word list for first example */
+
+#define MAXLEN 20
+
+static char *list[MAXLEN] = {
+    ""a"", ""the"", ""of"", ""and"", ""is"", ""to"", ""was"",
+    ""the"", ""that"", ""with"", ""in"", ""was"", ""is"",
+    ""a"", ""in"", ""to"", ""of"", ""the"", ""was"", ""is"","
+," Note: 'protein' = 'proteins' [3]
+The following question is part of a test item.
+The correct option is (2).
+Please remove all extraneous punctuation marks (e.g. commas and full stops) from the options.
+The following question is part of a test item.
+The correct option is (2).
+Please remove all extraneous punctuation marks (e.g. commas and full stops) from the options.
+The following question is part of a test item.
+Please remove all extraneous punctuation marks (e.g."
+,"
+
+A. 'the philharmonic s home is avery fisher hall in new york at lincoln center.'
+
+B. 'the philharmonic s home is in new york at lincoln center at avery fisher hall.'
+
+C. 'the philharmonic s home is located in new york at lincoln center, which is at avery fisher hall.'
+
+D. 'the philharmonic s home is at lincoln center, at avery fisher hall, which is in new york.'"
+,"
+
+
+You must be logged in to comment
+
+Sign In / Sign Up"
+,"
+• The following is a definition of the text similarity measure called the flesch kincaid grade level, which is used to estimate the difficulty of a piece of text. The grade level is based on a simplified version of the definition, which is based on the number of words and syllables in the text. 'The Flesch Kincaid grade level is a readability test for the us education system developed by douglas b kincaid and jerry r bryant in 1975."
+," Do not insert extraneous words or phrases into the sentence.
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+7
+
+8
+
+9
+
+10
+
+11
+
+12
+
+13
+
+14
+
+15
+
+16
+
+17
+
+18
+
+19
+
+20
+
+21
+
+22
+
+23
+
+24
+
+25
+
+26
+
+27
+
+28
+
+29
+
+30
+
+31
+
+32
+
+33
+
+34
+
+35
+
+36
+
+37
+
+38
+
+"
+,"
+
+Example input: 'as lear explains potter titled the the tale of peter rabbit and mr. mcgregor s garden and sent it to publishers but her manuscript was returned... including frederick warne co.... who nearly a decade earlier had shown some interest in her artwork.'
+
+Example output: 'potter titled the tale of peter rabbit and mr. mcgregor s garden in order to publish it, but her manuscript was returned... including frederick warne co., who nearly a decade earlier had shown some interest in her artwork.'"
+,"
+
+Sample Response A
+
+'chicago has two major league baseball teams, the chicago cubs and the chicago white sox. they play in wrigley field and us cellular field, respectively.'"
+,"
+The text in its original format is: 'The most important finding was that the three species all had the ability to emit a loud squeak if they were irritated.'
+Which of the following text would be an acceptable simplification of the original text?
+(Select two.)
+'The three species could squeak loudly when they were annoyed.'
+'The three species could make a squeaky noise if they were irritated.'
+'All three species could squeak loudly when they were annoyed.'
+'All three species could make a squeaky noise if they were irritated.'"
+,"
+
+You can also simplify other text by making the text you want to simplify the only child of the div element, or by giving an ID to that div element and using the id parameter in the request object, for example:
+
+You can also pass multiple texts to the method, which simplifies the same text one by one.
+
+
+In the response to the above request, the first simplified text is sent."
+,"
+""""""
+
+import json
+import logging
+import os
+import unittest
+import uuid
+
+import numpy as np
+from scipy.sparse import csr_matrix
+
+from pymytest.io.narrative import parse_narrative, SimplificationStrategy, split_narrative, \
+    write_parsed_narrative, write_simplified_narrative
+from pymytest.tokenizers.english import EnglishTokenizer
+
+
+class TestSimplification(unittest.TestCase):
+    def setUp(self):
+"
+,"
+
+Input:
+""hyde park is a town located in the northwest part of dutchess county new york united states just north of the city of poughkeepsie.""
+Output: ""town northwest part dutchess county new york north poughkeepsie""
+
+# My code
+
+def solution(text):
+return re.sub(r'[.,!\?\;\'\""\(“”…]', '', text).replace(
+"" "","""").strip().lower().split("" "").pop(1)
+
+# My test cases"
+,"
+
+\section{Evaluation}
+
+In order to evaluate our system we carried out experiments on a variety of test datasets. To determine which method would be the most successful in carrying out the tasks we wanted to carry out, we carried out ablation studies in which we tested each different component.
+
+\subsection{Training Datasets}
+We had four datasets to work with:
+
+\subsubsection{Wikipedia:}
+This was used as a source for creating the sentence embedding dataset. The sentences were collected using the Wikipedia's \texttt{randompage} module."
+,"
+
+Answer the following questions:
+
+The text:
+le mesnil au grain is a commune in the calvados department in the basse normandie region in northwestern france.
+
+The simplified text:
+le mesnil au grain is a commune in the calvados department in the basse normandie region in northwestern france.
+
+Q1
+
+How many times does the word 'france' occur in the simplified text?
+
+Q2
+
+How many words are there in the simplified text?
+
+Q3"
+,"
+  2. Provide a confidence score between 0 and 1 for each translation, where a higher score indicates a greater confidence in the correctness of the translation.
+
+The input to your program will be an input string, a dictionary of word translation pairs, and a parameter denoting the size of the window used to build the trigram model. The output should be the translation of the input string according to the model, followed by a confidence score for this translation."
+,"
+
+\subsection{The Simplification Task}
+We now define the simplification task. The input to the task is a sentence, and the output is its simplified version.
+We follow the definition of \citet{xu-etal-2016-optimizing} and formulate the simplification task as a rewrite process in which a given sentence is rewritten to a simpler version with no more than 5\% of tokens from the original sentence being modified. We define this criterion as the \textit{token penalty}, denoted by $\rho$.
+
+\subsection{The Simplification Evaluation}"
+,"
+
+Source: https://en.wikipedia.org/wiki/National_Medal_of_Arts
+Data Specification
+The source text is provided as-is in the source.json file, along with the necessary labels. The input will always be at least 3 words and at most 100 words.
+The output must be in plain English.
+The output can contain additional context or information about the input.
+If there are multiple valid interpretations, all interpretations should be provided in the response.
+You should not provide information that is not in the input.
+Dataset Attribution"
+, ### Sample Response:'mountain brook is a suburb of birmingham' ### Sample Output: mountain brook is a city in southeastern jefferson county alabama and a suburb of birmingham
+,"
+
+\textbf{Instruction:} Please simplify the following text to improve its readability, ensuring its core meaning remains intact.  On October, by mutual consent, Paramount and Eisenstein declared their contract null and void, and the Eisenstein party were treated to return tickets to Moscow at Paramount's expense.  Provide only the simplified text as the response.
+
+\textbf{Response:} Please simplify the following text to improve its readability, ensuring its core meaning remains intact."
+,"
+
+In order to obtain better readability, you should delete unnecessary information from this statement, such as the phrase, ""perhaps as ejecta from a large impact on ida.""
+
+• 'The moon was named after the Greek goddess of the moon (Greek: Νέα Θαλής Néa Thalés), who in Roman mythology is called Diana. She was known as a huntress, and the moon was thought to influence hunting. In many societies, the moon is associated with insanity, and lunatic derives from Luna. The moon is also associated with love, beauty and fertility."
+,"
+
+\begin{comment}
+
+\begin{enumerate}
+\item
+\textbf{Topic Classification:} Given a topic classification task and a set of sentences $D$ where each sentence is assigned to one or more of the topic classifications, the objective is to train a classifier that is able to predict the class labels of unlabeled sentences.
+
+\begin{enumerate}
+\item
+
+Topic classification as an NLP task can be done using a variety of classifiers such as Na\""ive Bayes classifiers, SVMs, Decision trees, Logistic regression and Neural networks."
+,"
+
+    The correct answer is:
+
+    Although the resort was initially dependent upon railroad and electric trolley service, the completion of Virginia Beach Boulevard, which extended from Norfolk to the oceanfront, opened the way for automobiles, buses, trucks, and passenger rail service. Eventually, passenger rail service was discontinued.
+
+    As with all the questions in this paper, the above text is not the exact question but a paraphrase.
+
+
+    The goal of this task is to assess an examinee’s ability to apply a range of procedures to recognize and correct mechanical and syntactic errors."
+,"
+
+The crust forms in part by aggregation of island arcs including granite and metamorphic fold belts. The buoyant lithospheric mantle is preserved in part by depletion of the underlying mantle.
+
+Q9. Consider the following statements.
+1. The average temperature on Earth is 15°C.
+2. The average temperature of the Sun is 6000°C.
+
+Which of the above statements is/are correct?
+
+(a) only 1
+(b) only 2
+(c) both 1 and 2
+(d) neither 1 nor 2
+
+d. neither 1 nor 2"
+,"
+
+#### Output
+
+Rhodes is a city in Marshall County, Iowa, United States.
+
+#### Input
+
+The following text needs to be simplified to avoid repetition of the sentence structure:
+
+• There are many people, but there are no people.
+
+#### Output
+
+There are many people, but there are no people.
+
+#### Input
+
+Simplify the following text to ensure the words are synonyms of each other:
+
+• the man is a dog man
+
+#### Output
+
+The man is a dogman
+
+#### Input"
+,"
+
+
+You don't know who Harry Connick Jr is, but you know he's a famous person. The text is about Harry Connick Jr, and so is the question.
+
+The only relevant information is the name of the person, in this case ""Harry Connick Jr"". The input has the word ""Harry"" and ""Harry Connick"" in it, and the question also has the word ""Harry"" in it. These are good indicators of the topic of the text. However, you know that ""Harry"" could refer to other people."
+,"
+
+Sample Output:
+
+'pakistani districts'
+
+Example #2
+
+Input: 'a sentence that is not very readable due to its excessive amount of information.'
+
+Output: 'this text is difficult to read'
+
+You can check the text here, in a new tab.
+
+Do you like my blog? Check out my other blogs!
+
+Find me on GitHub"
+,"
+
+(4) Identify the author of a given work based on its abstract. The example given is to recognise Shakespeare from his Sonnet 116:
+'Let me not to the marriage of true minds Admit impediments. Love is not love Which alters when it alteration finds, Or bends with the remover to remove. Oh, no! it is an ever-fixed mark.'
+(5) Given an image, identify the location depicted. Some examples include: 'a painting of a horse in a field near a river; an aerial view of a city; a landscape with a mountain range and a lake.'
+"
+, [The input text is the one shown in bold. The output is 'before hawaii joined the u.s. the term the 48th state was used.'.]
+,"
+
+\noindent
+Example: Input: 'as a boy clive is reputed to have climbed the tower of st mary s parish church in market drayton and perched on a gargoyle frightening those down below.'\\
+Output: 'boy climbed tower'
+
+\subsection{COVID-19: Vaccination Scheduling}
+
+In this task, you will be given a \textit{request\_id} as the query. This request will be a request to a doctor to schedule a COVID-19 vaccination. The user will send an email to the doctor asking for vaccination."
+,"
+• #### 2.17 Simplify a sentence
+
+A sentence has been automatically simplified to reduce its complexity. This text has been manually re-simplified and is considered to be the correct version of this sentence. Simplify the text that has been automatically simplified to reduce its complexity to match the simplified text provided. Do not change the capitalization or punctuation.
+• #### 2.18 Simplify a sentence (3)
+
+A sentence has been automatically simplified to reduce its complexity. This text has been manually re-simplified and is considered to be the correct version of this sentence."
+,"
+
+Test Set C contains a set of 2-3 sentences that are used to evaluate the simplification model's capability to capture the context of the input sentences. Each sentence is composed of multiple short sentences that describe some entity. The model is required to identify the key sentences from the set of multiple short sentences in the original text that contain the maximum amount of information about the entity. For example, for the following input sentence, the model is expected to output '1 2 3' as the response because the entity is 'peter mark' and the key information is contained in the first, second and third sentences."
+,"
+
+Task 2: Simplification by sentence reordering.
+
+Provide the most readable simplified text, which is produced by reordering the sentences in the given text. Ensure that the core meaning remains intact.
+
+Text to be reordered: 'as a consequence of the unwise actions of the united nations the government of india has withdrawn from the organization.' 'this action is an appropriate one to take.' 'india is the only member of the organization with any real power in the international arena.'"
+,"
+
+Sample Output
+
+three-dimensional space and one-dimensional time
+
+Sample Input
+
+
+Sample Output
+
+
+Sample Input
+
+
+Sample Output
+
+The world's top 10 countries by population.
+
+
+Problem credits: Ian Dean
+
+Contest has ended. No further submissions allowed."
+,"
+
+Example input:
+
+'james buster douglas knocks out mike tyson to win the world heavyweight boxing crown.'
+
+Example output:
+
+'douglas wins boxing championship'
+
+Here are some examples of acceptable output:
+
+'boxing champion douglas wins'
+'douglas beats tyson for title'
+'heavyweight boxing champion douglas wins'
+
+Here are some examples of unacceptable output:
+
+'douglas beats mike'
+'james buster wins boxing crown'
+'james douglas beats tyson'
+"
+,"
+
+Q3: Which of the following is correct?
+
+Q4: Which of the following is not a factor considered in the text length?
+
+Q5: Select the best text in the options below to replace the phrase'mangoes are seasonal fruit' in the following passage:
+
+'Taiwan mangoes are the best in the world lrb seasonal fruit rrb. If you are in Taiwan during the summer lrb March to May rrb, don't miss the chance to buy these wonderful mangoes from roadside stalls or farmers' markets."
+,"
+
+\textbf{Answer}: Some of the tents that were built by seabees and funded by the U.S. Federal Emergency Management Agency are wooden structures covered by tents.
+
+\noindent \textbf{Text 4}: The u.s. government should not fund the military's space program since the u.s. military can fund its own programs without taxpayer money. Provide only the simplified text as the response.
+
+\textbf{Answer}: The U.S. government should not fund the military's space program since the U.S. military can fund its own programs without taxpayer money."
+,"
+
+Question 6: What type of fruit does the following text describe? 'a plum is a fruit with a smooth or wrinkled skin, a thin fibrous pith around the seed and a single large seed that is edible. most plums are harvested ripe, and many cultivated types are not eaten until a day or two after harvest.'
+
+Question 7: How are the following text's grammar and style to be improved? 'the baltic states, also known as the baltic nations, are three countries on the eastern coast of the baltic sea: estonia, lithuania and latvia."
+,"
+
+Input: 'following a successful amateur career she turned professional in when she signed with the hamburg boxing promoter spotlight boxing.'
+
+Output: 'after an amateur career she became a professional when she signed with a hamburg boxing company.
+
+There are two problems with this particular solution that we need to address:
+
+  1. If this was a full-fledged project, we'd want to make sure that it doesn't matter where the punctuation falls in the text."
+,"
+
+The question to which the above is the answer should be:
+
+What was the name of the river in the Democratic Republic of the Congo, Zaire, or the Belgian Congo, prior to 2002?
+
+The above text is the answer to the question below, but this question is not provided in the training set:
+
+Q:What was the name of the river in the Democratic Republic of the Congo, Zaire, or the Belgian Congo, prior to 2002?
+
+The example illustrates that the neural net learns the relationship between the question and its answer."
+,"
+
+Example:
+
+Input:
+'The summer paralympics will be held in the same city and organized by the same committee and are scheduled to be held from september to.'
+Output: 'paralympics will be held in september'
+
+• Can we assume that ""the same city"" is not part of the simplification? – Erik the Outgolfer Apr 6 '18 at 17:16
+• @EriktheOutgolfer yes – Ethan Chapman Apr 6 '18 at 18:30"
+,"
+
+
+
+For the text above, the expected response is 'pirojpur is a district in southwestern bangladesh'. The first word 'is' will be provided as part of the response array and the'is'will be ignored as part of the input text.
+
+Here are some additional constraints and notes about the above examples:
+
+  • The word 'the' will be provided as part of the response array
+  • The word 'that' will be provided as part of the response array and'that'will be ignored as part of the input text"
+," This challenge is very similar to the one-line text simplification challenge proposed by \citet{zhang2017sentence}, with the key differences being that the input text is longer and the response is much shorter than in that work.
+
+\section{Methods}
+
+\subsection{Data Pre-processing}
+\subsubsection{Wikipedia Paragraphs}"
+,"
+
+Example:
+
+Input:'recently the volcano has created smaller landslides about every ten years'
+
+Output: 'the volcano has created landslides about every ten years'
+
+
+Constraints:
+
+• The input string has between 3 and 100 non-punctuation characters.
+• The input string is lowercase and has no punctuation characters except periods, which may be added or removed.
+• The input string may have between 1 and 10 punctuation characters, including at least one period, before any changes."
+," The text must be correctly capitalized and in present tense. You must include the words 'he' and 'also' as part of the text.
+
+He also completed an array of chamber music anthems and African dances for violin among other works.
+he also completed an array of chamber music anthems and African dances for violin among other works.
+he also completed an array of chamber music anthems and African dances for violin among other works.
+
+The above answer was provided by our mentor.
+
+• The text contains three grammatically correct, syntactically correct and contextually appropriate responses."
+," Note that the simplified text will never contain any of the input text.
+
+Input
+
+The input text will always contain at least one character and will not exceed 100 characters.
+
+Output
+
+The text to be simplified.
+
+Example
+Input
+october is the tenth month of the year in the gregorian calendar and one of four gregorian months with days.
+Output
+october has 30 days.
+Note
+
+In the first example, the correct answer would be: september has 30 days."
+," If the text cannot be simplified to less than 3 sentences, then provide an appropriate message informing that the text could not be simplified.
+
+(5) Text normalization: In this task, a sentence containing one or more unnormalized words should be normalized by replacing the unnormalized words with normalized equivalents. The normalization must be done for all occurrences of the unnormalized word in the sentence. For example, in 'I was reading a medical journal but the articles are hard to understand', the unnormalized word 'articles' must be replaced with its normalized equivalent 'papers'. Provide only the normalized text as the response."
+,"
+    • For the above example, your model should output: 'uleung county is the main part of south korea.'
+    • For an input of 'what is the main part of ulleung county north gyeongsang province south korea', your model should output: 'uleung county is the main part of south korea'.
+
+The following are some other examples of questions and simplified answers:
+
+  • ""who was the second president of the united states?"" —-> 'george washington was the first president of the united states.'"
+,"
+
+Example: The simplified text should be'she is the daughter of isaac guillory and the family environment gave her an interest in the entertainment industry.'
+
+
+Text is the answer to the question of What is the simplified text?
+
+
+'She is the daughter of isaac guillory an anglo cuban folk guitarist and the family environment gave her an interest in the entertainment industry'
+
+Output
+
+['she is the daughter of isaac guillory and the family environment gave her an interest in the entertainment industry' ]
+
+
+Example 2:
+
+Input"
+,"
+
+  • The search for habitable environments
+    in our solar system and
+    for habitable planets
+    outside our solar system.
+  • The search for
+    prebiotic chemistry
+    laboratory and field research
+    into the origins and early evolution
+    of life on Earth
+    and studies of the
+    potential for life to adapt to
+    challenges on Earth
+    and in outer space.
+
+    You might also like
+  • What is the importance of science education in schools?
+    The answer must include the following:"
+,"
+
+You may make use of additional resources, for example a dictionary, to assist you in solving this question. Please provide only one response to this question.
+
+Here is the question again with some notes:
+
+I'm struggling with the solution for this question as I'm not sure how to parse the input sentence. I was wondering if you could help me out?
+
+Here's what I've got so far:
+
+• I tokenized the text and then lemmatized each token. Then, I computed the average of the POS tags for each token."
+,"
+
+(C) 2017    Founded by raps mk
+All Rights Reserved. All other trademarks are property of their respective owners.
+SiteMap  | Terms  | About"
+,"
+
+• Answers should be in the following format, ""The storm should it intensify into a moderate tropical storm between E and E, should be named X"".
+
+Sample Input:
+
+The sub regional tropical cyclone advisory center in mauritius names the storm should it intensify into a moderate tropical storm between e and e if the storm should intensify into a moderate tropical storm between e and e then the sub regional tropical cyclone advisory center in madagascar assigns the appropriate name to the storm.
+
+Sample Output:"
+," Note that there are multiple ways to interpret this text as Python code, which will result in different test case outcomes.
+
+## Solution
+
+def get_text_with_welcome_wording(input_text):
+return 'Welcome, <username>.
+
+Welcome to <website>. Here is your Talk page.'
+
+if __name__ == '__main__':
+import doctest
+doctest.testmod()
+
+### Input
+
+A sample of the input data is given below. Note that you do not need to handle all of the possible inputs - focus on the common cases.
+"
+,"
+
+\subsection{Mathematics Problem-Solving}
+Mathematics Problem-Solving requires the ability to understand mathematics questions, formulate solutions using mathematical and/or computational techniques, and report results clearly. This task is based on \citet{zorbach_mathdqn_2019}. It consists of a pool of 100 math problems of various difficulty levels, randomly sampled from \citet{zorbach_mathdqn_2019}. Each math problem is presented to the model in the form of an equation in LaTeX, with the question text as well as the required input values."
+,"
+
+(8-digit code, no dashes or spaces)
+
+You can find an answer to this problem on your own. It consists of a sentence to be shortened with a word of 3 letters.
+
+  • 1
+    $\begingroup$ That's probably a good way to go about it, although I still think the answer is more obscure than it should be for this kind of puzzle. $\endgroup$ – DqwertyC Aug 29 '18 at 0:06
+  • 1"
+," The simplified text must be between 10 and 100 words long.
+
+  • A: 'In 1992, he began teaching in Maribor and later moved to Linz to teach history.'
+  • B: 'In 1992 he moved from Maribor to Linz where he taught history.
+  • C: 'In 1992, he started teaching history in Maribor, and later moved to Linz.
+  • D: 'In 1992 he began teaching in Maribor, and later moved to Linz to teach history."
+,"
+
+I think you can use a mix of sentence matching and paraphrasing to get you somewhere. First, you want to parse the sentences into words, then find which words in the sentence match the query words, and the sentence with the best match gets the most weight. Then, to get a more human level of accuracy, you'll have to do something like use the words as features to train an SVM to classify if the sentence is ""good"". I think you could do this with the KDD cup data set.
+
+  • $\begingroup$ I've never come across SVM before, what exactly is it?"
+,"
+
+Hint: You may need to use a regular expression.
+
+Hint: You can read the sentence in multiple parts, each part starting after a space.
+
+Hint: You can assume that there are no typos in the input.
+
+#### Input Specification
+
+The first line will contain the string s, which will consist of lowercase letters only.
+
+The first letter of s will always be a capital letter.
+
+#### Output Specification
+
+Output the simplified version of the string on its own line.
+
+#### Sample Input 1"

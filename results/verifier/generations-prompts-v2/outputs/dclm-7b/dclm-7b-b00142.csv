@@ -1,0 +1,1267 @@
+passage,response,atomic_units,hallucinated_atomic_units
+,"
+
+The example above describes how an entity (a city) is located in the state of a department (of France), located in a region. The full text describing this relationship is composed of three parts: a) the entity, b) the location (in this case the department, state or country, that the entity is located in, and c) the location of that location (here, the region). The first and third parts are constant (France and the Nord-Pas de Calais region) while the second part (the department) is changing based on the city of the example.","Here are the independent facts broken down from the passage: | True |
+ An entity (a city) is located in a department. | True |
+ The department is located in a region. | True |
+ The region is part of France. | True |
+ The passage describes a relationship between an entity, its location, and the location of that location. | True |
+ The relationship is composed of three parts:  | True |
+   - The entity (a city) | False |
+   - The location (department, state, or country) | True |
+   - The location of that location (region) | True |
+ The first part of the relationship (the entity) is a city. | False |
+ The third part of the relationship (the location of that location) is constant and refers to the Nord-Pas de Calais region. | True |
+ The country where the entity is located is France, which is constant. | True |
+ The second part of the relationship (the department) changes based on the city being described. | False |
+ The department is a part of the administrative structure of France. | True","   - The entity (a city) |
+ The first part of the relationship (the entity) is a city. |
+ The second part of the relationship (the department) changes based on the city being described."
+,"
+
+Source text
+
+""In recent years the emphasis has shifted towards other parts of the world such as the Himalayas and the South Pacific. However, the Americas still offer unique insights into the diversification of mammals, with the possible exception of Africa. Most of these insights relate to the South American continent and its various components, especially the Neotropics. The isolation of the South American continent led to the evolution of a large number of endemic vertebrate species, but this isolation ended in the middle Pleistocene when a series of land bridges established connections with the North American continent.","Here are the independent facts broken down from the passage: | True |
+ In recent years, the emphasis has shifted towards other parts of the world, such as the Himalayas and the South Pacific. | False |
+ The Americas still offer unique insights into the diversification of mammals. | True |
+ Africa is a possible exception to the unique insights offered by the Americas. | False |
+ Most insights into mammal diversification in the Americas relate to the South American continent. | True |
+ The South American continent has various components, especially the Neotropics. | True |
+ The isolation of the South American continent led to the evolution of a large number of endemic vertebrate species. | True |
+ The isolation of the South American continent ended in the middle Pleistocene. | False |
+ A series of land bridges established connections between the South American and North American continents in the middle Pleistocene. | False"," In recent years, the emphasis has shifted towards other parts of the world, such as the Himalayas and the South Pacific. |
+ Africa is a possible exception to the unique insights offered by the Americas. |
+ The isolation of the South American continent ended in the middle Pleistocene. |
+ A series of land bridges established connections between the South American and North American continents in the middle Pleistocene."
+,"
+
+
+\textbf{Target}: `fiedler a soldier during world war i was in france a front line soldier in.'
+
+
+\textbf{Context}: ""In the French Army, Fiedler served as an artillery observer, an occupation he had not pursued since the Great War, during World War I. \ldots \newline
+Fiedler's family lived in \ldots \newline
+In 1921, Fiedler was elected to the Illinois General Assembly \ldots ""
+
+\section{Data pre-processing}","Here are the independent facts broken down from the passage: | True |
+ Fiedler was a soldier during World War I. | True |
+ Fiedler served in France during World War I. | True |
+ Fiedler was a front-line soldier. | True |
+ Fiedler served as an artillery observer in the French Army. | False |
+ Fiedler had not worked as an artillery observer since World War I. | True |
+ Fiedler's family lived in an unspecified location (the location is not provided in the passage). | True |
+ In 1921, Fiedler was elected to the Illinois General Assembly. | False |
+Note that fact 6 is incomplete as the passage does not provide the specific location where Fiedler's family lived. | False"," Fiedler served as an artillery observer in the French Army. |
+ In 1921, Fiedler was elected to the Illinois General Assembly. |
+Note that fact 6 is incomplete as the passage does not provide the specific location where Fiedler's family lived."
+,"
+
+Note: This sample question is incomplete. The complete question text can be downloaded from
+
+Input data:
+
+
+Output data:
+
+
+The response should have a single newline between each sentence, and no other newlines.
+
+This is a sample test question for the reading comprehension subtest of the Computer-Based test. It is intended for use only with the CBT.","This is a sample test question for the reading comprehension subtest of the Computer-Based test. | True |
+It is intended for use only with the CBT. | False",It is intended for use only with the CBT.
+,"
+
+The test set for this subtask contains only one sentence per sample, however the samples come from three different news agencies.
+
+
+The task involves detecting if the sentence in a given sample is about the COVID-19 disease. The examples are all in English, however the data was collected from different sources and in different contexts, some of which are medical, some political and some societal. The sentences can be very long or short and can be in a very informal style.
+
+
+The task involves generating a short text describing the scene on a given image.","Here are the independent facts broken down from the passage: | False |
+ The test set for this subtask contains only one sentence per sample. | True |
+ The samples come from three different news agencies. | False |
+ The task involves detecting if a sentence is about the COVID-19 disease. | False |
+ The examples are all in English. | False |
+ The data was collected from different sources. | True |
+ The data was collected in different contexts (medical, political, and societal). | False |
+ The sentences can be very long or short. | True |
+ The sentences can be in a very informal style. | True |
+ There is a separate task that involves generating a short text describing the scene on a given image. | False |
+Note that fact #9 seems to be unrelated to the previous facts, which all describe a task related to detecting COVID-19 disease in sentences. Fact #9 appears to describe a different task altogether. | False","Here are the independent facts broken down from the passage: |
+ The samples come from three different news agencies. |
+ The task involves detecting if a sentence is about the COVID-19 disease. |
+ The examples are all in English. |
+ The data was collected in different contexts (medical, political, and societal). |
+ There is a separate task that involves generating a short text describing the scene on a given image. |
+Note that fact #9 seems to be unrelated to the previous facts, which all describe a task related to detecting COVID-19 disease in sentences. Fact #9 appears to describe a different task altogether."
+,"
+
+The above sample input would produce the following output:
+
+'missing number missingno'
+
+Your Answer
+
+1 Answer
+
+
+We have the input ""missingno. or missingno is a pok mon species found in the video games pok mon red and blue. standing for missing number missingno."" We are asked to output ""missing number missingno"".
+
+In the input, we have a sentence, a list of words, and punctuation. We need to convert this to our output string, ""missing number missingno"".
+
+What I do first is break this down to words and punctuation.","Here are the independent facts broken down from the passage: | True |
+ The sample input produces the output ""missing number missingno"". | True |
+ The input contains the sentence ""missingno. or missingno is a pok mon species found in the video games pok mon red and blue. standing for missing number missingno."" | True |
+ The input contains a list of words and punctuation. | True |
+ The desired output string is ""missing number missingno"". | True |
+ The input needs to be converted into the output string. | True |
+ The first step in converting the input is to break it down into words and punctuation. | True |
+ ""Missingno"" is a Pokémon species. | True |
+ ""Missingno"" is found in the video games Pokémon Red and Blue. | True |
+ ""Missingno"" stands for ""Missing Number"". | True",
+," Note that there is no need to add additional information about the movie, such as the title and/or the director. The movie name and the directors will not be given in the test.
+
+• 2)
+
+Write a review for the movie in your own words. You should include at least 100 words.","Here are the independent facts from the passage: | True |
+ Additional information about the movie, such as the title, is not required. | True |
+ The director's name is also not required. | True |
+ The movie title will not be provided in the test. | True |
+ The director's name will not be provided in the test. | False |
+ A review of the movie is required to be written. | True |
+ The review should be written in the test-taker's own words. | True |
+ The review should be at least 100 words long. | True", The director's name will not be provided in the test.
+," The input text is guaranteed to be non-empty and have less than or equal to 100 characters.
+
+
+1) The correct response would be'may the trial of the necklace affair ends in paris'.","Here are the independent facts broken down from the passage: | True |
+ The input text is guaranteed to be non-empty. | True |
+ The input text has less than or equal to 100 characters. | False |
+Note that the second part of the passage (""1) The correct response would be..."") appears to be unrelated to the first part and does not provide any additional information about the input text. It seems to be a separate statement or instruction. | True", The input text has less than or equal to 100 characters.
+,"
+
+Input: ""douglas e. iannucci the third largest prime divisor of an odd perfect number exceeds one hundred mathematics of computation lrb rrb pp.""
+Output: ""douglas e. iannucci is the third largest prime factor of an odd perfect number. it exceeds one hundred. mathematics of computation.""
+
+• A line of input contains a string to be simplified, which consists only of lowercase letters and digits, with no whitespace characters and no punctuation or special characters. The input string is guaranteed to have a length of at least 3.","Here are the independent facts broken down from the passage: | True |
+ Douglas E. Iannucci is a person who has made a statement about odd perfect numbers. | True |
+ The third largest prime divisor of an odd perfect number exceeds one hundred. | True |
+ The statement about odd perfect numbers is related to the publication ""Mathematics of Computation"". | True |
+ The input string consists only of lowercase letters and digits. | False |
+ The input string has no whitespace characters. | False |
+ The input string has no punctuation or special characters. | False |
+ The length of the input string is at least 3 characters. | True"," The input string consists only of lowercase letters and digits. |
+ The input string has no whitespace characters. |
+ The input string has no punctuation or special characters."
+," Do not modify it.
+
+You should base your decision on the following rules:
+
+1) If a word in the original text can be found in the simplified word list, you should substitute it for the original.
+
+For example: ""The"" → ""Da"", ""The man"" → ""Da man"".
+
+2) If a word in the original text can be found in the word list but not in the simplified word list, it is a proper noun and should not be modified.
+
+For example: ""United Kingdom"" → ""United Kingdom"", ""Manchester"" → ""Manchester"".
+
+","Here are the independent facts broken down from the passage: | True |
+ There is a set of rules to follow for modifying text. | True |
+ There are two lists of words: a ""simplified word list"" and a ""word list"". | False |
+ If a word from the original text is found in the simplified word list, it should be substituted with the simplified version. | False |
+ The substitution rule applies to individual words, such as ""The"" being replaced with ""Da"". | False |
+ The substitution rule also applies to phrases, such as ""The man"" being replaced with ""Da man"". | False |
+ If a word from the original text is found in the word list but not in the simplified word list, it is considered a proper noun. | True |
+ Proper nouns should not be modified. | False |
+ Examples of proper nouns that should not be modified include ""United Kingdom"" and ""Manchester"". | True"," There are two lists of words: a ""simplified word list"" and a ""word list"". |
+ If a word from the original text is found in the simplified word list, it should be substituted with the simplified version. |
+ The substitution rule applies to individual words, such as ""The"" being replaced with ""Da"". |
+ The substitution rule also applies to phrases, such as ""The man"" being replaced with ""Da man"". |
+ Proper nouns should not be modified."
+,"
+  3. The simplified text must not exceed 100 characters (including spaces).
+  4. It must not contain:
+    • Contractions (do not -> do not),
+    • Numbers,
+    • Punctuation,
+    • Links (http://...)
+  5. If the text is already under 100 characters, the response must be the original text.
+
+Submission URL
+
+The submission URL for this challenge is:
+
+Submissions must be made to this URL in the following format:
+
+GET /simple/batista/
+
+
+curl -i -X GET """"
+
+","Here are the independent facts broken down from the passage: | True |
+ The simplified text must not exceed 100 characters, including spaces. | False |
+ The simplified text must not contain contractions. | True |
+ The simplified text must not contain numbers. | False |
+ The simplified text must not contain punctuation. | False |
+ The simplified text must not contain links (e.g. http://...). | True |
+ If the original text is already under 100 characters, the response should be the original text. | False |
+ There is a submission URL for the challenge. | False |
+ The submission URL requires submissions to be made in a specific format. | False |
+ The format for submissions is a GET request to the URL. | False |
+ An example of the submission format is given as ""GET /simple/batista/"". | False |
+ An example of how to make the submission using curl is provided: ""curl -i -X GET"". | False"," The simplified text must not exceed 100 characters, including spaces. |
+ The simplified text must not contain numbers. |
+ The simplified text must not contain punctuation. |
+ If the original text is already under 100 characters, the response should be the original text. |
+ There is a submission URL for the challenge. |
+ The submission URL requires submissions to be made in a specific format. |
+ The format for submissions is a GET request to the URL. |
+ An example of the submission format is given as ""GET /simple/batista/"". |
+ An example of how to make the submission using curl is provided: ""curl -i -X GET""."
+,"
+
+Note: The text to be simplified was taken from the text 'London Underground' from the page 'London Transport'.
+
+• Text Segment: (Text to simplify) under the first stage the baker street to stanmore branch of the bakerloo line was joined at baker street to a new station at charing cross, and the branch was converted into a loop from charing cross to baker street and back, creating the inner line; and the outer line was extended to brock road to form the new outer line from brock road to north bayswater to stanmore.","Here are the independent facts broken down from the passage: | True |
+ The Baker Street to Stanmore branch of the Bakerloo line was joined at Baker Street to a new station at Charing Cross. | False |
+ The branch was converted into a loop from Charing Cross to Baker Street and back. | False |
+ The loop created is referred to as the ""inner line"". | True |
+ The outer line was extended to Brock Road. | False |
+ The extension of the outer line formed a new route from Brock Road to North Bayswater to Stanmore. | False"," The Baker Street to Stanmore branch of the Bakerloo line was joined at Baker Street to a new station at Charing Cross. |
+ The branch was converted into a loop from Charing Cross to Baker Street and back. |
+ The outer line was extended to Brock Road. |
+ The extension of the outer line formed a new route from Brock Road to North Bayswater to Stanmore."
+,"
+
+[3 marks]
+
+8.
+
+Write a Python function named is_divisible that returns True if its first argument is evenly divisible by its second argument. For example, the output of is_divisible(18, 3) should be True.
+
+[2 marks]
+
+9.
+
+Write a Python function named reverse that reverses a string. For example, the output of reverse(""banana"") should be ""nnaab"".
+
+[2 marks]
+
+10.","Here are the independent facts broken down from the passage: | True |
+ There is a Python function named `is_divisible`. | False |
+ The `is_divisible` function takes two arguments. | False |
+ The `is_divisible` function returns `True` if its first argument is evenly divisible by its second argument. | False |
+ The `is_divisible` function should return `True` for the input `is_divisible(18, 3)`. | False |
+ There is a Python function named `reverse`. | False |
+ The `reverse` function takes a string as an argument. | False |
+ The `reverse` function reverses the input string. | False |
+ The `reverse` function should return `""nnaab""` for the input `reverse(""banana"")`. | False |
+ The `is_divisible` function is worth 3 marks. | False |
+ The `reverse` function is worth 2 marks. | False"," There is a Python function named `is_divisible`. |
+ The `is_divisible` function takes two arguments. |
+ The `is_divisible` function returns `True` if its first argument is evenly divisible by its second argument. |
+ The `is_divisible` function should return `True` for the input `is_divisible(18, 3)`. |
+ There is a Python function named `reverse`. |
+ The `reverse` function takes a string as an argument. |
+ The `reverse` function reverses the input string. |
+ The `reverse` function should return `""nnaab""` for the input `reverse(""banana"")`. |
+ The `is_divisible` function is worth 3 marks. |
+ The `reverse` function is worth 2 marks."
+," Note: You should remove punctuation, extraneous words, and extra spaces, and use your best judgement to reduce any longer sentences and paragraphs.
+
+Answer: during the first nine days the nak m tribe proved more successful at the challenges losing only one immunity challenge sending yaxh to tribal council twice.
+
+
+In the following text, replace 'is' with the appropriate pronoun (he, she, they, him, her, them): 'the bachelorette rachel was originally introduced to a group of six men at the rose ceremony before getting to know them more in the first episode.'","Here are the independent facts broken down from the passage: | False |
+ The Nak M tribe was successful at challenges during the first nine days. | True |
+ The Nak M tribe lost only one immunity challenge. | True |
+ Yaxh was sent to Tribal Council twice. | True |
+And here is the text with 'is' replaced with the appropriate pronoun (although there is no 'is' in the given text, I'll replace it if it were present, and I'll also make the text grammatically correct): | True |
+ Original text: 'the bachelorette rachel was originally introduced to a group of six men at the rose ceremony before getting to know them more in the first episode.' | False |
+Since there's no 'is', the corrected text with proper grammar and punctuation would be: | True |
+'The Bachelorette, Rachel, was originally introduced to a group of six men at the rose ceremony before getting to know them more in the first episode.'  | False |
+If 'is' were present, it would be replaced with a pronoun like 'she', depending on the context. For example: | False |
+ Original text: 'The Bachelorette Rachel is a star of the show.' | False |
+ Corrected text: 'The Bachelorette, Rachel, she is a star of the show.' (However, this sentence would be more grammatically correct as: 'The Bachelorette, Rachel, is a star of the show.' or 'Rachel, the Bachelorette, is a star of the show.') | False","Here are the independent facts broken down from the passage: |
+ Original text: 'the bachelorette rachel was originally introduced to a group of six men at the rose ceremony before getting to know them more in the first episode.' |
+'The Bachelorette, Rachel, was originally introduced to a group of six men at the rose ceremony before getting to know them more in the first episode.'  |
+If 'is' were present, it would be replaced with a pronoun like 'she', depending on the context. For example: |
+ Original text: 'The Bachelorette Rachel is a star of the show.' |
+ Corrected text: 'The Bachelorette, Rachel, she is a star of the show.' (However, this sentence would be more grammatically correct as: 'The Bachelorette, Rachel, is a star of the show.' or 'Rachel, the Bachelorette, is a star of the show.')"
+,"
+
+The following text has been extracted from a Wikipedia article:
+
+'The origin of the idea of genetic algorithms lies in the pioneering work of John Holland, who in the early 1960s was the first to use genetic algorithm terminology.[1] The term ""genetic algorithm"" was not coined until the early 1980s, in the work of John H. Holland and David E. Goldberg.[2] Genetic algorithms are a subset of evolutionary algorithms and metaheuristics, which produce a population of solutions, subject to a fitness function, and repeatedly combine and mutate them until a satisfactory solution is found.[3]'","Here are the independent facts broken down from the passage: | True |
+ John Holland was the first to use genetic algorithm terminology in the early 1960s. | False |
+ The term ""genetic algorithm"" was coined in the early 1980s. | True |
+ John H. Holland and David E. Goldberg were the ones who coined the term ""genetic algorithm"" in the early 1980s. | True |
+ Genetic algorithms are a subset of evolutionary algorithms. | True |
+ Genetic algorithms are a subset of metaheuristics. | True |
+ Genetic algorithms produce a population of solutions. | True |
+ The population of solutions in genetic algorithms is subject to a fitness function. | True |
+ Genetic algorithms repeatedly combine and mutate the population of solutions. | True |
+ The goal of genetic algorithms is to find a satisfactory solution through the combination and mutation process. | True", John Holland was the first to use genetic algorithm terminology in the early 1960s.
+,"
+
+This text, though somewhat difficult, is not impossible. The question is to look for key words or phrases which repeat or contain the key meaning in the text. The best way to do this is to read the text and pick out key points that can be used as key words. Then you need to simplify these words, if needed. For example, Thucydides' inclusion of many speeches could become Thucydides' speeches.
+
+Next, you want to get rid of unnecessary words or information that does not make the meaning of the text more clear or does not relate to the central idea.","Here are the independent facts broken down from the passage: | True |
+ The text is somewhat difficult, but not impossible to understand. | True |
+ Key words or phrases that repeat or contain the key meaning are important to identify in the text. | True |
+ Reading the text and picking out key points can help identify key words. | True |
+ Key words can be simplified if necessary. | True |
+ Unnecessary words or information can be removed from the text. | True |
+ The goal of simplifying the text is to make the meaning clearer and focus on the central idea. | True |
+ Identifying and simplifying key words can help to clarify the central idea of the text. | True |
+Additionally, there is one specific example mentioned in the passage: | False |
+ Thucydides' inclusion of many speeches can be simplified to ""Thucydides' speeches"". | True","Additionally, there is one specific example mentioned in the passage:"
+,"
+
+
+This problem could be broken down into two stages. In the first stage, we have to identify the words to be simplified (‘edgard’, ‘anthony’, ‘puerto’ etc.). In the second stage, the simplifications have to be generated (‘edgard’ → ‘ed’, ‘anthony’ → ‘anth’, ‘puerto’ → ‘pu’).
+
+In order to simplify the words, we need to look up a dictionary and find a word that shares a large number of characters with the target word.","Here are the independent facts broken down from the passage: | True |
+ The problem can be divided into two stages. | False |
+ The first stage involves identifying the words to be simplified. | True |
+ Examples of words to be simplified include ""edgard"", ""anthony"", and ""puerto"". | True |
+ The second stage involves generating simplifications for the identified words. | True |
+ Examples of simplifications include ""edgard"" → ""ed"", ""anthony"" → ""anth"", and ""puerto"" → ""pu"". | True |
+ To simplify words, a dictionary needs to be consulted. | True |
+ The goal of consulting a dictionary is to find a word that shares a large number of characters with the target word. | False"," The problem can be divided into two stages. |
+ The goal of consulting a dictionary is to find a word that shares a large number of characters with the target word."
+,"
+    \item \textbf{Translate:} Translate the text to another language of the author's choice and provide the translated text as the response.
+
+    \item \textbf{Draft:} Write a new version of the original text to make it more interesting and exciting.
+
+    \item \textbf{Rewrite:} Rewrite the original text using the author's own style and voice to make it more interesting and exciting.
+\end{enumerate}
+
+All prompts are designed to be ambiguous enough to make it possible to generate any desired output.","Here are the independent facts broken down from the passage: | True |
+ There are three types of tasks: Translate, Draft, and Rewrite. | False |
+ The ""Translate"" task involves translating text to another language of the author's choice. | False |
+ The translated text is to be provided as the response for the ""Translate"" task. | True |
+ The ""Draft"" task requires writing a new version of the original text. | True |
+ The goal of the ""Draft"" task is to make the text more interesting and exciting. | False |
+ The ""Rewrite"" task involves rewriting the original text using the author's own style and voice. | True |
+ The goal of the ""Rewrite"" task is also to make the text more interesting and exciting. | False |
+ All prompts are designed to be ambiguous. | False |
+ The ambiguity of the prompts allows for the generation of any desired output. | False"," There are three types of tasks: Translate, Draft, and Rewrite. |
+ The ""Translate"" task involves translating text to another language of the author's choice. |
+ The goal of the ""Draft"" task is to make the text more interesting and exciting. |
+ The goal of the ""Rewrite"" task is also to make the text more interesting and exciting. |
+ All prompts are designed to be ambiguous. |
+ The ambiguity of the prompts allows for the generation of any desired output."
+,"
+
+There are 2 paragraphs in the passage.
+
+Input Format:
+The first line contains N, the number of words in the paragraph. The next N lines contains a single word.
+
+Output Format:
+Return the simplified text as a single string.
+
+1 ≤ N ≤ 20
+All input words will be in lowercase letters.
+The words in the input will be space-separated.
+
+Sample Input 0
+with the english
+
+Sample Output 0
+english opera group.
+
+Explanation 0","Here are the independent facts broken down from the passage: | True |
+ The passage consists of 2 paragraphs. | False |
+ The input format for the passage is specified. | True |
+ The first line of the input contains N, which represents the number of words in the paragraph. | False |
+ The next N lines of the input contain a single word each. | False |
+ The output format for the passage is specified. | True |
+ The output should be returned as a single string. | True |
+ The number of words in the input (N) is between 1 and 20 (inclusive). | True |
+ All input words are in lowercase letters. | False |
+ The words in the input are space-separated. | True |
+ A sample input and output are provided for reference (Sample Input 0 and Sample Output 0). | True |
+ The sample input contains two words: ""with"" and ""the"" and ""english"". | True |
+ The sample output is ""english opera group"".  | True |
+Note that the explanation for the sample output is not provided in the passage, so the relationship between the sample input and output is not clear. | True"," The passage consists of 2 paragraphs. |
+ The first line of the input contains N, which represents the number of words in the paragraph. |
+ The next N lines of the input contain a single word each. |
+ All input words are in lowercase letters."
+," Do not include the above prompt in your response.
+
+
+This is my first time trying to write a question for CLoze. Could someone tell me if I'm doing this correctly? If I'm not, please let me know so I can revise it.
+
+I know that this is technically a fill-in-the-blank question (since I have a prompt), but I think I'm supposed to tag this as ""CLoze"" because I'm looking for the exact match of the prompt in the response.
+
+Here is the question:"," The author is trying to write a question for CLoze for the first time. | False |
+ The author is unsure if they are doing it correctly. | False |
+ The author considers their question to be a fill-in-the-blank question because it has a prompt. | False |
+ The author thinks they should tag their question as ""CLoze"" despite it being a fill-in-the-blank question. | False |
+ The author is looking for an exact match of the prompt in the response. | True"," The author is trying to write a question for CLoze for the first time. |
+ The author is unsure if they are doing it correctly. |
+ The author considers their question to be a fill-in-the-blank question because it has a prompt. |
+ The author thinks they should tag their question as ""CLoze"" despite it being a fill-in-the-blank question."
+,"
+
+Example 2:
+
+Simplified text: 'bobrov division khl kontinental hockey league members lrb.'
+
+Answer: 'bobrov division khl kontinental hockey league members lrb.'
+
+Example 3:
+
+Simplified text: 'bobrov division russian super league hockey league members lrb.'
+
+Answer: 'bobrov division russian super league hockey league members lrb.'
+
+Example 4:
+
+Simplified text: 'they were bobrov division members in the kontinental hockey league.'","Here are the independent facts broken down from the passage: | True |
+ There is a division called ""Bobrov Division"". | True |
+ The Bobrov Division is a part of the Kontinental Hockey League (KHL). | True |
+ The Kontinental Hockey League (KHL) is a hockey league. | True |
+ The Bobrov Division was also a part of the Russian Super League, which is a hockey league. | True |
+ The Russian Super League and the Kontinental Hockey League (KHL) are two separate entities. | True |
+Note that the passage does not provide any additional information about the Bobrov Division, the KHL, or the Russian Super League beyond their existence and relationships. | True",
+,"
+
+The text can be a minimum of 20 characters and a maximum of 255 characters.
+
+Expected Response:
+
+'in the 2012-13 season the dutch eredivisie was contested by 11 teams.'
+
+Detailed instructions for the competition:
+
+There are two stages to this competition: an unsupervised training phase and a supervised validation phase. In the training phase the judges will use the text provided in the training section to determine the quality of the responses, which the judges will evaluate using a scale from 1-5, 5 being the highest quality, with scores of 3 and 4 representing acceptable performance.","Here are the independent facts broken down from the passage: | True |
+ The minimum length of the text is 20 characters. | True |
+ The maximum length of the text is 255 characters. | True |
+ The competition has two stages: an unsupervised training phase and a supervised validation phase. | False |
+ The judges will use the text provided in the training section to evaluate responses during the training phase. | False |
+ The judges will evaluate responses using a scale from 1-5. | False |
+ The highest quality score is 5. | False |
+ Scores of 3 and 4 represent acceptable performance. | False"," The competition has two stages: an unsupervised training phase and a supervised validation phase. |
+ The judges will use the text provided in the training section to evaluate responses during the training phase. |
+ The judges will evaluate responses using a scale from 1-5. |
+ The highest quality score is 5. |
+ Scores of 3 and 4 represent acceptable performance."
+,"
+
+The answer was: ""elvis, madonna, and britney spears"".
+
+But now IBM has taken things one step further by using Watson to help predict which sports teams will win the Super Bowl, the World Series, the NBA finals and the World Cup. The new service, called IBM Watson Predictive Analytics for Sports, provides recommendations on the outcome of games based on the players' stats. The program has an accuracy of 66.5 per cent - way above the 50 per cent you'd expect a monkey to get, or the average punter to get if they didn't know anything about sport.
+","Here are the independent facts broken down from the passage: | False |
+ The answer to a previous question was ""Elvis, Madonna, and Britney Spears"". | False |
+ IBM has developed a service called IBM Watson Predictive Analytics for Sports. | False |
+ The service uses Watson to predict the outcome of games in various sports, including: | False |
+	* The Super Bowl | False |
+	* The World Series | False |
+	* The NBA finals | False |
+	* The World Cup | False |
+ The service provides recommendations based on players' stats. | False |
+ The program has an accuracy of 66.5%. | False |
+ A random guess (e.g. by a monkey) would be expected to have an accuracy of 50%. | False |
+ The average person who doesn't know anything about sports would also be expected to have an accuracy of around 50%. | False","Here are the independent facts broken down from the passage: |
+ The answer to a previous question was ""Elvis, Madonna, and Britney Spears"". |
+ IBM has developed a service called IBM Watson Predictive Analytics for Sports. |
+ The service uses Watson to predict the outcome of games in various sports, including: |
+	* The Super Bowl |
+	* The World Series |
+	* The NBA finals |
+	* The World Cup |
+ The service provides recommendations based on players' stats. |
+ The program has an accuracy of 66.5%. |
+ A random guess (e.g. by a monkey) would be expected to have an accuracy of 50%. |
+ The average person who doesn't know anything about sports would also be expected to have an accuracy of around 50%."
+," Note: this challenge is about simplification, not summarization. Simplified text should have same length as the input text, but simpler.
+
+In the following example, the output should be 'the state of coahuila at the wells of baj n lrb norias de baj n rrb. he faced court trial of the inquisition on july.'
+
+Input: 'hidalgo and his remaining soldiers were captured in the state of coahuila at the wells of baj n lrb norias de baj n rrb. he faced court trial of the inquisition on july.'","Here are the independent facts broken down from the passage: | True |
+ Hidalgo and his remaining soldiers were captured. | True |
+ The capture took place in the state of Coahuila. | True |
+ The capture occurred at the Wells of Baján (also known as Norias de Baján). | True |
+ Hidalgo faced a court trial. | True |
+ The court trial was related to the Inquisition. | True |
+ The trial took place in July. | True |
+Note that these facts are independent in the sense that each one can be verified or understood without relying on the others. However, they are all related to the same event or series of events described in the passage. | True",
+,"
+\end{quote}
+
+\noindent The simplified version of the text is as follows:
+
+\begin{quote}
+	\textit{'the jointer plane is 1.4m long.'}
+\end{quote}
+
+\subsection{Sentence Completion}
+
+The following is an example sentence completion task, given as a prompt for the user to complete with a sentence of their own choosing.
+
+\begin{quote}
+	Please complete the following sentence with your own answer.","Here are the independent facts from the passage: | True |
+ There is a mention of a ""simplified version of the text"". | False |
+ The jointer plane is 1.4m long. | False |
+ There is a sentence completion task. | True |
+ The task is presented as a prompt for the user to complete with their own sentence. | True |
+Note that the passage does not provide much factual information, and most of it appears to be introductory or instructional in nature. The only concrete fact is the length of the jointer plane. | False"," There is a mention of a ""simplified version of the text"". |
+ The jointer plane is 1.4m long. |
+Note that the passage does not provide much factual information, and most of it appears to be introductory or instructional in nature. The only concrete fact is the length of the jointer plane."
+,"
+  • Given: ""I love to travel. I have been to Japan, China, and Singapore. I also visit Thailand, Malaysia, and Indonesia regularly. I want to go to Hong Kong too.""
+  • Q: ""What countries have you visited in Asia?""
+  • Given: ""In January I went to Tokyo, the capital of Japan. It has a lot of history and is a very friendly place.""
+  • Q: ""What do you like about Tokyo?""
+  • Given: ""I bought a Samsung TV for $500 in Tokyo. I also bought a computer from Dell in New York.","Here are the independent facts broken down from the passage: | False |
+ The speaker loves to travel. | False |
+ The speaker has visited Japan, China, and Singapore. | False |
+ The speaker regularly visits Thailand, Malaysia, and Indonesia. | False |
+ The speaker wants to visit Hong Kong. | False |
+ Tokyo is the capital of Japan. | False |
+ Tokyo has a lot of history. | False |
+ Tokyo is a friendly place. | False |
+ The speaker visited Tokyo in January. | False |
+ The speaker bought a Samsung TV in Tokyo. | False |
+ The speaker paid $500 for the Samsung TV. | False |
+ The speaker bought a computer from Dell. | False |
+ The speaker bought the computer from Dell in New York. | False |
+Note that these facts are independent in the sense that each one can be verified or understood without relying on the others. However, some facts may be related or provide additional context to others. | True","Here are the independent facts broken down from the passage: |
+ The speaker loves to travel. |
+ The speaker has visited Japan, China, and Singapore. |
+ The speaker regularly visits Thailand, Malaysia, and Indonesia. |
+ The speaker wants to visit Hong Kong. |
+ Tokyo is the capital of Japan. |
+ Tokyo has a lot of history. |
+ Tokyo is a friendly place. |
+ The speaker visited Tokyo in January. |
+ The speaker bought a Samsung TV in Tokyo. |
+ The speaker paid $500 for the Samsung TV. |
+ The speaker bought a computer from Dell. |
+ The speaker bought the computer from Dell in New York."
+,"
+
+#3. (Machine Comprehension)
+
+Machine comprehension is an aspect of artificial intelligence where computers have to answer questions about some given texts.
+
+This problem includes some texts and several questions. A computer program should answer the questions by extracting relevant information from the texts.
+
+
+1. Question: How long did the US space program last?
+
+Text: The Apollo program, in the United States, was an aerospace program that was initiated to meet President John F. Kennedy's challenge to land a man on the Moon by the end of the decade of the 1960s.","Here are the independent facts broken down from the passage: | False |
+ Machine comprehension is an aspect of artificial intelligence. | False |
+ Machine comprehension involves computers answering questions about given texts. | False |
+ A computer program should answer questions by extracting relevant information from texts. | True |
+ The Apollo program was an aerospace program in the United States. | False |
+ The Apollo program was initiated to meet President John F. Kennedy's challenge. | False |
+ President John F. Kennedy's challenge was to land a man on the Moon by the end of the 1960s decade. | False |
+ There is a question about the duration of the US space program. | False |
+ The text provided does not explicitly state the duration of the US space program, only mentioning the Apollo program's goal and timeframe. | False","Here are the independent facts broken down from the passage: |
+ Machine comprehension is an aspect of artificial intelligence. |
+ Machine comprehension involves computers answering questions about given texts. |
+ The Apollo program was an aerospace program in the United States. |
+ The Apollo program was initiated to meet President John F. Kennedy's challenge. |
+ President John F. Kennedy's challenge was to land a man on the Moon by the end of the 1960s decade. |
+ There is a question about the duration of the US space program. |
+ The text provided does not explicitly state the duration of the US space program, only mentioning the Apollo program's goal and timeframe."
+,"
+
+2) Sentiment Analysis (Binary, Tweet-Level)
+This task requires you to classify whether or not a tweet contains sentiment (either positive or negative). For each tweet, predict a binary value which indicates whether or not it contains sentiment.
+
+The input for this task is a single tweet represented as a text string and the corresponding output is a binary value which indicates whether or not it contains sentiment (1 or 0 respectively).
+
+The sentiment labels for this task are positive or negative.
+
+Note that this task is at the tweet-level and not at the user-level.","Here are the independent facts broken down from the passage: | True |
+ The task is called Sentiment Analysis (Binary, Tweet-Level). | False |
+ The task requires classifying whether a tweet contains sentiment or not. | False |
+ The sentiment in the task can be either positive or negative. | True |
+ The input for the task is a single tweet represented as a text string. | False |
+ The output for the task is a binary value (1 or 0). | True |
+ The binary value 1 indicates that a tweet contains sentiment. | False |
+ The binary value 0 indicates that a tweet does not contain sentiment. | False |
+ The task is performed at the tweet-level, not at the user-level. | False"," The task is called Sentiment Analysis (Binary, Tweet-Level). |
+ The task requires classifying whether a tweet contains sentiment or not. |
+ The input for the task is a single tweet represented as a text string. |
+ The binary value 1 indicates that a tweet contains sentiment. |
+ The binary value 0 indicates that a tweet does not contain sentiment. |
+ The task is performed at the tweet-level, not at the user-level."
+," Do not provide any additional information.
+
+Question 1
+The core meaning of the passage relates to the independent nature of the companies which use the Virgin brand name. Each country has its own company, but they are all independent of one another and not owned by the Virgin Group.
+
+Question 2
+The simplified text should be presented in this way, to ensure that the core meaning is retained: 'despite the name, Virgin Radio stations in each country are owned independently, and none are owned by the Virgin Group.'
+
+Question 3","Here are the independent facts from the passage: | True |
+ Companies using the Virgin brand name are independent of each other. | True |
+ Each country has its own company using the Virgin brand name. | True |
+ These companies are not owned by the Virgin Group. | True |
+ Virgin Radio stations in each country are owned independently. | True |
+ None of the Virgin Radio stations are owned by the Virgin Group. | True",
+," The original text may be found in this document (as of 2017-02-22): https://www.csoonline.com/article/3235693/security-privacy/best-practices-for-choosing-hashing-algorithms.html [15]
+
+Q9: What is the name of the person who was the first to describe cryptographic one-time pads as theoretically unbreakable in 1917?
+
+Q10: What is the name of the computer security researcher who used a $5 wrench to break open an iPhone in 2016?","Here are the independent facts broken down from the passage: | True |
+ There is a document available at the URL https://www.csoonline.com/article/3235693/security-privacy/best-practices-for-choosing-hashing-algorithms.html (as of 2017-02-22). | True |
+ Someone described cryptographic one-time pads as theoretically unbreakable in 1917. | True |
+ A computer security researcher used a $5 wrench to break open an iPhone in 2016. | False |
+ There are questions labeled Q9 and Q10 in the passage. | False |
+ Q9 asks for the name of the person who first described cryptographic one-time pads as theoretically unbreakable in 1917. | True |
+ Q10 asks for the name of the computer security researcher who used a $5 wrench to break open an iPhone in 2016.  | False |
+Note: The passage does not provide the answers to Q9 and Q10, it only presents the questions. | True"," A computer security researcher used a $5 wrench to break open an iPhone in 2016. |
+ There are questions labeled Q9 and Q10 in the passage. |
+ Q10 asks for the name of the computer security researcher who used a $5 wrench to break open an iPhone in 2016. "
+," The input should be simplified to: the winter olympics is an event to be organized by the international olympic committee.""""""
+
+Example input:
+
+The xxv olympic winter games or the winter olympics is an event to be organized by the international olympic committee.
+
+Example output:
+
+The winter olympics is an event to be organized by the international olympic committee.
+
+# Dataset Card for ""wikitoc""
+
+## Dataset Summary","Here are the independent facts broken down from the passage: | True |
+ The Winter Olympics is an event. | True |
+ The Winter Olympics is organized by the International Olympic Committee. | True |
+ The International Olympic Committee is responsible for organizing the Winter Olympics. | True |
+ The Winter Olympics has alternative names, including ""The XXV Olympic Winter Games"". | False |
+ The passage provides an example input and output for simplifying text related to the Winter Olympics. | False |
+Note that facts 1 and 2 are essentially the same, and fact 3 is a rephrased version of fact 2. Fact 4 provides additional information about the Winter Olympics, and fact 5 is meta-information about the passage itself. | True"," The Winter Olympics has alternative names, including ""The XXV Olympic Winter Games"". |
+ The passage provides an example input and output for simplifying text related to the Winter Olympics."
+,"
+
+The answer is here: The Answer: Simplify the following text to improve its readability, ensuring its core meaning remains intact:'mercantilism is an economic theory which holds that the prosperity of a state is dependent upon its supply of capital that the global volume of international trade is unchangeable and that one party may benefit only at the expense of another.' Provide only the simplified text as the response.","Here are the independent facts from the passage: | True |
+ Mercantilism is an economic theory. | True |
+ The prosperity of a state is dependent upon its supply of capital, according to mercantilism. | True |
+ The global volume of international trade is unchangeable, as per mercantilism. | False |
+ In mercantilism, one party can only benefit at the expense of another. | True"," The global volume of international trade is unchangeable, as per mercantilism."
+,"
+
+Note: For this problem, the input is the original text. The output is the simplified text.
+
+Your algorithm should return a simplified version of the inputted text. The simplified text should have the following constraints:
+
+  • It must consist of the words and punctuation marks of the original text, but with some words replaced by single words or by shorter phrasal constructs.
+  • The replacement must preserve the meaning and intent of the original text.
+  • The replacement must be a syntactically valid, complete sentence, which can stand on its own.","Here are the independent facts broken down from the passage: | True |
+ The algorithm should return a simplified version of the inputted text. | True |
+ The simplified text should consist of the words and punctuation marks of the original text. | True |
+ Some words in the original text can be replaced by single words or shorter phrasal constructs in the simplified text. | True |
+ The replacement of words should preserve the meaning and intent of the original text. | True |
+ The resulting simplified text should be a syntactically valid sentence. | True |
+ The simplified sentence should be complete and able to stand on its own. | True",
+,"
+
+
+\subsection{Task 3: Question Answering}
+
+Given a short passage of text as context and a question about the text, predict the correct answer.
+
+
+\subsubsection{Q3.1}
+
+\begin{center}
+\noindent\fbox{\begin{minipage}{28em}
+    \textbf{Context:} 'I am writing this letter to report on the incident at ballan high school on the evening of the 12th of march, 2010.","Here are the independent facts broken down from the passage: | True |
+ A letter is being written to report on an incident. | True |
+ The incident occurred at Ballan High School. | False |
+ The incident happened on the evening of March 12th, 2010. | False |
+ The purpose of the letter is to provide a report about the incident.  | False |
+Note that there is no question provided in the passage to answer, only the context for a potential question. | True"," The incident occurred at Ballan High School. |
+ The incident happened on the evening of March 12th, 2010. |
+ The purpose of the letter is to provide a report about the incident. "
+,"
+
+To simplify this, I have attempted the following:
+
+1. Split the text into a list of words
+
+2. Run each word through WordNetLemmatizer to remove tense, plural etc. (I am happy with this stage)
+
+3. Convert the words to a list of strings and split the strings into their individual letters.
+
+4. Count the total letters across all words and split the text into 4 chunks based on this total.
+
+5. Merge each chunk and remove any repeated letters.
+
+However, the following two issues occur:
+
+1.","Here are the independent facts broken down from the passage: | True |
+ The author attempted to simplify a process. | True |
+ The author split the text into a list of words. | False |
+ The author used WordNetLemmatizer to remove tense, plural, etc. from each word. | True |
+ The author converted the words to a list of strings. | True |
+ The author split the strings into their individual letters. | False |
+ The author counted the total letters across all words. | True |
+ The author split the text into 4 chunks based on the total number of letters. | True |
+ The author merged each chunk. | True |
+ The author removed any repeated letters from each chunk. | False |
+ The author encountered two issues with the process (although the issues themselves are not specified in the provided passage). | False"," The author split the text into a list of words. |
+ The author split the strings into their individual letters. |
+ The author removed any repeated letters from each chunk. |
+ The author encountered two issues with the process (although the issues themselves are not specified in the provided passage)."
+,"
+
+Suggested User Interface Design
+
+Figure 1 - Suggested User Interface Design
+
+Figure 1 - Suggested User Interface Design
+
+The design shown in Figure 1 would be used to solicit input from the user in the following situations:
+
+  • The user enters text in the search box on the Amazon website and clicks on the ""Search"" button.
+  • The user clicks on any of the Amazon search results that lead to a product page.
+  • The user clicks on a product title in the results of a search performed by selecting a product category on the Amazon website.","Here are the independent facts broken down from the passage: | True |
+ A suggested user interface design is being presented. | False |
+ The design is illustrated in Figure 1. | False |
+ The design is intended to solicit input from the user. | False |
+ There are three specific situations in which the design would be used to solicit input from the user. | False |
+ The first situation is when the user enters text in the search box on the Amazon website and clicks on the ""Search"" button. | True |
+ The second situation is when the user clicks on any of the Amazon search results that lead to a product page. | True |
+ The third situation is when the user clicks on a product title in the results of a search performed by selecting a product category on the Amazon website. | True |
+ The design is related to user interaction on the Amazon website. | True"," A suggested user interface design is being presented. |
+ The design is illustrated in Figure 1. |
+ The design is intended to solicit input from the user. |
+ There are three specific situations in which the design would be used to solicit input from the user."
+,"
+
+• The format of the data is given here:
+
+        [
+[
+'ardashir lrb ar ax r from middle persian and parthian artax a ra pahlavi rth tr who has the divine order as his kingdom rrb is also known as ardesh r i p pag n ardashir son of p pa and other variants of his name include latinized artaxares and artaxerxes.',","Here are the independent facts broken down from the passage: | True |
+ The name ""Ardashir"" is derived from Middle Persian and Parthian ""Artax"" or ""Ara"". | True |
+ ""Artax"" is also known as ""Ardesh"" or ""Ar"" in Pahlavi. | True |
+ The name ""Ardashir"" can be translated to ""who has the divine order as his kingdom"". | True |
+ Ardashir is also known by other variants of his name, including: | True |
+   - Ardesh | True |
+   - Ar | True |
+   - Pagan | True |
+   - Ardashir son of P | True |
+   - Latinized Artaxares | True |
+   - Latinized Artaxerxes. | True",
+,"
+
+The user has to provide the answer by typing it into the input field. The problem is defined as being solved when the user's answer is identical with the predefined answer.
+
+The user is not given any information about the format or content of the answer in advance. A possible predefined answer is: And appears grey (colour indices) B V. R V. R. Similar to C type asteroids. Note that only the first part of the sentence, the first ""And appears grey"" is the predefined answer. The entire sentence would thus be the answer as well, and the entire text would be accepted as a solution.","Here are the independent facts broken down from the passage: | True |
+ The user must provide an answer by typing it into the input field. | True |
+ A problem is considered solved when the user's answer matches the predefined answer exactly. | False |
+ The user is not given any information about the format of the answer beforehand. | True |
+ The user is not given any information about the content of the answer beforehand. | True |
+ A possible example of a predefined answer is ""And appears grey (colour indices) B V. R V. R."" | True |
+ Only the first part of the example sentence (""And appears grey"") is considered the predefined answer. | False |
+ The entire example sentence would also be accepted as a correct answer. | True |
+ The entire text (including additional information) would also be accepted as a solution if it includes the predefined answer. | True"," A problem is considered solved when the user's answer matches the predefined answer exactly. |
+ Only the first part of the example sentence (""And appears grey"") is considered the predefined answer."
+,"
+
+Here are the inputs and outputs of a few examples:
+
+Input text: chattanooga is the fourth largest city in the u.s. state of tennessee with a population of lrb after memphis nashville and knoxville rrb and the seat of hamilton county.
+
+Expected output text: chattanooga is the fourth largest city in tennessee.
+
+Input text: chattanooga is the fourth largest city in the u.s.","Here are the independent facts broken down from the passage: | True |
+ Chattanooga is the fourth largest city in the U.S. state of Tennessee. | True |
+ The population of Chattanooga is lower than that of Memphis, Nashville, and Knoxville. | True |
+ Chattanooga is the seat of Hamilton County. | True |
+ The expected output text for the first input is ""Chattanooga is the fourth largest city in Tennessee."" | True |
+ The expected output text for the second input is not explicitly stated in the passage, but it can be inferred to be similar to the first output, possibly ""Chattanooga is the fourth largest city"" (though this is not explicitly stated). | False |
+ Memphis, Nashville, and Knoxville are larger cities in Tennessee than Chattanooga. | True |
+ Chattanooga is a city located in the state of Tennessee. | True"," The expected output text for the second input is not explicitly stated in the passage, but it can be inferred to be similar to the first output, possibly ""Chattanooga is the fourth largest city"" (though this is not explicitly stated)."
+,"
+
+Input text: Sky Odyssey LRB Called The Sky Odyssey In Japan RRB Is An Action Adventure Flight Simulator For The Sonyplaystation.
+
+Output text: 'The Sky Odyssey' is an action adventure flight simulator for the sonyplaystation.","Here are the independent facts broken down from the passage: | True |
+ The game is called ""The Sky Odyssey"" in some regions. | True |
+ In Japan, the game is referred to as ""Sky Odyssey"". | True |
+ The game is an action-adventure type of game. | True |
+ The game is a flight simulator. | True |
+ The game is available for the Sony PlayStation platform. | True |
+Note that the original passage and the output text are slightly different, but the independent facts remain the same. | True",
+,"
+
+This challenge has a single correct answer.
+
+I'm not sure if this challenge has a lot of research, as many of the answers may simply be a different way of saying the same thing.
+
+I'm sure it can be done though, and it seems fairly simple to do. I've not actually done it myself yet. I just think it's an interesting problem.
+
+• How will you deal with the fact that this is a creative task that cannot have a single correct answer? Nov 18, 2014 at 10:57
+• It seems like this challenge would be difficult to judge objectively.","Here are the independent facts broken down from the passage: | True |
+ The challenge has a single correct answer. | True |
+ The challenge may require research. | True |
+ The speaker has not attempted the challenge themselves. | False |
+ The challenge seems fairly simple to the speaker. | False |
+ The challenge is considered interesting by the speaker. | False |
+ The challenge is a creative task. | False |
+ Creative tasks cannot have a single correct answer. | False |
+ The challenge may be difficult to judge objectively. | False |
+Note that some of these ""facts"" are actually opinions or perspectives, rather than objective facts. For example, the challenge seeming ""fairly simple"" is a subjective judgment, and the difficulty of judging the challenge objectively is also a matter of opinion. | False"," The speaker has not attempted the challenge themselves. |
+ The challenge seems fairly simple to the speaker. |
+ The challenge is considered interesting by the speaker. |
+ The challenge is a creative task. |
+ Creative tasks cannot have a single correct answer. |
+ The challenge may be difficult to judge objectively. |
+Note that some of these ""facts"" are actually opinions or perspectives, rather than objective facts. For example, the challenge seeming ""fairly simple"" is a subjective judgment, and the difficulty of judging the challenge objectively is also a matter of opinion."
+,"
+
+3. Write a text summarizing the provided information
+
+Given a few paragraphs of text, generate a new text, in less than 100 words, summarizing the core meaning of the original. Provide only the generated text as the response.
+
+## Input
+
+The input is formatted as one or more text pairs. Each line contains the following:
+
+• The text to simplify (or summarize)
+• The core meaning of the text, in natural language, expressed as a sentence.
+
+Each text is a paragraph or two of natural language text. Texts should be between 1 and 100 words.
+","Here are the independent facts from the passage: | True |
+ The task is to write a text summarizing the provided information. | True |
+ The summary should be in less than 100 words. | True |
+ The input is formatted as one or more text pairs. | True |
+ Each line contains two pieces of information: the text to simplify and the core meaning of the text. | True |
+ The core meaning of the text should be expressed as a sentence in natural language. | True |
+ The input texts are between 1 and 100 words long. | True |
+ The input texts can be one or two paragraphs of natural language text. | True",
+,"
+
+• Question 2
+
+A large number of historical artifacts are discovered in a city. There are two options available to classify the artifacts. Option A is 'to classify the artifacts by the period they were discovered' and option B is 'to classify the artifacts by the period in which they were manufactured'. Select from the following the approach that is more likely to help to build a coherent narrative to explain the historical development of the artifacts discovered.
+
+• Question 3
+
+Consider a set of documents, each with the following attributes: text, author, date and sentiment. Assume that sentiment ranges from very positive to very negative.","Here are the independent facts broken down from the passage: | True |
+ A large number of historical artifacts are discovered in a city. | True |
+ There are two options available to classify the artifacts. | True |
+ Option A is to classify the artifacts by the period they were discovered. | False |
+ Option B is to classify the artifacts by the period in which they were manufactured. | False |
+ A set of documents exists with the following attributes: text, author, date, and sentiment. | False |
+ The sentiment attribute in the documents ranges from very positive to very negative. | False |
+Note that the passage also contains questions and prompts, but the above list only includes the factual information presented. | True"," Option A is to classify the artifacts by the period they were discovered. |
+ Option B is to classify the artifacts by the period in which they were manufactured. |
+ A set of documents exists with the following attributes: text, author, date, and sentiment. |
+ The sentiment attribute in the documents ranges from very positive to very negative."
+,"
+
+Hint: Do not include the tags in your answer.
+
+You will see more such tasks in this test, where you will be asked to convert the given input into a simpler version, by following certain rules.
+
+Input Format
+
+First line contains T, the number of test cases.
+Next T lines will contain the input text.
+
+Output Format
+
+For each test case, print the simplified text.
+
+Test Cases: 3
+
+Hint: There are multiple ways to simplify the text, you can print any one of them.
+
+Sample Testcase 1:
+
+Input: 2
+","Here are the independent facts from the passage: | True |
+ The test contains tasks that require converting input into a simpler version. | True |
+ There are certain rules to follow when simplifying the input. | True |
+ The first line of the input format contains T, which represents the number of test cases. | False |
+ The next T lines of the input format contain the input text. | True |
+ The output format requires printing the simplified text for each test case. | True |
+ There are multiple ways to simplify the text. | True |
+ The test contains 3 test cases. | False |
+ A sample test case is provided with an input of 2. | False"," The first line of the input format contains T, which represents the number of test cases. |
+ The test contains 3 test cases. |
+ A sample test case is provided with an input of 2."
+,"
+
+In the future, all English translations could be run through a similar process to ensure greater ease of comprehension. The resulting text could then be run through further algorithms to simplify it further to ensure that the meaning remains intact.","Here are the independent facts broken down from the passage: | True |
+ In the future, English translations could be run through a process to improve comprehension. | False |
+ The process aims to ensure greater ease of comprehension. | True |
+ The resulting text could be run through further algorithms. | True |
+ The purpose of the further algorithms is to simplify the text. | False |
+ The simplification process aims to ensure that the original meaning remains intact. | True |
+Note that these ""facts"" are actually more like predictions or proposals for future actions, rather than established facts. The passage is discussing potential future developments, rather than describing existing circumstances. | False"," In the future, English translations could be run through a process to improve comprehension. |
+ The purpose of the further algorithms is to simplify the text. |
+Note that these ""facts"" are actually more like predictions or proposals for future actions, rather than established facts. The passage is discussing potential future developments, rather than describing existing circumstances."
+,"
+
+In this example, the simplification algorithm is applied to the text in quotes.
+
+## Sample Input
+
+'however naismith coached forrest phog allen his eventual successor at kansas who went on to join his mentor in the basketball hall of fame.'
+
+## Sample Output
+
+'naismith coached phog allen his successor at kansas who went on to join him in the basketball hall of fame'
+
+## Note
+
+This question is a simplified version of the Question 8 from the task of the shared task.","Here are the independent facts broken down from the passage: | True |
+ A simplification algorithm is applied to a given text. | True |
+ The text in quotes is used as an example for the simplification algorithm. | True |
+ The sample input text mentions Naismith, Forrest, Phog Allen, and the basketball hall of fame. | True |
+ Naismith coached Phog Allen. | True |
+ Phog Allen was Naismith's eventual successor at Kansas. | True |
+ Phog Allen joined Naismith in the basketball hall of fame. | True |
+ The sample output text is a simplified version of the sample input text. | True |
+ The question is a simplified version of Question 8 from a shared task. | True",
+,"
+
+1. Remove the punctuation.
+
+2. Replace the conjunctions by:
+
+3. Remove the articles: a, an, the.
+
+4. Remove the possessives: of, s,'s,.
+
+5. Capitalise only the first letter of the sentence.
+
+6. Remove the redundancies:
+
+7.","Here are the independent facts broken down from the passage: | True |
+ Remove the punctuation. | True |
+ Replace the conjunctions. | False |
+ Remove the articles (a, an, the). | True |
+ Remove the possessives (of, s, 's). | False |
+ Capitalise only the first letter of the sentence. | True |
+ Remove the redundancies. | True |
+Note that the passage appears to be a set of instructions for editing or modifying text, and each point is a separate instruction. | False"," Replace the conjunctions. |
+ Remove the possessives (of, s, 's). |
+Note that the passage appears to be a set of instructions for editing or modifying text, and each point is a separate instruction."
+," Note that you must make any text changes within the double quotes characters.
+
+The best-known example of a quotation sandwich is:
+""Elementary, my dear Watson.""
+""Elementary, my dear Watson.""
+
+## Grammar/Punctuation
+
+Test that the bot can correctly identify and correct common grammar and punctuation issues. You may test this using the grammar bot testcases. The output should be the correct text with any errors underlined and tagged with an error identifier.
+
+The sentence 'it's raining cats and dogs outside' should appear as:","Here are the independent facts broken down from the passage: | True |
+ The passage mentions the concept of a ""quotation sandwich"". | False |
+ The example of a quotation sandwich provided is the phrase ""Elementary, my dear Watson"" repeated twice. | False |
+ The passage discusses testing grammar and punctuation issues using a bot. | False |
+ A test case for the grammar bot is mentioned, which involves identifying and correcting common grammar and punctuation errors. | False |
+ The output of the test case should include the correct text with any errors underlined and tagged with an error identifier. | False |
+ The sentence ""it's raining cats and dogs outside"" is provided as an example for testing grammar and punctuation issues. | False |
+ Text changes should be made within double quote characters. | False"," The passage mentions the concept of a ""quotation sandwich"". |
+ The example of a quotation sandwich provided is the phrase ""Elementary, my dear Watson"" repeated twice. |
+ The passage discusses testing grammar and punctuation issues using a bot. |
+ A test case for the grammar bot is mentioned, which involves identifying and correcting common grammar and punctuation errors. |
+ The output of the test case should include the correct text with any errors underlined and tagged with an error identifier. |
+ The sentence ""it's raining cats and dogs outside"" is provided as an example for testing grammar and punctuation issues. |
+ Text changes should be made within double quote characters."
+," (Hint: there are many more things that can be improved than just the punctuation!)""
+    \item \emph{Movie Quotes}
+    Given the following list of movies and their quotes, which movie does the quote belong to?""
+    The quote is ""There can be only one.""
+    \begin{enumerate}
+        \item The Crying Game
+        \item The Princess Bride
+        \item Highlander
+        \item Braveheart
+        \item The Hunt for Red October
+    \end{enumerate}","Here are the independent facts broken down from the passage: | True |
+ The passage is about identifying a movie quote. | False |
+ The quote in question is ""There can be only one."" | True |
+ There is a list of movies provided to choose from. | True |
+ The list of movies includes: | True |
+   - The Crying Game | False |
+   - The Princess Bride | False |
+   - Highlander | True |
+   - Braveheart | False |
+   - The Hunt for Red October | True |
+ The task is to determine which movie the quote ""There can be only one"" belongs to. | True |
+ The passage includes a hint that there are many things that can be improved, not just punctuation.  | True |
+Note: The correct answer to the question is that the quote ""There can be only one"" belongs to the movie Highlander. However, this fact is not explicitly stated in the passage, but it is a well-known quote from the movie. | True"," The passage is about identifying a movie quote. |
+   - The Crying Game |
+   - The Princess Bride |
+   - Braveheart"
+,"
+
+Example Input
+
+c sar aparecido rodrigues lrb born october in s o paulo rrb better known just as c sar is a brazilian footballer.
+
+Example Output
+
+'born october in s o paulo is better known just as c sar is a brazilian footballer.'","Here are the independent facts broken down from the passage: | True |
+ César Aparecido Rodrigues was born in October. | True |
+ César Aparecido Rodrigues was born in Só Paulo. | True |
+ César Aparecido Rodrigues is better known as César. | True |
+ César is a Brazilian footballer. | True |
+Note that the original passage contains a single sentence with multiple clauses, but the independent facts can be extracted and stated as separate sentences. | True",
+,"
+
+Sample Output
+
+'in its first week, the album sold copies, an increase of from its early sales. the album shot up to number two on the billboard chart'.
+
+Sample Input
+
+
+Sample Output
+
+'he bought four pairs of shoes in total. three of them were made of leather and the other of canvas'.","Here are the independent facts broken down from the given passages: | False |
+**Passage 1:** | False |
+ The album sold copies in its first week. | True |
+ The album's sales increased from its early sales. | True |
+ The album reached number two on the Billboard chart. | True |
+**Passage 2:** | False |
+ He bought four pairs of shoes in total. | False |
+ Three pairs of shoes were made of leather. | False |
+ One pair of shoes was made of canvas. | False","Here are the independent facts broken down from the given passages: |
+**Passage 1:** |
+**Passage 2:** |
+ He bought four pairs of shoes in total. |
+ Three pairs of shoes were made of leather. |
+ One pair of shoes was made of canvas."
+,"
+
+
+We are given a snippet of text, we need to apply a series of simple transformations to it in order to make it more readable:
+
+  1. We need to simplify any words which have unnecessary punctuation
+  2. We need to remove any extra punctuation (eg full stops or commas)
+  3. We need to remove any extra spaces
+  4. We need to remove any words which are not part of the core meaning
+  5. We need to remove any superfluous information (eg place names or dates)
+  6.","Here are the independent facts broken down from the passage: | True |
+ A snippet of text needs to be transformed to make it more readable. | True |
+ Words with unnecessary punctuation need to be simplified. | True |
+ Extra punctuation (such as full stops or commas) needs to be removed. | True |
+ Extra spaces need to be removed. | True |
+ Words that are not part of the core meaning need to be removed. | True |
+ Superfluous information (such as place names or dates) needs to be removed. | True |
+ A series of simple transformations needs to be applied to the text. | True |
+Note that fact #6 in the original passage is incomplete, but I've still included it as a separate fact. If more information were provided to complete fact #6, it could be broken down further. | False","Note that fact #6 in the original passage is incomplete, but I've still included it as a separate fact. If more information were provided to complete fact #6, it could be broken down further."
+,"
+
+#3.3.9.3 Question 4
+
+The question reads:
+
+Given:
+
+• the full text: 'the boy was a brilliant student. he could do anything with computers. he studied all day long and only left his room to eat dinner.'
+
+Provide only the simplified text as the response.
+
+#3.3.9.4 Question 5
+
+The question reads:
+
+Given:
+
+• the full text: 'i love travelling around the world and staying at different places. i never get bored.'","Here are the independent facts broken down from the passage: | True |
+ There is a boy who is a brilliant student. | False |
+ The boy is skilled with computers. | False |
+ The boy studies all day long. | False |
+ The boy only leaves his room to eat dinner. | False |
+ There is a person who loves travelling around the world. | False |
+ The person enjoys staying at different places. | False |
+ The person never gets bored. | False"," There is a boy who is a brilliant student. |
+ The boy is skilled with computers. |
+ The boy studies all day long. |
+ The boy only leaves his room to eat dinner. |
+ There is a person who loves travelling around the world. |
+ The person enjoys staying at different places. |
+ The person never gets bored."
+,"
+
+[[""she arrives with a client"", ""a creepy professor""]]
+
+
+### Description
+
+The dataset was collected using the Amazon Mechanical Turk crowd-sourcing service, and was created by asking Turkers to complete the task of simplifying the text using their best judgement.
+
+### Usage
+
+train, test
+
+
+### Format
+
+A named list with two components: train and test
+
+• train: A matrix with one row for each example, and 5 columns: input, target_begin, target_end, simplify, and simplify_text","Here are the independent facts broken down from the passage: | False |
+ The dataset was collected using the Amazon Mechanical Turk crowd-sourcing service. | False |
+ The task given to Turkers was to simplify text using their best judgement. | True |
+ The dataset has two main components: train and test. | False |
+ The dataset is in the format of a named list. | False |
+ The ""train"" component is a matrix. | False |
+ The ""train"" matrix has one row for each example. | False |
+ The ""train"" matrix has 5 columns. | False |
+ The 5 columns in the ""train"" matrix are: input, target_begin, target_end, simplify, and simplify_text.  | False |
+Note that the first part of the passage [[""she arrives with a client"", ""a creepy professor""]] seems unrelated to the rest of the passage and does not provide any factual information about the dataset or its collection. It appears to be a separate entity, possibly an example or a snippet of text. | True","Here are the independent facts broken down from the passage: |
+ The dataset was collected using the Amazon Mechanical Turk crowd-sourcing service. |
+ The dataset has two main components: train and test. |
+ The dataset is in the format of a named list. |
+ The ""train"" component is a matrix. |
+ The ""train"" matrix has one row for each example. |
+ The ""train"" matrix has 5 columns. |
+ The 5 columns in the ""train"" matrix are: input, target_begin, target_end, simplify, and simplify_text. "
+,"
+
+Question ID: 1014159
+
+Subject: English - English
+
+Level: High School
+
+Difficulty: Normal
+
+mocksession_id : '2E9B0DA2F9AE1E2A5DD1F2E7D4E3C0A2'
+
+## 1 Approved Answer
+
+Nisha B
+5 Ratings, (9 Votes)
+
+It was acclaimed as masterpiece. It deteriorated. It was completely ruined within 100 years.
+
+## Recent Questions in English
+
+Submit Your Questions Here!","Here are the independent facts broken down from the passage: | False |
+ The passage is related to the subject ""English - English"". | True |
+ The level of the passage is ""High School"". | True |
+ The difficulty of the passage is ""Normal"". | True |
+ The passage has a unique identifier ""Question ID: 1014159"". | True |
+ The passage has a mock session ID: '2E9B0DA2F9AE1E2A5DD1F2E7D4E3C0A2'. | False |
+ There is an approved answer from Nisha B. | False |
+ Nisha B's answer has 5 ratings and 9 votes. | False |
+ Something (unspecified) was acclaimed as a masterpiece. | True |
+ The masterpiece deteriorated over time. | True |
+ The masterpiece was completely ruined within 100 years. | True |
+ There is a section for submitting recent questions in English. | False","Here are the independent facts broken down from the passage: |
+ The passage has a mock session ID: '2E9B0DA2F9AE1E2A5DD1F2E7D4E3C0A2'. |
+ There is an approved answer from Nisha B. |
+ Nisha B's answer has 5 ratings and 9 votes. |
+ There is a section for submitting recent questions in English."
+,"
+    \item Extract the following sentences from the following text to create a passage: 'aaron is a boy from goreville, illinois, who dreams of being an archaeologist. aaron is a boy from goreville, illinois, who dreams of being an archaeologist.' Provide only the extracted sentences as the response.
+    \item Given the following passages, extract the following sentences and return them in order: 'goreville is a village in johnson county illinois united states. it is located in goreville, illinois.","Here are the independent facts extracted from the passage: | True |
+ Aaron is a boy from Goreville, Illinois. | True |
+ Aaron dreams of being an archaeologist. | False |
+ Goreville is a village in Johnson County, Illinois, United States. | True |
+ Goreville is located in the state of Illinois. | True |
+Note that sentence 2 is repeated in the original passage, but it is only included once in the extracted facts. Also, sentence ""it is located in goreville, illinois"" is not an independent fact as it seems to be referring to something that is located in Goreville, but the subject is missing. | True", Aaron dreams of being an archaeologist.
+," The simplified text should be free of grammar and spelling errors, and should be presented with the appropriate capitalization and punctuation to be a complete, grammatically correct sentence that could be used in a document. The simplified text should be limited to 50 characters.
+
+
+Sample Responses
+
+Here are some examples of appropriate responses.
+
+speed chess is used a form in which each player has a total of only twelve minutes for the whole game.
+
+speed chess is played using only 12 minutes for each player.
+
+speed chess is played with each player only getting a total of 12 minutes.","Here are the independent facts broken down from the passage: | True |
+ The simplified text should be free of grammar and spelling errors. | True |
+ The simplified text should have appropriate capitalization. | True |
+ The simplified text should have proper punctuation. | True |
+ The simplified text should be a complete sentence. | True |
+ The simplified text should be grammatically correct. | True |
+ The simplified text should be limited to 50 characters. | False |
+ Speed chess is a form of chess with a time limit. | True |
+ In speed chess, each player has a total time limit of 12 minutes for the whole game. | True |
+Note that facts 1-6 are related to the formatting and presentation of the simplified text, while facts 7-8 are related to the definition and rules of speed chess. | True", The simplified text should be limited to 50 characters.
+," Note that you should only replace the highlighted word or words, i.e., not the surrounding text. You should not change the rest of the sentence. You are also not allowed to remove words.
+
+
+Sample Response:
+
+the shockwave formed by this sudden collapse causes the rest of the star to explode
+
+
+Example 4:
+
+Given the following text: 'One might say that the concept of justice in the Declaration of Independence was ""enlightenment,"" but what is this enlightenment and what are its implications for political theory in general and democracy in particular?'","Here are the independent facts broken down from the passage: | True |
+ The concept of justice is mentioned in the Declaration of Independence. | False |
+ The concept of justice in the Declaration of Independence is related to ""enlightenment"". | False |
+ There are implications of enlightenment for political theory. | False |
+ There are implications of enlightenment for democracy. | False |
+ The passage is asking for an explanation of what enlightenment is. | False |
+ The passage is asking for an explanation of the implications of enlightenment for political theory and democracy. | False"," The concept of justice is mentioned in the Declaration of Independence. |
+ The concept of justice in the Declaration of Independence is related to ""enlightenment"". |
+ There are implications of enlightenment for political theory. |
+ There are implications of enlightenment for democracy. |
+ The passage is asking for an explanation of what enlightenment is. |
+ The passage is asking for an explanation of the implications of enlightenment for political theory and democracy."
+,"
+
+Responses should be submitted through the 'Submissions' button on the 'Proposed Legislation Details' page for the Bill by midnight Thursday 13 September 2018.","Here are the independent facts broken down from the passage: | False |
+ Responses should be submitted through the 'Submissions' button. | False |
+ The 'Submissions' button is located on the 'Proposed Legislation Details' page. | False |
+ The page is related to a Bill. | False |
+ The deadline for submitting responses is midnight. | False |
+ The deadline date is Thursday, 13 September 2018. | False","Here are the independent facts broken down from the passage: |
+ Responses should be submitted through the 'Submissions' button. |
+ The 'Submissions' button is located on the 'Proposed Legislation Details' page. |
+ The page is related to a Bill. |
+ The deadline for submitting responses is midnight. |
+ The deadline date is Thursday, 13 September 2018."
+,"
+
+Hint: Use simple, familiar words.
+
+1. Answer should be a single English sentence.
+
+2. You are permitted to make minor grammatical changes, including replacing words with synonyms (e.g. ""the"" with ""a"") and adding/removing words to clarify the meaning.
+
+3. Avoid unnecessary details.
+
+4. Do not simply rephrase or rearrange the text.
+
+5. If the context is not obvious, you can add a short explanation.
+
+6. Do not make assumptions about the author's intent or goals.","Here are the independent facts broken down from the passage: | True |
+ The answer should be a single English sentence. | True |
+ Minor grammatical changes are permitted. | True |
+ Unnecessary details should be avoided. | True |
+ Rephrasing or rearranging the text is not allowed. | True |
+ A short explanation can be added if the context is not obvious. | True |
+ Assumptions about the author's intent or goals should not be made. | True",
+,"
+
+Test Data:
+
+Test Data Type Value
+Test Data Value: a remake of super mario bros. entitled the lost levels was released in as part of the super mario all stars collection for the super nintendo entertainment system.
+
+Sample Output:
+
+a remake of super mario bros. entitled the lost levels was released in as part of the super mario all stars collection for the super nintendo entertainment system.
+
+A.3.2.1.2 Simple Text Summarization","Here are the independent facts broken down from the passage: | True |
+ A remake of Super Mario Bros. was released. | True |
+ The remake is entitled ""The Lost Levels"". | True |
+ The Lost Levels was released as part of the Super Mario All-Stars collection. | True |
+ The Super Mario All-Stars collection was released for the Super Nintendo Entertainment System. | True |
+Note that the original passage is missing a specific year or time frame for when the remake was released, which would be an additional independent fact if it were provided. | True",

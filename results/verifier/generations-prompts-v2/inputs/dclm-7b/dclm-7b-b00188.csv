@@ -1,0 +1,650 @@
+prompt,response
+,"
+
+If you have any questions, you can post them to the comment section below.
+
+[20 points]
+
+2. Answer the following question: In what way can AI-generated text help businesses?
+
+[100 words]
+
+3. Explain the term NLP in the context of the article.
+
+[100 words]
+
+4. Why do you think the author uses the phrase “…as opposed to the AI’s?” in the second paragraph? What does the author imply by the use of the word “but”?
+
+[100 words]
+
+5."
+,"
+
+
+\textbf{Q:} What's the name of the river that runs through London?
+\textbf{A:} River Thames
+
+\textbf{Q:} What is the common name for the chemical element with the symbol \texttt{He}?
+\textbf{A:} Helium
+
+\textbf{Q:} What is the capital of Scotland?
+\textbf{A:} Edinburgh
+
+\textbf{Q:} What is the name of the highest mountain in Australia?
+\textbf{A:} Mount Kosciuszko"
+,"
+
+#7. Which word is the synonym of the word'reclusive'?
+
+#8. Who wrote the book 'In The Country of Men'?
+
+#9. Select all correct sentence formats:
+
+#10. What word is the synonym of 'indigenous'?"
+,"
+\end{problem}
+
+\begin{problem}
+Extract from the following text the list of bands which share a musical genre with a specific band: 'the band has produced eight top-ten hits in australia and new zealand, with six reaching number one. four of the band's singles have been certified platinum in australia. the band has a long history of touring and recording in the united states.'.
+\end{problem}
+
+\begin{problem}"
+,"
+
+\paragraph{Example}
+
+\noindent
+\includegraphics[width=\textwidth,trim={0 9cm 12.5cm 0},clip]{prompts/simplify/simplify_example.pdf}
+
+\paragraph{Answer}
+
+\noindent
+\includegraphics[width=\textwidth,trim={0 9cm 12.5cm 0},clip]{prompts/simplify/simplify_example_answer.pdf}
+
+\paragraph{Data}
+
+\noindent"
+,"
+
+
+The training set for this task consists of approximately 15,000 examples, with the simplified text for each example drawn from WikiText2\footnote{\url{https://github.com/attardi/wikitext2}}, a set of Wikipedia articles. To construct a test set, we randomly draw a subset of 100 examples from the training set, and remove the simplified text for each example, resulting in 100 instances for which the gold label is a simplified text.
+
+We report the results on our test set, along with the results of several baseline models, for which the source of simplified text is Wikipedia."
+,"
+
+The allied powers defeated nazi germany in world war ii.
+
+The occupation zone for the purpose of world war ii included the country.
+
+Answer Options
+
+You must choose a correct answer from the choices below:
+(A) World War II ended in the fall of 1945.
+(B) After the fall of the Soviet Union, Germany was reunified in 1990.
+(C) There were 4 Allied Powers during the World War II: Britain, France, the United States and the Soviet Union."
+,"
+
+
+This task tests the model's understanding of the context of a text, allowing it to identify key concepts (such as 'true crabs') and replace them with synonyms (such as 'decapod crustaceans') that are equally informative and contextually appropriate. In this question, the model is asked to shorten a lengthy text without losing its core meaning, but the text could be made more complex or verbose (without losing the same information), and the model should respond by generating text that maintains that complexity."
+,"
+
+The answer to the above sample question would be:
+
+phoenix second place modesto california
+
+2.4.4. Question 2
+
+Sentence completion
+
+This task contains a sentence with two missing words. The model must predict these two words. The training set is based on the IMDB movie reviews dataset and thus the vocabulary is biased towards a movie review vocabulary.
+
+An example of this task is: 'the movie is quite enjoyable overall ____ some rather dull moments_____'.
+
+2.5. Input / Output Data
+
+2.5.1."
+,"
+
+Sample Input
+
+
+Sample Output
+
+Parted-based GUI partition managers"
+,"
+
+
+\subsection{A.1 Text Simplification Training Set}
+\label{sec:A1}
+The training set was collected from the following sources:
+\begin{itemize}
+    \item The Text Simplification Challenge 2006 dataset\footnote{https://aclweb.org/aclwiki/Text\_Simplification\_Challenge\_2006} which includes 1000 sentences of simplified English text that were used in the 2006 text simplification challenge."
+,"
+
+The simplification tool should replace or remove the 'unnecessary' words or characters from a text to make it more readable. To evaluate your solution, you need to develop a scoring model based on the readability measures such as Flesch-Kincaid Readability Score (FKR), SMOG Index, Coleman Liau Index, etc.
+
+The readability of a text is calculated by taking the sum of the number of sentences, number of syllables per sentence and number of difficult words per sentence."
+,"
+
+Example:
+
+Input: bakhshali today in march there were attacks made on music shops in bakhshali
+
+Output: music shops attacks bakhshali
+
+
+Rules
+
+• The text must be simplified by removing all instances of words separated by a space
+• When a word (separated by space) is removed from the text, any remaining words must remain in their original location
+• Remove all instances of a word separated by a space except for the first instance
+• All words must remain in the same order"
+,"
+
+The key principle of wisdom literature is that while techniques of traditional story telling are used, books also presume to offer insight and wisdom about nature and reality.
+
+The correct answer is ""the key principle of wisdom literature is that books also presume to offer insight and wisdom about nature and reality"" as it offers the key principle of the text in a concise manner that captures the meaning of the original text, without using any complicated terminology that would be too difficult for the reader to understand.
+
+### Example Question #1 : Text Simplification"
+,"
+
+The simplified text should be 'tl2so3'.
+
+4.1.9 Identify the language of text:
+
+Given a short text in any language, determine the language it is written in.
+
+The correct answer is always a two-letter language code from ISO 639-1, as defined in http://www.rfc-editor.org/rfc/rfc4646.txt.
+
+Examples: 'ca', 'fr', 'ja', 'no', 'ru', 'zh'
+
+4.1.10 Identify the language of a website:
+
+"
+,"
+
+Problem Set 7
+
+  1. Write code that will take a list of strings (one per line) as its input, find all the duplicate strings and then output the duplicate strings along with their frequency.
+  2. Write a program that will take a single string as its input and output all the possible anagrams of the string with the frequency of occurrence of each of the anagrams.
+  3. Given a list of strings in input, print them in reverse alphabetical order."
+," The original text can be obtained by visiting the above URL, and is not included in the evaluation dataset.
+
+#### Dataset Creation
+
+Crowdworkers on Amazon Mechanical Turk were employed to label a subset of 100 tweets, 50 tweets of which contained offensive content, and 50 tweets of which did not. The tweets that contained offensive content were labelled with a positive class, while tweets without offensive content were labelled with a negative class.
+
+#### Source
+
+https://github.com/sankalpmishra/HateSpeech2018
+
+#### Paper"
+,"
+
+Q3) Simplify the following text to improve its readability, ensuring its core meaning remains intact: 'the czech republic is a landlocked country in central europe. It is bordered by germany to the southwest west and northwest poland to the north east the czech historical region of moravia to the east and austria to the south.' Provide only the simplified text as the response.
+
+Q4) Simplify the following text to improve its readability, ensuring its core meaning remains intact: 'the czech republic is a landlocked country in central europe."
+,"
+
+### Input text
+
+dia public web page this is dia the defense intelligence community is headed by the dia through its director lrb who chairs the military intelligence board rrb and coordinates the activities of the army navy marine corps and air force intelligence components.
+
+### Possible output
+
+dia is a public web page that describes the defense intelligence community headed by the director who chairs the military intelligence board and coordinates the activities of the army navy marine corps and air force intelligence components.
+
+#### Sample Input 1"
+,"
+
+Media local media include the Namoi Valley Independent Newspaper and the Radio stations Mo and GGG."
+,"
+
+Note that although'marty ingels on november' is correct, the question text does not directly ask for this information. This is intended as an example of a question that can have multiple interpretations.
+
+Your response should be in the following format:
+
+""<Simplified Text Goes Here>""
+
+Sample Dataset
+
+Input: divorcing cassidy in she later married comic actor marty ingels on november.
+
+Output: ""cassidy and ingels were divorced in november.""
+
+
+No instances of null must be returned."
+,"
+
+4. For each sentence in the paragraph below, identify the part of speech that is capitalised in the original sentence.
+
+5. In the paragraph below, underline the word or phrase that is missing its capitalisation mark.
+
+6. For the following five sentences, select the word or phrase that is grammatically incorrect.
+
+7. Read the following four sentences and indicate which one is an example of a run-on sentence.
+
+8. Fill in the blank: ______________ is the only one who knows how to bake a chocolate chip cookie correctly.
+
+9."
+,"
+
+\item Which of the following is an example of a signal that is used to control the activity of an electronic system? Select one:
+
+\begin{enumerate}[(a)]
+\item An electromagnetic pulse from a cellphone or Wi-Fi router.
+\item An electromagnetic pulse generated from a lightning strike.
+\item An optical pulse of light.
+\item An optical pulse of light passing through an electro-optic modulator.
+\end{enumerate}
+
+\item The following is the beginning of an academic reference: 'G.E. Moon and J.A."
+,"
+
+
+\subsection{Sample Output}
+
+In this example the sentence'max tonetto lrb born november in trieste rrb is an italian football defender' is given as input to our system and the output it generates is displayed.
+\begin{center}
+\begin{BVerbatim}
+
+\end{BVerbatim}
+\end{center}
+
+\subsection{Grading}
+
+The system will be given a number of sentences and will be graded on its output."
+,"
+
+
+
+This activity consists of a series of fill-in-the-blanks sentences, each of which contains a word or phrase that has a hyphenated spelling in it. Your program will be provided with a list of 10 of these phrases, from which it will select the one that appears in the question (note that it may be necessary to use other knowledge resources to identify the correct phrase). The program should then print this phrase into the response text field."
+,"
+
+## Answer
+
+Consider the following text:
+
+‘the operations of vector addition and scalar multiplication have to satisfy certain requirements called axioms listed below. an example of a vector space is that of euclidean vectors which are often used to represent physical quantities such as forces any two forces lrb of the same type rrb can be added to yield a third and the multiplication of a force vector by a real factor is another force vector.’
+
+The above text can be simplified to the following response:"
+,"
+
+This Kaggle project is an attempt to use deep learning to solve the problem of text simplification. We will be using an RNN to generate a sentence with a fixed number of words and then use that sentence as a response to the input sentence. We will use an LSTM architecture which is known to work well for RNNs, particularly on text based problems, and is also relatively simple to implement. This particular project is also quite interesting since it's a real-world dataset that has been scraped and cleaned up from the web, meaning that the input text can be of any length."
+,"
+
+## 题目描述
+
+### 题目描述 （英文）
+
+A long document has been given to you as input. It contains n words. Your task is to simplify it by deleting some number of consecutive words. In each iteration you will choose a block of words to delete. After each block is removed from the document, you are allowed to choose another block to be deleted in the next iteration.
+
+You are required to delete a minimum number of words such that the following two conditions are satisfied:"
+,"
+
+The dataset contains 200 test cases, each of which corresponds to a unique input prompt.
+
+### Sample Input
+
+gilbert was a taxidermist for the zoological society of london where he met john gould.
+
+### Sample Output
+
+gilbert met john gould.
+
+There are no further constraints.
+
+## Scoring
+
+Your score will be the total number of test cases passed out of 200.
+
+## Submitting
+
+Your submission must take the form of a single JSON file containing a single entry named solve, with the following format:"
+,"
+
+Sample Input 1 Sample Output 1
+costa coffee is a coffee house company based in the united kingdom founded in by italian brothers sergio and bruno costa as a wholesale operation supplying roasted coffee to caterers and specialist italian coffee shops
+Coffee house company founded in UK by Italian brothers as wholesale coffee suppliers to catering industry.
+Sample Input 2 Sample Output 2"
+,"
+
+Input Example: 'bricqueville is a commune in the calvados department in the basse normandie region in northwestern france.'
+
+Output Example: ""bricqueville is a commune in france.""
+
+#### Dataset
+
+Dataset Index
+
+Dataset Index
+
+#### Dataset Information
+
+The test dataset is based on Wikipedia articles. The task is to simplify the following text to improve its readability, ensuring its core meaning remains intact:"
+," Note that the original text is case-sensitive and it is a list of words joined by'and'and'rrb'(to be lower-cased).
+
+To simplify a text, we use the NLTK method sent_tokenize() to convert it to a list of its individual tokens. For instance, a text such as 'She is a nice lady' becomes [she, is, a, nice, lady]. Then, for each token, we perform the following two steps:
+
+1. Determine whether it needs to be replaced.
+
+2."
+," You may assume that the input text will only contain letters a-z, spaces, and apostrophes.
+
+Here are some example tests:
+
+  1.'marco di vaio lrb born july rrb is an italian football striker who currently plays for bologna fc' =>'marco di vaio born july is an italian football striker who currently plays for bologna fc'
+  2.'marco di vaio, born july' =>'marco di vaio born july'"
+,"
+
+The text should be simplified such that it is understandable by a reader with an English reading age between 6-11. For simplicity this text should also have a grade level of 5-7 (5-7 years of education).
+
+
+The solution provided by this challenge should use the following resources:
+
+Additional resources
+
+Your solution should be presented in the form of a text file named simple.txt that contains the simplified text. Please also provide a readme file describing how you arrived at your solution.
+
+Your solution should include a description of any assumptions made to simplify the text."
+,"
+
+Note that the task requires to provide the correct meaning of the original text, not simply removing unnecessary parts.
+
+You should implement a program to perform this task in Scala. Please do the following:
+
+• Specify your program by providing the required text and a list of words to remove in a file of your choice. The file is called words_to_remove.txt and it should contain one word per line.
+
+• Write a function that reads from words_to_remove.txt and prints all the words that can be removed from the text, removing the required words to simplify the text."
+,"  This dataset consists of 20k training pairs and 5k test pairs, where each pair consists of a short text and its simplified version. This dataset contains 10 classes that are annotated by human experts. 
+
+\textbf{CoNLL-2003 (CoNLL)} \cite{sang2003introduction} is a standard benchmark for Named Entity Recognition (NER) tasks in the field of NLP. It consists of two datasets, where the first one is a collection of newswire texts from Reuters-21578 corpus, and the second one is a collection of news stories from the ACE corpus."
+,"
+
+• For the following question, write your answer on the line provided. Write the sentence that best expresses the main idea of the following text. 'the following text describes a person named johnny shines, the first and perhaps greatest blues guitarist of the delta.' Provide only the sentence as the response.
+
+• The following text includes four sentences. Write the number of the sentence that describes the relationship between the two sentences below. 'johnny shines interviewed by john hammond jr."
+,"
+
+Sample Response: 'ndash the u.s. congress abandons the united states use of the gold standard by passing the joint resolution'
+
+Hint: You can add or remove words from the passage to create the response. For example, you can remove the word'stat' from the passage. You can add the word 'by' in front of 'passing'.
+
+4. Summarize the following text:"
+," You may use any English word to replace the original, and you are allowed to move words and phrases around in the text for fluency purposes. However, please avoid changing the text substantially; for example, you should not delete a clause just to make it easier to rewrite, nor should you omit any words in the question. Do not change the typeface or font of the text. Please ensure that your response is grammatically correct.""
+
+For my sample, I used the same text as the example provided by IELTS. I did, however, choose to answer it in a single paragraph instead of two."
+,"
+• The original text reads:
+
+'a simple example is when equally spaced divisions on the vertical axis of a chart are labeled instead of.'
+
+• Solution:
+
+'a simple example is when equally spaced divisions on the vertical axis of a chart are labeled instead of.
+
+• Test case ID: 1_2.3.2_2
+
+Expected output: true
+
+• The original text reads:
+
+'a simple example is when equally spaced divisions on the vertical axis of a chart are labeled instead of.'
+
+• Solution:"
+,"
+
+### Input
+
+the danube flows into the black sea within romania s territory forming the danube delta the second largest and the best preserved delta in europe and a biosphere reserve and a biodiversity world heritage site.
+
+### Output
+
+'romania s territory forms the second largest best preserved delta in europe. a biodiversity world heritage site.'
+
+## Test case 2:
+
+This is not really a good question, but I think it can be an interesting challenge to see if you can make a program that can simplify a large set of sentences."
+,"
+\end{itemize}
+
+
+\item {\bf Question 3}
+\begin{itemize}
+  \item Simplify the following text to improve its readability, ensuring its core meaning remains intact: 'the company said the incident affected only the region where the fire occurred and the problem had been contained. it said it was unable to determine the exact number of people affected as many customers had left their information in voicemails.' Provide only the simplified text as the response.
+\end{itemize}
+
+\item {\bf Question 4}
+\begin{itemize}"
+,"
+    ""A village is a municipality or populated place, larger than a hamlet, which is usually but not always unincorporated. This can be applied to an area with a population ranging from a few dozen to several thousand. Villages may be located within cities, towns or other settlements. ""
+
+    Source(s): What is a village in Canada? - Yahoo Answers http://uk.answers.yahoo.com/question/index?qid=20110813231137AAn... What is a village in Canada?"
+," (example: hwaseong fortress construction suwon early.)
+
+# In[10]:
+
+
+import random
+
+text = 'he supervised the construction of hwaseong fortress in suwon in the early.'
+
+# Generate a shorter version of the text
+short_text = text[0:100]
+
+# Split the text
+text_list = short_text.split()
+
+# Remove common words from the list
+stop_words = ['the','of','in','and','a','to','on','was']
+filtered_text = []"
+,"
+
+Sample inputs:
+
+bowlegs was named after an early resident lula bowlegs a descendant of the florida seminole chief billy bowlegs
+
+simplify: 'bowlegs was named after an early resident lula bowlegs a descendant of the florida seminole chief billy bowlegs.'
+
+Sample outputs:
+
+bowlegs was named after an early resident lula bowlegs a descendant of the florida seminole chief billy bowlegs."
+,"
+
+For example:
+
+Input: 'The memorial wall was designed by US landscape architect Maya Lin.'
+
+Output:'memorial wall designed US landscape architect Maya Lin.'
+
+Test cases:
+
+Input: 'the memorial wall was designed by u.s. landscape architect maya lin.'
+
+Output:'memorial wall designed US landscape architect Maya Lin.'
+
+Input: 'The memorial wall was designed by u.s. landscape architect Maya Lin.'
+
+Output:'memorial wall designed US landscape architect Maya Lin.'"
+," For example, if you were to receive the string, 'Abraham Lincoln was born on 12 February 1809 in Kentucky.', a valid output would be, 'Abraham Lincoln was born in Kentucky on 12 February 1809.'
+
+Here are some links to websites that have lists of words to be removed:
+
+Here's an example of what the input/output would look like, except I'll be using a real website's title instead of a dummy string:
+
+Input: 'http://www.linuxmint.com/about/'
+Output: 'linux mint is a linux distribution based on ubuntu.'
+"
+,"
+
+Question 5
+
+Consider the following text: 'bacteria may grow at temperatures below the minimum temperature for most other forms of life. This allows them to occupy environments that are hostile to almost all other forms of life. Their ability to form spores lets them resist desiccation, extremes of temperature and radiation, and allows them to survive for extended periods without nutrients. Under optimal conditions, bacteria can grow and divide extremely rapidly, and can form large populations in a short time.'"
+,"
+
+Example 2:
+
+The task is to replace the bold word in the following sentence by the word or words that make the sentence grammatical and correct: 'in the year 2013 the number of the people who are living in bangalore were above six million.' The response is ""were above six million"".
+
+Example 3:
+
+The task is to select the most suitable word from the given options in the blank space to complete the sentence:'my brother is very intelligent and he is always in the first position in the class. he never ___________ in the exams.' The correct option is ""forgets"".
+
+"
+,"
+
+
+\item
+\textbf{Text Classification}
+
+\textit{Create a model that can classify movie reviews as negative or positive.}
+
+
+\item
+\textbf{Document Summarisation}
+
+\textit{Create a model that can summarise documents.}
+
+\end{enumerate}
+
+\end{document}
+"
+,"
+
+Sample Input 1 Sample Output 1
+in addition to the marble quarries the city has academies of sculpture and fine arts and a museum of statuaries and antiquities and a yearly marble technology fair
+
+in addition to the marble quarries the city has academies of sculpture and fine arts and a museum of statuaries and antiquities
+
+Sample Input 2 Sample Output 2
+The city has marble and granite quarries, marble workshops, marble technology fair, and a museum of marble and fine art.
+
+The city has marble and granite quarries, marble workshops, and a museum of marble and fine art"
+,"
+
+#### Input
+
+'he was the director of antiquities in egypt during the th century who was who in egyptology... page by warren royal dawson and excavated in memphis and dashur providing many drawings of many egyptian pyramids.'
+
+#### Output
+
+'he was the director of antiquities in egypt during the th century who was who in egyptology... page by warren royal dawson and excavated in memphis and dashur providing many drawings of many egyptian pyramids.'
+
+Input
+Output
+
+#### Input"
+,"
+    • Hint: The text is grammatically correct. However, you will need to eliminate irrelevant information and rearrange the sentences.
+    • Sample output: 'put on hold for three years.'
+
+Example test inputs
+
+The following is a representative sample of test inputs.
+
+input = 'I am so sorry for the incident, and sincerely apologize if my comments offended you or anyone else.'
+
+input = 'the movie is set in the 1930s.'
+
+input = 'the movie was set in the 1930s.'"
+,"
+
+Note: The simplified text must be an exact word-for-word match, with the same meaning, to one or more of the following responses: 'other items washed down gullies and others lie beneath the waters offshore' or 'other items have washed down gullies and others lie beneath the waters offshore'.
+
+Source: National Assessment for Literacy of Australian Children and Young Adults in Years 3 to 10. AUSLAN edition. The Literacy and Numeracy Foundation of Queensland and the Literacy Project of Australia. 2008.
+
+(5 marks)
+
+Question 6"
+,"
+
+Sample output for this task might be something like the following:
+
+'adam and eve sought to be like god by eating fruit from a tree.'
+
+### Task 3: Summarisation
+
+The objective for task 3 is to summarise a document and generate a short (2-3 sentence) summary of the document. Unlike the paraphrasing task, this task is unsupervised (no gold standard reference summary). However, you will be provided with a set of documents that you should use to evaluate your system’s summarisation."
+,"
+
+[6 marks]
+
+(b) Explain briefly the purpose of a text retrieval system. [2 marks]
+
+(c) Explain the purpose of a term weighting function in text retrieval. [2 marks]
+
+Question 4 [2]
+
+Explain briefly the purpose of stop word removal when preparing a text for analysis. [2 marks]
+
+Question 5 [4]
+
+(a) List three types of text analysis. [3 marks]"
+,"
+
+Please also answer this multiple choice question:
+Which of the following best summarizes this information?
+
+1. The flag of Hawaii contains symbols from two countries.
+2. Hawaii has been occupied by many different countries.
+3. The Hawaii flag contains British symbols because of British occupation in the past.
+4. Hawaii had an earlier version of its flag that no longer exists.
+
+## Answer (1 of 1):
+
+The problem, I suppose, is that the answer choices themselves contain grammatical errors."
+,"
+
+Here is an example output (I omitted the 'lb' and 'rrb' to keep the post readable).
+
+'ra l gonz lez blanco born june in madrid spain is a spanish footballer who plays as a striker'
+
+  • Your question should be much more clear. There are several questions, that should be clear. Why don't you give a simple example? (in case you are lazy to write code) – Dinesh Varghese Feb 15 '15 at 5:49"
+," (Source: Vancouver Sun; https://www.canada.com/vancouversun/news/grizzlies+grizzlies+grizzlies+new+stadium/353818/story.html)
+
+Grizzlies Grizzlies Grizzlies Newly Built General Motors Place Rogers Arena General Motors Place Rogers Arena Vancouver Canucks National Hockey League Rogers Arena General Motors Place Rogers Arena Vancouver Canucks National Hockey League Rogers Arena Vancouver Canucks National Hockey League Rogers Arena Vancouver Canucks National Hockey League Rogers Arena Vancouver Canucks National Hockey League Rogers Arena Vancouver Canucks National Hockey League
+"
+,"
+
+I was initially thinking about using an AI model to identify and simplify the wordy and complicated sentences in the text, but I think this is a too ambitious task. I'm still thinking about how to do it, or what existing models I can use for it, so if you have any suggestions please let me know!
+
+#4
+
+Hi @Jennifer.Yuen
+
+The task seems to be a challenging one, I would recommend trying the following:
+
+1."
+," Sample input: ""mclean was born in west palm beach florida to his mother denise fernandez and father bob mclean.""
+""""""
+
+import json
+import pickle
+import re
+import numpy as np
+import tensorflow as tf
+import tensorflow_hub as hub
+from tensorflow.keras import Input
+from tensorflow.keras.layers import Embedding, Dropout, LSTM, Bidirectional, Dense, Add
+from tensorflow.keras.models import Model
+from tensorflow.keras.optimizers import Adam"
+,"
+
+Anchiornis has long hind legs, like other running birds. But its legs, feet, and even toes were covered in feathers. In other birds, long hind wings (microraptor) indicate flight. But flight feathers in the hind legs of anchiornis imply it wasn't a good runner.
+
+Short text answer:
+
+Text simplification is an unsupervised task where the goal is to generate a simplified version of a given text such that the meaning of the original text is preserved."
+,"
+
+If you're using your own phone numbers you'll want to register each phone number with your project first.
+
+Then simply enter in your phone numbers in the Phone Number field.
+
+To change the phone number of a particular slot, select the slot and click Edit
+
+Once your bot is connected to an API, you can then begin using the API inside your bot's conversations."
+," For example, if the original text is: 'The elephant is the largest living land mammal.', and your simplified text is: 'The biggest land mammal is an elephant.', then your response should be 'the biggest land mammal is an elephant'.
+
+
+The TextInput object is not displayed in the task but it must be included in the response to be marked correct. If the response has the correct response and the text object is present, the mark scheme will be correct, regardless of whether the TextInput object is displayed in the task."

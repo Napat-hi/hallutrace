@@ -1,0 +1,1036 @@
+response,list,list_condition,count,generation_id
+" (4 possible states, that yields 8 possible solutions.)
+
+The total number of combinations of 4 states out of the 50 states is $4^{50}$
+Using an expanded form of the formula:
+$$\sum_{i=1}^{m} i^{k} = \frac{(m+1)m^{k}-m}{m-1}$$
+Each state can be counted as an item and $n$ as the number of required items.",,"['arizona', 'arkansas', 'california', 'connecticut', 'illinois', 'indiana', 'kansas', 'kentucky', 'louisiana', 'maine', 'maryland', 'michigan', 'minnesota', 'montana', 'nebraska', 'nevada', 'new hampshire', 'new jersey', 'new mexico', 'new york', 'north carolina', 'north dakota', 'oregon', 'pennsylvania', 'rhode island', 'south carolina', 'tennessee', 'vermont', 'virginia', 'washington', 'west virginia', 'wisconsin', 'wyoming']",33,pythia-69b|rationalization_numerical-00169|3
+" So the answer is:
+
+1
+
+3
+
+5
+
+5
+
+5
+
+4
+
+1
+
+5
+
+4
+
+4
+
+0
+
+0
+
+6
+
+2
+
+5
+
+5
+
+5
+
+5
+
+0
+
+3
+
+1
+
+6
+
+6
+
+2
+
+4
+
+5
+
+2
+
+3
+
+1
+
+2
+
+2
+
+5
+
+5
+
+5
+
+4
+
+1
+
+3
+
+3
+
+6
+
+6",,"['arizona', 'california', 'colorado', 'connecticut', 'florida', 'georgia', 'idaho', 'illinois', 'iowa', 'louisiana', 'minnesota', 'missouri', 'montana', 'new mexico', 'new york', 'north carolina', 'north dakota', 'ohio', 'oklahoma', 'oregon', 'rhode island', 'south carolina', 'south dakota', 'vermont', 'washington', 'wisconsin', 'wyoming']",27,pythia-69b|rationalization_numerical-00170|3
+" Example:
+
+For A, output:
+
+4
+
+For B, output:
+
+F,
+
+For C, output:
+
+N/A
+
+To retrieve the location of the post office on a particular day you would input 1,2,3,4,5 in a row and would get the result:
+
+(1,2),
+
+(3,4),
+
+(5,N/A)
+
+The first pair of results represents the nearest post office for NDS. The second result is not a valid result for the same method and instead represents a failure.
+",,[],0,pythia-69b|rationalization_numerical-00172|3
+"
+
+A:
+
+Bash, 31 bytes
+expr 1|a=$($a);grep -z ""r$a""<<<$(expr {${a//r}/)}
+
+Try it online!
+This outputs an integer as the number of letters. Add 1 if the letters are part of a single word. This reduces our task to counting the number of letters in the word r.
+
+A:
+
+J, 26 bytes
+:""/=(:<-1>}{)}
+
+Example run
+:=""/=""<-1>}:@",,"['arizona', 'arkansas', 'california', 'colorado', 'delaware', 'florida', 'georgia', 'maryland', 'missouri', 'nebraska', 'new hampshire', 'new jersey', 'new york', 'north carolina', 'north dakota', 'oregon', 'rhode island', 'south carolina', 'vermont', 'virginia', 'west virginia']",21,pythia-69b|rationalization_numerical-00173|3
+"
+
+A:
+
+Two things are not clear in your requirement:
+
+Which of these characters are different between ""BEE"" and ""DVM"", if any?
+Can the data be sorted to fit a single string?
+
+Given these:
+BEE
+1
+2
+3
+DVM
+1
+2
+3
+
+Your requirement is best represented as a set of tuples.  (Hence, your two data structures are tuple sets.)  To know whether two elements are different:",,"['nevada', 'pennsylvania', 'vermont', 'virginia', 'west virginia']",5,pythia-69b|rationalization_numerical-00177|3
+"
+
+A:
+
+http://pastebin.com/nCUGpymH
+Public Function Solutions() As String()
+    Dim Scr As Object
+    Dim Sol As Object
+    Dim Sheet As Object
+    Dim str As String
+    Dim AllowedSol As String
+    Dim Loop1 As Long
+    Dim Loop2 As Long
+    Dim SolNum As Long
+
+    'Set Scr to Sheet
+    Set Scr = ThisWorkbook.Sheets(""Sheet1"")
+
+    'Start loop
+    Do
+        SolNum = 1
+        Do",,['arizona'],1,pythia-69b|rationalization_numerical-00181|3
+" 
+I've tried to do that, but I wasn't able to write down all cases where it starts with d
+number = {}
+
+for d in [""dn"", ""den"", ""deo"", ""deno"", ""do"", ""doo"", ""doo"", ""doo""]
+    for c in ['s','p','a','e','a','n','t','i','o','u','e','t','s', 'a']
+        if d.startswith(c)
+            number[d] = c
+        else
+            continue
+    end
+end
+",,['delaware'],1,pythia-69b|rationalization_numerical-00185|3
+"
+
+A:
+
+python 2
+I guess you're learning Python and you don't understand the if condition.
+Because if you put if condition and do not put an else the condition is true and then the print is executed.
+Why is this so? Because in the beginning there was a null string so everything is evaluated as True. So, the print will be executed.
+So, try something like this:
+import sys
+x=True
+if not x:
+    print ""yes""
+    continue
+
+if x:
+    print ""no""",,['hawaii'],1,pythia-69b|rationalization_numerical-00189|3
+"
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <string>
+
+int main()
+{
+    using namespace std;
+
+    vector<string> cc;
+    string str;
+    string str2;
+    int len;
+
+    int x;
+
+    int i = 0;
+    for(int j = 0; j < 3; j++)
+    {
+        cout << ""Enter a state name"";
+        cin >> str;
+        len = str.size();
+        cc.push_back(str);
+    ",,"['idaho', 'illinois', 'indiana', 'iowa']",4,pythia-69b|rationalization_numerical-00190|3
+"
+
+A:
+
+When you can have too many answers.
+The best answer, assuming that the correct order is A B C D is H I J K L.
+In any case you can do what you want, for example using a self loop.
+UPDATE
+It is not clear how the exercise is formulated. I have assumed that the numbers are in an order that they appear in the article. Then a self loop in the code below would return the correct answer.
+inFile = open('num.txt', 'r')
+print(linecount())
+new_list = []",,"['maine', 'maryland', 'massachusetts', 'michigan', 'minnesota', 'mississippi', 'missouri', 'montana']",8,pythia-69b|rationalization_numerical-00194|3
+" The output should be 
+n = a
+  6
+  a
+  c
+  g
+  j
+  l
+  q
+  s
+  z
+  j
+
+I tried to use ""starts with"" x = starts with a and (y | y == y) but it does not get the intended result.
+Is there a way to achieve that?
+
+A:
+
+Using regex to get all the possible values",,"['nebraska', 'nevada', 'new hampshire', 'new jersey', 'new mexico', 'new york', 'north carolina', 'north dakota']",8,pythia-69b|rationalization_numerical-00195|3
+"
+
+A:
+
+This can be done with simple awk:
+$ echo 'AA AAB B AC ACA BAB BB BB AAB ABCACABABAB ABCD ABC ABCABCABABAB ABCD ABC ABCABC ABCABABABABAB' |
+  awk 'BEGIN{FNR==1} {a[$0]++} END{for (i in a) printf ""%s\n"",a[i];}'
+AC ABCABC ABCABABABABAB",,"['ohio', 'oklahoma', 'oregon']",3,pythia-69b|rationalization_numerical-00196|3
+"
+1-10
+q
+1
+10
+2
+q
+q
+3
+q
+q
+4
+q
+q
+q
+5
+q
+q
+q
+6
+q
+q
+q
+7
+q
+q
+q
+8
+q
+q
+q
+9
+q
+q
+q
+10
+q
+q
+q
+q
+q
+q
+q
+q
+q
+q
+q
+q
+q
+q
+q
+q
+q
+q
+q
+q
+q
+q
+q
+q
+q
+q
+q",,[],0,pythia-69b|rationalization_numerical-00198|3
+"
+
+Input
+
+Output
+
+A
+
+Aboru (Alabama)
+
+Aerial (Alaska)
+
+Air Base (Arizona)
+
+Abacus (Alberta)
+
+Ace (Arizona)
+
+Accord (Arkansas)
+
+Ace (California)
+
+Act (California)
+
+Ace (Connecticut)
+
+Acuity (Delaware)
+
+Act (Georgia)
+
+Ack (Idaho)
+
+Acony (Idaho)
+
+Accelerator (Indiana)",,['rhode island'],1,pythia-69b|rationalization_numerical-00199|3
+" E.g. v
+a = Input()
+n = Input()
+k = [False]*n + [True]*n
+s = [[]]
+for i in range(1,n):
+    k[i] = Input(v=i)
+    for j in range(1,i):
+        s[k[i-1]].append(Input(v=i))
+    n -= 1
+print s[1][-1]
+
+A:
+
+Jelly, 16 bytes",,"['vermont', 'virginia']",2,pythia-69b|rationalization_numerical-00203|3
+"
+I am not looking for any package, code or another tool. I want to get my hands dirty to solve this problem.
+
+A:
+
+Javascript:
+To solve this problem in Javascript, you can try this code. This code checks if the string is in the array and add 1 to the counter if it is. If the string is not in the array, it will check if string starts with a z and append a 1 to the counter if it is. 
+//str is the array name and c is the counter.
+
+//if str starts with z it will increment the counter",,[],0,pythia-69b|rationalization_numerical-00207|3
+" It is so easy, not like the stuff you wrote, I feel like it is dumb and I should do something else, but I just can't figure it out. Here is what I have:
+
+import java.util.Scanner;
+
+public class answer {
+
+    public static void main(String[] args) {
+        int i,j,k;
+        int flag=0;",,"['maryland', 'rhode island']",2,pythia-69b|rationalization_numerical-00211|3
+"
+In other words, my question is ""how to get the list of states that end with letter h?""
+
+A:
+
+Using regex to replace State with pattern[h] and run them through remove method to remove all these with full replacements is most efficient and efficient.
+import re
+pat = re.compile('(?<=^(?:[^#+0-9?|ACM]{1})(?:[A-Z]{1}))(?:[A-Z]{2})([A-Z]{2})(?=[0-9]|$)')",,['utah'],1,pythia-69b|rationalization_numerical-00215|3
+"
+
+So, I tried writing this one by myself, but the final code didn't even use loops.
+Then I realized that there's even more interesting way to solve this problem. Since the whole document is a sequence of characters (the input), a two-dimensional array should do the trick, with each letter being an element. In the upper-left corner the first letter is 0, and in the lower-right corner the last letter is n-1. You can write such an array like this:
+char letterarray[7][7];
+
+(7 x 7) equals to 49.",,"['hawaii', 'mississippi', 'missouri']",3,pythia-69b|rationalization_numerical-00216|3
+"
+1) I have tried to make out of these solutions:
+program main;
+var i, x: Integer;
+  flag: array [1..12] of Boolean;
+  characters: array [1..12] of Char;
+begin
+  x:= 3;
+  while x <= 10 do
+    begin
+    flag[x] := (fmod(x,2)=1);
+    for i:= 1 to 12 do
+      if (flag[i]) then
+        writeln(characters[i], 's');
+    x:= x+1;
+    ",,[],0,pythia-69b|rationalization_numerical-00220|3
+"
+#include <cstdio>
+
+using namespace std;
+
+struct Item
+{
+    int state;
+    int count;
+};
+
+bool is_valid(struct Item item)
+{
+    return item.state == 0;
+}
+
+int main()
+{
+    int count = 0;
+    char letter;
+
+    while(scanf(""%c%n"", &letter, &count) != EOF && count)
+    {
+        struct Item item;
+        if(is_valid(item))
+        {",,"['michigan', 'oregon', 'washington', 'wisconsin']",4,pythia-69b|rationalization_numerical-00221|3
+"
+
+Example: Let's say we have two items, object A and object B, where object A has 6 letters while object B has 5.
+
+input: A B
+
+output: o f e r i t
+
+The first letter is o, hence object A satisfies the condition
+
+input: B A
+
+output: o f e r i t
+
+The first letter is B, hence object B satisfies the condition
+
+input: B a
+
+output: o f e r i t
+
+The first letter is B, hence object B satisfies the condition
+
+input: b a
+
+",,"['colorado', 'idaho', 'new mexico', 'ohio']",4,pythia-69b|rationalization_numerical-00222|3
+" 
+I know that [ q], will return all words ending with q. Is there a command that will return all such words?
+
+A:
+
+You can use a recursive algorithm:
+void main() {
+    std::string str = ""[ q]"";
+    auto i = str.rfind('[');
+    auto j = str.rfind(']');
+    while (i != std::string::npos && j != std::string::npos) {
+        std::cout << i << ""=> "" << j << ""\n"";",,[],0,pythia-69b|rationalization_numerical-00224|3
+"
+
+Answer: 27...
+
+Write a program that reads a number of books and prints the following output.
+
+List 1 is the first book number (say 1) and the total number of books is 5.
+
+You should not use words like ""include"", ""A-B"" and ""cat"".
+
+You need not use any external library.
+
+Solution:
+
+Well it is really simple to achieve this. We will use a dictionary to store the states and the first book is selected in accordance with their present state. It is pretty easy to print using two loops and if condition.",,[],0,pythia-69b|rationalization_numerical-00225|3
+"
+
+Then loop through every state, and get the list of Cities in it.
+
+And I decided to push myself to finish the project. And I found something even more fun.
+
+In this video, I will try to answer this question with its solution (in a form of a script). Maybe you find it useful in some cases. I still have many ideas, so maybe next episode I will try to answer another interesting question. Also, I would be glad if you would find the solution of this question useful. So I would be happy to hear back from you in the comments.",,[],0,pythia-69b|rationalization_numerical-00229|3
+"
+
+1-4
+
+I want the output to be:
+
+1
+
+2
+
+3
+
+4
+
+However, the value for z would be a string that ends with ""e"". So, the correct output would be 1e4.
+
+(You may assume that the string contains only numbers, and the end of the string always begins with a number.)
+
+This would count every character that makes the number 8 or greater. Thus, from ""100"" onwards, the string ""500"" would be counted as well.",,[],0,pythia-69b|rationalization_numerical-00233|3
+"
+It must return
+0
+india
+
+.
+.
+.
+.
+.
+.
+..
+
+A:
+
+CJam, 72 Bytes
+q{V}x${LFT}Sd*e*l*u*e
+
+The last line lists all countries that start with ""b"" as ASCII strings. The output looks like this:
+0
+india
+
+A:
+
+PHP, 76 Bytes",,"['albania', 'antigua and barbuda', 'azerbaijan', 'the bahamas', 'bahrain', 'bangladesh', 'barbados', 'belarus', 'belgium', 'belize', 'benin', 'bhutan', 'bolivia', 'bosnia and herzegovina', 'botswana', 'brazil', 'brunei', 'bulgaria', 'burkina faso', 'burundi', 'cabo verde', 'cambodia', 'central african republic', 'colombia', 'congo, democratic republic of the', 'congo, republic of the', 'cuba', 'czech republic', 'djibouti', 'dominican republic', 'gabon', 'the gambia', 'guinea-bissau', 'kiribati', 'lebanon', 'liberia', 'libya', 'luxembourg', 'mozambique', 'myanmar (burma)', 'namibia', 'saudi arabia', 'serbia', 'trinidad and tobago', 'united arab emirates', 'uzbekistan', 'zambia', 'zimbabwe']",48,pythia-69b|rationalization_numerical-00235|3
+"
+The obvious one is trying to sum all the possible values of the number in the while loop and compare the number with each value. That looks like this:
+
+a) 22
+b) 78
+c) 98
+d) 127
+
+But this answer is too easy.
+
+A:
+
+C, 53
+Gets rid of the pointer by storing char s in a and using s[a] everywhere.  No comments, because answers are usually easier to understand with simple code, but not every single character counts.  I put this up to see if other people could do it.",,"['cabo verde', 'cambodia', 'cameroon', 'canada', 'central african republic', 'chad', 'chile', 'china', 'colombia', 'comoros', 'congo, democratic republic of the', 'congo, republic of the', 'costa rica', 'côte d’ivoire', 'croatia', 'cuba', 'cyprus', 'czech republic', 'dominica', 'dominican republic', 'ecuador', 'france', 'greece', 'iceland', 'jamaica', 'liechtenstein', 'madagascar', 'mexico', 'micronesia, federated states of', 'monaco', 'morocco', 'nicaragua', 'north macedonia', 'saint lucia', 'saint vincent and the grenadines', 'sao tome and principe', 'seychelles', 'south africa', 'vatican city']",39,pythia-69b|rationalization_numerical-00236|3
+"
+2) The number of countries containing A.
+My code 
+public static void countChar(char[] a)
+{
+    int j,k,ch=0;
+    for(j=0;j<a.length;j++)
+    {
+        for(k=j+1;k<a.length;k++)
+        {
+            if(a[j]==a[k])
+                ch++;
+        }
+    }
+}
+
+3)How many ways are there for the letters in the word ""fimv""?
+My Code:
+",,"['afghanistan', 'the bahamas', 'bahrain', 'bangladesh', 'bhutan', 'bosnia and herzegovina', 'chad', 'chile', 'china', 'congo, democratic republic of the', 'congo, republic of the', 'czech republic', 'ethiopia', 'the gambia', 'ghana', 'haiti', 'honduras', 'hungary', 'kazakhstan', 'korea, north', 'korea, south', 'lesotho', 'liechtenstein', 'lithuania', 'marshall islands', 'netherlands', 'north macedonia', 'philippines', 'saint vincent and the grenadines', 'seychelles', 'south africa', 'sudan, south', 'thailand']",33,pythia-69b|rationalization_numerical-00241|3
+"
+
+How to ask questions about programming?
+
+I am not expert about good style of asking a question. In my view the best solution is to ask a specific question. If your answer could not really satisfy the question you ask then try to clarify it and explain. It is important that you ask the question for yourself and that you try to answer. Do not ask question which you can answer quickly with google search.
+
+Suppose you are in a large organisation. Some of the company's policies are the way you have to write programs. What is the best style of writing the programs according to the policies?",,"['azerbaijan', 'djibouti', 'fiji', 'jamaica', 'japan', 'jordan', 'tajikistan']",7,pythia-69b|rationalization_numerical-00243|3
+" For example, if A is a number, then if a is a character, I would output the following:
+a  b  c
+d  e  f
+f  g  h
+
+Is there an efficient way to do this? Note that a and b and c are all arbitrary.
+
+A:
+
+grep can help you with this.
+Since you are sure that a will be a number, it is not a good idea to search through the results from grep as they will contain non-numbers too. Here, the grep's options allow you to extract only numbers:",,"['albania', 'algeria', 'angola', 'australia', 'bangladesh', 'belarus', 'belgium', 'belize', 'bolivia', 'brazil', 'bulgaria', 'central african republic', 'chile', 'colombia', 'congo, democratic republic of the', 'congo, republic of the', 'czech republic', 'dominican republic', 'east timor (timor-leste)', 'el salvador', 'equatorial guinea', 'finland', 'guatemala', 'iceland', 'ireland', 'israel', 'italy', 'laos', 'latvia', 'lebanon', 'lesotho', 'liberia', 'libya', 'liechtenstein', 'lithuania', 'luxembourg', 'malawi', 'malaysia', 'maldives', 'mali', 'malta', 'marshall islands', 'moldova', 'mongolia', 'nepal', 'netherlands', 'new zealand', 'palau', 'philippines', 'poland', 'portugal', 'saint lucia', 'senegal', 'seychelles', 'sierra leone', 'slovakia', 'slovenia', 'solomon islands', 'somalia', 'sri lanka', 'switzerland', 'thailand', 'tuvalu', 'venezuela']",64,pythia-69b|rationalization_numerical-00245|3
+"
+
+A:
+
+CS50, 901 bytes
+def f(w):m=""<M>""for x in w:w=re.findall(r""\s+"",x)[0]or[x]print""This character is in this word:""m*2
+
+Not perfect, but very close.
+My first go at this problem: http://codegolf.stackexchange.com/q/79496/1074
+
+",,"['armenia', 'the bahamas', 'belgium', 'cambodia', 'cameroon', 'colombia', 'comoros', 'congo, democratic republic of the', 'denmark', 'dominica', 'dominican republic', 'east timor (timor-leste)', 'the gambia', 'germany', 'guatemala', 'jamaica', 'luxembourg', 'madagascar', 'malawi', 'malaysia', 'maldives', 'mali', 'malta', 'marshall islands', 'mauritania', 'mauritius', 'mexico', 'micronesia, federated states of', 'moldova', 'monaco', 'mongolia', 'montenegro', 'morocco', 'mozambique', 'myanmar (burma)', 'namibia', 'north macedonia', 'oman', 'panama', 'romania', 'samoa', 'san marino', 'sao tome and principe', 'solomon islands', 'somalia', 'suriname', 'turkmenistan', 'united arab emirates', 'united kingdom', 'vietnam', 'yemen', 'zambia', 'zimbabwe']",53,pythia-69b|rationalization_numerical-00246|3
+" For example, output the number 9, the word monkey, the letter O, the letter S, and the number 2. 
+
+A:
+
+Python 2, 69 bytes
+a=input()
+w=0
+b=[]
+while a>9:
+ b+=[a]
+ for x in a:b+=[(x,a)for i in x if i!=' 'in b];a-=1
+print(b)
+
+Try it online!
+
+A:
+
+C# (DotNet), 59 bytes
+Takes input as an int.",,"['andorra', 'angola', 'barbados', 'bolivia', 'bosnia and herzegovina', 'botswana', 'burkina faso', 'cabo verde', 'cambodia', 'cameroon', 'colombia', 'comoros', 'congo, democratic republic of the', 'congo, republic of the', 'costa rica', 'côte d’ivoire', 'croatia', 'djibouti', 'dominica', 'dominican republic', 'east timor (timor-leste)', 'ecuador', 'el salvador', 'equatorial guinea', 'estonia', 'ethiopia', 'gabon', 'georgia', 'honduras', 'indonesia', 'jordan', 'korea, north', 'korea, south', 'kosovo', 'laos', 'lebanon', 'lesotho', 'luxembourg', 'mexico', 'micronesia, federated states of', 'moldova', 'monaco', 'mongolia', 'montenegro', 'morocco', 'mozambique', 'north macedonia', 'norway', 'oman', 'poland', 'portugal', 'romania', 'samoa', 'san marino', 'sao tome and principe', 'sierra leone', 'singapore', 'slovakia', 'slovenia', 'solomon islands', 'somalia', 'south africa', 'sudan, south', 'togo', 'tonga', 'trinidad and tobago', 'united kingdom']",67,pythia-69b|rationalization_numerical-00248|3
+"
+For eg, if the condition is if r is in the list,
+>>> list = ['fr', 'tr', 'en', 'es', 'it', 'nz', 'de', 'bg', 'lv', 'cz', 'ru']
+>>> output = []
+>>> for a, b in zip(list, list[1:] + ['r']):
+...     if a == b:
+...             output.append(a)
+...
+>>> output",,"['algeria', 'andorra', 'antigua and barbuda', 'argentina', 'armenia', 'australia', 'austria', 'azerbaijan', 'bahrain', 'barbados', 'belarus', 'bosnia and herzegovina', 'brazil', 'brunei', 'bulgaria', 'burkina faso', 'burundi', 'cabo verde', 'cameroon', 'central african republic', 'comoros', 'congo, democratic republic of the', 'congo, republic of the', 'costa rica', 'côte d’ivoire', 'croatia', 'cyprus', 'czech republic', 'denmark', 'dominican republic', 'east timor (timor-leste)', 'ecuador', 'el salvador', 'equatorial guinea', 'eritrea', 'france', 'georgia', 'germany', 'greece', 'grenada', 'honduras', 'hungary', 'iran', 'iraq', 'ireland', 'israel', 'jordan', 'kiribati', 'korea, north', 'korea, south', 'kyrgyzstan', 'liberia', 'luxembourg', 'madagascar', 'marshall islands', 'mauritania', 'mauritius', 'micronesia, federated states of', 'montenegro', 'morocco', 'myanmar (burma)', 'nauru', 'netherlands', 'nicaragua', 'niger', 'nigeria', 'north macedonia', 'norway', 'paraguay', 'peru', 'portugal', 'qatar', 'romania', 'russia', 'rwanda', 'saint vincent and the grenadines', 'san marino', 'sao tome and principe', 'saudi arabia', 'serbia', 'sierra leone', 'singapore', 'south africa', 'sri lanka', 'suriname', 'switzerland', 'syria', 'trinidad and tobago', 'turkey', 'turkmenistan', 'ukraine', 'united arab emirates', 'uruguay']",93,pythia-69b|rationalization_numerical-00251|3
+"
+from collections import Counter
+c = Counter()
+for x in s:
+    if x == 'S':
+        c[x] += 1
+    elif x == 'T':
+        c[x] += 1
+
+I do not need the output to be on the same line as the comparison. The rule is that the list must contain all the letters S or T. So if I found 'a', 'b' in the string, it would only be counted once.
+
+A:",,"['afghanistan', 'australia', 'austria', 'the bahamas', 'bangladesh', 'barbados', 'belarus', 'bosnia and herzegovina', 'botswana', 'burkina faso', 'comoros', 'costa rica', 'cyprus', 'east timor (timor-leste)', 'el salvador', 'estonia', 'eswatini', 'guinea-bissau', 'honduras', 'indonesia', 'israel', 'kazakhstan', 'korea, south', 'kosovo', 'kyrgyzstan', 'laos', 'lesotho', 'liechtenstein', 'madagascar', 'malaysia', 'maldives', 'marshall islands', 'mauritius', 'micronesia, federated states of', 'netherlands', 'pakistan', 'philippines', 'russia', 'saint kitts and nevis', 'saint lucia', 'saint vincent and the grenadines', 'samoa', 'san marino', 'sao tome and principe', 'saudi arabia', 'senegal', 'serbia', 'seychelles', 'sierra leone', 'singapore', 'slovakia', 'slovenia', 'solomon islands', 'somalia', 'south africa', 'spain', 'sri lanka', 'sudan', 'sudan, south', 'suriname', 'sweden', 'switzerland', 'syria', 'tajikistan', 'tunisia', 'turkmenistan', 'united arab emirates', 'united states', 'uzbekistan']",69,pythia-69b|rationalization_numerical-00252|3
+" So, my algorithm is as follows:
+for num in w:
+    if num < 10:
+        break
+    else:
+        for num in w:
+            print(num)
+        break
+
+However, my problem is that, I cannot get the list. It seems that the list is empty. I suspect that the problem is that my for loop could only run once because of break. Is there any better way to solve my problem?
+
+A:
+
+Try this:
+#!/usr/bin/python
+
+data = input()
+num = 0
+count = 0
+
+",,"['botswana', 'eswatini', 'kuwait', 'malawi', 'new zealand', 'norway', 'papua new guinea', 'rwanda', 'sweden', 'switzerland', 'taiwan', 'zimbabwe']",12,pythia-69b|rationalization_numerical-00256|3
+" I believe this could be a solution, but not sure. If it is a single-statement, no problem! Otherwise I need to use a for loop or similar, I assume.
+
+A:
+
+a (3 ≤ n ≤ 10)
+# f means the friend letter.
+
+{f@x|x#a}
+
+""A friend of x""
+
+{f@x|x#a+#\t}
+
+""A (1) of x""
+
+{f@x|x#a*#\t}",,"['luxembourg', 'mexico']",2,pythia-69b|rationalization_numerical-00257|3
+"
+
+In general, answers will have to be based on either dictionary-type data structures or external files. In this instance, let's say you have two lists of dictionary keys and values. The dictionary keys will define the letter z. The values will list the countries containing that letter.
+
+Hint #4.34: Sorting. (No example.) Write an algorithm for sorting two given strings, based on any or all of the following: recursive descent (repeated calls), self-referential sorting rules, matrix traversals, and random (non-deterministic) sorting algorithms.
+
+Solution.",,"['azerbaijan', 'belize', 'bosnia and herzegovina', 'brazil', 'czech republic', 'kazakhstan', 'kyrgyzstan', 'mozambique', 'new zealand', 'switzerland', 'tanzania', 'uzbekistan', 'venezuela', 'zambia', 'zimbabwe']",15,pythia-69b|rationalization_numerical-00259|3
+" 
+Thx!
+
+A:",,"['bahrain', 'bangladesh', 'barbados', 'belarus', 'belgium', 'belize', 'benin', 'bhutan', 'bolivia', 'bosnia and herzegovina', 'botswana', 'brazil', 'brunei', 'bulgaria', 'burkina faso', 'burundi']",16,pythia-69b|rationalization_numerical-00261|3
+"
+
+For example, in the letter c world, there are 9 countries starting with C, and the US, Canada, and Denmark are among them.
+This works:
+input = c(b, c, c, d, c, e, c, e)
+word = 'danish'
+output = c(as.integer(sub('^.*$', '', input)) == c(8, 9))
+
+A:
+
+We can use match
+as.integer(grep('^.*c', string = word))
+#[1]  8 10  8 11 10
+
+",,"['cabo verde', 'cambodia', 'cameroon', 'canada', 'central african republic', 'chad', 'chile', 'china', 'colombia', 'comoros', 'congo, democratic republic of the', 'congo, republic of the', 'costa rica', 'côte d’ivoire', 'croatia', 'cuba', 'cyprus', 'czech republic']",18,pythia-69b|rationalization_numerical-00262|3
+"
+
+A:
+
+You can do this using a dictionary:
+import itertools
+
+hyph = {""A"": ""1"", ""B"": ""2"", ""C"": ""3""}
+for i, n in itertools.groupby(hyph.items(), key=lambda x: x[0]):
+    print(n)
+
+A:
+
+Here's my answer, but also some hints for people who want to try for themselves:
+def has_h(s):
+    return ""h"" in s or s[0].isdigit()",,"['haiti', 'honduras', 'hungary']",3,pythia-69b|rationalization_numerical-00267|3
+" 
+Oracle solution is fastest solution. My solution takes 7secs which is close to oracle solution.
+Current code:
+SELECT 'J'||TO_CHAR(rownum)||', '||TO_CHAR(rownum)||', '||LEAD(A.COL1,1,0) ||', '||A.COL2||', '||A.COL3||', '||A.COL4||', '||A.COL5||', '||A.COL6||', '||A.COL7||', '||A.COL8||', '||A.",,"['jamaica', 'japan', 'jordan']",3,pythia-69b|rationalization_numerical-00269|3
+"
+Shorter way:
+count(x: String, c: Character, rest: String) = (c in rest) ==> x.count(""l"") 
+
+A:
+
+You can do that with just a single list comprehension:
+import Data.List
+
+f (x : ""ana"" : ""sana"") = toUpper $ words x
+
+-- count characters ""l"" from left of ""ana""
+
+",,"['laos', 'latvia', 'lebanon', 'lesotho', 'liberia', 'libya', 'liechtenstein', 'lithuania', 'luxembourg']",9,pythia-69b|rationalization_numerical-00271|3
+" The shortest and the fastest solution will be highly appreciated.
+
+A:
+
+Brain powered solution:
+
+I assume you're given a large dataset containing word occurences and their respective letter a, b, ..., z.
+Use a for-loop to traverse through each letter and check if the letter is present in the list of words with alphabetical order. If it is present, start printing out the letter. If not, exit from the loop and stop printing letters. If it is the last letter, output a newline.",,"['madagascar', 'malawi', 'malaysia', 'maldives', 'mali', 'malta', 'marshall islands', 'mauritania', 'mauritius', 'mexico', 'micronesia, federated states of', 'moldova', 'monaco', 'mongolia', 'montenegro', 'morocco', 'mozambique', 'myanmar (burma)']",18,pythia-69b|rationalization_numerical-00272|3
+" What will the output be when the number provided to the program is 0?
+Total of unique characters in words in which the third letter is ‘o’.
+
+A:
+
+In python you can do it by having two loops, one for the alphabet and one for the words. For each element of the list you test the length of the list and if it is not 0 it is a word.
+
+",,['oman'],1,pythia-69b|rationalization_numerical-00274|3
+"
+
+A:
+
+KANZASOL, 7 bytes
+S²2@
+
+Try it online!
+Given a string, outputs a list of countries that starts with that letter.
+EDIT:
+Thanks to sos, the 4 character solution would now be
+S²2`
+
+Try it online!
+
+A:
+
+Python 2, 105
+s=raw_input().upper().count('r')
+l=s(n=2,r='r').replace('r',n=4)
+print(l)",,"['romania', 'russia', 'rwanda']",3,pythia-69b|rationalization_numerical-00277|3
+" So in the above example, that would be all of them:",,"['saint kitts and nevis', 'saint lucia', 'saint vincent and the grenadines', 'samoa', 'san marino', 'sao tome and principe', 'saudi arabia', 'senegal', 'serbia', 'seychelles', 'sierra leone', 'singapore', 'slovakia', 'slovenia', 'solomon islands', 'somalia', 'south africa', 'spain', 'sri lanka', 'sudan', 'sudan, south', 'suriname', 'sweden', 'switzerland', 'syria']",25,pythia-69b|rationalization_numerical-00278|3
+"
+
+Examples
+
+Input:
+
+2
+
+Output:
+
+England, Wales, Australia, New Zealand, Singapore, India, China, South Africa, Nigeria, Nigeria (Mende), Burma (Myanmar), United States
+
+This is my first Python program. I'm still a beginner. What are good programming practices? I think I don't know good language design/organization.
+
+A:
+
+This solution isn't very elegant, but the logic is trivial and that is all that matters. Note that 'charset' in scandir refers to the character set.
+import sys",,[],0,pythia-69b|rationalization_numerical-00282|3
+"
+Since the list is very long, please let me know if I can increase the amount of items in output list.
+Example output:
+1
+Netherlands
+2
+England
+3
+
+A:
+
+With a little help from One of my helpful friends:
+//Some language to switch English & Dutch
+var language = ""English"";
+
+var output = """";
+//Parsing the Input line
+//1 -> = NL_NL
+if (line.includes(""1"")) {
+    language = ""Netherlands"";
+}
+//2 -> = EN_EN",,[],0,pythia-69b|rationalization_numerical-00283|3
+"
+
+That sounds like a simple answer but the problem is related to ""match"" function in Python.
+So this is my logic and my actual code:
+def letter_count(lista):
+    # base = letters from a to z
+    # result = how many times the letters from a to z appears
+    # code:
+    output = 0
+    for i in range(0, len(base)):
+        if (base[i] == letter):
+            output = output + 1
+    return output",,"['zambia', 'zimbabwe']",2,pythia-69b|rationalization_numerical-00285|3
+"
+the first output is 1, which we can ignore
+b = [['a'], ['d', 'e', 'b', 'c'], ['a', 'b', 'd']]
+
+using a + b the output should be 7, as the string 'ab' is in both ['a', 'b'] and ['a', 'b', 'd']
+In [108]: [sorted(set(i) - set(j) for i,j in zip(a, b)) for x in a]
+Out[108]: [6, 7, 2, 5]",,[],0,pythia-69b|rationalization_numerical-00287|3
+"
+I know this is an easy one but my brain is not working very well.
+
+A:
+
+PowerShell script to calculate number of countries with letter C
+
+In addition to the great answer provided by Andrew Sutton, I'll add an explanation on how to write a PowerShell script for this kind of task. This approach is sometimes more convenient for having the goal in mind and for debugging.
+
+Import some libraries (base64, crypt, expand-string, ...).
+Use another script file with a for loop to get the number of lines with ""C"" in a text file.",,"['central african republic', 'czech republic', 'dominican republic']",3,pythia-69b|rationalization_numerical-00288|3
+" If there is an algorithm, it can be of interest to note how the output is composed.
+
+",,"['bangladesh', 'korea, north', 'korea, south', 'sudan, south']",4,pythia-69b|rationalization_numerical-00293|3
+" For example:
+jasa60.out.txt:
+1
+
+jasa60.out.txt:
+Sweden
+
+jasa61.out.txt:
+United States
+
+jasa62.out.txt:
+Germany
+
+jasa63.out.txt:
+Finland
+
+jasa64.out.txt:
+Japan
+
+jasa65.out.txt:
+Japan
+
+jasa66.out.txt:
+Japan
+
+jasa67.out.txt:
+Japan
+
+jasa68.out.txt:
+Japan",,[],0,pythia-69b|rationalization_numerical-00295|3
+" Example of the final output should look like below.
+
+Countries in the world sorted by final output
+
+123 
+l 
+_ 
+en_s_ 
+fr_y_ 
+j_e_r_ 
+sd_a_ 
+en_f_ 
+es_l_ 
+es_m_ 
+en_g_ 
+en_f_b_ 
+en_s_f_ 
+sr_e_r_ 
+en_e_g_ 
+en_t_ 
+fr_a_",,"['brazil', 'israel', 'nepal', 'portugal', 'senegal']",5,pythia-69b|rationalization_numerical-00297|3
+"
+
+A:
+
+This should do the trick:
+awk 'NR>1{gsub(/[[:upper:]]/,"""",$1);print}'
+
+This will strip the leading upper case letters and also print the number of countries with their English name.
+
+",,"['belgium', 'united kingdom', 'vietnam']",3,pythia-69b|rationalization_numerical-00298|3
+" 
+
+My code is :
+import os
+s=['p','e','r','t','r','i','n','g','s','a','d','n','g','s','o','o','d','l','e','t']
+#some method you have
+new_s=[]
+for i in s:
+  for k in range(len(s)):
+    if k+1==len(s):
+      break
+    if s[k]==s[k+1]:
+      new_s.append(s[k])
+print new_s
+",,"['burkina faso', 'kosovo', 'lesotho', 'mexico', 'monaco', 'montenegro', 'morocco', 'san marino', 'togo', 'trinidad and tobago']",10,pythia-69b|rationalization_numerical-00300|3
+" I have no idea about this. 
+
+A:
+
+Regular expression (or built in Python regex)
+This is a possibility to extend on Jonno's answer. Using a regular expression, the output could look like this:
+import re
+
+def country_codes(s):
+    res = [c[0] for c in [i for i in re.findall(r'[A-Z]{2,3}', s) if i != '']]
+    return [p for p in res if p.isalpha()]",,"['ecuador', 'el salvador', 'madagascar', 'niger', 'qatar']",5,pythia-69b|rationalization_numerical-00303|3
+"
+
+A:
+
+JavaScript, 93 bytes
+s=>/S$/i.test(s.toLowerCase())||""EUUZ""
+
+(s) -> Integer a, returns a base 36 string of the capitalized first 3 characters. (Except not in the EUUZ case)
+
+A:
+
+Jelly, 67, 65 bytes
+“S∪²3€Ṗ×€ç¿1*€µZ“|“2I*€µ",,"['the bahamas', 'barbados', 'belarus', 'comoros', 'cyprus', 'honduras', 'laos', 'maldives', 'marshall islands', 'mauritius', 'netherlands', 'philippines', 'saint kitts and nevis', 'saint vincent and the grenadines', 'seychelles', 'solomon islands', 'united arab emirates', 'united states']",18,pythia-69b|rationalization_numerical-00304|3
+"
+
+A:
+
+C (gives you the number of words with the letter w), and then
+
+A list of the word lengths
+
+That's close to your example.
+function w(word) {
+    if(word[0] == 'w')
+    {
+        if(word.length == 1)
+        {
+            return word.substring(1);
+        }
+        return word.length;
+    }
+    else if(word[0] == 'a')
+    {
+        return word.substring(1);
+    }
+    else
+",,[],0,pythia-69b|rationalization_numerical-00308|3
+"
+
+A:
+
+w,b,c,d,e,f,g,h,i,j,k,l,m,n,p,q,r,s,t,u,v,w,x,y,z  (six letters)
+
+This is quite easy to solve with recursive and memoization techniques:
+def nlender(num, letters):
+    if len(num) == len(letters):
+        return None, [num]",,[],0,pythia-69b|rationalization_numerical-00309|3
+" Output should be sorted alphabetically. Note that input may consist only of letters and numbers.
+
+A:
+
+JavaScript, 61 58 57 bytes
+Takes input in [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z].",,[],0,pythia-69b|rationalization_numerical-00311|3
+" What I did is:
+   public static void myMethod(char c){
+    int a=1;
+    for(int b=1; b<10; b++)
+    {
+        if(c==a)
+        {
+           // print 
+            System.out.println(""Particular letter in every continent"");
+           System.out.println(""My sentence is: "" + a);
+        }
+        else{
+           // print 
+           System.out.println(""All other letters in this continent"");
+        }
+    }
+}",,"['africa', 'antarctica', 'asia', 'north america', 'oceania', 'south america']",6,pythia-69b|rationalization_numerical-00312|3
+" Then use re.findall to extract every item in each list.
+
+1. **9**
+
+This is a simple string processing problem. You are given the string ""peanut butter and jelly"". Your job is to output a list of items that contain the phrase ""and"". The output would be
+
+[""peanut butter"", ""and"", ""jelly""]
+
+This problem is made more difficult by two facts:
+
+**Fact 1:** Each item has to be matched as a whole. Each occurrence of the phrase ""and"" should be counted as only one item.",,"['europe', 'north america', 'oceania', 'south america']",4,pythia-69b|rationalization_numerical-00316|3

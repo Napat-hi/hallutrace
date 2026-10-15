@@ -1,0 +1,220 @@
+prompt,response
+,"
+
+The model expects a plain text, as described above. The simplification of the text should be achieved through:
+
+  1. Rephrasing of the sentence or paragraph
+  2. Removal of complex words or phrases (e.g. removing 'convert(ed)' from the sentence above, since it is not relevant)
+  3. Replacing complex words with simpler ones (e.g. replacing 'conversion' with 'change')
+  4. Removal of non-essential parts of the text, without changing the meaning of the text. (e.g."
+,"
+
+
+\begin{table*}[h]
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+\hline
+\textbf{Dataset} & \textbf{Task} & \textbf{Size} & \textbf{Train} & \textbf{Dev} & \textbf{Test} & \textbf{Vocab. (train)} & \textbf{Average Word Length} & \textbf{BERT} \\
+\hline
+\hline"
+,"
+  • Add the following:
+
+    'The piece was originally intended to have four movements, with four themes; the last movement was later incorporated into a separate work. The theme for the first movement is said to represent the ""Riviera"" theme and was based on the famous theme for 'Riviere' by Jean-Paul Marat. The theme for the second movement is considered by some to be inspired by a movement from Beethoven's 9th symphony. The third movement is said to represent the ""Lake"" theme and was based on the theme for Lake Como from his Symphony in C Minor."
+,"
+
+Sample Answer
+
+bob cobb, alias the maestro, from the nbc sitcom, seinfeld
+
+How can we help?
+
+Get in touch with us for any questions. Our team will contact you in 12hrs.
+
+Thanks for reaching out, we will contact you shortly."
+,"
+
+A: I would say that we should think twice about the reintroduction of species into the wild because they may have lost their survival techniques during the time that they were not in the wild.
+
+Q: Use of pronouns to refer back to an earlier noun can create ambiguities if the reader is uncertain about which noun the pronoun refers back to. Simplify the following text by omitting or rewording pronouns that are ambiguous. 'As a result of these problems the management is not in control and many people, mainly elderly people, feel that they are discriminated against."
+,"
+
+
+\section{Related Work}
+
+The task of summarization has been the focus of much research in the NLP community."
+," '
+
+Example input:
+
+'in the florida everglades a of trees were knocked down by the storm.'
+
+Example output:
+
+'florida everglades storm trees'
+
+Example test case:
+
+Test case provided as one of the unit tests.
+
+'''
+
+import nltk
+nltk.download('stopwords')
+import re
+import numpy as np
+import pandas as pd
+import sys
+import spacy
+from spacy import displacy
+from tqdm import tqdm
+import string
+from collections import Counter"
+,"
+• In the following text, determine the longest word in the text, in order, starting with the earliest occurrence in the text. If there are ties, provide all matching words: 'how are these numbers related to each other, and to the whole series of primes? i have noticed that if you multiply every number by itself and then add them together, you get the same answer, e.g."
+," Note that the text is very short, and there are few punctuation marks. The capitalization of the text is retained, since the question asks for'simplification of the text, ensuring its core meaning remains intact'. This means that words should only be removed if they are unnecessary, and not because of their capitalization. The text has been marked-up with the TextGrid annotation file format. This is similar to the format used by the DARPA-TIMIT corpus, and allows the exact location of words to be noted.
+
+Input example #1
+
+Word Index Pronunciation
+Chief Justice 0 CHEF
+"
+,"
+
+Question 5
+
+Fill in the blanks with the missing words: the ______ (1) ______ (2) was not ______ (3) ______ (4) until ______ (5) ______ (6) ______ (7) and ______ (8) ______ (9) ______ (10) ______ (11) ______ (12) ______ (13).
+
+Question 6
+
+This question is about the history of the city of Rome."
+,"
+
+Sample response: the fhrer bunker was located about metres beneath the garden of the old reich chancellery building at wilhelmstrae about metres north of the new reich chancellery building which had the address vo strae.
+
+The text provided in the sample response was a random, but plausible, output by Google Translate.
+
+Google Translate has a large corpus of parallel text available for translation between many languages. This can be a benefit, but it also brings challenges."
+,"
+
+Please answer the question below by typing the word'solve' followed by a space, and then typing your answer. E.g. solve My house smells = My house smells of onions.
+
+Provide only your answer, not the question itself."
+,"
+
+The problem, however, is that even if I could find one text, my students, unlike I, do not have a background in Linguistics that would allow them to easily translate it to English.
+
+What is the best way to create the text, such that it is as simple as possible, without being nonsensical? What is the easiest way to explain the task to my students?
+
+If I do manage to write the text, are there any datasets available for this kind of task?
+
+
+Here are some examples to give you an idea of the scope of the task:"
+,"
+
+If you are unable to complete the task, you can also report the error for a human to fix. You can also use a human for a new task that has never been attempted before (e.g. you might want to use a human to check that our automatic answer works for an example you have come up with).
+
+\begin{table}
+\begin{center}
+\begin{tabular}{|l|l|}
+\hline \bf Question & \bf Response \\
+\hline
+Who is the Queen of the Netherlands? & Beatrix \\
+\hline"
+," Note that the input text contains only letters and numbers. Also, do not perform any character-level analysis of the input text. For instance, you should not split the text into individual words and then perform analysis. This question requires a Python script."
+,"
+
+
+Input a list of numbers and output its corresponding list in reverse order. The length of the input must not exceed 50.
+
+If the input contains zero or negative numbers, provide an error message.
+
+
+Given the above table, output the name of the team that has scored the highest.
+
+
+Your input is a list of non-negative integers.
+
+Output the length of the longest increasing contiguous subsequence.
+
+
+Input a string, your output must be its reverse. For example, ""abcde"" -> ""edcba""."
+," Sample inputs: ""santa fe high school is located within the city of santa fe springs."" ""santa fe high school located in santa fe springs, california."" ""santa fe springs, santa fe high school located within the city."" ""where is santa fe high school located?"" ""where is santa fe springs located""
+
+# Explanation
+
+This task is a simplification of the task of Summarization."
+,"
+
+A: The devil draws Gretchen into Faust’s arms because he is attracted to her. He helps her with her jewelry and the neighbor.
+
+Q: Can you please rewrite the following text using only 25% of the original word count? It should contain only the main ideas. Do not alter any of the sentences. Please ensure you use correct spelling and grammar. 'in the novel a room of one’s own by virginia woolf, the author argues that it is nearly impossible for a woman to write if she doesn't have the right conditions."
+," There may be multiple valid ways to simplify the text. Your program should determine the simplest version to use for grading.
+
+You may assume that the text contains no capitalization errors. There are no acronyms in the test set, so you can ignore capitalization in determining the correct simplification of each word.
+
+The simplified version of a text should not be much shorter than the original text. To account for this, if your simplified version is more than 25% shorter than the original text, you should instead keep the original text."
+,"
+
+(1) 'geography lies a few km from rh ne of lyon and saint tienne.'
+(2) 'geography a few km south of rh ne lyon saint tienne.'
+(3) 'geography is a few km from the river rh ne south of lyon and saint tienne.'
+(4) 'geography is a few km from rh ne south of lyon and saint tienne.'
+
+Which is the most appropriate definition of the term 'converging texts' for the purposes of reading?"
+,"
+
+Please note: if you submit a sample response to the above task, make sure the sample response is not identical to the task, e.g. you should not submit a copy of the task as your sample response.
+
+Dataset schema
+
+JSON Schema
+
+""$schema"": ""https://json-schema.org/draft-04/schema#"",
+""id"": ""https://schema.org/TaskObject"",
+""type"": ""object"",
+""properties"": {
+""query"": {
+""description"": ""The query to be submitted."","
+," You may assume there are no spelling mistakes, and that no punctuation has been missed."
+,"
+
+
+\section{Task 7: Punctuation and Quotes}
+The provided text is a mixture of English and Spanish. Remove the punctuation and quotes, except for apostrophes, from both languages.
+
+\section{Task 8: Case Folding}
+The provided text consists of a sentence and some punctuation. Lowercase the sentence, but keep the rest of the text capitalized.
+
+
+\section{Task 9: Remove Punctuation}
+The provided text consists of a sentence and some punctuation. Remove the punctuation but keep the rest of the text intact."
+,"
+
+The best way to understand the scope of this problem is to try it yourself. Here are a few more examples:
+
+1. The'simplify the following text' problem
+
+This problem is the one that we will focus on for this blog post. The problem description is as follows:
+
+""simplify the following text to improve its readability, ensuring its core meaning remains intact""
+
+This particular problem has been included in the Kaggle NLP Competition, where we have to develop the best possible automated tool to solve the problem."
+,"
+
+## Outputs
+
+Text, single line.
+
+## Hints
+
+This challenge is similar to the simplification task in the Natural Language Toolkit's tutorial: http://nltk.org/book/ch02.html.
+
+The input to the task may be the output of the following challenge, which converts text into its lowercase, stemmed and tokenised form, or something similar: https://www.kaggle.com/c/word-similarity/forums/t/1084/word-stemming.
+
+## Submitting your solution"
+,"
+• Q2) Simplify the following text to improve its readability, ensuring its core meaning remains intact: 'after its creation in the 1940s the purpose of the bank was to promote international development especially by encouraging capital investment in developing countries. Since its formation the bank has been governed by an international board and its president is chosen by the members of the board and approved by the international bank for reconstruction and development.' Provide only the simplified text as the response.
+
+## (c)"
+, (A) In captain William Brown of England was the first foreigner to sail into what is now Honolulu Harbor. (B) Captain William Brown of England was the first foreigner to sail into Honolulu Harbor. (C) In captain William Brown of England was the first foreigner to sail into Honolulu Harbor. (D) In captain William Brown of England was the first foreigner to sail into Honolulu Harbor. (E) Captain William Brown of England was the first foreigner to sail into Honolulu Harbor.

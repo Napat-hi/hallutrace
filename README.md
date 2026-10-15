@@ -40,6 +40,8 @@ with our patches applied, and the prompts are referenced by id.
 | `scripts/halogen_response_lengths.py` | Lengths of HALoGEN's released responses (needs `responses` in the sparse checkout) |
 | `hallutrace/store.py`, `scripts/init_db.py` | The SQLite store, nine tables from prompts and generations to corpus counts and labels, and the script that creates it |
 | `scripts/validate_a2.py` | Checks a downloaded generation run: every batch, record and pinned model revision |
+| `results/generations/` | All 96,000 generations, one JSONL file per fixed batch: prompt id, model, sample, settings, the response and why it stopped. No prompt text |
+| `results/verifier/generations/`, `results/verifier/generations-prompts-v2/` | The verifiers' inputs and outputs. Biographies and Historical Events come from the run with HALoGEN's extraction prompts, the other six tasks from the run with the revised ones. Each `.meta.csv` sidecar ties a row to its generation and records its outcome |
 | `results/pilot/`, `results/pilot2/` | The two pilot generation runs (5,760 generations, by prompt id); some tests read them |
 | `scripts/posthoc_filter.py`, `hallutrace/posthoc.py` | Filters on verifier output: extracted units the model never wrote, `NONE` units and the decomposer's framing lines are dropped, the raw output kept |
 | `scripts/gold_cut.py`, `hallutrace/gold_cut.py`, `hallutrace/gold_cut_bio.py` | The annotation sample per task and the two annotators' packets, with the verifier's answer kept apart |
@@ -69,6 +71,12 @@ with our patches applied, and the prompts are referenced by id.
 | `tests/`, `scripts/run_tests.py` | Tests; no API key or network needed |
 
 Scripts write to `outputs/` (not tracked) unless told otherwise.
+
+**HALoGEN's text is not copied.** Entity names (people, events) are kept as identifiers; prompt
+wording and source text are not released. In the verifier files the columns `prompt`, `passage`,
+`extract_atomic_unit_prompt`, `list` and `true_answer` are kept but left empty, so every script
+still reads them. `list_condition` and `count` stay filled: the unit filter needs these answers
+to recompute the verdicts. `scripts/draw_sample.py` rebuilds the prompts from HALoGEN's own files.
 
 **The shard files in `results/bio_counts/`** came from our development repository. In each
 shard's `meta.json`, `counting_code_sha256` hashes `hallutrace/pilot_counts.py` and

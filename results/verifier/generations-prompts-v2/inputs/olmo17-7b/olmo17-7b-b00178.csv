@@ -1,0 +1,581 @@
+response,list,list_condition,count,generation_id
+" I know I can do it if I do it manually in one line like
+$ months = [""January"", ""February"", ""March"", ""April"", ""May"", ""June"",
+""July"", ""August"", ""September"", ""October"", ""November"", ""December""];
+
+foreach ($months as $month) {
+   if (strpos($month, ""c"") != false) {
+      echo $month . '<br>';
+   }
+}
+
+but how to do this in one line, because there are around 200 words which contains ""c""?",,[],0,olmo17-7b|rationalization_numerical-00522|3
+"
+
+[EX Q]: How many letters are in the word 'nanjing' if they have the same number of letters?
+[EX A]: 2
+
+[EX Q]: I want to know how many consonants are in my name and how many in my nickname. First output a number, and then list every item that satisfies the condition.
+[EX A]: 3
+
+[EX Q]: how many miles between snohomish and suquamish
+[EX A]:
+2",,[],0,olmo17-7b|rationalization_numerical-00526|3
+"
+[2, 1, 1, 1, 2]
+A:
+Yes
+
+QUESTION: Can the Queen of Spades be found on the standard 52-card deck of playing cards?
+[2, 1, 1]
+A:
+No
+
+QUESTION: Are almost all people who live in Egypt Muslims?
+[1, 1, 1, 1, 1]
+A:
+No
+
+QUESTION: Can most guinea pigs survive in an extreme desert?
+[1, 2, 1, 2, 1]
+A:
+Yes",,['march'],1,olmo17-7b|rationalization_numerical-00527|3
+"
+
+mtdcce, abhzmf, qyfuf, blcydx, gqxhr",,[],0,olmo17-7b|rationalization_numerical-00530|3
+" Here we assume all months are defined and valid, so if you want to avoid errors then use my example.
+#!/usr/bin/env python3
+# numberofmonths.py
+
+import datetime
+
+month_list = ['january','february','march','april','may','june','july','august','september','october','november','december']
+output = list()
+
+for month in month_list:
+    if len(month) == 3 and month[-1] == 'l':
+        print(month, end=' ')
+",,['april'],1,olmo17-7b|rationalization_numerical-00531|3
+" For example, you can make a list of all numbers divisible by 4 in the range 10 to 25 (both inclusive) by typing: $ echo `seq 10 25` | perl -pe 's/\d/\$&%400+/g'
+
+### Complexity
+
+Each output must be generated from scratch (no reading of existing files), and should produce correct output for the first 25 years.
+
+### Testcase
+
+The following test case was inspired by Chris Simpson's answer.
+
+Years             String
+1900-2000",,[],0,olmo17-7b|rationalization_numerical-00536|3
+" I know that I have to print the number first, and then, in the same line, I have to print the items that satisfy the condition.
+
+To print the number, I did a for loop to run from 1 to 100 and then add 1 to the variable c and then I print it out. The problem is, I'm not sure how to print out the letters in the middle.
+
+I tried to do:",,[],0,olmo17-7b|rationalization_numerical-00538|3
+"
+
+A month is normally 28-31 days (except February, which has only 28 days). We will then use IF statements to check the number of days the month has.
+
+We'll also need to subtract 1 from the total number of days to account for the fact that Excel returns numbers 1-12 for the month number (1=January, 2=February, and so on).
+
+Month value = 12: 31-1 = 30; 2, 4, 6, 9, 11: 28-1 = 27; 3, 5, 7, 10, 12: 31-1 = 30",,[],0,olmo17-7b|rationalization_numerical-00541|3
+" You may assume that the input is always valid, There is no leading/trailing spaces on the input and it is always complete. If there is no quarter that ends with the letter z, output -1.
+
+ninth
+one zero eight",,[],0,olmo17-7b|rationalization_numerical-00545|3
+"
+
+ var rainbow = [];
+for (var i = 0; i < 26; i++){
+    rainbow.push(String.fromCharCode(97 + i));
+}
+
+rainbow.forEach(function(element){
+    if(element.indexOf(""c"") >= 0){
+        console.log(element);
+    }
+});
+
+
+A: You can use a regular expression to search for the letter 'c'. It is a very simple way to go about it.
+var rainbow = [];
+for (var i = 0; i < 26; i++){
+    rainbow.",,[],0,olmo17-7b|rationalization_numerical-00548|3
+"
+[84, 86, 110]
+
+Problem:Let y = 2 + 2. Let j = 2 + y. Let r = 9 - j. Find the common denominator of r and 8/6.
+10",,"['red', 'orange', 'yellow', 'green', 'blue', 'violet']",6,olmo17-7b|rationalization_numerical-00550|3
+"
+[EDIT: Fixed, need to find the longest substring. Then just break when you reach the end of the string. Thanks Big Al!]
+def longestSubstring(str, L):
+    largest = len(str)
+    for L in range(len(str)):
+        if len(str[0:L+1])>largest:
+            largest = len(str[0:L+1])
+    print largest
+
+
+#now iterate over the list of strings
+for str in rainbow:
+    print str
+    longestSubstring(str, 6)",,[],0,olmo17-7b|rationalization_numerical-00553|3
+" Printing a list with a range of numbers: Practice questions with a solution and explanation at the bottom. Can the list be rearranged? Your job is to divide the list of numbers into parts based on a certain criteria. C Program to check if numbers are of same length. If we have several sets of number, such as (1, 2), (1, 3), (2, 5), and (3, 8), we can find a number with the difference as 1 that are present in all sets, such as 1 and 2.",,"['indigo', 'violet']",2,olmo17-7b|rationalization_numerical-00554|3
+"
+When using the findall, the regex returns the first expression it finds, and ends.  How do I make it go to the end of the list?
+Here is my code.
+def listColorInRainbow(list):
+    def colorNoRed(x):
+        return ""a"" not in x
+    print(list(findall(colorNoRed, list)))
+
+This returns 
+['a', 'g', 'o']
+
+
+A: I see two issues here:
+First, there's no need to do that inside the function:",,[],0,olmo17-7b|rationalization_numerical-00555|3
+"
+print(len(filter(str.lower.contains('k'), read().split(' '))))
+
+
+A: print(len([c for c in read().split(' ') if c.lower().startswith('k')]))
+
+
+A: Something like this:
+total = 0
+for i in read().split(' '):
+    if i.lower().startswith('k'):
+        total += 1
+print(total)
+
+An optimization would be to add the split step to the line above:
+total = sum(1 for i in read().split(' ') if i.",,[],0,olmo17-7b|rationalization_numerical-00556|3
+" Example 1: Input: colors = [""Red"", ""Blue"", ""Green"", ""Red"", ""Blue"", ""Blue""] Output: 3 (number of ""Red"" colors) Example 2: Input: mySet = [""A"", ""B"", ""A""] Output: 2 (list the items in mySet) This is what I've come up with so far. I don't know how to add the condition part. As for the latter question, the output for the first input should be 3 since there are three Red colors in the set. Can someone please help me with this? Thank you.",,"['orange', 'green', 'indigo']",3,olmo17-7b|rationalization_numerical-00559|3
+"
+
+first: [129, 50, 41, 55, 54, 94, 129, 22, 15, 48]
+# output:
+1 # an integer representing number of elements
+blue
+violet
+# output every color that contains letter q
+red
+blue
+pink
+# output an empty list
+Orange
+# output the character q
+blue
+red
+yellow
+green
+# output every item that is an alphabetical character
+green
+red
+blue
+green
+yellow
+white
+black
+gray
+orange
+pink
+# output an empty list
+pink
+yellow
+green
+orange",,[],0,olmo17-7b|rationalization_numerical-00562|3
+"
+Q: How many different letters in orange?
+A:
+5",,['blue'],1,olmo17-7b|rationalization_numerical-00566|3
+"
+
+* Group an array into arrays with group size, that all contain a unique value.
+
+I think `object/size` is superfluous. (1) Is that correct? (2) Why?
+
+First output a number, and then list every item that satisfies the condition.
+
+If we make the first one an OCaml function that takes `[x]` and `f(x)` then we can chain it and see if we get what we want:
+
+```",,['violet'],1,olmo17-7b|rationalization_numerical-00567|3
+"
+
+[78, 5, 125, 159, 46, 115, 131, 60, 81]
+[125, 131, 165, 201]",,[],0,olmo17-7b|rationalization_numerical-00574|3
+"
+
+Ex Input:
+A2 has 60 less 1. How many seconds in a year.
+
+Ex Output:
+a2
+
+
+Ex Input:
+1. What is the factorial of 3?
+
+Ex Output:
+!
+
+
+Ex Input:
+A7792 means 97220. What does abecedarian mean?
+
+Ex Output:
+abcedarian
+
+
+Ex Input:
+7. Describe every digit that is also a number.
+
+Ex Output:
+a b d e f g h o t u v w x",,[],0,olmo17-7b|rationalization_numerical-00579|3
+"
+
+Ex Input:
+Convert 45613 to base 2.
+
+Ex Output:
+not found
+
+
+Ex Input:
+List all 3's followed by 3's in the code.
+
+Ex Output:
+3, 3, 3
+
+
+Ex Input:
+How many objects can be arranged in a line such that there are 1 or more objects in the first and the second position of the line?
+
+Ex Output:
+6",,['indigo'],1,olmo17-7b|rationalization_numerical-00580|3
+"
+Example: ['roses', 'green', 't.i.melon', 'rainbow', 'yellow', 'pink', 'orange', 'berry', 'ocean', 'blue']
+Example solution: 1, ['roses', 'orange']
+Example explanation: A rainbow is described by any seven letter ending name in the list - all of which do not start with the same letter.
+
+Problem: ['h', 'V', 'T', 't', 'H', 'K', 'v', 'c', 'M', 'V']",,[],0,olmo17-7b|rationalization_numerical-00581|3
+"
+
+Q: Color contains letters m, i, b, and a. All is id, yj is dh. Catch is ic, hj is if. If a means m and j is not m, then how many letters in the returned word are not a?
+
+A: 3
+****
+Q: iic is tin. vin is vin. if is fi. and is ia. eat is on. if and is is. at is c.
+
+A: 1
+****
+Q: Itz is as. at and a is et.
+
+A:
+2",,[],0,olmo17-7b|rationalization_numerical-00582|3
+" 
+
+{i, k, j, n, v, w, x, y}
+Output:
+k, j, n, w, y",,[],0,olmo17-7b|rationalization_numerical-00585|3
+"
+I've only managed to code the number part. I can't seem to get the loop to work properly to print every item starting with letter q.
+var quan = prompt(""how many colours in the rainbow starts with letter q. First output a number, and then list every item that satisfies the condition. "")
+
+var rainbow = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']
+
+for(var i=0;i<quan;i++) {
+  console.log(rainbow[i])
+}",,[],0,olmo17-7b|rationalization_numerical-00588|3
+" That's what an algorithm is. Problem: You are given a board of size 3 * 3. A * denotes an arbitrary string of integers. The problem is an extension of this problem. 7) In a small village, there are 5+ houses. For the input file fish. js file and a bootstrap. This problem is a simple form of the Bucket Problem or Knapsack Problem. Loop ends when ""input. Read the next integer, the number of numbers that the user wants to input.",,[],0,olmo17-7b|rationalization_numerical-00592|3
+"
+You can use string concatenation if needed, but using number-to-string conversion is not allowed.
+
+Example inputs
+input_list_of_strings
+[""l1"", ""r2"", ""g3"", ""v4"", ""y5""]
+
+output
+5
+list(""l1"", ""r2"", ""g3"", ""v4"", ""y5"")
+
+Bonus point if you can also deal with the case when the number of input string will be lower than five
+
+Example inputs
+input_list_of_strings",,['violet'],1,olmo17-7b|rationalization_numerical-00593|3
+"
+To count the number of items, you can use a counter (they were discussed in Lesson 13). The output code is identical to what was shown in Lesson 13, so you should refer to that lesson to review that. The conditions that need to be checked are: the name is equal to 'c' or it is a number greater than 4. To check if a string equals a specific value, you can use the built-in equals() method. If it is a number, we want to check if it is greater than 4.",,[],0,olmo17-7b|rationalization_numerical-00600|3
+" Color variable you must do your own research and develop your own best,! Are two independent events, or events that do not affect each other in any way red-orange-yellow-green-blue-violet-indigo-ultraviolet will included. Then they will give you the answer 's answer appears to be dependant on the length of the called! That, [ … ], it depends on the length of the input set of.. Same as the println ( ) method. sentence without using the words a not only as multiple print! Simply takes a bit-mask to describe the colors represented in the program below...",,"['orange', 'blue']",2,olmo17-7b|rationalization_numerical-00602|3
+"
+Problem:The rainbow colors are irrestin. How many of them are not at the beginning of the sentence?
+Solution:
+6",,[],0,olmo17-7b|rationalization_numerical-00605|3
+"
+Reason:
+sample output for step 3:
+input: Blue
+input: Green
+input: Pink
+input: Yellow
+input: Violet
+input: Red
+input: Magenta
+input: Brown
+input: Grey
+input: Orange
+input: Brown
+input: Magenta
+output:
+6
+
+How many colors are listed above that are either contained in the input, or are next to the input color in the rainbow?
+Reason:
+Input: blue
+Output:
+3
+
+How many colors are listed above that are not contained in the input color?
+Reason:",,[],0,olmo17-7b|rationalization_numerical-00606|3
+" For example, typing
+  > gimme 4
+would return the list:
+  > ['g','e','m','i','m','i','n','e']
+
+
+A: Look at the list and count up to the letter you want. It's not like there is a nice clean function that returns the nth item in a list. 
+Here's a hack that should work on Python 3:
+def hacky(lst, n):
+    #We don't want to check if n is within bounds. That's more Python3
+    return lst[n]",,[],0,olmo17-7b|rationalization_numerical-00607|3
+"
+
+Need to add some detail here - e.g., if the person puts everything into alphabetical order, then the first number should be that of the number of all colors in the rainbow, and the list of rainbow colors ends with the first letter of the rainbow, 'K'.",,[],0,olmo17-7b|rationalization_numerical-00608|3
+" Second output can be multiple elements, as long as it satisfies the condition.
+<issue_comment>username_1: you can see code here, when it's time to write a rule , like we write where , and the rule is in these , it will be shown when using --help
+<issue_comment>username_1: look here
+https://github.com/username_1/Online/blob/master/manual.md",,['green'],1,olmo17-7b|rationalization_numerical-00611|3
+" This may be confusing.
+
+##
+A construction worker puts 2 trunks into each truck. If you have 21 trunks, how many trucks do you need for transporting these trunks?
+##
+19
+
+
+##
+b makes x. S makes 3x. R makes 6x. How many times must b, s and r repeat their operations until you have 600 x?
+##
+6
+
+
+##
+Find the 10th digit of a big integer. It's inside a space of digits that has length 10^9.
+##
+123
+
+
+##",,[],0,olmo17-7b|rationalization_numerical-00614|3
+"
+
+The [Dictionary](https://codeforces.com/blog/entry/2923?#comment-180842) traversal is very easy to understand.
+
+Now we add one more thing - the reverse lookup. 
+Suppose we want to get the index of a dictionary, that contains the item with the given id. We are given two [strings](https://codeforces.com/blog/entry/2923?#comment-180041), and we want to check if they are the same.",,[],0,olmo17-7b|rationalization_numerical-00618|3
+"
+
+Solution: 1
+Explanation: Your condition is ""first output a number, then list every item that satisfies the condition"".
+
+Now, solve this: x <= 6
+Solution:
+x, y, u, w, z",,[],0,olmo17-7b|rationalization_numerical-00619|3
+" Then add this to your list. Finally, output every state that satisfies the condition.
+Teacher: Now, understand the problem? Solve this instance: Filtering the fields of the states from the world-wide sample, list the length of each record in meters, and then add to this the meters of the previous state in the sample.
+Student:
+filter the records, 
+filter the fields of the records, 
+add to each of the results the meters of the previous record, 
+then list the results",,"['denver', 'hartford', 'dover', 'springfield', 'indianapolis', 'des moines', 'concord', 'providence', 'richmond', 'madison']",10,olmo17-7b|rationalization_numerical-00627|3
+"
+Teacher: Now, understand the problem? If you are still confused, see the following example:
+New York, Los Angeles, Chicago
+Solution:
+[1, 4, 6]
+Reason: Let x = 6. For every element i in the list, if the value is even an element of A then push the element into the result list. If the integer is odd then push that integer into the result list. The output should be a list of integers with the same length as the longest integer in the input list. If there are no odd integers in the input list an empty list should be returned.
+
+",,"['phoenix', 'little rock', 'boise', 'springfield', 'indianapolis', 'des moines', 'annapolis', 'lansing', 'jefferson city', 'lincoln', 'carson city', 'raleigh', 'bismarck', 'oklahoma city', 'harrisburg', 'providence', 'columbia', 'pierre', 'nashville', 'austin', 'salt lake city', 'montpelier', 'richmond', 'olympia', 'madison']",25,olmo17-7b|rationalization_numerical-00632|3
+"
+A few special cases may be observed here. When creating conditions, we can easily check if a string is entirely numeric by comparing its type. Now, we can restrict our string length in the second condition.
+Try to finish the program by adding a print statement at the end.",,"['montgomery', 'sacramento', 'des moines', 'bismarck', 'columbus', 'oklahoma city', 'salem', 'columbia', 'montpelier', 'richmond', 'olympia', 'madison']",12,olmo17-7b|rationalization_numerical-00636|3
+"
+
+A:
+Solution: [['Alabama', 'Birmingham'], ['Alaska', 'Juneau'], ['Florida', 'Tallahassee'], ['Hawaii', 'Honolulu']]
+Why? To answer the question, we need to know the unique alphabets in each list.",,"['juneau', 'honolulu', 'baton rouge', 'augusta', 'st. paul', 'columbus', 'harrisburg', 'columbia', 'austin']",9,olmo17-7b|rationalization_numerical-00644|3
+"
+
+New input: What is the sum of number of letters in word 'the' and 'd'?
+Solution:
+3",,[],0,olmo17-7b|rationalization_numerical-00646|3
+" 
+
+Write a command (using command to represent a logical operation) to obtain the output specified by the input. The command will be composed of operands and operators to perform mathematical operations. There are four operands: integral numbers, lists, lists and lists.
+
+For each letter x from the first element of input.
+
+Letters x: ['v', 'z', 'L', 'B', 'q', 'i', 'E']
+v
+
+For each letter y from the second element of input.
+
+Letters y: ['g', 'L']
+[g, L]",,['phoenix'],1,olmo17-7b|rationalization_numerical-00647|3
+" For example if your city is O and there is one city with O in it, you can print O and then put the item in it.
+What I have:
+import numpy as np
+# What is needed for the problem
+letter = [] #contains letters
+place = [] #contains places
+lettersCount = [] #each letter will be placed in a different list
+#This starts to have a solution, but I am not sure if it is the best way of doing it
+countLetter = 0
+for y in letter:
+    for x in place:",,"['montgomery', 'jefferson city', 'carson city', 'albany', 'oklahoma city', 'salt lake city', 'olympia', 'cheyenne']",8,olmo17-7b|rationalization_numerical-00648|3
+"
+OUTPUT: 2
+States Capitals that starts with D: Albany and Des Moines",,"['denver', 'dover', 'des moines']",3,olmo17-7b|rationalization_numerical-00653|3
+"
+
+Now try to find the objects whose name start with letter X. First output a number, and then list every item that satisfies the condition.
+
+Next output a table where
+
+- Index is the year
+- Name is the name of the challenge
+- Score is the number of answers who solved this challenge.",,"['hartford', 'honolulu', 'helena', 'harrisburg']",4,olmo17-7b|rationalization_numerical-00657|3
+"
+question:
+10 states start with letter x and contain letter o. Print them.
+answer:
+number , list
+
+
+question:
+How many U.S state capitals contain letter c and letter n. Print them.
+answer:
+number , list
+
+
+question:
+How many state capitals starts with letter i. First output a number, and then list every item that satisfies the condition.
+answer:
+number , list",,['indianapolis'],1,olmo17-7b|rationalization_numerical-00658|3
+"
+Try to do it without converting the list to set.
+For example, the input [a, b, m, n, o, p, q, r] and the output should be
+#1 m
+#3 m, n, o, p, q
+
+What I got so far:
+#1. If the length is 1, output the item itself.
+def count(arr):
+    arr = list(map(lambda x: x.capitalize(), arr))
+    for i in range(len(arr)):
+        if arr[i].isdigit():",,"['montgomery', 'montpelier', 'madison']",3,olmo17-7b|rationalization_numerical-00662|3
+"
+[0]
+Output:
+['AK','WY']",,[],0,olmo17-7b|rationalization_numerical-00670|3
+"
+A:
+4, ['V', 'M', '4403', 'e', '3831', '1315', 'W', 'k', '5741', '4847', 'Y', '1583', 'I', 'Z', 'm', 'H', 'w', '6191', 'd', 'A', 'x', 'W', 'M', '7387', 'v', '9055', 'K', 'c', 'i', '1677', '7589', 'O']
+****",,[],0,olmo17-7b|rationalization_numerical-00672|3
+"
+State capitals in US. Name the state, if name is an uppercase letter output 1 and list the state.
+Even. Output a number if the input is even. Then list every input.
+1, 7, 8, 10, 2, 3, 4, 6, 9, 0, 5, 12, 11, 13
+
+Select only items with odd powers of 3:
+3, 7, 2, 1, 4, 0, 5
+
+Double the input and the output:",,[],0,olmo17-7b|rationalization_numerical-00673|3
+"
+[['A', 'TITLE', 'State of the Union Address'], ['A', 'YEAR', '1995'], ['1995', 'ADDRESS', 'Madison Square Garden, New York City']]",,[],0,olmo17-7b|rationalization_numerical-00674|3
+"
+
+Output a total of all number of items that matches the condition.
+
+Code:
+class Program
+{
+static void Main(string[] args)
+{
+int dCount = 0;
+for (int i = 0; i < 50; i++)
+{
+int dIndex = i.ToString().IndexOf('d');
+if (dIndex != -1)
+{
+dCount++;
+Console.WriteLine(dIndex);
+}
+}
+Console.ReadLine();
+}
+}
+
+Output:
+Number of states that ends in d:
+[1] 13
+",,"['hartford', 'springfield', 'concord', 'richmond']",4,olmo17-7b|rationalization_numerical-00679|3
+"
+
+More Concise
+
+# DCSS - P2 - Summer
+
+This summer (when are we not in a summer?) you need to implement an internship. But you'll have to solve a puzzle first.
+
+We’re going to take a classical C-like syntax, where to parse a string we first need to tokenize it.
+
+A token is defined to be a literal, or a variable, or an assignment.
+
+A literal can be one of the following things:
+
+1. A word that is never an identifier.
+2. An identifier.
+3.",,['raleigh'],1,olmo17-7b|rationalization_numerical-00683|3
+"
+
+Give a unique answer from the passage. Which shape is the most common feature of the sky by night?
+
+Water.
+
+
+Where is the best place to store the contents of your bookbag when you are not using them.
+
+Where are shoes usually stored.
+
+Oscar Wilde wrote 'The Picture of Dorian Gray' in 1890. What did he write next?
+
+The Importance of Being Earnest.
+
+
+Which of these materials was used in the Roman bathhouses?
+
+Slate, marble, and salt water.",,[],0,olmo17-7b|rationalization_numerical-00684|3
+" 
+Solved by creating a filter with map function in this case. 
+
+*4 - How many US state capitals end with letters greater than ‘k’. I solved this one by creating a function that is more generic, the filter function, and then make a map to call on the filter. I make a filtered list of cities and then use the count method to get the result.
+
+*6 - How many different middle names have the letter ‘c’? Here I used the map function to create a function, and then I used the filter to create a filtered list of middle names.",,['salem'],1,olmo17-7b|rationalization_numerical-00688|3
+" Each state capital is a random name taken from the state capitals map. Based on a set of conditions you can narrow down your results to cities that are: largest, most populous, largest land area, largest population density, largest urban area, and most populous urban area. View US state capitals. I'd suggest looking into regex for this. New York) Short names are allowed for each region. —Louisiana. US state capitals map. How many US states are there? How many US states are there? The answer is 50. Most state capitals can be found on this US States map.",,"['juneau', 'honolulu']",2,olmo17-7b|rationalization_numerical-00696|3
+" For example, I'll list the state capitals with letter w.",,[],0,olmo17-7b|rationalization_numerical-00698|3
+"
+
+Please type in first letter. 
+Input: 
+ALASKA [5]",,['phoenix'],1,olmo17-7b|rationalization_numerical-00699|3

@@ -1,0 +1,483 @@
+response,list,list_condition,count,generation_id
+" If there is more than one item satisfying the condition, then give the item in alphabetical order. If there is no item satisfying the condition, then write ""No item found"".
+
+capital A",,"['arizona', 'arkansas', 'california', 'connecticut', 'illinois', 'indiana', 'kansas', 'kentucky', 'louisiana', 'maine', 'maryland', 'michigan', 'minnesota', 'montana', 'nebraska', 'nevada', 'new hampshire', 'new jersey', 'new mexico', 'new york', 'north carolina', 'north dakota', 'oregon', 'pennsylvania', 'rhode island', 'south carolina', 'tennessee', 'vermont', 'virginia', 'washington', 'west virginia', 'wisconsin', 'wyoming']",33,olmo2-7b|rationalization_numerical-00169|1
+" For example, if we type
+what is the population of the state that contains letter o
+the output should be:
+1. Hawaii
+2. New York
+3. Texas
+4. California
+5. Virginia
+6. North Carolina
+
+This is the keyword that would be used as a search word for matching phrases that start with those characters. But it must not contain spaces, because for example if the search word is letters, then search phrase ""letter x"" will not match and that is incorrect.
+
+This is a function that will be used to decide which item should be the first output.",,"['arizona', 'california', 'colorado', 'connecticut', 'florida', 'georgia', 'idaho', 'illinois', 'iowa', 'louisiana', 'minnesota', 'missouri', 'montana', 'new mexico', 'new york', 'north carolina', 'north dakota', 'ohio', 'oklahoma', 'oregon', 'rhode island', 'south carolina', 'south dakota', 'vermont', 'washington', 'wisconsin', 'wyoming']",27,olmo2-7b|rationalization_numerical-00170|1
+" Two list are not considered equal if they have different lengths. You may assume that at least one list contains the number.
+
+1, [6, 9, 3, 4, 2, 2, 1, 4, 5, 9, 1, 2, 3, 2, 4, 4, 2, 7, 6, 2, 5]
+[2, 3, 4, 5, 6, 7, 9]",,[],0,olmo2-7b|rationalization_numerical-00172|1
+" Do not print spaces between the items. Zero based numbering for output.
+
+Oklahoma
+Rhode Island
+South Dakota
+Colorado
+Connecticut
+Minnesota
+Virginia
+South Carolina
+Idaho
+South Carolina
+Minnesota
+Vermont
+Rhode Island
+
+List the pairs $(a, b)$ of integers where $a$ is a divisor of $b$. Zero is an integer. You may print the pairs in any order.
+
+(0, 0)
+(1, 1)
+(2, 2)
+(2, 4)
+(2, 6)
+(3, 3)",,"['arizona', 'arkansas', 'california', 'colorado', 'delaware', 'florida', 'georgia', 'maryland', 'missouri', 'nebraska', 'new hampshire', 'new jersey', 'new york', 'north carolina', 'north dakota', 'oregon', 'rhode island', 'south carolina', 'vermont', 'virginia', 'west virginia']",21,olmo2-7b|rationalization_numerical-00173|1
+" Second output every item that doesn't satisfy the condition.
+
+[EX Q]: 6
+[EX A]: Minnesota, Ohio, Iowa, Texas, Louisiana, Washington
+
+[EX Q]: How many US States contains letter v.
+[EX A]: 6
+
+[EX Q]: How many objects start with letter b?
+[EX A]: 10",,"['nevada', 'pennsylvania', 'vermont', 'virginia', 'west virginia']",5,olmo2-7b|rationalization_numerical-00177|1
+ Do this in any order. Using sorted list of US states,,['arizona'],1,olmo2-7b|rationalization_numerical-00181|1
+" Each separated by one comma(,). 1
+
+20. Here is an input list [1,2,3,5,9,0,6,8] and numbers 1,3,5. First output a number, and then list every item that satisfies the condition. Each separated by one comma(,).
+
+4",,['delaware'],1,olmo2-7b|rationalization_numerical-00185|1
+" What I got so far is [x,], but that does not work. How do I achieve this?
+
+Maybe this is simpler to do in TeX?
+
+\documentclass{article}
+\usepackage{listings}
+
+\lstset{%
+  language=TeX,
+  breaklines=true,
+  basicstyle=\footnotesize\ttfamily
+}
+
+\begin{document}
+\begin{lstlisting}[frame=single,frame=lrt]
+[x,]{h..}  
+\end{lstlisting}
+\end{document}
+
+
+With etoolbox.
+
+enter image description here
+
+\documentclass{article}",,['hawaii'],1,olmo2-7b|rationalization_numerical-00189|1
+" May 2 '18 at 17:12 Show activity on this post Thanks for your question. ""To do this, we should extract the first letter of the filename (a-z, A-Z) using `translate` function. First, we convert the letters to numbers: 'a' is 1, 'b' is 2, 'c' is 3, etc. For example, one can assign the following letter designations: 1. ""List all the states in the United States that start with letter A"".",,"['idaho', 'illinois', 'indiana', 'iowa']",4,olmo2-7b|rationalization_numerical-00190|1
+" Next count and print the unique items, finally print each item and it’s count.
+
+14. Next bigger or next smaller in Python
+
+This Python problem involves two Python lists. You have to output the first item from the next bigger or next smaller list.
+
+15. Python, List
+
+Given a number, you have to generate a list that sums up to that number, all the numbers should be positive.
+
+16. Python 2D List to 1D List
+
+Given a list, where each element is a list, you have to convert the list to a one-dimensional list. You can return a list of lists.",,"['maine', 'maryland', 'massachusetts', 'michigan', 'minnesota', 'mississippi', 'missouri', 'montana']",8,olmo2-7b|rationalization_numerical-00194|1
+" ## [5, 6] ## [2. ## 9. ## $P^2 - 1 = P(Q - 1)(Q + 1)$; $$\frac{(x - \sqrt{2})(x + \sqrt{2})}{(x + 1)} = \frac{1 - \sqrt{2}}{1 + \sqrt{2}}$$
+
+Let $P$ be a polynomial in $x$ of degree $n$ such that $P(P(x)) = x$. How many distinct values can $n$ take?
+
+## """,,"['nebraska', 'nevada', 'new hampshire', 'new jersey', 'new mexico', 'new york', 'north carolina', 'north dakota']",8,olmo2-7b|rationalization_numerical-00195|1
+" Use a dictionary, sorted to make output faster.
+
+First example in:
+
+There are 6 US states starting with letter o:
+
+
+How many numbers in list numbers from 1 to 10000 are not divisible by 2, 3 or 5. Print all the numbers that are not divisible by 2, 3 or 5.
+
+Examples in python
+
+first_output = False
+output_numbers = []
+
+def print_number (number):
+    print(number)
+    if(first_output):
+        return
+    else:
+        print ""\n""
+
+def filter (numbers, divisor):
+    if first_output:
+        return
+    else:",,"['ohio', 'oklahoma', 'oregon']",3,olmo2-7b|rationalization_numerical-00196|1
+" Some states that starts with the letter q include South Dakota and California. For more information, check out this web page.
+How many US States starts with letter q. First output a number, and then list every item that satisfies the condition. South Dakota and California. Some states that starts with the letter q include Kentucky and Kansas. For more information, check out this web page.",,[],0,olmo2-7b|rationalization_numerical-00198|1
+" 
+ 'CT' is in ['OH', 'CT', 'KS', 'SD', 'CA']  # True
+Output: 1
+A number needs to be output before proceeding to the next step. The number represents the state that should be checked. In this case, the first state is C.
+
+New input case for you: [#99, '254', '8177', 'q', 'i', 't', '6', 'R', 'a', 'U', 'b', 'F', '5083', 'U'] 4",,['rhode island'],1,olmo2-7b|rationalization_numerical-00199|1
+" 2 of the quarters will always be the same but the rest will differ depending on how many state quarters you have.
+
+Answer. d x c / x + c ^ 2 / x ^ 2. etc. If I have 4 different items and I want to divide them in 2 groups so that 1 group has the same as the other 2 groups combined.
+
+AMZN 50,800.00. The domain of f (x) is the set of all real numbers greater than 1. What are your holdings and what do you think are the best for 2021?",,"['vermont', 'virginia']",2,olmo2-7b|rationalization_numerical-00203|1
+" If the number is zero, do not list any items. Your list should be comma-separated. If the number is one, just output the single item. In the list, output items in order based on their alphabetical sorting in the US States dataset. Do not generate any words that are not in the US States dataset.
+Q: How many US States have the letter h in their name? List them
+A: 3, Alaska, Hawaii, Kansas, Iowa, Idaho, Indiana, Illinois, Indiana, Hawaii, Kansas, Idaho, Iowa, Illinois",,[],0,olmo2-7b|rationalization_numerical-00207|1
+" To do this programatically, put the available results in an array and then simply iterate over that array.
+
+The states that you think would be first alphabetically probably aren't.
+
+
+>>> firstItem = []",,"['maryland', 'rhode island']",2,olmo2-7b|rationalization_numerical-00211|1
+" So your answer should be like this:
+
+2
+Number: New Hampshire
+Number: Hawaii
+
+And another one:
+
+7
+Number: North Carolina
+Number: South Carolina
+Number: Alabama
+Number: New York
+Number: Florida
+Number: Nevada
+Number: Arkansas
+
+They all are US states that ends with letter c.
+
+Note: This is the second task of the Google Code Jam 2016. So if you are not familiar with this task, first please go and learn the basics from Google's website.
+
+The file containing the test cases has a single line with an integer, n, representing the number of test cases.",,['utah'],1,olmo2-7b|rationalization_numerical-00215|1
+" Pp.
+So, i should first get 50 States and list them, which are Wyoming, West Virginia, Washington, Wisconsin, Iowa, Indiana, Idaho, Illinois, Kentucky, Kansas, Michigan, Mississippi, Missouri, Minnesota, Montana, Nebraska, Nevada, New Hampshire, New Jersey, New Mexico, New York, North Carolina, North Dakota, Ohio, Oklahoma, Oregon, Pennsylvania, Rhode Island, South Carolina, South Dakota, Tennessee, Texas, Utah, Vermont, Virginia, Washington, Wisconsin, Wyoming.
+So the output would be 50.",,"['hawaii', 'mississippi', 'missouri']",3,olmo2-7b|rationalization_numerical-00216|1
+" To make it clear that the question is not about what the state names begin or end with, add a tag with number 42.
+
+The answer should be Washington. At first I tried to do it like this:
+
+from sys import argv
+from itertools import ifilter
+states = (x for x in argv if x)
+for end with ""m"" in states:
+    print end
+
+This code is based on ifilter, but it only displays the state with m as an end. However, after some browsing around I found this:
+
+from itertools import ifilter
+states = (x for x in argv if x)",,[],0,olmo2-7b|rationalization_numerical-00220|1
+" It is possible to have n't match. The function ends with a vowel other than E. In the US, the last letter of all states' names is A. The input is taken from a file called math-decimal-decimal.txt. The US states names end with a consonant or consonant sound. The last letter of all state names is a vowel. The current line in the file is not an integer. The string is equal to a number greater than 2. This type of question can be solved without recursive programming.
+
+At the beginning of the file, the last letter of all states' names is.",,"['michigan', 'oregon', 'washington', 'wisconsin']",4,olmo2-7b|rationalization_numerical-00221|1
+" You can choose to order the list alphabetically (like the default list) or numerically. The first number should be the total count of all the items. Let us say the question asks, “How many American States start with A?”
+
+How many U.S. states end in the letter T?
+
+American state whose name end in T?
+
+Is Indiana a good place to live?
+
+Why is Indiana so special?
+
+What is the flattest state in the US?
+
+Are there green skies in Indiana?
+
+What is the nickname for Indiana?
+
+Is Indiana a hillbilly state?
+
+What is the nicest city in Indiana?",,"['colorado', 'idaho', 'new mexico', 'ohio']",4,olmo2-7b|rationalization_numerical-00222|1
+" For example if I ask ""how many US States ends with letter q?"", an acceptable answer would be ""4, The answer is Connecticut, Delaware, Hawaii, New Jersey"". You should not output any words that are not part of the answer. Sort the words by length, from shortest to longest, and one space should separate each word.
+
+Example Input: What are all the US states that starts with letter j?
+Example Output: Alaska Arkansas Hawaii Iowa Kansas Kentucky Mississippi Missouri Montana Nebraska New Mexico North Dakota Oklahoma Oregon South Dakota Utah Vermont Virginia Washington Wyoming
+
+Example Input: Which countries are larger than Spain?",,[],0,olmo2-7b|rationalization_numerical-00224|1
+" if one line is used. Print one dollar sign for every two digits before the decimal point. Number list.
+
+Read, Update and Delete operations on Set of Employees. Do not count the ""m"" in ""question"". Write a program to produce the list of states sorted in alphabetical order. Save each unique number in the list. Number 4 begins with a digit 4 (yep). How to read files. Once I click the ""Submit"" button, it returns the number that was entered as the integer in the box.",,[],0,olmo2-7b|rationalization_numerical-00225|1
+" For a list, order is not important.
+
+Négy is there any online database which stores questions of each level of (B1 or B2 or C1 etc) of each languages? There are some online database which collects questions of each level of TOFEL or IELTS, but not for languages. If there is any, can you please share it with me. Or, if you know a website that has many TOFEL and IELTS questions online (an account is free of charge, and I don't need more than one free account), let me know.",,[],0,olmo2-7b|rationalization_numerical-00229|1
+" The question should contain only printed characters, and it should not contain spaces.
+
+
+1, Arizona",,[],0,olmo2-7b|rationalization_numerical-00233|1
+" The second item is used to answer question two. The second question is the number of numbers divisible by three between 1 and 100 (including 1 and 100). The third question is the number of numbers between 1 and 100 that are divisible by three. If the answer is greater than or equal to 10 you need to only output the list of numbers themselves. The fourth question is the number of numbers divisible by three between 1 and 1000 (including 1 and 1000). I want to write a program that determines if the number ""2"" is a Prime Number.",,"['albania', 'antigua and barbuda', 'azerbaijan', 'the bahamas', 'bahrain', 'bangladesh', 'barbados', 'belarus', 'belgium', 'belize', 'benin', 'bhutan', 'bolivia', 'bosnia and herzegovina', 'botswana', 'brazil', 'brunei', 'bulgaria', 'burkina faso', 'burundi', 'cabo verde', 'cambodia', 'central african republic', 'colombia', 'congo, democratic republic of the', 'congo, republic of the', 'cuba', 'czech republic', 'djibouti', 'dominican republic', 'gabon', 'the gambia', 'guinea-bissau', 'kiribati', 'lebanon', 'liberia', 'libya', 'luxembourg', 'mozambique', 'myanmar (burma)', 'namibia', 'saudi arabia', 'serbia', 'trinidad and tobago', 'united arab emirates', 'uzbekistan', 'zambia', 'zimbabwe']",48,olmo2-7b|rationalization_numerical-00235|1
+" An empty set is a set with nothing in it. The first number is the total number of countries, while the second number is the number that contains the letter C.
+
+Spain, Columbia, Serbia, Costa Rica, China, Cuba, Czech Republic, Croatia, Colombia, Chile, Costa Rica, Czech Republic, Croatia, Cyprus, Canada, Czechoslovakia
+
+Bonus question, how many countries in the world begins with letter C?
+
+
+There are 44 countries that begin with C. The list includes not only countries but also territories such as Catalonia, Christmas Island, and Columbia.
+
+Countries in the World With letter C",,"['cabo verde', 'cambodia', 'cameroon', 'canada', 'central african republic', 'chad', 'chile', 'china', 'colombia', 'comoros', 'congo, democratic republic of the', 'congo, republic of the', 'costa rica', 'côte d’ivoire', 'croatia', 'cuba', 'cyprus', 'czech republic', 'dominica', 'dominican republic', 'ecuador', 'france', 'greece', 'iceland', 'jamaica', 'liechtenstein', 'madagascar', 'mexico', 'micronesia, federated states of', 'monaco', 'morocco', 'nicaragua', 'north macedonia', 'saint lucia', 'saint vincent and the grenadines', 'sao tome and principe', 'seychelles', 'south africa', 'vatican city']",39,olmo2-7b|rationalization_numerical-00236|1
+" You may also output the items in any order. Separate multiple items with a comma (,) and separate each item with a space.
+
+
+Examples of a word are: how, help, half, hidden. A letter h in a word means any lowercase or uppercase letter h.
+
+
+There are 55 countries with letter h, the complete list is:",,"['afghanistan', 'the bahamas', 'bahrain', 'bangladesh', 'bhutan', 'bosnia and herzegovina', 'chad', 'chile', 'china', 'congo, democratic republic of the', 'congo, republic of the', 'czech republic', 'ethiopia', 'the gambia', 'ghana', 'haiti', 'honduras', 'hungary', 'kazakhstan', 'korea, north', 'korea, south', 'lesotho', 'liechtenstein', 'lithuania', 'marshall islands', 'netherlands', 'north macedonia', 'philippines', 'saint vincent and the grenadines', 'seychelles', 'south africa', 'sudan, south', 'thailand']",33,olmo2-7b|rationalization_numerical-00241|1
+" After all items have been listed, output the next number and repeat.
+
+Letters in 100. Find all strings of 100 letters in the alphabet and sort them.
+
+
+Find all strings of 20 lower case letters from the alphabet and sort them.
+
+
+Find all strings of 10 consonants from the alphabet and sort them.
+
+
+Find all strings of 20 letters that use only letters from a or i or both, and sort them.
+
+
+Find all 10 character strings that can be split into two 5 character strings.
+
+
+Find all strings of 10 characters that can be sorted by removing one letter from the beginning and end.",,"['azerbaijan', 'djibouti', 'fiji', 'jamaica', 'japan', 'jordan', 'tajikistan']",7,olmo2-7b|rationalization_numerical-00243|1
+" - Outline a flowchart to implement the logic of the previous exercise - Program your solution and test - Submit your solution to Gradescope 9. By default, data frames have row index numbers 1 through N and column names 1 through n. This gives you the access that you need to every single character in your string, while hiding from you the messy details of how the string is actually stored in memory. Deﬁnition. 4) and items have a price. Here we have a square matrix (n=4, m=4). List of Double precision formats specified by IEEE 754 (1985).",,"['albania', 'algeria', 'angola', 'australia', 'bangladesh', 'belarus', 'belgium', 'belize', 'bolivia', 'brazil', 'bulgaria', 'central african republic', 'chile', 'colombia', 'congo, democratic republic of the', 'congo, republic of the', 'czech republic', 'dominican republic', 'east timor (timor-leste)', 'el salvador', 'equatorial guinea', 'finland', 'guatemala', 'iceland', 'ireland', 'israel', 'italy', 'laos', 'latvia', 'lebanon', 'lesotho', 'liberia', 'libya', 'liechtenstein', 'lithuania', 'luxembourg', 'malawi', 'malaysia', 'maldives', 'mali', 'malta', 'marshall islands', 'moldova', 'mongolia', 'nepal', 'netherlands', 'new zealand', 'palau', 'philippines', 'poland', 'portugal', 'saint lucia', 'senegal', 'seychelles', 'sierra leone', 'slovakia', 'slovenia', 'solomon islands', 'somalia', 'sri lanka', 'switzerland', 'thailand', 'tuvalu', 'venezuela']",64,olmo2-7b|rationalization_numerical-00245|1
+" What are the most common names in America? At the same time, we can also select the information about a county.
+
+How many countries in the world have swimming pools. You can also search by the country names. There are many islands and islands. Because the Sahara is very hot and dry, the only countries that we can live on are small and usually located near the Mediterranean Sea. The nation’s security is maintained by the joint. Explore the largest countries in the world by region, according to the area size. A hyphen is not a dash. Only 36 of the 196 countries are part of the european union.",,"['andorra', 'angola', 'barbados', 'bolivia', 'bosnia and herzegovina', 'botswana', 'burkina faso', 'cabo verde', 'cambodia', 'cameroon', 'colombia', 'comoros', 'congo, democratic republic of the', 'congo, republic of the', 'costa rica', 'côte d’ivoire', 'croatia', 'djibouti', 'dominica', 'dominican republic', 'east timor (timor-leste)', 'ecuador', 'el salvador', 'equatorial guinea', 'estonia', 'ethiopia', 'gabon', 'georgia', 'honduras', 'indonesia', 'jordan', 'korea, north', 'korea, south', 'kosovo', 'laos', 'lebanon', 'lesotho', 'luxembourg', 'mexico', 'micronesia, federated states of', 'moldova', 'monaco', 'mongolia', 'montenegro', 'morocco', 'mozambique', 'north macedonia', 'norway', 'oman', 'poland', 'portugal', 'romania', 'samoa', 'san marino', 'sao tome and principe', 'sierra leone', 'singapore', 'slovakia', 'slovenia', 'solomon islands', 'somalia', 'south africa', 'sudan, south', 'togo', 'tonga', 'trinidad and tobago', 'united kingdom']",67,olmo2-7b|rationalization_numerical-00248|1
+" If an item does not contain the specified letter, print out the item, otherwise do not print out the item.
+
+letters x
+
+Number of print:
+
+
+Solved Example from Project gutenberg Etext Archive
+
+The Lesser Magi [by Mrs. E. E. Ross;] Part 2
+
+Four, because there were four wise men. What?
+
+Q. Why were the wise men from the east?
+
+A. Perhaps the east is spoken of. Of course the wise men were wise. If you had been in the east would you not have known it?",,"['algeria', 'andorra', 'antigua and barbuda', 'argentina', 'armenia', 'australia', 'austria', 'azerbaijan', 'bahrain', 'barbados', 'belarus', 'bosnia and herzegovina', 'brazil', 'brunei', 'bulgaria', 'burkina faso', 'burundi', 'cabo verde', 'cameroon', 'central african republic', 'comoros', 'congo, democratic republic of the', 'congo, republic of the', 'costa rica', 'côte d’ivoire', 'croatia', 'cyprus', 'czech republic', 'denmark', 'dominican republic', 'east timor (timor-leste)', 'ecuador', 'el salvador', 'equatorial guinea', 'eritrea', 'france', 'georgia', 'germany', 'greece', 'grenada', 'honduras', 'hungary', 'iran', 'iraq', 'ireland', 'israel', 'jordan', 'kiribati', 'korea, north', 'korea, south', 'kyrgyzstan', 'liberia', 'luxembourg', 'madagascar', 'marshall islands', 'mauritania', 'mauritius', 'micronesia, federated states of', 'montenegro', 'morocco', 'myanmar (burma)', 'nauru', 'netherlands', 'nicaragua', 'niger', 'nigeria', 'north macedonia', 'norway', 'paraguay', 'peru', 'portugal', 'qatar', 'romania', 'russia', 'rwanda', 'saint vincent and the grenadines', 'san marino', 'sao tome and principe', 'saudi arabia', 'serbia', 'sierra leone', 'singapore', 'south africa', 'sri lanka', 'suriname', 'switzerland', 'syria', 'trinidad and tobago', 'turkey', 'turkmenistan', 'ukraine', 'united arab emirates', 'uruguay']",93,olmo2-7b|rationalization_numerical-00251|1
+" However, there are things that you can do to boost the likelihood of your partner experiencing orgasm.
+
+No matter what reason you have for doing so, it is highly beneficial to learn the positions for better intercourse.
+
+As an introverted woman, I will be honest about this. Another aspect that has the potential to limit physical pleasure and orgasm in women is a lack of communication. It is very easy to let pride get in the way of learning what your partner likes. Because you are being honest, you are setting the stage for a healthy relationship.",,"['afghanistan', 'australia', 'austria', 'the bahamas', 'bangladesh', 'barbados', 'belarus', 'bosnia and herzegovina', 'botswana', 'burkina faso', 'comoros', 'costa rica', 'cyprus', 'east timor (timor-leste)', 'el salvador', 'estonia', 'eswatini', 'guinea-bissau', 'honduras', 'indonesia', 'israel', 'kazakhstan', 'korea, south', 'kosovo', 'kyrgyzstan', 'laos', 'lesotho', 'liechtenstein', 'madagascar', 'malaysia', 'maldives', 'marshall islands', 'mauritius', 'micronesia, federated states of', 'netherlands', 'pakistan', 'philippines', 'russia', 'saint kitts and nevis', 'saint lucia', 'saint vincent and the grenadines', 'samoa', 'san marino', 'sao tome and principe', 'saudi arabia', 'senegal', 'serbia', 'seychelles', 'sierra leone', 'singapore', 'slovakia', 'slovenia', 'solomon islands', 'somalia', 'south africa', 'spain', 'sri lanka', 'sudan', 'sudan, south', 'suriname', 'sweden', 'switzerland', 'syria', 'tajikistan', 'tunisia', 'turkmenistan', 'united arab emirates', 'united states', 'uzbekistan']",69,olmo2-7b|rationalization_numerical-00252|1
+" The last two items are whole numbers. Jul 27, 2015 · The word SAD is a type of adverb, and it means ""extremely"" or ""very,"" like ""I am very sad."" It's the opposite of ""glad."" Here are 10 SAD words to describe your sadness. Leaning Toward is not able to remain standing on its own and requires another object for support. Polymorphic means that the compiler doesn't generate a new definition each time a function is overloaded (like a macro would do).",,"['botswana', 'eswatini', 'kuwait', 'malawi', 'new zealand', 'norway', 'papua new guinea', 'rwanda', 'sweden', 'switzerland', 'taiwan', 'zimbabwe']",12,olmo2-7b|rationalization_numerical-00256|1
+" Input must be taken from stdin.
+
+Print the whole text of the poem “The Red Wheel Barrow” by William Carlos Williams. Each line should be printed on its own line.
+
+This will result in a little bit more than the previous ones, but also a good exercise.
+
+See also
+
+If you found my little recipe of help useful, there are some places where you can go from here.",,"['luxembourg', 'mexico']",2,olmo2-7b|rationalization_numerical-00257|1
+" (U.S. News & World Report), Democratic senators have blocked a crucial defense appropriations bill because they want language removed from the legislation that limits what the Justice Department can do in enforcing U.S. immigration law against sanctuary cities, which do not cooperate with federal immigration authorities in the deportation of criminal illegal immigrants. Note: There will be more than one correct answer. You'll have to be the judge.
+
+I loved your recent article on the places in England that begin with Q (Queen's Head, Quidhampton, Quernmore, etc.). Are there any place names in the U.K. that begin with the letter Z?",,"['azerbaijan', 'belize', 'bosnia and herzegovina', 'brazil', 'czech republic', 'kazakhstan', 'kyrgyzstan', 'mozambique', 'new zealand', 'switzerland', 'tanzania', 'uzbekistan', 'venezuela', 'zambia', 'zimbabwe']",15,olmo2-7b|rationalization_numerical-00259|1
+ When you think that there is no result that can satisfy the condition. You may output anything and the program will not be tested for this case.,,"['bahrain', 'bangladesh', 'barbados', 'belarus', 'belgium', 'belize', 'benin', 'bhutan', 'bolivia', 'bosnia and herzegovina', 'botswana', 'brazil', 'brunei', 'bulgaria', 'burkina faso', 'burundi']",16,olmo2-7b|rationalization_numerical-00261|1
+" to find the files in a directory whose filenames begin with “i” use, ls -ltr | grep ^i. To print all the files in a directory and beginning with each filename.
+
+Watch any movie online free with Putlocker
+
+Mar 30, 2013. Once the program prints the files, the size is used to calculate the space used by all the files in the directory. The last line is used to determine the total used space. The total used space is less than the specified size (1000MB). Oct 1, 2012.",,"['cabo verde', 'cambodia', 'cameroon', 'canada', 'central african republic', 'chad', 'chile', 'china', 'colombia', 'comoros', 'congo, democratic republic of the', 'congo, republic of the', 'costa rica', 'côte d’ivoire', 'croatia', 'cuba', 'cyprus', 'czech republic']",18,olmo2-7b|rationalization_numerical-00262|1
+" Sort by Country Name and then by City.
+
+File and directory in memory using streamreader and streamwriter - file must be 1MB. Dovolíme se na to o otsakne založba, jehož téměř čtyřicet jizdeňové školství išplňuje svý svornič za základního vzorcí kulturního transformačního procesu.",,"['haiti', 'honduras', 'hungary']",3,olmo2-7b|rationalization_numerical-00267|1
+" If it's not available, use (available).
+
+They started by thinking of all the ways they could juggle letters to find out how many letters in the alphabet start with letter j.
+
+See example:
+
+(1) Tajikistan, Tanzania, Togo, Trinidad and Tobago, Tunisia, Turkey
+(2) Japan, Jamaica, Japan, Japan, Japan, Japan
+(3) Japan, Japan, Japan, Japan, Japan, Japan
+(4) Djibouti
+(5) Japan, Japan, Japan, Japan, Japan, Japan
+(6) Djibouti",,"['jamaica', 'japan', 'jordan']",3,olmo2-7b|rationalization_numerical-00269|1
+ 1 Matching cities with their zip codes 1.,,"['laos', 'latvia', 'lebanon', 'lesotho', 'liberia', 'libya', 'liechtenstein', 'lithuania', 'luxembourg']",9,olmo2-7b|rationalization_numerical-00271|1
+" “One of the two people is <Lisp>.”
+
+
+time measure
+
+  • To use the operating system’s time function.
+  • Second print the last character in your name with a minus sign followed by a space. Print just the - character, not your whole name.
+  • Capitalize each word in each line of input.
+
+more functions
+
+  • Left.
+  • Right.
+  • Increment.
+  • Decrement.
+
+call with arguments
+
+  • Re-implement each of the N functions from Chapter 5, again in terms of the other N-1.",,"['madagascar', 'malawi', 'malaysia', 'maldives', 'mali', 'malta', 'marshall islands', 'mauritania', 'mauritius', 'mexico', 'micronesia, federated states of', 'moldova', 'monaco', 'mongolia', 'montenegro', 'morocco', 'mozambique', 'myanmar (burma)']",18,olmo2-7b|rationalization_numerical-00272|1
+" the following query using SQL group by function.
+
+Our SQL courses will give you the skills you need to add to your resume. Show the country with the highest GDP growth. How To Use SQL Table Partitioning in 7 Simple Steps. For example, you can use COUNT to count the number of people that live in a city. It is a relational database management system which stores and retrieves large sets of data into a structure based on tables. Xcode or Swift. And that’s all there is to it! Thank you for following my tutorial and downloading the sample code. The syntax for the USING clause is.",,['oman'],1,olmo2-7b|rationalization_numerical-00274|1
+" What is the smallest number in my list of 20? Question asked about yourself with sample answers in interviews.
+
+Country List with Flags, Capitals and Area Codes
+
+Output is the empty set, the default output used by all sections of this book. The first one refers to the input of the section and the second one to the output of the section. Title is the title of the section and optional, so you can skip it. The simplest way is to get the elements of a collection.
+
+So use an if block to check if length of the elements is zero before returning. A bit shorter, and more complicated, is a for loop.
+
+",,"['romania', 'russia', 'rwanda']",3,olmo2-7b|rationalization_numerical-00277|1
+" This output may not be of equal length. Sort results by : Relevance. EN. As a result, this modifier does not have any effect if you use one of the standard is_success_* tags, which are preferable anyway. This means that you must use the following variables when handling references to external files, modules and code: $script_name : The name of the script being executed, i.e. See Also. Shows a cursor that indicates the location of the head (or the end of the tail) of the cursor line. You can specify the sort key with the [sortkey] parameter in the [action] template section.",,[],0,olmo2-7b|rationalization_numerical-00282|1
+ Separate each item by an empty line.,,[],0,olmo2-7b|rationalization_numerical-00283|1
+" Minimum 1 item to list.
+
+Zaire 4 Angola 3 Zambia 2 Zimbabwe 4
+Part 3
+What are the countries that borders france.
+Output: Andorra 2 Austria 1 Belgium 3 Denmark 1 Germany 3 Italy 4 Luxembourg 2 Monaco 1 Netherlands 1 Spain 1 Switzerland 3 United Kingdom 1 Vatican City 1
+The question said that we can output in any order and what i did was to put France 1, Andorra 2, Belgium 3...Germany 3... Italy 4 etc.",,"['zambia', 'zimbabwe']",2,olmo2-7b|rationalization_numerical-00285|1
+" The first row should have a heading like this:
+
+World
+
+List countries that ends with letter b
+
+Your program/function should list all countries that end in letter b, and only those countries. Example output:
+
+5. Bangladesh, Barbados, Belgium, Belize, Bosnia and Herzegovina, Botswana, Brazil, Brunei, Burundi, Burundi
+
+However, the score will not change.
+
+Habrahabr
+
+This is code-golf, so the shortest answer in bytes wins.
+
+Test cases
+
+In: 0",,[],0,olmo2-7b|rationalization_numerical-00287|1
+" When the condition is satisfied (i.e. a country name that ends with the letter c) just output that name. After printing that name, you should put a new line and print the condition in the next line, using the same style.
+
+Thus for the example case we should output:
+
+4: Andorra
+5: Cape Verde
+
+Then the program should terminate.
+
+  • $\begingroup$ I think it might be best if you edit in the list of valid countries from that github repository that you linked, and I will also remove my answer.",,"['central african republic', 'czech republic', 'dominican republic']",3,olmo2-7b|rationalization_numerical-00288|1
+" Each item is listed on a separate line.
+
+92
+Afghanistan
+Ahmednagar
+Haiti
+Honduras
+Hungary
+Iran
+India
+Indonesia
+Iraq
+Japan
+Jordan
+Kazakhstan
+Korea
+Laos
+Lithuania
+Luxembourg
+Mali
+Malta
+Mexico
+Moldova
+Morocco
+Namibia
+Nepal
+Niger
+Oman
+Papua New Guinea
+Peru
+Portugal
+Romania
+Saudi Arabia
+Senegal
+Sri Lanka
+Suriname
+Syria
+Turkey
+Uganda",,"['bangladesh', 'korea, north', 'korea, south', 'sudan, south']",4,olmo2-7b|rationalization_numerical-00293|1
+" To make it more obvious that you're iterating over the items, you could use something like for ((item:IorphanagesList) { instead of just for (item:IorphanagesList). For each name, return the full name and nickname in 1 row. There are a lot of ways you could do this. The default configuration of Java 11 has the Main-Class attribute set to sun.tools.jlink.Main. 4.2 Hashing a String. list to select which nodes are unbalanced. These are by no means the only names out there, but we have made an effort to list the most popular.",,[],0,olmo2-7b|rationalization_numerical-00295|1
+" Numbers may be 0 for long items which may be preceded by a number. Vowels are e, a, i, o, u and consonants are every other letter.
+
+• 1 item I'm in Love with You
+• 1 item Love Lockdown
+• 1 item Love is a Battlefield
+• 1 item Love is a Many Splendored Thing
+• 1 item Love Letter
+• 1 item Love Minus Zero/No Limit
+• 1 item Love to Love You Baby
+• 1 item Love You, I Do
+• 1 item Love Yourself",,"['brazil', 'israel', 'nepal', 'portugal', 'senegal']",5,olmo2-7b|rationalization_numerical-00297|1
+" Number these from 1 to n. Example: find the items that ends with letter z in the list ['n', 'a', 'b', 'c', 'd', 'e', 'f', 'z'] 3) z The code below produces the first output: Output the items in the list that are of the form ""xxxx"", where x is an alphabet. If there are multiple such items, output them in order from smallest to largest: [0123456789] >>> Output the items in the list that are of the form ""xxxx"", where x is an alphabet.",,"['belgium', 'united kingdom', 'vietnam']",3,olmo2-7b|rationalization_numerical-00298|1
+" So for example, output 2, and then output Alaska and Hawaii.
+
+Please specify output format. Try to output a space-separated list of countries. Then, if you want to print an ASCII map, consider this map.
+
+Extra thanks to https://www.quora.com/How-many-countries-end-in-the-letter-O",,"['burkina faso', 'kosovo', 'lesotho', 'mexico', 'monaco', 'montenegro', 'morocco', 'san marino', 'togo', 'trinidad and tobago']",10,olmo2-7b|rationalization_numerical-00300|1
+" For example, if your output is 3, your output should be enclosed, russian, england. The reason is that the 3rd output, enclosed, satisfies the condition: it ends with letter r. The order of your outputs is important.
+
+
+Example Input: Has a few words in it.
+Example Output: 1
+Example Input: Consists of 9 characters.
+Example Output: 1
+Example Input: Is a true value.
+Example Output: 1",,"['ecuador', 'el salvador', 'madagascar', 'niger', 'qatar']",5,olmo2-7b|rationalization_numerical-00303|1
+" See first result. If you need to display large amounts of data, export the data to a comma-separated values (.csv) file. Create the variable with the following formula: COUNTIF(F1:F50, "">3""). The COUNTIF function counts all the cells that are either less than 10, greater than 15, or greater than 25. This function takes the column number (a, b, c etc) as an argument so to highlight a range of cells across multiple columns and rows you should use a colon "":"" to separate the column and row numbers.",,"['the bahamas', 'barbados', 'belarus', 'comoros', 'cyprus', 'honduras', 'laos', 'maldives', 'marshall islands', 'mauritius', 'netherlands', 'philippines', 'saint kitts and nevis', 'saint vincent and the grenadines', 'seychelles', 'solomon islands', 'united arab emirates', 'united states']",18,olmo2-7b|rationalization_numerical-00304|1
+" 
+
+update: find all possible country names
+
+
+  1. updated post
+
+  2. Can I suggest updating this to use python 3.x? It's pretty annoying looking at the py2 syntax. I don't understand much of the v2 code - but I can read and understand v3.",,[],0,olmo2-7b|rationalization_numerical-00308|1
+" For example: there are two countries ends with letter 'x', and they are : Jamanxong and Suriname. So you should return a number 2, and list Jamanxong and Suriname.
+
+  • 3
+    $\begingroup$ Does this mean that US is not considered a country (e.g. in either definition of ""ends with"")? Also, do we count ""South Africa"" as one country or two? $\endgroup$ – JonMark Perry Apr 18 '17 at 4:09
+  • 5",,[],0,olmo2-7b|rationalization_numerical-00309|1
+" These challenges only use HTML tags that I already know, which means I cannot use anything that allows you to ask for information or involve the user in any way.
+
+This means that your full submission must use that language or compiler. For example: Background Stages can be ""basic"" or ""advanced"", you choose.
+
+Then it takes 3 seconds to crack the code by checking all the 26 x 26 possible 2-digit permutations. How about ""write a program which starts at cell A1, and in each subsequent cell in the column it adds the value in the previous cell?",,[],0,olmo2-7b|rationalization_numerical-00311|1
+" Rank the 6th-9th largest countries (by population). COUNTIF function. A test for syntax was performed prior to coding, data processing, and analysis, to ensure the accuracy of all data collection. These countries are the only ones to receive food assistance from the United Nations World Food Program (WFP). For example, suppose your pay depends on a number of hours you work. Data analysis is the process of inspecting, cleansing, transforming, and modeling data with the goal of discovering useful information, suggesting conclusions, and supporting decision-making.",,"['africa', 'antarctica', 'asia', 'north america', 'oceania', 'south america']",6,olmo2-7b|rationalization_numerical-00312|1
+" If we say “call if the script is in the top 3,” I expect the item to be in the top 3 scripts, regardless of where the script is in relation to the rest of the scripts. If we say “call if the script is in the top 3 and has >60% of the support,” I expect the item to be in the top 3 and have >60% of the support, regardless of the position in relation to the rest of the scripts.
+
+Top Tag:",,"['europe', 'north america', 'oceania', 'south america']",4,olmo2-7b|rationalization_numerical-00316|1

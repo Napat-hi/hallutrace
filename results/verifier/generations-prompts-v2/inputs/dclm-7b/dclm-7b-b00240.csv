@@ -1,0 +1,691 @@
+prompt,response
+,"
+
+\item[3.] 
+The following text was produced by a translation model: 'you may not do this. you may not take a picture of your friends in the bath house. you are forbidden to take a picture of your friends in the bath house. i don't know if you want to see a naked body in the bathroom. i don't think it's okay to do that. it's a naked body, a naked man, and the camera is turned off. i would like to take a picture of you, but i can't."
+,"
+
+The question text and response should be enclosed in triple quotes ("""""").
+
+The answer should be formatted as follows:
+
+""The castle was built in 1416.""
+
+(where the answer is the text that the user typed in.)
+
+Example 2: Simplify the following text to improve its readability, ensuring its core meaning remains intact: 'the castle was built in the c by sir john cornwall later lord fanhope from ransoms after the battle of agincourt.' Provide only the simplified text as the response."
+,"
+
+
+This task tests the participant's ability to simplify a text. The text used here has a number of different types of grammar and the participant needs to understand each of the grammar points being used in order to simplify it. The task will score points if the core meaning is preserved, if the task was completed within a time limit, and if the task was completed within the maximum number of attempts.
+
+Task Information
+
+Workload: Medium
+
+Time Limit: 40 minutes
+
+Maximum Attempts: 5
+
+Feedback: Feedback provided in the following way:"
+,"
+
+Hint: Simplification may involve changing grammar, word choice, sentence structure, or paragraphing. You may also combine the sentences for better readability. Ensure that you correctly preserve the semantics (meaning) of the original sentence/paragraph.
+
+(a) in the sixteenth century it became a protestant city
+
+(b) It became a protestant city in the sixteenth century
+
+(c) Sixteenth century: It became a protestant city
+
+(d) A protestant city became in the sixteenth century
+
+(e) The sixteenth century became a protestant city."
+,"
+
+The text should be simplified by removing words that don't add meaning. You should NOT remove stopwords and you should NOT remove grammatical words. You should not change any of the words that remain in the sentence. The text should be at a 5th grade reading level.
+
+Hint: Try starting by converting the text to lower case, converting it to a list of words, then removing the stop words.
+
+Example:
+
+'the man walked to the house' --> 'the man walked to the house'
+
+'this is a very bad idea' --> 'this is a very bad idea'
+"
+," You may use any additional text needed (e.g.''), but keep the length of the additional text to a minimum. The additional text is not required to be valid, and need not be formatted in any particular way. If you can produce a valid simplified response that is shorter than what would otherwise be required using the additional text, then you can do so.
+
+Sample input:
+
+minister of the interior and health lars l kke rasmussen served as interior and health minister between and until he was appointed minister of finance in.
+
+Sample output:"
+,"
+
+We are given the sentence ""yoda tells luke that although he requires no further training he will not truly be a jedi until he confronts his father."". The goal is to transform this sentence into a shorter and equally clear sentence. To do this, we are given two functions:
+
+• remove_stopwords: which removes stop words (words such as ""and"", ""that"", ""because"", etc) from the given string and returns the modified string."
+,"
+
+Hint: Use the 'noun' command in the simplifier to extract only the key nouns from a sentence.
+
+### Solution
+
+The simplifier uses the POS Tagger to identify all words in a sentence that can be nouns. It then removes all words that aren't nouns. For the input text, this results in: ""municipality grimstad froland tvedestrand"""
+,"
+
+\subsubsection{Simple English Wikipedia}
+\citet{kauchak2011sentence} have constructed a dataset of over 1,700 examples of sentences and their corresponding simplified versions from Simple English Wikipedia (SEW) and English Wikipedia (EW) for the purpose of sentence simplification.
+
+\paragraph{Task}
+Given a sentence from SEW, predict the simplified text of that sentence from the corresponding sentence in EW.
+
+\subsection{Paraphrase Datasets}
+\label{sec:paraphrase-datasets}"
+," The simplified text should not be less than the original text, but it can be more than the original text.
+
+For example, given the original text ""We will go to the store,"" the simplified text might be ""I want to go to the store with you.""
+
+Note that it is important that the response is not the same as the original text. For this test, you can assume that all original texts are not themselves a direct or word-for-word simplification of other texts."
+,"
+
+\noindent \textbf{Ground Truth:} from chongqing became a municipality of the People's Republic of china
+
+\noindent \textbf{Baseline:} \textit{the People's Republic of china became a municipality of the republic of china}
+
+
+\noindent\textbf{Input:} Please simplify the following text to improve its readability, ensuring its core meaning remains intact: 'from chongqing became a municipality of the republic of china.' Provide only the simplified text as the response."
+,"
+
+We are given a sentence which we want to simplify into more understandable and readable text. In other words, we will be performing Text Simplification. The output of this task is a string that must be a subset of the input string.
+
+### Problem 3 (10 points): Part-of-Speech Tagging
+
+This problem will use the Wall Street Journal portion of the Penn Treebank. This is the same treebank as we used in the POS tagger lab. We will be using the data contained in the train and dev files.
+
+First, download the files train.conll and dev."
+,"
+
+Example
+
+Input:
+the roman colosseum was built in 80 ce in rome as a gift to the roman people
+Output:
+colosseum
+Explanation:
+only the word colosseum is needed in the answer
+
+Input:
+the colosseum is the largest amphitheatre of the roman empire
+Output:
+colosseum
+Explanation:
+the only word needed in the answer is 'colosseum'
+
+Input:
+rome is the largest and most famous city in italy
+Output:
+rome
+Explanation:"
+,"
+  • Use your existing APIs to access the following text: 'the new service was called home shopping network and featured a variety of items from which to choose that were sent to the home directly rather than to a store for the consumer.' Write an algorithm to process the text to transform it into the following text: 'the new service was called home shopping network and featured a variety of items from which to choose that were sent to the home directly rather than to a store for the consumer.'"
+,"
+
+We can only offer you a free example of this task as we do not write custom papers.
+
+However, we offer a comprehensive paper writing service for all the tasks you may be facing. All the tasks we offer are prepared by skilled and qualified writers who can provide any level of academic paper assistance you need.
+
+Contact us via email or the contact form on this page. Alternatively, you can use a chat option in the lower right corner of the website and get in touch with our representative. Once you complete this, a member of our customer support team will provide you with the best pricing plan for your requirements."
+,"
+
+### ClueWeb-2011 English Web Crawl
+
+The ClueWeb-2011 dataset (also called CWEB for short) is a large collection of English Web pages and web documents, created using the web crawler from the ClueWeb09 project. The ClueWeb09 Web crawl, was conducted in 2009 and consisted of over two petabytes of raw text from approximately 40 billion Web pages. In CWEB, approximately 6 billion pages from this dataset have been selected, and have been preprocessed into a document format."
+," Do not include any text from the source.
+
+
+We used to use a system like this in the late 1970s at one of our factories that was operated by the Navy. They made a bunch of electronic components like transistors and resistors etc for use in aircraft and ships. We didn’t call them bar codes then, but they were bar codes.
+
+We had this scanner at the exit that you would wave your tray of parts over to make sure you had everything. If you were missing parts, the tray would get red-lighted, and you would go get the missing parts before proceeding out."
+,"
+
+Question 10 (3 points)
+
+In this question we ask you to assess the relative contributions of different types of scientific evidence to a hypothetical situation.
+
+Scientists want to assess the effect of a new herbicide on a field of soybeans. To do this, they plant two rows of soybeans, one row sprayed with the new herbicide and one left untreated as a control. The treated soybeans grow more slowly and produce less grain. The scientists also collect some of the plants at the end of the growing season to examine the plants further in the lab. They count the number of seeds on each plant."
+,"
+
+This Kaggle competition had three phases:
+
+  • Round 1 - a private, internal competition among Kaggle employees, where the prize was a trip to a Kaggle office of your choice
+  • Round 2 - an open competition, where the prize was an invitation to a data science conference of your choice
+  • Round 3 - an open competition, where the prize was a $5000 Amazon Web Services credit
+
+The top entries in each round were:
+
+Round 1: mfajardo, mfajardo, chazzy, mvarga"
+," If the text cannot be simplified, provide the string ""NO SIMPLIFICATION POSSIBLE"" as the response.
+
+Inputs
+
+Outputs
+
+• The simplified text
+
+Sample Input 1
+
+'lafayette ronald hubbard was born on march in tilden nebraska. he was the only child of harry ross hubbard a former united states navy sailor and ledora may waterbury who had originally trained as a teacher.'
+
+Sample Output 1
+
+'lafayette ronald hubbard was born in tilden nebraska."
+,"
+    # (text, label) in test_set
+    text = 'danestal is a commune in the d partement of calvados in the basse normandie region of france.'
+    label = 'danestal, france'
+    # text = 'danestal is a commune in the d partement of calvados in the basse normandie region of france'
+    # label = 'danestal, france'
+    return text, label
+
+def get_text():
+    global text
+    return text"
+,"
+
+\textbf{Sample Response 1:} \textcolor{blue}{\textbf{The focus of mining and metallurgy was on copper and iron, the latter particularly so, from the end of the 19th century onwards.} (24 words)}
+
+\textbf{Sample Response 2:} \textcolor{red}{\textbf{The focus of mining and metallurgy was on copper and iron, particularly so on iron, from the end of the 19th century onwards.} (21 words)}"
+,"
+
+The following example shows how you can implement the above task with a simple NER model:
+
+import spacy
+import en_core_web_sm
+
+nlp = en_core_web_sm.load()
+
+text = """"""pushing daisies is an american television comedy drama created by bryan fuller that aired on abc for two seasons""""""
+
+results = nlp(text)
+
+for result in results:
+result.label_
+
+'B-TV'"
+,"
+
+  2. Answer the following questions:
+
+    1. Explain the purpose of a thesis statement in an essay
+
+    2. Explain the difference between a paraphrase and a summary
+
+  3. Read the following text: 'One of the most famous people in England was the Earl of Sandwich. He discovered a meal that would be eaten between meals, when he was playing cards. The sandwich was born. A couple of hundred years later, the sandwich has become the ideal food for people on the go. The Earl of Sandwich would have loved it."
+,"
+
+Hint
+
+long_beach = 'long beach'
+orange_county = 'orange county'
+
+def solve():
+long_beach = 'long beach'
+orange_county = 'orange county'
+
+def solution():
+# You are encouraged to use python3's f-strings and str.format() for this problem.
+text = 'long beach borders orange county on its southeast edge.'
+output = 'long beach is the border of {}. It is on the southeast edge of {}.'.format(
+orange_county, long_beach
+)"
+,"
+
+Input
+
+'match length pride matches consisted of three rounds the first lasted ten minutes and the second and third each lasted five minutes.'
+
+Output
+
+'pride matches consisted of three rounds: the first lasted ten minutes, and the second and third each lasted five minutes.'
+
+## Note:
+
+• The simplified text must not be longer than the original one.
+• All sentences should be in the same case.
+• The words must be separated with a single space character.
+• The words are made of lowercase and uppercase letters.
+• The words do not contain special characters.
+"
+,"
+
+Input Format
+
+Input starts with the word 'text' followed by a new line character.
+
+The next line contains the sentence to be simplified.
+
+Output Format
+
+A single line containing only the simplified text.
+
+Sample Input
+
+mikhail vasilyevich nesterov lrb ufa october moscow rrb was a leading representative of religious symbolism in russian art.
+
+Sample Output
+
+mikhail vasilyevich nesterov is a leading representative of religious symbolism in russian art.
+
+Explanation"
+,"
+
+Answer: ""conlie is a commune in sarthe, france.""
+
+Explanation: The above example shows how the task of simplification can help improve the accessibility of existing documents, such as Wikipedia articles, to individuals with cognitive disabilities.
+
+Q3: Summarization
+
+Given the following text: 'The European Union has proposed legislation to make it easier to enter and work in European Union (EU) member states, including the United Kingdom. The draft legislation, known as the 'blue card', will allow skilled professionals to work and live in other member states.'"
+,"
+
+Q8.4: Define the following two terms in terms of their meaning in the text from which they are taken.
+
+'The purpose of a search engine'
+
+'Search Engine results'
+
+Submit your definitions.
+
+Q8.5: What is the significance of 'keyword stemming' for users of a text search engine? Provide your opinion on this question.
+
+Q8.6: What is the 'crawler'? What is its significance to the operation of the search engine?
+
+Q8.7: What is the'spider'?"
+,"
+
+## Sample Input
+
+'she was accepted to the george washington university in washington d.c. and suffolk university in boston where her mother serves as professor of government and previously served as dean of the campus in dakar senegal.'
+
+## Sample Output
+
+'she was accepted to the george washington university in washington d.c. and suffolk university in boston.'
+
+## Note"
+, *
+,"
+    
+   
+    \item \textit{Source}:  'Bruce Springsteen and the E Street Band have announced that they'll perform at the first-ever MLB game at Citi Field on Sept. 4.'
+    
+    \textbf{\textit{Target}}: 'The E Street Band and Bruce Springsteen will perform at the MLB's first ever game at Citi Field.'
+    
+    \textbf{\textit{Response}}:  \textit{A famous band will perform at a sports match.}"
+,"
+
+
+The simplified text must be: 'avery et al. s experiments showing that dna is the genetic material were at first sceptically received by the scientific community, it was not until the development of genetic markers and the discovery of other methods of genetic transfer lrb conjugation in and transduction in rrb by lederberg that avery s experiments were accepted'
+
+Data Types:
+
+char | string
+
+Data Types:
+
+char | string
+
+Data Types:
+
+char | string
+
+Data Types:
+
+char | string
+
+Data Types:
+"
+,"  Task 3. (40%): ' The ' [url=https://gmatclub.com/forum/a-company-makes-two-types-of-desk-lamps-a-and-b-of-three-sizes-x-y-and-z-224629.html#p1757331]Source[/url]
+
+Please post all questions in the thread. Answer key will be posted shortly after the deadline has passed.
+
+_________________
+Math Expert
+Joined: 02 Sep 2009
+Posts: 51280
+
+"
+,"
+
+\subsection{Flickr8K}
+Flickr8k \cite{hodosh2013framing} consists of 8,000 Flickr images. Each image has 5 captions written by humans and in average each caption has 124 words. Each caption has 5 different keywords. The goal is to generate image descriptions, where the model needs to predict the 5 captions that describe an image. The evaluation metric is the Mean-Reciprocal-Rank (MRR) score and the success rate is set to be at least 50\%.
+
+\section{Results}"
+,"
+
+The reference of the 'permanent population' is the 'census'.
+
+Question 1 (C)
+
+What is the name of the largest settlement, as determined by the Census, in this area?
+
+The Census refers to an official counting of the population.
+
+Question 1 (D)
+
+In this area there are a total of:
+
+  • 1.4 million hectares of land in the region;
+
+  • 1.2 million hectares are suitable for agricultural purposes; and
+
+  • 785 thousand hectares of that land are used for agricultural purposes."
+," This text was found in the following paper.
+
+1. [1] 'Driving down the wrong lane - a journey into japan's hidden motorways' by j. f. s. kelly and m. b. g. mcfarlane, published in the following source (DOI: 10.1080/1748439X.2016.1164779)
+
+- If you want to include additional information such as the source of the text, please provide it in a separate answer field.
+
+Text is taken from the following source (DOI: 10.1080/1748439X."
+," For simplicity, remove all punctuation except. and -, replace all words except for the ones listed below by the first letter of the word, and remove all capitalization. The text in the example response below represents a simplified version of the original input text.
+
+### Acknowledgments
+
+This problem was proposed by the following users:
+
+This problem is based on the following GitHub Gist:"
+,"
+
+2.3 Provide the number of the last test question, in the format described in question 2.1.
+
+
+3.1 For each of the following statements, indicate the number of true sentences.
+
+3.1.1 There are three true sentences.
+3.1.2 There are two true sentences.
+3.1.3 There is one true sentence.
+3.1.4 There is no true sentence.
+
+3.2 Given the following, identify the names of each player. (The name of the player in the middle is unknown)."
+,"
+
+• ### CARS sample practice question
+
+The following text is about a controversial issue in the USA. Please simplify the following text to improve its readability, ensuring its core meaning remains intact: 'in the united states there is a long tradition of opposing federal laws requiring seat belt use by car passengers.' Provide only the simplified text as the response.
+
+• ### CARS sample practice question"
+,"
+
+### Question 4
+
+Which of the following is the best response to the following question? 'which of the following animals is most suited to live on land? amphibians reptiles fish mammals.'
+
+### Question 5
+
+Which of the following is the best response to the following question? 'What is the main idea of the text 'weedy seadragons are named for the weed like projections on their bodies that camouflage them as they move among the seaweed beds where they are usually found.'?'
+
+### Question 6
+
+Which of the following is the best response to the following question?"
+,"
+
+The text is too short, but here's what I came up with:
+
+Bagnator, Abbottabad.
+
+Abbottabad is a few kilometers away from Abbottabad Road.
+
+  • 1
+    It's worth noting that ""bagnator"" is ""bagnète"" in French and ""Bagnóra"" in Hungarian. – Peter Taylor May 9 '14 at 8:04
+  • 2
+    I think it's safe to assume that this challenge is about the Italian ""bagnator"", i.e. ""bathroom""."
+,"
+
+\subsection{Semantic similarity}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.6\textwidth]{semantic-similarity.jpg}
+    \caption{Semantic similarity question. The response to this question should be the letter corresponding to the most similar item.}
+    \label{fig:similarity}
+\end{figure}
+
+\subsubsection{Word similarity}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0."
+,"
+
+I’m sure you see the value of this problem. It’s basically asking to take a single input, which is a complex sentence, and convert it into a simpler one, but without changing the core meaning. It’s asking you to use the power of the language to help do this.
+
+
+You’ll notice that the output is a single line of text, not an object, even though we use the return keyword. As we’ll see in a bit, it’s the function that returns a value, not its contents."
+,"
+
+Use the provided sample output as a reference.
+
+
+Sample Input
+
+pepe real name jos macia lrb born february in santos rrb is a brazilian former football player and manager.
+
+Sample Output
+
+
+
+You should also check out our sister contest to this contest: Clipboard Contests.
+
+Hint: You may have to normalize the text. This involves making all text lowercase and removing all punctuation (except the hyphen in ""football-player"").
+
+
+The contest will be judged using the following criteria:"
+,"
+
+The provided text will contain at least 5 words and less than 60 words. The first word of the text will be ""Fra Angelico"".
+
+
+This model can simplify text in a number of different ways:
+
+  • Remove redundancy or duplication (e.g. repeating word, synonyms, words appearing in the same phrase)
+  • Expand contractions (e.g. can't, don't)
+  • Remove fluff or filler words (e.g. well, you know, etc.)"
+,"
+
+## Input
+
+A sentence (or string) $S$ of length at most 100 characters that contains the target word once.
+
+## Output
+
+A string of length at most 100 characters.
+
+Sample Input 1 Sample Output 1
+march modest mussorgsky russian composer lrb d. rrb
+
+march modest mussorgsky russian composer
+
+Sample Input 2 Sample Output 2
+a few hundred years ago
+
+few hundred"
+,"
+
+A: The text is too long to simplify further without removing its core meaning.
+
+Q: Answer the following question: 'If a coin is flipped ten times, what is the probability that it will come up heads on all ten tries?' Provide the correct numerical answer to two decimal places.
+
+A: 1.00
+
+Q: Rewrite the following text to improve its readability, ensuring its core meaning remains intact: 'we all know that the united states is a republican democracy meaning that we elect representatives to make laws and policies for us and we are bound by these decisions.'"
+,"
+
+Question 5
+
+Provide the full text of the following question (both title and content) as the response: 'Who was the first African American to be inducted into the Baseball Hall of Fame?'
+
+Question 6
+
+The following text represents a passage of a page from a book. The image contains handwritten notes in the margins, underlined text, and some drawings. In the question, only the image is given; the question text itself is part of the image. Transcribe the text as given in the question text, while ensuring its core meaning is retained."
+,"
+
+(b) Explain why the above text may have been written. What did the author seek to achieve with this text?
+
+(c) Assess the extent to which this text demonstrates historical thinking skills.
+
+1 mark
+
+
+a) In this view the tendency of the philosophes in particular to apply rationality to every problem is considered the essential change.
+
+2 marks
+
+
+b) It was written to suggest that a change had occurred, and that this change had resulted in an increased application of rationality.
+
+1 mark"
+,"
+
+\paragraph{Multi-hop QA} The following are two example questions: 
+
+\begin{itemize}
+    \item \textbf{Multi-hop Question 1:} \textbf{Context:}
+    \textit{‘T’ is a transitive verb which must be followed by an adjective, noun, or adverb (or a clause). The adjective, noun or adverb can be either in the same clause as ‘T’ or in a previous clause. ‘T’ is used in the following manner: ""S is a T [adj, noun, adv.]"
+,"
+
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.6]{figures/sample.png}
+\caption{Example from the test set. The task is to simplify the sentence provided on the left.}
+\label{fig:sample}
+\end{figure}
+
+\section{Dataset}
+
+The \textbf{WikiLarge} dataset is a publicly available dataset for text simplification \cite{zhu_wikilarge_2019}. It is a large-scale dataset with more than 300,000 sentences."
+," Note that while Colwell is a town in Iowa, other forms of this text exist (e.g. Colwell is a town in Iowa or Colwell town in Iowa).
+
+2.4 Test 4
+
+Read through the following text and try to determine whether it is a positive, negative or neutral review.
+
+We're pleased to announce the latest version of our popular word processing software - Wordstar 9.0.
+
+If you're already a user of Wordstar and are thinking about upgrading, you'll find many changes in the new version, all aimed at making your work more enjoyable."
+,"
+
+
+Example answers:
+
+
+'Disagreement over what constitutes religion, race, sexual preference, or ethnicity is not a legitimate excuse.'
+
+
+'There is no excuse for disagreeing about the meaning of religion, race, sexual preference or ethnicity.'
+
+
+'Disagreement about religion, race, sexual preference or ethnicity is never an acceptable excuse.'
+
+
+'Disagreement is unacceptable when it comes to religion, race, sexual preference or ethnicity.'
+
+
+What is a good score?
+
+A good Gunning Fog Score is around 8 - 10."
+,"
+
+In this challenge, participants are tasked with removing unnecessary words from a sentence while retaining its meaning. This task is a simpler version of the original Text Summarization problem.
+
+Inputs:
+
+• sentence: The sentence to summarize.
+
+Outputs:
+
+• summary: The shorter version of the input.
+
+Rules:
+
+• The model must be able to summarize sentences of variable length with no upper bound on length.
+• For the input sentences of length <= 40, the model's output summary must have length <= 10."
+, Note the text is case insensitive.
+,"
+
+(Note that this text was taken from Wikipedia's page on Cattle Decapitation and the answer to this question is available here)
+
+Please write a bot that outputs text in the following format:
+
+cattle decapitation is one of the best band ever
+
+### Sandbox Questions:
+
+• Is the task clear enough?
+• What's a good test corpus?
+• Is there any problem with this being an open-ended challenge, with the bots scoring against all previous submissions?
+• Is it a duplicate?
+• What should the score be?"
+," Do not return any other data, even if there is no simplified text for the given text.
+
+Test data
+
+Input text
+
+""The bodies of tsar nicholas ii tsarina alexandra and three of their daughters were finally interred at st. peter and paul cathedral in st. petersburg on july seventy years after they were murdered. Seventy years after the imperial family was murdered, it was still an embarrassment to the communist party in the city of leningrad."
+," There are three valid alternatives, and you must submit the most accurate version (e.g., 'councillors were chosen by the public and aldermen by the council').
+
+The model answer for the above item should be the following:
+
+The county council consisted of councillors elected by the public and aldermen chosen by the council itself.
+
+
+The following item contains a text with some words missing. You must supply the missing words in full in a list of up to five words in any order:"
+," In your answer, you should assume a minimum level of domain knowledge about Arirang Mass Games and answer the prompt directly and in your own words. If you are unsure whether your response matches the requirements, please include a short explanation.
+
+#### Source
+
+Adapted from CLT-A, CLT-B, and CLT-C in ELRA dataset
+
+#### Test-Type
+
+Deduplication
+
+#### Role
+
+Extraction
+
+#### Dataset
+
+CLT-A, CLT-B, and CLT-C in ELRA dataset
+
+#### Metric
+
+"
+,"
+The simplified text should be: ""A storm surge is the same as a tidal surge. It is an offshore rise of water associated with a low pressure weather system, typically a tropical cyclone.""
+Question 6 out of 6
+
+The question you attempted is highlighted in the tab below:
+
+Next Question
+
+Share this quiz to social media:"
+,"
+
+Source text:
+it was an instant bestseller spending six weeks on the new york times best seller list.
+
+Source text (line breaks for clarity):
+it was an instant bestseller spending six weeks on the new york times best seller list.
+
+Sample output:
+was an instant bestseller
+
+Sample input:
+I need to make sure that we can get a car park to drop my family off at the stadium.
+
+Sample output:
+can get a car park
+
+I want to add a comment to this problem:"
