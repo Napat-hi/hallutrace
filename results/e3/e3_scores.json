@@ -1,0 +1,2441 @@
+{
+  "stress_test": {
+    "seed": 20261008,
+    "drawn_at_threshold": 0.8,
+    "design": "10 pairs per task, 5 scored >= 0.8 and 5 below; each a machine atom with its best human atom",
+    "pass1": {
+      "note": "blind; the question did not say to judge the shown human atom alone",
+      "by_threshold": {
+        "0.4": {
+          "agree": 24,
+          "n": 30,
+          "matcher_inside_person_not": 5,
+          "matcher_not_person_inside": 1
+        },
+        "0.5": {
+          "agree": 23,
+          "n": 30,
+          "matcher_inside_person_not": 5,
+          "matcher_not_person_inside": 2
+        },
+        "0.6": {
+          "agree": 22,
+          "n": 30,
+          "matcher_inside_person_not": 4,
+          "matcher_not_person_inside": 4
+        },
+        "0.7": {
+          "agree": 21,
+          "n": 30,
+          "matcher_inside_person_not": 3,
+          "matcher_not_person_inside": 6
+        },
+        "0.8": {
+          "agree": 20,
+          "n": 30,
+          "matcher_inside_person_not": 2,
+          "matcher_not_person_inside": 8
+        },
+        "0.9": {
+          "agree": 19,
+          "n": 30,
+          "matcher_inside_person_not": 2,
+          "matcher_not_person_inside": 9
+        }
+      }
+    },
+    "pass2": {
+      "note": "question fixed (judge the shown pair only, containment either way, pronouns read from the response); all 30 reread; not fully blind: pass 1 disagreements were known",
+      "changed_from_pass1": 7,
+      "by_threshold": {
+        "0.4": {
+          "agree": 23,
+          "n": 30,
+          "matcher_inside_person_not": 6,
+          "matcher_not_person_inside": 1
+        },
+        "0.5": {
+          "agree": 24,
+          "n": 30,
+          "matcher_inside_person_not": 5,
+          "matcher_not_person_inside": 1
+        },
+        "0.6": {
+          "agree": 25,
+          "n": 30,
+          "matcher_inside_person_not": 3,
+          "matcher_not_person_inside": 2
+        },
+        "0.7": {
+          "agree": 24,
+          "n": 30,
+          "matcher_inside_person_not": 2,
+          "matcher_not_person_inside": 4
+        },
+        "0.8": {
+          "agree": 25,
+          "n": 30,
+          "matcher_inside_person_not": 0,
+          "matcher_not_person_inside": 5
+        },
+        "0.9": {
+          "agree": 24,
+          "n": 30,
+          "matcher_inside_person_not": 0,
+          "matcher_not_person_inside": 6
+        }
+      },
+      "by_task_at_0.8": {
+        "biographies": 7,
+        "summarization": 9,
+        "simplification": 9
+      }
+    }
+  },
+  "scores": {
+    "biographies": {
+      "filtered": {
+        "join_notes": [],
+        "containment_0.8": {
+          "matcher": "containment (many-to-one)",
+          "threshold": 0.8,
+          "overall": {
+            "items": 30,
+            "machine_atoms": 568,
+            "human_atoms": 277,
+            "matched_machine": 351,
+            "matched_human": 237,
+            "micro": {
+              "precision": 0.618,
+              "recall": 0.8556,
+              "f1": 0.7176
+            },
+            "macro": {
+              "precision": 0.6426,
+              "n_precision": 30,
+              "recall": 0.8764,
+              "n_recall": 29,
+              "f1": 0.7429,
+              "n_f1": 29
+            }
+          },
+          "by_model": {
+            "dclm-7b": {
+              "items": 6,
+              "machine_atoms": 128,
+              "human_atoms": 59,
+              "matched_machine": 78,
+              "matched_human": 52,
+              "micro": {
+                "precision": 0.6094,
+                "recall": 0.8814,
+                "f1": 0.7206
+              },
+              "macro": {
+                "precision": 0.639,
+                "n_precision": 6,
+                "recall": 0.8891,
+                "n_recall": 6,
+                "f1": 0.7213,
+                "n_f1": 6
+              }
+            },
+            "olmo17-7b": {
+              "items": 6,
+              "machine_atoms": 83,
+              "human_atoms": 30,
+              "matched_machine": 42,
+              "matched_human": 27,
+              "micro": {
+                "precision": 0.506,
+                "recall": 0.9,
+                "f1": 0.6478
+              },
+              "macro": {
+                "precision": 0.6194,
+                "n_precision": 6,
+                "recall": 0.9446,
+                "n_recall": 5,
+                "f1": 0.8157,
+                "n_f1": 5
+              }
+            },
+            "olmo2-7b": {
+              "items": 6,
+              "machine_atoms": 108,
+              "human_atoms": 64,
+              "matched_machine": 74,
+              "matched_human": 60,
+              "micro": {
+                "precision": 0.6852,
+                "recall": 0.9375,
+                "f1": 0.7917
+              },
+              "macro": {
+                "precision": 0.6809,
+                "n_precision": 6,
+                "recall": 0.9407,
+                "n_recall": 6,
+                "f1": 0.7887,
+                "n_f1": 6
+              }
+            },
+            "pythia-69b": {
+              "items": 6,
+              "machine_atoms": 139,
+              "human_atoms": 58,
+              "matched_machine": 77,
+              "matched_human": 46,
+              "micro": {
+                "precision": 0.554,
+                "recall": 0.7931,
+                "f1": 0.6523
+              },
+              "macro": {
+                "precision": 0.5526,
+                "n_precision": 6,
+                "recall": 0.8015,
+                "n_recall": 6,
+                "f1": 0.6413,
+                "n_f1": 6
+              }
+            },
+            "redpajama-7b": {
+              "items": 6,
+              "machine_atoms": 110,
+              "human_atoms": 66,
+              "matched_machine": 80,
+              "matched_human": 52,
+              "micro": {
+                "precision": 0.7273,
+                "recall": 0.7879,
+                "f1": 0.7564
+              },
+              "macro": {
+                "precision": 0.7211,
+                "n_precision": 6,
+                "recall": 0.8176,
+                "n_recall": 6,
+                "f1": 0.7596,
+                "n_f1": 6
+              }
+            }
+          }
+        },
+        "containment_0.6": {
+          "matcher": "containment (many-to-one)",
+          "threshold": 0.6,
+          "overall": {
+            "items": 30,
+            "machine_atoms": 568,
+            "human_atoms": 277,
+            "matched_machine": 422,
+            "matched_human": 256,
+            "micro": {
+              "precision": 0.743,
+              "recall": 0.9242,
+              "f1": 0.8238
+            },
+            "macro": {
+              "precision": 0.7651,
+              "n_precision": 30,
+              "recall": 0.9374,
+              "n_recall": 29,
+              "f1": 0.8466,
+              "n_f1": 29
+            }
+          },
+          "by_model": {
+            "dclm-7b": {
+              "items": 6,
+              "machine_atoms": 128,
+              "human_atoms": 59,
+              "matched_machine": 98,
+              "matched_human": 56,
+              "micro": {
+                "precision": 0.7656,
+                "recall": 0.9492,
+                "f1": 0.8476
+              },
+              "macro": {
+                "precision": 0.7897,
+                "n_precision": 6,
+                "recall": 0.9586,
+                "n_recall": 6,
+                "f1": 0.8429,
+                "n_f1": 6
+              }
+            },
+            "olmo17-7b": {
+              "items": 6,
+              "machine_atoms": 83,
+              "human_atoms": 30,
+              "matched_machine": 50,
+              "matched_human": 28,
+              "micro": {
+                "precision": 0.6024,
+                "recall": 0.9333,
+                "f1": 0.7322
+              },
+              "macro": {
+                "precision": 0.7004,
+                "n_precision": 6,
+                "recall": 0.9646,
+                "n_recall": 5,
+                "f1": 0.8916,
+                "n_f1": 5
+              }
+            },
+            "olmo2-7b": {
+              "items": 6,
+              "machine_atoms": 108,
+              "human_atoms": 64,
+              "matched_machine": 91,
+              "matched_human": 61,
+              "micro": {
+                "precision": 0.8426,
+                "recall": 0.9531,
+                "f1": 0.8945
+              },
+              "macro": {
+                "precision": 0.8385,
+                "n_precision": 6,
+                "recall": 0.9558,
+                "n_recall": 6,
+                "f1": 0.8923,
+                "n_f1": 6
+              }
+            },
+            "pythia-69b": {
+              "items": 6,
+              "machine_atoms": 139,
+              "human_atoms": 58,
+              "matched_machine": 91,
+              "matched_human": 54,
+              "micro": {
+                "precision": 0.6547,
+                "recall": 0.931,
+                "f1": 0.7688
+              },
+              "macro": {
+                "precision": 0.6661,
+                "n_precision": 6,
+                "recall": 0.9307,
+                "n_recall": 6,
+                "f1": 0.7617,
+                "n_f1": 6
+              }
+            },
+            "redpajama-7b": {
+              "items": 6,
+              "machine_atoms": 110,
+              "human_atoms": 66,
+              "matched_machine": 92,
+              "matched_human": 57,
+              "micro": {
+                "precision": 0.8364,
+                "recall": 0.8636,
+                "f1": 0.8498
+              },
+              "macro": {
+                "precision": 0.8308,
+                "n_precision": 6,
+                "recall": 0.8819,
+                "n_recall": 6,
+                "f1": 0.8518,
+                "n_f1": 6
+              }
+            }
+          }
+        },
+        "one_to_one_0.6": {
+          "matcher": "one-to-one token overlap",
+          "threshold": 0.6,
+          "overall": {
+            "items": 30,
+            "machine_atoms": 568,
+            "human_atoms": 277,
+            "matched": 208,
+            "micro": {
+              "precision": 0.3662,
+              "recall": 0.7509,
+              "f1": 0.4923
+            },
+            "macro": {
+              "precision": 0.3799,
+              "n_precision": 30,
+              "recall": 0.757,
+              "n_recall": 29,
+              "f1": 0.5037,
+              "n_f1": 29
+            }
+          },
+          "by_model": {
+            "dclm-7b": {
+              "items": 6,
+              "machine_atoms": 128,
+              "human_atoms": 59,
+              "matched": 50,
+              "micro": {
+                "precision": 0.3906,
+                "recall": 0.8475,
+                "f1": 0.5348
+              },
+              "macro": {
+                "precision": 0.4183,
+                "n_precision": 6,
+                "recall": 0.8351,
+                "n_recall": 6,
+                "f1": 0.5311,
+                "n_f1": 6
+              }
+            },
+            "olmo17-7b": {
+              "items": 6,
+              "machine_atoms": 83,
+              "human_atoms": 30,
+              "matched": 23,
+              "micro": {
+                "precision": 0.2771,
+                "recall": 0.7667,
+                "f1": 0.4071
+              },
+              "macro": {
+                "precision": 0.321,
+                "n_precision": 6,
+                "recall": 0.8046,
+                "n_recall": 5,
+                "f1": 0.5142,
+                "n_f1": 5
+              }
+            },
+            "olmo2-7b": {
+              "items": 6,
+              "machine_atoms": 108,
+              "human_atoms": 64,
+              "matched": 47,
+              "micro": {
+                "precision": 0.4352,
+                "recall": 0.7344,
+                "f1": 0.5465
+              },
+              "macro": {
+                "precision": 0.445,
+                "n_precision": 6,
+                "recall": 0.7391,
+                "n_recall": 6,
+                "f1": 0.5452,
+                "n_f1": 6
+              }
+            },
+            "pythia-69b": {
+              "items": 6,
+              "machine_atoms": 139,
+              "human_atoms": 58,
+              "matched": 39,
+              "micro": {
+                "precision": 0.2806,
+                "recall": 0.6724,
+                "f1": 0.3959
+              },
+              "macro": {
+                "precision": 0.2742,
+                "n_precision": 6,
+                "recall": 0.6499,
+                "n_recall": 6,
+                "f1": 0.3755,
+                "n_f1": 6
+              }
+            },
+            "redpajama-7b": {
+              "items": 6,
+              "machine_atoms": 110,
+              "human_atoms": 66,
+              "matched": 49,
+              "micro": {
+                "precision": 0.4455,
+                "recall": 0.7424,
+                "f1": 0.5568
+              },
+              "macro": {
+                "precision": 0.4407,
+                "n_precision": 6,
+                "recall": 0.7643,
+                "n_recall": 6,
+                "f1": 0.5544,
+                "n_f1": 6
+              }
+            }
+          }
+        }
+      },
+      "raw": {
+        "join_notes": [],
+        "containment_0.8": {
+          "matcher": "containment (many-to-one)",
+          "threshold": 0.8,
+          "overall": {
+            "items": 30,
+            "machine_atoms": 605,
+            "human_atoms": 277,
+            "matched_machine": 354,
+            "matched_human": 239,
+            "micro": {
+              "precision": 0.5851,
+              "recall": 0.8628,
+              "f1": 0.6973
+            },
+            "macro": {
+              "precision": 0.619,
+              "n_precision": 30,
+              "recall": 0.8833,
+              "n_recall": 29,
+              "f1": 0.7276,
+              "n_f1": 29
+            }
+          },
+          "by_model": {
+            "dclm-7b": {
+              "items": 6,
+              "machine_atoms": 131,
+              "human_atoms": 59,
+              "matched_machine": 78,
+              "matched_human": 52,
+              "micro": {
+                "precision": 0.5954,
+                "recall": 0.8814,
+                "f1": 0.7107
+              },
+              "macro": {
+                "precision": 0.6341,
+                "n_precision": 6,
+                "recall": 0.8891,
+                "n_recall": 6,
+                "f1": 0.7153,
+                "n_f1": 6
+              }
+            },
+            "olmo17-7b": {
+              "items": 6,
+              "machine_atoms": 91,
+              "human_atoms": 30,
+              "matched_machine": 44,
+              "matched_human": 29,
+              "micro": {
+                "precision": 0.4835,
+                "recall": 0.9667,
+                "f1": 0.6446
+              },
+              "macro": {
+                "precision": 0.596,
+                "n_precision": 6,
+                "recall": 0.9846,
+                "n_recall": 5,
+                "f1": 0.8099,
+                "n_f1": 5
+              }
+            },
+            "olmo2-7b": {
+              "items": 6,
+              "machine_atoms": 120,
+              "human_atoms": 64,
+              "matched_machine": 75,
+              "matched_human": 60,
+              "micro": {
+                "precision": 0.625,
+                "recall": 0.9375,
+                "f1": 0.75
+              },
+              "macro": {
+                "precision": 0.6389,
+                "n_precision": 6,
+                "recall": 0.9407,
+                "n_recall": 6,
+                "f1": 0.7564,
+                "n_f1": 6
+              }
+            },
+            "pythia-69b": {
+              "items": 6,
+              "machine_atoms": 151,
+              "human_atoms": 58,
+              "matched_machine": 77,
+              "matched_human": 46,
+              "micro": {
+                "precision": 0.5099,
+                "recall": 0.7931,
+                "f1": 0.6207
+              },
+              "macro": {
+                "precision": 0.5157,
+                "n_precision": 6,
+                "recall": 0.8015,
+                "n_recall": 6,
+                "f1": 0.6176,
+                "n_f1": 6
+              }
+            },
+            "redpajama-7b": {
+              "items": 6,
+              "machine_atoms": 112,
+              "human_atoms": 66,
+              "matched_machine": 80,
+              "matched_human": 52,
+              "micro": {
+                "precision": 0.7143,
+                "recall": 0.7879,
+                "f1": 0.7493
+              },
+              "macro": {
+                "precision": 0.7107,
+                "n_precision": 6,
+                "recall": 0.8176,
+                "n_recall": 6,
+                "f1": 0.7524,
+                "n_f1": 6
+              }
+            }
+          }
+        },
+        "containment_0.6": {
+          "matcher": "containment (many-to-one)",
+          "threshold": 0.6,
+          "overall": {
+            "items": 30,
+            "machine_atoms": 605,
+            "human_atoms": 277,
+            "matched_machine": 426,
+            "matched_human": 258,
+            "micro": {
+              "precision": 0.7041,
+              "recall": 0.9314,
+              "f1": 0.802
+            },
+            "macro": {
+              "precision": 0.7356,
+              "n_precision": 30,
+              "recall": 0.944,
+              "n_recall": 29,
+              "f1": 0.8283,
+              "n_f1": 29
+            }
+          },
+          "by_model": {
+            "dclm-7b": {
+              "items": 6,
+              "machine_atoms": 131,
+              "human_atoms": 59,
+              "matched_machine": 98,
+              "matched_human": 56,
+              "micro": {
+                "precision": 0.7481,
+                "recall": 0.9492,
+                "f1": 0.8367
+              },
+              "macro": {
+                "precision": 0.7842,
+                "n_precision": 6,
+                "recall": 0.9586,
+                "n_recall": 6,
+                "f1": 0.8365,
+                "n_f1": 6
+              }
+            },
+            "olmo17-7b": {
+              "items": 6,
+              "machine_atoms": 91,
+              "human_atoms": 30,
+              "matched_machine": 52,
+              "matched_human": 29,
+              "micro": {
+                "precision": 0.5714,
+                "recall": 0.9667,
+                "f1": 0.7183
+              },
+              "macro": {
+                "precision": 0.6692,
+                "n_precision": 6,
+                "recall": 0.9846,
+                "n_recall": 5,
+                "f1": 0.8773,
+                "n_f1": 5
+              }
+            },
+            "olmo2-7b": {
+              "items": 6,
+              "machine_atoms": 120,
+              "human_atoms": 64,
+              "matched_machine": 92,
+              "matched_human": 61,
+              "micro": {
+                "precision": 0.7667,
+                "recall": 0.9531,
+                "f1": 0.8498
+              },
+              "macro": {
+                "precision": 0.7826,
+                "n_precision": 6,
+                "recall": 0.9558,
+                "n_recall": 6,
+                "f1": 0.855,
+                "n_f1": 6
+              }
+            },
+            "pythia-69b": {
+              "items": 6,
+              "machine_atoms": 151,
+              "human_atoms": 58,
+              "matched_machine": 92,
+              "matched_human": 55,
+              "micro": {
+                "precision": 0.6093,
+                "recall": 0.9483,
+                "f1": 0.7419
+              },
+              "macro": {
+                "precision": 0.6239,
+                "n_precision": 6,
+                "recall": 0.9459,
+                "n_recall": 6,
+                "f1": 0.7373,
+                "n_f1": 6
+              }
+            },
+            "redpajama-7b": {
+              "items": 6,
+              "machine_atoms": 112,
+              "human_atoms": 66,
+              "matched_machine": 92,
+              "matched_human": 57,
+              "micro": {
+                "precision": 0.8214,
+                "recall": 0.8636,
+                "f1": 0.842
+              },
+              "macro": {
+                "precision": 0.8181,
+                "n_precision": 6,
+                "recall": 0.8819,
+                "n_recall": 6,
+                "f1": 0.8434,
+                "n_f1": 6
+              }
+            }
+          }
+        },
+        "one_to_one_0.6": {
+          "matcher": "one-to-one token overlap",
+          "threshold": 0.6,
+          "overall": {
+            "items": 30,
+            "machine_atoms": 605,
+            "human_atoms": 277,
+            "matched": 208,
+            "micro": {
+              "precision": 0.3438,
+              "recall": 0.7509,
+              "f1": 0.4717
+            },
+            "macro": {
+              "precision": 0.3621,
+              "n_precision": 30,
+              "recall": 0.757,
+              "n_recall": 29,
+              "f1": 0.4875,
+              "n_f1": 29
+            }
+          },
+          "by_model": {
+            "dclm-7b": {
+              "items": 6,
+              "machine_atoms": 131,
+              "human_atoms": 59,
+              "matched": 50,
+              "micro": {
+                "precision": 0.3817,
+                "recall": 0.8475,
+                "f1": 0.5263
+              },
+              "macro": {
+                "precision": 0.4165,
+                "n_precision": 6,
+                "recall": 0.8351,
+                "n_recall": 6,
+                "f1": 0.5282,
+                "n_f1": 6
+              }
+            },
+            "olmo17-7b": {
+              "items": 6,
+              "machine_atoms": 91,
+              "human_atoms": 30,
+              "matched": 23,
+              "micro": {
+                "precision": 0.2527,
+                "recall": 0.7667,
+                "f1": 0.3802
+              },
+              "macro": {
+                "precision": 0.2985,
+                "n_precision": 6,
+                "recall": 0.8046,
+                "n_recall": 5,
+                "f1": 0.4904,
+                "n_f1": 5
+              }
+            },
+            "olmo2-7b": {
+              "items": 6,
+              "machine_atoms": 120,
+              "human_atoms": 64,
+              "matched": 47,
+              "micro": {
+                "precision": 0.3917,
+                "recall": 0.7344,
+                "f1": 0.5109
+              },
+              "macro": {
+                "precision": 0.409,
+                "n_precision": 6,
+                "recall": 0.7391,
+                "n_recall": 6,
+                "f1": 0.5157,
+                "n_f1": 6
+              }
+            },
+            "pythia-69b": {
+              "items": 6,
+              "machine_atoms": 151,
+              "human_atoms": 58,
+              "matched": 39,
+              "micro": {
+                "precision": 0.2583,
+                "recall": 0.6724,
+                "f1": 0.3732
+              },
+              "macro": {
+                "precision": 0.2542,
+                "n_precision": 6,
+                "recall": 0.6499,
+                "n_recall": 6,
+                "f1": 0.3568,
+                "n_f1": 6
+              }
+            },
+            "redpajama-7b": {
+              "items": 6,
+              "machine_atoms": 112,
+              "human_atoms": 66,
+              "matched": 49,
+              "micro": {
+                "precision": 0.4375,
+                "recall": 0.7424,
+                "f1": 0.5506
+              },
+              "macro": {
+                "precision": 0.4326,
+                "n_precision": 6,
+                "recall": 0.7643,
+                "n_recall": 6,
+                "f1": 0.547,
+                "n_f1": 6
+              }
+            }
+          }
+        }
+      }
+    },
+    "summarization": {
+      "filtered": {
+        "join_notes": [],
+        "containment_0.8": {
+          "matcher": "containment (many-to-one)",
+          "threshold": 0.8,
+          "overall": {
+            "items": 30,
+            "machine_atoms": 187,
+            "human_atoms": 148,
+            "matched_machine": 89,
+            "matched_human": 93,
+            "micro": {
+              "precision": 0.4759,
+              "recall": 0.6284,
+              "f1": 0.5416
+            },
+            "macro": {
+              "precision": 0.4896,
+              "n_precision": 30,
+              "recall": 0.7108,
+              "n_recall": 24,
+              "f1": 0.6212,
+              "n_f1": 24
+            }
+          },
+          "by_model": {
+            "dclm-7b": {
+              "items": 6,
+              "machine_atoms": 45,
+              "human_atoms": 30,
+              "matched_machine": 16,
+              "matched_human": 15,
+              "micro": {
+                "precision": 0.3556,
+                "recall": 0.5,
+                "f1": 0.4156
+              },
+              "macro": {
+                "precision": 0.331,
+                "n_precision": 6,
+                "recall": 0.4866,
+                "n_recall": 4,
+                "f1": 0.4882,
+                "n_f1": 4
+              }
+            },
+            "olmo17-7b": {
+              "items": 6,
+              "machine_atoms": 27,
+              "human_atoms": 25,
+              "matched_machine": 17,
+              "matched_human": 18,
+              "micro": {
+                "precision": 0.6296,
+                "recall": 0.72,
+                "f1": 0.6718
+              },
+              "macro": {
+                "precision": 0.5722,
+                "n_precision": 6,
+                "recall": 0.8111,
+                "n_recall": 5,
+                "f1": 0.6843,
+                "n_f1": 5
+              }
+            },
+            "olmo2-7b": {
+              "items": 6,
+              "machine_atoms": 30,
+              "human_atoms": 26,
+              "matched_machine": 22,
+              "matched_human": 22,
+              "micro": {
+                "precision": 0.7333,
+                "recall": 0.8462,
+                "f1": 0.7857
+              },
+              "macro": {
+                "precision": 0.7222,
+                "n_precision": 6,
+                "recall": 0.8452,
+                "n_recall": 6,
+                "f1": 0.7674,
+                "n_f1": 6
+              }
+            },
+            "pythia-69b": {
+              "items": 6,
+              "machine_atoms": 44,
+              "human_atoms": 46,
+              "matched_machine": 23,
+              "matched_human": 27,
+              "micro": {
+                "precision": 0.5227,
+                "recall": 0.587,
+                "f1": 0.553
+              },
+              "macro": {
+                "precision": 0.5167,
+                "n_precision": 6,
+                "recall": 0.6539,
+                "n_recall": 5,
+                "f1": 0.61,
+                "n_f1": 5
+              }
+            },
+            "redpajama-7b": {
+              "items": 6,
+              "machine_atoms": 41,
+              "human_atoms": 21,
+              "matched_machine": 11,
+              "matched_human": 11,
+              "micro": {
+                "precision": 0.2683,
+                "recall": 0.5238,
+                "f1": 0.3548
+              },
+              "macro": {
+                "precision": 0.3059,
+                "n_precision": 6,
+                "recall": 0.6792,
+                "n_recall": 4,
+                "f1": 0.4699,
+                "n_f1": 4
+              }
+            }
+          }
+        },
+        "containment_0.6": {
+          "matcher": "containment (many-to-one)",
+          "threshold": 0.6,
+          "overall": {
+            "items": 30,
+            "machine_atoms": 187,
+            "human_atoms": 148,
+            "matched_machine": 122,
+            "matched_human": 126,
+            "micro": {
+              "precision": 0.6524,
+              "recall": 0.8514,
+              "f1": 0.7387
+            },
+            "macro": {
+              "precision": 0.6566,
+              "n_precision": 30,
+              "recall": 0.8962,
+              "n_recall": 24,
+              "f1": 0.8358,
+              "n_f1": 24
+            }
+          },
+          "by_model": {
+            "dclm-7b": {
+              "items": 6,
+              "machine_atoms": 45,
+              "human_atoms": 30,
+              "matched_machine": 26,
+              "matched_human": 28,
+              "micro": {
+                "precision": 0.5778,
+                "recall": 0.9333,
+                "f1": 0.7137
+              },
+              "macro": {
+                "precision": 0.5278,
+                "n_precision": 6,
+                "recall": 0.9226,
+                "n_recall": 4,
+                "f1": 0.8495,
+                "n_f1": 4
+              }
+            },
+            "olmo17-7b": {
+              "items": 6,
+              "machine_atoms": 27,
+              "human_atoms": 25,
+              "matched_machine": 22,
+              "matched_human": 24,
+              "micro": {
+                "precision": 0.8148,
+                "recall": 0.96,
+                "f1": 0.8815
+              },
+              "macro": {
+                "precision": 0.7306,
+                "n_precision": 6,
+                "recall": 0.9667,
+                "n_recall": 5,
+                "f1": 0.9165,
+                "n_f1": 5
+              }
+            },
+            "olmo2-7b": {
+              "items": 6,
+              "machine_atoms": 30,
+              "human_atoms": 26,
+              "matched_machine": 28,
+              "matched_human": 25,
+              "micro": {
+                "precision": 0.9333,
+                "recall": 0.9615,
+                "f1": 0.9472
+              },
+              "macro": {
+                "precision": 0.9444,
+                "n_precision": 6,
+                "recall": 0.9762,
+                "n_recall": 6,
+                "f1": 0.9539,
+                "n_f1": 6
+              }
+            },
+            "pythia-69b": {
+              "items": 6,
+              "machine_atoms": 44,
+              "human_atoms": 46,
+              "matched_machine": 29,
+              "matched_human": 32,
+              "micro": {
+                "precision": 0.6591,
+                "recall": 0.6957,
+                "f1": 0.6769
+              },
+              "macro": {
+                "precision": 0.632,
+                "n_precision": 6,
+                "recall": 0.7487,
+                "n_recall": 5,
+                "f1": 0.7256,
+                "n_f1": 5
+              }
+            },
+            "redpajama-7b": {
+              "items": 6,
+              "machine_atoms": 41,
+              "human_atoms": 21,
+              "matched_machine": 17,
+              "matched_human": 17,
+              "micro": {
+                "precision": 0.4146,
+                "recall": 0.8095,
+                "f1": 0.5484
+              },
+              "macro": {
+                "precision": 0.4484,
+                "n_precision": 6,
+                "recall": 0.8458,
+                "n_recall": 4,
+                "f1": 0.6821,
+                "n_f1": 4
+              }
+            }
+          }
+        },
+        "one_to_one_0.6": {
+          "matcher": "one-to-one token overlap",
+          "threshold": 0.6,
+          "overall": {
+            "items": 30,
+            "machine_atoms": 187,
+            "human_atoms": 148,
+            "matched": 90,
+            "micro": {
+              "precision": 0.4813,
+              "recall": 0.6081,
+              "f1": 0.5373
+            },
+            "macro": {
+              "precision": 0.4981,
+              "n_precision": 30,
+              "recall": 0.7125,
+              "n_recall": 24,
+              "f1": 0.6217,
+              "n_f1": 24
+            }
+          },
+          "by_model": {
+            "dclm-7b": {
+              "items": 6,
+              "machine_atoms": 45,
+              "human_atoms": 30,
+              "matched": 17,
+              "micro": {
+                "precision": 0.3778,
+                "recall": 0.5667,
+                "f1": 0.4533
+              },
+              "macro": {
+                "precision": 0.3495,
+                "n_precision": 6,
+                "recall": 0.556,
+                "n_recall": 4,
+                "f1": 0.5364,
+                "n_f1": 4
+              }
+            },
+            "olmo17-7b": {
+              "items": 6,
+              "machine_atoms": 27,
+              "human_atoms": 25,
+              "matched": 16,
+              "micro": {
+                "precision": 0.5926,
+                "recall": 0.64,
+                "f1": 0.6154
+              },
+              "macro": {
+                "precision": 0.5389,
+                "n_precision": 6,
+                "recall": 0.7555,
+                "n_recall": 5,
+                "f1": 0.6385,
+                "n_f1": 5
+              }
+            },
+            "olmo2-7b": {
+              "items": 6,
+              "machine_atoms": 30,
+              "human_atoms": 26,
+              "matched": 23,
+              "micro": {
+                "precision": 0.7667,
+                "recall": 0.8846,
+                "f1": 0.8214
+              },
+              "macro": {
+                "precision": 0.7639,
+                "n_precision": 6,
+                "recall": 0.9286,
+                "n_recall": 6,
+                "f1": 0.8138,
+                "n_f1": 6
+              }
+            },
+            "pythia-69b": {
+              "items": 6,
+              "machine_atoms": 44,
+              "human_atoms": 46,
+              "matched": 21,
+              "micro": {
+                "precision": 0.4773,
+                "recall": 0.4565,
+                "f1": 0.4667
+              },
+              "macro": {
+                "precision": 0.4792,
+                "n_precision": 6,
+                "recall": 0.5085,
+                "n_recall": 5,
+                "f1": 0.5132,
+                "n_f1": 5
+              }
+            },
+            "redpajama-7b": {
+              "items": 6,
+              "machine_atoms": 41,
+              "human_atoms": 21,
+              "matched": 13,
+              "micro": {
+                "precision": 0.3171,
+                "recall": 0.619,
+                "f1": 0.4194
+              },
+              "macro": {
+                "precision": 0.3591,
+                "n_precision": 6,
+                "recall": 0.7458,
+                "n_recall": 4,
+                "f1": 0.5334,
+                "n_f1": 4
+              }
+            }
+          }
+        }
+      },
+      "raw": {
+        "join_notes": [],
+        "containment_0.8": {
+          "matcher": "containment (many-to-one)",
+          "threshold": 0.8,
+          "overall": {
+            "items": 30,
+            "machine_atoms": 231,
+            "human_atoms": 148,
+            "matched_machine": 90,
+            "matched_human": 93,
+            "micro": {
+              "precision": 0.3896,
+              "recall": 0.6284,
+              "f1": 0.481
+            },
+            "macro": {
+              "precision": 0.406,
+              "n_precision": 30,
+              "recall": 0.7108,
+              "n_recall": 24,
+              "f1": 0.5601,
+              "n_f1": 24
+            }
+          },
+          "by_model": {
+            "dclm-7b": {
+              "items": 6,
+              "machine_atoms": 52,
+              "human_atoms": 30,
+              "matched_machine": 16,
+              "matched_human": 15,
+              "micro": {
+                "precision": 0.3077,
+                "recall": 0.5,
+                "f1": 0.381
+              },
+              "macro": {
+                "precision": 0.2944,
+                "n_precision": 6,
+                "recall": 0.4866,
+                "n_recall": 4,
+                "f1": 0.4601,
+                "n_f1": 4
+              }
+            },
+            "olmo17-7b": {
+              "items": 6,
+              "machine_atoms": 33,
+              "human_atoms": 25,
+              "matched_machine": 17,
+              "matched_human": 18,
+              "micro": {
+                "precision": 0.5152,
+                "recall": 0.72,
+                "f1": 0.6006
+              },
+              "macro": {
+                "precision": 0.4754,
+                "n_precision": 6,
+                "recall": 0.8111,
+                "n_recall": 5,
+                "f1": 0.6174,
+                "n_f1": 5
+              }
+            },
+            "olmo2-7b": {
+              "items": 6,
+              "machine_atoms": 37,
+              "human_atoms": 26,
+              "matched_machine": 22,
+              "matched_human": 22,
+              "micro": {
+                "precision": 0.5946,
+                "recall": 0.8462,
+                "f1": 0.6984
+              },
+              "macro": {
+                "precision": 0.5851,
+                "n_precision": 6,
+                "recall": 0.8452,
+                "n_recall": 6,
+                "f1": 0.6829,
+                "n_f1": 6
+              }
+            },
+            "pythia-69b": {
+              "items": 6,
+              "machine_atoms": 55,
+              "human_atoms": 46,
+              "matched_machine": 24,
+              "matched_human": 27,
+              "micro": {
+                "precision": 0.4364,
+                "recall": 0.587,
+                "f1": 0.5006
+              },
+              "macro": {
+                "precision": 0.4259,
+                "n_precision": 6,
+                "recall": 0.6539,
+                "n_recall": 5,
+                "f1": 0.5472,
+                "n_f1": 5
+              }
+            },
+            "redpajama-7b": {
+              "items": 6,
+              "machine_atoms": 54,
+              "human_atoms": 21,
+              "matched_machine": 11,
+              "matched_human": 11,
+              "micro": {
+                "precision": 0.2037,
+                "recall": 0.5238,
+                "f1": 0.2933
+              },
+              "macro": {
+                "precision": 0.2489,
+                "n_precision": 6,
+                "recall": 0.6792,
+                "n_recall": 4,
+                "f1": 0.4205,
+                "n_f1": 4
+              }
+            }
+          }
+        },
+        "containment_0.6": {
+          "matcher": "containment (many-to-one)",
+          "threshold": 0.6,
+          "overall": {
+            "items": 30,
+            "machine_atoms": 231,
+            "human_atoms": 148,
+            "matched_machine": 123,
+            "matched_human": 126,
+            "micro": {
+              "precision": 0.5325,
+              "recall": 0.8514,
+              "f1": 0.6552
+            },
+            "macro": {
+              "precision": 0.5466,
+              "n_precision": 30,
+              "recall": 0.8962,
+              "n_recall": 24,
+              "f1": 0.7571,
+              "n_f1": 24
+            }
+          },
+          "by_model": {
+            "dclm-7b": {
+              "items": 6,
+              "machine_atoms": 52,
+              "human_atoms": 30,
+              "matched_machine": 26,
+              "matched_human": 28,
+              "micro": {
+                "precision": 0.5,
+                "recall": 0.9333,
+                "f1": 0.6512
+              },
+              "macro": {
+                "precision": 0.4704,
+                "n_precision": 6,
+                "recall": 0.9226,
+                "n_recall": 4,
+                "f1": 0.7972,
+                "n_f1": 4
+              }
+            },
+            "olmo17-7b": {
+              "items": 6,
+              "machine_atoms": 33,
+              "human_atoms": 25,
+              "matched_machine": 22,
+              "matched_human": 24,
+              "micro": {
+                "precision": 0.6667,
+                "recall": 0.96,
+                "f1": 0.7869
+              },
+              "macro": {
+                "precision": 0.6079,
+                "n_precision": 6,
+                "recall": 0.9667,
+                "n_recall": 5,
+                "f1": 0.8284,
+                "n_f1": 5
+              }
+            },
+            "olmo2-7b": {
+              "items": 6,
+              "machine_atoms": 37,
+              "human_atoms": 26,
+              "matched_machine": 28,
+              "matched_human": 25,
+              "micro": {
+                "precision": 0.7568,
+                "recall": 0.9615,
+                "f1": 0.847
+              },
+              "macro": {
+                "precision": 0.7631,
+                "n_precision": 6,
+                "recall": 0.9762,
+                "n_recall": 6,
+                "f1": 0.8528,
+                "n_f1": 6
+              }
+            },
+            "pythia-69b": {
+              "items": 6,
+              "machine_atoms": 55,
+              "human_atoms": 46,
+              "matched_machine": 30,
+              "matched_human": 32,
+              "micro": {
+                "precision": 0.5455,
+                "recall": 0.6957,
+                "f1": 0.6115
+              },
+              "macro": {
+                "precision": 0.5185,
+                "n_precision": 6,
+                "recall": 0.7487,
+                "n_recall": 5,
+                "f1": 0.6498,
+                "n_f1": 5
+              }
+            },
+            "redpajama-7b": {
+              "items": 6,
+              "machine_atoms": 54,
+              "human_atoms": 21,
+              "matched_machine": 17,
+              "matched_human": 17,
+              "micro": {
+                "precision": 0.3148,
+                "recall": 0.8095,
+                "f1": 0.4533
+              },
+              "macro": {
+                "precision": 0.3728,
+                "n_precision": 6,
+                "recall": 0.8458,
+                "n_recall": 4,
+                "f1": 0.6185,
+                "n_f1": 4
+              }
+            }
+          }
+        },
+        "one_to_one_0.6": {
+          "matcher": "one-to-one token overlap",
+          "threshold": 0.6,
+          "overall": {
+            "items": 30,
+            "machine_atoms": 231,
+            "human_atoms": 148,
+            "matched": 90,
+            "micro": {
+              "precision": 0.3896,
+              "recall": 0.6081,
+              "f1": 0.4749
+            },
+            "macro": {
+              "precision": 0.4103,
+              "n_precision": 30,
+              "recall": 0.7125,
+              "n_recall": 24,
+              "f1": 0.5599,
+              "n_f1": 24
+            }
+          },
+          "by_model": {
+            "dclm-7b": {
+              "items": 6,
+              "machine_atoms": 52,
+              "human_atoms": 30,
+              "matched": 17,
+              "micro": {
+                "precision": 0.3269,
+                "recall": 0.5667,
+                "f1": 0.4146
+              },
+              "macro": {
+                "precision": 0.3111,
+                "n_precision": 6,
+                "recall": 0.556,
+                "n_recall": 4,
+                "f1": 0.5045,
+                "n_f1": 4
+              }
+            },
+            "olmo17-7b": {
+              "items": 6,
+              "machine_atoms": 33,
+              "human_atoms": 25,
+              "matched": 16,
+              "micro": {
+                "precision": 0.4848,
+                "recall": 0.64,
+                "f1": 0.5517
+              },
+              "macro": {
+                "precision": 0.4476,
+                "n_precision": 6,
+                "recall": 0.7555,
+                "n_recall": 5,
+                "f1": 0.5765,
+                "n_f1": 5
+              }
+            },
+            "olmo2-7b": {
+              "items": 6,
+              "machine_atoms": 37,
+              "human_atoms": 26,
+              "matched": 23,
+              "micro": {
+                "precision": 0.6216,
+                "recall": 0.8846,
+                "f1": 0.7302
+              },
+              "macro": {
+                "precision": 0.6155,
+                "n_precision": 6,
+                "recall": 0.9286,
+                "n_recall": 6,
+                "f1": 0.7208,
+                "n_f1": 6
+              }
+            },
+            "pythia-69b": {
+              "items": 6,
+              "machine_atoms": 55,
+              "human_atoms": 46,
+              "matched": 21,
+              "micro": {
+                "precision": 0.3818,
+                "recall": 0.4565,
+                "f1": 0.4158
+              },
+              "macro": {
+                "precision": 0.3796,
+                "n_precision": 6,
+                "recall": 0.5085,
+                "n_recall": 5,
+                "f1": 0.4584,
+                "n_f1": 5
+              }
+            },
+            "redpajama-7b": {
+              "items": 6,
+              "machine_atoms": 54,
+              "human_atoms": 21,
+              "matched": 13,
+              "micro": {
+                "precision": 0.2407,
+                "recall": 0.619,
+                "f1": 0.3467
+              },
+              "macro": {
+                "precision": 0.2975,
+                "n_precision": 6,
+                "recall": 0.7458,
+                "n_recall": 4,
+                "f1": 0.4802,
+                "n_f1": 4
+              }
+            }
+          }
+        }
+      }
+    },
+    "simplification": {
+      "filtered": {
+        "join_notes": [],
+        "containment_0.8": {
+          "matcher": "containment (many-to-one)",
+          "threshold": 0.8,
+          "overall": {
+            "items": 30,
+            "machine_atoms": 177,
+            "human_atoms": 149,
+            "matched_machine": 108,
+            "matched_human": 117,
+            "micro": {
+              "precision": 0.6102,
+              "recall": 0.7852,
+              "f1": 0.6867
+            },
+            "macro": {
+              "precision": 0.6115,
+              "n_precision": 30,
+              "recall": 0.832,
+              "n_recall": 25,
+              "f1": 0.7479,
+              "n_f1": 25
+            }
+          },
+          "by_model": {
+            "dclm-7b": {
+              "items": 6,
+              "machine_atoms": 40,
+              "human_atoms": 35,
+              "matched_machine": 22,
+              "matched_human": 26,
+              "micro": {
+                "precision": 0.55,
+                "recall": 0.7429,
+                "f1": 0.6321
+              },
+              "macro": {
+                "precision": 0.4566,
+                "n_precision": 6,
+                "recall": 0.7216,
+                "n_recall": 4,
+                "f1": 0.7017,
+                "n_f1": 4
+              }
+            },
+            "olmo17-7b": {
+              "items": 6,
+              "machine_atoms": 23,
+              "human_atoms": 19,
+              "matched_machine": 12,
+              "matched_human": 13,
+              "micro": {
+                "precision": 0.5217,
+                "recall": 0.6842,
+                "f1": 0.592
+              },
+              "macro": {
+                "precision": 0.6292,
+                "n_precision": 6,
+                "recall": 0.7417,
+                "n_recall": 5,
+                "f1": 0.6981,
+                "n_f1": 5
+              }
+            },
+            "olmo2-7b": {
+              "items": 6,
+              "machine_atoms": 21,
+              "human_atoms": 17,
+              "matched_machine": 17,
+              "matched_human": 17,
+              "micro": {
+                "precision": 0.8095,
+                "recall": 1.0,
+                "f1": 0.8947
+              },
+              "macro": {
+                "precision": 0.8139,
+                "n_precision": 6,
+                "recall": 1.0,
+                "n_recall": 6,
+                "f1": 0.8743,
+                "n_f1": 6
+              }
+            },
+            "pythia-69b": {
+              "items": 6,
+              "machine_atoms": 50,
+              "human_atoms": 55,
+              "matched_machine": 36,
+              "matched_human": 38,
+              "micro": {
+                "precision": 0.72,
+                "recall": 0.6909,
+                "f1": 0.7051
+              },
+              "macro": {
+                "precision": 0.5507,
+                "n_precision": 6,
+                "recall": 0.641,
+                "n_recall": 5,
+                "f1": 0.6473,
+                "n_f1": 5
+              }
+            },
+            "redpajama-7b": {
+              "items": 6,
+              "machine_atoms": 43,
+              "human_atoms": 23,
+              "matched_machine": 21,
+              "matched_human": 23,
+              "micro": {
+                "precision": 0.4884,
+                "recall": 1.0,
+                "f1": 0.6563
+              },
+              "macro": {
+                "precision": 0.6071,
+                "n_precision": 6,
+                "recall": 1.0,
+                "n_recall": 5,
+                "f1": 0.7834,
+                "n_f1": 5
+              }
+            }
+          }
+        },
+        "containment_0.6": {
+          "matcher": "containment (many-to-one)",
+          "threshold": 0.6,
+          "overall": {
+            "items": 30,
+            "machine_atoms": 177,
+            "human_atoms": 149,
+            "matched_machine": 125,
+            "matched_human": 134,
+            "micro": {
+              "precision": 0.7062,
+              "recall": 0.8993,
+              "f1": 0.7911
+            },
+            "macro": {
+              "precision": 0.7042,
+              "n_precision": 30,
+              "recall": 0.9203,
+              "n_recall": 25,
+              "f1": 0.8547,
+              "n_f1": 25
+            }
+          },
+          "by_model": {
+            "dclm-7b": {
+              "items": 6,
+              "machine_atoms": 40,
+              "human_atoms": 35,
+              "matched_machine": 28,
+              "matched_human": 31,
+              "micro": {
+                "precision": 0.7,
+                "recall": 0.8857,
+                "f1": 0.782
+              },
+              "macro": {
+                "precision": 0.625,
+                "n_precision": 6,
+                "recall": 0.9006,
+                "n_recall": 4,
+                "f1": 0.918,
+                "n_f1": 4
+              }
+            },
+            "olmo17-7b": {
+              "items": 6,
+              "machine_atoms": 23,
+              "human_atoms": 19,
+              "matched_machine": 15,
+              "matched_human": 16,
+              "micro": {
+                "precision": 0.6522,
+                "recall": 0.8421,
+                "f1": 0.7351
+              },
+              "macro": {
+                "precision": 0.7167,
+                "n_precision": 6,
+                "recall": 0.8417,
+                "n_recall": 5,
+                "f1": 0.8051,
+                "n_f1": 5
+              }
+            },
+            "olmo2-7b": {
+              "items": 6,
+              "machine_atoms": 21,
+              "human_atoms": 17,
+              "matched_machine": 19,
+              "matched_human": 17,
+              "micro": {
+                "precision": 0.9048,
+                "recall": 1.0,
+                "f1": 0.95
+              },
+              "macro": {
+                "precision": 0.9111,
+                "n_precision": 6,
+                "recall": 1.0,
+                "n_recall": 6,
+                "f1": 0.9482,
+                "n_f1": 6
+              }
+            },
+            "pythia-69b": {
+              "items": 6,
+              "machine_atoms": 50,
+              "human_atoms": 55,
+              "matched_machine": 41,
+              "matched_human": 47,
+              "micro": {
+                "precision": 0.82,
+                "recall": 0.8545,
+                "f1": 0.8369
+              },
+              "macro": {
+                "precision": 0.6518,
+                "n_precision": 6,
+                "recall": 0.8392,
+                "n_recall": 5,
+                "f1": 0.8036,
+                "n_f1": 5
+              }
+            },
+            "redpajama-7b": {
+              "items": 6,
+              "machine_atoms": 43,
+              "human_atoms": 23,
+              "matched_machine": 22,
+              "matched_human": 23,
+              "micro": {
+                "precision": 0.5116,
+                "recall": 1.0,
+                "f1": 0.6769
+              },
+              "macro": {
+                "precision": 0.6164,
+                "n_precision": 6,
+                "recall": 1.0,
+                "n_recall": 5,
+                "f1": 0.7929,
+                "n_f1": 5
+              }
+            }
+          }
+        },
+        "one_to_one_0.6": {
+          "matcher": "one-to-one token overlap",
+          "threshold": 0.6,
+          "overall": {
+            "items": 30,
+            "machine_atoms": 177,
+            "human_atoms": 149,
+            "matched": 88,
+            "micro": {
+              "precision": 0.4972,
+              "recall": 0.5906,
+              "f1": 0.5399
+            },
+            "macro": {
+              "precision": 0.5302,
+              "n_precision": 30,
+              "recall": 0.6919,
+              "n_recall": 25,
+              "f1": 0.6403,
+              "n_f1": 25
+            }
+          },
+          "by_model": {
+            "dclm-7b": {
+              "items": 6,
+              "machine_atoms": 40,
+              "human_atoms": 35,
+              "matched": 21,
+              "micro": {
+                "precision": 0.525,
+                "recall": 0.6,
+                "f1": 0.56
+              },
+              "macro": {
+                "precision": 0.4661,
+                "n_precision": 6,
+                "recall": 0.6053,
+                "n_recall": 4,
+                "f1": 0.6467,
+                "n_f1": 4
+              }
+            },
+            "olmo17-7b": {
+              "items": 6,
+              "machine_atoms": 23,
+              "human_atoms": 19,
+              "matched": 11,
+              "micro": {
+                "precision": 0.4783,
+                "recall": 0.5789,
+                "f1": 0.5238
+              },
+              "macro": {
+                "precision": 0.4833,
+                "n_precision": 6,
+                "recall": 0.6667,
+                "n_recall": 5,
+                "f1": 0.6022,
+                "n_f1": 5
+              }
+            },
+            "olmo2-7b": {
+              "items": 6,
+              "machine_atoms": 21,
+              "human_atoms": 17,
+              "matched": 16,
+              "micro": {
+                "precision": 0.7619,
+                "recall": 0.9412,
+                "f1": 0.8421
+              },
+              "macro": {
+                "precision": 0.7722,
+                "n_precision": 6,
+                "recall": 0.9667,
+                "n_recall": 6,
+                "f1": 0.8278,
+                "n_f1": 6
+              }
+            },
+            "pythia-69b": {
+              "items": 6,
+              "machine_atoms": 50,
+              "human_atoms": 55,
+              "matched": 24,
+              "micro": {
+                "precision": 0.48,
+                "recall": 0.4364,
+                "f1": 0.4571
+              },
+              "macro": {
+                "precision": 0.4334,
+                "n_precision": 6,
+                "recall": 0.4654,
+                "n_recall": 5,
+                "f1": 0.4838,
+                "n_f1": 5
+              }
+            },
+            "redpajama-7b": {
+              "items": 6,
+              "machine_atoms": 43,
+              "human_atoms": 23,
+              "matched": 16,
+              "micro": {
+                "precision": 0.3721,
+                "recall": 0.6957,
+                "f1": 0.4848
+              },
+              "macro": {
+                "precision": 0.496,
+                "n_precision": 6,
+                "recall": 0.6833,
+                "n_recall": 5,
+                "f1": 0.6047,
+                "n_f1": 5
+              }
+            }
+          }
+        }
+      },
+      "raw": {
+        "join_notes": [],
+        "containment_0.8": {
+          "matcher": "containment (many-to-one)",
+          "threshold": 0.8,
+          "overall": {
+            "items": 30,
+            "machine_atoms": 221,
+            "human_atoms": 149,
+            "matched_machine": 108,
+            "matched_human": 117,
+            "micro": {
+              "precision": 0.4887,
+              "recall": 0.7852,
+              "f1": 0.6024
+            },
+            "macro": {
+              "precision": 0.462,
+              "n_precision": 30,
+              "recall": 0.832,
+              "n_recall": 25,
+              "f1": 0.6417,
+              "n_f1": 25
+            }
+          },
+          "by_model": {
+            "dclm-7b": {
+              "items": 6,
+              "machine_atoms": 48,
+              "human_atoms": 35,
+              "matched_machine": 22,
+              "matched_human": 26,
+              "micro": {
+                "precision": 0.4583,
+                "recall": 0.7429,
+                "f1": 0.5669
+              },
+              "macro": {
+                "precision": 0.3843,
+                "n_precision": 6,
+                "recall": 0.7216,
+                "n_recall": 4,
+                "f1": 0.6369,
+                "n_f1": 4
+              }
+            },
+            "olmo17-7b": {
+              "items": 6,
+              "machine_atoms": 33,
+              "human_atoms": 19,
+              "matched_machine": 12,
+              "matched_human": 13,
+              "micro": {
+                "precision": 0.3636,
+                "recall": 0.6842,
+                "f1": 0.4749
+              },
+              "macro": {
+                "precision": 0.4056,
+                "n_precision": 6,
+                "recall": 0.7417,
+                "n_recall": 5,
+                "f1": 0.5515,
+                "n_f1": 5
+              }
+            },
+            "olmo2-7b": {
+              "items": 6,
+              "machine_atoms": 26,
+              "human_atoms": 17,
+              "matched_machine": 17,
+              "matched_human": 17,
+              "micro": {
+                "precision": 0.6538,
+                "recall": 1.0,
+                "f1": 0.7907
+              },
+              "macro": {
+                "precision": 0.6167,
+                "n_precision": 6,
+                "recall": 1.0,
+                "n_recall": 6,
+                "f1": 0.7491,
+                "n_f1": 6
+              }
+            },
+            "pythia-69b": {
+              "items": 6,
+              "machine_atoms": 62,
+              "human_atoms": 55,
+              "matched_machine": 36,
+              "matched_human": 38,
+              "micro": {
+                "precision": 0.5806,
+                "recall": 0.6909,
+                "f1": 0.631
+              },
+              "macro": {
+                "precision": 0.4815,
+                "n_precision": 6,
+                "recall": 0.641,
+                "n_recall": 5,
+                "f1": 0.6053,
+                "n_f1": 5
+              }
+            },
+            "redpajama-7b": {
+              "items": 6,
+              "machine_atoms": 52,
+              "human_atoms": 23,
+              "matched_machine": 21,
+              "matched_human": 23,
+              "micro": {
+                "precision": 0.4038,
+                "recall": 1.0,
+                "f1": 0.5753
+              },
+              "macro": {
+                "precision": 0.422,
+                "n_precision": 6,
+                "recall": 1.0,
+                "n_recall": 5,
+                "f1": 0.643,
+                "n_f1": 5
+              }
+            }
+          }
+        },
+        "containment_0.6": {
+          "matcher": "containment (many-to-one)",
+          "threshold": 0.6,
+          "overall": {
+            "items": 30,
+            "machine_atoms": 221,
+            "human_atoms": 149,
+            "matched_machine": 125,
+            "matched_human": 134,
+            "micro": {
+              "precision": 0.5656,
+              "recall": 0.8993,
+              "f1": 0.6944
+            },
+            "macro": {
+              "precision": 0.5388,
+              "n_precision": 30,
+              "recall": 0.9203,
+              "n_recall": 25,
+              "f1": 0.7389,
+              "n_f1": 25
+            }
+          },
+          "by_model": {
+            "dclm-7b": {
+              "items": 6,
+              "machine_atoms": 48,
+              "human_atoms": 35,
+              "matched_machine": 28,
+              "matched_human": 31,
+              "micro": {
+                "precision": 0.5833,
+                "recall": 0.8857,
+                "f1": 0.7034
+              },
+              "macro": {
+                "precision": 0.5113,
+                "n_precision": 6,
+                "recall": 0.9006,
+                "n_recall": 4,
+                "f1": 0.8262,
+                "n_f1": 4
+              }
+            },
+            "olmo17-7b": {
+              "items": 6,
+              "machine_atoms": 33,
+              "human_atoms": 19,
+              "matched_machine": 15,
+              "matched_human": 16,
+              "micro": {
+                "precision": 0.4545,
+                "recall": 0.8421,
+                "f1": 0.5904
+              },
+              "macro": {
+                "precision": 0.4796,
+                "n_precision": 6,
+                "recall": 0.8417,
+                "n_recall": 5,
+                "f1": 0.6501,
+                "n_f1": 5
+              }
+            },
+            "olmo2-7b": {
+              "items": 6,
+              "machine_atoms": 26,
+              "human_atoms": 17,
+              "matched_machine": 19,
+              "matched_human": 17,
+              "micro": {
+                "precision": 0.7308,
+                "recall": 1.0,
+                "f1": 0.8445
+              },
+              "macro": {
+                "precision": 0.7056,
+                "n_precision": 6,
+                "recall": 1.0,
+                "n_recall": 6,
+                "f1": 0.8222,
+                "n_f1": 6
+              }
+            },
+            "pythia-69b": {
+              "items": 6,
+              "machine_atoms": 62,
+              "human_atoms": 55,
+              "matched_machine": 41,
+              "matched_human": 47,
+              "micro": {
+                "precision": 0.6613,
+                "recall": 0.8545,
+                "f1": 0.7456
+              },
+              "macro": {
+                "precision": 0.5667,
+                "n_precision": 6,
+                "recall": 0.8392,
+                "n_recall": 5,
+                "f1": 0.7442,
+                "n_f1": 5
+              }
+            },
+            "redpajama-7b": {
+              "items": 6,
+              "machine_atoms": 52,
+              "human_atoms": 23,
+              "matched_machine": 22,
+              "matched_human": 23,
+              "micro": {
+                "precision": 0.4231,
+                "recall": 1.0,
+                "f1": 0.5946
+              },
+              "macro": {
+                "precision": 0.4308,
+                "n_precision": 6,
+                "recall": 1.0,
+                "n_recall": 5,
+                "f1": 0.6524,
+                "n_f1": 5
+              }
+            }
+          }
+        },
+        "one_to_one_0.6": {
+          "matcher": "one-to-one token overlap",
+          "threshold": 0.6,
+          "overall": {
+            "items": 30,
+            "machine_atoms": 221,
+            "human_atoms": 149,
+            "matched": 88,
+            "micro": {
+              "precision": 0.3982,
+              "recall": 0.5906,
+              "f1": 0.4757
+            },
+            "macro": {
+              "precision": 0.401,
+              "n_precision": 30,
+              "recall": 0.6919,
+              "n_recall": 25,
+              "f1": 0.5477,
+              "n_f1": 25
+            }
+          },
+          "by_model": {
+            "dclm-7b": {
+              "items": 6,
+              "machine_atoms": 48,
+              "human_atoms": 35,
+              "matched": 21,
+              "micro": {
+                "precision": 0.4375,
+                "recall": 0.6,
+                "f1": 0.506
+              },
+              "macro": {
+                "precision": 0.3831,
+                "n_precision": 6,
+                "recall": 0.6053,
+                "n_recall": 4,
+                "f1": 0.587,
+                "n_f1": 4
+              }
+            },
+            "olmo17-7b": {
+              "items": 6,
+              "machine_atoms": 33,
+              "human_atoms": 19,
+              "matched": 11,
+              "micro": {
+                "precision": 0.3333,
+                "recall": 0.5789,
+                "f1": 0.4231
+              },
+              "macro": {
+                "precision": 0.3268,
+                "n_precision": 6,
+                "recall": 0.6667,
+                "n_recall": 5,
+                "f1": 0.4708,
+                "n_f1": 5
+              }
+            },
+            "olmo2-7b": {
+              "items": 6,
+              "machine_atoms": 26,
+              "human_atoms": 17,
+              "matched": 16,
+              "micro": {
+                "precision": 0.6154,
+                "recall": 0.9412,
+                "f1": 0.7442
+              },
+              "macro": {
+                "precision": 0.5833,
+                "n_precision": 6,
+                "recall": 0.9667,
+                "n_recall": 6,
+                "f1": 0.7072,
+                "n_f1": 6
+              }
+            },
+            "pythia-69b": {
+              "items": 6,
+              "machine_atoms": 62,
+              "human_atoms": 55,
+              "matched": 24,
+              "micro": {
+                "precision": 0.3871,
+                "recall": 0.4364,
+                "f1": 0.4103
+              },
+              "macro": {
+                "precision": 0.3718,
+                "n_precision": 6,
+                "recall": 0.4654,
+                "n_recall": 5,
+                "f1": 0.4505,
+                "n_f1": 5
+              }
+            },
+            "redpajama-7b": {
+              "items": 6,
+              "machine_atoms": 52,
+              "human_atoms": 23,
+              "matched": 16,
+              "micro": {
+                "precision": 0.3077,
+                "recall": 0.6957,
+                "f1": 0.4267
+              },
+              "macro": {
+                "precision": 0.3401,
+                "n_precision": 6,
+                "recall": 0.6833,
+                "n_recall": 5,
+                "f1": 0.4991,
+                "n_f1": 5
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "stress_test_set2": {
+    "seed": 20261009,
+    "rater": "a second rater, blind (the matcher's score and call hidden), with the pass 2 question and written instructions",
+    "by_threshold": {
+      "0.4": {
+        "agree": 23,
+        "n": 30,
+        "matcher_inside_person_not": 6,
+        "matcher_not_person_inside": 1
+      },
+      "0.5": {
+        "agree": 23,
+        "n": 30,
+        "matcher_inside_person_not": 6,
+        "matcher_not_person_inside": 1
+      },
+      "0.6": {
+        "agree": 25,
+        "n": 30,
+        "matcher_inside_person_not": 3,
+        "matcher_not_person_inside": 2
+      },
+      "0.7": {
+        "agree": 26,
+        "n": 30,
+        "matcher_inside_person_not": 2,
+        "matcher_not_person_inside": 2
+      },
+      "0.8": {
+        "agree": 25,
+        "n": 30,
+        "matcher_inside_person_not": 1,
+        "matcher_not_person_inside": 4
+      },
+      "0.9": {
+        "agree": 21,
+        "n": 30,
+        "matcher_inside_person_not": 1,
+        "matcher_not_person_inside": 8
+      }
+    },
+    "by_task_at_0.8": {
+      "biographies": 9,
+      "summarization": 8,
+      "simplification": 8
+    },
+    "pairs_shared_with_set1": 2,
+    "shared_pairs_agree_with_po": 1
+  },
+  "stress_test_combined": {
+    "0.4": {
+      "agree": 46,
+      "n": 60,
+      "matcher_inside_person_not": 12,
+      "matcher_not_person_inside": 2
+    },
+    "0.5": {
+      "agree": 47,
+      "n": 60,
+      "matcher_inside_person_not": 11,
+      "matcher_not_person_inside": 2
+    },
+    "0.6": {
+      "agree": 50,
+      "n": 60,
+      "matcher_inside_person_not": 6,
+      "matcher_not_person_inside": 4
+    },
+    "0.7": {
+      "agree": 50,
+      "n": 60,
+      "matcher_inside_person_not": 4,
+      "matcher_not_person_inside": 6
+    },
+    "0.8": {
+      "agree": 50,
+      "n": 60,
+      "matcher_inside_person_not": 1,
+      "matcher_not_person_inside": 9
+    },
+    "0.9": {
+      "agree": 45,
+      "n": 60,
+      "matcher_inside_person_not": 1,
+      "matcher_not_person_inside": 14
+    }
+  },
+  "matcher_note": "Scores and stress-test calls from the matcher after its review (10 Oct): negation guard, -e plurals, apostrophes, 'the speaker' and lower-case name words. The pairs and the people's judgments are unchanged; only the matcher's scores were redone."
+}
