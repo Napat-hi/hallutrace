@@ -61,6 +61,7 @@ with our patches applied, and the prompts are referenced by id.
 | `scripts/c_exec_untyped.py`, `hallutrace/c_exec_untyped.py`, `scripts/c_exec_nh_sensitivity.py` | Types for the Biographies year slots, the exact-phrase check on unknown counts, the F5 range, and a worst case for false matches in wrong-year counts |
 | `scripts/c_exec2.py`, `hallutrace/c_exec2.py` | The label per Biographies year slot (intervention point, confidence, flags), the tau sweep, and the T5 and F5 tables |
 | `scripts/year_judge_packet.py` | The annotation packet that checks the Wikidata year judge |
+| `scripts/supp_tables.py`, `results/supplementary/` | T1 (h per task and model, before and after the unit filter, with the regime counts) and T2 (every sampled generation by outcome), built from two runs of `scripts/stability.py` |
 | `results/e3/` | The hand decomposition check: precision, recall and F1 per task with 95% bootstrap intervals (`t4.csv`), and the matcher's two 30-pair stress tests |
 | `results/c_exec/`, `results/c_exec2/` | Historical-events counts, the Biographies year-slot types, phrase checks and F5 range, and the label for each slot with the tau sweep. CSV files only for now; the summaries and run metadata follow |
 | `annotation/` | Human labels: the verifier check (50 units per task, two annotators, adjudicated gold, agreement) and the hand decomposition check; see `annotation/README.md` |
