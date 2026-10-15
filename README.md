@@ -90,6 +90,46 @@ not mix it with ours: re-export all three shards to merge your own. Re-exporting
 window cache, which holds corpus text and is not released, so a rerun starts with
 `scripts/fetch_windows.py`.
 
+## Supplementary material
+
+The paper's supplementary tables and figures, and where each one is in this repository.
+
+| Label | What it shows | File |
+|---|---|---|
+| T1 | h per task and model, before and after the unit filter, with usable samples and regime counts | `results/supplementary/t1_h_by_task_model.csv` |
+| T2 | Every sampled generation by outcome: usable, zero units, abstention, empty, emptied, missing | `results/supplementary/t2_outcomes_by_task_model.csv` |
+| T3 | Verifier validation per task: verifier kappa or extractor accuracy against gold with 95% intervals, the gate, and annotator kappa | `annotation/e1/<task>/agreement.json` |
+| T4 | The hand decomposition check: precision, recall and F1 of the decomposer's atoms, with 95% bootstrap intervals | `results/e3/t4.csv` (labels in `annotation/e3/`) |
+| T5 | Biographies birth and death year slots per model, by stability regime and corpus-count type | `results/c_exec2/t5.csv` |
+| F1 | h per task and model as a plot, filtered with raw beside it | `results/supplementary/figures/` (to follow) |
+| F2 | Units dropped by the unit filter, by reason and task | `results/supplementary/figures/` (to follow) |
+| F3 | Confusion matrices, verifier against gold and annotator against annotator, one per task | `results/supplementary/figures/` (to follow); the matrices are in each `agreement.json` |
+| F4 | Stability regime shares by task and model | `results/supplementary/figures/` (to follow) |
+| F5 | Intervention point shares per model, as a range where the counts leave the point open | `results/c_exec2/f5_by_model.csv` |
+| Corpus counts | Correct and wrong year counts per name in each model's corpus, and tau per model | `results/bio_counts/merged/` (Biographies), `results/c_exec/he_counts.csv` and `he_tau.csv` (Historical Events) |
+| Deviations | Every change to HALoGEN's released code | `docs/DEVIATIONS.md` |
+| Methods | Sample, models, generation, reproducibility, verification and compute in full | `docs/supplementary_methods.md` |
+
+**Quarantined tasks.** Each task's verifier was checked against 50 human-labelled units before
+its numbers could enter the analysis. A task is accepted at kappa 0.8 (accuracy 0.9 for the
+three extraction tasks), tentative at 0.667 (0.8), and quarantined below. All eight verifiers
+are quarantined, so their h appears only here, with its gate number beside it:
+
+| Task | Measure | Value | 95% interval |
+|---|---|---|---|
+| Biographies | verifier kappa | 0.15 | 0.03–0.28 |
+| Historical Events | verifier kappa | 0.52 | 0.35–0.70 |
+| Scientific Attribution | verifier kappa | 0.20 | 0.05–0.36 |
+| Summarization | verifier kappa | 0.60 | 0.44–0.75 |
+| Simplification | verifier kappa | 0.44 | 0.28–0.62 |
+| False Presuppositions | extractor accuracy | 0.66 | 0.52–0.78 |
+| Rationalization (Binary) | extractor accuracy | 0.70 | 0.56–0.81 |
+| Rationalization (Numerical) | extractor accuracy | 0.58 | 0.44–0.71 |
+
+The Biographies year claims behind T5 and F5 are judged by Wikidata, not by the Biographies
+verifier, and that judge was checked separately: kappa 0.79 (0.64–0.92), tentative
+(`annotation/e1/biographies_years/agreement.json`).
+
 ## Setup
 
 ```
