@@ -46,6 +46,17 @@ with our patches applied, and the prompts are referenced by id.
 | `scripts/agreement.py`, `hallutrace/agreement.py` | Agreement: annotator kappa, verifier kappa or extractor accuracy against gold, confusion matrices, intervals and the adjudication file |
 | `scripts/e3_score.py`, `hallutrace/e3_score.py` | The hand decomposition check: the decomposer's atoms against a person's, precision, recall and F1 |
 | `scripts/stability.py`, `hallutrace/stability.py` | h per item over the five samples on all eight tasks, and the regime per Biographies birth and death year |
+| `hallutrace/claim_key.py`, `hallutrace/relations.py` | When two differently worded claims are one claim, and the relation vocabulary loader |
+| `scripts/fetch_windows.py`, `hallutrace/fetch_names.py`, `hallutrace/fetch_sampling.py`, `hallutrace/infinigram.py` | The infini-gram search: query strings from prompt names, which occurrences to download, and the rate-limited client with its window cache (corpus text, kept local and never released) |
+| `hallutrace/fact_match.py`, `hallutrace/pilot_counts.py`, `scripts/pilot_counts.py`, `scripts/pilot_rule_check.py` | Year matching in a window, counts of correct birth and death years near a name, and the check of the counting rule |
+| `scripts/build_alias_table.py`, `data/alias_table.json`, `data/alias_overrides.json`, `data/alias_build/` | Prompt names to Wikidata items: the snapshot, the hand overrides and the table built from them |
+| `scripts/bio_year_claims.py`, `hallutrace/bio_years.py`, `scripts/fetch_namesake_years.py` | Biographies birth and death year claims judged against Wikidata, with the years of each name's namesakes |
+| `scripts/bio_conflation.py`, `hallutrace/bio_conflation.py` | Whether wrong years come from a namesake, against two chance baselines |
+| `scripts/bio_counts.py`, `hallutrace/bio_counts.py`, `results/bio_counts/merged/tau.csv` | Biographies corpus counts per fetch shard, the merge's checks, and tau per model |
+| `scripts/c_exec_tau.py`, `hallutrace/c_exec_tau.py`, `results/c_exec/he_tau.csv` | Historical-events tau per model, at every cutoff from the 5th to the 20th percentile |
+| `scripts/c_exec_untyped.py`, `hallutrace/c_exec_untyped.py`, `scripts/c_exec_nh_sensitivity.py` | Types for the Biographies year slots, the exact-phrase check on unknown counts, the F5 range, and a worst case for false matches in wrong-year counts |
+| `scripts/c_exec2.py`, `hallutrace/c_exec2.py` | The label per Biographies year slot (intervention point, confidence, flags), the tau sweep, and the T5 and F5 tables |
+| `scripts/year_judge_packet.py` | The annotation packet that checks the Wikidata year judge |
 | `tests/`, `scripts/run_tests.py` | Tests; no API key or network needed |
 
 Scripts write to `outputs/` (not tracked) unless told otherwise.
