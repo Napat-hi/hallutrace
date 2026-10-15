@@ -152,7 +152,7 @@ check(not bad_qid,
       "every qid is null or a valid QID (%d bad: %r)" % (len(bad_qid), bad_qid[:5]))
 
 if prompt_names is None:
-    skip("override-key check needs external/HALoGEN, see AGENTS.md Setup")
+    skip("override-key check needs external/HALoGEN, see README Setup")
 else:
     name_set = {n["name"] for n in prompt_names}
     bad_override_keys = [k for k in overrides if k not in name_set]
@@ -163,7 +163,7 @@ else:
 
 print("4. coverage: every prompt name is reachable")
 if prompt_names is None:
-    skip("coverage check needs external/HALoGEN, see AGENTS.md Setup")
+    skip("coverage check needs external/HALoGEN, see README Setup")
 else:
     # A name with no override was auto-accepted (build refuses to exit 0
     # otherwise), so its decided QID is the snapshot's own
@@ -210,7 +210,7 @@ print("6. determinism: build --out is byte-identical to the committed table")
 if prompt_names is None:
     # build reads the prompt names from external/HALoGEN, so it cannot run
     # without it; skipped like sections 3, 4 and 8.
-    skip("determinism check needs external/HALoGEN, see AGENTS.md Setup")
+    skip("determinism check needs external/HALoGEN, see README Setup")
 else:
     with tempfile.TemporaryDirectory() as td:
         out_path = os.path.join(td, "alias_table.json")
@@ -311,7 +311,7 @@ for title_key in ("1927 charlestown shootings", "death of catherine cando"):
 
 print("8. repair_double_encoding was applied to every prompt name")
 if prompt_names is None:
-    skip("repair check needs external/HALoGEN, see AGENTS.md Setup")
+    skip("repair check needs external/HALoGEN, see README Setup")
 else:
     from scripts.draw_sample import repair_double_encoding
     names_now = {n["name"] for n in prompt_names}

@@ -35,6 +35,7 @@ with our patches applied, and the prompts are referenced by id.
 | `modal_app.py` | The Modal app: model download, generation, verification and the Biographies run, one entrypoint per step (`modal run modal_app.py::<name>`); needs the Modal secrets named at its top |
 | `patches/` | Our changes to HALoGEN, applied on top of the pinned commit |
 | `docs/DEVIATIONS.md` | Every change to HALoGEN's released code and why, with the generation settings |
+| `docs/supplementary_methods.md` | Benchmark sample, models, generation, reproducibility, verification and compute, in full |
 | `results/bio_batch_check.json`, `results/bio_filter_generations.json` | The check of batched against unbatched Biographies verification, and the atoms the Biographies filter drops, by model |
 | `locks/` | Exact package versions, locally and in each container image |
 | `hallutrace/` | Shared code: the abstention detector, outcomes and the token-limit tail rule, HALoGEN's extraction prompts and parsers, one wrapper for all verifiers, the LLM client and API cache, verifier inputs, and the Biographies run and filter |
