@@ -52,7 +52,11 @@ with our patches applied, and the prompts are referenced by id.
 | `scripts/build_alias_table.py`, `data/alias_table.json`, `data/alias_overrides.json`, `data/alias_build/` | Prompt names to Wikidata items: the snapshot, the hand overrides and the table built from them |
 | `scripts/bio_year_claims.py`, `hallutrace/bio_years.py`, `scripts/fetch_namesake_years.py` | Biographies birth and death year claims judged against Wikidata, with the years of each name's namesakes |
 | `scripts/bio_conflation.py`, `hallutrace/bio_conflation.py` | Whether wrong years come from a namesake, against two chance baselines |
-| `scripts/bio_counts.py`, `hallutrace/bio_counts.py`, `results/bio_counts/merged/tau.csv` | Biographies corpus counts per fetch shard, the merge's checks, and tau per model |
+| `scripts/bio_counts.py`, `hallutrace/bio_counts.py` | Biographies corpus counts per fetch shard, the merge's checks, and tau per model |
+| `results/bio_year_claims.csv`, `results/bio_year_claims_summary.json` | Every Biographies birth and death year claim, with the Wikidata year and the namesake check |
+| `results/bio_conflation.json`, `results/bio_conflation_candidates.csv` | The namesake test: observed matches against both chance baselines, and the candidate claims |
+| `results/bio_other_person_sample.csv` | 50 wrong-year claims checked by hand for whether the year belongs to someone else |
+| `results/bio_counts/` | Corpus counts per fetch shard (`shard_<i>_of_3/`, numbers only) and their merge (`merged/`: the counts, tau per model and the run's checks) |
 | `scripts/c_exec_tau.py`, `hallutrace/c_exec_tau.py`, `results/c_exec/he_tau.csv` | Historical-events tau per model, at every cutoff from the 5th to the 20th percentile |
 | `scripts/c_exec_untyped.py`, `hallutrace/c_exec_untyped.py`, `scripts/c_exec_nh_sensitivity.py` | Types for the Biographies year slots, the exact-phrase check on unknown counts, the F5 range, and a worst case for false matches in wrong-year counts |
 | `scripts/c_exec2.py`, `hallutrace/c_exec2.py` | The label per Biographies year slot (intervention point, confidence, flags), the tau sweep, and the T5 and F5 tables |
@@ -64,6 +68,15 @@ with our patches applied, and the prompts are referenced by id.
 | `tests/`, `scripts/run_tests.py` | Tests; no API key or network needed |
 
 Scripts write to `outputs/` (not tracked) unless told otherwise.
+
+**The shard files in `results/bio_counts/`** came from our development repository. In each
+shard's `meta.json`, `counting_code_sha256` hashes `hallutrace/pilot_counts.py` and
+`hallutrace/fact_match.py` as they stood before we removed comments for this release, and the
+`*_git_head` fields name commits of that repository. The counting itself did not change. A
+shard re-exported from this repository carries a different hash, so `bio_counts.py merge` will
+not mix it with ours: re-export all three shards to merge your own. Re-exporting needs the
+window cache, which holds corpus text and is not released, so a rerun starts with
+`scripts/fetch_windows.py`.
 
 ## Setup
 
