@@ -261,7 +261,7 @@ def cmd_t4(args):
 
 
 # results\e3\'s stress-test files and the people's columns in each
-STRESS_SETS = (("stress_test.csv", ("po_pass1", "po_pass2")), ("stress_test_set2.csv", ("title",)))
+STRESS_SETS = (("stress_test.csv", ("rater1_pass1", "rater1_pass2")), ("stress_test_set2.csv", ("rater2",)))
 AGREEMENT_THRESHOLDS = ("0.4", "0.5", "0.6", "0.7", "0.8", "0.9")
 
 
@@ -378,12 +378,12 @@ def cmd_rescore(args):
     set1, set2 = stress["stress_test.csv"][2], stress["stress_test_set2.csv"][2]
     try:
         st = summary.setdefault("stress_test", {})
-        st.setdefault("pass1", {})["by_threshold"] = agreement(set1, "po_pass1")
-        st.setdefault("pass2", {})["by_threshold"] = agreement(set1, "po_pass2")
-        st["pass2"]["by_task_at_0.8"] = agreement_by_task(set1, "po_pass2")
+        st.setdefault("pass1", {})["by_threshold"] = agreement(set1, "rater1_pass1")
+        st.setdefault("pass2", {})["by_threshold"] = agreement(set1, "rater1_pass2")
+        st["pass2"]["by_task_at_0.8"] = agreement_by_task(set1, "rater1_pass2")
         s2 = summary.setdefault("stress_test_set2", {})
-        s2["by_threshold"] = agreement(set2, "title")
-        s2["by_task_at_0.8"] = agreement_by_task(set2, "title")
+        s2["by_threshold"] = agreement(set2, "rater2")
+        s2["by_task_at_0.8"] = agreement_by_task(set2, "rater2")
     except ValueError as e:
         print(e, file=sys.stderr)
         return 1

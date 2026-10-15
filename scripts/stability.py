@@ -68,7 +68,7 @@ def main(argv=None):
     if raw:
         write(os.path.join(args.out, "items_raw.csv"), st.ITEM_COLUMNS, raw)
     summary = {"items": st.summary(items), "items_raw": st.summary(raw), "skipped_units": skipped,
-               "outputs": args.outputs, "v2_filter": "#23, posthoc.filter_row" if raw else None}
+               "outputs": args.outputs, "v2_filter": "posthoc.filter_row" if raw else None}
     for name, label in (("items", "items"), ("items_raw", "items as released, no unit filter")):
         if summary[name]:
             print("%s (any hallucinated unit per sample; Biographies from %s):" % (label, args.outputs))

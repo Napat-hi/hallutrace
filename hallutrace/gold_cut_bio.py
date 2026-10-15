@@ -18,7 +18,7 @@ Where the pieces come from (all under the verification output root on hallutrace
                                           paragraphs joined by SPECIAL_SEPARATOR)
 
 The verifier's label is OpenFActScore's verdict: True is supported, False hallucinated.
-`would_drop_23` is always 0 here: the units come from the filtered output.
+`unit_guard_drops` is always 0 here: the units come from the filtered output.
 """
 from __future__ import annotations
 

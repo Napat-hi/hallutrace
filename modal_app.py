@@ -2701,7 +2701,7 @@ def decomp_cut(task: str, seed: str, gen: str = "generations", n: int = 30):
 @app.function(image=bexec_image, volumes={DATA_DIR: data_vol, WIKI_DIR: wiki_vol},
               timeout=30 * 60, memory=8192)
 def bio_gold_cut_run(seed: str, gen: str = "generations", n: int = 100) -> dict:
-    """Draw the Biographies E1 sample from the filtered output and build the packets.
+    """Draw the Biographies annotation sample from the filtered output and build the packets.
 
     Reads `/wiki/factscore/enwiki-20230401.db` read-only (sqlite mode=ro); writes
     nothing to either volume. Returns each packet file's text for the local side."""
@@ -2717,7 +2717,7 @@ def bio_gold_cut_run(seed: str, gen: str = "generations", n: int = 100) -> dict:
     d = gc.draw(gb.TASK, units, seed, n=n)
     found, missing = gb.attach_articles(d.units, f"{FACTSCORE_DIR}/enwiki-20230401.db")
     d.stats.update({"articles_found": found, "articles_missing": missing,
-                    "drawn_from": "outputs_filtered (#23)"})
+                    "drawn_from": "outputs_filtered"})
     out = tempfile.mkdtemp()
     paths = gc.write_packets(d, out, sources=[u.source_file for u in d.units])
     return {name: open(p, encoding="utf-8").read() for name, p in paths.items()}
@@ -2766,7 +2766,7 @@ def bio_passages_run(items: list) -> dict:
 def bio_passages():
     """modal run modal_app.py::bio_passages  ->  results/gold_cut/biographies/passages.json
 
-    For the Biographies E1 packet already drawn: what the validator saw for each atom, so
+    For the Biographies annotation packet already drawn: what the validator saw for each atom, so
     kappa can be split into retrieval and judgement. A key-side file: never send it
     to annotators. CPU, cents."""
     import csv

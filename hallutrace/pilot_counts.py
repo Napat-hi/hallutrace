@@ -657,7 +657,7 @@ def summary_markdown(rows, truncated_share, year_conflicts, extras=None) -> str:
         "kept out of tau). Percentiles use the nearest-rank method (sorted value at rank "
         "ceil(p/100 x n); the median is the 50th percentile, the lower middle value for an "
         "even n) and cover facts with unit `docs` only. The `incl. 0` columns include true "
-        "zeros. `facts n_c>0` and `p10 n_c>0` follow D-011's population (facts with "
+        "zeros. `facts n_c>0` and `p10 n_c>0` follow tau's population (facts with "
         "n_c > 0) restricted to `docs` units: they are still a 20-name preview, NOT tau. "
         "Famous names have sampled pools, so their n_c is in `est_mentions` units and "
         "appears only in the `est_mentions facts` and `median est_mentions` columns, never "

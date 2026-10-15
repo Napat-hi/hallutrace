@@ -319,7 +319,7 @@ def _extractor(golded: List[dict], missing: int, stats: dict) -> dict:
         "edge_crossing": bool(crossed), "edges_crossed": crossed,
         "gold_counts": {l: sum(r["gold"] == l for r in golded) for l in LABELS},
         "gate": accuracy_band(acc),
-        "gate_note": "band %.2f / %.2f (#32), final before annotation (P1-8, #34)"
+        "gate_note": "band %.2f / %.2f, fixed before annotation"
                      % (ACC_ACCEPT, ACC_TENTATIVE),
         "natural": None if w is None else {
             "accuracy": round(sum(o * wi for o, wi in zip(ok, w)) / sum(w), 4),
@@ -390,8 +390,8 @@ def compute(packet: dict) -> dict:
         "gold_tags": {t: sum(r["gold_tag"] == t for r in lab) for t in TAGS},
         "not_a_claim": {
             "n": len(nac),
-            "rule": "dropped when both annotators tagged it (#32); for the verifier's numbers "
-                    "also when adjudication settled it as not a claim (Q9, #72)",
+            "rule": "dropped when both annotators tagged it; for the verifier's numbers "
+                    "also when adjudication settled it as not a claim",
             "marked_by_one": sum(1 for r in lab if r["marked_by_one"]),
             "claim_rows": len(lab) - len(nac),
             "settled_not_a_claim": [r["item_id"] for r in settled],

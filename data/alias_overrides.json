@@ -1,0 +1,422 @@
+{
+ "Akbar Hossain": {
+  "evidence": "wbsearchentities 'Akbar Hossain' limit 10: rejected Q16346309 (Bengali politician, no way to tell from politician vs journalist vs researcher which the prompt means), Q134966147 (journalist/diplomat, same ambiguity), Q57934607 (researcher, same ambiguity), Q138543666 (disambiguation page, not a person), Q4700418 (label Akbar Hussain, different spelling, alias match only)",
+  "qid": null,
+  "reason": "bio, no CSV years, no parenthetical qualifier. wbsearchentities 'Akbar Hossain' returns 3 distinct human items (Q16346309 Bengali politician, Q134966147 Bangladeshi journalist and diplomat, Q57934607 a researcher) plus a Wikidata disambiguation page Q138543666 and an alias hit on a different person (Q4700418 Akbar Hussain). Not a unique, unmistakable match, so null: the default when a match is not unique."
+ },
+ "Alauddin Husain Shah": {
+  "evidence": "https://www.wikidata.org/wiki/Q4060542, https://en.wikipedia.org/wiki/Alauddin_Husain_Shah",
+  "qid": "Q4060542",
+  "reason": "Exact enwiki title, P31 Q5. Wikidata P569 is century precision only (raw value +1450, not a committed year), so it does not contradict CSV birth 1494. Wikidata P570 1519 matches CSV death 1519 exactly, confirmed by the article: after his death in 1519. Near miss, case ii."
+ },
+ "Alexander Macansh": {
+  "evidence": "https://www.wikidata.org/wiki/Q56811889, https://en.wikipedia.org/wiki/Alexander_Macansh",
+  "qid": "Q56811889",
+  "reason": "Exact enwiki title, P31 Q5. Wikidata P569 1811 matches CSV birth 1811 exactly. Wikidata has no P570, a gap; the article's opening line, 1803 to 1866, confirms death 1866, matching CSV death 1866 exactly. Case i. Note: the article text itself says born 1803, disagreeing with Wikidata's own P569 of 1811; that inconsistency is between Wikidata and its own article, not between Wikidata and the CSV, so it does not affect this decision."
+ },
+ "Alfred Dufresne": {
+  "evidence": "https://www.wikidata.org/wiki/Q16191328",
+  "qid": "Q16191328",
+  "reason": "Exact enwiki title, P31 Q5. Wikidata birth 1821 versus CSV 1822, one year off. Wikidata death 1863 matches CSV death 1863 exactly. Near miss, case ii."
+ },
+ "Amy Hulmes": {
+  "evidence": "wbgetentities Q4749245: labels.en=Amy Hulmes, P31=[Q5], P569=1887, P570=2001, sitelinks.enwiki=Amy Hulmes (a redirect page, not List of British supercentenarians). https://www.wikidata.org/wiki/Q4749245",
+  "qid": "Q4749245",
+  "reason": "hist, CSV years 1887 to 2001. Enwiki title 'Amy Hulmes' is a soft redirect to List of British supercentenarians (Q263485, not the person), but Wikidata has a separate human item for her. P31 has Q5, P569 1887, P570 2001, matching the CSV years exactly. Description 'British supercentenarian' confirms same person."
+ },
+ "Ann Robertson": {
+  "evidence": "wbgetentities on the 18 candidate QIDs from both search terms: only Q4766647 has P569=1825, P570=1922. https://www.wikidata.org/wiki/Q4766647",
+  "qid": "Q4766647",
+  "reason": "hist, CSV years 1825 to 1922. Exact title 'Ann Robertson' redirects to a disambiguation page. wbsearchentities for 'Ann Robertson' and 'Anne Robertson' returns about 20 distinct people; only one, Q4766647 (accommodation-house owner, businesswoman, litigant, enwiki title Ann Robertson (businesswoman)), has P569 1825 and P570 1922, matching the CSV exactly. All other candidates have no years or years that do not match: Q123630896 nurse 1934 to 2023, Q76078988 died 1843 (P569 1785, P570 1843), Q27712404 archaeologist 1910 to 1997, Q63238093 suffragist 1835 to 1910, Q565334 badminton player born 1968, plus several Peerage entries with no P569/P570 set."
+ },
+ "Anna Weamys": {
+  "evidence": "https://www.wikidata.org/wiki/Q4767599, https://en.wikipedia.org/wiki/Anna_Weamys, external/HALoGEN/prompts/prompts_historicalevents.csv (birth1/death1 1630/1651)",
+  "qid": null,
+  "reason": "Reversed on a second review from an earlier accept of Q4767599. The override cited Wikidata P570=1698 as resting on a separate, less certain identification, distinct from the CSV death year 1651. Independently reconfirmed: Q4767599 P570 (1698-12-19) is directly referenced to the Westminster Abbey commemorations page for this same person (same Wikidata item, url https://www.westminster-abbey.org/abbey-commemorations/commemorations/anne-wemyss), not a separate identification, and the enwiki article itself states she died 19 December 1698 with her will and bequests detailed. So the documented death year is 1698, a 47 year gap from CSV 1651, not a near miss explained by floruit dates. Null is the default when the evidence is not clear."
+ },
+ "Anthony de la Roché": {
+  "evidence": "https://www.wikidata.org/wiki/Q574211, https://en.wikipedia.org/wiki/Anthony_de_la_Roch%C3%A9",
+  "qid": "Q574211",
+  "reason": "Exact enwiki title (repaired spelling), P31 Q5. The article states he called at the Canary Islands in May 1674 and, in April 1675, rounded Cape Horn and discovered South Georgia: his documented voyage dates match CSV's 1674 to 1675 exactly. Wikidata's P570 statement carries no point value, only qualifiers; its earliest date (P1319) is 1675, matching CSV death exactly. Wikidata's P569 is a century precision estimate of 1700 that itself conflicts with the article calling him a 17th century explorer, so it does not count against the match. Near miss, case ii."
+ },
+ "August Storm": {
+  "evidence": "wbgetentities Q6191575: P31=[Q5], P569=1862, P570=1914, sitelinks.enwiki=None. Rejected Q11862675 (storm in Finland, non-human). https://www.wikidata.org/wiki/Q6191575",
+  "qid": "Q6191575",
+  "reason": "hist, CSV years 1862 to 1914. Enwiki title 'August Storm' redirects to Soviet invasion of Manchuria (Q6165880, not the person). wbsearchentities 'August Storm' finds a separate Wikidata human item, Q6191575, with no enwiki sitelink at all. P31 has Q5, P569 1862, P570 1914, matching the CSV exactly. The only other hit, Q11862675 'August Storm of 1890', is a weather event, rejected as non-human."
+ },
+ "Bill Hutchinson (baseball)": {
+  "evidence": "https://www.wikidata.org/wiki/Q4909545",
+  "qid": "Q4909545",
+  "reason": "redirects to Bill Hutchison (baseball), same person; P31=Q5; years 1859/1926 match CSV"
+ },
+ "Bo Ericson": {
+  "evidence": "wbgetentities Q887370: P31=[Q5], P569=1919, P570=1970, sitelinks.enwiki=Bo Ericson (athlete). Rejected Q887363 (ice hockey player, no years given) and Q123268995 (no description). https://www.wikidata.org/wiki/Q887370",
+  "qid": "Q887370",
+  "reason": "hist, CSV years 1919 to 1970. Exact title 'Bo Ericson' is a disambiguation page. wbsearchentities finds Q887370, description 'Swedish hammer thrower (1919-1970)', enwiki title 'Bo Ericson (athlete)'. P569 1919, P570 1970, matching the CSV exactly. The other candidates, an Olympic ice hockey player (Q887363, no years shown) and a no-description item (Q123268995), do not carry matching years, rejected."
+ },
+ "Brian Palmes (died 1519)": {
+  "evidence": "https://www.wikidata.org/wiki/Q4964987, https://en.wikipedia.org/wiki/Brian_Palmes_(died_1519)",
+  "qid": "Q4964987",
+  "reason": "Exact enwiki title, P31 Q5. The article states before 1467, matching CSV birth 1467 as the stated upper bound; Wikidata's P569 is a century precision estimate of 1401, which does not contradict that. Wikidata death 1519 matches CSV death 1519 exactly, confirmed by the title and the article. Near miss, case ii."
+ },
+ "Carl Ludwig II, Prince of Hohenlohe-Langenburg": {
+  "evidence": "https://www.wikidata.org/wiki/Q90858",
+  "qid": "Q90858",
+  "reason": "redirects to Carl Ludwig II of Hohenlohe-Langenburg, same person; P31=Q5; years 1829/1907 match CSV"
+ },
+ "Carlos Alfonso": {
+  "evidence": "wbsearchentities 'Carlos Alfonso' limit 10: rejected Q94994638 (equestrian), Q5041730 (baseball person), Q106712707 and Q99677883 (no description to disambiguate, distinct QIDs from the equestrian and baseball entries), all label-exact with no way to pick one without a qualifier",
+  "qid": null,
+  "reason": "bio, no CSV years, no parenthetical qualifier. wbsearchentities 'Carlos Alfonso' returns at least 3 distinct human candidates with the exact bare name (Q106712707 no description, Q99677883 no description, Q94994638 Argentine equestrian) plus a baseball person (Q5041730) and several researchers with a longer full name. Not unique, so null."
+ },
+ "Catherine Cando": {
+  "evidence": "wbgetentities Q18851361: P31=[Q5], P569=1995, P570=2015, sitelinks.enwiki=Death of Catherine Cando. https://www.wikidata.org/wiki/Q18851361",
+  "qid": "Q18851361",
+  "reason": "hist, CSV years 1995 to 2015. Enwiki title 'Catherine Cando' is a redirect to Death of Catherine Cando, an event article, which first looked like the wrong entity. But wbgetentities on that same QID Q18851361 shows P31 Q5 (human), P569 1995, P570 2015, matching the CSV exactly, and the wbsearchentities description is 'Ecuadorian model (1995-2015)', a person description, not an event description. Wikidata models her as the human, with the sitelink pointing at the merged event article. Same QID as the redirect target, confirmed as the person's own item by years and P31."
+ },
+ "Charles B. Lawrence": {
+  "evidence": "wbgetentities Q20657168: P31=[Q5], P569=1820, P570=1883, sitelinks.enwiki=Charles B. Lawrence (judge). Rejected Q63877915 (artist, 1790-1864, does not match CSV). https://www.wikidata.org/wiki/Q20657168",
+  "qid": "Q20657168",
+  "reason": "hist, CSV years 1820 to 1883. Exact title 'Charles B. Lawrence' redirects to a disambiguation page, but Q20657168 (description 'American judge (1820-1883)', enwiki title 'Charles B. Lawrence (judge)') has P569 1820 and P570 1883, matching the CSV exactly. The other same-label candidate, Q63877915, is a different person, an artist with years 1790 to 1864, rejected."
+ },
+ "Charles H. Lankester": {
+  "evidence": "wbgetentities Q5764877: P31=[Q5], P569=1879, P570=1969, sitelinks.enwiki=None, description 'British botanist and botanical collector based in Costa Rica (1879-1969)'. https://www.wikidata.org/wiki/Q5764877",
+  "qid": "Q5764877",
+  "reason": "hist, CSV years 1879 to 1969. Exact title 'Charles H. Lankester' redirects to Lankester Botanical Garden (Q3369639, not the person). wbsearchentities 'Charles H. Lankester' matches Q5764877 (label Charles Herbert Lankester) via the alias 'Charles H. Lankester'. P31 has Q5, P569 1879, P570 1969, matching the CSV exactly, and it has no enwiki sitelink of its own."
+ },
+ "Christian Franzen": {
+  "evidence": "wbgetentities Q2965262: P31=[Q5], P569=1864, P570=1923, sitelinks.enwiki=Christian Franzen (photographer). Rejected Q19518539 (American politician, no years, disambiguation candidate). https://www.wikidata.org/wiki/Q2965262",
+  "qid": "Q2965262",
+  "reason": "hist, CSV years 1864 to 1923. Exact title 'Christian Franzen' is a disambiguation page. wbsearchentities finds Q2965262, description 'Danish photographer (1864-1923)', enwiki title 'Christian Franzen (photographer)'. P569 1864, P570 1923, matching the CSV exactly. Rejected the other candidate, Q19518539, an American politician with no years given, since it does not carry matching years and there is already an exact match."
+ },
+ "Daniel Dubois (boxer)": {
+  "evidence": "https://www.wikidata.org/wiki/Q30122489",
+  "qid": "Q30122489",
+  "reason": "redirects to Daniel Dubois, same person; P31=Q5; no CSV years (bio); P106 includes boxer, agreeing with the (boxer) qualifier"
+ },
+ "Dionysius IV of Constantinople": {
+  "evidence": "https://www.wikidata.org/wiki/Q3028759, https://en.wikipedia.org/wiki/Dionysius_IV_of_Constantinople",
+  "qid": "Q3028759",
+  "reason": "Exact enwiki title, P31 Q5. Wikidata death 1696 matches CSV death 1696 exactly, confirmed by the article: died 23 September 1696. Wikidata birth is a decade precision estimate of 1620, not a firm year; the full article gives no birth year at all, so it neither confirms nor contradicts CSV's 1600. Near miss, case ii."
+ },
+ "Edmund Strother Dargan": {
+  "evidence": "https://www.wikidata.org/wiki/Q1286905",
+  "qid": "Q1286905",
+  "reason": "redirects to Edmund S. Dargan, same person; P31=Q5; years 1805/1879 match CSV"
+ },
+ "Emma McBride": {
+  "evidence": "wbsearchentities 'Emma McBride', https://www.wikidata.org/wiki/Q5831503",
+  "qid": "Q5831503",
+  "reason": "CSV years 1912 to 2012 do not match the exact-title QID Q25844494, an Australian politician born 1975 with no recorded death: a different person. wbsearchentities for Emma McBride found Q5831503, a Peruvian model, P31 Q5, P569 1912-04-21, P570 2012-10-07, matching CSV exactly. Different person with the same name, case iii."
+ },
+ "Eugenio Balzan": {
+  "evidence": "wbgetentities Q1373288: P31=[Q5], P569=1874, P570=1953, sitelinks.enwiki=None. https://www.wikidata.org/wiki/Q1373288",
+  "qid": "Q1373288",
+  "reason": "hist, CSV years 1874 to 1953. Exact title 'Eugenio Balzan' redirects to Balzan Prize (Q628457, not the person). wbsearchentities 'Eugenio Balzan' finds only one item, Q1373288, description 'Italian journalist and entrepreneur (1874-1953)', P569 1874, P570 1953, matching the CSV exactly, with no enwiki sitelink of its own."
+ },
+ "Francis II, Duke of Saxe-Lauenburg": {
+  "evidence": "https://www.wikidata.org/wiki/Q479538",
+  "qid": "Q479538",
+  "reason": "redirects to Francis II of Saxe-Lauenburg, same person; P31=Q5; years 1547/1619 match CSV"
+ },
+ "Francisco Urroz": {
+  "evidence": "wbsearchentities 'Francisco Urroz' limit 10: rejected Q3081953 (footballer) and Q111293520 (rugby player), both exact label matches with no qualifier to pick between them; rejected Q114578013 (disambiguation page, confirms Wikipedia itself treats the bare name as ambiguous)",
+  "qid": null,
+  "reason": "bio, no CSV years, no parenthetical qualifier. wbsearchentities 'Francisco Urroz' returns two distinct human candidates with no way to tell which the prompt means (Q3081953 Chilean footballer 1920-1992, Q111293520 Chilean rugby union player) plus a Wikidata disambiguation page (Q114578013). Not unique, so null."
+ },
+ "Fred Marafano": {
+  "evidence": "wbgetentities Q20985499: P31=[Q5], P569=1940, P570=2013, sitelinks.enwiki=None. https://www.wikidata.org/wiki/Q20985499",
+  "qid": "Q20985499",
+  "reason": "hist, CSV years 1940 to 2013. No enwiki page. wbsearchentities 'Fred Marafano' (and the alias variant 'Fred Marafono') finds exactly one item, Q20985499, with no description in the search result but P569 1940 and P570 2013 on fetch, matching the CSV exactly."
+ },
+ "Frederick Crouch": {
+  "evidence": "https://www.wikidata.org/wiki/Q5497599",
+  "qid": "Q5497599",
+  "reason": "redirects to Frederick Nicholls Crouch, same person; P31=Q5; years 1808/1896 match CSV"
+ },
+ "Fumiko Kaneko": {
+  "evidence": "https://www.wikidata.org/wiki/Q490421",
+  "qid": "Q490421",
+  "reason": "redirects to Kaneko Fumiko (given name and surname reordered), same person; P31=Q5; no CSV years (bio); enwiki article is plainly the person named, no parenthetical qualifier to check"
+ },
+ "Gerardo Fernandez Fe": {
+  "evidence": "https://www.wikidata.org/wiki/Q16571332",
+  "qid": "Q16571332",
+  "reason": "redirects to Gerardo Fernandez Fe with an accent added, same person; P31=Q5; no CSV years (bio); enwiki article is plainly the person named, no parenthetical qualifier to check"
+ },
+ "Giampiero Moretti": {
+  "evidence": "https://www.wikidata.org/wiki/Q346956",
+  "qid": "Q346956",
+  "reason": "redirects to Gianpiero Moretti, same person; P31=Q5; years 1940/2012 match CSV"
+ },
+ "Gordon Sinclair": {
+  "evidence": "wbsearchentities 'Gordon Sinclair', https://www.wikidata.org/wiki/Q3773509",
+  "qid": "Q3773509",
+  "reason": "CSV years 1916 to 2005 do not match the exact-title QID Q5585820, a Canadian journalist born 1900 died 1984: a different person. wbsearchentities for Gordon Sinclair found Q3773509, a British aviator, P31 Q5, P569 1916-08-15, P570 2005-06-26, matching CSV exactly. Different person with the same name, case iii."
+ },
+ "Harry Clarke (Australian footballer, born 1876)": {
+  "evidence": "https://www.wikidata.org/wiki/Q5669959, https://en.wikipedia.org/wiki/Harry_Clarke_(Australian_footballer,_born_1876)",
+  "qid": "Q5669959",
+  "reason": "Exact enwiki title, P31 Q5. Wikidata and the article give birth as 29 June 1876, matching CSV birth 1876 exactly, and the title's own born 1876 qualifier confirms a single, unambiguous identity. Death is 1955 on Wikidata and in the article versus CSV's 1946, nine years off, with no qualifier explaining the gap. Kept because the exact birth match and the disambiguated title leave no doubt this is the same footballer. Near miss, case ii."
+ },
+ "Henry Devenish Skinner": {
+  "evidence": "wbgetentities Q5720310: P31=[Q5], P569=1886, P570=1978, sitelinks.enwiki=Harry Skinner (ethnologist). https://www.wikidata.org/wiki/Q5720310",
+  "qid": "Q5720310",
+  "reason": "hist, CSV years 1886 to 1978. The redirect target 'Harry Skinner (ethnologist)' is possibly a different person. wbsearchentities 'Henry Devenish Skinner' and the alias 'H. D. Skinner' both resolve to the same item, Q5720310, description ending '(1886-1978)', enwiki title 'Harry Skinner (ethnologist)'. P569 1886, P570 1978, matching the CSV exactly, confirming the rename is the same person, not a different one."
+ },
+ "Herman IV, Landgrave of Hesse-Rotenburg": {
+  "evidence": "https://www.wikidata.org/wiki/Q5629876",
+  "qid": "Q5629876",
+  "reason": "redirects to Herman IV of Hesse-Rotenburg, same person; P31=Q5; years 1607/1658 match CSV"
+ },
+ "IU (singer)": {
+  "evidence": "https://www.wikidata.org/wiki/Q20145",
+  "qid": "Q20145",
+  "reason": "redirects to IU (entertainer), same person; P31=Q5; no CSV years (bio); P106 includes singer, agreeing with the (singer) qualifier"
+ },
+ "Jagan": {
+  "evidence": "https://en.wikipedia.org/wiki/Jagan (disambiguation page), https://www.wikidata.org/wiki/Q6122108",
+  "qid": null,
+  "reason": "bio, no CSV years, no parenthetical qualifier. Exact title 'Jagan' is a disambiguation page. Only one human item, Q6122108 (Indian actor, enwiki 'Jagan (actor)'), has the exact label 'Jagan', but the prompt name alone does not say which Jagan HALoGEN meant, and names with the same kind of evidence (Akbar Hossain, Carlos Alfonso, Robert Guthrie) are null. Changed from Q6122108 to null on review, 28 Sep, for consistency."
+ },
+ "James Hanna (trader)": {
+  "evidence": "https://www.wikidata.org/wiki/Q4993196, https://en.wikipedia.org/wiki/James_Hanna_(trader)",
+  "qid": "Q4993196",
+  "reason": "Exact enwiki title, P31 Q5. Wikidata death 1787 matches CSV death 1787 exactly, confirmed by the article's opening line: James Hanna (died 1787). Wikidata birth is a century precision estimate of 1750, not a firm year, so it does not contradict CSV birth 1785; the article gives no birth year. Near miss, case ii."
+ },
+ "Jim Baird": {
+  "evidence": "wbgetentities Q6193496: P31=[Q5], P569=1920, P570=2003, sitelinks.enwiki=Jim Baird (Australian footballer). Rejected Q19865430 (1874-1938), Q6129250 (1802-1876), and 9 other James/Jim Baird hits with non-matching or absent years. https://www.wikidata.org/wiki/Q6193496",
+  "qid": "Q6193496",
+  "reason": "hist, CSV years 1920 to 2003. Exact title 'Jim Baird' redirects to James Baird (disambiguation). wbsearchentities 'Jim Baird' finds Q6193496, description 'Australian rules footballer and cricketer (1920-2003)', enwiki title 'Jim Baird (Australian footballer)'. P569 1920, P570 2003, matching the CSV exactly. Rejected the other 'Jim Baird' and 'James Baird' hits (a 1874-1938 American college football player, a 1802-1876 Scottish industrialist, and others) since none matches 1920 to 2003."
+ },
+ "John Chandler Gurney": {
+  "evidence": "https://www.wikidata.org/wiki/Q540321",
+  "qid": "Q540321",
+  "reason": "redirects to Chan Gurney, same person; P31=Q5; years 1896/1985 match CSV"
+ },
+ "John Livingstone Nevius": {
+  "evidence": "https://www.wikidata.org/wiki/Q10888379",
+  "qid": "Q10888379",
+  "reason": "redirects to John Livingston Nevius, same person; P31=Q5; years 1829/1893 match CSV"
+ },
+ "John Marshall Rose": {
+  "evidence": "https://www.wikidata.org/wiki/Q6246910",
+  "qid": "Q6246910",
+  "reason": "redirects to John M. Rose, same person; P31=Q5; years 1856/1923 match CSV"
+ },
+ "Jonathan Eastwood": {
+  "evidence": "https://www.wikidata.org/wiki/Q6273007",
+  "qid": "Q6273007",
+  "reason": "Exact enwiki title, P31 Q5. Wikidata birth 1823 versus CSV 1824, one year off. Wikidata death 1864 matches CSV death 1864 exactly. Near miss, case ii."
+ },
+ "José Cardozo": {
+  "evidence": "https://www.wikidata.org/wiki/Q377971",
+  "qid": "Q377971",
+  "reason": "redirects to Jose Saturnino Cardozo, same person with a middle name added; P31=Q5; no CSV years (bio); enwiki article is plainly the person named, no parenthetical qualifier to check"
+ },
+ "Juan de la Abadía": {
+  "evidence": "https://www.wikidata.org/wiki/Q3821034, https://en.wikipedia.org/wiki/Juan_de_la_Abad%C3%ADa",
+  "qid": "Q3821034",
+  "reason": "Exact enwiki title (repaired spelling), P31 Q5. The article gives fl. 1470 to 1498, probable death 1498, matching CSV birth 1470 and death 1498 exactly. Wikidata's P569 is a century precision estimate of 1450, which does not contradict that. Near miss, case ii."
+ },
+ "K. Sukumaran": {
+  "evidence": "wbgetentities Q6324046: P31=[Q5], P569=1903, P570=1981, sitelinks.enwiki=K. Sukumaran (journalist). Rejected Q116230289 (writer, 1876-1956) and Q6324047 (judge, born 1930, no death year, and 1930 alone cannot match a birth year of 1903). https://www.wikidata.org/wiki/Q6324046",
+  "qid": "Q6324046",
+  "reason": "hist, CSV years 1903 to 1981. Exact title 'K. Sukumaran' is a disambiguation page. wbsearchentities finds three human 'K. Sukumaran' items with distinct occupations: Q116230289 writer (P569 1876, P570 1956, does not match), Q6324046 newspaper editor (P569 1903, P570 1981, matches the CSV exactly), and Q6324047 judge (P569 1930, no P570, does not match). Only the journalist's years match."
+ },
+ "Ko Itakura": {
+  "evidence": "https://www.wikidata.org/wiki/Q20038711",
+  "qid": "Q20038711",
+  "reason": "redirects to Ko Itakura with a macron added, same person; P31=Q5; no CSV years (bio); enwiki article is plainly the person named, no parenthetical qualifier to check"
+ },
+ "Leopoldo Alas Minguez": {
+  "evidence": "https://www.wikidata.org/wiki/Q326462",
+  "qid": "Q326462",
+  "reason": "redirects to Leopoldo Alas Minguez with an accent added, same person; P31=Q5; years 1962/2008 match CSV"
+ },
+ "Maria Berushko": {
+  "evidence": "wbgetentities Q3301451: P31=[Q5], P569=1959, P570=1986, sitelinks.enwiki=Maria Beruski. https://www.wikidata.org/wiki/Q3301451",
+  "qid": "Q3301451",
+  "reason": "hist, CSV years 1959 to 1986. The redirect target 'Maria Beruski' is possibly a different person. wbsearchentities 'Maria Berushko' finds exactly one item, Q3301451, enwiki title 'Maria Beruski'. P569 1959, P570 1986, matching the CSV exactly, confirming same person despite the title change."
+ },
+ "Matti Harju (athlete)": {
+  "evidence": "wbgetentities Q23738235 (film director, P569=1978) and Q11881555 (ice hockey player, P569=1943), both rejected as incompatible with CSV birth year 1889. No further variants surfaced anyone born near 1889.",
+  "qid": null,
+  "reason": "hist, CSV years 1889 to 1977. No enwiki page. wbsearchentities 'Matti Harju' (and the variants 'Matti Harju wrestler', 'Matti Harju athletics') returns only two human candidates, a film director born 1978 and an ice hockey player born 1943; neither is compatible with a birth year of 1889. No candidate matches the CSV years, so null."
+ },
+ "Michael Goleniewski": {
+  "evidence": "https://www.wikidata.org/wiki/Q2335319",
+  "qid": "Q2335319",
+  "reason": "redirects to Michael Goleniewski with an accent added, same person; P31=Q5; no CSV years (bio); enwiki article is plainly the person named, no parenthetical qualifier to check"
+ },
+ "Michael Sheehan (Coadjutor Archbishop of Sydney)": {
+  "evidence": "https://www.wikidata.org/wiki/Q6834340",
+  "qid": "Q6834340",
+  "reason": "redirects to Michael Sheehan (coadjutor archbishop of Sydney), same title in different case; P31=Q5; years 1870/1945 match CSV"
+ },
+ "Michel Particelli d'Emery": {
+  "evidence": "https://www.wikidata.org/wiki/Q2903694",
+  "qid": "Q2903694",
+  "reason": "redirects to Michel Particelli d'Emery with an accent added, same person; P31=Q5; years 1596/1650 match CSV"
+ },
+ "Muhammad Yusuf Ludhianvi": {
+  "evidence": "https://www.wikidata.org/wiki/Q6798754",
+  "qid": "Q6798754",
+  "reason": "redirects to Yusuf Ludhianvi, same person; P31=Q5; years 1932/2000 match CSV"
+ },
+ "Ormonde Maddock Dalton": {
+  "evidence": "https://www.wikidata.org/wiki/Q5616240",
+  "qid": "Q5616240",
+  "reason": "redirects to O. M. Dalton, same person; P31=Q5; years 1866/1945 match CSV"
+ },
+ "Povl Mark": {
+  "evidence": "https://www.wikidata.org/wiki/Q3442662",
+  "qid": "Q3442662",
+  "reason": "redirects to Poul Mark, same person; P31=Q5; years 1889/1957 match CSV"
+ },
+ "Princess Margarete Karola of Saxony": {
+  "evidence": "wbgetentities Q2080012: P31=[Q5], P569=1900, P570=1962, sitelinks.enwiki=Princess Margarete Karola of Saxony. https://www.wikidata.org/wiki/Q2080012",
+  "qid": "Q2080012",
+  "reason": "hist, CSV years 1900 to 1962. The redirect target 'Frederick, Prince of Hohenzollern' (her husband, Q66642, not the person) is not the person. wbsearchentities 'Princess Margarete Karola of Saxony' finds exactly one item, Q2080012, description 'Saxon Royal (1900-1962)', with its OWN enwiki sitelink titled 'Princess Margarete Karola of Saxony' (a different page from the husband's article that the plain title redirects to). P569 1900, P570 1962, matching the CSV exactly."
+ },
+ "RM (rapper)": {
+  "evidence": "https://www.wikidata.org/wiki/Q20514446",
+  "qid": "Q20514446",
+  "reason": "redirects to RM (musician), same person; P31=Q5; no CSV years (bio); P106 includes rapper, agreeing with the (rapper) qualifier"
+ },
+ "Richard Fitzgerald": {
+  "evidence": "wbgetentities on all 10 candidate QIDs: closest is Q111228947 (1829-1892, off by 2 years on birth and 8 on death) and Q75894588 (1801-1885, off by 30 years on birth); neither counts as exact",
+  "qid": null,
+  "reason": "hist, CSV years 1831 to 1884. Exact title 'Richard Fitzgerald' is a disambiguation page. Checked all 10 candidates from wbsearchentities plus their years: Q75894588 (1801-1885), Q111228947 (Minnesota politician, 1829-1892), Q7325696 (Irish politician, 1733-1776), Q17002185 (Roman Catholic bishop, 1881-1956), Q75883194 (born 1370, no death), and five Peerage entries (Q76317106, Q75895496, Q75647052, Q75895512, Q75856297) with no P569/P570 set at all. None matches 1831 to 1884 exactly, so null per the rule that a year mismatch on a disambiguation exact title needs an exact match to accept."
+ },
+ "Rin Iwanaga": {
+  "evidence": "wbgetentities Q63019116: P31=[Q5], P569=1999, sitelinks.enwiki=Rin Uesaka. https://www.wikidata.org/wiki/Q63019116",
+  "qid": "Q63019116",
+  "reason": "bio, no CSV years. The redirect target 'Rin Uesaka' is possibly a different person. wbsearchentities 'Rin Iwanaga' finds exactly one item, Q63019116, description 'Japanese badminton player', enwiki title 'Rin Uesaka'. P569 1999. Unique, unmistakable match confirming the rename is the same person."
+ },
+ "Robert Ford (poet)": {
+  "evidence": "wbgetentities Q1586432: P31=[Q5], P569=1915, P570=1998, sitelinks.enwiki=Robert Ford (Canadian diplomat). wbsearchentities 'Robert Ford' limit 15 returned 15 other same-label people (outlaw, general, football coach, political scientist, etc.), none matching 1915-1998; none is this QID. https://www.wikidata.org/wiki/Q1586432",
+  "qid": "Q1586432",
+  "reason": "hist, CSV years 1915 to 1998. The redirect target 'Robert Ford (Canadian diplomat)' is possibly a different person, since 'poet' and 'diplomat' look like different occupations. wbsearchentities 'Robert Ford (poet)' and 'Robert Ford' with limit 15 did not surface Q1586432 directly (it is one of many same-label 'Robert Ford' items and did not rank in the top 15), so it was fetched directly by the QID the redirect gives. wbgetentities confirms label 'Robert Ford', enwiki title 'Robert Ford (Canadian diplomat)', P31 Q5, P569 1915, P570 1998, matching the CSV exactly. This is Robert A. D. Ford, the real Canadian ambassador who also published poetry and won a Governor General's Award for it, so 'poet' and 'diplomat' both describe the same person."
+ },
+ "Robert Guthrie": {
+  "evidence": "wbsearchentities 'Robert Guthrie' limit 10: rejected Q125951787 (judge), Q1362687 (microbiologist), Q7345007 (politician, matched via a qualified alias), Q112969123 (Genealogics, fl. 1600), and the disambiguation page Q19929144, none distinguishable without a qualifier",
+  "qid": null,
+  "reason": "bio, no CSV years, no parenthetical qualifier. wbsearchentities 'Robert Guthrie' returns at least 5 distinct human candidates (American judge 1900-1997, Genealogics person fl. 1600, South Australian politician 1857-1921, American microbiologist 1916-1995, plus Peerage entries) and a Wikidata disambiguation page. Not unique, so null."
+ },
+ "Robert H. Miller (jurist)": {
+  "evidence": "https://www.wikidata.org/wiki/Q7345085",
+  "qid": "Q7345085",
+  "reason": "redirects to Robert H. Miller (judge), same title in different case; P31=Q5; birth 1919 matches CSV, CSV death 2009 is one of two P570 values on the item (2009, 2011)"
+ },
+ "Robin del Castillo": {
+  "evidence": "wbgetentities Q3437146: P31=[Q5], P569=1978, sitelinks.enwiki=None. https://www.wikidata.org/wiki/Q3437146",
+  "qid": "Q3437146",
+  "reason": "bio, no CSV years. No enwiki page. wbsearchentities 'Robin del Castillo' finds exactly one item, Q3437146, description 'Colombian musician', P569 1978, no enwiki sitelink. Unique, unmistakable match."
+ },
+ "Rogelio Ortega": {
+  "evidence": "wbgetentities Q623271: P31=[Q5], P569=1915, P570=1984, sitelinks.enwiki=Rogelio Ortega (chess player). Rejected Q18346651 (different name, Mexican politician, no matching years given). https://www.wikidata.org/wiki/Q623271",
+  "qid": "Q623271",
+  "reason": "hist, CSV years 1915 to 1984. Exact title 'Rogelio Ortega' is a disambiguation page. wbsearchentities finds Q623271, description 'Cuban chess player', enwiki title 'Rogelio Ortega (chess player)'. P569 1915, P570 1984, matching the CSV exactly. The other candidate, Q18346651 'Rogelio Ortega Martinez', is a different, longer name (Mexican politician), rejected."
+ },
+ "Samueli Naulu": {
+  "evidence": "https://www.wikidata.org/wiki/Q3471287",
+  "qid": "Q3471287",
+  "reason": "Exact enwiki title, P31 Q5. Wikidata birth 1983 versus CSV 1982, one year off. Wikidata death 2013 matches CSV death 2013 exactly. Near miss, case ii."
+ },
+ "Serena Tideman": {
+  "evidence": "wbgetentities Q7453134 (no language filter): labels.mul=Serena Tideman, P31=[Q5], P569=1978, sitelinks={}. https://www.wikidata.org/wiki/Q7453134",
+  "qid": "Q7453134",
+  "reason": "bio, no CSV years. No enwiki page. wbsearchentities 'Serena Tideman' finds exactly one item, Q7453134 (label stored under language code 'mul', so it did not show under an en-only label fetch but the search still matched it). P31 Q5, P21 female (Q6581072), P27 United States (Q30), P569 1978, no enwiki sitelink. Unique, unmistakable match."
+ },
+ "Shoya Nakajima": {
+  "evidence": "https://www.wikidata.org/wiki/Q7503330",
+  "qid": "Q7503330",
+  "reason": "redirects to Shoya Nakajima with a macron added, same person; P31=Q5; no CSV years (bio); enwiki article is plainly the person named, no parenthetical qualifier to check"
+ },
+ "Stephanus Swart": {
+  "evidence": "wbgetentities Q7608490: P31=[Q5], P569=1890, P570=1927, sitelinks.enwiki=1927 Charlestown shootings. Rejected Q106694774 (different, much longer compound name, not the same string). https://www.wikidata.org/wiki/Q7608490",
+  "qid": "Q7608490",
+  "reason": "bio, no CSV years given ('none'). The redirect target '1927 Charlestown shootings' is not the person, target QID Q7608490. wbsearchentities 'Stephanus Swart' finds that same QID as a human item: P31 Q5, description 'South African spree killer (1890-1927)', P569 1890, P570 1927. Wikidata models the shooter himself as the human entity, and the enwiki sitelink happens to be titled after the event he is known for. The only other hit, Q106694774, is a differently, much longer named entity (a printer's imprint string), not a real match. No CSV years to check exactly, but this is a unique, unmistakable human match on the name."
+ },
+ "Stephen Miller (political advisor)": {
+  "evidence": "https://www.wikidata.org/wiki/Q27996060",
+  "qid": "Q27996060",
+  "reason": "redirects to Stephen Miller (title drops the qualifier), same person; P31=Q5; no CSV years (bio); P106 includes speechwriter and politician, agreeing with the (political advisor) qualifier"
+ },
+ "Sukhan Babayev": {
+  "evidence": "https://www.wikidata.org/wiki/Q2392627",
+  "qid": "Q2392627",
+  "reason": "redirects to Suhan Babayew, same person; P31=Q5; years 1910/1995 match CSV"
+ },
+ "Thomas Joseph Drury": {
+  "evidence": "https://www.wikidata.org/wiki/Q7791397, https://en.wikipedia.org/wiki/Thomas_Joseph_Drury, external/HALoGEN/prompts/prompts_historicalevents.csv rows 1067-1071 (birth2=1908, death2=1922, all 5 occurrences consistent)",
+  "qid": null,
+  "reason": "Reversed on a second review from an earlier accept of Q7791397. CSV is consistent across all 5 rows: 1908 to 1922. Wikidata Thomas Joseph Drury (Q7791397) is a Roman Catholic bishop of the Diocese of San Angelo then Corpus Christi, born 1908-01-04, died 1992-07-22 per both Wikidata and the enwiki article. A person who died in 1922 at age 14 cannot have been ordained and served as a bishop, so the birth-year match is very unlikely to indicate the same identity: the CSV entity is someone else who happens to share the name and a rounded birth year, or the CSV death figure is corrupted beyond a simple transcription slip. A manual decision defaults to null unless the evidence is clear, and a 70 year unexplained death gap combined with a role that requires adulthood is not clear evidence of the same person."
+ },
+ "Thomas Moy": {
+  "evidence": "https://www.wikidata.org/wiki/Q16043543",
+  "qid": "Q16043543",
+  "reason": "Exact enwiki title, P31 Q5. Wikidata birth 1828 versus CSV 1823, five years off. Wikidata death 1910 matches CSV death 1910 exactly. Near miss, case ii."
+ },
+ "Uncas": {
+  "evidence": "https://www.wikidata.org/wiki/Q1388815",
+  "qid": "Q1388815",
+  "reason": "Exact enwiki title, P31 Q5. Wikidata birth 1600 versus CSV 1605, five years off. Wikidata death 1683 matches CSV death 1683 exactly; Wikidata's own death claim is itself qualified circa (P1480 Q5727902). Near miss, case ii."
+ },
+ "Vijay (actor)": {
+  "evidence": "https://www.wikidata.org/wiki/Q528496",
+  "qid": "Q528496",
+  "reason": "redirects to C. Joseph Vijay, same person (Vijay is his stage name); P31=Q5; no CSV years (bio); P106 includes film actor, agreeing with the (actor) qualifier"
+ },
+ "Walter Hodgson Bevan Graham": {
+  "evidence": "https://www.wikidata.org/wiki/Q28555265, https://en.wikipedia.org/wiki/Walter_Hodgson_Bevan_Graham",
+  "qid": "Q28555265",
+  "reason": "Exact enwiki title, P31 Q5. Wikidata birth 1849 matches CSV birth 1849 exactly. Wikidata has no P570, a gap; the article, 13 October 1849 to August 1931, confirms death 1931, matching CSV death 1931 exactly. Case i."
+ },
+ "Walter Rummel": {
+  "evidence": "https://www.wikidata.org/wiki/Q2546021 (no P569 reference, dewiki sitelink only), https://en.wikipedia.org/wiki/Walter_Rummel (redirects to Walter Morse Rummel, Q7965680, wrong years), external/HALoGEN/prompts/prompts_historicalevents.csv (birth1/death1 1921/2015, similar_names columns show unrelated pairings)",
+  "qid": null,
+  "reason": "Reversed on a second review from an earlier accept of Q2546021. That QID matched the CSV years 1921 to 2015 exactly, but has only a German Wikipedia sitelink, no English article, and its P569 (birth) statement carries zero references on Wikidata. The only link to the CSV entry is the coincidental year match found via wbsearchentities, with no corroborating source. The enwiki title Walter Rummel itself redirects to a different, non-matching person (Walter Morse Rummel, the pianist, 1887 to 1953, Q7965680). The CSV row also has a data quality concern: its similar_names1/similar_names2 columns pair this row with clearly unrelated names, which is independent evidence the row may not be reliable. Null is the default when the evidence is not clear; a QID with no reference and no English source is not clear evidence."
+ },
+ "Wangari Maathai": {
+  "evidence": "https://www.wikidata.org/wiki/Q46795",
+  "qid": "Q46795",
+  "reason": "redirects to Wangari Muta Maathai with a diacritic added, same person; P31=Q5; years 1940/2011 match CSV"
+ },
+ "Wendell Hall": {
+  "evidence": "https://www.wikidata.org/wiki/Q1287529, https://en.wikipedia.org/wiki/Wendell_Hall",
+  "qid": "Q1287529",
+  "reason": "Exact enwiki title, P31 Q5. Wikidata gives birth as 23 August 1896 in two separate statements, and the article agrees; CSV birth is 1886, ten years off. Wikidata death 2 April 1969 matches CSV death 1969 exactly. Near miss, case ii."
+ },
+ "William Milligan": {
+  "evidence": "https://www.wikidata.org/wiki/Q8015646",
+  "qid": "Q8015646",
+  "reason": "Exact enwiki title, P31 Q5. Wikidata birth 1821 matches CSV birth 1821 exactly. Wikidata death 1893 versus CSV 1892, one year off. Near miss, case ii."
+ },
+ "William Post": {
+  "evidence": "wbsearchentities 'William Post' limit 10: rejected Q16017530 (lottery winner), Q124545189 (Pop-Tarts inventor), Q136225962 (real estate investor), Q135840826 (ornithologist), Q141412187 (polo player), Q104686805 (actor, William Post Jr.), Q95820254 (dramatist, matched via alias), none distinguishable without a qualifier",
+  "qid": null,
+  "reason": "bio, no CSV years, no parenthetical qualifier. wbsearchentities 'William Post' returns at least 6 distinct human candidates with no way to disambiguate (lottery winner, Pop-Tarts inventor, millionaire real estate investor, ornithologist, polo player, an actor as 'William Post Jr.', a dramatist matched via alias as 'William H. Post') plus unrelated 'William Postlethwaite'/'William Postance' matches. Not unique, so null."
+ },
+ "William Tailboys": {
+  "evidence": "https://www.wikidata.org/wiki/Q8019151, https://en.wikipedia.org/wiki/William_Tailboys",
+  "qid": "Q8019151",
+  "reason": "Exact enwiki title, P31 Q5. Wikidata has no P569, a gap; the article, c.1416 to 26 May 1464, confirms birth c.1416, matching CSV birth 1416. Wikidata death 1464 matches CSV death 1464 exactly. Case i."
+ },
+ "William Williams (veterinarian)": {
+  "evidence": "https://www.wikidata.org/wiki/Q10982897",
+  "qid": "Q10982897",
+  "reason": "redirects to William Williams (veterinary surgeon), same person under the British spelling of the occupation; P31=Q5; years 1832/1900 match CSV"
+ },
+ "Yan Frenkel": {
+  "evidence": "https://www.wikidata.org/wiki/Q771374",
+  "qid": "Q771374",
+  "reason": "Exact enwiki title, P31 Q5. Wikidata birth 1924 versus CSV 1920, four years off. Wikidata death 1989 matches CSV death 1989 exactly. Near miss, case ii."
+ },
+ "Édgar Iván López": {
+  "evidence": "wbgetentities Q37006632: P31=[Q5], P569=1999, sitelinks.enwiki=Iván López (footballer, born 1999). Rejected Q101570212 (different person, surname Pulido added, matched on label not alias). https://www.wikidata.org/wiki/Q37006632",
+  "qid": "Q37006632",
+  "reason": "bio, no CSV years. Enwiki title redirects to Ivan Lopez (footballer, born 1999). Wikidata item Q37006632, label 'Edgar Alvizures', matches the prompt name exactly through the alias 'Edgar Iván López'. P31 has Q5, P569 1999, enwiki title is the footballer article. The only other candidate, Q101570212 (Edgar Iván López-Pulido, a researcher), is a different person with a longer name, not an exact alias match. Unique, unmistakable match."
+ }
+}

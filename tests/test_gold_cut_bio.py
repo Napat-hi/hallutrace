@@ -59,7 +59,7 @@ class GoldCutBioTest(unittest.TestCase):
                           ("m|biographies-00002|0:0", gc.HALLUCINATED)])
         self.assertEqual(units[1].unit_text, "Ada Lovelace was born in 1900.")
         self.assertEqual(units[0].model, "m")
-        self.assertFalse(any(u.would_drop_23 for u in units))
+        self.assertFalse(any(u.unit_guard_drops for u in units))
 
     def test_articles_read_only_and_missing_noted(self):
         units = gb.build_units(self.out, self.inp)

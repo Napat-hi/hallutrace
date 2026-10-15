@@ -45,7 +45,7 @@ RULES = {  # (band of the nearest occurrence, matched_cue) -> counted?
     "cue, whole window": lambda b, c: c == 1,
     "bare, whole window": lambda b, c: True,
     "bare <= 100": lambda b, c: b == "0-100",
-    "bare <= 100 OR cue (D-024)": lambda b, c: b == "0-100" or c == 1,
+    "bare <= 100 OR cue (chosen)": lambda b, c: b == "0-100" or c == 1,
 }
 
 
@@ -112,7 +112,7 @@ def main():
         if s["query_source"] != "stripped":
             pop[(s["band"], int(s["matched_cue"]))] += int(s["population"])
     labelled = [r for r in packet if r["label"].strip()]
-    out = ["# C_Pilot rule check (D-024)", "",
+    out = ["# Counting rule check", "",
            "Numbers only. Written by `scripts/pilot_rule_check.py` from the labelled packet "
            "(%d of %d rows labelled), `pilot_packet_strata.csv` and the window cache (read-only). "
            "Short forms of disambiguated names (source `stripped`) are left out throughout: "

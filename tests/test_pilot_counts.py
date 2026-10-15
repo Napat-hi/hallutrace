@@ -715,7 +715,7 @@ class D024MatcherTests(unittest.TestCase):
         for label, entries in cases.items():
             with self.subTest(label):
                 self.assertEqual(pc._nearest(entries, None, "near_or_cue") is not None,
-                                 rc.window_matches(entries, "bare <= 100 OR cue (D-024)"))
+                                 rc.window_matches(entries, "bare <= 100 OR cue (chosen)"))
         self.assertIsNotNone(pc._nearest(cases["exactly 100"], None, "near_or_cue"))
         self.assertIsNone(pc._nearest(cases["101"], None, "near_or_cue"))
         self.assertFalse(pc.fact_match.in_width(occ(98), pc.NEAR))  # why the rule uses distance

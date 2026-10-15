@@ -50,7 +50,7 @@ u = gc.UNIT_BUILDERS["false_presuppositions"](FP, "m/b.csv")
 eq(len(u), 1, "false_presuppositions: one unit per response, the extraction")
 eq(u[0].unit_text, "atomic_units: January, Mimas", "the annotator sees what was extracted")
 eq(u[0].context, R, "and the response it was extracted from")
-check(u[0].flagged and u[0].would_drop_23, "flagged, and the unit guard would drop it")
+check(u[0].flagged and u[0].unit_guard_drops, "flagged, and the unit guard would drop it")
 SA = {"generation_id": "m|scientific_attribution-00002|1", "response": T,
       "atomic_units": "['Deep Learning for Protein Folding', 'Financial Accounting Theory', 'Odd Title']",
       "hallucinated_atomic_units": "['Financial Accounting Theory']",
@@ -60,7 +60,7 @@ eq([x.unit_id for x in u], ["m|scientific_attribution-00002|1:%d" % i for i in r
    "scientific_attribution: one unit per reference")
 eq([x.verifier_label for x in u], [gc.SUPPORTED, gc.HALLUCINATED, gc.UNVERIFIABLE],
    "the verifier's three answers are kept apart, UNVERIFIABLE included (DEVIATIONS 3)")
-eq([x.would_drop_23 for x in u], [False, True, True], "the guard would drop the two not in the response")
+eq([x.unit_guard_drops for x in u], [False, True, True], "the guard would drop the two not in the response")
 HE = {"generation_id": "m|historical_events-00003|0", "response": "They met in 1901.",
       "name1": "A", "name2": "B", "hallucinated_atomic_units": "['yes']"}
 u = gc.UNIT_BUILDERS["historical_events"](HE, "m/b.csv")
@@ -183,7 +183,7 @@ with open(paths["annotator_B.csv"], encoding="utf-8") as f:
     b = list(csv.reader(f))
 eq(a, b, "the two annotators get identical files, in the same order")
 eq(tuple(a[0]), gc.ANNOTATOR_COLUMNS, "annotator columns as the procedure lists them")
-check(not any(c in a[0] for c in ("verifier_label", "flagged", "would_drop_23", "unit_id")),
+check(not any(c in a[0] for c in ("verifier_label", "flagged", "unit_guard_drops", "unit_id")),
       "the verifier's answer is deleted, not hidden")
 check(a[0][4:] == ["annotator_label", "tag", "notes"],
       "tag sits between annotator_label and notes, as in the Biographies packet")
@@ -214,7 +214,7 @@ check("Yes: hallucinated. No: supported. Can't tell: unverifiable." in gc.QUESTI
       "historical_events states its yes/no to label mapping in the question")
 eq(gc.QUESTIONS["summarization"], "Is this fact entailed by the source passage?", "summarization asks the procedure's question")
 eq(gc.QUESTIONS["simplification"], "Is this fact entailed by the source sentence?", "simplification asks the procedure's question")
-check(isinstance(gc.unit_guard_loaded(), bool), "unit_guard_loaded says whether would_drop_23 is real")
+check(isinstance(gc.unit_guard_loaded(), bool), "unit_guard_loaded says whether unit_guard_drops is real")
 
 print("5b. the first n of a drawn task (annotators label 50 per task)")
 src = os.path.join(out, "false_presuppositions")

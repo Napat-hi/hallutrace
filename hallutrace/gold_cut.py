@@ -28,7 +28,7 @@ tail was dropped. Showing the tail would ask annotators to judge text the
 verifier never saw.
 
 The key file keeps what the annotators must not see: the verifier's label, the
-unit's origin, and `would_drop_23`, whether the unit guard (drop an extracted
+unit's origin, and `unit_guard_drops`, whether the unit guard (drop an extracted
 unit that is not in the response) would remove it. The sample is drawn from the
 verifier's raw output either way, so both versions of every number can be
 computed from the same annotation.
@@ -58,7 +58,7 @@ ANNOTATOR_COLUMNS = ("item_id", "context_shown", "unit_to_judge", "question",
 # import agreement's dependencies. A test checks the two agree.
 TAGS = ("not a claim", "exaggerated", "no article")
 KEY_COLUMNS = ("item_id", "unit_id", "generation_id", "model", "task",
-               "verifier_label", "flagged", "would_drop_23", "source_file")
+               "verifier_label", "flagged", "unit_guard_drops", "source_file")
 
 QUESTIONS = {
     "scientific_attribution":
@@ -103,7 +103,7 @@ class Unit:
     context: str
     unit_text: str
     verifier_label: str
-    would_drop_23: bool = False
+    unit_guard_drops: bool = False
     source_file: str = ""
 
     @property
@@ -214,7 +214,7 @@ def atom_lines(text) -> List[Tuple[str, bool]]:
 
 
 def unit_guard_loaded() -> bool:
-    """Whether `would_drop_23` can be computed for summarization and simplification.
+    """Whether `unit_guard_drops` can be computed for summarization and simplification.
 
     Recorded in the manifest, so an all zero column is never mistaken for a
     measurement.
@@ -446,7 +446,7 @@ def write_packets(d: Draw, out_dir: str, sources: Sequence[str] = (),
         key.append({"item_id": item_id, "unit_id": u.unit_id,
                     "generation_id": u.generation_id, "model": u.model, "task": u.task,
                     "verifier_label": u.verifier_label, "flagged": int(u.flagged),
-                    "would_drop_23": int(u.would_drop_23), "source_file": u.source_file})
+                    "unit_guard_drops": int(u.unit_guard_drops), "source_file": u.source_file})
     paths = {}
     for name, cols, data in (("annotator_A.csv", ANNOTATOR_COLUMNS, rows),
                              ("annotator_B.csv", ANNOTATOR_COLUMNS, rows),

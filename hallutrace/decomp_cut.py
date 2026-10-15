@@ -120,9 +120,9 @@ def packet_files(picked: List[dict], seed, task: str, pool: int) -> Dict[str, st
     by_model: Dict[str, int] = {}
     for g in picked:
         by_model[g["model"]] = by_model.get(g["model"], 0) + 1
-    manifest = {"task": task, "step": "8 (decomposition, E3)", "seed": str(seed),
-                "source": "A2 generations, B_Exec's text rule (option A on length only, #36); "
-                          "ok responses only (D-023)",
+    manifest = {"task": task, "step": "hand decomposition", "seed": str(seed),
+                "source": "generations, the verifiers' text rule (unfinished tail cut on length "
+                          "stops only); ok responses only",
                 "pool": pool, "drawn": len(picked), "by_model": dict(sorted(by_model.items())),
                 "words": sum(len(g["response"].split()) for g in picked),
                 "instruction": INSTRUCTIONS[task]}

@@ -235,7 +235,7 @@ check(all(os.path.exists(os.path.join(out, "pairs_%s_%s.csv" % (v, r[0]))) for v
       and os.path.exists(os.path.join(out, "scores.json")), "scores.json and the pairs for every variant and reading")
 s = json.load(open(os.path.join(out, "scores.json"), encoding="utf-8"))
 eq(s["filtered"]["containment_0.8"]["overall"]["micro"]["recall"], 1.0, "both human atoms recalled")
-eq(s["filtered"]["containment_0.8"]["matcher"], "containment (P0-10.1, many-to-one)", "the headline reading is containment")
+eq(s["filtered"]["containment_0.8"]["matcher"], "containment (many-to-one)", "the headline reading is containment")
 eq(len(s["filtered"]["join_notes"]), 1, "the join note is kept with the scores")
 chk = os.path.join(root, "check.csv")
 shutil.copytree(packet, os.path.join(root, "packets", "biographies"))
@@ -297,15 +297,15 @@ set_cols = ["check_id", "task", "item_id", "model", "machine_atom", "human_atom"
 
 
 def write_set1(**change):
-    write(os.path.join(res_dir, "stress_test.csv"), set_cols + ["po_pass1", "po_pass2", "note"],
+    write(os.path.join(res_dir, "stress_test.csv"), set_cols + ["rater1_pass1", "rater1_pass2", "note"],
           [dict(dict({k: p[k] for k in set_cols[:6]}, score="0.123", matcher_says_0_8="stale",
-                     po_pass1="inside", po_pass2="not inside", note="kept"), **change) for p in pairs])
+                     rater1_pass1="inside", rater1_pass2="not inside", note="kept"), **change) for p in pairs])
 
 
 def write_set2(**change):
-    write(os.path.join(res_dir, "stress_test_set2.csv"), set_cols + ["title", "note"],
+    write(os.path.join(res_dir, "stress_test_set2.csv"), set_cols + ["rater2", "note"],
           [dict(dict({k: p[k] for k in set_cols[:6]}, score="0.123", matcher_says_0_8="stale",
-                     title="inside", note=""), **change) for p in pairs])
+                     rater2="inside", note=""), **change) for p in pairs])
 
 
 write_set1()
@@ -319,7 +319,7 @@ check(len(r1) == len(ckey) and all(float(r["score"]) == float(k["score"]) for r,
       "rescore: each score is the matcher's (as `check` scored the same pair)")
 check(all(r["matcher_says_0_8"] == ("inside" if float(r["score"]) >= 0.8 else "not inside") for r in r1),
       "rescore: each call follows its score at 0.8")
-eq({(r["po_pass1"], r["po_pass2"], r["note"]) for r in r1}, {("inside", "not inside", "kept")},
+eq({(r["rater1_pass1"], r["rater1_pass2"], r["note"]) for r in r1}, {("inside", "not inside", "kept")},
    "rescore: the people's columns and notes are untouched")
 sj = json.load(open(os.path.join(res_dir, "e3_scores.json"), encoding="utf-8"))
 eq((sj["stress_test"]["seed"], sj["stress_test"]["pass2"]["note"], sj["matcher_note"]), (7, "kept", "kept"),
@@ -355,12 +355,12 @@ write_set2(task="summarization")
 refused(rescore + ["--results", res_dir], "a pair filed under another task")
 write_set2(machine_atom="An atom from another run.")
 refused(rescore + ["--results", res_dir], "a machine atom not among the item's filtered atoms")
-write_set2(title="maybe")
+write_set2(rater2="maybe")
 refused(rescore + ["--results", res_dir], "a person's call other than inside or not inside")
-write_set2(title="")
+write_set2(rater2="")
 refused(rescore + ["--results", res_dir], "a blank call")
 write_set2()
-write_set1(po_pass2="Inside!")
+write_set1(rater1_pass2="Inside!")
 refused(rescore + ["--results", res_dir], "a misspelt call in set 1")
 write_set1()
 with redirect_stdout(buf), redirect_stderr(buf):

@@ -205,7 +205,7 @@ def _prf(k: int, m: int, h: int) -> Dict[str, Optional[float]]:
 
 
 def score(items: List[dict], sim=token_overlap, threshold: float = DEFAULT_THRESHOLD,
-          matcher_name: str = "token_overlap (provisional, not P0-10.1)") -> dict:
+          matcher_name: str = "token_overlap (provisional)") -> dict:
     """Per item and overall. Each item: item_id, model, topic, machine [...], human [...]."""
     per_item = []
     for it in items:
@@ -297,7 +297,7 @@ def score_containment(items: List[dict], threshold: float = P0_10_1_THRESHOLD) -
                 "micro": {"precision": p, "recall": r_, "f1": _f1(p, r_)}, "macro": macro}
 
     models = sorted({r["model"] for r in per_item})
-    return {"matcher": "containment (P0-10.1, many-to-one)", "threshold": threshold,
+    return {"matcher": "containment (many-to-one)", "threshold": threshold,
             "overall": summary(per_item),
             "by_model": {mo: summary([r for r in per_item if r["model"] == mo]) for mo in models},
             "items": per_item}
