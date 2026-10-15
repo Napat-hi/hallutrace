@@ -57,6 +57,8 @@ with our patches applied, and the prompts are referenced by id.
 | `scripts/c_exec_untyped.py`, `hallutrace/c_exec_untyped.py`, `scripts/c_exec_nh_sensitivity.py` | Types for the Biographies year slots, the exact-phrase check on unknown counts, the F5 range, and a worst case for false matches in wrong-year counts |
 | `scripts/c_exec2.py`, `hallutrace/c_exec2.py` | The label per Biographies year slot (intervention point, confidence, flags), the tau sweep, and the T5 and F5 tables |
 | `scripts/year_judge_packet.py` | The annotation packet that checks the Wikidata year judge |
+| `annotation/` | Human labels: the verifier check (50 units per task, two annotators, adjudicated gold, agreement) and the hand decomposition check; see `annotation/README.md` |
+| `docs/annotation_guidelines/` | The guidelines the annotators followed |
 | `tests/`, `scripts/run_tests.py` | Tests; no API key or network needed |
 
 Scripts write to `outputs/` (not tracked) unless told otherwise.

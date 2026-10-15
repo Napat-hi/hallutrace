@@ -1,0 +1,216 @@
+{
+  "task": "historical_events",
+  "measure": "kappa",
+  "items": 50,
+  "labelled": 50,
+  "sampling": {
+    "natural_base_rate": 0.1602,
+    "sampling_ratio": 0.42,
+    "drawn_flagged": 21,
+    "drawn": 50
+  },
+  "all_rows": {
+    "inter_annotator": {
+      "n": 50,
+      "kappa": 0.4528,
+      "agreement": 0.68,
+      "ci95": [
+        0.2619,
+        0.6421
+      ],
+      "matrix": {
+        "rows": "annotator_A",
+        "cols": "annotator_B",
+        "labels": [
+          "hallucinated",
+          "supported",
+          "unverifiable"
+        ],
+        "cells": [
+          [
+            21,
+            2,
+            9
+          ],
+          [
+            3,
+            13,
+            2
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ]
+      }
+    },
+    "verifier": {
+      "n": 50,
+      "gold_missing": 0,
+      "kappa": 0.5209,
+      "agreement": 0.72,
+      "gate": "quarantine",
+      "ci95": [
+        0.3515,
+        0.7008
+      ],
+      "edge_crossing": true,
+      "edges_crossed": [
+        0.667
+      ],
+      "matrix": {
+        "rows": "verifier",
+        "cols": "gold",
+        "row_labels": [
+          "hallucinated",
+          "supported"
+        ],
+        "col_labels": [
+          "hallucinated",
+          "supported",
+          "unverifiable"
+        ],
+        "cells": [
+          [
+            19,
+            0,
+            2
+          ],
+          [
+            7,
+            17,
+            5
+          ]
+        ]
+      },
+      "natural": {
+        "kappa": 0.3167,
+        "agreement": 0.6372,
+        "note": "reweighted to the natural base rate; an estimate, not the gate"
+      }
+    }
+  },
+  "tag_source": "tag column",
+  "tags": {
+    "not a claim": {
+      "A": 0,
+      "B": 0,
+      "both": 0
+    },
+    "exaggerated": {
+      "A": 0,
+      "B": 0,
+      "both": 0
+    },
+    "no article": {
+      "A": 0,
+      "B": 0,
+      "both": 0
+    }
+  },
+  "gold_tags": {
+    "not a claim": 0,
+    "exaggerated": 0,
+    "no article": 0
+  },
+  "not_a_claim": {
+    "n": 0,
+    "rule": "dropped when both annotators tagged it; for the verifier's numbers also when adjudication settled it as not a claim",
+    "marked_by_one": 0,
+    "claim_rows": 50,
+    "settled_not_a_claim": [],
+    "verifier_rows": 50,
+    "mentions_not_a_claim": [],
+    "without": {
+      "inter_annotator": {
+        "n": 50,
+        "kappa": 0.4528,
+        "agreement": 0.68,
+        "ci95": [
+          0.2619,
+          0.6421
+        ],
+        "matrix": {
+          "rows": "annotator_A",
+          "cols": "annotator_B",
+          "labels": [
+            "hallucinated",
+            "supported",
+            "unverifiable"
+          ],
+          "cells": [
+            [
+              21,
+              2,
+              9
+            ],
+            [
+              3,
+              13,
+              2
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ]
+        }
+      },
+      "verifier": {
+        "n": 50,
+        "gold_missing": 0,
+        "kappa": 0.5209,
+        "agreement": 0.72,
+        "gate": "quarantine",
+        "ci95": [
+          0.3515,
+          0.7008
+        ],
+        "edge_crossing": true,
+        "edges_crossed": [
+          0.667
+        ],
+        "matrix": {
+          "rows": "verifier",
+          "cols": "gold",
+          "row_labels": [
+            "hallucinated",
+            "supported"
+          ],
+          "col_labels": [
+            "hallucinated",
+            "supported",
+            "unverifiable"
+          ],
+          "cells": [
+            [
+              19,
+              0,
+              2
+            ],
+            [
+              7,
+              17,
+              5
+            ]
+          ]
+        },
+        "natural": {
+          "kappa": 0.3167,
+          "agreement": 0.6372,
+          "note": "reweighted to the natural base rate; an estimate, not the gate"
+        }
+      }
+    }
+  },
+  "thresholds": {
+    "accept": 0.8,
+    "tentative": 0.667
+  },
+  "accuracy_thresholds": {
+    "accept": 0.9,
+    "tentative": 0.8
+  }
+}
