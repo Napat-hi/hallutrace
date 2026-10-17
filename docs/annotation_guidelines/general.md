@@ -8,9 +8,14 @@ Historical Events disagreements showed. Unresolved references
 Where this file and a task guideline differ, this file wins: its rulings are newer. Every task
 guideline now points here.
 
+**Three rulings from adjudicating Summarization and Simplification in the main round:**
+role nouns (rule 2), commentary about a text that is not there (rule 2) and
+task talk (step 3 and rule 5). They were applied at adjudication;
+the main-round annotators did not have them.
+
 Examples marked with an item id are real pilot rows, already adjudicated. Examples marked
-*illustrative* are written to show the rule. **No example comes from the main-round packets**,
-so nothing here tells you how to label an item you are about to see.
+*main round* are main-round rows, added after all labelling and adjudication were
+finished. Examples marked *illustrative* are written to show the rule.
 
 ## Which rules apply to which task
 
@@ -43,8 +48,8 @@ commits to, and it takes no tag.)
 | Step | Ask | If yes |
 |---|---|---|
 | 1 | Is the subject "I", "me", "we", "us" or "you"? | `not a claim`. Stop. (rule 1) |
-| 2 | Is the subject "he", "she", "they", "it", "the speaker" or a bare letter like "A", **and** is there not exactly one person or thing in the row it could mean? | `not a claim`. Stop. (rule 2) |
-| 3 | Is the atom a question, an instruction, a framing or closing line, a fragment that states nothing ("The early years."), or a sentence that says nothing about its subject ("Gulshan Kumar is a fact.")? **Biographies only:** is it about something other than the person? | `not a claim`. Stop. (rule 5) |
+| 2 | Is the subject "he", "she", "they", "it", "the speaker", a bare letter like "A", or a role noun like "the reviewer", **and** is there not exactly one person or thing in the row it could mean? (A role noun's only candidate is the passage's writer: rule 2.) | `not a claim`. Stop. (rule 2) |
+| 3 | Is the atom a question, an instruction (including task talk: a requirement or rubric line about the task, even when written as a statement, rule 5), a framing or closing line, a fragment that states nothing ("The early years."), or a sentence that says nothing about its subject ("Gulshan Kumar is a fact.")? **Biographies only:** is it about something other than the person? | `not a claim`. Stop. (rule 5) |
 | 4 | Is the wording broken, but you can still make out something it claims? | Label it as a claim by the source, leave `tag` blank, write the doubt in `notes`. This is the only place "unsure" applies (rule 6). Know where it leads: the source rarely supports such an atom, so it usually ends as `hallucinated`. |
 | | None of the above | It is a claim. Judge it by the source: `supported` or `hallucinated`. |
 
@@ -101,6 +106,23 @@ If no candidate, or more than one, could be meant, the atom has no subject you c
 of a river; atom "The speaker wants to visit their family next year." No speaker exists in the
 source → `not a claim`.
 
+**Role nouns ("the author", "the narrator", "the reviewer")** (Summarization and Simplification). The word list above does not include role nouns, so they get their own test: **a role
+noun counts as a subject only if it can be read as the passage's writer.** Then it is a claim about
+the writer, judged by the passage. If it names a role nobody in the passage has, it has no
+candidate → `not a claim`.
+
+- Claim: *Summarization 020* (main round): "the author" of an opinion column with one author →
+  judged by the passage, `hallucinated`. *Summarization 027* (main round): "the narrator", read as
+  the article's writer → `hallucinated`.
+- Not a claim: *Summarization 030* (main round): "the reviewer" in a news report that has no
+  reviewer. *Summarization 042* (main round): "the French teacher", a role nobody in the passage
+  has; a name elsewhere in the atom is not its subject.
+
+**Commentary about a text that is not in the source**. An atom that comments on a
+translation, a quote or a document the source does not contain has no subject you can check →
+`not a claim`. *Simplification 048* (main round): "The English translation appears to be unrelated
+to the Spanish quote…", where the source sentence holds no translation and no quote.
+
 ## Rule 3 (Historical Events): an unnamed speaker in a whole response
 
 **Rule 1 does not apply here.** In the atom tasks you see one cut-out sentence, so "I" can only be
@@ -150,6 +172,13 @@ contradict:
 - framing and closing lines: "Here are the independent facts broken down from the passage:";
 - questions and instructions: "What is her sign?", "Please paste the article you want
   summarised." (*illustrative*);
+- task talk: a requirement or rubric line about the task. It counts as an instruction even
+  when written as a statement, because step 3 is judged by what the atom does, not its grammar.
+  *Main round*: *Summarization 022* ("There is a formatting requirement that needs to be
+  checked."), *Summarization 049* ("Submissions will be evaluated for overall structure."),
+  *Simplification 016* ("The paragraph of English text has no line exceeding 100 characters.").
+  (Rule 2 is a word list and is read literally; step 3 is a category and is read by function. The
+  two do not conflict.);
 - the model or the reader as subject (rule 1);
 - a fragment that states nothing: "The early years." (*illustrative*). A broken sentence in which
   you can still make out a claim is not a fragment: it is step 4, a claim with a note;

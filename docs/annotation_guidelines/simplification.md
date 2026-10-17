@@ -4,7 +4,12 @@
 change edge case 1 below and win where the two differ. Examples marked *illustrative* are written to show the rule and are
 not drawn from the annotation packet.
 
-This task follows Summarization's rules exactly. The only differences are that the source is one
+**From main-round adjudication:** edge case 1 gains task talk and commentary about a text that is not there
+(`general.md` rules 2 and 5), from adjudicating the main round. Examples marked
+*main round* are main-round rows, added after all labelling was finished. They were applied at adjudication;
+the main-round annotators did not have them.
+
+This task follows Summarization's rules exactly, including its edge case 4 on hedges. The only differences are that the source is one
 sentence rather than a passage, and the items are faster.
 
 ## The unit and the question
@@ -59,13 +64,18 @@ contradict:
 - a framing or closing line from the decomposer. We measured 27.2% of simplification atoms as
   non-facts on one pilot batch, opening lines such as "Here are the independent facts
   broken down from the passage:" and closing notes;
-- a question or an instruction;
+- a question or an instruction, including task talk: a requirement or rubric line about the
+  task, even when written as a statement (`general.md` rule 5). *Main round, 016*: "The paragraph
+  of English text has no line exceeding 100 characters.";
 - a fragment that states nothing. A broken sentence in which you can still make out a claim is
   not a fragment: label it as a claim and note the doubt;
 - the model or the reader as subject: "I", "we", "you" (`general.md` rule 1);
 - a subject that does not resolve (`general.md` rule 2). *Illustrative*: source sentence about
   the length of a river; atom "The speaker wants to visit their family next year." No speaker
-  exists in the sentence → `not a claim`.
+  exists in the sentence → `not a claim`. The same holds for a role noun that cannot be the
+  sentence's writer, and for commentary on a text the sentence does not contain. *Main round,
+  048*: "The English translation appears to be unrelated to the Spanish quote…", with no
+  translation or quote in the sentence → `not a claim`.
 
 → `unverifiable`, tag `not a claim`. A third-person word that the atom itself resolves is fine:
 "Her" in "Marie Curie won her second Nobel Prize in 1911" is Curie (*illustrative*).

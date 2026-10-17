@@ -4,6 +4,11 @@
 change edge case 1 below and win where the two differ. Examples marked *illustrative* are written to show the rule and
 are not drawn from the annotation packet.
 
+**From main-round adjudication:** edge case 1 gains role nouns and task talk (`general.md` rules 2 and 5), and edge
+case 4 (hedges) is new, from adjudicating the main round. Examples marked
+*main round* are main-round rows, added after all labelling was finished. They were applied at adjudication;
+the main-round annotators did not have them.
+
 ## The unit and the question
 
 **Unit:** one atomic fact, produced by the decomposer from the model's summary.
@@ -58,13 +63,19 @@ specific, not an evaluation, so `tag` stays blank.
 asserts nothing any passage could support or contradict. Only five kinds:
 
 - a framing or closing line from the decomposer (below);
-- a question or an instruction ("Please paste the article you want summarised.", *illustrative*);
+- a question or an instruction ("Please paste the article you want summarised.", *illustrative*),
+  including task talk: a requirement or rubric line about the task, even when written as a
+  statement (`general.md` rule 5). *Main round, 049*: "Submissions will be evaluated for overall
+  structure.";
 - a fragment that states nothing ("The early years.", *illustrative*). A broken sentence in which
   you can still make out a claim is not a fragment: label it as a claim and note the doubt;
 - the model or the reader as subject: "I", "we", "you" (`general.md` rule 1). *Illustrative*:
   "We now list the main points in order.";
 - a subject that does not resolve: a "he", "she", "it" or "the speaker" with no one, or more than
-  one, it could mean (`general.md` rule 2).
+  one, it could mean, or a role noun ("the reviewer") that cannot be the passage's writer
+  (`general.md` rule 2). *Main round, 030*: "the reviewer" in a news report → `not a claim`. A role
+  noun that can be the writer is a claim: *main round, 020*, "the author" of a one-author opinion
+  column.
 
 A third-person word **does** resolve when the atom names the person, or when the passage is about
 one person. *Illustrative*: passage about one tennis player's comeback; atom "Her withdrawal would
@@ -108,6 +119,14 @@ judge rather than state: "The film was a critical success", "The decision was wi
   the atom says "a critical success"), still `hallucinated`, with tag `exaggerated`.
 
 A mixed atom needs every part supported, as in edge case 2.
+
+**Edge case 4: hedges**. A hedged statement in the passage can be restated as what was
+believed at the time. *Main round, 031*: the passage says "There were fears the England defender
+may have fractured his right foot", then reports the scan; the atom says "Initially, it was believed that Kyle Walker
+suffered a broken foot" → `supported`. "Fracture" means "break", and "initially" matches the order
+in the passage (the fears, then the scan). Keep this narrow: an atom that drops the hedge and states
+it as fact ("Walker fractured his foot") is still `hallucinated`, the same as a dropped qualifier
+(Simplification example 3).
 
 **A note on what is not an error.** A summary that leaves information out is not hallucinating. We
 are only asking whether what the atom says is entailed, never whether the summary was complete.

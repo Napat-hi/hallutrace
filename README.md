@@ -72,7 +72,7 @@ with our patches applied, and the prompts are referenced by id.
 | `results/e3/` | The hand decomposition check: precision, recall and F1 per task with 95% bootstrap intervals (`t4.csv`), and the matcher's two 30-pair stress tests |
 | `results/c_exec/`, `results/c_exec2/` | Historical-events counts, the Biographies year-slot types, phrase checks and F5 range, and the label for each slot with the tau sweep. CSV files only for now; the summaries and run metadata follow |
 | `annotation/` | Human labels: the verifier check (50 units per task, two annotators, adjudicated gold, agreement) and the hand decomposition check; see `annotation/README.md` |
-| `docs/annotation_guidelines/` | The guidelines the annotators followed |
+| `docs/annotation_guidelines/` | The guidelines the annotators followed, with the rulings added at adjudication |
 | `tests/`, `scripts/run_tests.py` | Tests; no API key or network needed |
 
 Scripts write to `outputs/` (not tracked) unless told otherwise.

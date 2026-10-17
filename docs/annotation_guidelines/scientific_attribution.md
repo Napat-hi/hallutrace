@@ -1,9 +1,12 @@
 # Annotation guideline: Scientific Attribution
 
-`general.md` collects the rulings from adjudicating
-Biographies and Historical Events. Its rules are about who an atom or a response refers to
-and when an atom is not a claim. Here the unit is an extracted reference, so none of them
-applies. Read it only for context.
+**Three rulings from adjudicating the main round.** Edge case 2 is confirmed
+with a main-round example, and edge cases 3 (a venue is not a work) and 4 (a generic title) are
+new. They were applied at adjudication;
+the main-round annotators did not have them.
+
+`general.md` is about who an atom or a response refers to and when an atom is not a claim. Here
+the unit is an extracted reference, so none of its rules applies. Read it only for context.
 
 Examples marked
 *illustrative* are written to show the rule and are not drawn from the annotation packet. The invented
@@ -88,6 +91,24 @@ matching uses a loose rule for titles (80% of the words). If the response clearl
 same work and the difference is wording, word order, or a dropped subtitle, treat it as cited →
 judge on whether the paper is real. If the difference changes which paper it is, for example a
 different year, different authors, or a different topic, treat it as not cited → `hallucinated`.
+*Main round, 025* (confirmed at adjudication): "The Interior of Jupiter" is a real 2004
+book chapter, but the response cites different authors and an ApJ article. A different work →
+`hallucinated`.
+
+**Edge case 3: a venue is not a work; a reference book is**. An extraction that is only a
+journal or magazine name ("Nature", "Journal of Neurology") names where papers appear, not a paper
+that was cited → `hallucinated`, even though the journal exists. *Main round*: 006, 014, 017, 038,
+047. A reference book (an encyclopedia, a handbook) is itself a work, so judge it like any other
+title. *Main round, 041*: "Encyclopedia of World Biography", found as an encyclopedia →
+`supported`.
+
+**Edge case 4: a generic title with nothing to pin it down**. The title is real, but
+several works share it, and the response gives no author, year or venue that picks one out. You
+cannot tell which work is cited, or whether any of them is → `unverifiable`. This is the
+"ambiguous" case that "How to check existence" keeps `unverifiable` for. *Main round*: 001
+("Health"), 026 ("Uterine Fibroids"), 044 (the response names an institute, but no work with that title
+from it was found), and 009 (an author
+and year are given, but no paper by them matches, and the title fits several works).
 
 ## Practical notes
 

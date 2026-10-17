@@ -1,9 +1,13 @@
 # Annotation guideline: the three extraction tasks
 
-`general.md` collects the rulings from adjudicating
-Biographies and Historical Events. Its rules are about who an atom or a response refers to
-and when an atom is not a claim. Here you judge the extractor, not what the model claims, so
-none of them applies. Read it only for context.
+**Two rules from adjudicating the main round.** R1 (repeated items) and R2
+(only the answer counts) are in "Rules from main-round adjudication" below, with some smaller
+calls. They were applied at adjudication;
+the main-round annotators did not have them.
+
+`general.md` is about who an atom or a response refers to and when an atom is not a claim. Here
+you judge the extractor, not what the model claims, so none of its rules applies. Read it only
+for context.
 
 **False Presuppositions, Rationalization (Numerical), Rationalization (Binary).**
 
@@ -25,7 +29,7 @@ to show the rule.
 was given: if it hit the length cap, its unfinished last clause was removed first.
 
 **Rationalization (Binary) has three kinds of prompt**, and the extraction looks different in each
-(from HALoGEN's verifier code):
+(HALoGEN's verifier notes, Superhuman Pipeline page):
 
 | Category | What the extraction should hold |
 |---|---|
@@ -114,6 +118,67 @@ with the released prompts, falling to 6.4% with v2, so expect this and do not ra
 **What an empty extraction means.** If the response genuinely contains no list, no answer and no
 factors, an empty extraction is faithful → `supported`. An empty extraction when the response did
 answer is `hallucinated`.
+
+## Rules from main-round adjudication
+
+Examples marked with an item id here are main-round rows, already adjudicated (gold in
+`annotation/e1/<task>/adjudication.csv`). They were added after all labelling was finished.
+
+**R1. Repeated items are separate items** (False Presuppositions, Rationalization (Numerical)).
+If the response gives an item more than once, a faithful extraction keeps every occurrence.
+Collapsing the repeats into one item drops something the response said → `hallucinated`, with the
+lost repeat named in `notes`. The extractor keeps repeats elsewhere (*False Presuppositions 012*:
+"November" eleven times, extracted eleven times), so a collapsed list is a real loss, not a
+formatting choice.
+
+- *False Presuppositions 006*: Zr and Zn mentioned many times, each extracted once → `hallucinated`.
+- *False Presuppositions 014*: Singapore named twice, extracted once → `hallucinated`.
+- *False Presuppositions 019*: the same list of 8 given five times, extracted once → `hallucinated`.
+- *False Presuppositions 024*: "yes" given twice, extracted once → `hallucinated`.
+- *False Presuppositions 047*: continents given in the answer and again in the explanation,
+  extracted once → `hallucinated`.
+
+**Rationalization (Binary) is the exception: factors are a set.** In a primality item the factors
+are the distinct primes the response gives. A factor repeated in the text, or written with an
+exponent, is one factor, so extracting it once is faithful → `supported`.
+
+- *Rationalization (Binary) 013*: "29 × 97" given twice, extracted as 29, 97 → `supported`.
+- *Rationalization (Binary) 049*: "2^3 · 3^2 · 7" given three times, extracted as 2, 3, 7 →
+  `supported`.
+
+No repeat case came up for the senator and graph categories. If you meet one, label it, note it
+and raise it with the team.
+
+**R2. Only what the response gives as its answer counts.** Text the extractor lifts from anything
+other than the response's own answer is not an answer: a story, a sample output, a continuation of
+the prompt, a hypothetical ("if … then"), or a new input case the model made up. An extraction
+built from that text → `hallucinated`. A response that gives no answer at all, with an empty
+extraction, is faithful → `supported` (edge case 1, and "What an empty extraction means").
+
+- *False Presuppositions 009*: names taken from a story the model wrote → `hallucinated`.
+- *False Presuppositions 034*: variable names taken from a worksheet → `hallucinated`.
+- *Rationalization (Binary) 010*: flights taken from a new input case the model wrote itself →
+  `hallucinated`.
+- *Rationalization (Binary) 012*: numbers taken from "if … then" statements → `hallucinated`.
+- *Rationalization (Numerical) 022*: byte counts taken from a code-golf answer → `hallucinated`.
+- *Rationalization (Binary) 029*: the response only restates the question, and the extraction is
+  empty → `supported`.
+
+**Smaller calls that follow the rules above**
+
+- *Rationalization (Binary) 034*: the number the response is asked to factorise is not one of its
+  factors. Extracting it as a factor → `hallucinated`.
+- *Rationalization (Numerical) 033*: the count must be the one the response states. 7 extracted
+  where the answer says 3 → `hallucinated`.
+- *Rationalization (Numerical) 037*: a list marker ("1.") read as the numerical answer →
+  `hallucinated`.
+- *Rationalization (Numerical) 050*: a number given in words still matches (edge case 2) →
+  `supported`.
+- *Rationalization (Numerical) 042*, *False Presuppositions 007*: the response gives an answer and
+  the extraction is empty → `hallucinated`.
+
+**Not ruled yet.** A line the extractor trimmed ("yo hey!" extracted as "yo", *False
+Presuppositions 024*) has no ruling; 024 was settled on R1 alone. Raise new cases with the team.
 
 ## Practical notes
 
