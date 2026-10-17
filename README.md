@@ -67,6 +67,7 @@ with our patches applied, and the prompts are referenced by id.
 | `scripts/c_exec_untyped.py`, `hallutrace/c_exec_untyped.py`, `scripts/c_exec_nh_sensitivity.py` | Types for the Biographies year slots, the exact-phrase check on unknown counts, the F5 range, and a worst case for false matches in wrong-year counts |
 | `scripts/c_exec2.py`, `hallutrace/c_exec2.py` | The label per Biographies year slot (intervention point, confidence, flags), the tau sweep, and the T5 and F5 tables |
 | `scripts/year_judge_packet.py` | The annotation packet that checks the Wikidata year judge |
+| `scripts/d3_figures.py`, `hallutrace/d3_figures.py` | F1 to F4 with the CSV each one plots, from T1, the `agreement.json` files and the filtered verifier output; drawing needs matplotlib (the figures were drawn with 3.10.9), the CSVs do not |
 | `scripts/supp_tables.py`, `results/supplementary/` | T1 (h per task and model, before and after the unit filter, with the regime counts) and T2 (every sampled generation by outcome), built from two runs of `scripts/stability.py` |
 | `results/e3/` | The hand decomposition check: precision, recall and F1 per task with 95% bootstrap intervals (`t4.csv`), and the matcher's two 30-pair stress tests |
 | `results/c_exec/`, `results/c_exec2/` | Historical-events counts, the Biographies year-slot types, phrase checks and F5 range, and the label for each slot with the tau sweep. CSV files only for now; the summaries and run metadata follow |
@@ -102,10 +103,10 @@ The paper's supplementary tables and figures, and where each one is in this repo
 | T3 | Verifier validation per task: verifier kappa or extractor accuracy against gold with 95% intervals, the gate, and annotator kappa | `annotation/e1/<task>/agreement.json` |
 | T4 | The hand decomposition check: precision, recall and F1 of the decomposer's atoms, with 95% bootstrap intervals | `results/e3/t4.csv` (labels in `annotation/e3/`) |
 | T5 | Biographies birth and death year slots per model, by stability regime and corpus-count type | `results/c_exec2/t5.csv` |
-| F1 | h per task and model as a plot, filtered with raw beside it | `results/supplementary/figures/` (to follow) |
-| F2 | Units dropped by the unit filter, by reason and task | `results/supplementary/figures/` (to follow) |
-| F3 | Confusion matrices, verifier against gold and annotator against annotator, one per task | `results/supplementary/figures/` (to follow); the matrices are in each `agreement.json` |
-| F4 | Stability regime shares by task and model | `results/supplementary/figures/` (to follow) |
+| F1 | h per task and model as a heatmap, each task with its gate number beside it | `results/supplementary/figures/f1_h_by_task_model.{pdf,png,csv}` |
+| F2 | Units dropped by the unit filter, by reason and task | `results/supplementary/figures/f2_units_dropped.{pdf,png,csv}`, totals per task in `f2_units_dropped_by_task.csv` |
+| F3 | Confusion matrices of each kappa-gated verifier and the year judge against adjudicated gold; the annotator matrices are in each `agreement.json` | `results/supplementary/figures/f3_confusion_matrices.{pdf,png,csv}` |
+| F4 | Stability regime shares by task and model | `results/supplementary/figures/f4_stability_regimes.{pdf,png,csv}` |
 | F5 | Intervention point shares per model, as a range where the counts leave the point open | `results/c_exec2/f5_by_model.csv` |
 | Corpus counts | Correct and wrong year counts per name in each model's corpus, and tau per model | `results/bio_counts/merged/` (Biographies), `results/c_exec/he_counts.csv` and `he_tau.csv` (Historical Events) |
 | Deviations | Every change to HALoGEN's released code | `docs/DEVIATIONS.md` |
