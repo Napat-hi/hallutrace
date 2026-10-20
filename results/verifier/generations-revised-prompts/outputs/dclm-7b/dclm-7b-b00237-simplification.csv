@@ -1,0 +1,682 @@
+passage,response,atomic_units,hallucinated_atomic_units
+,"
+
+\paragraph{Benchmark}
+
+There are some examples of benchmark sentences used in the test set in this section. The sentences have been manually labelled as 'good' or 'bad'. The 'good' sentences have a single, clear intent to address the task, whilst the 'bad' sentences have multiple intents, such as the request to improve the readability of the text whilst simultaneously changing its core meaning, or a request to write a summary. In the worst cases the sentences are either unintelligible or contain no task information at all.","Here are the independent facts broken down from the passage: | True |
+ The test set contains benchmark sentences. | False |
+ The benchmark sentences have been manually labelled. | True |
+ The labels used for the benchmark sentences are 'good' and 'bad'. | False |
+ 'Good' sentences have a single, clear intent to address the task. | True |
+ 'Bad' sentences have multiple intents. | True |
+ Examples of multiple intents in 'bad' sentences include requesting to improve readability and change core meaning simultaneously. | False |
+ Another example of multiple intents in 'bad' sentences is requesting to write a summary. | False |
+ Some 'bad' sentences are unintelligible. | True |
+ Some 'bad' sentences contain no task information at all. | True"," The test set contains benchmark sentences. |
+ The labels used for the benchmark sentences are 'good' and 'bad'. |
+ Examples of multiple intents in 'bad' sentences include requesting to improve readability and change core meaning simultaneously. |
+ Another example of multiple intents in 'bad' sentences is requesting to write a summary."
+,"
+
+## Sample Input
+
+'however writing in the english antiquarian thomas hearne claims wright was born in shoe lane london and after an adolescent conversion to roman catholicism was taken to scotland by a priest.'
+
+
+## Sample Output
+
+'however thomas hearne claims wright was born in shoe lane london after converting to roman catholicism he was taken to scotland by a priest.'
+
+
+#!/usr/bin/env python3
+import re","Here are the independent facts broken down from the passage: | True |
+ **Thomas Hearne made a claim**: Thomas Hearne wrote something about Wright's birth and early life. | True |
+ **Wright's birthplace**: Wright was born in Shoe Lane, London, according to Thomas Hearne. | True |
+ **Wright's conversion to Roman Catholicism**: Wright converted to Roman Catholicism as an adolescent. | True |
+ **Wright was taken to Scotland**: After converting to Roman Catholicism, Wright was taken to Scotland. | True |
+ **A priest was involved**: A priest was the one who took Wright to Scotland. | True |
+These independent facts can be used to reconstruct the original passage or to create a new summary.  | True |
+Here is a simple python script that can extract these facts from the passage: | True |
+```python | True |
+import re | False |
+def extract_facts(passage): | True |
+    facts = [] | False |
+    # Fact 1: Thomas Hearne made a claim | True |
+    if ""thomas hearne"" in passage.lower(): | True |
+        facts.append(""Thomas Hearne made a claim"") | True |
+     | False |
+    # Fact 2: Wright's birthplace | False |
+    match = re.search(r""born in (.*) london"", passage, re.IGNORECASE) | True |
+    if match: | False |
+        facts.append(f""Wright was born in {match.group(1)} London"") | False |
+     | False |
+    # Fact 3: Wright's conversion to Roman Catholicism | True |
+    if ""roman catholicism"" in passage.lower(): | True |
+        facts.append(""Wright converted to Roman Catholicism as an adolescent"") | True |
+     | False |
+    # Fact 4: Wright was taken to Scotland | True |
+    if ""taken to scotland"" in passage.lower(): | True |
+        facts.append(""Wright was taken to Scotland"") | True |
+     | False |
+    # Fact 5: A priest was involved | True |
+    if ""by a priest"" in passage.lower(): | True |
+        facts.append(""A priest was involved in taking Wright to Scotland"") | True |
+     | False |
+    return facts | True |
+passage = ""however writing in the english antiquarian thomas hearne claims wright was born in shoe lane london and after an adolescent conversion to roman catholicism was taken to scotland by a priest."" | True |
+facts = extract_facts(passage) | True |
+for fact in facts: | False |
+    print(fact) | False |
+``` | False |
+This script uses regular expressions to extract the facts from the passage. It checks for specific keywords and phrases to determine which facts are present in the passage. The extracted facts are then printed out. | True","import re |
+    facts = [] |
+     |
+    # Fact 2: Wright's birthplace |
+    if match: |
+        facts.append(f""Wright was born in {match.group(1)} London"") |
+     |
+     |
+     |
+     |
+for fact in facts: |
+    print(fact) |
+```"
+,"
+
+### Hint 1¶
+
+The following is a hint provided for the solution to the above challenge:
+
+Consider that the challenge will probably be looking to see if you have removed most of the unnecessary words, but there may be some which are still acceptable. In that case, you should consider which words can be removed or which words are redundant. For example, the following text should provide a good response: 'commune in normandy region'.
+
+### Hint 2¶
+
+Here is the second hint.","Here are the independent facts broken down from the passage: | True |
+ A challenge is being referred to, but its specifics are not mentioned. | False |
+ The challenge likely requires removing unnecessary words. | True |
+ Some unnecessary words may still be acceptable in the challenge. | True |
+ Redundant words should be considered for removal. | True |
+ The text ""commune in normandy region"" is given as an example of a good response. | True |
+ There are at least two hints being provided for the challenge, labeled as ""Hint 1"" and ""Hint 2"". | False"," A challenge is being referred to, but its specifics are not mentioned. |
+ There are at least two hints being provided for the challenge, labeled as ""Hint 1"" and ""Hint 2""."
+,"
+
+Sample Test Questions:
+
+Sentence Completion
+
+Select the best choice to complete the sentence.
+
+1. The first __________ of the concert was by far the most popular among the audience.
+(A) sonata
+(B) sonatina
+(C) scherzo
+(D) etude
+
+2. The opera's _______ plot had the audience in stitches.
+(A) farcical
+(B) comic
+(C) tragic
+(D) satiric
+
+3.","Here are the independent facts broken down from the passage: | True |
+ There is a sample test with questions. | False |
+ The test includes a sentence completion section. | True |
+ The sentence completion section requires selecting the best choice to complete a sentence. | True |
+ There are at least two questions in the sentence completion section, labeled as 1 and 2. | False |
+ Question 1 is about a concert and asks for the completion of the sentence regarding the most popular part of the concert. | False |
+ Question 1 has four possible answer choices: sonata, sonatina, scherzo, and etude. | False |
+ Question 2 is about an opera and asks for the completion of the sentence regarding the plot's effect on the audience. | False |
+ Question 2 has four possible answer choices: farcical, comic, tragic, and satiric. | False"," There is a sample test with questions. |
+ There are at least two questions in the sentence completion section, labeled as 1 and 2. |
+ Question 1 is about a concert and asks for the completion of the sentence regarding the most popular part of the concert. |
+ Question 1 has four possible answer choices: sonata, sonatina, scherzo, and etude. |
+ Question 2 is about an opera and asks for the completion of the sentence regarding the plot's effect on the audience. |
+ Question 2 has four possible answer choices: farcical, comic, tragic, and satiric."
+,"
+
+The correct answer is:
+
+'Bob Cobb'
+
+If you wish to contribute to the development of this test then contact us at contact@lcc.ie.","Here are the independent facts broken down from the passage: | False |
+ The correct answer is ""Bob Cobb"". | True |
+ There is a contact email address for contributing to the development of a test: contact@lcc.ie. | False |
+ The test is being developed by an organization with the domain ""lcc.ie"". | False","Here are the independent facts broken down from the passage: |
+ There is a contact email address for contributing to the development of a test: contact@lcc.ie. |
+ The test is being developed by an organization with the domain ""lcc.ie""."
+," Note: When you simplify the text, you must keep all its original meaning intact and it must be grammatically correct.
+
+Answer options
+
+A)    However, it may be difficult to reintroduce certain species into the wild even if their natural habitats were restored because survival techniques, which are normally passed from parents to offspring during parenting, may be lost.
+
+B)    However it may be difficult to reintroduce certain species into the wild even if their natural habitats were restored because survival techniques may be lost which normally get passed from parents to offspring during parenting.","Here are the independent facts broken down from the passage: | True |
+ Reintroducing certain species into the wild may be difficult. | True |
+ The difficulty in reintroduction exists even if the species' natural habitats are restored. | True |
+ Survival techniques are normally passed from parents to offspring during parenting. | True |
+ Survival techniques may be lost in certain species. | True |
+These facts are present in both answer options A and B, which convey the same meaning but with slightly different sentence structures. | True",
+,"
+  4. The 'correct' answer for this question is 'axel paulsen'
+
+    This question can be found here
+
+Answer to the challenge
+
+I decided to use Wikipedia as my test corpus, as it is a collection of a large number of articles which I was confident would contain the range of grammatical and spelling mistakes that would be needed for this task.
+
+Wikipedia uses MediaWiki, an open source wiki application, as its website engine. MediaWiki provides an API that allows queries to be made against Wikipedia's article database.","Here are the independent facts broken down from the passage: | True |
+ The correct answer to a question is ""axel paulsen"". | True |
+ The question can be found at a specific location (link provided). | True |
+ Wikipedia was used as a test corpus for a task. | True |
+ Wikipedia is a collection of a large number of articles. | False |
+ Wikipedia contains a range of grammatical and spelling mistakes. | False |
+ Wikipedia uses MediaWiki as its website engine. | False |
+ MediaWiki is an open-source wiki application. | False |
+ MediaWiki provides an API (Application Programming Interface). | False |
+ The MediaWiki API allows queries to be made against Wikipedia's article database. | True"," Wikipedia is a collection of a large number of articles. |
+ Wikipedia contains a range of grammatical and spelling mistakes. |
+ Wikipedia uses MediaWiki as its website engine. |
+ MediaWiki is an open-source wiki application. |
+ MediaWiki provides an API (Application Programming Interface)."
+," (Use all lower case.) 'in the florida everglades a large number of trees were knocked down by the storm.'
+
+• Please also note that this is actually a research project (in order to improve the text quality) and not a task to be done by me. I have made some mistakes and I would like to fix them.
+
+• @drsourav
+
+Hi,
+
+I see you have received an answer to the question.
+However, I’d like to point out, that this is not the only option of improving text quality.","here are the independent facts broken down from the passage: | True |
+ the location is the florida everglades. | True |
+ a storm occurred in the florida everglades. | True |
+ a large number of trees were knocked down. | True |
+ the trees were knocked down by the storm. | True |
+additional notes: | False |
+- the passage is about a storm's impact on the florida everglades. | True |
+- the passage mentions a specific location (florida everglades) and an event (storm) that caused damage (trees knocked down). | True |
+regarding the research project: | True |
+- the goal is to improve text quality. | True |
+- there are multiple options for improving text quality, not just one. | True |
+- the current passage has some mistakes that need to be fixed. | True",additional notes:
+,"
+
+
+Answer: The simplified text should be: “The color of the stripes, from the top down, follows the sequence white, red, blue, white, red, blue, white, red.”
+
+
+Question: Convert the following text to a URL, then supply the URL in the answer field of the test case: 'the color of the stripes from the top down follows the sequence white red blue white red blue white red.'","Here are the independent facts broken down from the passage: | False |
+ The passage is about converting text to a URL. | False |
+ The original text describes the sequence of colors of stripes. | True |
+ The sequence of colors is: white, red, blue, white, red, blue, white, red. | True |
+ The sequence is described from the top down. | True |
+ The text needs to be converted to a URL. | False |
+ The converted URL is to be supplied in the answer field of a test case. | False","Here are the independent facts broken down from the passage: |
+ The passage is about converting text to a URL. |
+ The text needs to be converted to a URL. |
+ The converted URL is to be supplied in the answer field of a test case."
+,"
+
+3. Find an organization in the US (e.g. non-profit or university) that specializes in one of the following fields: artificial intelligence, robotics, self-driving cars or autonomous systems. Retrieve the following information: name of the organization, country, website address, and its field of specialization.
+
+4. Provide the country name where the following events take place: 'the 2013 summer olympics took place in London,' 'the first olympic games were held in Greece.'
+
+5.","Here are the independent facts broken down from the passage: | True |
+ There is a task to find an organization in the US. | True |
+ The organization to be found can be a non-profit or a university. | True |
+ The organization should specialize in one of the following fields: artificial intelligence, robotics, self-driving cars, or autonomous systems. | False |
+ The required information about the organization includes its name, country, website address, and field of specialization. | True |
+ The 2013 Summer Olympics took place in London. | False |
+ The first Olympic Games were held in Greece. | False |
+ London is a city, and based on the context, it is likely located in the United Kingdom (although the country is not explicitly mentioned in this sentence). | False |
+ Greece is a country. | False |
+Note that instruction 5 is incomplete in the passage, so no facts can be extracted from it. | False"," The organization should specialize in one of the following fields: artificial intelligence, robotics, self-driving cars, or autonomous systems. |
+ The 2013 Summer Olympics took place in London. |
+ The first Olympic Games were held in Greece. |
+ London is a city, and based on the context, it is likely located in the United Kingdom (although the country is not explicitly mentioned in this sentence). |
+ Greece is a country. |
+Note that instruction 5 is incomplete in the passage, so no facts can be extracted from it."
+,"
+
+#### Output
+
+'irenaeus in against heresies notes the gnostic view that the ascension happened eighteen months after the resurrection.'
+
+### Expected Performance
+
+The algorithm must be able to simplify text of varying complexity, including paragraphs and pages of text.
+
+### Constraints
+
+• The input will contain no more than 5 sentences.
+• The input will consist of only English text and spaces.
+• The input will contain no more than 10,000 characters.
+• The input will be in the UTF-8 character encoding.
+
+### Data Format","Here are the independent facts broken down from the passage: | True |
+ Irenaeus wrote a work called ""Against Heresies"". | True |
+ In ""Against Heresies"", Irenaeus notes the Gnostic view of the ascension. | True |
+ The Gnostic view, as noted by Irenaeus, states that the ascension happened eighteen months after the resurrection. | True |
+ The algorithm is expected to simplify text of varying complexity. | True |
+ The algorithm can handle paragraphs and pages of text. | True |
+ The input to the algorithm will contain no more than 5 sentences. | True |
+ The input to the algorithm will consist of only English text and spaces. | True |
+ The input to the algorithm will contain no more than 10,000 characters. | True |
+ The input to the algorithm will be in the UTF-8 character encoding. | False", The input to the algorithm will be in the UTF-8 character encoding.
+,"
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=\linewidth]{figs/task-example.png}
+  \caption{Task Example for Text Simplification}
+  \label{fig:task_ex}
+\end{figure}
+
+
+\subsubsection{Text Classification}
+
+Given an input text, the model must classify it to one of the predefined categories. The input text can have different lengths.
+
+\begin{figure}[h]
+  \centering","Here are the independent facts broken down from the passage: | False |
+ A figure is included in the passage with a caption ""Task Example for Text Simplification"" and a label ""fig:task_ex"". | False |
+ The figure is centered and has a width equal to the linewidth. | False |
+ The passage discusses a task related to text classification. | False |
+ In text classification, a model is required to classify an input text into one of several predefined categories. | False |
+ The input text for classification can vary in length. | True |
+Note that the second figure mentioned in the passage is not included in the breakdown as it is incomplete and lacks context. | True","Here are the independent facts broken down from the passage: |
+ A figure is included in the passage with a caption ""Task Example for Text Simplification"" and a label ""fig:task_ex"". |
+ The figure is centered and has a width equal to the linewidth. |
+ The passage discusses a task related to text classification. |
+ In text classification, a model is required to classify an input text into one of several predefined categories."
+," Do not include the original text in the response.
+
+
+
+Many people attend Synagogue on the high holidays. The only time of the year many attend is on the high holidays. This is when people usually fast and attend Synagogue.
+
+The 'fasting' is not in the source text.
+
+I think a simple sentence with a synonym (which I couldn't use, for the example) would have been fine. For example:
+
+Many people attend Synagogue on the high holidays. It is the only time of the year that most attend Synagogue.","Here are the independent facts broken down from the passage: | False |
+ Many people attend Synagogue on the high holidays. | True |
+ For many people, the high holidays are the only time of the year they attend Synagogue. | True |
+ People usually attend Synagogue during the high holidays. | True",Here are the independent facts broken down from the passage:
+," This sample text is not a direct quote from Wikipedia.
+
+Note: this is a special case of the previous question, but it uses a Wikipedia article instead of an arbitrary sample text.
+
+
+  1. The question provides a link to the corresponding Wikipedia page. The Wikipedia page provides further context and links to more articles.
+
+  2. The question uses the sample text as the search string.
+
+  3. This test will be available in English, German and Czech.
+
+More Samples
+
+The above questions are only a few examples of what can be done with the new API.","Here are the independent facts broken down from the passage: | True |
+ The sample text is not a direct quote from Wikipedia. | True |
+ The question provides a link to the corresponding Wikipedia page. | True |
+ The Wikipedia page provides further context and links to more articles. | True |
+ The question uses the sample text as the search string. | True |
+ The test will be available in English. | False |
+ The test will be available in German. | False |
+ The test will be available in Czech. | False |
+ The new API can be used for various tasks beyond the provided examples. | False"," The test will be available in English. |
+ The test will be available in German. |
+ The test will be available in Czech. |
+ The new API can be used for various tasks beyond the provided examples."
+,"
+• Question 5
+5. Which sentence below best describes the purpose of the text?
+• Question 6
+6. Complete the following sentence: The reason for the dominance of small and medium sized businesses is...
+• Question 7
+7. The sentence: 'However there are certain areas where the state can intervene' refers to
+• Question 8
+8. Which of the following words best fits the context of the following sentence: 'In addition to this the government has increased'
+• Question 9
+9. What does the term'market failure' mean?
+• Question 10
+10.","Here are the independent facts broken down from the passage: | True |
+ There is a Question 5. | False |
+ Question 5 asks about the purpose of a text. | False |
+ There is a Question 6. | False |
+ Question 6 is about the reason for the dominance of small and medium-sized businesses. | True |
+ There is a Question 7. | True |
+ Question 7 refers to a sentence about state intervention in certain areas. | False |
+ There is a Question 8. | False |
+ Question 8 is about finding a word that fits the context of a sentence about government action. | False |
+ There is a Question 9. | False |
+ Question 9 asks for the definition of the term ""market failure"". | False |
+ There is a Question 10, but its content is not provided. | False |
+Note that these ""facts"" are more like a list of questions and topics, as the passage does not provide any actual information or statements that can be broken down into independent facts. | True"," There is a Question 5. |
+ Question 5 asks about the purpose of a text. |
+ There is a Question 6. |
+ Question 7 refers to a sentence about state intervention in certain areas. |
+ There is a Question 8. |
+ Question 8 is about finding a word that fits the context of a sentence about government action. |
+ There is a Question 9. |
+ Question 9 asks for the definition of the term ""market failure"". |
+ There is a Question 10, but its content is not provided."
+,"
+    """"""
+    text = ""in she was elected an independent member of the new south wales legislative assembly lrb mla rrb for the seat of balmain.""
+    return clean_text(text, punctuation='""', lowercase=True)
+
+def gen_text_as_array(text):
+    """"""
+    Converts text into a tensorflow tensor as one-hot array.
+    """"""
+    # Set the maximum size for the vocabulary
+    num_vocab = len(word2idx.keys())","Here are the independent facts broken down from the passage: | True |
+ **There is a text variable**: The passage mentions a variable named `text`. | False |
+ **The text variable contains a string**: The string is ""in she was elected an independent member of the new south wales legislative assembly lrb mla rrb for the seat of balmain."" | True |
+ **A function `clean_text` is called**: The `clean_text` function is used to process the `text` variable. | False |
+ **The `clean_text` function has parameters**: The parameters are `punctuation='""'` and `lowercase=True`. | False |
+ **A function `gen_text_as_array` is defined**: This function is used to convert text into a TensorFlow tensor as a one-hot array. | False |
+ **The `gen_text_as_array` function has a comment**: The comment explains that the function converts text into a TensorFlow tensor as a one-hot array. | False |
+ **A variable `num_vocab` is defined**: The variable `num_vocab` is set to the length of the keys in the `word2idx` dictionary. | False |
+ **A dictionary `word2idx` exists**: The dictionary `word2idx` is used to determine the vocabulary size. | False |
+ **The passage uses TensorFlow**: The passage mentions TensorFlow, a machine learning library. | False |
+ **The passage uses Python**: The passage appears to be written in Python, based on the syntax and function definitions. | False"," **There is a text variable**: The passage mentions a variable named `text`. |
+ **A function `clean_text` is called**: The `clean_text` function is used to process the `text` variable. |
+ **The `clean_text` function has parameters**: The parameters are `punctuation='""'` and `lowercase=True`. |
+ **A function `gen_text_as_array` is defined**: This function is used to convert text into a TensorFlow tensor as a one-hot array. |
+ **The `gen_text_as_array` function has a comment**: The comment explains that the function converts text into a TensorFlow tensor as a one-hot array. |
+ **A variable `num_vocab` is defined**: The variable `num_vocab` is set to the length of the keys in the `word2idx` dictionary. |
+ **A dictionary `word2idx` exists**: The dictionary `word2idx` is used to determine the vocabulary size. |
+ **The passage uses TensorFlow**: The passage mentions TensorFlow, a machine learning library. |
+ **The passage uses Python**: The passage appears to be written in Python, based on the syntax and function definitions."
+,"
+
+The data available to answer these questions is given in the 'data.txt' file, which lists all the news articles' headlines, the article's original text, and the number of views of each article.
+
+Your program must read the data file 'data.txt', and print a list of the simplified texts for all the news articles.
+
+
+I tried to do this in C but i think its not good. Could you check my code and suggest me to better do this?
+
+#include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
+
+","Here are the independent facts broken down from the passage: | True |
+ **Data source**: The data is available in a file named 'data.txt'. | False |
+ **Data content**: The 'data.txt' file contains: | True |
+	* News articles' headlines | True |
+	* The original text of each article | True |
+	* The number of views for each article | False |
+ **Program requirement**: The program must read the 'data.txt' file. | False |
+ **Program output**: The program must print a list of simplified texts for all the news articles. | False |
+ **Programming language**: The user attempted to write the program in C. | False |
+ **User's concern**: The user is unsure if their C code is correct and is seeking feedback and suggestions for improvement. | False |
+ **Included libraries**: The user's C code includes the following libraries: | True |
+	* `stdio.h` | False |
+	* `math.h` | False |
+	* `stdlib.h` | False"," **Data source**: The data is available in a file named 'data.txt'. |
+	* The number of views for each article |
+ **Program requirement**: The program must read the 'data.txt' file. |
+ **Program output**: The program must print a list of simplified texts for all the news articles. |
+ **Programming language**: The user attempted to write the program in C. |
+ **User's concern**: The user is unsure if their C code is correct and is seeking feedback and suggestions for improvement. |
+	* `stdio.h` |
+	* `math.h` |
+	* `stdlib.h`"
+,"
+
+Acceptable Inputs:
+
+""dj dougal lrb real name paul arnold clarke born rrb is a british uk hardcore and happy hardcore artist and dj""
+
+""dj dougal is a british uk hardcore and happy hardcore artist""
+
+Unacceptable Inputs:
+
+""dj dougal is a british uk hardcore artist""
+
+""dj dougal is a british uk artist""
+
+""dj dougal is an artist""
+
+Note: The text is always provided in lowercase.","Here are the independent facts broken down from the passage: | True |
+ DJ Dougal's real name is Paul Arnold Clarke. | True |
+ DJ Dougal was born with the initials RRB. | True |
+ DJ Dougal is a British artist. | True |
+ DJ Dougal is a UK hardcore artist. | True |
+ DJ Dougal is a happy hardcore artist. | True |
+ DJ Dougal is a DJ. | True |
+Note that the unacceptable inputs are not considered facts, but rather incomplete or inaccurate statements. The acceptable inputs provide more comprehensive information about DJ Dougal. | True",
+,"
+
+\noindent{\bf Task B}
+Given a list of movies, find a movie that has a description containing a particular sentence in its description.
+
+\noindent{\bf Task C}
+Given a list of movie titles, find the title of a movie that has a description containing a particular sentence in its description.
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=0.95\columnwidth]{examples_task_2.pdf}
+  \caption{","Here are the independent facts broken down from the passage: | True |
+ There are two tasks mentioned: Task B and Task C. | False |
+ Task B involves finding a movie from a list of movies based on a particular sentence in its description. | True |
+ Task C involves finding the title of a movie from a list of movie titles based on a particular sentence in its description. | True |
+ A figure is included in the passage, labeled as ""examples_task_2.pdf"", which is likely an illustration or example related to the tasks. | False |
+ The figure has a caption, but the caption text is not provided in the passage. | False"," There are two tasks mentioned: Task B and Task C. |
+ A figure is included in the passage, labeled as ""examples_task_2.pdf"", which is likely an illustration or example related to the tasks. |
+ The figure has a caption, but the caption text is not provided in the passage."
+," For example, for input 'The first computer to use integrated circuits was the Intel 4004. It was designed and fabricated by Intel and was released in'the expected output should be 'the intel 4004 was the first integrated circuit computer.' (the expected output is in upper case for clarity)","Here are the independent facts broken down from the passage: | True |
+ The first computer to use integrated circuits was the Intel 4004. | False |
+ The Intel 4004 was designed by Intel. | False |
+ The Intel 4004 was fabricated by Intel. | False |
+ The Intel 4004 was released (no specific date mentioned in the passage, but it is mentioned that it was released). | False |
+Note that the expected output ""THE INTEL 4004 WAS THE FIRST INTEGRATED CIRCUIT COMPUTER"" is a rephrased version of fact #1, with some minor changes in wording. | False"," The first computer to use integrated circuits was the Intel 4004. |
+ The Intel 4004 was designed by Intel. |
+ The Intel 4004 was fabricated by Intel. |
+ The Intel 4004 was released (no specific date mentioned in the passage, but it is mentioned that it was released). |
+Note that the expected output ""THE INTEL 4004 WAS THE FIRST INTEGRATED CIRCUIT COMPUTER"" is a rephrased version of fact #1, with some minor changes in wording."
+,"
+
+Sample Response A:
+
+'In his own time, hokusai was far more famous than his contemporaries hiroshige and kuniyoshi.'
+
+
+'Hokusai hiroshige kuniyoshi were his contemporaries.'
+
+
+'Hokusai hiroshige kuniyoshi hokusai.'
+
+Sample Response B:
+
+'Hokusai kuniyoshi hiroshige.'
+
+
+'hokusai hiroshige kuniyoshi.'
+
+2. Topic Sentence Generation","Here are the independent facts broken down from the passage: | False |
+ Hokusai was more famous than his contemporaries in his own time. | False |
+ Hiroshige and Kuniyoshi were contemporaries of Hokusai. | True |
+ Hokusai, Hiroshige, and Kuniyoshi were artists who lived at the same time. | True |
+Note that the other sentences in the passage appear to be lists or combinations of the artists' names, but they do not provide any additional independent facts. They seem to be examples of how the artists' names can be arranged or listed, rather than conveying new information. | True","Here are the independent facts broken down from the passage: |
+ Hokusai was more famous than his contemporaries in his own time."
+," [2]
+
+    The neighbor tells Gretchen that Faust loves her and Gretchen responds by saying that she loves him too. Gretchen has been attracted to Faust since she was sixteen. Gretchen now has faith in Faust. The devil then appears before her and says that he can help her. She says that she is ready to be married to Faust immediately.
+
+  • Q33) Which of the following can be inferred from the passage above?
+
+    He is attracted to her and with the help of a neighbour he succeeds in getting married to Gretchen.","Here are the independent facts broken down from the passage: | True |
+ The neighbor tells Gretchen that Faust loves her. | True |
+ Gretchen responds by saying that she loves Faust too. | True |
+ Gretchen has been attracted to Faust since she was sixteen. | False |
+ Gretchen now has faith in Faust. | False |
+ The devil appears before Gretchen and offers to help her. | True |
+ Gretchen expresses her desire to be married to Faust immediately. | False |
+Note that the question (Q33) is asking for an inference, which is not a direct fact from the passage. The inference is based on the information provided in the passage, but it is not a standalone fact. | True"," Gretchen has been attracted to Faust since she was sixteen. |
+ Gretchen now has faith in Faust. |
+ Gretchen expresses her desire to be married to Faust immediately."
+,"
+
+4. Simplify the following text to improve its readability, ensuring its core meaning remains intact: 'the world of computers is rapidly growing.' Provide only the simplified text as the response.
+
+5. Simplify the following text to improve its readability, ensuring its core meaning remains intact: 'it was a cold, gloomy night, and there was no one around.' Provide only the simplified text as the response.
+
+6.","Here are the independent facts from the passage: | True |
+ There is a request to simplify a given text to improve its readability. | True |
+ The first text to be simplified is: ""the world of computers is rapidly growing."" | True |
+ The second text to be simplified is: ""it was a cold, gloomy night, and there was no one around."" | False |
+ The core meaning of the original texts should remain intact after simplification. | True |
+ There is an incomplete or missing instruction at point 6. | True"," The second text to be simplified is: ""it was a cold, gloomy night, and there was no one around."""
+,"
+
+
+The dataset contains approximately 3,500 sample pairs, with each pair consisting of a document and its corresponding target text, which may be either a simplification, paraphrase, or translation. This dataset was used in a shared task at the ACL 2018 Conference.
+
+For each of the original submissions, a team member from the organising team has manually annotated the output produced by the corresponding submission for the simplified, paraphrased, and translated cases.
+
+The 'original' text of each sample was generated from the following two procedures:
+
+  1.","Here are the independent facts broken down from the passage: | False |
+ The dataset contains approximately 3,500 sample pairs. | False |
+ Each pair in the dataset consists of a document and its corresponding target text. | False |
+ The target text can be either a simplification, paraphrase, or translation of the document. | True |
+ The dataset was used in a shared task at the ACL 2018 Conference. | False |
+ A team member from the organising team manually annotated the output produced by each submission. | False |
+ The manual annotation was done for the simplified, paraphrased, and translated cases. | True |
+ The 'original' text of each sample was generated from two specific procedures (although only one is mentioned in the given passage). | False","Here are the independent facts broken down from the passage: |
+ The dataset contains approximately 3,500 sample pairs. |
+ Each pair in the dataset consists of a document and its corresponding target text. |
+ The dataset was used in a shared task at the ACL 2018 Conference. |
+ A team member from the organising team manually annotated the output produced by each submission. |
+ The 'original' text of each sample was generated from two specific procedures (although only one is mentioned in the given passage)."
+,"
+
+Hint: We can safely ignore the commas and spaces in the text.
+
+### 2.1.1 Question
+
+Create a question as a multiple choice question of two possible choices. The first option is the correct answer, and the second is incorrect.
+
+• First, create the question data using the tribble function and a list of four elements (i.e., question text, correct option, incorrect option, and options_label)
+• Then, create an input object using the input_multiple_choice function and the question data. The input object created should not have any correct answers.","Here are the independent facts broken down from the passage: | True |
+ Commas and spaces in the text can be safely ignored. | True |
+ A multiple choice question with two possible choices needs to be created. | True |
+ The first option in the multiple choice question should be the correct answer. | False |
+ The second option in the multiple choice question should be an incorrect answer. | True |
+ The tribble function should be used to create the question data. | False |
+ The question data should be a list of four elements. | False |
+ The four elements in the question data list are: | True |
+   - Question text | False |
+   - Correct option | True |
+   - Incorrect option | False |
+   - Options label | False |
+ The input_multiple_choice function should be used to create an input object. | False |
+ The input object should be created using the question data. | True |
+ The input object created should not have any correct answers. | False"," The first option in the multiple choice question should be the correct answer. |
+ The tribble function should be used to create the question data. |
+ The question data should be a list of four elements. |
+   - Question text |
+   - Incorrect option |
+   - Options label |
+ The input_multiple_choice function should be used to create an input object. |
+ The input object created should not have any correct answers."
+,"
+
+\begin{center}
+\includegraphics[width=3in]{simpify1.png}
+\end{center}
+
+\end{document}
+
+\documentclass{article}
+
+\usepackage{xcolor}
+\usepackage{graphicx}
+
+\definecolor{mygray}{RGB}{200,200,200}
+
+\begin{document}
+
+\section*{Question 1:}","Here are the independent facts broken down from the passage: | True |
+ The passage contains a LaTeX document. | False |
+ The document includes a graphic image file named ""simpify1.png"" with a width of 3 inches. | False |
+ The document uses the ""xcolor"" package. | False |
+ The document uses the ""graphicx"" package. | False |
+ A custom color named ""mygray"" is defined with RGB values of (200, 200, 200). | False |
+ The document starts with a section titled ""Question 1:"".  | False |
+Note that there is no actual text or information in the passage, only LaTeX code and formatting instructions. | False"," The passage contains a LaTeX document. |
+ The document includes a graphic image file named ""simpify1.png"" with a width of 3 inches. |
+ The document uses the ""xcolor"" package. |
+ The document uses the ""graphicx"" package. |
+ A custom color named ""mygray"" is defined with RGB values of (200, 200, 200). |
+ The document starts with a section titled ""Question 1:"".  |
+Note that there is no actual text or information in the passage, only LaTeX code and formatting instructions."
+,"
+
+Hint: Consider the words as a bag of letters and merge the common letters across the words. E.g. 'lauren bacall lrb' --> 'baulrb'.
+
+Example:
+""Input:\nlauren bacall lrb\nOutput:\nabcdefghijklmnopqrstuvwxyz""
+
+""Input:\nla bca ll lr\nOutput:\nabcr""
+
+""Input:\nlauren bacall lrb\nOutput:\nlaabrll""
+""""""
+
+import re","Here are the independent facts broken down from the passage: | True |
+ **The task involves merging common letters across words**: The passage describes considering words as a bag of letters and combining the common letters. | True |
+ **An example is provided to illustrate the task**: The example shows the input ""lauren bacall lrb"" and the output ""baulrb"". | False |
+ **Multiple examples are given to demonstrate different scenarios**: There are three examples provided in the passage. | False |
+ **The first example has an input of ""lauren bacall lrb"" and an output of ""abcdefghijklmnopqrstuvwxyz""**: This example shows a specific input and output. | False |
+ **The second example has an input of ""la bca ll lr"" and an output of ""abcr""**: This example shows a different input and output. | False |
+ **The third example has an input of ""lauren bacall lrb"" and an output of ""laabrll""**: This example shows another input and output. | False |
+ **The passage mentions using a programming approach**: The passage includes the line ""import re"", indicating that a programming language (likely Python) is being used to solve the task. | False |
+ **The task may involve using regular expressions (re)**: The ""import re"" statement suggests that regular expressions may be used to solve the task, although the specific implementation is not shown. | True"," **An example is provided to illustrate the task**: The example shows the input ""lauren bacall lrb"" and the output ""baulrb"". |
+ **Multiple examples are given to demonstrate different scenarios**: There are three examples provided in the passage. |
+ **The first example has an input of ""lauren bacall lrb"" and an output of ""abcdefghijklmnopqrstuvwxyz""**: This example shows a specific input and output. |
+ **The second example has an input of ""la bca ll lr"" and an output of ""abcr""**: This example shows a different input and output. |
+ **The third example has an input of ""lauren bacall lrb"" and an output of ""laabrll""**: This example shows another input and output. |
+ **The passage mentions using a programming approach**: The passage includes the line ""import re"", indicating that a programming language (likely Python) is being used to solve the task."
+,"
+
+Please complete all fields in the above form.
+
+If you have trouble using this form, please contact us with your question or comment.
+
+Return to previous page","Here are the independent facts broken down from the passage: | True |
+ There is a form that needs to be completed. | False |
+ The form has multiple fields that need to be filled out. | False |
+ Assistance is available if there are issues with using the form. | False |
+ Contact information is provided to reach out for help with the form. | False |
+ There is an option to return to a previous page. | True"," There is a form that needs to be completed. |
+ The form has multiple fields that need to be filled out. |
+ Assistance is available if there are issues with using the form. |
+ Contact information is provided to reach out for help with the form."
+,"
+
+  6. The following text has been extracted from the website 'The History Place - Holocaust Timeline'. (Holocaust Museum and Memorial; United States Holocaust Memorial Museum; Washington, DC 20006. United States: U.S. Holocaust Memorial Museum.)
+
+    ""The Night and Fog Decree: Heinrich Himmler issues an order that anyone resisting the Nazi takeover of their country, or anyone found helping such resistance efforts, should be subject to arrest and execution. His order states: 'Anyone who dares to raise arms against the German soldier is to be condemned to death by shooting or hanging without trial.'","Here are the independent facts broken down from the passage: | True |
+ The text was extracted from the website ""The History Place - Holocaust Timeline"". | False |
+ The website ""The History Place - Holocaust Timeline"" is affiliated with the United States Holocaust Memorial Museum. | False |
+ The United States Holocaust Memorial Museum is located in Washington, DC 20006. | False |
+ Heinrich Himmler issued the ""Night and Fog Decree"". | False |
+ The ""Night and Fog Decree"" ordered the arrest and execution of anyone resisting the Nazi takeover of their country. | False |
+ The ""Night and Fog Decree"" also ordered the arrest and execution of anyone found helping resistance efforts against the Nazis. | False |
+ According to the decree, anyone who raised arms against the German soldier was to be condemned to death. | False |
+ The method of execution for those condemned under the decree was to be either shooting or hanging. | False |
+ Those condemned under the decree were not to receive a trial before their execution. | False"," The text was extracted from the website ""The History Place - Holocaust Timeline"". |
+ The website ""The History Place - Holocaust Timeline"" is affiliated with the United States Holocaust Memorial Museum. |
+ The United States Holocaust Memorial Museum is located in Washington, DC 20006. |
+ Heinrich Himmler issued the ""Night and Fog Decree"". |
+ The ""Night and Fog Decree"" ordered the arrest and execution of anyone resisting the Nazi takeover of their country. |
+ The ""Night and Fog Decree"" also ordered the arrest and execution of anyone found helping resistance efforts against the Nazis. |
+ According to the decree, anyone who raised arms against the German soldier was to be condemned to death. |
+ The method of execution for those condemned under the decree was to be either shooting or hanging. |
+ Those condemned under the decree were not to receive a trial before their execution."

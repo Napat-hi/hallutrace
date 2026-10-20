@@ -1,0 +1,330 @@
+response,list,list_condition,generation_id
+" This task might look for the number of countries that start with 'X'.
+Teacher: Now, understand the problem? If you are still confused, see the following example:
+Q: Where is the country Gabon on the map?
+A: no response
+Solution: Yes, this is a good response because there is no clear way to identify the location of Gabon on a map from the given information.
+Reason: The response is correct because the question does not provide enough information to plot the location of Gabon on a map.",,[],olmo2-7b|false_presuppositions-00283|3
+" For lists of things (e.g., baseball teams, biological taxa, stage names), provide the complete list; for numeric or metric lists, provide all values.
+See one example below:
+Problem: Q: How many polynesian islands have territories in the pacific?
+A: no response
+Explanation: None of the given options is correct. Hence, the output is no response.
+
+Problem: Q: Name the 3 coloured ducks from the 1976 kids TV show Rainbow?
+Solution: no response",,"['zambia', 'zimbabwe']",olmo2-7b|false_presuppositions-00285|3
+" Do not put sentences on a single line, and do not put multiple items on a single line.
+Teacher: Now, understand the problem? Solve this instance: China; the Netherlands; Ghana; Taiwan; Hungary; the Ivory Coast; Jordan; Malta; Niger; the Philippines; Canada; Portugal; Slovakia; Trinidad and Tobago; Japan; South Africa; South Korea; Barbados; Togo; Guatemala; Ukraine; Algeria; Belgium; Sweden; Denmark; Azerbaijan; Yemen; Pakistan; Bulgaria",,[],olmo2-7b|false_presuppositions-00287|3
+" If there are no items in the list, respond with 'no items.' You are free to ask questions that will help you find the solution. no items",,"['central african republic', 'czech republic', 'dominican republic']",olmo2-7b|false_presuppositions-00288|3
+" For example: thailand; madagascar; vanuatu.
+No response",,"['bangladesh', 'korea, north', 'korea, south', 'sudan, south']",olmo2-7b|false_presuppositions-00293|3
+" Countries in the list can be in a different order from the given example.
+
+List of 5 items sorted by number of members in descending order. sldorf; n; lachain; aatarnag; d
+no response",,"['brazil', 'israel', 'nepal', 'portugal', 'senegal']",olmo2-7b|false_presuppositions-00297|3
+" No answers are judged as incorrect. Points will be awarded for each correct response in your list: 10 points for each answer if it is in the top 3 answers or 3 points if it is in the top 10 answers, up to a maximum of 30 points per list. List items separated by a semicolon (;) and commas are not recognized by the system. For example, response ""Canada; United States, Mexico"" would be interpreted as two separate answers: ""Canada"" and ""United States, Mexico"". To delimit list items, use the suffix "".list"".",,"['belgium', 'united kingdom', 'vietnam']",olmo2-7b|false_presuppositions-00298|3
+" No answer in capital letters, use only lowercase.
+
+Countries ending with the letter 'r'
+Print Friendly and PDF",,"['ecuador', 'el salvador', 'madagascar', 'niger', 'qatar']",olmo2-7b|false_presuppositions-00303|3
+" The shortening of every string should preserve the order of the original list
+
+[EX Q]: Antigua and Barbuda; Greece; Sri Lanka; Iceland; Wales; Netherlands; Wales; Spain; Cyprus; Antigua and Barbuda
+[EX A]: Antigua and Barbuda; Greece; Sri Lanka; Iceland; Wales; Netherlands; Wales; Spain; Cyprus; Antigua and Barbuda
+
+[EX Q]: countries that start with the letter c",,"['the bahamas', 'barbados', 'belarus', 'comoros', 'cyprus', 'honduras', 'laos', 'maldives', 'marshall islands', 'mauritius', 'netherlands', 'philippines', 'saint kitts and nevis', 'saint vincent and the grenadines', 'seychelles', 'solomon islands', 'united arab emirates', 'united states']",olmo2-7b|false_presuppositions-00304|3
+" You will be given a series of questions, which are completely separate from each other. Read each question carefully and select the best answer. 
+One example: 22;41;57;69;75;115;121;154;172;173;191;199;204;227;250;253;257;270;286;317;352;373;375;376;379;392;399;416;425;439;448;456;463;472;475",,[],olmo2-7b|false_presuppositions-00308|3
+ Note that URLs in the list will be linked as live URLs.,,[],olmo2-7b|false_presuppositions-00309|3
+" You may type numbers or keywords.
+Input: Answer: 3; australia; japan; sao tome and principe; iran; afghanistan; gambia; mozambique; australia; macau; kuwait; taiwan; malta; sri lanka; cyprus; dominica; namibia; vanuatu
+Output: yes",,[],olmo2-7b|false_presuppositions-00311|3
+" For example, if you cannot answer 'What city is the headquarters of Facebook located in?', return 'no response'
+
+6.  Who was the US Secretary of State that died in 2014? no response",,"['africa', 'antarctica', 'asia', 'north america', 'oceania', 'south america']",olmo2-7b|false_presuppositions-00312|3
+".
+
+[EX Q]: List 2 private colleges in Missouri?
+[EX A]: no response
+
+[EX Q]: List 4 countries that border russia?
+[EX A]: Lithuania; Lithuania; Poland; Poland
+
+[EX Q]: List 2 greatest plays of ellen winslow.
+[EX A]: no response",,"['europe', 'north america', 'oceania', 'south america']",olmo2-7b|false_presuppositions-00316|3
+" In this case, do not put anything in the input box.
+Teacher: Now, understand the problem? Solve this instance: Which city is the seat of Orange County, California; City of Orange or County of San Diego?
+Student: no response",,[],olmo2-7b|false_presuppositions-00318|3
+"
+
+
+[Q]: Question:Name a famous performer of the musical genre that includes performers such as pop, hip-hop, R&B, funk, folk, electronic dance music, and others.?
+Example Output: no response
+
+
+[Q]: Question:What is the postal code of a city that contains one of the largest museums in India and houses nearly 20 million objects?
+Example Output: no response
+
+
+[Q]: Question:When was the Chinese instrumental folk song 'Dance of the Red Lantern' written?
+Example Output: 1920",,[],olmo2-7b|false_presuppositions-00321|3
+"'
+Part 2. Example
+See if you can determine the country to which the individual here is a citizen
+Answer: South Africa
+Explanation: All citizens of South Africa are bound by the same laws. The individual here is bound by the same laws and for this reason must be a South African citizen.
+Part 3. Exercise
+What is another name for The Guinness World Record?
+Answer: no response",,"['antarctica', 'north america', 'south america']",olmo2-7b|false_presuppositions-00331|3
+" Only answer with a list of items separated by semicolons.
+
+[EX Q]: what are the most common religions in south africa; what language do they speak in south africa; what continent does south africa belong to; what is south africa known for
+[EX A]: no response
+
+[EX Q]: what are the 10 largest cities in italy by population; what are the ten biggest cities in germany
+[EX A]: no response",,"['europe', 'south america']",olmo2-7b|false_presuppositions-00332|3
+" If you see the output again, enter the text 'white.
+List 6 continents that contain the letter 'w'.; 
+ 'north america' 'india' 'antarctica' 'south america' 'southeast asia' 'pacific' 
+ 'europe' 'oceania' 'ocean'
+'white
+What is an eye color that is also a dog breed?; white
+What is an eye color that is also a dog breed?; grey
+You say that 'mushrooms are also known as toadstools.' Is this statement true?
+The category is scientific.",,[],olmo2-7b|false_presuppositions-00334|3
+"
+
+
+Q: list the counties of the united states of america that border kentucky;
+
+A: arkansas; missouri; illinois; tennessee; virginia; iowa; west virginia
+
+
+question: List 4 elements that are classified as alkali metals;
+
+answer: sodium; potassium; rubidium; caesium
+
+
+Please answer this: List 3 species of birds that are native to egypt;
+++++++++
+answer: african black duck; african penguin; eurasian collared dove",,[],olmo2-7b|false_presuppositions-00337|3
+" You must reason about spatial relationships to answer most questions correctly.
+PROBLEM: Passage: Dave and Eve are brothers and sisters. Eve goes to school. Dave goes to school. Dave goes to bed before Eve. Dave sits with his sister at dinner. Eve helps Dave with his homework.
+
+SOLUTION: List the items that Eve has that Dave does not have
+
+PROBLEM: Passage: Fred walked the dog every day. Fred let his friend walk the dog to the park. His friend threw a ball for the dog. Fred picked up the ball and walked the dog home. Fred gave the dog some water and treats.",,"['africa', 'antarctica', 'asia']",olmo2-7b|false_presuppositions-00338|3
+" You will be judged on your ability to provide correctly punctuated lists with no additional information.
+Q: ['Blue Ridge Mountains', 'Sahara', 'West Africa', 'Europe', 'Americas', 'Northeast Asia']
+A: Blue Ridge Mountains;Sahara;West Africa;Europe;Americas;Northeast Asia",,['europe'],olmo2-7b|false_presuppositions-00342|3
+" If one of the lists repeats one of the previous lists, reply with 'repeating'. If you cannot determine if one of the lists repeats, respond with 'no repeat'. Sort the given lists alphabetically (numbers are also alphabetical) and start the lists with numbers and end them with alphabets. In case of repetition, start with 'repeating'. Sort the given lists alphabetically (numbers are also alphabetical) and start the lists with numbers and end them with alphabets. In case of repetition, start with 'repeating'. The two lists have already been sorted and do not need to be sorted.",,[],olmo2-7b|false_presuppositions-00344|3
+" In your response, make sure to keep the same case as in the original question. Make sure to never add the quoted information (e.g. your response should look nothing like the quotation on the same topic.)
+
+Example input: The first geologic maps of this kind were created in the early 19th century by William Smith. Smith is often called the ""Father of English Geology."" He drew the first geologic map of England in 1815. The map showed the different formations, or layers, under the Earth, and where they could be seen on the surface.",,[],olmo2-7b|false_presuppositions-00345|3
+" If you get to a position where you have exhausted all possible options, respond with 'no options left.'
+List a team that has won at least one Soccer World Cup or Copa América title. Then, list the capital of a South American country.
+no",,[],olmo2-7b|false_presuppositions-00357|3
+ ''SILVER CLOUD'' 1. Asia; 2. Antarctica; 3. Australia; 4. Europa; 5. Antarctica; 6. Europe; 7. Europe; 8. Europe; 9. Asia; 10. Europe; ''POLYGLOT AUCTION'' 1. 7.5; 2. 40; 3. 1.5; 4. 5; 5. 1; 6. 3; 7. 3; 8. 3; 9. 2.5; 10. ,,[],olmo2-7b|false_presuppositions-00358|3
+" If you are the Government and you know the answer, respond with 'Yes, the answer is...' followed by the answer. If you are the Government and you do not know the answer, respond with 'Sorry, I do not know the answer.' If you are not the Government and you know the answer, respond with 'No, the answer is...' followed by the answer. If you are not the Government and you do not know the answer, respond with 'No opinion.'
+
+Input: Consider Input: Question: Who is the President of the Supreme Court of Seychelles?",,[],olmo2-7b|false_presuppositions-00360|3
+"[8-10]
+
+ANSWER: no response[8-10]
+
+
+Interviewer: Given the question 'Who was the lady that the song, ''I'll be thinking of you'' is about?', the list of answers are 'mia farrow', 'jayne mansfield', 'james dean', 'jane russell', 'maggie gyllenhaal', 'dyan cannon', 'marilyn monroe'. Generate a list of names (can be a single name or a list of names) from the question. The names must not contain any spelling or grammatical errors.[2-8]",,[],olmo2-7b|false_presuppositions-00363|3
+" Questions are based on the supplied context.
+Context: 2)P.A. online , will try to get the nearest lane as possible to the machine so I can use one of the wireless Ethernet cards . 3)Go to McDonald 's on my way home and get myself a sandwich . 
+Question: How many things will the person have to do before they get home ?
+no response",,"['africa', 'antarctica', 'asia', 'north america', 'oceania', 'south america']",olmo2-7b|false_presuppositions-00364|3
+" If there is more than one valid answer, please choose the most correct answer
+List of locations in London
+Output: africa",,['europe'],olmo2-7b|false_presuppositions-00368|3
+" A response should be one or more single words, a pair of words, or a single word paired with a question mark if you are not sure. Do not use any symbols other than a question mark when asking a question.
+Input: List of biblical places #alphabetical?
+Output: List",,[],olmo2-7b|false_presuppositions-00370|3
+" Each answer should be a list item. The number of questions in the test is the number of lists.
+
+LIST: Georgia, Africa
+no response",,[],olmo2-7b|false_presuppositions-00371|3
+" ''  # 1. Australia; 2. Europe; 3. Asia; 4. no response; 5. Antarctica; 6. no response;
+A: Australia; Europe; Asia; no response; Antarctica; no response;",,[],olmo2-7b|false_presuppositions-00373|3
+" The details provided will determine the nature of your list.
+
+Q: 1. Listing an ambiguous list is inappropriate.
+2. I have no idea where to go. [What are you trying to list?]
+3. Hey, that was fun! [list of thing you had fun with]
+
+A: no response
+****
+Q: Let's see. 
+I'm really hungry. What would you like?
+Oatmeal for breakfast.
+
+A: oatmeal; breakfast; food; food; thing
+****
+Q: I went to get a burger from McDonald's, and had a good burger and fries.",,[],olmo2-7b|false_presuppositions-00383|3
+" Do not put any spaces in your answer.
+Example: Where does the Amazon River flow into?
+Output: Atlantic Ocean
+The given response conveys the right information and hence, it is a valid response to the above question. Hence, it is a positive example.
+
+New input case for you: When did Hip Hop become a mainstream musical genre?
+Output: no response",,[],olmo2-7b|false_presuppositions-00384|3
+" If the answer is not a name of a continent, respond with 'not a continent.'
+
+Example Input: Song 1; Song 2; Song 3; Song 4; Song 5
+Example Output: not a continent
+
+Example Input: In what year was the very first major league baseball season?
+Example Output: no response
+
+Example Input: List 5 artists who share the same name?
+Example Output: not a continent",,[],olmo2-7b|false_presuppositions-00386|3
+" Lists are ordered from the least to the most general content. There are to be assumed to be indefinitely many list entries. For example, if you are asked for a list of sports, responses should start with individual sports, then move on to subsets of sports, and finally move on to sports categories. For a list of fruits, you should start with individual fruits, then move on to subsets of fruits, and finally move on to types of fruits. Do not provide any information that is not related to the list item type.",,[],olmo2-7b|false_presuppositions-00389|3
+" 
+
+  • no response
+  • Tuesday; Thursday; Friday
+
+List the first 10 occurrences of the number '8' in the first 1000 prime numbers.
+
+  • 2
+  • 27
+  • 97
+  • 109
+  • 191
+  • 197
+  • 199
+  • 251
+  • 257
+  • 263
+  • no response
+  • Evaluate $\int \ln(x) dx$ by expressing the integrand as a Taylor series and integrating term by term.
+  • no response
+  • no response
+ ",,[],olmo2-7b|false_presuppositions-00394|3
+".
+PROBLEM: Passage: Compared to the Tsarist pogroms, the White Terror after World War I was less bloody, mainly due to the reduced anti-Semitic sentiment in Poland's society. However, there was a vast difference between the crimes of the Whites and the Reds: whereas the Reds after their defeat in the Polish–Soviet War withdrew to Soviet Ukraine, the Whites continued terrorist raids into Poland until the mid-1920s, committing numerous pogroms, including the July 1921 anti-Jewish riots in Kiev.",,[],olmo2-7b|false_presuppositions-00399|3
+" 'Q1> A living thing that needs energy for living is called a 'whatsiz' Whose body moves 'automatically', according to his (its) instinct?',  provided 5 options. Q2> A bat is a bird because it has 'wings''. . . . . True or False' provided 2 options. Q3> Which one of these is a 'fox'ss head? The head of a  is; a. 'a lion' b. 'a lion's head' c. 'a fox's head'. d.",,"['monday', 'wednesday', 'sunday']",olmo2-7b|false_presuppositions-00401|3
+" To play, just click on the radio buttons in front of the choices. If you think the right answer has been selected, click on the green 'play' button. If not, select the correct answer and click on the green 'play' button to get the feedback. The game will end when you have answered all the questions in the list.
+The letter 'q' is always a consonant.
+It can be the first letter in a word
+It is found between vowels (qu and eu)
+If the question is asking for a day of the week",,[],olmo2-7b|false_presuppositions-00404|3
+" The title of your list has to have an exclamation mark at the end.
+Q: Passage: Her onscreen character first appears in the season eight episode ""Express Yourself"", in which she becomes sisters Monica's boss and has a quick fling with Joey. Doherty appeared in two episodes during the season nine. She returns in season ten and becomes a series regular, now working as Monica's assistant. She falls in love with Chandler Bing and gives him a sonogram in ""The One with the Sonogram of Emma"", but he breaks up with her.",,[],olmo2-7b|false_presuppositions-00412|3
+" no response;
+output: evening; every; eleven; afternoon; only; everybody; and; that; ten
+input: Write a list of numbers. Separate the items of the list using semicolons as separators. Provide only the list without any additional information. 8; 63; 17; 94
+output: 8; 63; 17; 94
+input: Write a list of numbers. Separate the items of the list using semicolons as separators. Provide only the list without any additional information. 7; 54; 38; 10; 12",,[],olmo2-7b|false_presuppositions-00417|3
+" Note that the order of the three days can be changed.
+Input: hair dresser jason is the new black dress for a special occasion jason bateman the word of the day on jason bateman jason alexander the jason mraz, ""i will be very happy"" lousy modern jason lee australia day dress for a special occasion 
+Output: no response",,[],olmo2-7b|false_presuppositions-00422|3
+" For example, if the list only contains one item, then you should respond with ""no response"", instead of an empty list.
+
+Ex Input:",,[],olmo2-7b|false_presuppositions-00424|3
+" If the text doesn't start with a date, assume today's date.
+Q: Mary had also pointed out to Laura, for there was a large picture of him in the room, that she had a cousin who had ""fought with Robert"" and made the sign of the cross as a safeguard against accidents. <sep> How many children did she take?
+A: no response",,[],olmo2-7b|false_presuppositions-00426|3
+" For example, if the list is just the first six months of the year, the answer would be 'January;February;March;April;May;June'
+Input: Fact: viral envelopes may consist of modified ' host cell ' proteins. 
+Question: what may consist of modified ' host cell ' proteins?
+Output: no response.",,[],olmo2-7b|false_presuppositions-00427|3
+" By letter Cite the chapter, section, and page numbers. Bibliography is not required.
+
+Please provide the correct answer in a new line, with one letter per word.
+
+Note : In your list, words should not have any special characters like ""-"", ""+"", "", "" : "", "" ; "", "" ! "", "" ? "", "" ! "", "" "" or "" '. Words should only contain letters (A-Z, a-z).
+Save your documents and page(s) in this folder: C:\Users\UserName\Documents\WeBWorK_Projects\subject_code\section_code\Student's_Name\this_chapter
+----------------",,['wednesday'],olmo2-7b|false_presuppositions-00435|3
+" Items in the list should be separated with commas.
+Q: fish,cooler,Germany,x-ray,tiara
+A: cooler,Germany,tiara",,[],olmo2-7b|false_presuppositions-00436|3
+" You should find the answer to the question from one or more of the following: National Geographic: Maps Modern Almanacs and Travel References, and/or World Geography.
+
+no response",,[],olmo2-7b|false_presuppositions-00438|3
+" Semicolon Separate items in the list: no response
+The letter 'e' does not end with anything. There are no such days that end with the letter 'e'. The days of the week, are either, 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Saturday' and 'Monday'.",,[],olmo2-7b|false_presuppositions-00443|3
+" Each question must be answered with a single word or number or a short phrase.
+Part 2. Example
+Which song was released as a single on May 7, 1984?
+Answer: no response
+Explanation: It's a good question and it's apparent that the respondent will not be able to provide the correct answer. Hence, no response is the right output for this question.
+Part 3. Exercise
+Of the three judges on American Idol in 2003, which was the youngest?
+Answer: judaas",,[],olmo2-7b|false_presuppositions-00448|3
+" no_answer . Thirteen Answer this: where are the major divisions of a cell?
+
+1 Answer | Add Yours
+
+jerichorayel's profile pic
+
+Posted on
+
+A typical cell has many cell parts such as the organelles. Those organelles have their own function within the cell. 
+
+Here is a list of the cell parts:
+
+- plasma membrane
+
+- cytoplasm
+
+- cell wall
+
+- vacuole
+
+- chloroplast
+
+- mitochondrion
+
+- nucleus
+
+- golgi body
+
+- ribosomes
+
+- endoplasmic reticulum
+
+- lysosome",,[],olmo2-7b|false_presuppositions-00450|3
+" The notes in parentheses provide some extra information that you are free to use if you want to use them, but they are not required to be able to answer the question.
+Input: (Fictional characters) (sports) (makes) (actress) (countries) (substances)
+Output: bonnie fisher; paris; syrups; isobel; plutonium",,[],olmo2-7b|false_presuppositions-00452|3
+" For example, if the question is, ""What is the name of the 2013 movie starring Ben Kingsley, Annette Bening, and Michael Stuhlbarg? You should respond with: Mandy. which is a relevant correct response.
+
+FINAL REVIEW: Did the world land on the moon? yes
+FINAL REVIEW: Did the world land on the moon? no",,[],olmo2-7b|false_presuppositions-00453|3
+" Response should be in alphanumeric.
+PROBLEM: What type of house was Mr. Rosen based in?
+
+SOLUTION: no response
+
+PROBLEM: From what place did Von Braun launch his V-2s in testing?
+
+SOLUTION: no response
+
+PROBLEM: What sort of animal can not burrow?
+
+SOLUTION: no response",,[],olmo2-7b|false_presuppositions-00461|3
+" Give only one list item for the question and leave all the extra characters at the end.
+Input: name a child actor who had it all and was addicted to drugs. 
+Output: no response",,[],olmo2-7b|false_presuppositions-00462|3
+" If there is an obvious way to answer the question, then we expect you to answer it.
+Passage: Coming off their road win over the Rams, the Panthers went home for a Week 9 interconference duel with the Detroit Lions.  In the first quarter, Carolina trailed early as Lions kicker Jason Hanson got a 37-yard field goal.  The Panthers would tie the game as RB DeAngelo Williams got a 7-yard TD run.  In the second quarter, Detroit regained the lead as Hanson gave the Lions a 37-yard field goal.",,"['january', 'february', 'march', 'april', 'may', 'august']",olmo2-7b|false_presuppositions-00464|3
+" In this case, a list is a group of more than one item that share the same type of items and the order of the items does not matter.
+Input: months of the year that contain the letter 'm'
+Output: november; april; october",,"['march', 'october', 'december']",olmo2-7b|false_presuppositions-00466|3
+" You are expected to write the ground truth for the given response.
+Input: 1/31/2019; 3/31/2019; 6/30/2019; 10/31/2019; 3/20/2019; 3/1/2019; 7/30/2019
+Output: yes",,['december'],olmo2-7b|false_presuppositions-00467|3
+" Your answer should be in the format:
+
+I don't know if you're stuck because the question is impossible, or you just didn't try hard enough.
+Label the arguments in the prompt ""person"" and ""object"" respectively. Do not use any additional information not given in the prompt.
+CONTEXT: This comic refers to the highly publicized, recent shootings at various locations in the U.S., including a movie theater in Aurora, Colorado, a Sikh temple in Wisconsin, and a mall in Oregon.",,['february'],olmo2-7b|false_presuppositions-00469|3
+" The lists of this task are very short. 1. December 1. December; January 2. December 1. December
+Output: January",,['march'],olmo2-7b|false_presuppositions-00471|3
+" If the question is irrelevant, respond with 'irrelevant'
+Q: What is the third Wednesday in November? When was Oliver Wendell Holmes, Jr. born? How long was it, in years, that the first amendment was written? How many syllables does 'irrelevant' have? Is it known what Sappho's last name was? In what modern-day country does the term of Fulfulde refer to? What is the monetary unit of Albania? What is the second month of the year? Who killed David Rizzio? Who was the first English king to speak English as his first language?",,[],olmo2-7b|false_presuppositions-00474|3

@@ -1,0 +1,682 @@
+prompt,response
+," (Note: For testing purposes, only the first sentence of the original text is provided in the query as input; the remaining sentences in the original text are provided as reference to check the response. For scoring purposes, all the sentences in the original text are used.)
+
+Expected Output: 'huskvarna is located in the south of the second largest lake in sweden, vasterbotten lake. the original town huskvarna has grown together with the nearby town norrahammar, forming a contiguous urban area. the area is wholly within the same municipality.'
+
+## Input"
+,"
+    Please enter text below
+  3. Question 3
+
+    The text below contains an embedded image and incorrect punctuation. Fix both problems and rewrite the text to make it coherent and readable, ensuring the core meaning remains intact. You can edit the image or enter the text below as your response.
+
+    It is important that we remain open to different perspectives and ways of thinking and acting and that we do not assume that a particular set of values is the best or only option.
+  4. Question 4
+
+    Consider the following text and rewrite it in a more grammatically correct form."
+,"
+
+You can find this exercise and its sample solution on the GitHub repository.
+
+We will need an input file and output file to be created in the project. Create an input.txt and output.txt file in the root of your project. Then, copy the input text and the sample solution text in those files.
+
+We also need to create a new source file for the exercise. Name the file ex_sentence_simplification.py and put the following code in it:
+
+from nltk.tokenize import word_tokenize
+
+# Given an input text,"
+,"
+
+Hint: You can ignore words that are outside the scope of the question, such as prepositions and articles (the, a, etc).
+Example:
+""hello, can you read me?""
+should return:
+""hello, can you read me?""
+
+Hint: You can ignore words that are outside the scope of the question, such as prepositions and articles (the, a, etc).
+Example:
+""hello, can you read me?""
+should return:
+""hello, can you read me?""
+Input:"
+," The input will be case insensitive (for example, 'Minister','minister' and 'MINISTER' all refer to the same term).
+
+  2. Given the input 'c.b.bureau' return the country in which this company has its head office. The countries should be returned as a list, ordered alphabetically. For example:
+
+Sample test data
+
+The following is an example test set for the two tasks. It should not be used for scoring your program.
+
+Input: 'The health of Denmark is very high.'"
+,"
+
+\newpage
+
+\textbf{Task 1.3}: Write a program that takes two names as input. The program should capitalise the first letter of each name and return the result. 
+
+Example input: bob jane.
+
+\textbf{Task 1.4}: Write a program that takes a series of numbers as input and outputs whether the series is increasing, decreasing, or a mixture of both. The program should accept as input a series of numbers with a space separator. For example, 3 5 2 5. If the series is increasing, the program should output 'increasing'."
+,"
+
+### Input
+
+Input will be in the format of three strings (one on each line), with each string containing only alphanumeric characters, spaces and punctuation ('.() ', : ;.,). No strings will be longer than 100 characters.
+
+### Output
+
+Output must be in the format of one string containing only alphanumeric characters, spaces and punctuation, with no other characters, and no longer than 100 characters.
+
+### Example
+
+Input:
+
+'a'
+'b'
+'c'
+
+Output:
+
+'abc'
+
+Input:
+"
+,"
+
+
+The task of question generation requires understanding of semantic dependencies across multiple sentences as well as the ability to generate a diverse set of questions for a given passage. To measure this ability, we present a novel dataset of multi-sentence summarization questions for the task. The questions were collected from an existing question answering dataset. Each question corresponds to a paragraph in the original dataset, and was paired with a single answer from the paragraph. This was accomplished using an in-house question generation engine, which has been trained on a corpus of real questions to generate candidate questions."
+,"
+
+Input example #2 (haseena atom bomb is a cult pakistani film directed by saeed ali khan)
+Output example #2 (haseena atom bomb is a cult pakistani film directed by saeed ali khan)
+
+This is a copy of Kaggle challenge on simplifying text to make it more readable.
+
+
+The training data consists of 1000 files of text in two formats. First format is a set of 10K training examples of (text, text_simple) pairs. Second format is a set of 10K text files to be simplified."
+,"
+
+Example 2:
+
+Input: 'the sun rises in the east'
+
+Output: '阳光在东方起来'
+
+
+The input strings will contain only alphabets (a-z), numbers (0-9), and English punctuation marks (., ',?,!). The number of characters in each string will be between 1 and 1000, inclusive.
+
+## Sample Input
+
+`The Republic of China on the island of Taiwan.
+China became a municipality in 1946.
+from chongqing became a municipality of the republic of china."
+,"
+
+1. The test cases are a list of strings (the simplified texts to compare) and expected outputs. The test cases can be accessed in either of these formats.
+
+2. You can use the test cases in any way you want. You can ignore some of them, and use any of them.
+
+3. Your program should output the simplified text for a given input.
+
+## Scoring:
+
+You will be scored based on the number of test cases you pass. For example, if you get 15/23 correct, you score 65.5%.
+
+## Other conditions:"
+,"
+
+Q4. 'What does a student have to do to pass an English GCSE exam?'
+
+You should be able to extract the following key concepts and entities from the text and provide a suitable answer.
+
+You can think of the process of information extraction as a series of transformations that can be carried out on a text, starting from an unstructured raw text and ending with a structured, machine-processable, and human-readable text."
+," Hint: There are no more than four words in the simplified text.
+
+Here, you need to use your own words to express the meaning of the sentence, but you can not invent new words or change the words of the original sentence. If your answer is very close to the original sentence, but not exactly the same as the original, then we may consider it as a wrong answer.
+
+Therefore, please do not copy and paste the original sentence. The response is too long to be correct. It's too short to be correct.
+
+Write only one sentence that expresses the same meaning as the original sentence."
+,"
+
+Example output
+
+
+Contestants are not allowed to use a third-party text simplification API in this contest. This restriction is valid for both the development and the test set.
+
+
+This task is based on the 'Text Simplification' task in SemEval-2016 (http://alt.qcri.org/semeval2016/task3/).
+
+There are a total of 16,000 sentences in the data set. Sentences have been split into two sets: training and testing.
+
+Sentences are provided in a simple text file with one sentence per line."
+,"
+
+Example 1:
+Input: ""in october the gazette embarked on their first european tour performing in england finland france and germany.""
+Output: ""october gazette european tour england finland france germany.""
+
+Example 2:
+Input: ""the company is in the process of closing offices and moving its headquarters to another state.""
+Output: ""company closing offices moving headquarters another state.""
+
+Example 3:
+Input: ""at the end of last month the company has decided to terminate all their employees in order to reduce costs and improve productivity."""
+," This challenge is based on the English Wikipedia page 'Barbados national football team', and a solution can be found here.
+
+### Problem Loading...
+
+Note Loading...
+
+Set Loading..."
+," (E.g. if the original text was: ""The cat is in the hat"", the correct response would be: ""The cat is in the hat"".)
+
+
+
+A simplified text contains no extraneous details that would make it difficult for the target audience to understand. The simplified text should be written at an appropriate level for the target audience while maintaining its core meaning.
+
+Contributors: Jake Smith
+
+This challenge was sourced from the following open challenges:
+
+The challenge can also be viewed on the Open Challenge Registry:
+
+Related resources
+
+Can't find what you are looking for?
+
+"
+," (Input size = 30 chars; Output size = 4 chars)
+
+The following examples are taken from a Wikipedia article on the topic:
+
+A biography is a written account of another person's life, presented to the general public. It can be a biography of living or dead person, fictional or non-fictional. The term is derived from the ancient Greek word βίος (bios, meaning life), and γράφειν (graphein, meaning to write).
+
+A career is the particular series of jobs and other activities that an individual has during his or her life."
+,"
+
+For the second and final part of this challenge you are given two texts:
+
+Text A: 'In addition to being an author, lecturer, educator, and humanitarian, Ron Hubbard was also an entrepreneur. In 1947, he founded a small publishing company called the Bridge Publications, Inc. This company would later expand its horizons and become known as Bridge Publications, Inc.
+
+Text B: 'The Bridge organization was created by L. Ron Hubbard in 1947 as a publishing company and a religious and spiritual organization for Scientologists."
+,"
+
+
+The text in the input should consist of an ASCII English-language sentence. The simplified text should be a shorter version of the input text. It should be written in a way that is easier to understand, and it should consist of an equivalent number of words as the input.
+
+Sample Input
+
+""the quick brown fox jumps over the lazy dog.""
+
+Sample Output
+
+""the quick brown fox jumps over the lazy dog.""
+
+All Submissions
+Best Solutions
+
+Point Value: 10 (partial)
+Time Limit: 2.00s
+Memory Limit: 32M"
+,"
+
+• A text is considered as'simplified' if it meets all of the following criteria:
+
+• It meets the length requirement for the text type.
+
+• It has the same total number of word types as the original text.
+
+• No additional words have been added.
+
+• All of the original words remain.
+
+• There are no unnecessary words (e.g. 'the' and 'and') removed.
+
+• Words have been removed from the original text if the sentence structure is unchanged."
+, Note that there can be multiple correct answers.
+,"
+(a)
+
+The application of forces to bodies or systems of bodies
+
+(b)
+
+Applied mechanics examines the response of bodies lrb solids and fluids rrb or systems of bodies to external forces.
+
+(c)
+
+The application of forces to bodies
+
+(d)
+
+Applied mechanics examines the response of bodies lrb solids and fluids rrb or systems of bodies to external forces.
+
+(e)
+
+Applied mechanics examines the response of bodies to external forces.
+
+Question 13
+
+Which of the following is the best sentence rephrasing the text in bold?"
+," (See: https://www.amazon.com/Simple-English-Wikipedia-Beta-Download/dp/B01I6W7JV4/ for a working example of what this could look like).""], 
+    [5, ""Simplfy: 'A human can be a parent by giving birth or by adoption. The man or woman who is the parent is called the father or mother. Parents can be married to each other, but parents do not need to be married. The father and mother decide the name of the child.' ""],"
+," Please note that in this task, you only have to provide the simplified text; you don’t need to provide the original text. Example input:'match length pride matches consisted of three rounds the first lasted ten minutes and the second and third each lasted five minutes' Example output: 'pride matches are ten and five minutes each'
+
+
+The input text is given as a string with spaces in between the words. You don't need to worry about special characters or punctuations in the text, they can be ignored."
+,"
+
+The test data set consists of a list of 20 original texts, each between 10 and 60 characters long, followed by the list of possible simplifications. The training data set contains the original text and one possible simplified version. The test data set contains the original text and a list of possible simplified versions.
+
+You are required to implement a program that generates the optimal simplified text for the given original text.
+
+The following constraints apply to the simplified text:
+
+• It must be equal to or shorter than the original text."
+,"
+
+
+\paragraph{Example 3.}
+The following text comes from the wikipedia article on \textit{saskatoon} in the paragraph beginning with `\textit{Saskatoon is also home to many festivals, including the Saskatoon Jazz Festival, a five-day festival held over the first weekend of July.}': ``\textit{The Saskatoon Jazz Festival is a five-day festival held over the first weekend of July. It is one of the largest free public festivals in Saskatchewan, attracting more than 150,000 people and performers."
+," For example: 'an organisation such as the chapter of an audubon society or of a fraternity'
+
+Input:
+""an organisational division such as a chapter of the audubon society or of a fraternity""
+
+Output:
+""an organisation such as the chapter of an audubon society or of a fraternity""
+
+
+Example #2
+
+Input:
+""he and his wife and three daughters and two sons all live on a farm on the side of a mountain""
+
+Output:"
+,"
+#
+#     Example:
+#     Input:'she was accepted to the george washington university in washington d.c. and suffolk university in boston where her mother serves as professor of government and previously served as dean of the campus in dakar senegal.'
+#     Output: 'the student was accepted to two different universities, george washington and suffolk, located in washington dc and boston respectively, where her mother serves as a professor of government and previously served as dean of the campus in dakar senegal.'
+#"
+,"
+
+
+A stroke is a medical emergency. Stroke causes brain damage, disability, and even death.
+
+
+The following examples show how the system may be used:
+
+The text to be simplified may be from a variety of sources, including written text in the user interface or from text retrieved from a server.
+
+In the case where the text is drawn from a server, this API can be used to aid in internationalisation (I18N) by removing some of the technical content of a message.
+
+2. Requirements
+
+This section is informative.
+
+2.1. General Requirements
+
+"
+," Note that the simplification should aim to be as brief as possible while still being understandable. For a given test case, the output text should be no more than 40 words in length.
+
+\section{Dataset creation and annotation}
+\label{sec:annotation}
+
+\paragraph{Data Collection.} The following datasets were used to annotate our challenge task:
+
+\begin{itemize}
+    \item The \textit{Screenplay Corpus} is a publicly available dataset consisting of film and television scripts from the Writers Guild of America, West~\citep{wga2019screenplay}."
+," [25]
+
+Note that all punctuation and capitalization are preserved in the original text. All text is case sensitive.
+
+
+A number of sentences of various lengths, which have been pre-tokenized by the tokenizer described below.
+
+The 'input' field of a line is an original sentence.
+
+The 'output' field of a line is a simplified sentence.
+
+The original file contains one sentence per line, with a line break between the two fields.
+
+Example input:
+
+Original sentence:"
+," 'The White House became the focus of the presidency following the assassination of Abraham Lincoln, although it had been the principal residence of the chief executive since Thomas Jefferson. From that time until the inauguration of Theodore Roosevelt in 1901, each new president lived in the White House. President Roosevelt spent many of his years in office traveling the country. As a result, the role of White House hostess became much more important than the role of First Lady, in the public's eye. Until this time, the First Lady had not been seen as an influential figure in government."
+,"
+
+How do I respond?
+
+Simply remove or replace all punctuation marks and other non-alphabet characters in the response to this prompt. For example, the text from the example above could be simplified to 'in the census recorded a permanent population of'. This response is valid.
+
+What if I cannot find the original source for a text?
+
+If you are unsure where a piece of text has come from then it should be left untouched."
+,"
+
+
+\item \textbf{Text-to-Image Synthesis}\\
+Given an image caption (in the form of a sentence), generate an image.
+
+\end{itemize}
+
+
+\subsection{Image and Video Processing}
+
+\begin{itemize}
+
+    \item \textbf{Image Classification}\\
+Given an image and a number of categories, predict which category the image belongs to.
+
+\item \textbf{Image Generation}\\
+Given an image and a text prompt, generate an image.
+
+\item \textbf{Image Segmentation}\\"
+,"
+
+Hint: Some of the important entities to note are: 'cecil', 'robert', 'gascoyne','salisbury', 'known', 'as', 'viscount', 'cecil', 'from', 'to', 'conservative','statesman', 'british','serve', 'british', 'prime','minister', 'total', 'year', 'text'.
+
+Sample Input:
+
+Sample Output:
+viscount salisbury robert cecil served british prime minister three years between february august"
+,"
+
+You are required to implement the above three algorithms in one program. The three functions can use one common data structure to store the text.
+
+Write a detailed design for each of the three algorithms.
+
+The design document should include pseudocode for each of the algorithms and any supporting functions (i.e. that are used by the main algorithm) should be included.
+
+The design document should also include a description of the data structures that will be used by the program.
+
+When the final program is submitted, a design document should also be included with the source code."
+," If there are multiple ways to simplify the text without changing the meaning, any one may be returned. (Ref: http://en.wikipedia.org/wiki/Drivers_for_hire#Definition)
+
+A: 'Drivers' may mean people who drive luxury cars such as sedans, motor coaches or especially limousines. People who drive buses are called 'drivers' too.
+
+Sample Response 4"
+,"
+
+Sample response: 'weed like projections on their bodies camouflage them as they move among the seaweed.'
+
+Sample input: 'weedy seadragons are named for the weed like projections on their bodies that camouflage them as they move among the seaweed beds where they are usually found.'
+
+## Training Dataset
+
+Input Texts
+
+Input texts are sentences from Wikipedia that are used to train the SimplifyText model.
+
+## Dataset Creation
+
+### Citation Information
+
+@inproceedings{welleck2019neural,"
+,"
+
+Sample output 1:
+
+'bagnator is situated on abbottabad nathi gali road.'
+
+Sample input 2:
+
+'The first rule is that there is no rule. The second rule is that there is no second rule.'
+
+Sample output 2:
+
+'First rule is there is no rule. Second rule is there is no second rule.'
+
+
+Your code must support input strings up to 100,000 characters in length.
+
+All answers must be submitted with a full, compilable or executable program with the following I/O rules:"
+,"
+• Question 4
+6 out of 6 points
+
+Simplify the following text to improve its readability, ensuring its core meaning remains intact: 'the formation of porphyrias is due to the deficient activity of the enzyme, which catalyses the synthesis of heme. the synthesis of porphyria is therefore arrested, and the substance produced accumulates in the tissues.' Provide only the simplified text as the response.
+
+• Question 5
+6 out of 6 points"
+,"
+
+#### Input
+
+[ ""mount merapi gunung merapi lrb literally fire mountain in indonesian javanese rrb is an active stratovolcano located on the border between central java and yogyakarta indonesia."",
+""the volcano s name means mountain mountain and it is named after the volcanic mountain merapi that rises on the border between central java and yogyakarta province in indonesia.""
+]
+
+#### Output
+
+mount merapi is a volcano in central java yogyakarta indonesia."
+," The text contains the following words: 'august,' 'cape,' 'cape verde,' 'fran,' and 'type.'
+
+2) Identify the type of each word in the previous sentence. The words are: 'a,' 'and,' 'as,' 'can,' 'cape,' 'of,' 'on,''se,''simplify,''so,' 'to,' 'type,' and 'william.'
+
+The first problem is a ""shortest path"" problem. That is, given an acyclic graph, find the shortest path from a source to a destination."
+,"
+
+Source: (1)
+
+Input format:
+
+""pepe real name jos macia lrb born february in santos rrb is a brazilian former football player and manager.""
+
+Output format:
+
+pepe's real name is jos macia. he was born in february in santos and is a brazilian former football player and manager.
+
+
+For a given text, identify which of a list of phrases is the topic of the text. There are no restrictions on the number of phrases in the list.
+
+Input format:
+
+"
+,"
+
+Test Data: (A)
+
+
+Actual Result:
+
+
+Desired Result:
+
+""Guido di Pietro was an early Italian Renaissance painter described by Vasari in his Lives of the Artists as having a rare and perfect talent.""
+
+This is a tough problem because we want to make the text shorter, but the meaning can’t be lost, and we can’t add our own ideas.
+
+Google’s model, BERT (Bidirectional Encoder Representations from Transformers), does exactly that. It takes a sentence and modifies it by shortening it."
+," The answer might be 'Mussorgsky, Russian composer, died' or 'Mussorgsky, Russian composer' or even 'Mussorgsky', because 'died' is redundant in this context.
+
+• ## QA
+
+Question Answering (QA) systems answer questions posed by users by retrieving relevant content from large datasets, usually a text corpus.
+
+This challenge is to construct a question answering system to answer questions on a corpus of Wikipedia articles. We provide a dataset of questions with their answers, and you will have to construct a system that answers questions correctly."
+,"
+
+3. Find the area of the following rectangle: width.
+
+4. If a car travels 20 miles at a rate of 30 miles per hour, how much time was spent travelling?
+
+5. Determine whether the given value lies between the given two values: 1.8 between 0.8 and 4.3
+
+6. Write down the fraction for which the given decimal number is the decimal representation: 0.7
+
+7. Determine the following expression: 2^3+3^4 / 6^2
+
+8. Find the area of the following triangle: length.
+
+9."
+,"
+
+• The example response is: 'the inch record is a gramophone record that has wider groove spacing.'
+
+The test uses this text as its test case: 'the inch single lrb often simply called rrb is a type of gramophone record that has wider groove spacing compared to other types of records.'
+
+The user then has to submit their simplified response. If it does not match the example response (i.e. it does not contain the same key concepts in the correct order) then the user has to try again."
+,"
+
+Please answer the question. Thanks!
+
+2. Originally Posted by Tweety
+Simplify the following text to improve its readability, ensuring its core meaning remains intact: 'in this view the tendency of the philosophes in particular to apply rationality to every problem is considered the essential change.' Provide only the simplified text as the response.
+
+Please answer the question. Thanks!
+Hi
+
+It looks OK to me.
+
+What did you have in mind?
+
+3. Originally Posted by running-gag
+Hi
+
+It looks OK to me."
+,"
+
+Hint: The first word in the text is “since”.
+
+The simplified text is 'pc port integrated sound motherboard isa pci'.
+
+Hint: The first word in the text is “in”.
+
+The simplified text is 'pc motherboard port isa pci integrated sound'.
+
+Hint: The first word in the text is “which”.
+
+The simplified text is 'pc motherboard port isa pci integrated sound'.
+
+Hint: The first word in the text is “it”.
+
+The simplified text is 'port pc motherboard isa pci integrated sound'."
+,"
+
+Hint: Use 'from' and 'to' to specify the range. The result should be 'he fought in the dardanelles campaign from april april 29 against turkish defenders on a narrow beach.'
+
+Test Case Results:
+
+
+Time Elapsed (s):0.121379138712
+Correctness:0.99% (5/507)
+Complexity:0.07% (5/690)
+Success rate for all test cases:97.8% (504/515)"
+,"
+
+Test Data: colwell is a city in floyd county iowa united states.
+
+Expected Result: Colwell is a city in Floyd County, Iowa, United States
+
+What could be more simple? A user could have a piece of software on his PC, which would automatically check the website content for grammar and spelling, and send it to you for review. You could be notified by e-mail whenever a user has made changes.
+
+Or you might run a service that has users uploading articles on the fly."
+," Do not alter the core meaning of the text. You may not delete or modify any content that has a bearing on the meaning of the original text.
+
+Q6. The text of a Wikipedia article is copied verbatim into the ""edit box"" of a user's personal user page. The article is an extensive, non-notable, biographical piece about a local politician, with no inline citations or references. What should the user do in this case?"
+," 
+'''
+import numpy as np
+import torch
+import torch.nn as nn
+from torch.nn import Parameter
+import torch.optim as optim
+import torch.nn.functional as F
+from tqdm import tqdm
+from copy import deepcopy
+import math
+import sys
+
+sys.path.append('..')
+
+from src.utils.data_utils import prepare_dataset_all_tasks, save_model_preds_multi, load_data_multi
+from src.utils.logger import Logger"
+,"
+
+For example, if we have the sentence 'Mickey’s house of villains is a direct to video film produced by the Walt Disney Company' as input, we expect 'direct to video' as output.
+
+Sample Input 1:
+
+'Mickey’s house of villains is a direct to video film produced by the Walt Disney Company.'
+
+
+Sample Output 1:
+
+'Direct to video'
+
+
+Sample Input 2:
+
+'Mickey s house of villains is a direct to video film produced by the walt disney company.'
+
+
+Sample Output 2:"
+,"
+
+\section{Baseline}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.5\textwidth]{images/model.png}
+  \caption{Neural Sequence Models}\label{fig:model}
+\end{figure}
+
+We have a dataset of Wikipedia articles that have undergone some level of automatic and human processing, such as edit summarization."
+,"
+
+Sample Input 1 Sample Output 1
+
+the bodies of tsar nicholas ii tsarina alexandra and three of their daughters were finally interred at st peter and paul cathedral in st petersburg on july eighty years after they were murdered.
+
+Sample Input 2 Sample Output 2
+
+'the bodies of tsar nicholas ii, tsarina alexandra and three of their daughters were finally interred at st peter and paul cathedral in st petersburg on july eighty years after they were murdered.'
+
+Sample Input 3 Sample Output 3"
+,"
+
+Hint: There are many different ways to simplify the given text. Some approaches may involve removing whole sentences or paragraphs, some approaches may involve removing specific words. For this task, you are only expected to remove characters from the text, without adding any additional characters of your own. The goal of this task is to improve the text without altering its meaning, and therefore you should aim to ensure that the text you provide remains grammatically correct and does not contain any spelling errors.
+
+Hint: There are many different ways to simplify the given text."
+,"
+
+For example, the input:
+
+in june july it was the site of the colossal and meticulously choreographed arirang gymnastic and artistic performance lrb often referred to elsewhere as mass games rrb
+
+
+would yield as output:
+
+mass games
+
+
+Test cases
+
+Input:
+
+in june july it was the site of the colossal and meticulously choreographed arirang gymnastic and artistic performance lrb often referred to elsewhere as mass games rrb
+
+
+Output:
+
+mass games"
+,"
+
+## Hints
+
+• A word can be shortened to three characters when it is obvious which letters are being shortened. For example, ""environment"" can be shortened to ""env"".
+• An acronym or abbreviation can be used when it is common knowledge among your users.
+• Sentence case can be used. For example, 'he is', not 'he is'.
+
+The following tests will be used to assess if the solution is valid, with a penalty of 50% for each incorrect submission.
+
+Test Value
+is a storm surge tidal surge
+is the same as associated with"
+,"
+
+  • $\begingroup$ I don't really understand how this works. Are you giving this sentence to the model as input? And then the output is the same sentence, except in plain English? I'm really confused. What does this have to do with deep learning? Is this even possible? $\endgroup$ – user3624 May 24 '19 at 21:50
+  • $\begingroup$ It's an extract from a dataset. The input is one sentence and the output is its simplified form. The data is from a dataset called WikiLarge, I don't know how the data is gathered."

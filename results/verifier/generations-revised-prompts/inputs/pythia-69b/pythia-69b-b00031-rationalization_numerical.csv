@@ -1,0 +1,182 @@
+response,list,list_condition,count,generation_id
+"
+
+A:
+
+JavaScript (ES6),  90  87 bytes
+Takes input as a string.
+f=",,['oscar'],1,pythia-69b|rationalization_numerical-00976|0
+"
+
+A:",,['papa'],1,pythia-69b|rationalization_numerical-00977|0
+"
+
+A:
+
+Python 2,  90  87  83  bytes",,['sierra'],1,pythia-69b|rationalization_numerical-00980|0
+"
+
+A:
+
+Python 2, 67 bytes
+lambda s:s.count('v')
+
+Try it online!
+
+A:
+
+Jelly, 6 bytes
+Vṭṭ
+
+Try it online!
+Explanation
+Vṭṭ  Main link. Argument: s
+
+Vṭṭ  Compute the number of occurrences of v in s.
+
+A:
+
+Jelly, 6 bytes
+Vṭṭ
+
+Try it online!
+Explanation
+Vṭṭ  Main link. Argument: s",,['victor'],1,pythia-69b|rationalization_numerical-00983|0
+"
+
+A:",,[],0,pythia-69b|rationalization_numerical-00989|0
+"
+
+A:",,['quebec'],1,pythia-69b|rationalization_numerical-00990|0
+"
+
+A:
+
+JavaScript (ES6),  90  80 bytes
+Takes input as a string.
+f=
+s=>s.replace(/e/gi,x=>x.length-1)
+
+Try it online!
+How?
+The idea is to replace all e's with the length of the string minus 1.
+
+A:
+
+Javascript (ES6),  90  80 bytes
+s=>s.replace(/e/gi,x=>x.length-1)
+
+Try it online!
+How?",,"['charlie', 'mike', 'yankee']",3,pythia-69b|rationalization_numerical-00992|0
+"
+
+A:
+
+JavaScript (ES6),  ~ 50 ms
+Takes input as a string.
+f=(s,i=0)=>s.replace(/f/g,i++%26)
+
+A:
+
+Jelly,  ~ 1.5 s
+f=:S/f/
+
+Try it online!
+How?
+f=:S/f/
+f   e# Split the input into individual characters
+S   e# Split the input into individual characters",,['golf'],1,pythia-69b|rationalization_numerical-00993|0
+"
+
+A:
+
+JavaScript (ES6),  106  101  98  95 bytes
+Takes input as a string.
+f=(s,n=0)=>s.replace(/([aeiou])([aeiou])/g,c=>n++?c:c.toLowerCase())
+
+Try it online!
+How?
+We can use the following regular expression to match the phonetic alphabet:
+([aeiou])([aeiou])
+
+This matches a vowel followed by a vowel, and then a vowel.",,[],0,pythia-69b|rationalization_numerical-00994|0
+"
+
+A:
+
+JavaScript (ES6),  90  87  83  bytes
+Takes input as a string.
+f=(s,i=0)=>s.replace(/l/g,i++%26)
+
+Try it online!
+
+A:
+
+Jelly,  90  87  83  bytes",,['hotel'],1,pythia-69b|rationalization_numerical-00999|0
+"
+
+A:
+
+JavaScript (ES6),  ~ 100 ms
+Takes input as a string.
+f=s=>s.replace(/[aeiou]/gi,c=>c.match(/m/gi)[0]||c)
+
+Explanation:
+
+The regex [aeiou] matches a vowel.
+The character class [aeiou] matches a vowel followed by a consonant.
+The character class [aeiou] matches a vowel followed by a consonant followed by a vowel.",,['uniform'],1,pythia-69b|rationalization_numerical-01000|0
+"
+
+A:
+
+JavaScript (ES6),  106  101 bytes
+Takes input as a string.",,[],0,pythia-69b|rationalization_numerical-01001|0
+"
+
+A:
+
+JavaScript (ES6),  ~ 50 ms
+Takes input as a string.
+Returns an array of strings.
+
+f=(s,n,r=0)=>s.replace(/\b[aeiou]/g,c=>r++?c:c.toLowerCase())
+console.log(f(""a b c d e f g h i j k l m n o p q r s t u v w x y z"",1))
+
+A:
+
+Python 2.7,  ~ 50 ms
+",,"['bravo', 'echo', 'kilo', 'romeo', 'tango']",5,pythia-69b|rationalization_numerical-01002|0
+"
+
+A:
+
+JavaScript (ES6),  106  101 bytes
+Takes input as a string.
+f=(s,p=0)=>s.replace(/([a-z])([A-Z])/g,c=>c.match(p=>(p=p+c.length-1)%26)&&f(s,p))
+
+Try it online!
+How?
+We use the following regex:
+/([a-z])([A-Z])/g",,[],0,pythia-69b|rationalization_numerical-01003|0
+"
+
+A:
+
+JavaScript (ES6),  65  65 bytes
+Takes input as a string.",,[],0,pythia-69b|rationalization_numerical-01006|0
+"
+
+A:
+
+JavaScript (ES6),  90  88 bytes
+Takes input as a string.
+a=>a.split('').filter(c=>c.match(/v/)).map(c=>c.length)
+
+Try it online!
+How?
+Split the input string on spaces, filter out those that contain the letter v, and then map the length of the remaining characters.
+
+A:
+
+Jelly,  90  88 bytes",,[],0,pythia-69b|rationalization_numerical-01009|0

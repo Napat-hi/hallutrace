@@ -1,0 +1,768 @@
+response,list,list_condition,count,generation_id
+"
+
+A:
+
+JavaScript, 17 11 bytes",,[],0,pythia-69b|rationalization_numerical-00810|3
+" That is, any item in A that satisfies the condition B should be output as follows: A(1) B(1) ... A(n) B(n) (n*7)
+The only differences are in case of letters. We need to differentiate between [A] and [A]. A and A can't be differentiated. How do I make this possible? I tried to insert in the if statement and condition B or [A] or [A] or [A], but it doesn't work. I also tried to write the code like this:",,['hanging gardens of babylon'],1,pythia-69b|rationalization_numerical-00813|3
+"
+
+And now that I think about it, we can even define this rule recursively. Here's a partial program to generate the first four Pascals, which is part of an Euler Problem that is even harder to solve. Here's how it works:",,[],0,pythia-69b|rationalization_numerical-00814|3
+"
+8
+
+So-called private exchanges among employees of the central bank should be made on equal terms for all, and at least quarterly. So, you write, in the _Bulletin_ that we are considering last Friday's exchange and hereby request the central bank to allow an exchange at the rate of 3,000 Rial for 1,000 Rial. [B. No. 26.]
+
+# 26
+
+B.E.O.'s No. 14
+
+BEO No. 14",,['lighthouse of alexandria'],1,pythia-69b|rationalization_numerical-00817|3
+"
+
+My approach:
+def mk_ob(x):
+    for a in range(7):
+        if x==7 and (a>3 or a<3):
+            print(a)
+        elif x==7:
+            print(a)
+    for b in range(7):
+        if x==7 and (a+b==3):
+            print(a+b)
+        elif x==7:
+            print(a+b)
+    for c in range(7):
+        if x==7 and (a-b==1):
+            ",,[],0,pythia-69b|rationalization_numerical-00820|3
+"
+-R, as stated in the code, should be used with care. What it tells the shell is that you want to match one or more of the preceding patterns, that are R letters. But as your input looks like to be a list of AAPs, what happens is that your regular expression will always match it with exactly the same input.
+Instead, your regular expression should be r.
+Replaced the last line with this one:
+grep -o ""AAP"" output.txt
+
+Note the use of the -o option, which means ""output lines only"".
+
+A:
+
+",,[],0,pythia-69b|rationalization_numerical-00823|3
+"
+I tried some ways, but I don't know how to do.
+Please Help me. Thanks!
+Output for: enter number 7:
+1.700
+> 1,700
+
+> enter number 14:
+> 1,700
+> 1,700
+> 1,700
+> 1,700
+> 1,700
+> 1,700
+> 1,700
+> 1,700
+> 1,700
+> 1,700
+> 1,700
+> 1,700
+> 1,700
+> 1,700
+> 1,700
+> 1,700",,['temple of artemis at ephesus'],1,pythia-69b|rationalization_numerical-00825|3
+"
+
+A:
+
+Yes, we need to start with a V.
+
+Choose any letter of the alphabet.
+There are 9 possible letters in a row.
+For each letter, count the number of times it appears in a word.
+Keep a list of those which have a given count. (See test case below.)
+
+At this point, we can use a fairly simple depth-first search to find the answer. The program would look at each word, choose a letter and count the number of times it occurs. If there are a total of 9 occurrences, go to Step 1 for that letter.",,[],0,pythia-69b|rationalization_numerical-00827|3
+"
+ 7! = (x(x + 1)(x + 2) + x)(x + 1)(x + 2) + x! = x!x!
+
+My solution
+def listOfWonders(N):
+    sorted_chars = ''.join(map(str, range(N)))
+    return sorted_chars.split('')
+
+my_wonders = listOfWonders(4)
+print('A:')
+print(' '.join(list(my_wonders)))
+print('\n')",,[],0,pythia-69b|rationalization_numerical-00829|3
+" For example, 14 is not an answer because 10 is also in the list. 7 is an output since 5 is also a result (in the output). It's possible that the problem has a solution involving ""same letter"" and ""not empty"". Then the output would be the number of b[i] where i goes from 1 to 21.
+What I tried was (below):
+`for i in range(0, 21):
+        if i != 14:
+            t = int(input(""Enter a number: ""))
+            if t == b[i]:
+                list.append(t)
+",,[],0,pythia-69b|rationalization_numerical-00833|3
+"
+
+#include<stdio.h>
+
+int main(void)
+
+{
+
+int num=2,i=0;
+
+while(i<2)
+
+{
+
+if(num%i==0)
+
+{
+
+printf(""%d"",num);
+
+i++;
+
+}
+
+else
+
+break;
+
+}
+
+return 0;
+
+}
+
+Output:
+
+4 2 3 1
+
+Notice that i is incremented in the first loop, and the break statement is skipped by the second loop.",,[],0,pythia-69b|rationalization_numerical-00834|3
+"
+7
+
+# Drinking with a tourist
+
+In the list of seven wonders, the Great Pyramid of Giza is on the first place, after the Empire State Building. We all can imagine it well, with the sky and the landscape around it.
+
+Let's try to list the famous buildings in different cities of the world.
+
+The Eiffel Tower was in Paris.
+
+We have plenty of other examples with well-known world-famous sights.
+
+For the great Korean city, it is a Tower of Pisa.",,[],0,pythia-69b|rationalization_numerical-00836|3
+" 
+For example, for this set:
+abcz
+6
+a e i o
+a b c d e f g h i
+m n
+5
+2 2 4 4 2 5 3
+m a n t r u
+6
+s e c h
+s a t
+3
+2 3 2 4 2 3
+
+I wanted to output:
+a b c d e f g h i
+m n
+s e c h
+s a t
+3
+
+A:",,[],0,pythia-69b|rationalization_numerical-00839|3
+"
+#include <stdio.h>
+#include <stdbool.h>
+
+int count = 0;
+
+void AddOneToCount(int value) {
+    count++;
+}
+
+int GetNumber() {
+    int i = count;
+    return i;
+}
+
+int main() {
+    AddOneToCount(GetNumber());
+    int z = GetNumber();
+    printf(""%d\n"", z);
+}
+
+A:
+
+You're looking for every even number.",,[],0,pythia-69b|rationalization_numerical-00840|3
+" It should be completely unique. For example:
+ 7 wonders of the ancient world
+
+Since not every letter of the alphabet is part of the world, you might see Xmas anywhere in there.
+
+A:
+
+Pyth, 10 6 bytes
+I know it does nothing, but I couldn't think of anything.
+a3.{_aZ2Z}
+
+Try it online here.
+Explanation:
+          a3.{               # for a from list a, make all permutations of a3",,[],0,pythia-69b|rationalization_numerical-00843|3
+" Input will be on a single line, and output will be in the same line, such as “4.“(empty string).” … “12.“(empty string).” ...”.
+
+Input:
+
+122345456
+
+Output:
+
+Here is some generated sample output:
+
+5. This is very cool, but what can I do with it?
+
+Since number generators can be put in countless situations, I created an Inventories application. If you need a code example, check out the tests.
+
+It currently has these features:",,[],0,pythia-69b|rationalization_numerical-00846|3
+" And then it's five loops and print them. When I write this code, my code actually enters for loop. And of course it doesn't give me correct output.
+I don't understand what wrong I have done with f. But if you fix f like that, it will work. Forget about that print function. It's useless. That's my hack for now.
+
+A:
+
+Python strings are immutable. Thus:
+""goofy text goofy text goofy text"".rfind(""text"")
+
+evaluates to the same thing as:",,[],0,pythia-69b|rationalization_numerical-00849|3
+" There are a lot of outputs in this problem.
+A possible approach is to use a queue, since the operations on a queue are O(log n) while the longest path is exponential. This means that we can process the queue until it contains only one element. The number of outputs could be 2^n/2 because the longest path is n and there is a unique output for each path.
+The code is
+from itertools import combinations, product, tee, islice
+from collections import deque
+from math import log",,[],0,pythia-69b|rationalization_numerical-00851|3
+" The condition can be very simple, as you can see from the examples below, and is all about a string that follows certain rules.
+
+The code used here:
+
+​ |
+
+s = '''string 1
+
+​ |
+
+string 2
+
+​ |
+
+string 3
+
+​ |
+
+string 4
+
+​ |
+
+string 5
+
+​ |
+
+string 6
+
+​ |
+
+string 7
+
+​ |
+
+string 8
+
+​ |
+
+string 9
+
+​ |
+
+string 10
+
+​ |
+
+string 11",,[],0,pythia-69b|rationalization_numerical-00853|3
+" ""Letter x"" are letters not x. 
+
+",,[],0,pythia-69b|rationalization_numerical-00855|3
+"
+
+Input Format
+
+First line contains two numbers n and b,
+First line will contain two numbers a, b, c. The second line will contain two numbers x,y,z, and .
+Output format: output a list of lists.
+L1 = [i,j] such that a*i+b*j=c and a*x+b*y+c*z=b.
+Output the minimum number of these lists.
+
+Sample Input
+
+10 2
+2 5
+3 7
+8 10
+11 15
+
+Sample Output",,"['christ the redeemer, brazil']",1,pythia-69b|rationalization_numerical-00859|3
+"
+
+I had a try, but in fact the solution need to find out all the items in which the letter c was the first letter of the words. I don't know how to get the info of the items.
+
+Here is my code:
+from collections import Counter
+
+alphabet=set(""abcdefghijklmnopqrstuvwxyz"")
+
+m=Counter(alphabet)
+
+for x in range(1,8):
+    for y in range(1,7):
+        #is the first index of the letter c",,"['the great wall of china', 'christ the redeemer, brazil', 'machu picchu, peru', 'chichen itza, mexico', 'the roman colosseum, italy']",5,pythia-69b|rationalization_numerical-00860|3
+" You could easily extend this to any of the additional categories.
+
+A:
+
+Python 3, 87 bytes",,"['the great wall of china', 'petra, jordan', 'christ the redeemer, brazil', 'machu picchu, peru', 'chichen itza, mexico', 'the roman colosseum, italy', 'the taj mahal, india']",7,pythia-69b|rationalization_numerical-00862|3
+" For example, if the input is ""random"", then output ""lcs, node, cost"" as a result. If input is not a number, print an error message.
+
+",,"['the great wall of china', 'christ the redeemer, brazil', 'machu picchu, peru', 'chichen itza, mexico', 'the roman colosseum, italy', 'the taj mahal, india']",6,pythia-69b|rationalization_numerical-00866|3
+"
+For example, it should be one item, but if you run the program as I give above, the output will be 1 2 3 4 5 6 7, 5 is wrong, because it doesn't satisfy the condition.
+I feel that I'm missing something obvious, I want to learn this kind of stuff, I'm a beginner to the field.
+Thank you.
+
+A:
+
+Think about it as a partially ordered set",,"['the great wall of china', 'petra, jordan', 'chichen itza, mexico', 'the roman colosseum, italy', 'the taj mahal, india']",5,pythia-69b|rationalization_numerical-00871|3
+" 
+
+I'm guessing that you have to do some recursive work.
+
+",,"['petra, jordan', 'machu picchu, peru']",2,pythia-69b|rationalization_numerical-00873|3
+"
+The output could be
+enter code here1
+#1   #2   #3   #4   #5   #6   #7   #8
+
+The initial number is the answer to this previous problem. The above testcase falls into this situation.
+My approach
+
+Convert every capital letter in the input into lower case.
+Check if the lower case character is an integer.
+Filter the integer characters to every second position, it's still only a count.
+Check if the rest letters are between a and z, if so, keep a and z, otherwise, reject it.",,"['the great wall of china', 'petra, jordan', 'christ the redeemer, brazil', 'chichen itza, mexico', 'the roman colosseum, italy', 'the taj mahal, india']",6,pythia-69b|rationalization_numerical-00877|3
+"
+Your code should behave as such:
+  import java.util.Arrays;
+  public class Problem3 {
+    public static void main(String[] args) {
+      String s = ""hallo world"";
+      for (String w: Arrays.asList(s.split("" ""))) {
+        if (w.equals(""z"")) {
+          System.out.println(w);
+        }
+      }
+    }
+  }
+
+This will print out
+  z
+  h
+  l
+  l
+  o
+  o
+  o
+",,"['christ the redeemer, brazil', 'chichen itza, mexico']",2,pythia-69b|rationalization_numerical-00883|3
+" The output list would be in the form:
+1, 2, 3, 4, 5, 6, 7.
+1, 2, 3, 4, 5, 6, 7.
+1, 2, 3, 4, 5, 6, 7.
+1, 2, 3, 4, 5, 6, 7.
+1, 2, 3, 4, 5, 6, 7.
+1, 2, 3, 4, 5, 6, 7.
+1, 2, 3, 4, 5, 6, 7.
+
+I wrote a simple code as shown below.",,[],0,pythia-69b|rationalization_numerical-00885|3
+"
+
+A:
+
+You can use regex, which is an obvious choice, but it will be slower than just indexing and counting in C, because of looping the characters:
+function seven_wonders_of_the_world_c() {
+    $regex = '/c/';
+    $items = [
+        'cairo',
+        'cytus',
+        'centaure'
+    ];
+    foreach ($items as $item) {
+        $count = preg_match_all($regex, $item, $matches);",,"['christ the redeemer, brazil', 'chichen itza, mexico']",2,pythia-69b|rationalization_numerical-00886|3
+" You can use this formula to generate all seven.
+An example of the data table:
+C1, C2, C3, C4
+R1, 0, 2, 4
+R2, 3, 5, 4
+R3, 1, 3, 4
+
+Output the following data table
+
+And the required output would be
+
+I tried to set up a helper column in a way that it would distinguish the position of the letter e in the previous letters, that's why I introduced C4 as the last column in the data table.",,[],0,pythia-69b|rationalization_numerical-00888|3
+"
+
+I find it pretty hard to differentiate letter from numbers and underscore (it's the same capital) so it would be better to just detect if the letter is upper case or lower case. 
+
+A:
+
+I'll explain a little about your code, but not the solutions.  I'll show you what a switch statement looks like.  In the code below, there are three lines that are equivalent:
+System.out.println(""First item: "" + currentItem);
+switch (currentItem) {
+case 'i': System.out.println(""Hello"");
+break;",,[],0,pythia-69b|rationalization_numerical-00892|3
+"
+
+A:
+
+Jelly, 8 bytes
+ṫ%R÷Ḣ₆ḤṪ
+
+Try it online! or see the test-suite. TIO doesn't seem to do any of the others because it can't find the 6 across 8 one, but I think it's fine.
+To clarify what the code does:
+R       e# Take all numbers from the top. This is as basic as it gets.
+ṫ      e# Filter out all numbers with only odd values.",,[],0,pythia-69b|rationalization_numerical-00897|3
+"
+
+A:
+
+JavaScript (ES7), 73 69 63 58 54 53 bytes
+Takes input as \$n\$ (an integer), and returns an array of size \$n\$. The function takes a non-negative integer \$r\$, and returns \$r\$ if \$r\$ has no 1s, and outputs an array of size \$r\$.
+Saved 9 bytes thanks to @ user65190.",,"['petra, jordan']",1,pythia-69b|rationalization_numerical-00899|3
+" Then divide the result into groups of four, and count the number of items within each group.
+
+3. The coin with the highest speed of rotation in the air is a halfpenny, a midge, a penny, and a sixpence. Which one is highest in speed?
+
+4. Can you find all seven possible answer to the word problem in the title of the paper?
+
+5. The blue plate is the only plate that has blue sauce on it.
+
+**2** **Dollars and denarii**",,[],0,pythia-69b|rationalization_numerical-00909|3
+"
+
+R = matrix(ncol = 7, nrow = 4) 
+R <- matrix(ncol = 7, nrow = 4)
+for(i in 1:4){
+   R[i,] <- ifelse(letters[i]=='a', seq(1,7), seq(2,7))
+}
+R
+#     [,1] [,2] [,3] [,4] [,5] [,6] [,7]
+# [1,]    1    5    9   13   17   21   25",,[],0,pythia-69b|rationalization_numerical-00911|3
+ Use all of these power combos and it will give you the first item in the list.,,[],0,pythia-69b|rationalization_numerical-00912|3
+"
+R=range(1,8)
+
+A:
+
+#include <string>
+#include <iostream>
+#include <iterator>
+#include <algorithm>
+#include <vector>
+#include <algorithm>
+
+#define CASE(c) for (int i=0; i<8; i++) { \
+    std::string str = """"; \
+    for (int j = 0; j<8; j++) { \
+        if (i==j) str += c; \
+        else str += c#; \
+    } \
+    ",,[],0,pythia-69b|rationalization_numerical-00914|3
+" I am a total newbie to programming. My code looks like this:
+
+number in g  # it is part of the condition and is defined above.
+
+This is what I have in my .txt file:
+
+Hello, World!
+
+3: The Great Pyramids of Giza
+
+7: Machu Picchu
+
+12: The Leaning Tower of Pisa
+
+I know that it would be better to replace the numbers by their values and list in an array, and then do for each statement. But I have no idea how to get the data into an array.",,[],0,pythia-69b|rationalization_numerical-00918|3
+" Use your keyboard or the arrow keys.
+
+",,"['petra, jordan']",1,pythia-69b|rationalization_numerical-00923|3
+" This is an interview question in a coding contest at java.stackoverflow.com, and this is the problem given for the last few years at mcp.berkeley.edu
+
+13. The first line in a wordlist is the longest, second is the longest, and so on.
+This is the 99%ile of all inputs as measured by letter p.
+
+14. If a number n is written in base b, then let e be the smallest number such that e > n and e = n mod b.",,[],0,pythia-69b|rationalization_numerical-00925|3
+"
+More explanation:
+One line is the group item, here we have five characters ""qtbc"", so the output must be:
+[""t"",""y"",""y"",""s"",""t"",""e"",""n"",""w""]
+
+another example, there are two conditions:
+
+count greater than 3, so there must be greater than or equal to four character, which is only txc
+all six character must be letter
+
+The output is:
+[""t"",""t"",""c"",""n"",""t"",""e"",""x"",""c""]
+
+or we can use range method:
+>>> range(3,7)
+",,[],0,pythia-69b|rationalization_numerical-00929|3
+"
+For example,
+
+    >>> int('8.5E1')
+    10
+    >>> [i for i in [1, 3, 5, 7, 9, 11, 13, 15, 17, 19] if int(i) > 5]
+    [5, 3, 1, 7, 9, 11, 13, 15, 17, 19]
+
+A:
+
+How about this:
+def z():
+    for n in range(1, 20):
+        if n > 5:
+            break
+        else:
+            yield n",,[],0,pythia-69b|rationalization_numerical-00935|3
+"
+
+1 [a] b [a] [a] 2 [e] c [i] [i] [i] 3 [u] [u] [e] 4 [a] [a] [a] [a]
+
+As you see, the first solution is too simple: it only requires no more than five words to be output. In real life, you'll probably need the same, or more.
+
+List the order of a string in alphabetical order.
+
+Given an array of integers, return the same array, but sorted in alphabetical order.",,"['bravo', 'november', 'quebec']",3,pythia-69b|rationalization_numerical-00937|3
+"
+
+Alice wrote:I'm teaching 6th graders (the following year, hopefully) how to find letters in words. So, for this ""place"" question I was told to ask students to list out how many words in the NATO phonetic alphabet contains letter c. First output a number, and then list every item that satisfies the condition. Thanks, David
+
+Using Python,",,"['charlie', 'echo', 'oscar', 'quebec', 'victor']",5,pythia-69b|rationalization_numerical-00938|3
+" To output a string, you need to convert it to a list.
+<root>
+<yacc>                                             #include <stdio.h>
+<yacc>                                             #include <stdlib.h>
+<yacc>                                             #include <ctype.h>
+<yacc>                                             #include <locale.h>
+<yacc>                                             #include <string.h>
+<yacc>                                             #include <stdlib.h>",,"['charlie', 'delta', 'echo', 'hotel', 'juliett', 'mike', 'november', 'quebec', 'romeo', 'sierra', 'whiskey', 'yankee']",12,pythia-69b|rationalization_numerical-00940|3
+"
+
+A:
+
+Python, 109
+def F(s):
+  l=['']
+  for x in range(len(s)):
+     if s[x] in 'FTVNSKRP':
+        l+=[x]+[s[x]]
+  return l",,"['foxtrot', 'golf', 'uniform']",3,pythia-69b|rationalization_numerical-00941|3
+"
+
+A:
+
+MATL, 2 bytes
+0*
+
+I/O format is an array of digits with typecode ""F"".
+Try it online!
+Explanation
+The code simply computes the number of times each letter appears in the NATO phonetic alphabet, and lists them.  This gives the output",,"['golf', 'tango']",2,pythia-69b|rationalization_numerical-00942|3
+" For example:
+
+```bash
+echo 5 | fc lang/a-zA-Z/l-?
+```
+
+returns:
+
+```bash
+a b c d e f g h i j k l m n o p q r s t u v w x y z
+```
+
+## Working on short
+
+### Input the string `!123` as a command.
+
+If the length of input is longer than 70, the maximum length is automatically reduced.
+
+You can choose the type of backtracking when reducing the string:
+
+```bash",,"['alpha', 'charlie', 'delta', 'golf', 'hotel', 'juliett', 'kilo', 'lima', 'zulu']",9,pythia-69b|rationalization_numerical-00947|3
+"
+
+(  **) count the number of time the term 'bad', from a string, occurs, including in that place within the string, where it is not in itself, but in another word or phrase that includes it; and when the string is seen as a numerical string.
+
+A number of people were there that evening: Jules, the young man who worked at the hotel, one of his sisters who worked as a cleaner there, and their families.",,"['lima', 'mike', 'november', 'romeo', 'uniform']",5,pythia-69b|rationalization_numerical-00948|3
+"
+Example:
+
+n   output   Answer
+2   10       RBIK
+3   0, 3, 10, 11, 4, 2, 1  6 choices
+4   3, 6, 10, 9    8 choices
+5   6, 7, 4, 11    8 choices
+6   8, 7, 5, 4, 10  8 choices
+7   4, 6, 10, 8, 5, 2, 3, 6, 11  9 choices
+
+Let me know if you need further clarification. Thank you in advance!
+
+A:",,"['india', 'november', 'tango', 'uniform', 'yankee']",5,pythia-69b|rationalization_numerical-00949|3
+"
+If using %e, the answer will have to be formatted as an array.
+The correct answer is this:
+%o03 %a20 %c%l %h %d %n %l0 %v4 %w%
+
+If the formatting problem is too big, use %ae% instead of %o03.
+
+A:
+
+Batch, 132 bytes
+A little tricky. If you don't want to count in uppercase, add ""&UPPER"" into the Set.
+@echo %S &echo.",,"['bravo', 'echo', 'foxtrot', 'golf', 'hotel', 'kilo', 'november', 'oscar', 'romeo', 'tango', 'uniform', 'victor']",12,pythia-69b|rationalization_numerical-00950|3
+"
+HINT: one possible way to solve this is: list all non-alphabetical characters, from 1-10 inclusive, and then subtract them from your alphabetical ones to get what to place in the position.
+Here is my solution:
+$ echo a | perl -ne '!/^[^a-zA-Z]./ && print (join "" "",",,"['alpha', 'papa']",2,pythia-69b|rationalization_numerical-00951|3
+"
+Failing that, display how many words contain s after the first, failing that, after the second...
+Your program should take input in lower case letters. This is because lists are stored in single case.
+
+A:
+
+J, 86 89 90 91 92
+Thanks to @Maarten for solving my brain-drain problems with this program.
+Tangos algorithm is pretty simple, so I don't want to waste much time on the programming.
+Just use this brute-force program to speed up the process, and enjoy the ride:",,"['oscar', 'sierra', 'whiskey']",3,pythia-69b|rationalization_numerical-00954|3
+" For example, ""Thiess-sone-id"" and ""teh-im-maz-gun"" are two valid outputs for this problem, and so is ""Theft-Id"". There are 1485 such items.
+
+I have another approach that does work. I take the value of the character in a string, encode it using base 16, and do binary search using every 4th value. Then if I find a match, I output it in sorted order. My reasoning is that we are mostly looking for place value of values that are single digits or characters.",,"['bravo', 'november', 'victor']",3,pythia-69b|rationalization_numerical-00957|3
+"
+
+A:
+
+APL (Ada) + GNU APL: 6",,['bravo'],1,pythia-69b|rationalization_numerical-00963|3
+" The problem is I am not getting output when user inputs 'c'. Can anyone suggest me how to do that?
+#include <stdio.h>
+#include <stdlib.h>
+
+#define A 2
+#define B 3
+#define C 4
+#define D 5
+#define E 6
+
+void main(void)
+{
+    int i, x;
+    printf(""What is the number of elements in the NATO phonetic alphabet?: \n"");
+    scanf(""%d"",&x);
+    if (x<0)
+        x=0;",,['charlie'],1,pythia-69b|rationalization_numerical-00964|3
+"
+
+A:
+
+MATL, 9 bytes
+.tQh5+x%!u+
+
+Try it online!
+Explanation
+.tQh5+x%!u+  % Implicit input: string ""bch"".
+.          %   Subtract 2.
+ .tQ        %   Copy input.
+  h5        %   Take the first character in the string (b).
+    +       %   Add 1.
+     x%      %   Expand that using all permutations of the string
+       !    %   Find inversions.",,['echo'],1,pythia-69b|rationalization_numerical-00966|3
+"
+A naive solution would be:
+r = {}
+for c in s:
+    if c.isdigit():
+        if c not in r:
+            r[c] = 1
+        else:
+            r[c] += 1
+print(r)
+
+Obviously, it's inefficient.
+Any hint on how to optimize it?
+
+A:
+
+Here is the algorithm I came up with. It's still in O(N) and runs pretty fast.",,['foxtrot'],1,pythia-69b|rationalization_numerical-00967|3
+"
+void wordFinding(int n, char *destination){
+int i;
+int sum=0;
+for (i = 0; i < strlen(destination); i++){
+    if(destination[i]=='g' && i< (strlen(destination)+1)){
+        sum++;
+    }
+    else if (destination[i] == 'G' && i< (strlen(destination)+1)){
+        //printf(""%d\n"", sum);
+    }
+    else{
+        printf(""Word not found!"");
+        return;
+    }
+}",,['golf'],1,pythia-69b|rationalization_numerical-00968|3
+" If I am given a list l = [0,1,2,3,4,5], I will get [0,1,2,4,5], since the output of `[0,1,2,4,5]` will also be the output of `[0,1,2,3,4,5]`. I will get [0,1,2,3,4,5] if I give a list l = [3,2,1], then I will get [2,1]
+
+A:
+
+lambda, 3, 5 = 0",,['lima'],1,pythia-69b|rationalization_numerical-00973|3
+"
+
+Note: For extra credit, include only words that consist of one or more English phonemes.
+
+A:
+
+JavaScript (ES6), 353 bytes
+_=>eval`e.map(_=>`^${e[e='m'].indexOf(c.toUpperCase())}`).join``
+
+Test it here.
+What it does
+(All of this can be seen by hovering over this link)
+
+The main function turns the code into an object. Each string in the object contains all the numbers that match the given string.",,['mike'],1,pythia-69b|rationalization_numerical-00974|3
+"
+
+Sample:
+
+$ php -r ""echo 'select count(*) from nl4';""; | grep ""^[Nn]$""
+
+3
+
+Number of solutions is n^3. A nice, easy to understand solution:
+
+$ php -r ""echo 'select * from nl4';""; | egrep ""^[Nn]"";
+
+0 1 2 3 4
+
+Of course, word boundaries are a lot harder than just 3, so we are going to go the long way around with this one.",,['november'],1,pythia-69b|rationalization_numerical-00975|3

@@ -1,0 +1,699 @@
+prompt,response
+,"
+
+Sample output:
+
+The was the first commercial jet. It was the most successful.
+
+Sample input 2:
+
+The was a plane that was developed by for a replacement of the Lockheed L-1011 Starliner in the 1980s. The was used to replace the Boeing 767 in in the s. In the s,, the - was replaced by the -.
+
+Sample output 2:
+
+The is a that was developed by in the s. It was used to replace the in the s. It was replaced by the in the s.
+
+  • 1"
+,"
+""""""
+
+import torch
+import torch.nn as nn
+import torch.nn.functional as F
+import numpy as np
+
+# import sys
+# sys.path.insert(0, ""../"")
+
+from preprocess import Preprocessor
+from training import BertForMultiTurnResponseGeneration
+
+from torch.utils.data import DataLoader, RandomSampler, SequentialSampler
+from torch.utils.data.distributed import DistributedSampler
+from tensorboardX import SummaryWriter
+
+from pytorch_transformers import AdamW, WarmupLinearSchedule"
+,"
+
+\end{itemize}
+
+
+\subsection{Human Performance on the Task}
+
+It is important to understand the human performance on the task, as this allows us to benchmark against it and gives insights into how to model the task.
+
+In \citet{gatt2018survey}, they analyze the human performance on the WMT'16 and WMT'15 news translation task, finding that, for the WMT'15 test sets, human post-editors have an average BLEU score of 25.2."
+,"
+
+You may use any external resources including APIs (but you may not download data)."
+,"
+\end{quote}
+\vspace{-0.8cm}
+\begin{quote}
+Input: ``the lady of the lake is the name of several related characters who play parts in arthurian legend.'';
+
+Output: ``lady of the lake'';
+
+\end{quote}
+\vspace{-0.2cm}
+
+\subsubsection{Dataset}
+
+\begin{figure}[t!]
+    \centering"
+,"
+
+Example 1:
+
+Input:
+""the bank claims a loan recovery rate of. up from the recovery rate claimed in.""
+
+
+Output:
+""The bank claims a loan recovery rate of. up from the recovery rate claimed in.""
+
+Explanation:
+'loan recovery rate' is a noun phrase which should be left unsimplified.
+
+Example 2:
+
+Input:
+""the bank claims a loan recovery rate of. up from the recovery rate claimed in.""
+
+
+Output:
+"". Up from the recovery rate claimed in.""
+
+Explanation:"
+,"
+
+Please include a full reference for the text used to generate the question, and the original full text of the question. Please refer to the full reference in your answer.
+
+#### 2. The answer
+
+Please give a short explanation of what the full reference and original text of the question refer to.
+
+The text is taken from a textbook used for teaching genetics, titled “Genetics” by Gregory T. J. The full reference is:
+
+Gregory T. J. (2005) Genetics: The Science of Life. 5th edition. pp. 15–18. San Francisco: W."
+," For example: The philharmonic’s home is Lincoln Center.
+
+Test-case example: ""the philharmonic s home is avery fisher hall located in new york s lincoln center."" (correctly simplified)
+
+""the philharmonic's home is lincoln center."" (correctly simplified)
+
+Input
+
+Each test case will begin with a single line with an integer n (1 <= n <= 15) indicating the number of sentences. The following n lines each contain a single sentence. The length of each sentence is between 1 and 75 inclusive, with each sentence consisting of words separated by whitespace."
+,"
+
+Test data:
+
+text: 'guns n roses lrb sometimes abbreviated as g n r or gnr rrb is an american hard rock band. the band formed in hollywood los angeles california in.'
+expected: 'guns n roses'
+
+Test data:
+
+text: 'this is a test text this is a test text this is a test text this is a test text this is a test text this is a test text'
+expected: 'this is a test text'
+
+
+Use this challenge if you want to improve the readability of plain text."
+,"
+
+\end{itemize}
+
+\subsection{Evaluation Metrics}
+
+To evaluate the generated texts in our experiments, we used the following metrics: 
+
+\begin{itemize}
+    \item \textbf{Text Levenshtein Distance (Text Levenshtein) - } The Levenshtein distance is a metric for measuring the dissimilarity between two strings by counting the minimum number of single-character edits (insertions, deletions or substitutions) required to change one word to the other~\cite{levenshtein}."
+,"
+
+Sample Input
+
+Sample Output
+
+
+Login to submit.
+
+Problem Loading...
+
+Note Loading...
+
+Set Loading..."
+,"
+
+Task 1.3: Summarize
+
+Summarize a passage based on its content.
+
+Input: This is a passage from the Book of Genesis.
+
+Output: In Genesis, God's first act after creating the heavens and the earth is to create man and woman in His image. After creating man and woman, God commanded them to multiply and fill the earth.
+
+Task 1.4: Table to Text
+
+Given a table, output its content as text.
+
+Input: ["
+,"
+
+Hint: The simplified text should be no more than 25 characters long.
+
+2.2.3 Simplify text, given text, target vocabulary
+
+The following text is: 'he was sitting on the sofa in the living room reading the newspaper while eating breakfast.'
+
+You are provided the following list of target vocabulary: 'was, sofa, eating, newspaper, breakfast, while, reading.'
+
+Simplify the text as much as possible, while only replacing words in the target vocabulary list and ensuring the simplified text retains its original meaning.
+
+Provide only the simplified text as the response.
+"
+," The following sample responses would be equally acceptable: 'all three species emit a loud squeak if irritated' or 'all three species have the ability to emit a loud squeak if irritated.'
+\end{quote}
+
+
+\begin{figure*}[t]
+    \centering
+    \begin{tabular}{c|c|c|c}
+         \multicolumn{4}{c}{\includegraphics[width=0.9\textwidth]{figures/arch.pdf}} \\
+         \hline"
+,"
+
+Question 8
+
+For each of the following texts, identify the most appropriate one of the following options:
+
+  1. A poem by W.H. Auden;
+  2. The preamble to the US constitution;
+  3. A quotation from the New Testament;
+  4. A line from a popular song;
+  5. A line from the Odyssey.
+
+The following is an example of a text that might be supplied to the system for the purpose of developing its knowledge:
+
+""What is this life if, full of care,"
+,"
+
+Q2. The question to be asked to the user is ""Where would you like to fly?"". Provide a response with the text 'australia' only.
+
+Q3. The question to be asked to the user is ""How many flights would you like to book?"". Provide a response with the text 'two'.
+
+Q4. The question to be asked to the user is ""Where would you like to fly?"". Provide a response with the text 'victoria'.
+
+Q5."
+,"
+
+Note: The above test is a subset of a larger dataset provided to us. Your model should achieve an F1 score of at least 80% on this test set.
+
+Hint:
+
+We recommend using one of the popular transformers models for this task. Here is a tutorial on how to use the transformers library. You may also find these additional examples helpful.
+
+Training
+
+The training dataset contains 1,100 examples. Use the ""test"" environment variable to evaluate your model on the test set.
+
+Evaluation
+
+To submit to the leaderboard, please provide predictions on the test dataset."
+,"
+
+
+#!/usr/bin/env python3
+
+import re
+from collections import Counter
+
+def main():
+    with open(""test.txt"") as fin, open(""output.txt"", ""w"") as fout:
+        for line in fin:
+            simp = clean(line)
+            fout.write(simp + ""\n"")
+
+def clean(line):
+    line = re.sub(r'[^\w\s]', '', line)
+    line = re.sub(r'\s+','', line)"
+,"
+
+Source: https://www.kaggle.com/c/sentence-simplification/data
+
+There are 3 rows in the dataset. Each row is in the following format:
+
+id, sentence
+
+
+For example:
+
+2, 'l ogeats is a commune in the gironde department in aquitaine in south western france.'
+
+• 0
+点赞
+• 0
+评论
+• 1
+收藏
+• 扫一扫，分享海报"
+,"
+
+
+\noindent\textbf{Input:}
+\emph{cena grabbed his signature chain and tried to attack big show with it however the referee saw cena with the chain and confiscated it due to it being illegal in the match.}
+
+\noindent\textbf{Target:}
+\emph{cena grabbed his chain to attack big show however the referee saw cena and confiscated the chain due to it being illegal.}
+
+\subsection{Examples for Additional Dataset}
+\label{app:additional-dataset}"
+," Note that the full text of the sentence could be 'his work was recognized with the national medal of arts in 2009', 'he was given the national medal of arts in 2009', etc.""
+
+To make this text simpler, the model's job is to simplify the given text. However, we will allow the model to produce a fixed length sequence of tokens. The model's final output tokens are generated with a softmax function, which produces tokens based on their probabilities.
+
+def preprocess_text(text):
+    tokens = tokenizer.tokenize(text)"
+,"
+
+Your function should return a string.
+
+
+```python
+def clean_text(text):
+    # Write your function here.
+    
+    pass
+```
+
+### Exercise 1b
+Now, we will practice creating a function that performs some other transformations of text.
+
+Write a function `remove_accents` that, given a text, removes all accents in the text.  For example, the function should remove accents in the following text: `júlio é o seu nome?`.
+
+
+```python
+def remove_accents(text):"
+,"
+
+\subsection{Dataset}
+
+The corpus is taken from a collection of public-domain texts of various genre. The texts were pre-tokenised and sentence split using standard NLP tools\footnote{The tokenisation and sentence splitting were done with Stanford CoreNLP~\cite{Manning2014}.}. No attempt was made to pre-process the texts to eliminate any inconsistencies or to correct grammatical or lexical errors. All errors were left as they are.
+
+The training dataset consisted of 1,200 texts. The testing dataset consists of 100 text samples, each consisting of up to 10 paragraphs."
+,"
+
+\item Which of the following describes the orbital orientation of the asteroid belt relative to the ecliptic plane? (a) the asteroid belt and the ecliptic plane are oriented in the same way as a slice of pizza. (b) the asteroid belt is oriented with the north pole of the ecliptic at the top and the asteroid belt is oriented with the south pole of the ecliptic at the top. (c) the asteroid belt is oriented with the north pole of the ecliptic at the bottom and the asteroid belt is oriented with the south pole of the ecliptic at the bottom.
+
+"
+,"
+
+Answer: it is typically found in the yucatán peninsula and some nearby caribbean islands.
+
+Answer: the yucatán peninsula
+
+Question: Write a function that accepts the URL of a news article, such as the URL from the previous question, and prints the article. Hint: try using the Requests package or the built-in webbrowser library to retrieve the content of the URL.
+
+Question: Suppose the following code is in the file c_program.c:
+
+void funct( int n )
+{
+if ( n > 0 )
+{"
+,"
+
+• ### You're a medical student on a surgical rotation in the Emergency Department.
+
+You're a medical student on a surgical rotation in the Emergency Department. The patient you are examining is a 25-year-old woman who is in a great deal of pain. You look at her face and she is crying. You are concerned. Her vital signs are: temperature = 99.4o F (37.4o C); heart rate = 122 beats per minute; blood pressure = 82/50 mmHg. The woman is sweating heavily. She has a history of fibromyalgia."
+," Do not provide the text as it originally appeared.
+
+3.1 (Part C) The output should be a string consisting of English words, each separated by a space. Words longer than 10 characters should be trimmed to their first 10 characters, unless they are proper nouns (i.e. names of people, organizations, or places), which should not be trimmed.
+
+3.2 (Part D) You will have to decide what a word is for the purposes of this challenge, and how to determine if a given string is a proper noun."
+,"
+
+5. [0.75 marks] Simplify the following text to improve its readability, ensuring its core meaning remains intact: 'the crust forms in part by aggregation of island arcs including granite and metamorphic fold belts and it is preserved in part by depletion of the underlying mantle to form buoyant lithospheric mantle.'
+
+### Q1
+
+Tectonic plates are formed from the mantle. They are comprised of three different types of crust. Which type of crust is formed by the accumulation of island arcs including granite and metamorphic fold belts?
+
+• A. Continental Crust
+• B."
+,"
+
+The contest ended March 29, 2014, but you can still check out the contest announcement, the scoring rubric, and all the submissions on Kaggle.
+
+In the next section, I'll explore my own entry, which uses a simple model to combine the results from two powerful natural language processing libraries.
+
+### My Solution
+
+The contest description said, “Any preprocessing that you deem necessary should be performed on the training data and not the test data,” so I preprocessed the training data in Python and saved it to disk."
+,"
+
+Sample Input 1 Sample Output 1
+harry connick jr. lrb born joseph harry fowler connick jr. september rrb is an american singer actor composer and pianist.
+Harry Connick Jr. born Joseph Harry Fowler Connick Jr. September an American singer actor composer and pianist."
+,"
+
+Test: 4
+
+Identify and correct the following error in the given text: 'the united nations interregional cycle development partnership is a programme to improve infrastructure, economic competitiveness and quality of life for people in the countries of the developing world.' Provide only the corrected text as the response.
+
+Test: 5
+
+Identify the grammatical error(s) in the following sentence: 'if the team that plays for the red team wins, then they will win the trophy.' Provide only the corrected text as the response.
+
+Test: 6"
+,"
+    :param test_id: str, id of the test data
+    :return: simplified text
+    """"""
+    simplified_text = text.replace(""\n"", "" "")
+    simplified_text = re.sub(r' +','', simplified_text)
+    return simplified_text.strip()
+
+
+@torch.no_grad()
+def get_scores(test_id, text, tokenizer, model):
+    simplified_text = simple_text(test_id, text)"
+,"
+    • [ ""Hawaii and Alaska joined the United States before when it was known as the th state."" ]
+  2. What is the name of this painting? Provide the name of the painting as the response.
+    • [ ""Mona Lisa"" ]
+  3. Which sport does the following description describe? 'a sport played between two teams of eleven players on a rectangular field with a net dividing the field in half and a goal at each end of the field' Provide only the sport as the response.
+    • [ ""soccer"" ]"
+,"
+
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=3in]{imgs/task.png}
+\caption{Simplification task in the original dataset.}
+\label{fig:task}
+\end{figure}
+
+\subsection{Data Processing}
+The original dataset consists of sentences, each with a level of difficulty of 0 to 9.  Sentences with difficulty greater than 2 are considered hard. 
+
+A sentence was removed if it is longer than 75 tokens."
+,"
+  3. 3
+    Add another input field for ""context"" and then feed it with the context in which the user has placed his query, e.g., ""The problem is, the original text is very wordy and I need to simplify it for a project in which the core meaning must be preserved, but I cannot go on making alterations.""
+  4. 4"
+,"
+
+Hint: Use the following python libraries: re, difflib, string, nltk.
+
+Sample Input and Output
+
+
+'laureano bisan etame mayer lrb born january in kribi rrb commonly known as lauren is a retired cameroonian footballer of equatoguinean origin who formely played for the cameroonian national team.'
+
+
+'laureano bisan born january in kribi formely played for the cameroonian national team'
+
+
+'peter gabriel'
+
+
+'philip glass'
+
+"
+,"
+
+
+
+The contest organizer has published the list of top participants here.
+
+More details, including scoring and the list of participants that have made it to the final round, can be found here.
+
+Personal tools"
+,"
+    Answer should be: 'according to certain perceptions, the universe has three dimensions of space and one dimension of time.'
+    (In this case, the answer must be shorter than the question, and I would expect an AI capable of the following simplification to understand both the grammar and syntax of human language, with the ability to apply the rules of grammar to a human sentence in a creative and novel way.)
+
+    Question 3:
+    'Answers should be short, and they should be to the point. If you are looking for a longer answer, then I suggest that you read more.'"
+," This task is designed to be completed with a single action, but you can split the text into multiple steps as needed.
+
+\noindent\textbf{Spatial preposition identification:}
+Identify the preposition(s) associated with the red rectangle in the image and indicate their correct position. For example, the correct answer in Fig. \ref{fig:tasks} would be ""under the dog"".
+
+\noindent\textbf{Geographic location:}
+Identify the location in the world where the following picture was taken. The answer must be a city name or a country name."
+,"
+
+
+Input contains only printable ASCII characters and punctuation.
+
+Sample Input 1 Sample Output 1
+'yatsuhashi is a japanese confectionery sold mainly as a souvenir sweet lrb miyagegashi rrb.'
+'yatsuhashi is a japanese confectionery sold as a souvenir sweet.'"
+,"
+
+1) some tents
+
+2) some tents that were built by seabees and funded by the u.s. federal emergency management agency lrb fema rrb are wooden structures covered by tents.
+
+I would like to see the simplified text as the output, but I couldn't get it working.
+
+• Are you looking for a function to simplify sentences? What is your problem? What did you try so far? – Rolf Mertig Mar 18 '16 at 21:25"
+,"
+
+\paragraph{Mathematical Simplification} The goal of mathematical simplification (MathSimp) is to generate the simplest expression equivalent to a given expression. It is usually used for mathematics education. The dataset is from \citet{DBLP:journals/corr/abs-2010-08240}. There are totally $9,680$ expressions, with $7,280$ training instances, $1,200$ validation instances and $1,200$ testing instances."
+,"
+• 'following a successful amateur career she turned professional in when she signed with the hamburg boxing promoter spotlight boxing.'
+• a successful amateur career she turned professional in when she signed with the hamburg boxing promoter spotlight boxing.'
+• a successful amateur career she turned professional in when she signed with the hamburg boxing promoter spotlight.'
+• a successful amateur career she turned professional in when she signed with the hamburg boxing promoter spotlight.'
+• a successful amateur career she turned professional in when she signed with the hamburg boxing promoter spotlight.'"
+,"
+
+Text Simplification
+
+1. Simplify the following text: 'between and the government of then zaire called it the zaire river.'
+
+[Answer: between and the government of then zaire called it the zaire river.]
+
+2. Simplify the following text: 'the reason why the police can't just search a car if they have a reason to suspect there might be drugs in there is because the fourth amendment of the us constitution states that no person should be subjected to any unreasonable searches and seizures'."
+,"
+  \item[C:] Given the following: 'the summer paralympics will be held in the same city and organized by the same committee and are scheduled to be held from september to.' Simplify the following text to improve its readability, ensuring its core meaning remains intact: 'paralympic winter games to be held in south korea will see paralympic athletes representing the host nation of korea.' Provide only the simplified text as the response."
+,"
+
+### Context
+
+This is a classification task, where the input text is expected to be classified into a predefined set of categories, which is called 'targets'. The goal is to find a 'classifier' model that correctly categorizes the input text. The model will have the following functions:
+
+• A 'tokenizer' function to split the text into words, or a set of tokens.
+• An 'encoder' function, which converts the tokenized text to a dense numeric representation. This representation needs to capture the meaning and structure of the input text."
+,"
+    • You can use this example from the Wikipedia article on the character.
+
+Note: Please do not write any custom code for this.
+
+Please sign in or sign up to submit answers.
+
+Alternatively, you can try out Learneroo before signing up.
+
+Contact Us
+Sign in or email us at [email protected]"
+,"
+
+### What's the best response?
+
+A
+
+'smaller landslides'
+
+B
+
+'lanslides'
+
+C
+
+'landslide'
+
+D
+
+'landslide'
+
+E
+
+'landslide'
+
+F
+
+'landslide'
+
+G
+
+'landslide'
+
+H
+
+'landslide'
+
+I
+
+'landslide'
+
+J
+
+'landslide'
+
+K
+
+'landslide'
+
+L
+
+'landslide'
+
+M
+"
+,"
+""""""
+
+import copy
+import json
+import logging
+import os
+import re
+from typing import Any, Dict, List, Optional, Tuple, Type, TypeVar
+
+import numpy as np
+import scipy.sparse as sps
+import torch
+import transformers
+from scipy.sparse import csr_matrix
+from scipy.sparse import csr_matrix as csr
+from scipy.sparse.csgraph import connected_components
+from torch.utils.data import DataLoader, Dataset, RandomSampler, TensorDataset
+"
+,"
+• QA - Paraphrase: 'A paraphrase is a textual variant of the original passage, either for better comprehension or for stylistic reasons. Paraphrases are generally longer than their source passage.' Provide the original passage as the response.
+• QA - Synonym: 'Synonyms are words with the same or nearly the same meaning as another word, such as 'happy' and 'joyful', 'fast' and 'quick', or 'tall' and 'high'. Synonym questions provide two definitions and ask the model to pick the correct definition from two options.'"
+,"
+
+(source: https://github.com/google-research/text-to-text-transfer-transformer)
+
+\end{comment}
+
+
+
+\section{Conclusion}
+
+In this paper, we present the first study on how generative pre-trained language models (GPT-3) can be deployed for the automatic detection of low quality scientific papers. Our experimental results show that the GPT-3 language models can accurately and efficiently detect a majority of the low quality papers, with a small number of parameters."
+,"
+    \item \emph{Text Simplification 2}: Provide only the simplified text as the response.
+    \item \emph{Sentiment Classification}: Provide the sentiment of the following review as the response: 'The restaurant was good. The service was slow.'
+\end{itemize}
+
+\textbf{Subtask 1} is a question answering task that requires systems to answer questions about a story. \textbf{Subtask 2} requires systems to identify spans of text that are redundant in the context of the story."
+," The simplification should be limited to a reduction in word count and grammatical and spelling corrections if appropriate. A change in the structure of the text is not considered a correct simplification and should not be made.
+
+This challenge was created using the AQUAINT dataset ( http://aquaint.sourceforge.net/ ) and its English Wikipedia texts and English Simple Wikipedia texts (http://simple.wikipedia.org/wiki/Main_Page)."
+," Example input:  
+He made his ecw debut defeating jack meridol on the july episode.
+
+Sample output:  
+He made his ecw debut defeating jack meridol on july
+
+Note: It is possible that the answer is not unique, so if this is the case, please return all possible solutions (separated by newlines) in ascending order. If there are no possible solutions, you should still return an empty array.
+
+Here is my code,
+
+    string data = @""He made his ecw debut defeating jack meridol on the july episode."";"
+,"
+
+  1. The dards are a group of people defined by linguistic similarities, not common ethnicity, predominantly found in Eastern Afghanistan in the Indian state of Jammu and Kashmir and in the northern areas and North West Frontier Province of Pakistan.
+
+6. Find out what the word is in English for a'staircase' in Spanish. The text in Spanish can be found here. Provide the English word as the response.
+
+  1. escalator
+
+
+The following answers were also accepted as correct (but are not as good as the ones given above):
+
+  1. a group of people"
+," For example, if the simplified text was'should it intensify then madagascar names it', then this is your response.
+
+Sample Response:
+
+'Madagascar names the storm if it intensifies.'
+
+Please Note:
+
+- We can accept either the first or the last name of a cyclone if the cyclone has multiple names. For example, if the storm is named ‘Cameron’ and also ‘Boling’ then either of these two names will be accepted in the solution.
+- The simplification must be a complete sentence in English (e.g."
+,"
+
+Example output
+
+The following is an example of what a request for simplification might look like:
+
+Simplification of 'Talk page'
+Please simplify the following text to improve its readability, ensuring its core meaning remains intact: 'The welcome message is put on the user s talk page at the top of the page.' Provide only the simplified text as the response.
+
+An example of a possible response would be:
+
+'The welcome message is put at the top of the user s talk page.'"
+,"
+  7. Question 7 (6 marks)
+    Which of the following statements is TRUE about the following code:
+    void main()
+            int count = 4;
+            while(count >= 0)
+                    cout << count << endl;
+  8. Question 8 (5 marks)
+    Given that the following code defines a class A:
+    class A
+            char m_ch;
+            int m_int;
+            void foo()"
+," (This task has not been given to the current model due to the lack of sufficient training data. Therefore, it is left to future work as part of the open question we propose.) 
+    \end{itemize}
+\end{enumerate}
+
+
+\section{Conclusion}
+
+We propose two new benchmark tasks for summarization: text simplification with abstractive references and factual consistency for headline generation. We hope this work can encourage the development of text simplification and headline generation models that can generalize well to other languages and better understand the original texts."
+,"
+    """"""
+    pass
+
+
+def test_simplify_to_core_meaning_task():
+    """"""
+    Test simplify_to_core_meaning for the'simplify_to_core_meaning' task.
+
+    """"""
+    pass
+
+
+def test_simplify_to_core_meaning_with_answer():
+    """"""
+    Test simplify_to_core_meaning for the'simplify_to_core_meaning' task with an answer as input.
+
+    """"""
+    pass"
+,"
+
+
+\begin{table*}[t]
+\caption{Performance metrics for each task of the test set. The task name, the number of examples, the precision (P) and recall (R) are provided.}
+\begin{tabularx}{\linewidth}{p{6cm}|p{1.2cm}p{1.2cm}p{1.2cm}p{1.2cm}p{1.2cm}p{1.2cm}p{1.2cm}}
+\toprule
+Task Name & \# Ex."
+,"
+
+
+[1] 'One of his elder sisters Philippa married John I of Portugal. His younger sister Elizabeth was the mother of John Holland and Duke of Exeter.'
+
+
+[2] 'Philippa was the elder sister of the Duke and married John I of Portugal. His younger sister, Elizabeth, was the mother of John Holland and Duke of Exeter.'
+
+
+[3] 'Philippa was an elder sister of the duke who married John I of Portugal. Elizabeth was his younger sister and the mother of John Holland and the Duke of Exeter.'"

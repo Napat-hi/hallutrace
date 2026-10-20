@@ -1,0 +1,136 @@
+prompt,response
+,"
+
+Provide a brief summary of the text below: 'The U.S. government on Wednesday called the killing of journalist Khashoggi ""grim"" and ""shocking."" The CIA is investigating, but President Donald Trump has suggested it will be difficult to prove who's responsible. Saud al-Qahtani, an adviser to the Saudi royal family, reportedly called Khashoggi on Wednesday to apologize. The journalist had moved to the U.S. and lived in self-imposed exile since September 2017, fearing that he'd be imprisoned or killed for speaking out against Saudi Arabia's leadership."
+,"
+
+# Output
+
+[1] ""One of the most controversial and beloved versions of ""The Star-Spangled Banner"" comes from 1969. Guitar slinger Jimi Hendrix inflamed mainstream America with his psychedelic take on the national anthem to the delight of the Woodstock generation.""
+
+# Input
+
+Provide a concise summary of the following text: 'If you're famous and performing the American national anthem, be prepared to become a national hero or a national disgrace. Facts are facts.  Just ask Vince, Whitney, Roseanne, Jimi and Michael."
+," 
+
+3. Provide a full summary of the following text: 'What you have, and what you do with it, will be decided by what is on the inside. As a person's actions determine their character. What a person does will determine their future.'
+
+4. Provide the definition of the following terms: 'Grievous': adjective - causing great harm or injury, 
+'Exculpatory': adjective - serving to clear of guilt or blame, exonerating.
+
+5."
+,"
+  • How to generate the summary?
+    • We will use the method proposed in Quick, Accurate, and Parsimonious Text Summarization with LSTMs by Sennrich et al. This method combines RNN encoder-decoder with attention mechanism to produce a sentence-level summary for the input text. It trains both the encoder and the decoder to generate the summary, and use a beam search method to select the best candidates from the decoding process.
+
+Model Design
+
+
+Since we are summarizing an entire document, we need a sentence-level model."
+," Do not use the question as part of the response.
+
+Type 2
+
+Provide an explanation of the following text: 'The United Nations has warned of ""humanitarian catastrophe"" if fighting in Syria's Aleppo city continues, as rebels say they've taken complete control of rebel-held eastern areas of the city. More than 250,000 people are thought to be still in eastern Aleppo, but some fear they could soon face mass starvation as rebel and government forces continue to battle."
+,"
+
+1 comment:
+
+  1. Thanks for providing summary of the text.
+    I have an assignment where i am requested to use these keywords in a text."
+,"
+
+• Provide a brief summary of the following article: 'An elderly woman suffered smoke inhalation and minor burns after a fire started by a toaster left her flat in flames. A resident called fire crews after spotting the blaze in an upstairs apartment of a block on Stoneygate Avenue in Luton at about 5pm on Wednesday (February 11). Four fire engines from Luton, Dunstable and Dunstable Green were sent to the scene and firefighters used two breathing apparatus and a hose reel to tackle the blaze. The woman, in her 70s, was led to safety by firefighters."
+,"
+
+\noindent
+{\bf Solution:}
+
+\noindent
+\begin{lstlisting}
+#!/usr/bin/env python
+import re
+import os
+from nltk.tokenize import word_tokenize
+from nltk.tokenize import RegexpTokenizer
+import spacy
+import math
+
+nlp = spacy.load('en_core_web_sm')
+
+def tokenize(sentence):
+    return list(word_tokenize(sentence, language='en'))
+
+def clean(text):
+    # clean tokens
+    "
+, * This is an example of a short answer question. Short answer questions may appear in a single paragraph or as a series of multiple-choice questions. Short answer questions should be concise. Provide one or two concise sentences as a response. * *
+," The dataset can be found here.
+
+""""""
+
+# COMMAND ----------
+
+# MAGIC %md
+# MAGIC ### Preparing the Training Data
+# MAGIC 
+# MAGIC #### Extracting the Summary from the Title
+# MAGIC 
+# MAGIC The model for training is going to use the first 100 characters in the title to make the prediction.
+# MAGIC 
+# MAGIC #### Removing Punctuations from the Title
+# MAGIC 
+# MAGIC To avoid any ambiguity we are going to remove punctuations in the text."
+,"
+
+The task was not just about reading the text but also comprehending it and then abstracting the main points to write the summary. The summary could be of any length as long as it contained the salient points of the text. The system took the test seriously, reading the entire text (it used the Stanford NLP engine to convert the plain text to word vectors) and produced the following summary:
+
+Three people were killed and five others wounded in Afghanistan. An armed attack on the country's attorney general's office was killed and five others were killed. The incident happened in the Balkh province."
+,"
+
+You may be given a list of articles to summarize. In this case, write a few lines for each of the articles in a short summary. Make sure to include the title of each article you summarize.
+
+Write a paragraph summarizing the following article:
+
+'The first-ever Star Wars video game for the Nintendo Wii is now available at video game stores, and kids are buying it up like crazy! The Star Wars: The Force Unleashed game is one of the most highly anticipated games of 2008."
+,"
+
+Ex. #UporDown? That's the trending question on social media, thanks to a photo of a cat coming down some stairs.
+
+In case of failure to identify, the server will send a reply that contains the whole post, to which your application can simply display.
+
+You can submit multiple entries per competition.
+
+Your submission must be less than 2MB in size, but otherwise can be any filetype, e.g..txt,.csv,.xml,.java,.zip, etc.
+
+Each submission must be posted as its own entry."
+," (no need to explain)
+
+
+Solution Summary
+
+This solution explains how to paraphrase the text given in the question."
+,"
+
+For question 3, you may want to consider the following:
+
+Question 3: Provide a description of the relationship between these two variables:
+
+Response: Please provide a description of the relationship between these two variables, including both correlation coefficient and strength of relationship.
+
+For question 4, you may want to consider the following:
+
+Question 4: What do you think of this data?
+
+Response: I think this data is [insert your response here].
+
+For question 5, you may want to consider the following:
+
+Question 5: How would you describe this data?"
+,"
+
+The summary response is:
+
+""A fantasy sports car ride at Walt Disney World Speedway turned deadly when a Lamborghini crashed into a guardrail. The passenger of the Lamborghini, 36-year-old Gary Terry of Davenport, Florida, died at the scene, Florida Highway Patrol said. The driver of the Lamborghini, 24-year-old Tavon Watson of Kissimmee, Florida, lost control of the vehicle. He was hospitalized with minor injuries.""
+
+This summary was generated by combining the following phrases:"

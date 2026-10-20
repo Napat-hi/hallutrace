@@ -1,0 +1,1481 @@
+passage,response,atomic_units,hallucinated_atomic_units
+,"
+
+Sample output:
+
+The was the first commercial jet. It was the most successful.
+
+Sample input 2:
+
+The was a plane that was developed by for a replacement of the Lockheed L-1011 Starliner in the 1980s. The was used to replace the Boeing 767 in in the s. In the s,, the - was replaced by the -.
+
+Sample output 2:
+
+The is a that was developed by in the s. It was used to replace the in the s. It was replaced by the in the s.
+
+  • 1","To break down the given passages into independent facts, let's analyze each one step by step. | True |
+### Passage 1 Analysis | True |
+ **The [subject] was the first commercial jet.** | False |
+   - Fact: The subject (unspecified) was the first commercial jet. | False |
+ **It was the most successful.** | False |
+   - Fact: The subject (still unspecified) achieved the most success. | False |
+Since the subject is not specified in the passage, we can't provide a detailed breakdown without assuming what ""The"" refers to. However, based on historical context, if we assume ""The"" refers to a specific aircraft like the de Havilland Comet (which was the first commercial jet airliner), the independent facts could be: | True |
+- The de Havilland Comet was the first commercial jet. | False |
+- The de Havilland Comet was the most successful (in its category or time). | False |
+### Passage 2 Analysis | True |
+Given the passage: | False |
+""The was a plane that was developed by for a replacement of the Lockheed L-1011 Starliner in the 1980s. The was used to replace the Boeing 767 in in the s. In the s,, the - was replaced by the -."" | False |
+This passage has several placeholders (""The"", ""for"", ""in"", etc.) that make it difficult to extract specific facts without additional context. However, we can attempt to break it down based on the structure: | True |
+ **Development**:  | True |
+   - Fact: A plane (unspecified) was developed as a replacement for the Lockheed L-1011 Starliner in the 1980s. | False |
+ **Usage**: | True |
+   - Fact: This plane was used to replace the Boeing 767 (timeframe not clearly specified due to ""in in the s""). | False |
+ **Replacement**: | True |
+   - Fact: The plane (still unspecified) was eventually replaced by another model (also unspecified) in a later decade. | True |
+To provide a clearer breakdown, we would need more specific information about the plane being referred to. If we were to fill in the blanks with hypothetical information (for example, assuming the plane in question is the Airbus A330), the independent facts might look something like this: | True |
+- The Airbus A330 was developed as a replacement for the Lockheed L-1011 Starliner in the 1980s. | False |
+- The Airbus A330 was used to replace the Boeing 767 in the 1990s. | False |
+- The Airbus A330 was replaced by the Airbus A350 in the 2010s. | False |
+Please note, the actual plane and details would depend on the correct filling of the placeholders in the original passage. | True"," **The [subject] was the first commercial jet.** |
+   - Fact: The subject (unspecified) was the first commercial jet. |
+ **It was the most successful.** |
+   - Fact: The subject (still unspecified) achieved the most success. |
+- The de Havilland Comet was the first commercial jet. |
+- The de Havilland Comet was the most successful (in its category or time). |
+Given the passage: |
+""The was a plane that was developed by for a replacement of the Lockheed L-1011 Starliner in the 1980s. The was used to replace the Boeing 767 in in the s. In the s,, the - was replaced by the -."" |
+   - Fact: A plane (unspecified) was developed as a replacement for the Lockheed L-1011 Starliner in the 1980s. |
+   - Fact: This plane was used to replace the Boeing 767 (timeframe not clearly specified due to ""in in the s""). |
+- The Airbus A330 was developed as a replacement for the Lockheed L-1011 Starliner in the 1980s. |
+- The Airbus A330 was used to replace the Boeing 767 in the 1990s. |
+- The Airbus A330 was replaced by the Airbus A350 in the 2010s."
+,"
+""""""
+
+import torch
+import torch.nn as nn
+import torch.nn.functional as F
+import numpy as np
+
+# import sys
+# sys.path.insert(0, ""../"")
+
+from preprocess import Preprocessor
+from training import BertForMultiTurnResponseGeneration
+
+from torch.utils.data import DataLoader, RandomSampler, SequentialSampler
+from torch.utils.data.distributed import DistributedSampler
+from tensorboardX import SummaryWriter
+
+from pytorch_transformers import AdamW, WarmupLinearSchedule","Here are the independent facts broken down from the passage: | True |
+ **Importing Libraries**: The passage imports the following libraries: | False |
+	* `torch` | False |
+	* `torch.nn` (as `nn`) | False |
+	* `torch.nn.functional` (as `F`) | False |
+	* `numpy` (as `np`) | False |
+ **Importing Custom Modules**: The passage imports the following custom modules: | False |
+	* `Preprocessor` from `preprocess` | False |
+	* `BertForMultiTurnResponseGeneration` from `training` | False |
+ **Importing Data Loading Utilities**: The passage imports the following data loading utilities from `torch.utils.data`: | False |
+	* `DataLoader` | False |
+	* `RandomSampler` | False |
+	* `SequentialSampler` | False |
+	* `DistributedSampler` | False |
+ **Importing TensorBoardX**: The passage imports `SummaryWriter` from `tensorboardX`. | False |
+ **Importing PyTorch Transformers**: The passage imports the following from `pytorch_transformers`: | False |
+	* `AdamW` | False |
+	* `WarmupLinearSchedule` | False |
+ **Commented Out Code**: The passage has commented out code that imports the `sys` library and inserts a path into the system path using `sys.path.insert(0, ""../"")`. | False"," **Importing Libraries**: The passage imports the following libraries: |
+	* `torch` |
+	* `torch.nn` (as `nn`) |
+	* `torch.nn.functional` (as `F`) |
+	* `numpy` (as `np`) |
+ **Importing Custom Modules**: The passage imports the following custom modules: |
+	* `Preprocessor` from `preprocess` |
+	* `BertForMultiTurnResponseGeneration` from `training` |
+ **Importing Data Loading Utilities**: The passage imports the following data loading utilities from `torch.utils.data`: |
+	* `DataLoader` |
+	* `RandomSampler` |
+	* `SequentialSampler` |
+	* `DistributedSampler` |
+ **Importing TensorBoardX**: The passage imports `SummaryWriter` from `tensorboardX`. |
+ **Importing PyTorch Transformers**: The passage imports the following from `pytorch_transformers`: |
+	* `AdamW` |
+	* `WarmupLinearSchedule` |
+ **Commented Out Code**: The passage has commented out code that imports the `sys` library and inserts a path into the system path using `sys.path.insert(0, ""../"")`."
+,"
+
+\end{itemize}
+
+
+\subsection{Human Performance on the Task}
+
+It is important to understand the human performance on the task, as this allows us to benchmark against it and gives insights into how to model the task.
+
+In \citet{gatt2018survey}, they analyze the human performance on the WMT'16 and WMT'15 news translation task, finding that, for the WMT'15 test sets, human post-editors have an average BLEU score of 25.2.","Here are the independent facts broken down from the passage: | True |
+ Understanding human performance on a task is important for benchmarking and gaining insights into how to model the task. | True |
+ A survey was conducted by \citet{gatt2018survey} to analyze human performance on translation tasks. | False |
+ The survey analyzed human performance on the WMT'16 and WMT'15 news translation tasks. | False |
+ For the WMT'15 test sets, human post-editors achieved an average BLEU score of 25.2. | False |
+Note that fact 2 is implied to be a reference to a specific research work, and fact 4 is a specific result from that work. Facts 1 and 3 provide context and setup for the result presented in fact 4. | False"," A survey was conducted by \citet{gatt2018survey} to analyze human performance on translation tasks. |
+ The survey analyzed human performance on the WMT'16 and WMT'15 news translation tasks. |
+ For the WMT'15 test sets, human post-editors achieved an average BLEU score of 25.2. |
+Note that fact 2 is implied to be a reference to a specific research work, and fact 4 is a specific result from that work. Facts 1 and 3 provide context and setup for the result presented in fact 4."
+,"
+
+You may use any external resources including APIs (but you may not download data).","Here is the passage broken down into an independent fact: | True |
+ External resources, including APIs, are permitted for use. | True |
+ Downloading data is not allowed. | False", Downloading data is not allowed.
+,"
+\end{quote}
+\vspace{-0.8cm}
+\begin{quote}
+Input: ``the lady of the lake is the name of several related characters who play parts in arthurian legend.'';
+
+Output: ``lady of the lake'';
+
+\end{quote}
+\vspace{-0.2cm}
+
+\subsubsection{Dataset}
+
+\begin{figure}[t!]
+    \centering","Here are the independent facts broken down from the passage: | True |
+ The passage discusses the concept of ""the lady of the lake"". | True |
+ ""The lady of the lake"" refers to several related characters in Arthurian legend. | True |
+ The passage provides an input statement about ""the lady of the lake"". | True |
+ The output of the input statement is ""lady of the lake"". | True |
+ The passage mentions a dataset, but does not provide any information about its contents. | False |
+ The passage includes a figure, but its details are not provided in the given text. | True"," The passage mentions a dataset, but does not provide any information about its contents."
+,"
+
+Example 1:
+
+Input:
+""the bank claims a loan recovery rate of. up from the recovery rate claimed in.""
+
+
+Output:
+""The bank claims a loan recovery rate of. up from the recovery rate claimed in.""
+
+Explanation:
+'loan recovery rate' is a noun phrase which should be left unsimplified.
+
+Example 2:
+
+Input:
+""the bank claims a loan recovery rate of. up from the recovery rate claimed in.""
+
+
+Output:
+"". Up from the recovery rate claimed in.""
+
+Explanation:","Here are the independent facts broken down from the passage: | True |
+ There are two examples provided in the passage, labeled as Example 1 and Example 2. | False |
+ Both examples have the same input sentence: ""the bank claims a loan recovery rate of. up from the recovery rate claimed in."" | True |
+ The output for Example 1 is: ""The bank claims a loan recovery rate of. up from the recovery rate claimed in."" | True |
+ The output for Example 2 is: "". Up from the recovery rate claimed in."" | True |
+ The phrase ""loan recovery rate"" is considered a noun phrase. | True |
+ According to the explanation for Example 1, the noun phrase ""loan recovery rate"" should be left unsimplified. | True |
+ The explanation for Example 2 is incomplete, as it does not provide a clear reason for the output. | True"," There are two examples provided in the passage, labeled as Example 1 and Example 2."
+,"
+
+Please include a full reference for the text used to generate the question, and the original full text of the question. Please refer to the full reference in your answer.
+
+#### 2. The answer
+
+Please give a short explanation of what the full reference and original text of the question refer to.
+
+The text is taken from a textbook used for teaching genetics, titled “Genetics” by Gregory T. J. The full reference is:
+
+Gregory T. J. (2005) Genetics: The Science of Life. 5th edition. pp. 15–18. San Francisco: W.","Here are the independent facts broken down from the passage: | True |
+ A textbook titled ""Genetics"" is used for teaching genetics. | False |
+ The textbook ""Genetics"" is written by Gregory T. J. | False |
+ The textbook ""Genetics"" is in its 5th edition. | False |
+ The relevant pages in the textbook are pp. 15-18. | True |
+ The textbook was published in San Francisco. | False |
+ The publisher of the textbook is W. | False |
+ The year of publication of the textbook is 2005. | True |
+Note that there is no actual question or original text provided in the passage, but rather a request to include a full reference and original text, along with an explanation of what they refer to. The explanation provided is that the full reference and original text refer to a textbook used for teaching genetics, specifically the one written by Gregory T. J. | False"," A textbook titled ""Genetics"" is used for teaching genetics. |
+ The textbook ""Genetics"" is written by Gregory T. J. |
+ The textbook ""Genetics"" is in its 5th edition. |
+ The textbook was published in San Francisco. |
+ The publisher of the textbook is W. |
+Note that there is no actual question or original text provided in the passage, but rather a request to include a full reference and original text, along with an explanation of what they refer to. The explanation provided is that the full reference and original text refer to a textbook used for teaching genetics, specifically the one written by Gregory T. J."
+," For example: The philharmonic’s home is Lincoln Center.
+
+Test-case example: ""the philharmonic s home is avery fisher hall located in new york s lincoln center."" (correctly simplified)
+
+""the philharmonic's home is lincoln center."" (correctly simplified)
+
+Input
+
+Each test case will begin with a single line with an integer n (1 <= n <= 15) indicating the number of sentences. The following n lines each contain a single sentence. The length of each sentence is between 1 and 75 inclusive, with each sentence consisting of words separated by whitespace.","Here are the independent facts broken down from the passage: | True |
+ The philharmonic's home is Lincoln Center. | True |
+ There is a test-case example that simplifies the sentence to ""the philharmonic's home is Avery Fisher Hall located in New York's Lincoln Center."" | True |
+ There is another test-case example that simplifies the sentence to ""the philharmonic's home is Lincoln Center."" | True |
+ Each test case will begin with a single line containing an integer n. | False |
+ The integer n indicates the number of sentences in the test case. | True |
+ The value of n is between 1 and 15 (inclusive). | True |
+ The following n lines each contain a single sentence. | True |
+ The length of each sentence is between 1 and 75 characters (inclusive). | False |
+ Each sentence consists of words separated by whitespace. | True"," Each test case will begin with a single line containing an integer n. |
+ The length of each sentence is between 1 and 75 characters (inclusive)."
+,"
+
+Test data:
+
+text: 'guns n roses lrb sometimes abbreviated as g n r or gnr rrb is an american hard rock band. the band formed in hollywood los angeles california in.'
+expected: 'guns n roses'
+
+Test data:
+
+text: 'this is a test text this is a test text this is a test text this is a test text this is a test text this is a test text'
+expected: 'this is a test text'
+
+
+Use this challenge if you want to improve the readability of plain text.","Here are the independent facts broken down from the passage: | True |
+ There are two test data examples provided. | False |
+ The first test data example is about the band ""Guns N' Roses"". | True |
+ ""Guns N' Roses"" is an American hard rock band. | True |
+ The band ""Guns N' Roses"" is sometimes abbreviated as ""G N R"" or ""GNR"". | True |
+ The band ""Guns N' Roses"" formed in Hollywood, Los Angeles, California. | True |
+ The expected output for the first test data example is ""Guns N' Roses"". | True |
+ The second test data example is a repeated phrase ""this is a test text"". | False |
+ The expected output for the second test data example is ""this is a test text"". | False |
+ The purpose of the challenge is to improve the readability of plain text. | True"," There are two test data examples provided. |
+ The second test data example is a repeated phrase ""this is a test text"". |
+ The expected output for the second test data example is ""this is a test text""."
+,"
+
+\end{itemize}
+
+\subsection{Evaluation Metrics}
+
+To evaluate the generated texts in our experiments, we used the following metrics: 
+
+\begin{itemize}
+    \item \textbf{Text Levenshtein Distance (Text Levenshtein) - } The Levenshtein distance is a metric for measuring the dissimilarity between two strings by counting the minimum number of single-character edits (insertions, deletions or substitutions) required to change one word to the other~\cite{levenshtein}.","Here are the independent facts broken down from the passage: | True |
+ The passage discusses evaluation metrics for generated texts in experiments. | False |
+ The experiments used multiple metrics to evaluate generated texts. | False |
+ One of the metrics used is called Text Levenshtein Distance, also referred to as Text Levenshtein. | False |
+ The Levenshtein distance is a measure of dissimilarity between two strings. | True |
+ The Levenshtein distance counts the minimum number of single-character edits required to change one word into another. | True |
+ The single-character edits considered in the Levenshtein distance include insertions, deletions, and substitutions. | False |
+ The concept of Levenshtein distance is attributed to a reference cited as ~\cite{levenshtein}. | False"," The passage discusses evaluation metrics for generated texts in experiments. |
+ The experiments used multiple metrics to evaluate generated texts. |
+ One of the metrics used is called Text Levenshtein Distance, also referred to as Text Levenshtein. |
+ The single-character edits considered in the Levenshtein distance include insertions, deletions, and substitutions. |
+ The concept of Levenshtein distance is attributed to a reference cited as ~\cite{levenshtein}."
+,"
+
+Sample Input
+
+Sample Output
+
+
+Login to submit.
+
+Problem Loading...
+
+Note Loading...
+
+Set Loading...","Here are the independent facts broken down from the passage: | True |
+ There is a ""Sample Input"". | False |
+ There is a ""Sample Output"". | False |
+ A login is required to submit something. | False |
+ There is an issue with loading a ""Problem"". | False |
+ There is an issue with loading a ""Note"". | False |
+ There is an issue with loading a ""Set"". | False"," There is a ""Sample Input"". |
+ There is a ""Sample Output"". |
+ A login is required to submit something. |
+ There is an issue with loading a ""Problem"". |
+ There is an issue with loading a ""Note"". |
+ There is an issue with loading a ""Set""."
+,"
+
+Task 1.3: Summarize
+
+Summarize a passage based on its content.
+
+Input: This is a passage from the Book of Genesis.
+
+Output: In Genesis, God's first act after creating the heavens and the earth is to create man and woman in His image. After creating man and woman, God commanded them to multiply and fill the earth.
+
+Task 1.4: Table to Text
+
+Given a table, output its content as text.
+
+Input: [","Here are the independent facts broken down from the passage: | True |
+ The passage is from the Book of Genesis. | False |
+ God's first act after creating the heavens and the earth is to create man and woman in His image. | False |
+ After creating man and woman, God commanded them to multiply and fill the earth. | False |
+ There is a task called ""Task 1.3: Summarize"" that involves summarizing a passage based on its content. | True |
+ There is a task called ""Task 1.4: Table to Text"" that involves converting a table into text format. | False |
+Note that facts 4 and 5 seem to be related to a larger context or assignment, while facts 1-3 are related to the content of the passage from the Book of Genesis. | False"," The passage is from the Book of Genesis. |
+ God's first act after creating the heavens and the earth is to create man and woman in His image. |
+ After creating man and woman, God commanded them to multiply and fill the earth. |
+ There is a task called ""Task 1.4: Table to Text"" that involves converting a table into text format. |
+Note that facts 4 and 5 seem to be related to a larger context or assignment, while facts 1-3 are related to the content of the passage from the Book of Genesis."
+,"
+
+Hint: The simplified text should be no more than 25 characters long.
+
+2.2.3 Simplify text, given text, target vocabulary
+
+The following text is: 'he was sitting on the sofa in the living room reading the newspaper while eating breakfast.'
+
+You are provided the following list of target vocabulary: 'was, sofa, eating, newspaper, breakfast, while, reading.'
+
+Simplify the text as much as possible, while only replacing words in the target vocabulary list and ensuring the simplified text retains its original meaning.
+
+Provide only the simplified text as the response.
+","Here are the independent facts from the passage: | True |
+ The task is to simplify a given text. | True |
+ The simplified text should be no more than 25 characters long. | False |
+ The original text is: 'he was sitting on the sofa in the living room reading the newspaper while eating breakfast.' | False |
+ A list of target vocabulary is provided. | True |
+ The target vocabulary list includes the following words: 'was, sofa, eating, newspaper, breakfast, while, reading.' | False |
+ The simplification should only replace words in the target vocabulary list. | True |
+ The simplified text should retain its original meaning. | True"," The simplified text should be no more than 25 characters long. |
+ The original text is: 'he was sitting on the sofa in the living room reading the newspaper while eating breakfast.' |
+ The target vocabulary list includes the following words: 'was, sofa, eating, newspaper, breakfast, while, reading.'"
+," The following sample responses would be equally acceptable: 'all three species emit a loud squeak if irritated' or 'all three species have the ability to emit a loud squeak if irritated.'
+\end{quote}
+
+
+\begin{figure*}[t]
+    \centering
+    \begin{tabular}{c|c|c|c}
+         \multicolumn{4}{c}{\includegraphics[width=0.9\textwidth]{figures/arch.pdf}} \\
+         \hline","Here are the independent facts broken down from the passage: | True |
+ There are sample responses provided. | True |
+ The sample responses are considered equally acceptable. | True |
+ Two example responses are given: | True |
+   - ""all three species emit a loud squeak if irritated"" | True |
+   - ""all three species have the ability to emit a loud squeak if irritated"" | True |
+ A figure is included, denoted as ""figure*"" and positioned at the top ([t]). | False |
+ The figure is centered. | False |
+ The figure contains a table with four columns. | False |
+ The table includes an image, specifically an includegraphics element, with a width of 0.9\textwidth. | False |
+ The image is named ""arch.pdf"" and is located in a ""figures"" directory. | False |
+ A horizontal line (\hline) is present below the table. | True"," A figure is included, denoted as ""figure*"" and positioned at the top ([t]). |
+ The figure is centered. |
+ The figure contains a table with four columns. |
+ The table includes an image, specifically an includegraphics element, with a width of 0.9\textwidth. |
+ The image is named ""arch.pdf"" and is located in a ""figures"" directory."
+,"
+
+Question 8
+
+For each of the following texts, identify the most appropriate one of the following options:
+
+  1. A poem by W.H. Auden;
+  2. The preamble to the US constitution;
+  3. A quotation from the New Testament;
+  4. A line from a popular song;
+  5. A line from the Odyssey.
+
+The following is an example of a text that might be supplied to the system for the purpose of developing its knowledge:
+
+""What is this life if, full of care,","Here are the independent facts from the passage: | True |
+ There is a question labeled as ""Question 8"". | True |
+ The task is to identify the most appropriate option for a given text. | True |
+ There are five options to choose from: | False |
+   - A poem by W.H. Auden | False |
+   - The preamble to the US constitution | False |
+   - A quotation from the New Testament | False |
+   - A line from a popular song | False |
+   - A line from the Odyssey | False |
+ An example text is provided to develop the system's knowledge. | True |
+ The example text is: ""What is this life if, full of care,"" | False"," There are five options to choose from: |
+   - A poem by W.H. Auden |
+   - The preamble to the US constitution |
+   - A quotation from the New Testament |
+   - A line from a popular song |
+   - A line from the Odyssey |
+ The example text is: ""What is this life if, full of care,"""
+,"
+
+Q2. The question to be asked to the user is ""Where would you like to fly?"". Provide a response with the text 'australia' only.
+
+Q3. The question to be asked to the user is ""How many flights would you like to book?"". Provide a response with the text 'two'.
+
+Q4. The question to be asked to the user is ""Where would you like to fly?"". Provide a response with the text 'victoria'.
+
+Q5.","Here are the independent facts broken down from the passage: | True |
+ The user is asked ""Where would you like to fly?"" in Q2. | False |
+ The response to Q2 is 'australia'. | False |
+ The user is asked ""How many flights would you like to book?"" in Q3. | False |
+ The response to Q3 is 'two'. | False |
+ The user is asked ""Where would you like to fly?"" in Q4. | False |
+ The response to Q4 is 'victoria'. | False |
+ There is a question Q5, but its details are not provided. | True"," The user is asked ""Where would you like to fly?"" in Q2. |
+ The response to Q2 is 'australia'. |
+ The user is asked ""How many flights would you like to book?"" in Q3. |
+ The response to Q3 is 'two'. |
+ The user is asked ""Where would you like to fly?"" in Q4. |
+ The response to Q4 is 'victoria'."
+,"
+
+Note: The above test is a subset of a larger dataset provided to us. Your model should achieve an F1 score of at least 80% on this test set.
+
+Hint:
+
+We recommend using one of the popular transformers models for this task. Here is a tutorial on how to use the transformers library. You may also find these additional examples helpful.
+
+Training
+
+The training dataset contains 1,100 examples. Use the ""test"" environment variable to evaluate your model on the test set.
+
+Evaluation
+
+To submit to the leaderboard, please provide predictions on the test dataset.","Here are the independent facts broken down from the passage: | True |
+ The test is a subset of a larger dataset. | True |
+ The model should achieve an F1 score of at least 80% on the test set. | False |
+ Transformers models are recommended for this task. | False |
+ A tutorial on using the transformers library is available. | False |
+ Additional examples are available for further help. | True |
+ The training dataset contains 1,100 examples. | False |
+ The ""test"" environment variable is used to evaluate the model on the test set. | False |
+ To submit to the leaderboard, predictions on the test dataset are required. | False"," The model should achieve an F1 score of at least 80% on the test set. |
+ Transformers models are recommended for this task. |
+ A tutorial on using the transformers library is available. |
+ The training dataset contains 1,100 examples. |
+ The ""test"" environment variable is used to evaluate the model on the test set. |
+ To submit to the leaderboard, predictions on the test dataset are required."
+,"
+
+
+#!/usr/bin/env python3
+
+import re
+from collections import Counter
+
+def main():
+    with open(""test.txt"") as fin, open(""output.txt"", ""w"") as fout:
+        for line in fin:
+            simp = clean(line)
+            fout.write(simp + ""\n"")
+
+def clean(line):
+    line = re.sub(r'[^\w\s]', '', line)
+    line = re.sub(r'\s+','', line)","Here are the independent facts broken down from the passage: | True |
+ The passage is a Python script, as indicated by the `#!/usr/bin/env python3` line. | False |
+ The script imports two modules: `re` (regular expressions) and `collections`. | False |
+ However, the `collections` module is not used in the provided code snippet. It imports the `Counter` class, but it is not utilized. | False |
+ The script defines a `main` function, which is the entry point of the program. | False |
+ The `main` function opens two files: `test.txt` for reading and `output.txt` for writing. | False |
+ The script reads `test.txt` line by line and applies the `clean` function to each line. | False |
+ The `clean` function takes a line as input and applies two regular expression substitutions to it. | False |
+ The first substitution (`re.sub(r'[^\w\s]', '', line)`) removes all non-word and non-space characters from the line. | False |
+ The second substitution (`re.sub(r'\s+','', line)`) removes all whitespace characters from the line. | True |
+ The cleaned line is then written to `output.txt` followed by a newline character (`\n`). | False"," The passage is a Python script, as indicated by the `#!/usr/bin/env python3` line. |
+ The script imports two modules: `re` (regular expressions) and `collections`. |
+ However, the `collections` module is not used in the provided code snippet. It imports the `Counter` class, but it is not utilized. |
+ The script defines a `main` function, which is the entry point of the program. |
+ The `main` function opens two files: `test.txt` for reading and `output.txt` for writing. |
+ The script reads `test.txt` line by line and applies the `clean` function to each line. |
+ The `clean` function takes a line as input and applies two regular expression substitutions to it. |
+ The first substitution (`re.sub(r'[^\w\s]', '', line)`) removes all non-word and non-space characters from the line. |
+ The cleaned line is then written to `output.txt` followed by a newline character (`\n`)."
+,"
+
+Source: https://www.kaggle.com/c/sentence-simplification/data
+
+There are 3 rows in the dataset. Each row is in the following format:
+
+id, sentence
+
+
+For example:
+
+2, 'l ogeats is a commune in the gironde department in aquitaine in south western france.'
+
+• 0
+点赞
+• 0
+评论
+• 1
+收藏
+• 扫一扫，分享海报","Here are the independent facts broken down from the passage: | True |
+ The source of the information is https://www.kaggle.com/c/sentence-simplification/data. | False |
+ The dataset contains 3 rows. | False |
+ Each row in the dataset has two columns: ""id"" and ""sentence"". | True |
+ An example of a row in the dataset is provided, with an ""id"" of 2 and a ""sentence"" describing ""l ogeats"" as a commune in the Gironde department in Aquitaine, South Western France. | True |
+ The passage includes social media engagement metrics: 0 likes, 0 comments, and 1 collection. | False |
+ There is an option to scan and share a poster related to the content. | False"," The source of the information is https://www.kaggle.com/c/sentence-simplification/data. |
+ The dataset contains 3 rows. |
+ The passage includes social media engagement metrics: 0 likes, 0 comments, and 1 collection. |
+ There is an option to scan and share a poster related to the content."
+,"
+
+
+\noindent\textbf{Input:}
+\emph{cena grabbed his signature chain and tried to attack big show with it however the referee saw cena with the chain and confiscated it due to it being illegal in the match.}
+
+\noindent\textbf{Target:}
+\emph{cena grabbed his chain to attack big show however the referee saw cena and confiscated the chain due to it being illegal.}
+
+\subsection{Examples for Additional Dataset}
+\label{app:additional-dataset}","Here are the independent facts broken down from the passage: | False |
+ John Cena grabbed his signature chain. | True |
+ John Cena tried to attack Big Show with the chain. | True |
+ The referee saw John Cena with the chain. | True |
+ The referee confiscated the chain from John Cena. | True |
+ The chain is considered an illegal object in the match. | True |
+Note that the passage also mentions two versions of the same event (Input and Target), but the underlying facts remain the same. The differences between the two versions are minor and do not affect the overall facts. | True",Here are the independent facts broken down from the passage:
+," Note that the full text of the sentence could be 'his work was recognized with the national medal of arts in 2009', 'he was given the national medal of arts in 2009', etc.""
+
+To make this text simpler, the model's job is to simplify the given text. However, we will allow the model to produce a fixed length sequence of tokens. The model's final output tokens are generated with a softmax function, which produces tokens based on their probabilities.
+
+def preprocess_text(text):
+    tokens = tokenizer.tokenize(text)","Here are the independent facts broken down from the passage: | True |
+ The full text of a sentence can have variations, such as ""his work was recognized with the national medal of arts in 2009"" or ""he was given the national medal of arts in 2009"". | True |
+ The goal of a model is to simplify a given text. | True |
+ The model is allowed to produce a fixed-length sequence of tokens. | True |
+ The model's final output tokens are generated using a softmax function. | False |
+ The softmax function produces tokens based on their probabilities. | False |
+ A function called `preprocess_text` is defined, which takes `text` as input and tokenizes it using a `tokenizer`. | False"," The model's final output tokens are generated using a softmax function. |
+ The softmax function produces tokens based on their probabilities. |
+ A function called `preprocess_text` is defined, which takes `text` as input and tokenizes it using a `tokenizer`."
+,"
+
+Your function should return a string.
+
+
+```python
+def clean_text(text):
+    # Write your function here.
+    
+    pass
+```
+
+### Exercise 1b
+Now, we will practice creating a function that performs some other transformations of text.
+
+Write a function `remove_accents` that, given a text, removes all accents in the text.  For example, the function should remove accents in the following text: `júlio é o seu nome?`.
+
+
+```python
+def remove_accents(text):","Here are the independent facts broken down from the passage: | True |
+ The function should return a string. | True |
+ There is an exercise to practice creating a function that performs text transformations. | True |
+ The function to be created is named `remove_accents`. | False |
+ The `remove_accents` function should remove all accents from a given text. | False |
+ An example of text with accents is provided: `júlio é o seu nome?`. | False |
+ There are two code snippets provided, one for a function named `clean_text` and another for the `remove_accents` function. | False |
+ The `clean_text` function is incomplete and requires implementation. | True |
+ The `remove_accents` function is also incomplete and requires implementation. | False"," The function to be created is named `remove_accents`. |
+ The `remove_accents` function should remove all accents from a given text. |
+ An example of text with accents is provided: `júlio é o seu nome?`. |
+ There are two code snippets provided, one for a function named `clean_text` and another for the `remove_accents` function. |
+ The `remove_accents` function is also incomplete and requires implementation."
+,"
+
+\subsection{Dataset}
+
+The corpus is taken from a collection of public-domain texts of various genre. The texts were pre-tokenised and sentence split using standard NLP tools\footnote{The tokenisation and sentence splitting were done with Stanford CoreNLP~\cite{Manning2014}.}. No attempt was made to pre-process the texts to eliminate any inconsistencies or to correct grammatical or lexical errors. All errors were left as they are.
+
+The training dataset consisted of 1,200 texts. The testing dataset consists of 100 text samples, each consisting of up to 10 paragraphs.","Here are the independent facts broken down from the passage: | True |
+ The corpus is taken from a collection of public-domain texts of various genres. | True |
+ The texts were pre-tokenised and sentence-split using standard NLP tools. | True |
+ The tokenisation and sentence splitting were done with Stanford CoreNLP. | False |
+ No attempt was made to pre-process the texts to eliminate inconsistencies. | True |
+ No attempt was made to pre-process the texts to correct grammatical errors. | True |
+ No attempt was made to pre-process the texts to correct lexical errors. | True |
+ All errors in the texts were left as they are. | True |
+ The training dataset consists of 1,200 texts. | False |
+ The testing dataset consists of 100 text samples. | False |
+ Each text sample in the testing dataset consists of up to 10 paragraphs. | False"," The tokenisation and sentence splitting were done with Stanford CoreNLP. |
+ The training dataset consists of 1,200 texts. |
+ The testing dataset consists of 100 text samples. |
+ Each text sample in the testing dataset consists of up to 10 paragraphs."
+,"
+
+\item Which of the following describes the orbital orientation of the asteroid belt relative to the ecliptic plane? (a) the asteroid belt and the ecliptic plane are oriented in the same way as a slice of pizza. (b) the asteroid belt is oriented with the north pole of the ecliptic at the top and the asteroid belt is oriented with the south pole of the ecliptic at the top. (c) the asteroid belt is oriented with the north pole of the ecliptic at the bottom and the asteroid belt is oriented with the south pole of the ecliptic at the bottom.
+
+","Here are the independent facts broken down from the passage: | True |
+ The passage is asking about the orbital orientation of the asteroid belt relative to the ecliptic plane. | False |
+ The asteroid belt has a specific orientation in relation to the ecliptic plane. | False |
+ The ecliptic plane has a north pole and a south pole. | False |
+ There are three possible descriptions of the asteroid belt's orientation relative to the ecliptic plane, labeled as (a), (b), and (c). | False |
+ Option (a) describes the asteroid belt and the ecliptic plane as being oriented in the same way as a slice of pizza. | False |
+ Option (b) describes the asteroid belt as being oriented with the south pole of the ecliptic at the top and the ecliptic plane as being oriented with the north pole at the top. | False |
+ Option (c) describes the asteroid belt as being oriented with the south pole of the ecliptic at the bottom and the ecliptic plane as being oriented with the north pole at the bottom. | False |
+Note that options (b) and (c) seem to be contradictory, as they both describe the asteroid belt's orientation in relation to the ecliptic plane's poles, but with opposite orientations. This suggests that one of these options is incorrect, or that the passage is trying to test the reader's understanding of the asteroid belt's orientation. | False"," The passage is asking about the orbital orientation of the asteroid belt relative to the ecliptic plane. |
+ The asteroid belt has a specific orientation in relation to the ecliptic plane. |
+ The ecliptic plane has a north pole and a south pole. |
+ There are three possible descriptions of the asteroid belt's orientation relative to the ecliptic plane, labeled as (a), (b), and (c). |
+ Option (a) describes the asteroid belt and the ecliptic plane as being oriented in the same way as a slice of pizza. |
+ Option (b) describes the asteroid belt as being oriented with the south pole of the ecliptic at the top and the ecliptic plane as being oriented with the north pole at the top. |
+ Option (c) describes the asteroid belt as being oriented with the south pole of the ecliptic at the bottom and the ecliptic plane as being oriented with the north pole at the bottom. |
+Note that options (b) and (c) seem to be contradictory, as they both describe the asteroid belt's orientation in relation to the ecliptic plane's poles, but with opposite orientations. This suggests that one of these options is incorrect, or that the passage is trying to test the reader's understanding of the asteroid belt's orientation."
+,"
+
+Answer: it is typically found in the yucatán peninsula and some nearby caribbean islands.
+
+Answer: the yucatán peninsula
+
+Question: Write a function that accepts the URL of a news article, such as the URL from the previous question, and prints the article. Hint: try using the Requests package or the built-in webbrowser library to retrieve the content of the URL.
+
+Question: Suppose the following code is in the file c_program.c:
+
+void funct( int n )
+{
+if ( n > 0 )
+{","Here are the independent facts broken down from the passage: | True |
+ The Yucatán Peninsula is a location where something is typically found. | True |
+ The something found in the Yucatán Peninsula is also found in some nearby Caribbean islands. | True |
+ The Yucatán Peninsula is a geographical location. | True |
+ There is a programming task that involves writing a function to retrieve and print a news article from a given URL. | False |
+ The Requests package and the built-in webbrowser library are potential tools for retrieving the content of a URL in the programming task. | False |
+ There is a code snippet in a file named ""c_program.c"" that contains a function named ""funct"" with an integer parameter ""n"". | False |
+ The function ""funct"" in the code snippet has a conditional statement that checks if the value of ""n"" is greater than 0. | False"," There is a programming task that involves writing a function to retrieve and print a news article from a given URL. |
+ The Requests package and the built-in webbrowser library are potential tools for retrieving the content of a URL in the programming task. |
+ There is a code snippet in a file named ""c_program.c"" that contains a function named ""funct"" with an integer parameter ""n"". |
+ The function ""funct"" in the code snippet has a conditional statement that checks if the value of ""n"" is greater than 0."
+,"
+
+• ### You're a medical student on a surgical rotation in the Emergency Department.
+
+You're a medical student on a surgical rotation in the Emergency Department. The patient you are examining is a 25-year-old woman who is in a great deal of pain. You look at her face and she is crying. You are concerned. Her vital signs are: temperature = 99.4o F (37.4o C); heart rate = 122 beats per minute; blood pressure = 82/50 mmHg. The woman is sweating heavily. She has a history of fibromyalgia.","Here are the independent facts broken down from the passage: | True |
+ The narrator is a medical student. | False |
+ The medical student is on a surgical rotation. | False |
+ The rotation is taking place in the Emergency Department. | False |
+ The patient being examined is a 25-year-old woman. | False |
+ The patient is in a great deal of pain. | False |
+ The patient is crying. | False |
+ The patient's temperature is 99.4°F (37.4°C). | False |
+ The patient's heart rate is 122 beats per minute. | False |
+ The patient's blood pressure is 82/50 mmHg. | False |
+ The patient is sweating heavily. | False |
+ The patient has a history of fibromyalgia. | False |
+These facts can be verified independently and do not rely on each other to be true. | True"," The narrator is a medical student. |
+ The medical student is on a surgical rotation. |
+ The rotation is taking place in the Emergency Department. |
+ The patient being examined is a 25-year-old woman. |
+ The patient is in a great deal of pain. |
+ The patient is crying. |
+ The patient's temperature is 99.4°F (37.4°C). |
+ The patient's heart rate is 122 beats per minute. |
+ The patient's blood pressure is 82/50 mmHg. |
+ The patient is sweating heavily. |
+ The patient has a history of fibromyalgia."
+," Do not provide the text as it originally appeared.
+
+3.1 (Part C) The output should be a string consisting of English words, each separated by a space. Words longer than 10 characters should be trimmed to their first 10 characters, unless they are proper nouns (i.e. names of people, organizations, or places), which should not be trimmed.
+
+3.2 (Part D) You will have to decide what a word is for the purposes of this challenge, and how to determine if a given string is a proper noun.","Here are the independent facts broken down from the passage: | True |
+ The output should be a string. | True |
+ The string should consist of English words. | True |
+ Each word in the string should be separated by a space. | True |
+ Words longer than 10 characters should be trimmed to their first 10 characters. | False |
+ Proper nouns should not be trimmed, even if they are longer than 10 characters. | True |
+ Proper nouns include names of people, organizations, and places. | True |
+ The definition of a ""word"" is to be determined by the person completing the challenge. | False |
+ The method for determining if a given string is a proper noun is to be decided by the person completing the challenge. | True"," Words longer than 10 characters should be trimmed to their first 10 characters. |
+ The definition of a ""word"" is to be determined by the person completing the challenge."
+,"
+
+5. [0.75 marks] Simplify the following text to improve its readability, ensuring its core meaning remains intact: 'the crust forms in part by aggregation of island arcs including granite and metamorphic fold belts and it is preserved in part by depletion of the underlying mantle to form buoyant lithospheric mantle.'
+
+### Q1
+
+Tectonic plates are formed from the mantle. They are comprised of three different types of crust. Which type of crust is formed by the accumulation of island arcs including granite and metamorphic fold belts?
+
+• A. Continental Crust
+• B.","Here are the independent facts broken down from the passage: | False |
+ The Earth's crust forms in part by the aggregation of island arcs. | True |
+ Island arcs include granite and metamorphic fold belts. | True |
+ The crust is preserved in part by the depletion of the underlying mantle. | True |
+ The depletion of the underlying mantle forms buoyant lithospheric mantle. | True |
+ Tectonic plates are formed from the mantle. | False |
+ Tectonic plates are comprised of three different types of crust. | False |
+ One type of crust is formed by the accumulation of island arcs, including granite and metamorphic fold belts. | True |
+Note: The passage does not explicitly state which type of crust is formed by the accumulation of island arcs, but based on the options provided, it is likely that the correct answer is Continental Crust. However, this is an inference rather than an independent fact from the passage. | True","Here are the independent facts broken down from the passage: |
+ Tectonic plates are formed from the mantle. |
+ Tectonic plates are comprised of three different types of crust."
+,"
+
+The contest ended March 29, 2014, but you can still check out the contest announcement, the scoring rubric, and all the submissions on Kaggle.
+
+In the next section, I'll explore my own entry, which uses a simple model to combine the results from two powerful natural language processing libraries.
+
+### My Solution
+
+The contest description said, “Any preprocessing that you deem necessary should be performed on the training data and not the test data,” so I preprocessed the training data in Python and saved it to disk.","Here are the independent facts broken down from the passage: | True |
+ The contest ended on March 29, 2014. | False |
+ The contest announcement, scoring rubric, and submissions are available on Kaggle. | False |
+ The author of the passage has an entry in the contest. | False |
+ The author's entry uses a simple model to combine results from two natural language processing libraries. | False |
+ The contest description specified that any necessary preprocessing should be performed on the training data, not the test data. | False |
+ The author preprocessed the training data using Python. | False |
+ The preprocessed training data was saved to disk by the author. | False"," The contest ended on March 29, 2014. |
+ The contest announcement, scoring rubric, and submissions are available on Kaggle. |
+ The author of the passage has an entry in the contest. |
+ The author's entry uses a simple model to combine results from two natural language processing libraries. |
+ The contest description specified that any necessary preprocessing should be performed on the training data, not the test data. |
+ The author preprocessed the training data using Python. |
+ The preprocessed training data was saved to disk by the author."
+,"
+
+Sample Input 1 Sample Output 1
+harry connick jr. lrb born joseph harry fowler connick jr. september rrb is an american singer actor composer and pianist.
+Harry Connick Jr. born Joseph Harry Fowler Connick Jr. September an American singer actor composer and pianist.","Here are the independent facts broken down from the passage: | True |
+ Harry Connick Jr.'s full name is Joseph Harry Fowler Connick Jr. | True |
+ Harry Connick Jr. was born in September (no specific date mentioned). | True |
+ Harry Connick Jr. is an American. | True |
+ Harry Connick Jr. is a singer. | True |
+ Harry Connick Jr. is an actor. | True |
+ Harry Connick Jr. is a composer. | True |
+ Harry Connick Jr. is a pianist. | True |
+Note that the passage appears to be a duplicate, with the same information presented twice with slight formatting differences. The above facts are extracted from the content of the passage, ignoring the formatting variations. | True",
+,"
+
+Test: 4
+
+Identify and correct the following error in the given text: 'the united nations interregional cycle development partnership is a programme to improve infrastructure, economic competitiveness and quality of life for people in the countries of the developing world.' Provide only the corrected text as the response.
+
+Test: 5
+
+Identify the grammatical error(s) in the following sentence: 'if the team that plays for the red team wins, then they will win the trophy.' Provide only the corrected text as the response.
+
+Test: 6","Here are the independent facts broken down from the passage: | True |
+ There is a test numbered 4. | False |
+ Test 4 requires identifying and correcting an error in a given text about the ""united nations interregional cycle development partnership"". | False |
+ The text to be corrected in Test 4 is: ""the united nations interregional cycle development partnership is a programme to improve infrastructure, economic competitiveness and quality of life for people in the countries of the developing world."" | False |
+ There is a test numbered 5. | False |
+ Test 5 requires identifying the grammatical error(s) in a given sentence: ""if the team that plays for the red team wins, then they will win the trophy."" | False |
+ There is a test numbered 6, but no details are provided about it. | False"," There is a test numbered 4. |
+ Test 4 requires identifying and correcting an error in a given text about the ""united nations interregional cycle development partnership"". |
+ The text to be corrected in Test 4 is: ""the united nations interregional cycle development partnership is a programme to improve infrastructure, economic competitiveness and quality of life for people in the countries of the developing world."" |
+ There is a test numbered 5. |
+ Test 5 requires identifying the grammatical error(s) in a given sentence: ""if the team that plays for the red team wins, then they will win the trophy."" |
+ There is a test numbered 6, but no details are provided about it."
+,"
+    :param test_id: str, id of the test data
+    :return: simplified text
+    """"""
+    simplified_text = text.replace(""\n"", "" "")
+    simplified_text = re.sub(r' +','', simplified_text)
+    return simplified_text.strip()
+
+
+@torch.no_grad()
+def get_scores(test_id, text, tokenizer, model):
+    simplified_text = simple_text(test_id, text)","Here are the independent facts broken down from the passage: | True |
+ **Function definition**: A function named `simple_text` is defined. | False |
+ **Function parameters**: The `simple_text` function takes two parameters: `test_id` (a string) and `text`. | False |
+ **Function return type**: The `simple_text` function returns a string, specifically the simplified text. | False |
+ **Text simplification steps**: The text simplification process involves two steps: | False |
+	* Replacing newline characters (`\n`) with spaces. | True |
+	* Removing multiple spaces using a regular expression (`re.sub(r' +','', ...)`) | False |
+ **String stripping**: The simplified text is stripped of leading and trailing whitespace using the `strip()` method. | False |
+ **Definition of another function**: A function named `get_scores` is defined. | False |
+ **Parameters of `get_scores` function**: The `get_scores` function takes four parameters: `test_id`, `text`, `tokenizer`, and `model`. | False |
+ **Use of `torch.no_grad()`**: The `get_scores` function is decorated with `@torch.no_grad()`, indicating that it does not require gradients to be computed. | False |
+ **Call to `simple_text` function**: The `get_scores` function calls the `simple_text` function, passing `test_id` and `text` as arguments, and assigns the result to the `simplified_text` variable. | False"," **Function definition**: A function named `simple_text` is defined. |
+ **Function parameters**: The `simple_text` function takes two parameters: `test_id` (a string) and `text`. |
+ **Function return type**: The `simple_text` function returns a string, specifically the simplified text. |
+ **Text simplification steps**: The text simplification process involves two steps: |
+	* Removing multiple spaces using a regular expression (`re.sub(r' +','', ...)`) |
+ **String stripping**: The simplified text is stripped of leading and trailing whitespace using the `strip()` method. |
+ **Definition of another function**: A function named `get_scores` is defined. |
+ **Parameters of `get_scores` function**: The `get_scores` function takes four parameters: `test_id`, `text`, `tokenizer`, and `model`. |
+ **Use of `torch.no_grad()`**: The `get_scores` function is decorated with `@torch.no_grad()`, indicating that it does not require gradients to be computed. |
+ **Call to `simple_text` function**: The `get_scores` function calls the `simple_text` function, passing `test_id` and `text` as arguments, and assigns the result to the `simplified_text` variable."
+,"
+    • [ ""Hawaii and Alaska joined the United States before when it was known as the th state."" ]
+  2. What is the name of this painting? Provide the name of the painting as the response.
+    • [ ""Mona Lisa"" ]
+  3. Which sport does the following description describe? 'a sport played between two teams of eleven players on a rectangular field with a net dividing the field in half and a goal at each end of the field' Provide only the sport as the response.
+    • [ ""soccer"" ]","Here are the independent facts broken down from the passage: | True |
+ Hawaii and Alaska joined the United States. | True |
+ The name of the painting is ""Mona Lisa"". | False |
+ The sport described is ""soccer"".  | False |
+Note: The passage also mentions that Hawaii and Alaska joined the United States before it was known as the ""th state"", but this statement seems incomplete or incorrect, as it doesn't specify what ""th state"" refers to. If you're looking for a fact about the admission of Hawaii and Alaska to the United States, a more accurate statement would be that Hawaii and Alaska are the 50th and 49th states to join the United States, respectively. | True"," The name of the painting is ""Mona Lisa"". |
+ The sport described is ""soccer"". "
+,"
+
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=3in]{imgs/task.png}
+\caption{Simplification task in the original dataset.}
+\label{fig:task}
+\end{figure}
+
+\subsection{Data Processing}
+The original dataset consists of sentences, each with a level of difficulty of 0 to 9.  Sentences with difficulty greater than 2 are considered hard. 
+
+A sentence was removed if it is longer than 75 tokens.","Here are the independent facts broken down from the passage: | True |
+ The original dataset consists of sentences. | True |
+ Each sentence in the dataset has a level of difficulty ranging from 0 to 9. | False |
+ Sentences with a difficulty level greater than 2 are considered hard. | False |
+ A sentence is removed from the dataset if it is longer than 75 tokens. | False |
+Note that the figure and caption are not facts, but rather a visual aid and its description, so they are not included in the list of independent facts. | True"," Each sentence in the dataset has a level of difficulty ranging from 0 to 9. |
+ Sentences with a difficulty level greater than 2 are considered hard. |
+ A sentence is removed from the dataset if it is longer than 75 tokens."
+,"
+  3. 3
+    Add another input field for ""context"" and then feed it with the context in which the user has placed his query, e.g., ""The problem is, the original text is very wordy and I need to simplify it for a project in which the core meaning must be preserved, but I cannot go on making alterations.""
+  4. 4","Here are the independent facts broken down from the passage: | True |
+ An additional input field for ""context"" should be added. | True |
+ The ""context"" input field should be populated with the context in which the user has placed their query. | True |
+ The context provided by the user is that the original text is very wordy. | True |
+ The user needs to simplify the original text for a project. | True |
+ The core meaning of the original text must be preserved during simplification. | True |
+ The user is unable to continue making alterations to the text. | False", The user is unable to continue making alterations to the text.
+,"
+
+Hint: Use the following python libraries: re, difflib, string, nltk.
+
+Sample Input and Output
+
+
+'laureano bisan etame mayer lrb born january in kribi rrb commonly known as lauren is a retired cameroonian footballer of equatoguinean origin who formely played for the cameroonian national team.'
+
+
+'laureano bisan born january in kribi formely played for the cameroonian national team'
+
+
+'peter gabriel'
+
+
+'philip glass'
+
+","Here are the independent facts broken down from the passage: | True |
+ The passage suggests using the following Python libraries:  | False |
+   - `re` (regular expressions) | True |
+   - `difflib` (diff and sequence matching) | True |
+   - `string` (string constants and classes) | True |
+   - `nltk` (natural language toolkit) | True |
+ The passage provides sample input and output. | False |
+ There are four sample text inputs: | False |
+   - 'laureano bisan etame mayer lrb born january in kribi rrb commonly known as lauren is a retired cameroonian footballer of equatoguinean origin who formely played for the cameroonian national team.' | True |
+   - 'laureano bisan born january in kribi formely played for the cameroonian national team' | True |
+   - 'peter gabriel' | False |
+   - 'philip glass' | False |
+ The first two sample inputs appear to be related to the same person, Laureano Bisan Etame Mayer, also known as Lauren. | True |
+   - He was born in January in Kribi. | True |
+   - He is a retired Cameroonian footballer of Equatoguinean origin. | True |
+   - He formerly played for the Cameroonian national team. | True |
+ The last two sample inputs appear to be names of famous individuals: | True |
+   - Peter Gabriel (likely referring to the British musician and singer-songwriter) | False |
+   - Philip Glass (likely referring to the American composer and pianist) | False"," The passage suggests using the following Python libraries:  |
+ The passage provides sample input and output. |
+ There are four sample text inputs: |
+   - 'peter gabriel' |
+   - 'philip glass' |
+   - Peter Gabriel (likely referring to the British musician and singer-songwriter) |
+   - Philip Glass (likely referring to the American composer and pianist)"
+,"
+
+
+
+The contest organizer has published the list of top participants here.
+
+More details, including scoring and the list of participants that have made it to the final round, can be found here.
+
+Personal tools","Here are the independent facts broken down from the passage: | True |
+ The contest organizer has published a list of top participants. | False |
+ The list of top participants can be found at a specified location (""here""). | False |
+ More details about the contest are available. | False |
+ The available details include scoring information. | False |
+ The available details include a list of participants who have made it to the final round. | False |
+ The additional details can be found at a specified location (""here""). | False"," The contest organizer has published a list of top participants. |
+ The list of top participants can be found at a specified location (""here""). |
+ More details about the contest are available. |
+ The available details include scoring information. |
+ The available details include a list of participants who have made it to the final round. |
+ The additional details can be found at a specified location (""here"")."
+,"
+    Answer should be: 'according to certain perceptions, the universe has three dimensions of space and one dimension of time.'
+    (In this case, the answer must be shorter than the question, and I would expect an AI capable of the following simplification to understand both the grammar and syntax of human language, with the ability to apply the rules of grammar to a human sentence in a creative and novel way.)
+
+    Question 3:
+    'Answers should be short, and they should be to the point. If you are looking for a longer answer, then I suggest that you read more.'","Here are the independent facts broken down from the passage: | True |
+ The universe has three dimensions of space. | True |
+ The universe has one dimension of time. | True |
+ Answers should be short and to the point. | True |
+ For longer answers, it is suggested to read more. | True |
+Note that the first two facts are based on ""certain perceptions"" as mentioned in the passage, implying that they may not be universally accepted or proven. The last two facts are more general guidelines for providing answers. | True",
+," This task is designed to be completed with a single action, but you can split the text into multiple steps as needed.
+
+\noindent\textbf{Spatial preposition identification:}
+Identify the preposition(s) associated with the red rectangle in the image and indicate their correct position. For example, the correct answer in Fig. \ref{fig:tasks} would be ""under the dog"".
+
+\noindent\textbf{Geographic location:}
+Identify the location in the world where the following picture was taken. The answer must be a city name or a country name.","Here are the independent facts broken down from the passage: | True |
+ The task is designed to be completed with a single action. | True |
+ The task can be split into multiple steps if needed. | True |
+ The task involves identifying prepositions associated with a red rectangle in an image. | False |
+ The correct answer for preposition identification should include the correct position (e.g. ""under the dog""). | False |
+ There is an example figure referenced as ""Fig. \ref{fig:tasks}"". | False |
+ The task also involves identifying a geographic location. | True |
+ The geographic location should be identified as a city name or a country name. | True |
+ A picture is provided to help identify the geographic location. | False"," The task involves identifying prepositions associated with a red rectangle in an image. |
+ The correct answer for preposition identification should include the correct position (e.g. ""under the dog""). |
+ There is an example figure referenced as ""Fig. \ref{fig:tasks}"". |
+ A picture is provided to help identify the geographic location."
+,"
+
+
+Input contains only printable ASCII characters and punctuation.
+
+Sample Input 1 Sample Output 1
+'yatsuhashi is a japanese confectionery sold mainly as a souvenir sweet lrb miyagegashi rrb.'
+'yatsuhashi is a japanese confectionery sold as a souvenir sweet.'","Here are the independent facts broken down from the passage: | True |
+ The input contains only printable ASCII characters and punctuation. | True |
+ ""Yatsuhashi"" is a type of Japanese confectionery. | True |
+ Yatsuhashi is sold mainly as a souvenir sweet. | True |
+ In Japanese, ""yatsuhashi"" is also referred to as ""miyagegashi"". | True |
+ The sample input is: 'yatsuhashi is a japanese confectionery sold mainly as a souvenir sweet lrb miyagegashi rrb.' | True |
+ The sample output is: 'yatsuhashi is a japanese confectionery sold as a souvenir sweet.'  | True |
+Note that facts 5 and 6 are specific examples, while facts 1-4 are general statements. | True",
+,"
+
+1) some tents
+
+2) some tents that were built by seabees and funded by the u.s. federal emergency management agency lrb fema rrb are wooden structures covered by tents.
+
+I would like to see the simplified text as the output, but I couldn't get it working.
+
+• Are you looking for a function to simplify sentences? What is your problem? What did you try so far? – Rolf Mertig Mar 18 '16 at 21:25","To break down the given passage into independent facts, we can analyze it as follows: | True |
+ There are some tents. | True |
+ Some tents were built by Seabees. | True |
+ The construction of these tents was funded by the U.S. Federal Emergency Management Agency (FEMA). | True |
+ These specific tents are actually wooden structures. | True |
+ The wooden structures are covered by tents. | True |
+So, the simplified and broken-down facts from the passage are: | True |
+- Tents exist. | True |
+- Seabees built some tents. | True |
+- FEMA funded the construction of these tents. | True |
+- The tents in question are made of wood. | False |
+- The wooden structures are covered with tent material. | True",- The tents in question are made of wood.
+,"
+
+\paragraph{Mathematical Simplification} The goal of mathematical simplification (MathSimp) is to generate the simplest expression equivalent to a given expression. It is usually used for mathematics education. The dataset is from \citet{DBLP:journals/corr/abs-2010-08240}. There are totally $9,680$ expressions, with $7,280$ training instances, $1,200$ validation instances and $1,200$ testing instances.","Here are the independent facts broken down from the passage: | True |
+ The goal of mathematical simplification (MathSimp) is to generate the simplest expression equivalent to a given expression. | False |
+ Mathematical simplification is usually used for mathematics education. | False |
+ The dataset for mathematical simplification is from \citet{DBLP:journals/corr/abs-2010-08240}. | False |
+ The total number of expressions in the dataset is 9,680. | False |
+ The dataset contains 7,280 training instances. | False |
+ The dataset contains 1,200 validation instances. | False |
+ The dataset contains 1,200 testing instances. | False"," The goal of mathematical simplification (MathSimp) is to generate the simplest expression equivalent to a given expression. |
+ Mathematical simplification is usually used for mathematics education. |
+ The dataset for mathematical simplification is from \citet{DBLP:journals/corr/abs-2010-08240}. |
+ The total number of expressions in the dataset is 9,680. |
+ The dataset contains 7,280 training instances. |
+ The dataset contains 1,200 validation instances. |
+ The dataset contains 1,200 testing instances."
+,"
+• 'following a successful amateur career she turned professional in when she signed with the hamburg boxing promoter spotlight boxing.'
+• a successful amateur career she turned professional in when she signed with the hamburg boxing promoter spotlight boxing.'
+• a successful amateur career she turned professional in when she signed with the hamburg boxing promoter spotlight.'
+• a successful amateur career she turned professional in when she signed with the hamburg boxing promoter spotlight.'
+• a successful amateur career she turned professional in when she signed with the hamburg boxing promoter spotlight.'","Here are the independent facts broken down from the passage: | True |
+ The individual had a successful amateur career. | True |
+ The individual turned professional. | True |
+ The individual signed with a boxing promoter. | True |
+ The boxing promoter is based in Hamburg. | True |
+ The name of the boxing promoter is Spotlight Boxing. | True |
+Note that the passage is repetitive, but these 5 facts can be extracted as independent pieces of information. | True",
+,"
+
+Text Simplification
+
+1. Simplify the following text: 'between and the government of then zaire called it the zaire river.'
+
+[Answer: between and the government of then zaire called it the zaire river.]
+
+2. Simplify the following text: 'the reason why the police can't just search a car if they have a reason to suspect there might be drugs in there is because the fourth amendment of the us constitution states that no person should be subjected to any unreasonable searches and seizures'.","Here are the independent facts broken down from the passage: | True |
+ The government of Zaire referred to a river as the ""Zaire River"". | True |
+ The Fourth Amendment of the US Constitution exists. | False |
+ The Fourth Amendment of the US Constitution states that no person should be subjected to unreasonable searches and seizures. | False |
+ The police cannot search a car simply because they suspect there might be drugs in it. | False |
+ The police need a valid reason to search a car, as per the Fourth Amendment of the US Constitution. | False |
+Note that the passage does not provide a clear and complete sentence to work with for the first point, but based on the context, the above fact can be inferred. | True"," The Fourth Amendment of the US Constitution exists. |
+ The Fourth Amendment of the US Constitution states that no person should be subjected to unreasonable searches and seizures. |
+ The police cannot search a car simply because they suspect there might be drugs in it. |
+ The police need a valid reason to search a car, as per the Fourth Amendment of the US Constitution."
+,"
+  \item[C:] Given the following: 'the summer paralympics will be held in the same city and organized by the same committee and are scheduled to be held from september to.' Simplify the following text to improve its readability, ensuring its core meaning remains intact: 'paralympic winter games to be held in south korea will see paralympic athletes representing the host nation of korea.' Provide only the simplified text as the response.","Here are the independent facts from the passage: | True |
+ The Summer Paralympics will be held in the same city as another event (not specified). | True |
+ The Summer Paralympics will be organized by the same committee as another event (not specified). | True |
+ The Summer Paralympics are scheduled to be held from September (no end date specified). | True |
+ The Paralympic Winter Games will be held in South Korea. | False |
+ The Paralympic Winter Games in South Korea will feature Paralympic athletes from the host nation, Korea. | False"," The Paralympic Winter Games will be held in South Korea. |
+ The Paralympic Winter Games in South Korea will feature Paralympic athletes from the host nation, Korea."
+,"
+
+### Context
+
+This is a classification task, where the input text is expected to be classified into a predefined set of categories, which is called 'targets'. The goal is to find a 'classifier' model that correctly categorizes the input text. The model will have the following functions:
+
+• A 'tokenizer' function to split the text into words, or a set of tokens.
+• An 'encoder' function, which converts the tokenized text to a dense numeric representation. This representation needs to capture the meaning and structure of the input text.","Here are the independent facts broken down from the passage: | True |
+ The task is a classification task. | False |
+ The input text is expected to be classified into a predefined set of categories. | True |
+ The predefined set of categories is called 'targets'. | False |
+ The goal is to find a 'classifier' model that correctly categorizes the input text. | True |
+ The model has a 'tokenizer' function. | True |
+ The 'tokenizer' function splits the text into words or a set of tokens. | True |
+ The model has an 'encoder' function. | False |
+ The 'encoder' function converts the tokenized text to a dense numeric representation. | False |
+ The dense numeric representation needs to capture the meaning of the input text. | False |
+ The dense numeric representation needs to capture the structure of the input text. | True"," The task is a classification task. |
+ The predefined set of categories is called 'targets'. |
+ The model has an 'encoder' function. |
+ The 'encoder' function converts the tokenized text to a dense numeric representation. |
+ The dense numeric representation needs to capture the meaning of the input text."
+,"
+    • You can use this example from the Wikipedia article on the character.
+
+Note: Please do not write any custom code for this.
+
+Please sign in or sign up to submit answers.
+
+Alternatively, you can try out Learneroo before signing up.
+
+Contact Us
+Sign in or email us at [email protected]","Here are the independent facts from the passage: | False |
+ There is a Wikipedia article on a character. | True |
+ You can sign in to submit answers. | False |
+ You can sign up to submit answers. | False |
+ There is an alternative option to try out Learneroo before signing up. | False |
+ The contact email address is [email protected] | False |
+ There is a ""Contact Us"" option available. | False","Here are the independent facts from the passage: |
+ You can sign in to submit answers. |
+ You can sign up to submit answers. |
+ There is an alternative option to try out Learneroo before signing up. |
+ The contact email address is [email protected] |
+ There is a ""Contact Us"" option available."
+,"
+
+### What's the best response?
+
+A
+
+'smaller landslides'
+
+B
+
+'lanslides'
+
+C
+
+'landslide'
+
+D
+
+'landslide'
+
+E
+
+'landslide'
+
+F
+
+'landslide'
+
+G
+
+'landslide'
+
+H
+
+'landslide'
+
+I
+
+'landslide'
+
+J
+
+'landslide'
+
+K
+
+'landslide'
+
+L
+
+'landslide'
+
+M
+","Here are the independent facts from the passage: | True |
+ The passage is asking for the best response to something. | True |
+ There are 13 options (A to M) provided. | False |
+ Option A is 'smaller landslides'. | True |
+ Options B to M are all 'landslide' (with no variation). | False |
+ There is no context or question provided to determine what the best response is for. | False"," There are 13 options (A to M) provided. |
+ Options B to M are all 'landslide' (with no variation). |
+ There is no context or question provided to determine what the best response is for."
+,"
+""""""
+
+import copy
+import json
+import logging
+import os
+import re
+from typing import Any, Dict, List, Optional, Tuple, Type, TypeVar
+
+import numpy as np
+import scipy.sparse as sps
+import torch
+import transformers
+from scipy.sparse import csr_matrix
+from scipy.sparse import csr_matrix as csr
+from scipy.sparse.csgraph import connected_components
+from torch.utils.data import DataLoader, Dataset, RandomSampler, TensorDataset
+","Here are the independent facts broken down from the passage: | True |
+ The passage imports the `copy` module. | False |
+ The passage imports the `json` module. | False |
+ The passage imports the `logging` module. | False |
+ The passage imports the `os` module. | False |
+ The passage imports the `re` module. | False |
+ The passage imports the `Any`, `Dict`, `List`, `Optional`, `Tuple`, `Type`, and `TypeVar` types from the `typing` module. | False |
+ The passage imports the `numpy` library and assigns it the alias `np`. | False |
+ The passage imports the `scipy.sparse` module and assigns it the alias `sps`. | False |
+ The passage imports the `torch` library. | False |
+ The passage imports the `transformers` library. | False |
+ The passage imports the `csr_matrix` class from the `scipy.sparse` module and assigns it two aliases: `csr_matrix` and `csr`. | False |
+ The passage imports the `connected_components` function from the `scipy.sparse.csgraph` module. | False |
+ The passage imports the `DataLoader`, `Dataset`, `RandomSampler`, and `TensorDataset` classes from the `torch.utils.data` module. | False |
+Note that these facts are independent in the sense that they do not rely on each other to be true. They are simply a list of imports that are present in the passage. | True"," The passage imports the `copy` module. |
+ The passage imports the `json` module. |
+ The passage imports the `logging` module. |
+ The passage imports the `os` module. |
+ The passage imports the `re` module. |
+ The passage imports the `Any`, `Dict`, `List`, `Optional`, `Tuple`, `Type`, and `TypeVar` types from the `typing` module. |
+ The passage imports the `numpy` library and assigns it the alias `np`. |
+ The passage imports the `scipy.sparse` module and assigns it the alias `sps`. |
+ The passage imports the `torch` library. |
+ The passage imports the `transformers` library. |
+ The passage imports the `csr_matrix` class from the `scipy.sparse` module and assigns it two aliases: `csr_matrix` and `csr`. |
+ The passage imports the `connected_components` function from the `scipy.sparse.csgraph` module. |
+ The passage imports the `DataLoader`, `Dataset`, `RandomSampler`, and `TensorDataset` classes from the `torch.utils.data` module."
+,"
+• QA - Paraphrase: 'A paraphrase is a textual variant of the original passage, either for better comprehension or for stylistic reasons. Paraphrases are generally longer than their source passage.' Provide the original passage as the response.
+• QA - Synonym: 'Synonyms are words with the same or nearly the same meaning as another word, such as 'happy' and 'joyful', 'fast' and 'quick', or 'tall' and 'high'. Synonym questions provide two definitions and ask the model to pick the correct definition from two options.'","Here are the independent facts broken down from the passage: | True |
+ A paraphrase is a textual variant of the original passage. | True |
+ Paraphrases can be created for better comprehension. | True |
+ Paraphrases can be created for stylistic reasons. | True |
+ Paraphrases are generally longer than their source passage. | False |
+ Synonyms are words with the same or nearly the same meaning as another word. | True |
+ Examples of synonyms include 'happy' and 'joyful', 'fast' and 'quick', or 'tall' and 'high'. | False |
+ Synonym questions provide two definitions. | False |
+ Synonym questions ask the model to pick the correct definition from two options. | False"," Paraphrases are generally longer than their source passage. |
+ Examples of synonyms include 'happy' and 'joyful', 'fast' and 'quick', or 'tall' and 'high'. |
+ Synonym questions provide two definitions. |
+ Synonym questions ask the model to pick the correct definition from two options."
+,"
+
+(source: https://github.com/google-research/text-to-text-transfer-transformer)
+
+\end{comment}
+
+
+
+\section{Conclusion}
+
+In this paper, we present the first study on how generative pre-trained language models (GPT-3) can be deployed for the automatic detection of low quality scientific papers. Our experimental results show that the GPT-3 language models can accurately and efficiently detect a majority of the low quality papers, with a small number of parameters.","Here are the independent facts broken down from the passage: | True |
+ The paper presents a study on using generative pre-trained language models (GPT-3) for automatic detection of low-quality scientific papers. | False |
+ The study uses GPT-3 language models for the detection task. | False |
+ The GPT-3 language models can detect low-quality papers accurately. | False |
+ The GPT-3 language models can detect low-quality papers efficiently. | False |
+ The detection task can be performed with a small number of parameters. | False |
+ The study found that a majority of low-quality papers can be detected using GPT-3 language models. | False |
+Note that fact 6 implies that there may be some low-quality papers that are not detected by the GPT-3 language models, but the exact number or proportion is not specified in the passage. | False"," The paper presents a study on using generative pre-trained language models (GPT-3) for automatic detection of low-quality scientific papers. |
+ The study uses GPT-3 language models for the detection task. |
+ The GPT-3 language models can detect low-quality papers accurately. |
+ The GPT-3 language models can detect low-quality papers efficiently. |
+ The detection task can be performed with a small number of parameters. |
+ The study found that a majority of low-quality papers can be detected using GPT-3 language models. |
+Note that fact 6 implies that there may be some low-quality papers that are not detected by the GPT-3 language models, but the exact number or proportion is not specified in the passage."
+,"
+    \item \emph{Text Simplification 2}: Provide only the simplified text as the response.
+    \item \emph{Sentiment Classification}: Provide the sentiment of the following review as the response: 'The restaurant was good. The service was slow.'
+\end{itemize}
+
+\textbf{Subtask 1} is a question answering task that requires systems to answer questions about a story. \textbf{Subtask 2} requires systems to identify spans of text that are redundant in the context of the story.","Here are the independent facts broken down from the passage: | True |
+ There is a task called ""Text Simplification 2"" that requires providing simplified text as a response. | True |
+ There is a task called ""Sentiment Classification"" that requires providing the sentiment of a given review as a response. | False |
+ An example of a review for Sentiment Classification is: 'The restaurant was good. The service was slow.' | False |
+ There is a Subtask 1 that involves answering questions about a story. | True |
+ There is a Subtask 2 that involves identifying redundant spans of text in the context of a story. | False |
+ Subtask 1 is a question answering task. | True |
+ Subtask 2 is a task related to identifying redundant text. | False"," There is a task called ""Sentiment Classification"" that requires providing the sentiment of a given review as a response. |
+ An example of a review for Sentiment Classification is: 'The restaurant was good. The service was slow.' |
+ There is a Subtask 2 that involves identifying redundant spans of text in the context of a story. |
+ Subtask 2 is a task related to identifying redundant text."
+," The simplification should be limited to a reduction in word count and grammatical and spelling corrections if appropriate. A change in the structure of the text is not considered a correct simplification and should not be made.
+
+This challenge was created using the AQUAINT dataset ( http://aquaint.sourceforge.net/ ) and its English Wikipedia texts and English Simple Wikipedia texts (http://simple.wikipedia.org/wiki/Main_Page).","Here are the independent facts broken down from the passage: | False |
+ The simplification process should only reduce the word count. | True |
+ The simplification process may include grammatical corrections if necessary. | True |
+ The simplification process may include spelling corrections if necessary. | True |
+ Changing the structure of the text is not a correct simplification. | True |
+ The challenge was created using the AQUAINT dataset. | False |
+ The AQUAINT dataset is available at http://aquaint.sourceforge.net/. | False |
+ The challenge used English Wikipedia texts. | True |
+ The challenge used English Simple Wikipedia texts. | True |
+ English Simple Wikipedia texts are available at http://simple.wikipedia.org/wiki/Main_Page. | True","Here are the independent facts broken down from the passage: |
+ The challenge was created using the AQUAINT dataset. |
+ The AQUAINT dataset is available at http://aquaint.sourceforge.net/."
+," Example input:  
+He made his ecw debut defeating jack meridol on the july episode.
+
+Sample output:  
+He made his ecw debut defeating jack meridol on july
+
+Note: It is possible that the answer is not unique, so if this is the case, please return all possible solutions (separated by newlines) in ascending order. If there are no possible solutions, you should still return an empty array.
+
+Here is my code,
+
+    string data = @""He made his ecw debut defeating jack meridol on the july episode."";","To break down the given passage into independent facts, we can analyze the sentence structure and identify the key components. Here's a step-by-step breakdown: | True |
+ **Identify the main action**: The main action in the sentence is ""He made his ecw debut"". | True |
+ **Identify the opponent**: The opponent is ""jack meridol"". | True |
+ **Identify the outcome**: The outcome is ""defeating"". | True |
+ **Identify the time**: The time is ""on the july episode"". | True |
+Based on this analysis, we can extract the following independent facts: | True |
+* He made his ecw debut. | True |
+* He defeated jack meridol. | True |
+* The event occurred on the july episode. | True |
+However, the sample output suggests that the desired output is a modified version of the original sentence, with the word ""episode"" removed. In this case, the independent fact can be represented as: | True |
+* He made his ecw debut defeating jack meridol on july | True |
+To achieve this output using C#, you can use the following code: | False |
+```csharp | False |
+using System; | True |
+using System.Text.RegularExpressions; | False |
+public class Program | False |
+{ | False |
+    public static void Main() | False |
+    { | False |
+        string data = @""He made his ecw debut defeating jack meridol on the july episode.""; | True |
+        string output = RemoveEpisode(data); | True |
+        Console.WriteLine(output); | False |
+    } | False |
+    public static string RemoveEpisode(string input) | False |
+    { | False |
+        return Regex.Replace(input, @""episode"", """").Trim(); | True |
+    } | False |
+} | False |
+``` | False |
+This code uses a regular expression to replace the word ""episode"" with an empty string, effectively removing it from the input sentence. The `Trim()` method is used to remove any trailing whitespace. | True |
+Alternatively, you can use a simpler approach using the `Replace()` method: | False |
+```csharp | False |
+public static string RemoveEpisode(string input) | True |
+{ | False |
+    return input.Replace(""episode"", """").Trim(); | True |
+} | False |
+``` | False |
+Both of these approaches will produce the desired output: | False |
+``` | False |
+He made his ecw debut defeating jack meridol on the july | True |
+``` | False","To achieve this output using C#, you can use the following code: |
+```csharp |
+using System.Text.RegularExpressions; |
+public class Program |
+{ |
+    public static void Main() |
+    { |
+        Console.WriteLine(output); |
+    } |
+    public static string RemoveEpisode(string input) |
+    { |
+    } |
+} |
+``` |
+Alternatively, you can use a simpler approach using the `Replace()` method: |
+```csharp |
+{ |
+} |
+``` |
+Both of these approaches will produce the desired output: |
+``` |
+```"
+,"
+
+  1. The dards are a group of people defined by linguistic similarities, not common ethnicity, predominantly found in Eastern Afghanistan in the Indian state of Jammu and Kashmir and in the northern areas and North West Frontier Province of Pakistan.
+
+6. Find out what the word is in English for a'staircase' in Spanish. The text in Spanish can be found here. Provide the English word as the response.
+
+  1. escalator
+
+
+The following answers were also accepted as correct (but are not as good as the ones given above):
+
+  1. a group of people","Here are the independent facts broken down from the passage: | False |
+ The Dards are a group of people defined by linguistic similarities. | True |
+ The Dards are not defined by common ethnicity. | True |
+ The Dards are predominantly found in Eastern Afghanistan. | False |
+ The Dards are also found in the Indian state of Jammu and Kashmir. | True |
+ The Dards are found in the northern areas of Pakistan. | True |
+ The Dards are found in the North West Frontier Province of Pakistan. | True |
+Note that the second part of the passage appears to be unrelated to the first part and is about finding the English word for ""staircase"" in Spanish, which is not relevant to the information about the Dards. The correct answer to this question is ""staircase"", not ""escalator"" or ""a group of people"", as an escalator is a moving staircase and not the same as a traditional staircase. | False","Here are the independent facts broken down from the passage: |
+ The Dards are predominantly found in Eastern Afghanistan. |
+Note that the second part of the passage appears to be unrelated to the first part and is about finding the English word for ""staircase"" in Spanish, which is not relevant to the information about the Dards. The correct answer to this question is ""staircase"", not ""escalator"" or ""a group of people"", as an escalator is a moving staircase and not the same as a traditional staircase."
+," For example, if the simplified text was'should it intensify then madagascar names it', then this is your response.
+
+Sample Response:
+
+'Madagascar names the storm if it intensifies.'
+
+Please Note:
+
+- We can accept either the first or the last name of a cyclone if the cyclone has multiple names. For example, if the storm is named ‘Cameron’ and also ‘Boling’ then either of these two names will be accepted in the solution.
+- The simplification must be a complete sentence in English (e.g.","Here are the independent facts broken down from the passage: | True |
+ The simplified text is given as an example: ""should it intensify then madagascar names it"". | False |
+ The correct response to the simplified text is: ""Madagascar names the storm if it intensifies."" | False |
+ If a cyclone has multiple names, either the first or last name is acceptable. | False |
+ For example, if a storm is named both ""Cameron"" and ""Boling"", either ""Cameron"" or ""Boling"" can be used as the name. | False |
+ The simplification of the text must be a complete sentence in English. | True"," The simplified text is given as an example: ""should it intensify then madagascar names it"". |
+ The correct response to the simplified text is: ""Madagascar names the storm if it intensifies."" |
+ If a cyclone has multiple names, either the first or last name is acceptable. |
+ For example, if a storm is named both ""Cameron"" and ""Boling"", either ""Cameron"" or ""Boling"" can be used as the name."
+,"
+
+Example output
+
+The following is an example of what a request for simplification might look like:
+
+Simplification of 'Talk page'
+Please simplify the following text to improve its readability, ensuring its core meaning remains intact: 'The welcome message is put on the user s talk page at the top of the page.' Provide only the simplified text as the response.
+
+An example of a possible response would be:
+
+'The welcome message is put at the top of the user s talk page.'","Here are the independent facts broken down from the passage: | True |
+ A request for simplification is being made. | False |
+ The request is to simplify a specific text to improve its readability. | False |
+ The core meaning of the original text must remain intact after simplification. | True |
+ The original text to be simplified is: ""The welcome message is put on the user's talk page at the top of the page."" | True |
+ A possible simplified response is: ""The welcome message is put at the top of the user's talk page."" | False |
+ The simplified response should only include the rewritten text, without any additional information. | True |
+ The original text is related to a ""talk page"" and a ""welcome message"" being placed on it. | True |
+ The welcome message is specifically placed at the top of the talk page. | False"," A request for simplification is being made. |
+ The request is to simplify a specific text to improve its readability. |
+ A possible simplified response is: ""The welcome message is put at the top of the user's talk page."" |
+ The welcome message is specifically placed at the top of the talk page."
+,"
+  7. Question 7 (6 marks)
+    Which of the following statements is TRUE about the following code:
+    void main()
+            int count = 4;
+            while(count >= 0)
+                    cout << count << endl;
+  8. Question 8 (5 marks)
+    Given that the following code defines a class A:
+    class A
+            char m_ch;
+            int m_int;
+            void foo()","Here are the independent facts broken down from the passage: | False |
+ There is a question labeled as ""Question 7"" worth 6 marks. | False |
+ Question 7 asks which statement is true about a given code. | True |
+ The code provided for Question 7 is a C++ function named ""main"" that declares an integer variable ""count"" and initializes it to 4. | False |
+ The code for Question 7 contains a while loop that continues as long as ""count"" is greater than or equal to 0. | False |
+ Inside the while loop, the code prints the value of ""count"" to the console followed by a newline character. | False |
+ There is a question labeled as ""Question 8"" worth 5 marks. | False |
+ Question 8 provides a C++ class definition named ""A"". | False |
+ The class ""A"" has a character member variable named ""m_ch"". | False |
+ The class ""A"" has an integer member variable named ""m_int"". | False |
+ The class ""A"" has a member function named ""foo"". | False","Here are the independent facts broken down from the passage: |
+ There is a question labeled as ""Question 7"" worth 6 marks. |
+ The code provided for Question 7 is a C++ function named ""main"" that declares an integer variable ""count"" and initializes it to 4. |
+ The code for Question 7 contains a while loop that continues as long as ""count"" is greater than or equal to 0. |
+ Inside the while loop, the code prints the value of ""count"" to the console followed by a newline character. |
+ There is a question labeled as ""Question 8"" worth 5 marks. |
+ Question 8 provides a C++ class definition named ""A"". |
+ The class ""A"" has a character member variable named ""m_ch"". |
+ The class ""A"" has an integer member variable named ""m_int"". |
+ The class ""A"" has a member function named ""foo""."
+," (This task has not been given to the current model due to the lack of sufficient training data. Therefore, it is left to future work as part of the open question we propose.) 
+    \end{itemize}
+\end{enumerate}
+
+
+\section{Conclusion}
+
+We propose two new benchmark tasks for summarization: text simplification with abstractive references and factual consistency for headline generation. We hope this work can encourage the development of text simplification and headline generation models that can generalize well to other languages and better understand the original texts.","Here are the independent facts broken down from the passage: | True |
+ The current model lacks sufficient training data for a specific task. | False |
+ The task is left for future work as part of an open question. | False |
+ Two new benchmark tasks for summarization are proposed. | False |
+ The proposed benchmark tasks are: | False |
+   - Text simplification with abstractive references | True |
+   - Factual consistency for headline generation | True |
+ The goal of the proposed work is to encourage the development of text simplification and headline generation models. | False |
+ The desired outcome of the proposed work is for the models to generalize well to other languages. | False |
+ The desired outcome of the proposed work is for the models to better understand the original texts. | True"," The current model lacks sufficient training data for a specific task. |
+ The task is left for future work as part of an open question. |
+ Two new benchmark tasks for summarization are proposed. |
+ The proposed benchmark tasks are: |
+ The goal of the proposed work is to encourage the development of text simplification and headline generation models. |
+ The desired outcome of the proposed work is for the models to generalize well to other languages."
+,"
+    """"""
+    pass
+
+
+def test_simplify_to_core_meaning_task():
+    """"""
+    Test simplify_to_core_meaning for the'simplify_to_core_meaning' task.
+
+    """"""
+    pass
+
+
+def test_simplify_to_core_meaning_with_answer():
+    """"""
+    Test simplify_to_core_meaning for the'simplify_to_core_meaning' task with an answer as input.
+
+    """"""
+    pass","Here are the independent facts broken down from the passage: | True |
+ There is a function named `test_simplify_to_core_meaning_task`. | False |
+ The function `test_simplify_to_core_meaning_task` is used to test the `simplify_to_core_meaning` task. | False |
+ There is another function named `test_simplify_to_core_meaning_with_answer`. | False |
+ The function `test_simplify_to_core_meaning_with_answer` is used to test the `simplify_to_core_meaning` task with an answer as input. | False |
+ Both functions are currently empty, as indicated by the `pass` statement. | False |
+ The `simplify_to_core_meaning` task is being tested in two different scenarios: with and without an answer as input. | False"," There is a function named `test_simplify_to_core_meaning_task`. |
+ The function `test_simplify_to_core_meaning_task` is used to test the `simplify_to_core_meaning` task. |
+ There is another function named `test_simplify_to_core_meaning_with_answer`. |
+ The function `test_simplify_to_core_meaning_with_answer` is used to test the `simplify_to_core_meaning` task with an answer as input. |
+ Both functions are currently empty, as indicated by the `pass` statement. |
+ The `simplify_to_core_meaning` task is being tested in two different scenarios: with and without an answer as input."
+,"
+
+
+\begin{table*}[t]
+\caption{Performance metrics for each task of the test set. The task name, the number of examples, the precision (P) and recall (R) are provided.}
+\begin{tabularx}{\linewidth}{p{6cm}|p{1.2cm}p{1.2cm}p{1.2cm}p{1.2cm}p{1.2cm}p{1.2cm}p{1.2cm}}
+\toprule
+Task Name & \# Ex.","Here are the independent facts that can be extracted from the passage: | True |
+ A table is provided to display performance metrics. | False |
+ The table includes information about each task in the test set. | False |
+ The task name is one of the pieces of information provided in the table. | True |
+ The number of examples is another piece of information provided in the table, denoted by ""# Ex."". | False |
+ Precision (P) is a performance metric that is included in the table. | False |
+ Recall (R) is another performance metric that is included in the table. | False |
+Note that the passage does not provide any specific data or values, but rather describes the structure and content of the table. If the table were fully provided, additional facts could be extracted from the specific data included in the table. | True"," A table is provided to display performance metrics. |
+ The table includes information about each task in the test set. |
+ The number of examples is another piece of information provided in the table, denoted by ""# Ex."". |
+ Precision (P) is a performance metric that is included in the table. |
+ Recall (R) is another performance metric that is included in the table."
+,"
+
+
+[1] 'One of his elder sisters Philippa married John I of Portugal. His younger sister Elizabeth was the mother of John Holland and Duke of Exeter.'
+
+
+[2] 'Philippa was the elder sister of the Duke and married John I of Portugal. His younger sister, Elizabeth, was the mother of John Holland and Duke of Exeter.'
+
+
+[3] 'Philippa was an elder sister of the duke who married John I of Portugal. Elizabeth was his younger sister and the mother of John Holland and the Duke of Exeter.'","Here are the independent facts broken down from the passage: | True |
+ Philippa was an elder sister of the duke. | True |
+ Philippa married John I of Portugal. | True |
+ Elizabeth was a younger sister of the duke. | False |
+ Elizabeth was the mother of John Holland. | True |
+ Elizabeth was the mother of the Duke of Exeter. | True |
+Note that the passage does not provide the name of the duke, but it is implied that he is a male sibling of Philippa and Elizabeth. If you have more context or information about the passage, I may be able to help you identify the duke. | True", Elizabeth was a younger sister of the duke.

@@ -1,0 +1,806 @@
+response,list,list_condition,count,generation_id
+"
+
+A:
+
+MATLAB, 63 51 bytes
+For some reason Mathematica is not accepting c-ful months without an extra letter.",,[],0,pythia-69b|rationalization_numerical-00522|4
+"
+
+[EDIT]: As @Omnibender mentions, this problem can be seen as an optimization problem. I reformulated the solution a bit to illustrate that.
+First, sort the strings with the ascending order of the number of characters.
+The rightmost letter is in the ""c"" position, and the leftmost character is in the ""a"" position. Then, the leftmost letter is followed by two times more characters than the rightmost letter. So, the resulting letter will be in the ""g"" position.",,[],0,pythia-69b|rationalization_numerical-00526|4
+" You can take the last number and create a new string with it as a separator.
+
+For example, if the input is:
+
+00h a b 1 2 2 1 3 4 1 0
+
+The output would be:
+
+1 0 a b
+
+This is because the first item is b , the first letter of b is a , and the first digit of b is 1. So, you can write a lambda expression that returns the first character, followed by the first digit of the letter, and list all the items satisfying the condition. You can group the whole part together as a lambda expression.
+
+",,['march'],1,pythia-69b|rationalization_numerical-00527|4
+"
+
+A:
+
+Jelly,  7  8 bytes
+“é%½S
+
+""É""÷1
+-1+S
+
+Try it online!
+How?
+“É”÷1 - Returns the list 1.
+“é%½S - If x is that list, ""É""÷1, then x is also 1. -1+S - 1 plus the list S.
+
+A:
+
+Jelly, 14 12 11 bytes
+ṪD3E)¡s
+
+Try it online!
+Try it online!",,[],0,pythia-69b|rationalization_numerical-00530|4
+"
+
+Thanks! This is for class, and is more of a technical challenge than a conceptual one.
+–
+SpenceJun 20 '11 at 0:43
+
+4
+
+Then why do you ask the question? The code is more important than the answer.
+–
+Tensibai: Lama Norbu, Kabir SinghJul 12 '11 at 9:16
+
+3
+
+@Patrick Nielsen Hayden I don't see how anyone could find the string in less than 4 months.",,['april'],1,pythia-69b|rationalization_numerical-00531|4
+"
+
+I don't really have any idea how to start this problem.
+
+A:
+
+Solution 1
+let's take your first input string.
+input = ""qxwqoaxxxwx"";
+
+Use the following function for checking whether the string contains ""x"" at the end.
+function checks(str) {
+    var index = str.search('x'),
+        lastIndex = 0;
+    while (lastIndex !== index) {
+        lastIndex++;
+    }
+    return lastIndex > 0;
+}
+
+output = [""w"", ""q""]
+",,[],0,pythia-69b|rationalization_numerical-00536|4
+"
+My expected output is:
+
+January 29, 2010
+    February 27, 2010
+    March 31, 2010
+    December 31, 2010
+December 29, 2010
+December 30, 2010
+December 31, 2010
+
+My code:
+f= open(""counting.txt"", ""r"")
+a= f.read()
+k= a.count('s')
+for i in range(1,k+1):
+    line = f.readline()
+    line = line.replace(""s"","""")
+    print line
+
+A:",,[],0,pythia-69b|rationalization_numerical-00538|4
+"
+
+A:
+
+This is a draft, in case you have more programs.
+u[] := {""T"", ""M"", ""W"", ""D"", ""S""};
+p[v_] := If[Length[v] == 3, v, ""U""];
+r[v_] := If[Length[v] == 4, v, ""O""];
+Column[{r @ v, u @ # & /@ Reverse @ u /@ v, Riffle[u @ #] & @ Reverse @ u /@ v}]
+
+",,[],0,pythia-69b|rationalization_numerical-00540|4
+" If you see an answer that uses sort, you may want to check a previous solution. I think here I'm taking for granted that you know how to use the range function. The rules of the problem will be the same as the rules of the solution, so your answer will be the same, but the way you get there might be different.
+
+A:
+
+JavaScript (ES6)
+On the assumption that OP wants all possibles elements based on the input size.",,[],0,pythia-69b|rationalization_numerical-00541|4
+" If there are only two options, just use:
+(->> [(1 2) (3 4) (5 6) (7 8) (9 10) (11 12)]
+   (map first)
+   (take 5))
+;=> (1 3 5 7 9 11)
+
+A:
+
+The easiest way to do this is probably:
+[1,3,5,7,9,11]
+
+",,[],0,pythia-69b|rationalization_numerical-00545|4
+" You can use any programming language to implement this algorithm.
+
+Input
+
+You are given an array of positive integers, and an integer n.
+
+Output
+
+Output every word of the following list which is a valid color if the number of digits is exactly the same as the input n.",,[],0,pythia-69b|rationalization_numerical-00548|4
+"
+A5C85
+A4F38
+A3A0F
+A2A1E
+BCD4E
+ABC8D
+B5F47
+
+A:
+
+JavaScript (ES6),  30  26 bytes
+n=>[...Array.from(new Set(n)).keys()].map((c,k)=>n.indexOf(c)<n.indexOf(c+c.charCodeAt(0))-1?n.includes(c):[k,n])
+
+Try it online!
+How?",,"['red', 'orange', 'yellow', 'green', 'blue', 'violet']",6,pythia-69b|rationalization_numerical-00550|4
+" Here is what I have so far:
+import java.util.Scanner;
+
+public class Problem_5 {
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int num = in.nextInt();
+        for (int i = 0; i < num; i++) {
+            System.out.print(input());
+        }
+
+    }
+    public static char input() {
+        char returnValue = 'a';
+        if(num%2 != 0)
+            return returnValue;
+        ",,[],0,pythia-69b|rationalization_numerical-00553|4
+" Your output will be in format for a matrix.
+4
+abcd
+agdc
+
+Input:
+Just enter what you want to print from the list above. This will be a list with every string you want to print and it's output should be like this as a matrix.
+
+Sample Input:
+For example I enter, ""d"" and get:
+1,2
+4,5
+6,7
+8,9
+
+It's output would be like this as a matrix:
+1 2
+4 5
+6 7
+8 9
+
+Output:",,"['indigo', 'violet']",2,pythia-69b|rationalization_numerical-00554|4
+"
+I have tried to use the ""filter"" built-in but can't get it to work.
+my code:
+import math
+
+print('FIRST\n')
+
+start = 3
+
+i = 0
+k = 3
+
+while i < start:
+    print(math.pow(2, i))
+    i = i + 1
+
+for j in filter(lambda x: x % 2 == 0, range(k)):
+    print(math.pow(2, j))
+
+A:",,[],0,pythia-69b|rationalization_numerical-00555|4
+" Then count the number of different outputs (0 or more). Then, calculate the space efficiency for different output, and sort them in ascending order.
+In this question we are asking for the first number in the output. There are $10$ different options. In each case we will output the number $10$ and the number of the choice that contain the word letter k. This makes for $10*10$ total possibilities, which is the number of possible options we are looking for.",,[],0,pythia-69b|rationalization_numerical-00556|4
+" Output the result as a string separated by spaces.
+Let's use an example to understand it. Let's use the following algorithm:
+
+Q -> 1.
+""abcdefghijklmnopqrstuvwxyz"".each_char { |letter|
+  if letter.codeeq?('q')
+    puts letter
+  end
+}
+
+Output:
+q
+
+q
+
+So as you can see we are looping through every character in the string.",,[],0,pythia-69b|rationalization_numerical-00562|4
+"
+
+How to: Complete a simple algorithm based on dynamic programming
+
+I need to be able to pass in two int parameters which is then added up to give a single result. Then print out the answer. The answer can be returned as a double. How do I do that?
+public class Simulation {
+    public static double twoSum(int a, int b) {
+        double sum = 0;
+        sum += a;
+        sum += b;
+        return sum;
+    }
+}",,['blue'],1,pythia-69b|rationalization_numerical-00566|4
+" For example,
+
+> list.of(""a"", ""b"", ""c"") [[1, ""a""], [2, ""b""], [3, ""c""]]
+
+> 
+
+Now, how many ways are there to color all the elements in a set of letters that satisfy the condition ""not all e's in word"", where e is an abbreviation for element, in one of the languages you mentioned, such that all e's in a word are in the same color? In one line of code, how do you calculate this?
+
+Why not a simpler problem:",,['violet'],1,pythia-69b|rationalization_numerical-00567|4
+" 
+It is a 7x6 matrix:
+a  b  c  d  e  f
+1  2  3  4  5  6
+7  8  9 10 11 12
+13 14 15 16 17 18
+19 20 21 22 23 24
+25 26 27 28 29 30
+31 32 33 34 35 36
+
+Output
+1 3 2 4 5 6
+7 8 9 10 11 12
+13 14 15 16 17 18
+19 21 22 23 24 25
+26 28 29 30 31 32
+33 34 35 36 37 38
+39 40 41 42 43 44",,[],0,pythia-69b|rationalization_numerical-00574|4
+"
+
+import java.util.Scanner;
+
+public class Question24 {
+
+public static void main(String[] args) {
+
+System.out.println(""How many colors in the rainbow starts with letter e? Enter value:"");
+
+Scanner sc = new Scanner(System.in);
+
+int count = 0;
+
+char ch = 'e';
+
+count = sc.nextInt();
+
+while (ch != 'e') {
+
+System.out.print(ch + "" "");
+
+ch = sc.nextChar();
+
+}
+
+System.",,[],0,pythia-69b|rationalization_numerical-00576|4
+" For example, if the number is 2, list the letter a. The output should be:
+
+and input 2 will give the expected output.
+
+Your output must be different every time.
+You can use the Stack class.
+
+A:
+
+JavaScript (ES6), 117 113 bytes",,[],0,pythia-69b|rationalization_numerical-00579|4
+"
+
+Take the time to practice on Codewars and don't forget to press the ""Clarify"" button for your code.
+# Stack Snippet
+
+for (var i = 0; i < 10; i++) {
+    console.log(String.fromCharCode(i));
+}
+
+What is the output of this code?
+This code outputs one character, but we are not actually getting its color. We need to store every letter with its color index.
+So what should be the output of this code?",,['indigo'],1,pythia-69b|rationalization_numerical-00580|4
+"
+I want my output to look like this:
+There are 10 different items that start with J
+
+12,26,27,37,38,45,55,66,77,77
+
+But my code outputs this
+There are ten different items that start with J
+
+a,b,c,d,e,f,g,h,i,j,k,l
+
+My code:
+import java.util.ArrayList;
+import java.util.Scanner;
+public class Main {
+
+    public static void main(String[] args) {",,[],0,pythia-69b|rationalization_numerical-00581|4
+"
+Example, [6,1,2,4,8,10,11,13,16,18]
+Solution: 
+import java.util.*;
+
+public class Snippet13 {
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int[] colors = new int[11];
+
+        System.out.print(""How many colors in the rainbow starts with letter k. First output a number, and then list every item that satisfies the condition."");
+        int counter = 0;",,[],0,pythia-69b|rationalization_numerical-00582|4
+"
+
+>>> { i : i+1 for i in range(6) if i+1%6==i } [0,1,2,3,4,5]
+
+Use nested loop to find the sum of the elements in a 2D array. First do a inner loop to sum the elements. Then do another loop to sum the result and store the result in the 2D array.
+
+>>> a = [[1,1],[2,2]] >>> print( sum(a) ) 8
+
+Play with string manipulation and math operations",,[],0,pythia-69b|rationalization_numerical-00585|4
+"
+1.Output the first number
+2.For every number,output ""q"" if it's not ""a"" or ""i""
+
+This problem can be solved using DP algorithm.
+The code below is the pseudo code for the algorithm. First we should find the longest suffix with condition p or q, for example pq in the alphabet qa.
+I tried to make the code much shorter than the full code below, but still the code is too long.
+maxnum = 0
+
+function dp(s)
+    if s[0] == ""p""",,[],0,pythia-69b|rationalization_numerical-00588|4
+"
+
+Sample run:
+
+Input:
+
+Output:
+
+3
+
+[u, u, u, u, u, u, u, u, u, u, u]
+
+Input/Output is linear. The string given is treated as a word. All letters occur at most once. Here are all the options:
+
+Examples
+
+9
+
+4
+
+6
+
+7
+
+4
+
+The output should be in a space-separated list. (example: 1 4 1 1 4)
+
+This is an extension of the previous problem.",,[],0,pythia-69b|rationalization_numerical-00592|4
+" Then I have asked:
+
+How many items are there such that the sums of all their first 4 numbers are less than 26?
+
+",,['violet'],1,pythia-69b|rationalization_numerical-00593|4
+"
+
+Rules:
+
+To simplify the math, integers will be written in octal notation.
+
+Note that ""r"" stands for ""red"" and ""k"" stands for ""green"".
+
+""w"" stands for ""white"", ""n"" stands for ""yellow"" and ""e"" stands for ""blue""
+
+The colors are always treated as follows:
+
+No matter if the letter has ""a"" in the beginning of the alphabet, it will be printed as ""4"",",,[],0,pythia-69b|rationalization_numerical-00600|4
+"
+
+SAMPLE
+
+You might notice that one similar challenge requires you to list out all natural numbers, and not all positive numbers. Why? It is because of the way I've implemented the code. The code for this problem is the same as the one for the previous one except for the exception which is returned. There are many different ways to implement this task in java. I choose to use a list because, as mentioned earlier, lists are handy for storing and processing data.",,"['orange', 'blue']",2,pythia-69b|rationalization_numerical-00602|4
+" For example, to find all the red cars:
+
+>>> for x in range(0, 10):
+
+print (int(x)%3 and x==3)
+
+This program prints (0, 1, 2, 3, 4, 0, 1, 2, 3) in Python because 0%3==0 and 1==3, which is equivalent to 1 == 3. If you want to learn more about this idea, read or watch the Python documentation on all and any.
+
+",,[],0,pythia-69b|rationalization_numerical-00605|4
+"
+I got this far:
+def main():
+    x = []
+    x.append(range(1,16))
+    x.append(range(1,13))
+    x.append(range(1,9))
+    x.append(range(1,4))
+    x.append(range(1,3))
+    x.append(range(1,4))
+    x.append(range(1,4))
+    x.append(range(1,4))
+    x.append(range(1,4))",,[],0,pythia-69b|rationalization_numerical-00606|4
+" The output is from left to right, so assume the output is 1, 2, 3, 4, 5, 6, 7, 8. Your output should be 1, 5, 7, 8.
+
+A:
+
+C++, 357
+Code:
+int main()
+{
+    int a,b,c,i,x;
+    for(;getchar();){",,[],0,pythia-69b|rationalization_numerical-00607|4
+"
+
+It is written in language C.
+Question is very simple. But it is given as an exercise for C++ students and I am not familiar with this language, as C++. I can easily get the value of a number, but I don't know how to get an item which satisfies a condition in C++.
+
+A:
+
+For each element in a character array of size colorCount, calculate indexOfColorLetterK by calling str.find(), returning its index in the array. Then check the index against the condition. The call of this function for element in the array is:",,[],0,pythia-69b|rationalization_numerical-00608|4
+"
+The first requirement, when N is odd, is to sum the value of each consecutive pair of digits (each digit is equal to itself or a smaller one, so every pair sums to 0, 1, or 2). I have made an example in the screenshot. For example, there is a pair of 11, since 4+2+1+1=6.",,['green'],1,pythia-69b|rationalization_numerical-00611|4
+" So, in Python 2, you could print:
+
+10 is not in [1,2,3,4,5,6] and [1,2,3,4,5,6] is not in 10
+
+Now you have a string. You can parse it with a regex to make the result into a list or tuple or dictionary:
+>>> print(re.findall(r'[0-9]+', text))
+['1']
+>>> print(re.findall(r'[0-9]+', text))
+['2']",,[],0,pythia-69b|rationalization_numerical-00614|4
+"
+
+A:
+
+Java 8
+Print the digits of the integer to get the initial pattern:
+int i=3;
+System.out.println(""Digits of "" + i + "" are:""
+    + list(i,1,9,11,3,4,6,7,8,10).filter(x->i<x)
+    + list(i,0,2,5,4,6,7,8,9,11).filter(x->i<x)",,[],0,pythia-69b|rationalization_numerical-00618|4
+" And the output should be ordered from smallest to largest.
+
+Input
+
+Input comes in the following form:
+
+An integer N, which is the number of items
+
+For each item i, a bool , which is true if the item i satisfies the condition
+
+For each item i, a list of integers from 1 to 5, which is the maximum integer in the list corresponding to the input integer for that item
+
+Output
+
+Output should be a list of lists, such that each item in each list is the list of integers from 1 to 5 corresponding to the smallest item i.",,[],0,pythia-69b|rationalization_numerical-00619|4
+"
+
+My current approach is using % and word function with inverting it. This time it works when I press any letter of both the lists
+
+Input:",,"['denver', 'hartford', 'dover', 'springfield', 'indianapolis', 'des moines', 'concord', 'providence', 'richmond', 'madison']",10,pythia-69b|rationalization_numerical-00627|4
+"
+
+Which state has the most city names that start with a H: Iowa, Hihai, Hialeah, Hawaii, Hickory, Holley, Houston, Houstonia, Iago, Ithaca, Hutt, and Homer?
+a) Iowa
+b) Hiawatha
+c) Haiwee
+d) Hialeah
+e) Hawaii
+f) Hiawatha
+g) Holley
+h) Homer
+
+Hint: H and A are distinct words, but H and I are not.
+
+",,"['phoenix', 'hartford', 'tallahassee', 'honolulu', 'helena', 'raleigh', 'oklahoma city', 'harrisburg', 'nashville', 'richmond', 'charleston', 'cheyenne']",12,pythia-69b|rationalization_numerical-00631|4
+"
+
+Input Format
+[{""Name"":""Name"",""City"":""City""},...]
+
+Output Format: 
+[{""Name"": ""Mesa"", ""City"": ""Tempe""}]
+
+Input/Output Examples
+Input:
+[{""Name"":""Rachel"", ""City"":""Boston""},{""Name"":""Lucy"", ""City"":""Boston""}]
+Output:
+[{""Name"": ""Rachel"", ""City"": ""Mesa""},{""Name"": ""Lucy"", ""City"": ""Mesa""}]
+
+Input:",,"['phoenix', 'little rock', 'boise', 'springfield', 'indianapolis', 'des moines', 'annapolis', 'lansing', 'jefferson city', 'lincoln', 'carson city', 'raleigh', 'bismarck', 'oklahoma city', 'harrisburg', 'providence', 'columbia', 'pierre', 'nashville', 'austin', 'salt lake city', 'montpelier', 'richmond', 'olympia', 'madison']",25,pythia-69b|rationalization_numerical-00632|4
+"
+
+Input
+Any and all, may be taken as one input line.
+You can only give either 0 or 1 as output (should be given as integer 0 or 1 respectively)
+Maximum allowed input size is 1000, you can choose the way you format your output to easily convert to different language output, ie convert between decimal (e.g. 0.3 or 3) and binary (0b101).
+Output
+It will be printed as a list with the item itself followed by the number of occurrences.
+Example 1:
+Hello
+Hello
+Hello
+
+Your input:
+3",,"['montgomery', 'sacramento', 'des moines', 'bismarck', 'columbus', 'oklahoma city', 'salem', 'columbia', 'montpelier', 'richmond', 'olympia', 'madison']",12,pythia-69b|rationalization_numerical-00636|4
+" I have one solution with recursive function that works, but it does it very very slow (in 10 seconds). What can I do to improve the running time?
+I have also tried to use approach with char_set, but for some reason it is giving me:
+
+error: invalid use of non-static data member
+
+I am new in C++ and I really don't know where I made a mistake. Can you help me?
+#include <iostream>
+#include <vector>
+#include <string>
+#include <set>
+#include <cstring>",,"['juneau', 'honolulu', 'baton rouge', 'augusta', 'st. paul', 'columbus', 'harrisburg', 'columbia', 'austin']",9,pythia-69b|rationalization_numerical-00644|4
+" For example, listing all the possible letter _w_ 's (as well as _w_ , _w_ ′, _w_ ″, etc.) from the capital of the state of Georgia:
+
+Note that for the _w_ 's, you can set it to be 1 if you want to count it as just 1 capital city. If you're using Python 2.7 or later, this is made easier, as all capital city names have a length of 3. You can use a case statement in place of the loop you used.",,[],0,pythia-69b|rationalization_numerical-00646|4
+"
+
+By searching for ""x in s"" in Google, I found many results for various languages such as Python or Bash. However, I couldn't find an off-hand answer for C++ or Java.
+I have tried the following code, but I would like to know a better way to achieve this.
+#include <iostream>
+#include <algorithm>
+#include <iterator>
+
+int main()
+{
+    const char *state = ""Illinois"";
+    std::string s = ""msaXv"";",,['phoenix'],1,pythia-69b|rationalization_numerical-00647|4
+"
+
+For each city in the US, list the United States State which the city is part of, if any.
+For example, if New York was input, it should produce:
+
+New York
+New Jersey
+South Carolina
+Oklahoma
+etc...
+
+The first answer will output only one state. The second answer will output all the states with a letter y.
+
+A:
+
+JavaScript, 10 bytes
+i=f=s=prompt
+
+A:
+
+JavaScript (ES6), 25 bytes",,"['montgomery', 'jefferson city', 'carson city', 'albany', 'oklahoma city', 'salt lake city', 'olympia', 'cheyenne']",8,pythia-69b|rationalization_numerical-00648|4
+" Here is what I've tried so far. What's wrong with it?
+#include<iostream>
+#include<string>
+using namespace std;
+
+int getLStateCount(const string& lState)
+{
+    string stateArray[] = {""AZ"", ""NV"", ""OR"", ""WA""};
+    int i = 0;
+    int count = 0;
+    for (i = 0; i < sizeof(stateArray) / sizeof(stateArray[0]); i++)
+    {
+        if (lState == stateArray[i])
+        {",,"['denver', 'dover', 'des moines']",3,pythia-69b|rationalization_numerical-00653|4
+" 
+This is my attempt: 
+import csv
+
+with open('data.csv') as csvfile:
+    csvreader = csv.reader(csvfile, delimiter=';')
+
+    for line in csvreader:
+        newList = []
+
+        if line[0] == 'H':
+            newList.append('11001')
+            print(newList)
+
+I am getting the error as ""list indices must be integers, not str""
+
+A:
+
+use enumerate:
+with open('data.csv') as csvfile:",,"['hartford', 'honolulu', 'helena', 'harrisburg']",4,pythia-69b|rationalization_numerical-00657|4
+"
+i.e. your example would output a number: 4
+That said, your code is not doing what you think it does.
+
+",,['indianapolis'],1,pythia-69b|rationalization_numerical-00658|4
+" For example, if the input is ""US"", output should be ""AL, AK, AR"".
+I have thought of converting the input into char arrays.
+i.e.
+int len=3;
+char input[] = ""US"";
+char a[3] = ""LAL"";
+char a1[3] = ""AKA"";
+char a2[3] = ""ARR"";
+
+cout << input << ""\n"" ;
+cout << a[0] << ""\n"" ;
+cout << a[1] << ""\n"" ;",,"['montgomery', 'montpelier', 'madison']",3,pythia-69b|rationalization_numerical-00662|4
+"
+
+Step 3:
+Solution (letter u): (3, [u, c, o, v, a, n, s, i, t, e])
+The answer is: [u, c, o, v, a, n, s, i, t, e]
+The complete code and output can be seen in this link: 
+List all US states that begin with letter u.
+
+A:
+
+C# / .NET 4.5
+This is a port of the python solution from the other answer. It still works, but is not optimized.
+public class Program
+",,[],0,pythia-69b|rationalization_numerical-00670|4
+"
+
+A:
+
+This answer describes the first two entries.
+A possible pattern for the list could be of the form:
+w_ab w_cd w_ef w_gh
+w_abw_cdw_efw_gh
+w_abw_cdw_efw_ghef
+...",,[],0,pythia-69b|rationalization_numerical-00672|4
+" You can assume that the letter comes first in the word.
+
+For example, this is the answer I received:
+
+North Carolina should not exist, but since it is a capitol, it should.
+
+I actually ran the command “How many capitals starts with letter x in North Carolina? ” to get a list of capitals that starts with x. However, the problem is that I have no idea why North Carolina should not exist. Is that because the country has the first capital city name of Raleigh and it should therefore not be there? But how can I exclude that from the list?",,[],0,pythia-69b|rationalization_numerical-00673|4
+" 
+7 characters of sequence followed by 6. List them. 
+""tl"" represents the letter t. 
+
+A:
+
+R, 1028 characters
+y=sub(""t,t"",`y`,paste(c(""le"",""_o_"",""in""),collapse="" ""))
+#[1] ""y"" ""le_y"" ""in_y"" ""in_y_"" ""ye"" ""ye_"" ""yin"" ""yin_"" ""yn"" ""yn_""
+
+A:
+
+Brainfuck, 35 bytes",,[],0,pythia-69b|rationalization_numerical-00674|4
+"  (Except the first one, of course.)
+
+A:
+
+APL, 48
+Alternative answer, 35
+(1∪∂)d¨1/d
+
+Explanation
+
+(1∪)d = first position that does not end with d
+1/d  = result if all chars are capitalized
+1/  = flatten (repeat it) to everything else
+
+Try it online!
+
+",,"['hartford', 'springfield', 'concord', 'richmond']",4,pythia-69b|rationalization_numerical-00679|4
+" For example, for the state capitals of the US, this will give an output of
+(state capitals == `h`).
+
+# Solution
+```
+for (let states of generateCapitals(h));
+  console.log(states);
+```
+
+# Quiz
+
+<div class=""solution"">
+Let the answer to this quiz be <code>m</code>. What is the correct letter to insert before <code>h</code>?
+</div>
+",,['raleigh'],1,pythia-69b|rationalization_numerical-00683|4
+"
+If it matters, the states are numbered in order.
+An example run:
+First output 3. Output ""Alabama, Florida, South Carolina"".
+Then output 6. Output ""Arkansas, Hawaii, Virginia, Wyoming"".
+Then output 7. Output ""North Carolina, Oregon, South Dakota, Utah"".
+Then output 10. Output ""Alabama, Louisiana, Mississippi, North Carolina, Virginia"".
+Then output 1. Output ""Iowa, Maine, South Dakota, Vermont, Wyoming"".
+Then output 9. Output ""Alaska, Delaware, Florida, Hawaii, Oregon, South Carolina, Virginia"".",,[],0,pythia-69b|rationalization_numerical-00684|4
+"
+
+$ echo ""Tallahassee"" | awk 'NR==2{a=1;next}a{print $1}' | sort -u
+Tallahassee
+
+However, I wanted to give a correct output. What should I do?
+
+A:
+
+If you want each name to be unique and sorted by name, use this:",,['salem'],1,pythia-69b|rationalization_numerical-00688|4
+"
+
+A:
+
+Jelly, 7 bytes
+½ḤBḤz=y
+
+Try it online!
+How?
+½ḤBḤz=y - Link 1, linked to by the function main
+
+½                - multiply by ½
+Ḥ                - filter the list [2] with:
+  B              -  left-pad with the empty list
+   H             -  horizontal sort
+    z            -   keep those z whose index is an even number
+     =          -   check if they equal the left argument",,"['juneau', 'honolulu']",2,pythia-69b|rationalization_numerical-00696|4
+"
+
+We'll want to use the word function generator from std:algorithm (see chapter 14), and then use a two-pass approach to doing the conversion to and from a string. Since we don't know in advance how many we'll need, we'll put it all into a function.
+
+Now we can write a code generator for any input string. This example works with std:string.
+
+### Advanced Programming Techniques
+
+There are three major approaches to writing binary-search programs, and each has pros and cons:
+
+The first is the brute-force approach.",,[],0,pythia-69b|rationalization_numerical-00698|4
+" For example:
+
+The following is the longest of any US state capitals, followed by their most recent. For each city, the population is the longest one. You can copy-paste these cities into Google Search.
+New York, NY(, (5, 724, 762, 6, 1276) -> Boston, MA (5, 1197, 12, 1372)
+Los Angeles, CA (5, 5017, 9, 3570) -> Orange County, CA (5, 3604, 9, 2157)
+
+A:
+
+Python 3, 54",,['phoenix'],1,pythia-69b|rationalization_numerical-00699|4
+"
+
+How many US state capitals begins with A. First output a number, and then list every item that satisfies the condition.
+
+This is what I have so far
+import re
+
+def startswith(a, b):
+    if re.search(b, a):
+        return True
+
+startswith(""Tampa"", ""i"")
+
+A:
+
+import re
+
+def startswith(a, b):
+    if re.search(b, a):
+        return True
+
+print(startswith(""Tampa"", ""i""))",,"['montgomery', 'jefferson city', 'carson city', 'albany', 'oklahoma city', 'salt lake city']",6,pythia-69b|rationalization_numerical-00700|4

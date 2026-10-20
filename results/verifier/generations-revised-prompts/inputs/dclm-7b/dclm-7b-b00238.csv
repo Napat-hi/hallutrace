@@ -1,0 +1,667 @@
+prompt,response
+,"
+
+
+In the following question, one of the given options will be incorrect. Select the option that is incorrect.
+
+In an isothermal process (one in which temperature remains constant) for an ideal gas, the work done by the gas is:
+
+
+In an isothermal process, temperature remains constant. An ideal gas expands against a constant pressure of 1.25 bar in a volume change of 0.12 m3 at a temperature of 200°C. What is the work done by the gas in joules?
+
+
+Given below are statements P, Q, and R:"
+,"
+
+# The second problem was designed to capture the basic problem of the task. This is shown in the following example (which is taken from the dataset, so the sentence could be seen by the system at test time):
+
+Given the following input text: 'Rolling stock munich u bahn uses three different generations of electric multiple unit trains.' Output the following text as a response: 'The rolling stock of the Munich U-Bahn consists of three different generations of electric multiple unit trains'."
+,"
+The text to be simplified is: 'in thile teamed up with mandolinist mike marshall for the duet album into the cauldron which included original pieces as well as pieces by charlie parker and j. s. bach.'
+[A simple approach would be to remove punctuation and to break at spaces."
+,"
+
+2. Find the shortest distance between two words. For example, 'the' and'man' are two words in this passage: 'the man walked'. Your system should find the shortest distance between the two words and return the corresponding distance, in words, as the answer.
+
+3. Count the number of words in the sentence. For example, there are 12 words in this sentence: 'the man walked'. Your system should count the number of words in the sentence and return it as the answer.
+
+4. Count the number of nouns in the sentence."
+,"
+
+Question 6
+
+Simplify the following text to improve its readability, ensuring its core meaning remains intact: 'but it is not the intention of the treaty of amiens to prevent the french, nor of the english to prevent the french, from forming any amicable arrangements with the baltic powers.' Provide only the simplified text as the response.
+
+Question 7"
+," Do not perform further simplifications on the simplified text.
+
+
+The above is not a valid task. The following task is valid: The above is not a valid task. The following task is valid:
+
+  • The response must be in English.
+  • The simplified text must not have more than 25% of its original length.
+  • The simplified text must have less than 25% of the number of characters of the original text.
+  • The simplified text must not contain any line breaks or tabs.
+  • The simplified text must not contain any of the following characters:
+   !"
+," For example, a possible correct response for this question might be 'crabs are short-tailed crustaceans.'
+
+• Q2.5.10
+
+The given text is about ‘the concept of the self’. The following are two statements:
+
+1. ‘I is the subject of a sentence.’
+2. ‘I is a pronoun.’
+
+Which of the above statements are part of ‘the concept of the self’ as described in the text? Select only those statements which describe the given concept.
+
+• Q2.5.11
+
+The given text contains some errors."
+,"
+
+## 👏
+
+The task was taken from this source.
+
+• This is a text simplification task. You are provided with a source text as a string, and you should simplify it to make it easier to read without altering the core meaning.
+
+## 🚀
+
+The dataset contains a total of 1,200 instances.
+
+## 📝
+
+This task is part of the GLUEDataset, and can be loaded using:
+
+from transformers import glue_dataset
+
+glue_dataset = glue_dataset(split)"
+,"
+
+Hint: It may be necessary to remove some words to make the text easier to read.
+
+Example 1: 'gparted and kde partition manager are graphical programs using the parted libraries.' -> 'gparted and kde partition manager are graphical programs.'
+
+Hint 2: Words are separated by at least one space.
+
+Hint 3: A word consists of characters from a-z, A-Z, and 0-9.
+
+Hint 4: Words do not end in hyphens.
+
+Hint 5: Words do not contain dots or colons."
+,"
+
+#### Dataset Creation
+
+Crowd workers were recruited on Amazon Mechanical Turk (AMT) and were asked to simplify the provided text using the following instructions:
+
+I need you to simplify the following passage. You are only allowed to use one word at a time. Please read the passage below and write a new passage which conveys the same message but without repeating any word. You may write one or two sentences.
+
+We ask workers to write a new sentence/s, which should convey the same meaning of the original text but without any repeated words.
+
+#### Source Data"
+,"
+
+The output should look like this:
+
+<tr>  <td>
+<p>The trilobite's body is divided into three lobes and the creature has a head and a tail.
+
+There are three trilobites: <trilobite>
+    <head>the head</head>
+    <body>the body</body>
+
+Note: If you are unfamiliar with HTML, you can find documentation here: HTML.
+
+The trilobites can also have attributes:"
+,"
+    \item  Simplify the following text to improve its readability, ensuring its core meaning remains intact: 'bakhshali today in march there were attacks made on music shops in bakhshali.'  Remove all words that are not English, punctuation, and capitalization.
+\end{enumerate}
+
+The third scenario is an important aspect of the readability of a document, as it involves removing words not in the English language. As shown in Figure \ref{fig:wordcloud}, a document can contain a large amount of non-English words."
+,"
+
+The key principle of wisdom literature is that while techniques of traditional story telling are used, books also presume to offer insight and wisdom about nature and reality.
+
+
+Answer the following question.
+
+  1. Why do you think this text is difficult to read? Use your own words to explain your answer. You may include quotations from the text in your answer, but you must write a minimum of 30 words of your own."
+,"
+
+\textbf{Testcase 2:} Simplify the following text to improve its readability, ensuring its core meaning remains intact: 'thallium lrb i rrb sulfate lrb tl so rrb archaically known as thallous sulfate is the sulfate salt of thallium.' Provide only the simplified text as the response."
+,"
+
+## Output
+
+Example one
+The following text was passed to the simplification algorithm:
+
+'attock lrb urdu rrb rrb formerly campbellpur rrb is a city located in the northern border of the punjab province of pakistan and the headquarters of attock district.'
+
+This is the resulting text after simplification:
+
+'attock lrb urdu rrb is a city located in the northern border of the punjab province of pakistan and the headquarters of attock district.'
+
+## Example two"
+," Do not include the prompt string or any trailing newline in your response. Example input: Example output: 'Mario Basler is a German footballer and current manager of Wacker Burghausen. He was born on December 7, 1979 in Neustadt an der Weinstrasse. Basler played for the German U-20 team in 1999.'  Note: The input contains only ASCII characters, including white space and punctuation. ### Note The output may be any reasonable simplification of the input, so long as it remains grammatically correct and intelligible."
+,"
+
+Note: Your response to each request should be no longer than the length of the input text.
+
+The output of the system should be the simplified text with no more characters than the input text.
+
+It is bordered by germany to the southwest, west and northwest. it is bordered by poland to the north, east and south. the czech historical region of moravia is bordered by austria and germany to the north east. austria and poland are also neighbours.
+
+Example 2:"
+,"
+
+Note: please ensure that your solution uses a pre-trained NLP model or is capable of learning without labeled data.
+
+Hint: please do not use Google Translate or other automatic translation services.
+
+## Data Format¶
+
+The file data.csv contains three columns:
+
+• source: the original text.
+
+• target: the reference text.
+
+• lang: the language of the original text.
+
+The original text has many misspelled words, e.g. dia is actually DIA.
+
+In [1]:
+import csv
+import numpy as np
+"
+,"
+
+Hint 1: media are singular. media is plural.
+
+Hint 2: what is the plural of media? mediae? medias? mediai?
+
+Hint 3: what do we do when we meet a compound noun? is 'namoi valley independent newspaper' one noun, or two? if it is one, how do we make a plural? if it is two, how do we make the first word plural?
+
+Hint 4: radio is singular. radi are plural. is 'radio stations mo and ggg' one noun, or two?"
+,"
+
+The answer to this particular challenge is:
+
+""Cassidy divorced her first husband to marry comic actor Marty Ingels in November.""
+
+This problem statement can be expressed using a few lines of code. Let's look at one way to formulate this in Python.
+
+Note: In Python, we do not need to create a main method to test our code. This is handled by the interpreter directly.
+
+1
+2
+3
+4
+5
+6
+7
+import nltk
+
+text = nltk.Text(raw_text)"
+,"
+
+(b) A movie studio wants to be the first to release a motion picture that contains both live action and CGI without mixing in the live action footage, but it has difficulty achieving this goal. Generate a solution in the form of a text that describes the required changes to a traditional film production process to achieve this goal."
+,"
+
+Q7) For each of the following five short sentences (with no more than 12 words) indicate whether it describes a chemical property or a physical property of a substance.
+
+Q8) For the following sentence: 'Chemistry is a branch of physical science that studies the composition, structure, and properties of matter and the changes it undergoes.'
+
+Add appropriate tags to the sentence (such as noun, verb, chemical name, etc.) to improve the semantic markup.
+
+Q9) For the following sentence 'A chemical substance is a kind of matter with a definite composition and set of properties.'"
+,"
+
+•  There are several approaches to this task. One approach is to find all of the words in the text and simplify each one. The resulting words may need to be merged back into words.
+
+•  In our approach, we will use a library we have created, called text-simplification, available at http://code.activestate.com/recipes/268569-text-simplification/. It has the following three procedures:
+
+•  SimplifyWord returns the simplified form of a word, such as ‘max’ → ‘maximal’."
+," ## Expert Answer ## Answer and Explanation: Unformatted text preview: EXPERIMENTAL TEXT SIMPLIFICATION Task Description Simplify the following text to improve its readability, ensuring its core meaning remains intact: 'ndash jonas savimbi angolan political leader lrb d. rrb' Provide only the simplified text as the response.... View Full Document ## Ask a homework question - tutors are online"
+,"
+
+Question 4
+
+Given the following set of terms:
+
+{'lobbyist' 'politician' 'government' 'congressman''senator'}
+
+Find a response that matches the following natural language query: 'find a senator that is also a lobbyist'. Provide only the response as the response.
+
+Question 5
+
+Given the following set of terms:
+
+{'lobbyist' 'politician' 'government' 'congressman''senator'}"
+,"
+
+The input sentence could be simplified to 'his performances of bach, beethoven, mozart, haydn, schumann, wagner and orff are notable'. The system should be able to identify the core meaning of the input and preserve it in the output text, e.g. 'he played lots of classical music and was very good at it'. The input could be long and possibly grammatically complex but it should be able to be reduced to just a few core sentences.
+
+Note that this is a harder task than the one I asked about a few days ago."
+,"
+
+A: in cordes received its charter to become a bastide lrb fortified town rrb from the count of toulouse.
+
+Q11: Text simplification requires a system to identify the most suitable text transformation for a source text in order to make it simpler. Identify the suitable transformation for the source text below:
+
+a) In the 19th century the British Navy was a powerful force.
+
+b) In the 19th century, the British Navy was a powerful force.
+
+The suitable transformation is:"
+," If there are multiple responses, provide only the one with the highest lexical similarity to the original text.
+
+\hypertarget{question-4.3}{%
+\subsubsection{Question 4.3}\label{question-4.3}}
+
+The following text contains several typos. Provide a fixed version of this text that removes the typos. If there are multiple responses, provide only the one with the highest lexical similarity to the original text.
+
+\begin{quote}
+I met a girl the other day. She was lovely. I really liked her. Her name was Alice."
+,"
+
+
+
+A REST API with an endpoint for this challenge: https://tunacoder.com/challenges/coffee/api-endpoint.
+
+Sample JSON response:
+
+    ""id"": ""947"",
+    ""text"": ""costa coffee is a coffee house company based in the united kingdom founded by italian brothers sergio and bruno costa as a wholesale operation supplying roasted coffee to caterers and specialist italian coffee shops. the company has grown to operate around 2,600 cafes worldwide, the largest being in the uk."
+," You may not use the provided text in your solution. For example: calvados is a commune in the basse normandie region in northern france.
+
+I am going to solve this problem in 4 stages:
+
+1. Identify the core meaning of the given text.
+2. Simplify the text while preserving the core meaning.
+3. Identify the words that are redundant and remove them.
+4. Identify the words that are unnecessary and remove them.
+
+# 1. Identify the core meaning of the given text."
+,"
+\textbf{Example:} ""Speaker Pelosi""
+
+\noindent \textbf{Task 2:} \textbf{Simplify a sentence.} Simplify the following text to improve its readability, ensuring its core meaning remains intact: ""the us federal trade commission (ftc) filed suit against a company named for a greek mythological creature that is found near fresh water, with the legal action claiming that the business had violated us federal law regarding online privacy by misappropriating personal data from children under the age of thirteen."""
+,"
+
+
+To test the system's ability to perform the required task.
+
+
+The input is a string containing the unsimplified text.
+
+
+The output is the simplified text.
+
+
+The output must be a string of no more than 100 characters.
+
+Note that the length of the output may not exceed 100 characters.
+
+Sample Input
+
+
+Sample Output
+
+gordon david strachan obe born february in edinburgh rrb is a scottish football manager and former player"
+," Do not include the response options provided.
+
+[ ] This is a question about a single text
+
+Task: Summarization (1.1.2.a)
+
+Input: A text.
+
+Output: Summarize the text using as much or as little as is needed to convey the information in the text in the format provided.
+
+
+Input: Provide the text to summarize.
+
+Output: Provide a summary of the text.
+
+Task: Sentiment Analysis (1.1.2.b)
+
+Input: A text."
+,"
+    :param text: text of a question
+    :return: the answer
+    """"""
+
+    def expand_answers(text: str, answers: list) -> list:
+        """"""
+        Convert a string to list
+        :param text: text of the question
+        :param answers: a list of possible answers
+        :return: a list of expanded string in a list
+        """"""
+
+        if isinstance(answers, list):
+            return [x.lower() for x in answers]
+        return [answers.lower()]
+
+    text = text.lower()
+
+"
+,"
+""""""
+
+import time
+import os
+import argparse
+import numpy as np
+import sys
+import torch
+import torch.nn.functional as F
+import utils.data_util as data_util
+from model import Transformer
+from utils.config import Config
+from torch.nn.utils.rnn import pack_padded_sequence, pad_packed_sequence
+from torch.utils.data import DataLoader
+from torch.optim import Adam, SGD
+from torch.optim.lr_scheduler import MultiStepLR, ExponentialLR"
+,"
+
+
+The response should be:
+
+u.s. congress abrogates use of gold standard
+
+
+Example Question
+
+Convert the following to a Boolean expression:
+
+
+The correct response is:
+
+
+Additional Feedback
+
+The conversion to a Boolean expression involves the use of AND, OR and NOT.
+
+AND requires two variables to be TRUE in order for the whole expression to be TRUE.
+
+OR only requires one of the variables to be TRUE in order for the whole expression to be TRUE.
+
+NOT flips the result from a variable."
+,"
+
+Input: 
+'The movie is a light parody which plays on the clichés of typical horror films.'
+
+Output: 
+'The movie is a light parody which parodies the clichés of typical horror films.'
+"""""".format(n_gram_size))
+    exit(0)
+
+# ========== 
+# Preprocessing
+# ==========
+
+max_length = 0
+
+for file in os.listdir(DATA_PATH):
+    if file.endswith("".txt""):"
+,"
+
+\input{data/task3-q5-response}
+\input{data/task3-q6-response}
+\input{data/task3-q7-response}
+\input{data/task3-q8-response}
+\input{data/task3-q9-response}
+\input{data/task3-q10-response}
+\input{data/task3-q11-response}
+\input{data/task3-q12-response}
+\input{data/task3-q13-response}
+"
+," You may assume that the string only contains lowercase letters space(s) and punctuation marks, and that the string length is no more than 128 characters.
+
+### Hint
+
+The first step to solving this task is to parse the original string, and store relevant information in the map. You will have to understand how to read, modify and store values in a map. The second step is to construct the simplified text from the stored information, using some sort of iteration. You will have to understand how to loop through a map. Finally, you have to print the simplified text to the standard output."
+," You should write between 15 and 25 words.
+
+The division iii advanced project requires students to complete an in-depth project in their field of choice, which is generally related to the division ii field.
+
+
+You have received a letter from your university administrator.
+
+In the letter, the administrator explains the arrangements for students who are leaving the university.
+
+Write a letter of about 100 words. In your letter,
+
+  • describe the circumstances that have led to your departure
+  • inform the administrator of your future plans.
+
+You should write at least 150 words.
+
+Dear Mr. Johnson,
+
+"
+,"
+\begin{Verbatim}[samepage=true,commandchars=\\\{\}]
+Answer: 'the municipality is located in the locarno district sonogno is the last village on the paved road through the valley verzasca.'
+\end{Verbatim}
+\end{task}
+
+\begin{task}
+Input the following text to be translated into Japanese: 'the president is a citizen of the united states.' Provide only the translated text as the response.
+\begin{Verbatim}[samepage=true,commandchars=\\\{\}]"
+," (15 marks)
+
+Hint: use the 'Simplification' layer in Google Translate to simplify the text
+
+Sample Answer
+
+He supervised the construction of Hwaseong Fortress in Suwon in the early years.
+
+[영어 명사 부] 요법조사 어미 (또는 부어) 넣기 [연산]"
+,"
+""""""
+
+import math
+import pandas as pd
+import numpy as np
+import nltk
+import string
+
+import torch
+import torch.nn as nn
+import torch.nn.functional as F
+from torch.autograd import Variable
+import torch.optim as optim
+import torch.optim.lr_scheduler as lr_scheduler
+
+import matplotlib.pyplot as plt
+import matplotlib
+
+import re
+from nltk.stem.wordnet import WordNetLemmatizer
+from nltk.corpus import stopwords"
+,"
+
+The Memorial Wall is a large stone wall located in Washington, D.C. and is part of the Vietnam Veterans Memorial. The wall lists the names of all Americans who have been killed in action during the Vietnam War (1954–1975), along with the names of those who died in the war (1968–1973) as a result of wounds, disease or other causes.
+
+Memorial Wall:
+
+The Vietnam Veterans Memorial was designed by Maya Lin, a landscape architect from Yale University."
+,"
+• [simple_sum] The sum of two numbers is 17. The difference of the two numbers is 3. What are the two numbers?
+• [simple_sum_2] The sum of two numbers is 22. The difference of the two numbers is 9. What are the two numbers?
+• [simple_sum_3] The sum of two numbers is 40. The difference of the two numbers is 2. What are the two numbers?
+• [simple_sum_4] The sum of two numbers is 54. The difference of the two numbers is 21. What are the two numbers?"
+,"
+
+
+\end{enumerate}
+
+\subsection{The Challenge}
+
+In this task, the model has to extract information from unstructured text and convert it to a structured form.
+\texttt{Q1} asks the model to convert a set of sentences into a tabular form. 
+\texttt{Q2} requires to extract the information from a document, answer the question and give an explanation for the answer.
+\texttt{Q3} requires the model to extract and arrange the sentence with necessary modifications to be used as a coherent response."
+,"
+
+### Dataset 2
+
+Dataset 2 contains one image file and two question files. The image file contains a single line of text.
+
+In each question file, one question is provided as a string. The two question files use different question strings. Each question string consists of four sections separated by the character ':' and is of the following form:
+
+• Section 1: 'Which image text contains (?):'
+• Section 2: A string of characters matching the regular expression [a-zA-Z0-9]
+• Section 3: 'Text'"
+," \n\n',
+                            'What is the main purpose of the passage? \n\n',
+                            'The passage is most likely from which discipline? \n\n',
+                            'What is the main idea of the passage?',
+                            'What is the author's primary purpose in writing the passage? \n\n',
+                            'What is the best title for the passage? \n\n',
+                            'What is the purpose of the first sentence? \n\n',
+                            'Which sentence best describes the city?"
+,"
+
+
+\textbf{Instructions}
+
+The test set of DAE consists of 7,631 input-output pairs. The inputs consist of up to 20 lines of text. Each input is a separate natural language question. The output for each input is the simplified text version of the corresponding input.
+
+The DAE task provides the following test data for evaluation:
+
+\begin{itemize}
+\itemsep0em 
+\item \textbf{Reference:} A reference file consisting of 7,631 reference outputs."
+,"
+""""""
+
+import pickle
+import logging
+import json
+from datetime import datetime
+from concurrent.futures import ProcessPoolExecutor
+import os
+import sys
+import copy
+import re
+
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+
+from textstat.textstat import *
+from sklearn.feature_extraction.text import CountVectorizer
+
+import torch
+from torch.utils.data import DataLoader, Dataset, RandomSampler
+from torch.utils.data.distributed import DistributedSampler
+from torch.utils."
+,"
+
+1. other items have washed down gullies and still others lie beneath the waters offshore
+
+2. other items have washed down gullies and others lie under the water offshore
+
+3. other items have been washed down gullies and some of these lie under water offshore
+
+4. some items have washed down gullies and some lie under the waters offshore
+
+5. some other items have washed down gullies and still others lie beneath the waters offshore
+
+1 vote
+
+2 votes
+1 answer
+
++1 vote
+1 answer
+
++1 vote
+1 answer
+"
+," For example, 'by eating fruit, adam and eve tried to be god'.
+
+[P] 1. the dog
+2. the doggie
+3. doggie
+4. the doggie
+
+The correct answer is either 3 or 4, depending on your interpretation of'simplify'.
+
+[P] 1. the dog
+2. dog
+3. doggie
+4. doggie
+5. doggy
+6. the dog
+
+The correct answer is 2, 5, or 6, depending on your interpretation of'simplify'.
+
+[P] 1. the dog"
+," 
+
+\item \textbf{Input: } Write a caption for the image below, which includes the following description: ‘this is a picture of the great wall of china, a large, stone wall in china, and it’s very impressive and really long.’ The input sentence does not include any punctuation.
+
+\item \textbf{Input: } \textbf{Write a caption for the image below.} ‘this is a picture of the great wall of china, a large stone wall in china, and it’s very impressive and really long.’ The input sentence does not include any punctuation."
+,"
+
+The above two examples are very easy and require no external knowledge. For the last two examples, we used the following text:
+
+The text in the first two examples above was written by Oscar Wilde and the one in the last two was written by the anonymous author of the Book of Mormon.
+
+For the first example, we want to extract all the lines of text from the Book of Mormon, and in the last one, we want to extract the lines from Oscar Wilde.
+
+One more example, which was provided to us, is the following sentence:"
+," This can be achieved by deleting non-meaningful or redundant words.
+
+• In a given sentence, some words are considered as'meaningful' and others are'meaningless' or'redundant' or 'noise'.
+
+• A word's meaningfulness is determined by looking at its surrounding words.
+
+• Meaningful words are used to form the response.
+
+• The text is transformed into a feature vector representation which is given to the ML model.
+
+### The Solution¶
+
+• Define the data.
+
+• Define the class.
+
+• Implement the class method.
+"
+,"  [input:'mclean was born in west palm beach florida to his mother denise fernandez and father bob mclean.', output:'mclean born west palm beach florida mother denise fernandez father bob mclean']''')
+def text_simplification(self, x):
+return re.sub(""[ ]+"", "" "", x)
+
+test_case('Text simplification', text_simplification, ['Text simplification', '', 'The test case'] == 'The test case', 0, 1, 10)"
+,"
+    \item Simplify the following text to improve its readability, ensuring its core meaning remains intact: 'fossils of an extinct species of bird similar to today's emus have been found in south america adding further support to the theory that the common ancestor of today's land birds evolved there and then migrated northward'. Provide only the simplified text as the response.
+\end{enumerate}
+
+The output text generated by the models is presented in Table \ref{tab:example_outputs}.
+
+\begin{table}[h!]
+\centering"
+,"
+
+How should I store the simplified response? Store it as a short text string in the database.
+
+This is how you would do it in Python using Django with NLTK installed:
+
+from django.core.urlresolvers import reverse
+from nltk.tokenize import word_tokenize
+
+from models import Sentence, Text
+from utils import url_for
+
+def tokenize_text(text):
+    '''Tokenize text into words, remove non-alphabetic tokens, and remove stopwords."

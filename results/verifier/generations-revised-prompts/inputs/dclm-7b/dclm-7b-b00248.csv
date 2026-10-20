@@ -1,0 +1,525 @@
+prompt,response
+,"
+
+The input data for a task is usually in the form of a text. It is not necessary for the student to read this text or even understand the context of the text. The student is expected to understand the summary.
+
+The student has to answer the question with a piece of text. The question requires the student to paraphrase the given text. It does not require the student to analyze or evaluate the text.
+
+
+There are several ways to collect the data for evaluation. All of them can be classified as a combination of two variables: data format and the source of the data.
+
+Data format
+
+"
+," The following text is only given for reference and should not be included in your answer. As the countdown continues to Floyd Mayweather's mega-fight with Manny Pacquiao in Las Vegas on May 2, The Money Man's daughter Iyanna Mayweather has shared her thoughts about life in training with her champion father. Mayweather vs Pacquiao will generate revenue upwards of $300 million in what is being billed as the most lucrative bout in boxing history and, ahead of the May showdown, Iyanna Mayweather offered some insight into her dad's intense training regime."
+," For example, the summary for the text above could be: 'Mourinho interested in Fulham goalkeeper Marcus Bettinelli.'
+
+### Hint:
+
+You should write the summary as it is described in the requirements. Use a simple sentence structure (preferably in the simple present tense) and short sentences. For example, the summary for the text above could be: 'Mourinho interested in Fulham goalkeeper Marcus Bettinelli.' You can take this as an example.
+
+### Input
+
+A text that is no longer than 50 words.
+
+### Output"
+," 
+\end{comment}
+
+\section{Introduction}
+\label{sec:intro}
+\input{intro.tex}
+
+\section{Related Work}
+\label{sec:related}
+\input{related.tex}
+
+\section{System Overview}
+\label{sec:overview}
+\input{overview.tex}
+
+\section{Proposed Approach}
+\label{sec:system}
+\input{system.tex}
+
+\section{Experiments and Results}
+\label{sec:exp}
+\input{experiments."
+,"
+
+Note the following:
+
+  • If the article is in a foreign language, translate it using Google Translate API or similar
+  • When the text is too long, you might have to summarize it using the techniques below
+  • The article summary should be in English, regardless of the input language
+
+Techniques to Summarize an Article
+
+There are several ways you can summarize a document, paragraph, or even a short article. These include:
+
+  1. Using the Textblob API, which supports several languages
+  2. Using the Amazon Comprehend API
+  3."
+,"
+
+Example Response: 'Manny Pacquiao has promoted a range of t-shirts commemorating his impending bout with Floyd Mayweather in Las Vegas on May 2. The shirts, which are available on a website, feature a picture of him, his name, the venue of the fight, the date of the fight and the names of the fighters. Each t-shirt comes in a black and white design, and each is priced at $29.99 (321) or $24.99 (205). The fight is set to generate a total of $300 million. The fight is Mayweather vs Pacquiao.'
+"
+," The system will mark your response against a number of criteria (described in more detail here) - do not worry if you do not understand all of them.
+
+An example answer might look like this:
+
+'Suarez put the ball through David Luiz's legs because it was the quickest way to get to goal'.
+
+2. Summarisation
+
+
+For each of the following passages, provide a summary of at most 100 characters of the entire passage.
+
+The passage
+
+Provide your answer
+
+  1. Summarisation example 1
+
+  2. Summarisation example 2
+
+  3."
+,"
+
+# Lets get the summary and write it down
+summary = summarize_text(text)
+
+# Lets check what is the summary
+summary
+# ['Everton', 'Everton have joined Newcastle, Crystal Palace and Southampton by expressing interest in Charlie Austin. The QPR striker has 17 goals so far this season and will leave Loftus Road in the summer. The Toffees have made a new striker their priority for the summer to bolster the attacking options at Roberto Martinez\'s disposal."
+,"
+
+• The response should be a short summary of the text, including key points.
+• You may choose to use a script or not, your choice.
+
+## Sample Responses
+
+Note: These samples are just examples of valid responses. You are free to use your own script or speak without a script, as long as you're able to speak well and respond accurately to the prompt.
+
+### Sample Response 1 (with script)
+
+It was a training session for a boxer named Amir Khan."
+," In other words, it is important that the model generate a brief version of the original text. The input is a much longer text and the summary must not contain any information that was not mentioned in the input.
+
+## Model details
+
+The code for this model was largely inspired by the work done in the following two Github repositories:
+
+The implementation was modified and extended from the previous codebases to meet the requirements of the task.
+
+# Results
+
+As this project is ongoing, no results are currently available. However, you can track the progress by periodically visiting the project's README."
+," 
+
+'Negotiations are now finalised for the summer showdown, which is to be staged in Oakland, California.' 
+
+Question 4
+
+The following text contains two key terms that are not defined. Identify and explain them: 'A new survey, which included the views of more than 6,000 people, found that, for a number of British women, getting married was seen as 'one of life’s great ambitions'. The research, conducted by YouGov, was commissioned by jewellery brand Whiteflash."
+,"
+
+Question 3
+
+The question is 'What are the main characteristics of the following literary genres: Comedy, Tragedy, Satire, Drama, Lyric Poetry and Epic Poetry?'
+
+Question 4
+
+Select the grammatically correct statement.
+
+Question 5
+
+Which of the following is the correct way to spell the word 'Chorus'?
+
+Question 6
+
+Which of the following is not a word from the following list of words?
+
+Question 7
+
+Which of the following is the correct word to use in the sentence?
+
+Question 8
+
+Select the correctly spelled word."
+," 
+3. Answer the following questions: 
+a. Which celebrity did the women compare themselves to in glossy magazines? 
+b. What did women prefer to use to compare themselves? Why? 
+c. What did the Australian mother receive? Why? 
+d. What did she do with this? 
+4. Discuss the following: 
+a. What effect do magazines and internet have on people's body image and self-esteem? 
+b. Do you think the people in magazines are good examples of what people should look like? 
+c."
+," Do not include any additional information.
+
+(The text on this page has been generated by a computer. If you have any questions, please contact: pressoffice@rwc.org)"
+," The output should look like this: ""For a good couple of years now us rugby watchers have known of the potential of Elliot Daly. Daly is mobbed by his team-mates after scoring a try against Saracens at the Ricoh Arena."" The question is based on the output of the extract of the text given above in the text block."
+," The summary should not include anything from the input except for the quoted text. 
+
+""The most important thing about a summary is that it must be written in your own words."" - Wikipedia
+
+
+Example output:
+
+'Ghetto Burger, a double cheeseburger with bacon, grilled onions, ketchup, mustard and chili, is the most popular burger in America. Ann Price, the creator of the burger, was the owner of Ann's Snack Bar in Atlanta. People often had to wait two hours to get a seat at the counter, but were willing to wait due to the quality of the burger."
+,"
+
+(b) Create a dataset to test the model (or create one already if you've worked through part (a) before)
+
+(c) Use the trained model and dataset you created above to predict what the summary would be of a new paragraph of text. The paragraph should be something like: 'I woke up this morning. I had my usual breakfast and coffee. Then I had a shower and made a sandwich to take to work. When I arrived at work, I went straight to my office to read through some work-related emails and then started working on some tasks that had been put to me."
+," Please be creative and add relevant details to make it interesting.
+
+Solution Summary
+
+This job provides a detailed summary of the given passage, including the addition of creative details to make it more interesting."
+,"
+
+The response has to be in 150 words.
+
+2 Answers | Add Yours
+
+Top Answer
+
+amarang9's profile pic
+
+amarang9 | College Teacher | (Level 2) Educator Emeritus
+
+Posted on
+
+The answer you provide is not the answer to the question you asked. The question was not to summarize the text, but to compose a summary. It is clear what is expected of you in the question. This is not a test, but an exercise to improve your summary writing skills. So, please try to compose a summary. 
+
+Here are some tips."
+," In order to get the task done in a short time, I can't train the network to provide an exact summary of the original text - there's no way a network can be trained on the thousands of summaries I can write in order to produce an exact summary of the original text. Instead, I'll use the 'auto-encode' property of the recurrent networks. This means that the networks' hidden state (its memory) is not only used to output a new summary state, but also to update the hidden state again (for the next timestep)."
+," The above article was taken from and the text was converted using a tool that we have written to convert text to images.
+
+Type: text
+
+Format: XML, JSON, CSV
+
+Database: 10K
+
+License: Free
+
+This resource comes from other websites and we cannot confirm its legitimacy. If you are the copyright owner, please submit a copyright infringement. So we will delet the resources and link to your page."
+,"
+
+I have trained the bot on a specific dataset and used it for testing. I was not happy with the results, the bot did not predict correctly. The summary was not good either. I wanted to try with a different dataset and train the bot once again on the new dataset. But after retraining the bot, the old data is still there with the previous predicted answers, even after deleting the old dataset, removing the files and the data/models folder.
+
+I'm using Keras on top of a tensorflow backend and the models are saved in the models/ folder with the extension.h5."
+,"
+
+We have already shown that our model is capable of summarizing simple documents, so it is interesting to see how it performs on complex and long documents. While the summary may be slightly confusing, it is also understandable, and a human may easily write this in a few minutes, as it only consists of selecting and re-ordering sentences.
+
+## 4.2 Summarization of Scientific Papers
+
+A different, but equally important task is to generate an informative summary of a scientific paper."
+,"
+
+  2. Select the relevant text. The following code should return 'Lionel Messi posted a picture on his Instagram account of his wife having her stomach kissed by their son.'
+
+Example 2
+
+  1. Retrieve the text 'It was a moment for the ages at Melbourne Park.'
+
+  2. Return the text 'The 2016 Australian Open title win was just as sweet for the 28-year-old Djokovic, as his victory last year was sullied by his disqualification in the semi-final against Stanislas Wawrinka."
+," This should not be done by a copy/paste method. 
+6) Generate a summary about a text with the following text: 'The top 10 highest-paying companies in the U.S. paid out almost as much in compensation to employees as they paid in taxes. The average compensation for workers at the highest-paying companies was $19.5 million last year, according to a report by the AFL-CIO. The average pay for employees at the bottom 10 highest-paying companies was $2 million. The top 10 highest-paying companies in the U.S."
+, Do not include any content that is outside of the summary. Note: Do not include a heading or title in your answer.
+," Do not use any of the words or phrases from the original text in the summary.
+
+The summary of the given text will be: 'Dog tags a U.S. soldier lost on a Massachusetts beach 70 years ago have been returned to his son at the same place. Zachariah Fike head of Vermont-based Purple Hearts Reunited, says the military ID belonged to World War II veteran Cpl. William Benn, who lost them in 1939 at a coastal artillery placement on Salisbury Beach. Metal detector enthusiast Bill Ladd found them after a storm last year."
+,"
+
+\textbf{Input}
+
+\textit{A new survey commissioned by the University of the West of England has found that almost one third of students think the Government is failing to properly support them during coronavirus lockdowns.}
+
+\textit{The survey of students at the university found 29 per cent were concerned about getting their financial aid in the current period, with 24 per cent saying they were struggling to pay bills and 12 per cent saying they could not afford to eat healthily.}
+
+\textbf{Target}"
+," You may write your summary in the box below. You may also choose to submit your work directly to the marker. The summary should be approximately 400 words.
+
+Short Answers
+
+Mark the appropriate box.
+
+1) Identify the tense of the verb in the sentence below:
+
+a) She said that she'd be here at 4 o'clock.
+
+b) She said that she would be here at 4 o'clock.
+
+c) She said that she was going to be here at 4 o'clock.
+
+2) Which of the following statements is correct?"
+,"
+
+    I need the summary asap. I have a deadline of 10 am Pacific Standard time tomorrow.
+
+This question has not been answered yet!
+Whatsapp logo"
+," Do not explain or justify your answer. You can write your response on paper. OR, record yourself speaking and submit that file.
+
+You may need to sign up for a free account before you are able to submit your assignment.
+
+
+
+The post T1 Discussions 3 appeared first on Homework for You."
+," The response should be at least 50 words long and the summary must be grammatically correct.
+
+$50 - $100
+$50 - $100
+0 入机人群
+$50 - $100
+0 入机人群
+$50 - $100
+0 入机人群
+$50 - $100
+0 入机人群"
+,"
+
+
+def predict_summary(self, query):
+    doc_id_list = query.split('\n')
+    query = ''.join(doc_id_list)
+    doc_id = query.split(':')[0]
+    doc_text = query.split(':')[1]
+    # query = re.sub('[,\t]','', query)
+
+    # word_tokenizer = nltk.data.load('tokenizers/punkt/english.pickle')
+    # query_tokens = word_tokenizer."
+," This is a good example of a task which can be tackled with a single, focused sentence, if it's written concisely enough. In this case, the first sentence of the first paragraph is the most appropriate. Remember, you only have five minutes to complete each summary. If you spend too much time writing the response, then you won't have enough time to complete the other tasks. Make sure that you practise with the timer on. You can set the timer on the clock in the bottom right-hand corner of the screen."
+,"
+
+In [5]:
+# Summary
+def generate_summary(text, k=5):
+""""""Generate a summary of given text.""""""
+sentence_list = generate_sentences(text)
+sentence_length_list = [len(s) for s in sentence_list]
+sentence_length_sum = sum(sentence_length_list)
+sentence_length_list = [l / sentence_length_sum for l in sentence_length_list]
+sentence_length_list = np.array(sentence_length_list)"
+," Use your own words. The word limit should be between 40 and 50 words.
+
+Task 2
+
+Write an essay of 200 to 250 words in which you do the following:
+
+Task 3
+
+Imagine you are on your way to a concert. As you are waiting for the traffic lights to turn green, a motorcyclist speeds through the red light and causes a serious accident.
+
+Write an essay of 200 to 250 words in which you:
+
+  • Describe the incident and say how it happened;
+  • Explain how you felt;"
+,"
+
+The answer is too long and includes irrelevant material, e.g. the athlete's name.
+
+• The question should be ""provide a concise summary of the following text..."" – joshua Jun 18 '18 at 18:04
+• @joshua - The question is: Provide a concise summary of the following text... – user2370952 Jun 18 '18 at 18:23
+• The correct answer is not too long and contains relevant material (the fact that he was tripped in the run). It would be correct if the text was more long and more relevant information was provided."
+,"
+
+## Input
+
+The text:
+
+
+Luciano Pavarotti was one of the most commercially successful tenors of all time and one of the Three Tenors. Gaining worldwide fame for the tone of his voice, Pavarotti made a number of televised concert performances. In 2007, the tenor died from pancreatic cancer.
+
+Provide a concise summary of the following text: 'A taxi driver channelled his inner Pavarotti and produced an emotionally charged opera performance to the surprise of his customers."
+," \end{document}
+
+
+\documentclass[12pt]{article}
+\usepackage{a4wide}
+\usepackage{lscape}
+\usepackage{url}
+\usepackage[T1]{fontenc}
+\usepackage[explicit]{titlesec}
+\usepackage{multicol}
+\usepackage{multicol}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}"
+," Use the content to compose the summary. The content is presented in a paragraph format.
+
+### Problem 1-8 (LO 1-1) What are the five types of costs? Identify the costs incurred when a doctor...
+
+Problem 1-8 (LO 1-1) What are the five types of costs? Identify the costs incurred when a doctor pays another doctor $10 for a service. (Hint: Identify each type of cost in your response.) Problem 1-9 (LO 1-1) The Merry-Go-Round is a children's ride that operates for 4 hours."
+,"
+
+You may find it helpful to use some kind of web crawling library for this task. In this case, you can use scrapy, which provides a powerful abstraction for crawling the web.
+
+If you are not familiar with scrapy, you can refer to the scrapy tutorial, which is a great way to get started with scraping.
+
+Here is a solution for the problem using scrapy:
+
+class MiniTestSummarizerSpider(scrapy.Spider):
+
+    name ='mini-test-summarizer'
+    allowed_domains = ['']"
+," 2. Give a critical evaluation of the following text: 'If you had any doubts about where to put your money in the second half of the year, take note: The iShares MSCI China Index (NYSEARCA:MCHI), a proxy for the country's red-hot growth economy, is now the best-performing large-cap fund on the planet. Yes, this fund is outperforming even Apple (Nasdaq:AAPL), which is up 40% this year, and Google (Nasdaq:GOOG), which is up by an impressive 51%."
+," The question asks you to generate the summary for the given text and provides some initial information about the text, the topic of the text and the key points in the text.
+
+Test your skills on the above text:
+
+Text length is more than 20 lines, thus, you have to generate the summary as the response.
+
+The summary of the given text is as follows: ""Stoke City are challenging West Ham for Sampdoria midfielder Pedro Obiang. The 23-year-old Spaniard, who started out at Atletico Madrid, is available for around £6million."
+," In your answer, you should: * Ensure that you use the same style and tone of the original text in your summary; * Ensure that you use the correct spelling, punctuation, and capitalisation throughout your answer; * Include only the information which is needed in a summary. Do not include any information from the original text which is not required in the summary.
+
+
+Task 2
+
+Read the text below and answer the questions:
+
+
+The new generation of students who are going to attend university next month will experience a very different education from their parents and grandparents."
+," Do not change any details.
+
+Task 2 (70 minutes) [12 marks] Write a report for a university or college lecturer describing the results of a research project or laboratory investigation that you conducted recently. The following instructions should be followed when writing your report. 1. Write an abstract of your report. The abstract should be between 150 and 250 words in length. The purpose of the abstract is to give an overview of the main findings of the report. You may use bullet points. 2. Write the main body of the report. The report should not exceed 1200 words. 3. Use your own words."
+," For example, 'The first line is just a sentence to introduce the article. It should be deleted. The main part of the article is about Froch. The second line says that Froch was forced to withdraw with an injury. And the third line says that Froch would still like to travel to Las Vegas to fight. Froch and Chavez will fight in Las Vegas if Chavez looks good.'
+
+Answered by Penny
+No votes yet
+Your rating: None"
+," This text summary is automatically generated and may be inaccurate.
+
+Question 8/10
+
+Provide the correct spelling of the word: 'The police are trying to find the person who killed the man.'
+
+Question 9/10
+
+Please indicate the missing word in this text: 'The woman had gone to the police after receiving what appeared to be threats against her in a text message. Police said the woman reported that a man called her and warned that she would be harmed unless she made a$3,000 payment."
+,"
+
+### Sample Output
+
+Jack Grealish, Nitrous Oxide, Aston Villa, FA Cup, Liverpool."
+,"
+
+
+\paragraph{Dataset}
+The dataset used in the paper \cite{guo2018deep} contains 500,000 news articles, each with a title and a summary written by a journalist. It is split into a training set of 400,000 examples, a validation set of 10,000 examples, and a test set of 10,000 examples. The test and validation sets are used to evaluate the model on a held-out set of news articles.
+
+The dataset was prepared by extracting the first paragraph of each article in Wikipedia."
+,"
+    • No further instructions.
+  4. Write a summary of the following passage: 'The U.S. Army is developing a ""telepathic headset"" capable of allowing soldiers to send messages to one another through brain signals alone. The ""wearable device"" is being designed to help soldiers communicate while protecting them from adversaries. The headset is intended to be used by soldiers who may be injured in battle and thus unable to speak. It was reported that the project is now being managed by the US Army's Communications-Electronics Research, Development and Engineering Center and is due to be completed in 2020.'"
+," Please note that the'multiple drug charges' information isn't in the actual text of the story; instead, the source of this additional information is provided in the title of the article: 'Brittany Lyn Hilbert has been arrested multiple times for drug possession'. So you have to determine this based on the source. So, again, the summary should consist solely of information that's actually in the body of the text of the article.
+
+Leave a Reply
+
+Your email address will not be published. Required fields are marked *
+
+You May Also Like"
+," Your submission should not include any quoted material. If you must use quoted material, make sure that you properly cite the source. Submissions should be in your own words. If your submission is not a summary, it will not be graded. Please be sure to use proper grammar and spelling.
+
+How does this question look in your browser? It should be a large black box with the instructions and the text box for your response. When you are done, click the ""Finish Test"" button. Do not click ""Save"" or ""Submit"". If you want to save a draft, click the ""Add To Drafts"" button."
+,"
+  • Question
+    How do I paraphrase a summary?
+    Community Answer
+    A summary is a concise restatement of the main points of the original. Therefore, you should focus on the key points, using the best way possible to convey those key points. The key words should remain the same, so you are using the main words and sentences of the summary. A summary paraphrase should not be long winded.
+  • Question
+    How do I paraphrase and summarize?
+    Community Answer
+    A summary is a concise restatement of the main points of the original."
+,"
+
+#### Similar Solved Questions
+
+##### Suppose you were a member of the National Academy of Sciences. Would you participate in the...
+Suppose you were a member of the National Academy of Sciences. Would you participate in the NRC’s activities in your discipline?...
+##### Question 1 Consider the following chemical reaction, given by the following net-ionic equation: 2 Ag (s) +..."
+,"
+
+\end{description}
+
+\subsection{Model}
+\label{model}
+Our model consists of two parts: a neural reader and a neural writer. 
+The neural reader reads a passage $P = \{p_1,p_2,...,p_m\}$ with $m$ words and outputs a $m$ dimensional vector of passage embeddings. The neural writer decodes the output of the neural reader into a summary. 
+
+\subsubsection{Neural Reader}
+
+The neural reader is a multi-layer bidirectional RNN and outputs a vector with dimension of $m$."
+," In other words, the summary should not contain any sentences that are not present in the text. You can add extra information, but the summary should be as short as possible. Write the summary in less than one fifth of the text's word count. For example, if the text has 100 words, the summary should contain no more than 20 words. The maximum word count of the summary is 250 words."
+,"
+
+Hint
+This question is about reading.
+The question asks you to provide a concise summary of a passage.
+You should make sure your summary includes the key facts from the original passage.
+You should not introduce any new information or include any details that are not important.
+You should keep your summary short.
+You should write no more than three sentences.
+You should write between 10 and 15 words in total.
+What is the maximum number of words that you can write in the summary?
+
+Answer
+
+#### Question 1b"
+,"
+
+Tips to Write Your Own Summary
+
+Summarize the passage
+
+Write your own summary by following these tips:
+
+  • Read the passage first and try to understand it.
+  • Identify the main points.
+  • Write the summary by organizing the main points.
+  • Include the necessary supporting points and details.
+
+The summary has to be brief. You need to keep the summary to only one paragraph.
+
+You can summarize the above passage by following the guidelines given above.
+
+Let's look at another example.
+
+Example 2"
+," The input will be the text provided as an argument. """"""
+
+class Case14(TestCase):
+    def setUp(self):
+        self.nlp = spacy.load(""en_core_web_sm"")
+        self.tokenizer = spacy.tokenizer.Tokenizer(nlp.vocab)
+    def test_summary_creation(self):
+        in_text = ""New Zealand police are appealing to the public to help identify a man who robbed a Christchurch dairy wearing a 'distinctive' cartoon mask."
+,"
+
+\end{enumerate}
+
+\section{Evaluation}\label{evaluation}
+\subsection{Methodology}
+
+Evaluation of the system has been carried out through two tests.
+
+The first is the evaluation of the quality of the summaries using a human evaluation. Ten people were asked to rate the summaries by two models of abstractive summarization against each other as well as the reference summaries provided in the dataset. We used five questions on a five point Likert scale (ranging from one to five, one being the lowest)."
+,"
+
+Question 3
+
+The following text is taken from the Daily Mail online and concerns a tragic case in Britain.
+
+Provide a brief summary of the case and state how the information was obtained.
+
+'Mother-of-six Jade Andress collapsed and died suddenly on a sunny day in July as she walked to the shops. Her children watched her 'fall to the floor' and her husband, David, desperately tried to revive her with mouth-to-mouth resuscitation. 'Jade's daughter, Kayleigh, 10, said: ""I didn't know what was going on."

@@ -1,0 +1,376 @@
+prompt,response
+," In this question, the CNN article is divided into paragraphs. For each paragraph, the first sentence is used as the topic sentence of the paragraph. The topic sentences are in the given order and can be used to create a summary by including the topic sentences in the summary. The topic sentences can also be used to help find a concise summary. The CNN article also includes one of the topic sentences in the last paragraph. This is not used in the given summary, but is included in the paragraph in case it is used in the summary."
+,"
+
+Essay by Anonymous UserHigh School, 10th gradeA, October 2008
+
+download word file, 7 pages 4.8
+
+Downloaded 28 times
+
+This is my summary:Ebola is an extremely deadly virus, which is highly infectious. It is the deadliest outbreak of Ebola ever seen. It has hit Liberia, Guinea and Sierra Leone. It has left many people, including families and close friends distraught. The infected people often have to go to hospitals that are far away from their homes."
+,"
+# Arguments
+- `article`: the article to summarize.
+
+# Returns
+- `Dict{String,String}`: summary of the article.
+""""""
+function summarize(article; max_tokens=400)
+    request_body = HTTP.URIs.escapeuri(JSON.json(article))
+    response = @mock http""GET""(""http://web.archive.org/web/$(Dates.now())/http://content.api.cbronline.com/api/v1/article/$(request_body)"")"
+,"
+  • ### Question 4 You are the only developer working on an ongoing project for a startup in your area. The company is very young but has an innovative idea. There are a few investors supporting it, and it's gaining popularity among users. The main source of income for this startup is from donations (through their website). However, due to the limited development resources, the company has decided to launch a crowdfunding campaign for a year to improve their product. Write a blog post to help the startup attract people to their crowdfunding campaign."
+,"
+
+Want an answer?
+
+No answer yet. Submit this
+question to the community."
+,"
+
+Provide the summary as the response
+
+Expert's Answer
+
+No Answer Yet
+Ask for Expert's Help
+
+Get this solution now
+
+Recent Questions in Communication Management
+
+Submit Your Questions Here!
+Copy and paste your question here...
+Attach Files"
+,"
+
+You need to spend $3 to view this post. Add Funds to your account and buy credits.
+Chris the tutor
+Chris the tutor
+4.9 5 830"
+,"
+
+\paragraph{Question 3:} 
+In the following paragraph, \textbf{underline the topic sentences}:
+
+'The U.S. Department of Energy (DOE) announced a \$1.6 billion award of federal stimulus funding to support work at the Argonne National Laboratory, the Office of Naval Research, and the Pacific Northwest National Laboratory on a project to develop a national security capability for the production of ultra-pure thorium-232 and the associated development of next-generation high temperature reactors that can operate on the thorium-232 fuel cycle.'
+
+\paragraph{Question 4:}"
+,"
+
+
+To determine whether your knowledge and skills meet the needs of the job, you may be asked questions during the assessment test that test your knowledge and understanding of specific topics that are covered by the job description.
+
+For example:
+
+Question: You are working in a bank. A customer has just opened a bank account and has signed the account agreement without reading it. The customer has also just signed a separate document which gives you permission to make a copy of her signature for other purposes and to hold and retain the original signature.
+
+As an employee of the bank you should:"
+,"
+
+I need an answer for this assignment by today.
+
+Solution Preview
+
+Here are some notes you can expand upon to create a draft for your response:
+
+1. The governor is making an argument for a different method of carrying out the death penalty because the first method may be deemed unconstitutional and/or unavailable.
+
+2. Nitrogen gas will cause a quick loss of consciousness and then death. It will take 8-10 seconds to make a person unconscious and death will follow a few minutes later.
+
+3. The person will die from lack of oxygen (no pain)
+
+4."
+," Do not give a full paraphrase or summary of the text. Use only the points that are directly connected to the task to answer the question. (Adapted from Magoosh.com.)
+
+Answer: A
+
+### Question 7
+
+Provide a concise summary of the following text: 'As part of the National Cancer Institute's ""One-Day Walk Against Cancer"" -- a 24-hour fundraiser to support cancer research -- a group of students from Washington, D.C.'s Howard University will walk and run a combined 40,000 miles over the course of a year."
+,"
+
+You will now learn how to extract the answer to the question from the long text. In NLP terms, you will learn how to use the extractive summarizer. The extractive summarizer learns to extract the relevant portions of the text, which will be later used to provide the summary. Let’s start with the most fundamental summarizer – the sentence-extractor.
+
+To start, create a folder for the notebooks:
+
+from google.colab import files
+files.upload()
+
+Uploading notebook data...
+Upload finished"
+,"
+
+Exercise # 4
+
+A: Look at the following article: ""Do you like reading news on the internet or on the printed newspaper? Some people think that it's easier to read a newspaper because they're not disturbed by other information from the internet. But others think it's better to read the news on the internet because it's easier to update the information there. Which one do you prefer? Discuss with your partner.""
+
+B: Discuss the article with your partner. Then, provide a written summary of the discussion. Do not copy the discussion word for word. Write it in a concise form.
+"
+,"
+
+
+
+In this challenge, we will predict the missing text. We will also learn how to evaluate the text generation performance using BLEU and ROUGE metrics.
+
+We will use the CNN/DailyMail dataset. This dataset is composed of news articles and headlines. The task is to generate the headline of the news article using the news content.
+
+
+  • We will learn how to work with text data.
+  • We will learn how to use BLEU and ROUGE to evaluate the text generation performance.
+
+Data Exploration"
+,"
+
+The result of this would be:
+
+(Summary of: ""Three British citizens arrested in the United Arab Emirates after they were found plane spotting near Fujairah airport are to be released Monday, their lawyer, Nasser al-Hashem, tells CNN.""
+
+No charges were filed, there will be no travel ban, and the men will not face deportation, he said. Conrad Clitheroes, 54, and Gary Cooper, 45, were on a five-day visit to the UAE from Manchester when they were arrested. Neil Munro, is a British national who lives in the UAE.)
+
+"
+,"
+
+4) This is a sample text for the summary question. Your text should not exceed 600 words. Provide a concise summary of the text: 'Pizza has become an international dish. It's served in nearly every country in the world, although there are significant differences in the way pizza is made depending on where you are. Pizza has its roots in the United Kingdom, though it's unclear how or why. An argument is often made for the fact that Italians took their version of flatbread from the Greeks, who took it from the Egyptians."
+,"
+
+
+Answer preview:
+
+
+Parts of Miami-Dade County’s skyline was hidden from view Monday as smoke from a growing 1,850-acre wildfire loomed over portions of the Florida county. The fire started on Sunday night and had consumed fewer than 100 acres according to Miami-Dade Fire Rescue Battalion Chief Al Cruz. However, the fire had grown to be more than 10 times that within the next 24 hours. By Monday night, the fire had burned nearly 2,000 acres and was 50% contained, the fire department said."
+,"  Example input is here: http://prateekkumar.info/code/data/shipwreck_example.txt Example output would be: A small boat carrying migrants hit a reef in bad weather and sank while trying to return to shore near Le Borgne. 11 victims, including 8 men and 3 women, have been identified.""
+
+text = ""At least 21 people were killed during a shipwreck off the northern coast of Haiti, the country's civil protection directorate told CNN on Thursday."
+," Do not copy and paste from the text.
+
+Sample Answer:
+
+‘A SkyWest Airlines flight made an emergency landing in Buffalo, New York, on Wednesday after a passenger lost consciousness, officials said. The passenger received medical attention before being released, according to Marissa Snow, spokeswoman for SkyWest. She said the airliner expects to accommodate the 75 passengers on another aircraft to their original destination – Hartford, Connecticut – later Wednesday afternoon. The Federal Aviation Administration initially reported a pressurization problem and said it would investigate."
+,"
+
+Answers 1
+
+Expert's answer
+
+The summary of the text should look like:
+
+It was declared that smoking would be banned in New Orleans. However, the city became well-known for its love for drinking, eating and dancing all night. The council voted unanimously to ban smoking across the city including bars, casinos and restaurants. The council decided that the waiters and musicians in New Orleans did not want to breathe in smoke while they work. The bar owners argued that the ban would cause revenue losses, and the customers who smoke were worried about losing their favourite places."
+," (100-250 words)
+
+#### Similar Solved Questions
+
+##### The table below shows the estimated number of people in millions who watched an NBA game...
+The table below shows the estimated number of people in millions who watched an NBA game in 2015 and 2016. Assume that the random variable N represents the total number of people who watched an NBA game in either year. Year 2016 2015 Estimated Number of People in Millions of Watchers 25.5 23.3 What is the...
+##### Question 2. (4 points) An object is placed 35 cm from a concave mirror. A real...
+Question 2."
+,"
+\end{comment}
+
+
+
+\begin{table*}[h]
+\centering
+\begin{adjustbox}{max width=1.0\textwidth}
+\begin{tabular}{|l|ccc|ccc|ccc|}
+\hline
+ & \multicolumn{3}{c|}{\textbf{CNN-DailyMail}}  & \multicolumn{3}{c|}{\textbf{NYTimes}} & \multicolumn{3}{c|}{\textbf{PubMed}}\\"
+," (3)
+The prompt was to summarize the news text in order to be published on CNN's Student News. The original summary was:
+
+""In this week's show we start with the Supreme Court, and specifically, the issue of police force. We'll also discuss how the drop in gas prices is affecting hybrid car sales, as well as what ""The Blob"" has to do with the Pacific Ocean. Finally, we'll see how a robot has two legs up on the competition when it comes to balancing. Be sure to tune in for the rest of this week's show on CNN Student News."""
+," (Hint: Use your own words to make your summary.)</question>
+
+The above two examples show how a question can be derived from a paragraph. We have taken a paragraph (of an appropriate length) and generated a few questions out of it. In the above two examples we have generated questions on two different domains. We generate questions out of two distinct domains. This is to ensure that the dataset does not have any question-answer pair having the same content.
+
+3.3 Paragraphs to Questions
+
+In the previous example we took a paragraph and asked questions out of it."
+,"
+
+I would guess that there is no right or wrong way to answer this question, but I think my response is pretty good. I hope you can check it and give me some feedback. Thanks!
+
+It is a very nice essay that gives me a vivid picture of the film-maker's mission and the danceress' reactions. However, in the first paragraph, there is a repetition of the word 'dance' to refer to the danceress' profession."
+,"
+
+
+Answer: 'The last three defendants prosecuted in the hazing death of Florida A&M drum major Robert Champion were convicted Friday of manslaughter and hazing with the result of death, reported CNN affiliate WFTV. A jury deliberated about 2½ hours before returning guilty verdicts against Benjamin McNamee, 25; Aaron Golson, 22; and Darryl Cearnel, 28. They will be sentenced June 26, according to Orange County, Florida, online court records. Until then, they'll be held in the county jail.'"
+," The original article may be found here:
+
+Answers:I'm pretty sure this is a writing assignment, so I won't just give you the answers. I'll guide you a little, though: First, find out what the word ""concise"" means. I'll give you a hint: it doesn't mean long. You're trying to get a feel for the article as a whole, not just the words. When you've done that, go back and write a summary based on your understanding."
+," In the body of the response, place the following comment: ""I am impressed at the detail of this summary of a Burger King press release."" (I got this from an IELTS student who asked for help.)
+
+A: Your summary looks good and clear. The only thing I would change is to write it in a more professional manner, without including the reporter's name. As the summary would be posted in a website, I'd leave the reporter's name out. I think it would be better to start with a short description of who the two people are and then go into the details."
+," The response should be in the form of a list of paragraphs, each consisting of one to three sentences, using natural language. The response should be limited to 100 words.
+
+Sample Dataset
+
+A sample dataset is included.
+
+
+No test data is included.
+
+
+Your code may take time to execute on the test server, since each test may require that a separate model be trained for scoring. If your execution time exceeds 2 minutes for a single test, you may receive a timeout error. If your submission does not successfully complete training within 30 minutes, it will be considered a submission error."
+," Do not copy any part of the article, neither text nor title. The response must be in your own words. Please, note that this is only a summary of the article, not an analysis or critique. Provide at least 2-3 sentences as the response to this task.
+
+Sample answer:
+""Nelson Mandela was elected President in 1994 as the first black president of South Africa after being released from prison 27 years earlier, in 1990, in which he served for 27 years."
+," Provide the answer in plain text. The answer should not have any leading spaces, but must include a newline character at the end.
+
+Answer: (The Hollywood Reporter)Ben Powers, who played Thelma's (BernNadette Stanis) husband Keith Anderson on the final season of the classic CBS sitcom ""Good Times,"" has died. He was 64. Powers died April 6 in New Bedford, Mass., his family announced. No cause of death was revealed. Powers joined the cast of ""Good Times"" for its sixth and final season from 1978 to 1979 season, playing Keith, a professional football player."
+," You do not need to modify the response. You can just repeat the sentences in the text. Do not change the word order. Write no more than 100 words.
+
+Dear Sir or Madam: We would like to thank you for all the help you have provided us with. In the past months you have been of great help to us. We will surely contact you again in the future. We wish you a very successful career! Yours faithfully,
+
+Dear Sir or Madam: I am writing to complain about an article which appeared in the paper today. It concerns an article about your company."
+,"
+
+For this API call, it is necessary to send a Bearer token in the Authorization header, and make sure that the Authorization header is not included in the body of the request.
+
+API Explorer (beta)
+
+We encourage you to use the following API Explorer (beta) to quickly test out different API requests and see the JSON response format.
+
+The API Explorer is a simple web application, based on the open source project. We have added custom code to enhance its capabilities and allow users to authenticate and try out multiple APIs."
+, You can use the snippet if needed.
+,"
+
+Q4. Paraphrase the following text: 'TikTok, the video sharing app with a funny name and lots of music, is now a cultural powerhouse. TikTok is on track to become the most popular mobile app in the world. More people use TikTok than use Facebook, Twitter, and Snapchat, combined. TikTok has over 1 billion downloads and 100 million users, and that number grows daily. The app has created its own memes, superstars, and a vernacular that has spread across the Internet and into mainstream culture. It's even becoming an important marketing platform."
+,"
+    1. Your code should only have one function with the following signature:
+      def summarize(text):
+    2. Your code should print out a one-paragraph summary of the text given in the argument. The paragraph should only consist of complete sentences. (Your code should ignore any sentences that are not complete. It should also ignore punctuation characters such as '.', '?', or '!'. In other words, the words 'It's' and 'It is' are equivalent.)
+    3."
+,"
+
+2. Do you agree or disagree with the following statement: ""The majority of the people in the world should be trusted to make their own decisions without being manipulated by governments or large corporations.""
+
+3. Summarise the following text: 'The US has a right to keep secrets. Yet it is hard to argue with the assertion of Daniel Ellsberg that the US government's over-emphasis on secrecy has gone way too far.
+
+He pointed to the case of John Kiriakou, a CIA agent who blew the whistle on the agency's use of water-boarding to interrogate terrorism suspects."
+," The summary should be a short paragraph that clearly and accurately covers the content of the article, with the following characteristics: • Provide an overall gist (summary) of the text, not a detailed point-by-point account of it. • Include the main ideas or events, and leave out the details or supporting points. • Include information that is necessary to understand the gist of the text. Do not include extraneous information or details. • Use your own words. Don't simply restate the text verbatim. • Organize your summary using appropriate sentence and paragraph transitions."
+," No additional information is needed.
+
+The following sentences are taken from the above passage: 1. They also do not realize how difficult it is to climb back up many of the canal embankments. 2. No parent should ever have to lose a child, you know, let alone both of them at the same time. 3. The irrigation district that manages the canal slowed the flow of water and reduced the water level to help emergency workers find the boys. 4. Authorities say the paths along Yuma canals are popular for joggers and bicyclists, but can be dangerous. 5."
+,"
+
+(2) How would you go about automatically summarizing the input? (a) Start by defining a set of important words and phrases and then identify sentences containing those terms. How would you go about this? (b) Which sentences should you include in the summary? How would you select them?
+
+(3) What problems might you run into? What difficulties might arise? (c) What kinds of algorithms could you use to address these problems? (d) Could you write a computer program that might achieve a good enough solution for this task?"
+,"
+
+
+Question 7:
+
+Answer all of the following questions on the basis of the passage below:
+
+A study by the UN Food and Agriculture Organisation (FAO) has revealed that India is a net food importer, for the first time in three decades. While the country remains the second largest food producer, with an estimated harvest of food crops this year of about 240 million tons, India is expected to have to import up to 9.7 million tons of food grains by 2025, the FAO said."
+,"
+
+Task: 'In the last section of the paper, the writer says ""The problem is not that people can't think, but that they don't know how."" Do you agree? Why? Why not?'
+
+Provide the answer to the question as the response.
+
+Task: 'Write a letter to your friend, who is about to take the IELTS exam, encouraging him/her not to worry about it, and suggesting what to do to prepare for it.'"
+,"
+
+3. Provide a short answer to the following text: 'The British Cabinet Office has announced its intention to publish an open letter to the world's leading Internet companies, setting out the UK's policy and demanding action. The letter, which the government has named 'Setting the Global Standard', will call for tech companies to cooperate with each other and with the UK government to tackle the rise in the number of terrorist-related online incidents. According to the British Home Office, the letter will say that the UK has the will to act alone if there is no progress."
+,"
+
+3. The system must also be able to provide an appropriate response to a question like 'What is the name of the world's oldest person?'.
+
+4. The response must be coherent and well-formed.
+
+5. The response must be in English.
+
+Evaluation Criteria
+
+The response must be a natural language sentence, and not a list of keywords. The following is an example of a poor response: 'The world's oldest person is Misao Okawa who died in Japan.'"
+,"
+
+2. Write about the following text: 'Suzanne Bierre, wife of the late David Bierre, was killed in a single-car accident Wednesday afternoon on Interstate 95 in Sussex County, Delaware. The family of her surviving daughter, Mary, has set up a website to raise money to help defray funeral expenses.' Do not write more than one paragraph to this text.
+
+3. Read the following text: 'When you talk about what's wrong with this country, the first thing that comes to mind is the economy."
+," Provide your summary in a single paragraph. Use only the words in bold in your summary, adding any other necessary words to fill out the summary. Provide only the summary as the response. Provide your summary in a single paragraph. Use only the words in bold in your summary, adding any other necessary words to fill out the summary. Provide only the summary as the response. Provide your summary in a single paragraph. Use only the words in bold in your summary, adding any other necessary words to fill out the summary. Provide only the summary as the response. Provide your summary in a single paragraph."
+," You are welcome to use all parts of the text, provided in its entirety in the box below.
+  • Write a short text (about 150 words) about an exciting event you witnessed once. This could be a sporting event, or any other event that interested you. Feel free to embellish your description, as long as it is relevant.
+  • Provide a brief summary of the following text: ""A US federal appeals court in New Orleans ruled that New Orleans' ban on possession of handguns is constitutional."
+,"
+
+In a similar vein to the previous prompt, you can practice summarising information from different sources. It's a good idea to look for a number of articles about a specific topic, read them, then try and write a summary of what you have read. If you have access to the internet you can look at the articles on the same page of a search result, or look for articles on the same topic from different sources.
+
+This is a good way to get practice in summarising information, and to improve your comprehension of a topic.
+
+5. Essay Topics"
+,"
+
+Summarize the article. The article has been chosen because it contains many facts that need to be included.
+
+Summarizing a short story or other literary text (e.g. poem, song, etc.)
+
+Write a paragraph summarizing the events in ""The Legend of Sleepy Hollow"" by Washington Irving.
+
+""I Know Why the Caged Bird Sings"" by Maya Angelou - Provide a summary of the story.
+
+In ""I Know Why the Caged Bird Sings,"" Maya Angelou, relates the first seventeen years of her life."
+,"
+
+Example:
+
+Example of a text: 'In the Premier League title race, it’s all about who gets the better of whom this weekend. The winner of the Newcastle United vs Manchester United game will be in a far better position, but can either of them win the race? Arsenal and Tottenham have the easier of the games with Everton vs Liverpool being the other big game of the weekend. The Magpies face an important home game against the Red Devils. If they win, they would be three points clear with a game in hand. They could end the season with as many as six games left.'"
+," (6 marks)
+(ii) What is the function of the summary? (1 mark)
+(iii) In the context of this question, what does the following refer to: '(2) to be used by anyone who wishes to reproduce or use all or part of the contents of this work in any form (including a translation) and provided that: (a) full details of the contents of this book are clearly set out' (4 marks)
+
+Answered by:"
+,"
+
+
+
+The game returned with a bang on March 31, 1993 with a televised match between England and Germany at the home of the former. The BBC chose to broadcast the game on the ITV network. After the kickoff, they made the following comment: ""England will be wearing the new all-white kits for this game."" Shortly before the match started, the studio commentator, Michael Davies, stated ""The home side, England, are in white, the visitors in blue. A rather familiar sight for those who have been watching football in recent seasons."""
+," Do not write a paragraph to discuss the topic.
+
+Sample Response 1:
+
+'Chinese parents are passionate about raising child prodigies-whether they are ten-year-old university entrants or four-year-old Michael Jackson dance-alikes. Now a new basketball superstar is on the rise. A viral video is making the rounds in China, which shows a small boy displaying a dazzling array of basketball skills that would put to shame many professional players."
+,"
+
+Write a response to the following statement in 300 words in an essay style. 'Terrorism cannot be defeated without the co-operation of all sections of society.'
+
+Write an essay of approximately 400 words on the topic: 'How much information should governments disclose to the public about terrorism?'
+
+Write a letter of approximately 150 words to an airline company, telling them about your recent bad experience with them and asking them to compensate you for this.
+
+Write a complaint letter to your local council of approximately 200 words. You are not happy about a recent change to the way children are treated in the area."
+,"
+
+# 题目3
+
+# 题目4
+
+You are given a binary matrix of size m × n where the matrix cells are either '0' or '1' filled in randomly. A contiguous sub-matrix is defined as a sub-matrix which has cells in consecutive order."
+," Do not re-write the summary in your own words. If the text contains a summary, avoid that summary and instead write your own.
+
+Short Summary"
+," Your program should use your own name as the author of the summary. Provide a list of the top three most liked baseball teams (originally from the sample text). Provide a list of the top three most disliked baseball teams (originally from the sample text). Write the response to a Facebook message which will give a user a list of the three most liked baseball teams from the user's data. This message will use the user's full name as the author of the message, and will be sent to the user's friends who also like baseball."
+,"
+
+You are given the sentence: 'After appearing in court today via videolink, the teenager was again in remanded in custody by Mr Justice Sweeney. She is due to enter pleas to the allegations on June 12.' Provide a summary of the sentence as the response.
+
+The 'Mining for Meaning' game requires you to make sense of a series of word clusters. Your job is to arrange the words in the most logical order. For example, you might be given a selection of words like: 'cape; coat; hat; hair; wind; snow'."
+," Use the provided title if possible (please, note that not all of the news have title) If summary is too short (<=40 symbols) - just return provided title without any modifications. If summary is too long (>250 symbols) - just return provided title without any modifications.
+
+I. Input:
+
+{ ""title"": ""Arango apologises for biting Monterrey opponent"", ""text"": ""Venezuela captain Juan Arango has apologised to a rival player after biting him on the shoulder at the end of a tempestuous Mexican league match."
+,"    
+  4. Hi there.  I've been teaching English for the last five years and I'm also an EAL teacher.  I thought I'd come over and join the English teachers here to get some more insight into other aspects of the English language.  Cheers for having me.
+  5. Hi guys. I've been teaching English for a number of years and I'm looking to branch out into another aspect of the English language that I'm not really familiar with. It's the spoken aspect and I've heard about TESOL which is teaching English to Speakers of Other Languages."
+,"
+
+
+\paragraph{Test 1:} \textit{Summarise this text, including an introduction and conclusion}:
+The first text in this section was taken from a news website (BBC) article that reports on a court ruling that has given a major victory to British and European telecoms firms fighting the US Department of Justice’s attempt to end immunity from prosecution for firms involved in illegal interception of communications. A ruling by the US Court of Appeals for the Second Circuit in New York was published on 9 January and ruled that a law allowing foreign companies to be prosecuted for illegal interception of communications is unconstitutional."
+," ## Sample Output 1 This is an example output 0 Thiago is back as Bayern Munich's playmaker provides a concise summary of the following text:'Bayern Munich playmaker Thiago admits coming on against Borussia Dortmund to make his first appearance in a year was an emotional moment and has thanked the German club. The midfielder hadn't played for the Bayern since March in 2014, when he suffered a serious knee injury against Hoffenheim, but came on for Philipp Lahm in the 1-0 win at the Westfalenstadion on Saturday."

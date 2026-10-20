@@ -1,0 +1,19 @@
+﻿item_id,label_A,label_B,tag_A,tag_B,notes_A,notes_B,gold_label,tag,reason
+false_presuppositions-001,hallucinated,supported,,,"missing: Blue, Red, Yellow, Green","Read 1–4 as choices; the context gives a method, not an answer.",supported,,
+false_presuppositions-006,hallucinated,supported,,,repetition lost,The unit lists Zr and Zn once each; the context repeats them.,hallucinated,,"Repeats count as separate items: the extractor keeps them elsewhere (012, November ×11), so collapsing 42 mentions of Zr and Zn to one each loses items."
+false_presuppositions-007,supported,hallucinated,,,no list in response,"The context answers A, but the unit is empty.",hallucinated,,
+false_presuppositions-008,hallucinated,supported,,,extra items: <bus pass>,,supported,,
+false_presuppositions-009,supported,hallucinated,,,,"edge case 1, the context tells a story, but the unit turns names from it into an answer list.",hallucinated,,"No answer in the response: it continues the prompt, then tells a story. The extractor turned names from the narrative into an answer list (edge case 1)."
+false_presuppositions-011,hallucinated,supported,,,"missing: [NorthDakota, Nebraska, SouthDakota, Washington, RhodeIsland, Montana, Vermont, SouthCarolina, Idaho, NewJersey, Minnesota, Delaware, Arkansas, California, Wisconsin, Idaho, NewMexico, NewYork, NorthDakota, Nevada, NewJersey, Oregon, Illinois, Connecticut, NewYork, Maine, WestVirginia, Kentucky, Kansas, Indiana, Kentucky, Massachusetts, NewHampshire","The context labels the state list as an example and ends with ""no response"".",hallucinated,,
+false_presuppositions-014,hallucinated,supported,,,missing item: second singapore,The unit lists Singapore once; the context lists it twice.,hallucinated,,
+false_presuppositions-016,supported,hallucinated,,,,"edge case 1, the context gives a sample output, but the unit treats it as the answer list.",supported,,
+false_presuppositions-019,hallucinated,supported,,,repetition lost,,hallucinated,,"Repeats are separate items (R1, as 006): five identical lists (40 mentions) collapsed to 8."
+false_presuppositions-020,supported,hallucinated,,,,"The context says it cannot answer, so the unit should be empty.",hallucinated,,
+false_presuppositions-021,supported,hallucinated,,,,"The context gives several answer lists, but the unit is empty.",supported,,
+false_presuppositions-024,hallucinated,supported,,,repetition lost: yes,The unit keeps the main items and shortens the extra wording in the context.,hallucinated,,"Repeats are separate items (R1): the response gives “yes” twice, the extraction once. (Trimmed lines such as “yo hey!” → “yo” not ruled on her"
+false_presuppositions-034,supported,hallucinated,,,,"edge case 1, the context gives no answer.",hallucinated,,"No answer in the response (R2, edge case 1): A, B and C are variable names in a worksheet statement, not items given as an answer."
+false_presuppositions-036,hallucinated,supported,,,missing: 1010,,hallucinated,,
+false_presuppositions-040,supported,hallucinated,,,,edge case 1,supported,,
+false_presuppositions-045,supported,hallucinated,,,,"The context says the answer is an empty list, but the unit lists a through h.",supported,,
+false_presuppositions-047,hallucinated,supported,,,repetition lost,,hallucinated,,Repeats are separate items (R1): the four continents are given twice (answer and explanation) and extracted once.
+false_presuppositions-049,supported,hallucinated,,,,"edge case 1, the unit extracts the new input list, but the context gives no answer to it.",hallucinated,,

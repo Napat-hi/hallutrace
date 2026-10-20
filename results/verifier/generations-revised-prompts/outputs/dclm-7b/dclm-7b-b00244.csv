@@ -1,0 +1,1039 @@
+passage,response,atomic_units,hallucinated_atomic_units
+," In this question, the CNN article is divided into paragraphs. For each paragraph, the first sentence is used as the topic sentence of the paragraph. The topic sentences are in the given order and can be used to create a summary by including the topic sentences in the summary. The topic sentences can also be used to help find a concise summary. The CNN article also includes one of the topic sentences in the last paragraph. This is not used in the given summary, but is included in the paragraph in case it is used in the summary.","Here are the independent facts broken down from the passage: | False |
+ The CNN article is divided into paragraphs. | True |
+ The first sentence of each paragraph is used as the topic sentence. | True |
+ The topic sentences are in a given order. | True |
+ The topic sentences can be used to create a summary. | True |
+ The topic sentences can help find a concise summary. | True |
+ The CNN article includes one of the topic sentences in the last paragraph. | True |
+ The topic sentence in the last paragraph is not used in the given summary. | True |
+ The topic sentence in the last paragraph is included in the paragraph for potential use in the summary. | True",Here are the independent facts broken down from the passage:
+,"
+
+Essay by Anonymous UserHigh School, 10th gradeA, October 2008
+
+download word file, 7 pages 4.8
+
+Downloaded 28 times
+
+This is my summary:Ebola is an extremely deadly virus, which is highly infectious. It is the deadliest outbreak of Ebola ever seen. It has hit Liberia, Guinea and Sierra Leone. It has left many people, including families and close friends distraught. The infected people often have to go to hospitals that are far away from their homes.","Here are the independent facts broken down from the passage: | False |
+ Ebola is an extremely deadly virus. | True |
+ Ebola is highly infectious. | True |
+ The outbreak being referred to is the deadliest outbreak of Ebola ever seen. | True |
+ The countries affected by the outbreak are Liberia, Guinea, and Sierra Leone. | True |
+ The outbreak has caused distress to many people, including families and close friends. | True |
+ Infected people often have to travel to hospitals that are far from their homes. | False |
+Note that the following are not independent facts, but rather metadata about the passage: | True |
+- The passage is an essay written by an anonymous user. | False |
+- The essay is at a 10th-grade level and received an A grade. | True |
+- The essay was written in October 2008. | False |
+- The essay is 7 pages long and has a rating of 4.8. | False |
+- The essay has been downloaded 28 times. | False","Here are the independent facts broken down from the passage: |
+ Infected people often have to travel to hospitals that are far from their homes. |
+- The passage is an essay written by an anonymous user. |
+- The essay was written in October 2008. |
+- The essay is 7 pages long and has a rating of 4.8. |
+- The essay has been downloaded 28 times."
+,"
+# Arguments
+- `article`: the article to summarize.
+
+# Returns
+- `Dict{String,String}`: summary of the article.
+""""""
+function summarize(article; max_tokens=400)
+    request_body = HTTP.URIs.escapeuri(JSON.json(article))
+    response = @mock http""GET""(""http://web.archive.org/web/$(Dates.now())/http://content.api.cbronline.com/api/v1/article/$(request_body)"")","Here are the independent facts broken down from the passage: | True |
+ The function is named `summarize`. | True |
+ The function takes an argument called `article`. | True |
+ The function has an optional parameter `max_tokens` with a default value of 400. | False |
+ The function returns a dictionary with string keys and string values (`Dict{String,String}`). | False |
+ The function uses the `HTTP.URIs.escapeuri` function to escape the URI of the `article` argument. | False |
+ The function uses the `JSON.json` function to convert the `article` argument to JSON format. | False |
+ The function makes an HTTP GET request to a URL. | False |
+ The URL of the HTTP GET request is constructed using the current date and time (`Dates.now()`). | False |
+ The URL of the HTTP GET request includes the escaped and JSON-formatted `article` argument. | False |
+ The URL of the HTTP GET request is in the format `http://web.archive.org/web/$(date)/http://content.api.cbronline.com/api/v1/article/$(request_body)`. | False"," The function has an optional parameter `max_tokens` with a default value of 400. |
+ The function returns a dictionary with string keys and string values (`Dict{String,String}`). |
+ The function uses the `HTTP.URIs.escapeuri` function to escape the URI of the `article` argument. |
+ The function uses the `JSON.json` function to convert the `article` argument to JSON format. |
+ The function makes an HTTP GET request to a URL. |
+ The URL of the HTTP GET request is constructed using the current date and time (`Dates.now()`). |
+ The URL of the HTTP GET request includes the escaped and JSON-formatted `article` argument. |
+ The URL of the HTTP GET request is in the format `http://web.archive.org/web/$(date)/http://content.api.cbronline.com/api/v1/article/$(request_body)`."
+,"
+  • ### Question 4 You are the only developer working on an ongoing project for a startup in your area. The company is very young but has an innovative idea. There are a few investors supporting it, and it's gaining popularity among users. The main source of income for this startup is from donations (through their website). However, due to the limited development resources, the company has decided to launch a crowdfunding campaign for a year to improve their product. Write a blog post to help the startup attract people to their crowdfunding campaign.","Here are the independent facts broken down from the passage: | False |
+ You are the only developer working on the project. | False |
+ The project is for a startup in your area. | False |
+ The company is very young. | False |
+ The company has an innovative idea. | False |
+ There are a few investors supporting the company. | False |
+ The startup is gaining popularity among users. | False |
+ The main source of income for the startup is from donations. | False |
+ Donations are made through the company's website. | False |
+ The company has limited development resources. | False |
+ The company has decided to launch a crowdfunding campaign. | False |
+ The crowdfunding campaign will last for a year. | False |
+ The purpose of the crowdfunding campaign is to improve the company's product. | False","Here are the independent facts broken down from the passage: |
+ You are the only developer working on the project. |
+ The project is for a startup in your area. |
+ The company is very young. |
+ The company has an innovative idea. |
+ There are a few investors supporting the company. |
+ The startup is gaining popularity among users. |
+ The main source of income for the startup is from donations. |
+ Donations are made through the company's website. |
+ The company has limited development resources. |
+ The company has decided to launch a crowdfunding campaign. |
+ The crowdfunding campaign will last for a year. |
+ The purpose of the crowdfunding campaign is to improve the company's product."
+,"
+
+Want an answer?
+
+No answer yet. Submit this
+question to the community.","Here are the independent facts broken down from the passage: | False |
+ The passage is asking if the reader wants an answer to a question. | False |
+ There is no answer available yet. | True |
+ The reader is being prompted to submit their question to a community. | False","Here are the independent facts broken down from the passage: |
+ The passage is asking if the reader wants an answer to a question. |
+ The reader is being prompted to submit their question to a community."
+,"
+
+Provide the summary as the response
+
+Expert's Answer
+
+No Answer Yet
+Ask for Expert's Help
+
+Get this solution now
+
+Recent Questions in Communication Management
+
+Submit Your Questions Here!
+Copy and paste your question here...
+Attach Files","Here is a breakdown of the passage into independent facts: | True |
+ The passage appears to be a prompt or a template for seeking expert help or answers. | False |
+ There is an option to ""Ask for Expert's Help"". | True |
+ Users can ""Get this solution now"", implying that a solution or answer is available. | False |
+ The passage mentions ""Recent Questions in Communication Management"", suggesting that the topic is related to communication management. | False |
+ There is a submission form where users can ""Submit Your Questions Here!"". | False |
+ The form allows users to ""Copy and paste your question here..."" and also ""Attach Files"". | False"," The passage appears to be a prompt or a template for seeking expert help or answers. |
+ Users can ""Get this solution now"", implying that a solution or answer is available. |
+ The passage mentions ""Recent Questions in Communication Management"", suggesting that the topic is related to communication management. |
+ There is a submission form where users can ""Submit Your Questions Here!"". |
+ The form allows users to ""Copy and paste your question here..."" and also ""Attach Files""."
+,"
+
+You need to spend $3 to view this post. Add Funds to your account and buy credits.
+Chris the tutor
+Chris the tutor
+4.9 5 830","Here are the independent facts broken down from the passage: | False |
+ The cost to view the post is $3. | False |
+ The user needs to add funds to their account. | False |
+ The user can buy credits. | False |
+ The name of the tutor is Chris. | False |
+ Chris the tutor has a rating of 4.9 out of 5. | False |
+ Chris the tutor has 830 reviews or ratings. | False","Here are the independent facts broken down from the passage: |
+ The cost to view the post is $3. |
+ The user needs to add funds to their account. |
+ The user can buy credits. |
+ The name of the tutor is Chris. |
+ Chris the tutor has a rating of 4.9 out of 5. |
+ Chris the tutor has 830 reviews or ratings."
+,"
+
+\paragraph{Question 3:} 
+In the following paragraph, \textbf{underline the topic sentences}:
+
+'The U.S. Department of Energy (DOE) announced a \$1.6 billion award of federal stimulus funding to support work at the Argonne National Laboratory, the Office of Naval Research, and the Pacific Northwest National Laboratory on a project to develop a national security capability for the production of ultra-pure thorium-232 and the associated development of next-generation high temperature reactors that can operate on the thorium-232 fuel cycle.'
+
+\paragraph{Question 4:}","Here are the independent facts broken down from the passage: | True |
+ The U.S. Department of Energy (DOE) announced an award of federal stimulus funding. | False |
+ The amount of the award is $1.6 billion. | False |
+ The funding is to support work at three laboratories:  | False |
+   - Argonne National Laboratory | False |
+   - The Office of Naval Research | False |
+   - The Pacific Northwest National Laboratory | False |
+ The project aims to develop a national security capability. | False |
+ The capability is for the production of ultra-pure thorium-232. | False |
+ The project also involves the development of next-generation high temperature reactors. | False |
+ These reactors will operate on the thorium-232 fuel cycle. | False"," The U.S. Department of Energy (DOE) announced an award of federal stimulus funding. |
+ The amount of the award is $1.6 billion. |
+ The funding is to support work at three laboratories:  |
+   - Argonne National Laboratory |
+   - The Office of Naval Research |
+   - The Pacific Northwest National Laboratory |
+ The project aims to develop a national security capability. |
+ The capability is for the production of ultra-pure thorium-232. |
+ The project also involves the development of next-generation high temperature reactors. |
+ These reactors will operate on the thorium-232 fuel cycle."
+,"
+
+
+To determine whether your knowledge and skills meet the needs of the job, you may be asked questions during the assessment test that test your knowledge and understanding of specific topics that are covered by the job description.
+
+For example:
+
+Question: You are working in a bank. A customer has just opened a bank account and has signed the account agreement without reading it. The customer has also just signed a separate document which gives you permission to make a copy of her signature for other purposes and to hold and retain the original signature.
+
+As an employee of the bank you should:","Here are the independent facts broken down from the passage: | True |
+ An assessment test may be used to determine whether a person's knowledge and skills meet the needs of a job. | False |
+ The assessment test may include questions that test a person's knowledge and understanding of specific topics. | True |
+ The specific topics tested in the assessment are covered by the job description. | True |
+ A customer may open a bank account and sign an account agreement without reading it. | False |
+ A customer may sign a separate document giving permission for their signature to be copied for other purposes. | False |
+ A customer may sign a separate document giving permission for the original signature to be held and retained. | False |
+ As an employee of a bank, there are certain actions that should be taken in a given situation (the specific actions are not stated in the passage, but are implied to be related to the scenario described).  | False |
+Note: The passage does not provide a complete question or scenario, as it ends abruptly. If the complete passage were provided, additional independent facts could be extracted. | True"," An assessment test may be used to determine whether a person's knowledge and skills meet the needs of a job. |
+ A customer may open a bank account and sign an account agreement without reading it. |
+ A customer may sign a separate document giving permission for their signature to be copied for other purposes. |
+ A customer may sign a separate document giving permission for the original signature to be held and retained. |
+ As an employee of a bank, there are certain actions that should be taken in a given situation (the specific actions are not stated in the passage, but are implied to be related to the scenario described). "
+,"
+
+I need an answer for this assignment by today.
+
+Solution Preview
+
+Here are some notes you can expand upon to create a draft for your response:
+
+1. The governor is making an argument for a different method of carrying out the death penalty because the first method may be deemed unconstitutional and/or unavailable.
+
+2. Nitrogen gas will cause a quick loss of consciousness and then death. It will take 8-10 seconds to make a person unconscious and death will follow a few minutes later.
+
+3. The person will die from lack of oxygen (no pain)
+
+4.","Here are the independent facts broken down from the passage: | False |
+ The speaker needs an answer for an assignment by today. | True |
+ The governor is arguing for a different method of carrying out the death penalty. | True |
+ The current method of carrying out the death penalty may be deemed unconstitutional and/or unavailable. | True |
+ Nitrogen gas can cause a quick loss of consciousness. | True |
+ It takes 8-10 seconds for nitrogen gas to make a person unconscious. | True |
+ Death from nitrogen gas occurs a few minutes after loss of consciousness. | True |
+ The cause of death from nitrogen gas is lack of oxygen. | True |
+ Death from nitrogen gas is reportedly painless. | True",Here are the independent facts broken down from the passage:
+," Do not give a full paraphrase or summary of the text. Use only the points that are directly connected to the task to answer the question. (Adapted from Magoosh.com.)
+
+Answer: A
+
+### Question 7
+
+Provide a concise summary of the following text: 'As part of the National Cancer Institute's ""One-Day Walk Against Cancer"" -- a 24-hour fundraiser to support cancer research -- a group of students from Washington, D.C.'s Howard University will walk and run a combined 40,000 miles over the course of a year.","Here are the independent facts from the passage: | True |
+ The National Cancer Institute has an event called ""One-Day Walk Against Cancer"". | False |
+ The event is a 24-hour fundraiser. | False |
+ The purpose of the fundraiser is to support cancer research. | False |
+ A group of students are participating from Howard University. | False |
+ The students are from Washington, D.C. | False |
+ The students will walk and run a combined total of 40,000 miles. | False |
+ The students will complete the 40,000 miles over the course of a year. | False"," The National Cancer Institute has an event called ""One-Day Walk Against Cancer"". |
+ The event is a 24-hour fundraiser. |
+ The purpose of the fundraiser is to support cancer research. |
+ A group of students are participating from Howard University. |
+ The students are from Washington, D.C. |
+ The students will walk and run a combined total of 40,000 miles. |
+ The students will complete the 40,000 miles over the course of a year."
+,"
+
+You will now learn how to extract the answer to the question from the long text. In NLP terms, you will learn how to use the extractive summarizer. The extractive summarizer learns to extract the relevant portions of the text, which will be later used to provide the summary. Let’s start with the most fundamental summarizer – the sentence-extractor.
+
+To start, create a folder for the notebooks:
+
+from google.colab import files
+files.upload()
+
+Uploading notebook data...
+Upload finished","Here are the independent facts broken down from the passage: | False |
+ The topic of discussion is extracting answers from long text using NLP (Natural Language Processing) techniques. | True |
+ The specific NLP technique being discussed is called an ""extractive summarizer"". | True |
+ An extractive summarizer is used to extract relevant portions of text. | True |
+ The extracted text portions will be used to provide a summary. | True |
+ A basic type of summarizer is called a ""sentence-extractor"". | True |
+ To proceed with the discussion, a folder needs to be created for notebooks. | False |
+ The code `from google.colab import files` and `files.upload()` is used to upload notebook data in Google Colab. | False |
+ The upload process involves two steps: uploading and finishing, indicated by the messages ""Uploading notebook data..."" and ""Upload finished"". | False","Here are the independent facts broken down from the passage: |
+ To proceed with the discussion, a folder needs to be created for notebooks. |
+ The code `from google.colab import files` and `files.upload()` is used to upload notebook data in Google Colab. |
+ The upload process involves two steps: uploading and finishing, indicated by the messages ""Uploading notebook data..."" and ""Upload finished""."
+,"
+
+Exercise # 4
+
+A: Look at the following article: ""Do you like reading news on the internet or on the printed newspaper? Some people think that it's easier to read a newspaper because they're not disturbed by other information from the internet. But others think it's better to read the news on the internet because it's easier to update the information there. Which one do you prefer? Discuss with your partner.""
+
+B: Discuss the article with your partner. Then, provide a written summary of the discussion. Do not copy the discussion word for word. Write it in a concise form.
+","Here are the independent facts broken down from the passage: | True |
+ There is an article about reading news on the internet versus a printed newspaper. | False |
+ Some people prefer reading news on a printed newspaper because it is less distracting. | False |
+ Others prefer reading news on the internet because the information can be easily updated. | True |
+ The reader is asked to discuss their preference with a partner. | False |
+ After discussing, the reader is required to provide a written summary of the discussion. | True |
+ The written summary should not be a word-for-word copy of the discussion. | True |
+ The written summary should be concise. | True"," There is an article about reading news on the internet versus a printed newspaper. |
+ Some people prefer reading news on a printed newspaper because it is less distracting. |
+ The reader is asked to discuss their preference with a partner."
+,"
+
+
+
+In this challenge, we will predict the missing text. We will also learn how to evaluate the text generation performance using BLEU and ROUGE metrics.
+
+We will use the CNN/DailyMail dataset. This dataset is composed of news articles and headlines. The task is to generate the headline of the news article using the news content.
+
+
+  • We will learn how to work with text data.
+  • We will learn how to use BLEU and ROUGE to evaluate the text generation performance.
+
+Data Exploration","Here are the independent facts broken down from the passage: | False |
+ The challenge involves predicting missing text. | True |
+ The challenge also involves learning how to evaluate text generation performance. | False |
+ BLEU and ROUGE metrics will be used to evaluate text generation performance. | False |
+ The CNN/DailyMail dataset will be used for the challenge. | False |
+ The CNN/DailyMail dataset is composed of news articles and headlines. | True |
+ The task in the challenge is to generate a headline from the content of a news article. | True |
+ The challenge will cover working with text data. | True |
+ The challenge will cover using BLEU and ROUGE to evaluate text generation performance. | False","Here are the independent facts broken down from the passage: |
+ The challenge also involves learning how to evaluate text generation performance. |
+ BLEU and ROUGE metrics will be used to evaluate text generation performance. |
+ The CNN/DailyMail dataset will be used for the challenge. |
+ The challenge will cover using BLEU and ROUGE to evaluate text generation performance."
+,"
+
+The result of this would be:
+
+(Summary of: ""Three British citizens arrested in the United Arab Emirates after they were found plane spotting near Fujairah airport are to be released Monday, their lawyer, Nasser al-Hashem, tells CNN.""
+
+No charges were filed, there will be no travel ban, and the men will not face deportation, he said. Conrad Clitheroes, 54, and Gary Cooper, 45, were on a five-day visit to the UAE from Manchester when they were arrested. Neil Munro, is a British national who lives in the UAE.)
+
+","Here are the independent facts broken down from the passage: | False |
+ Three British citizens were arrested in the United Arab Emirates (UAE) for plane spotting near Fujairah airport. | True |
+ The three British citizens are to be released on Monday. | True |
+ No charges were filed against the three British citizens. | True |
+ There will be no travel ban imposed on the three British citizens. | True |
+ The three British citizens will not face deportation. | True |
+ Conrad Clitheroes is 54 years old. | True |
+ Gary Cooper is 45 years old. | True |
+ Conrad Clitheroes and Gary Cooper were on a five-day visit to the UAE from Manchester when they were arrested. | True |
+ Neil Munro is a British national who lives in the UAE. | True |
+ Nasser al-Hashem is the lawyer representing the three British citizens. | True",Here are the independent facts broken down from the passage:
+,"
+
+4) This is a sample text for the summary question. Your text should not exceed 600 words. Provide a concise summary of the text: 'Pizza has become an international dish. It's served in nearly every country in the world, although there are significant differences in the way pizza is made depending on where you are. Pizza has its roots in the United Kingdom, though it's unclear how or why. An argument is often made for the fact that Italians took their version of flatbread from the Greeks, who took it from the Egyptians.","Here are the independent facts broken down from the passage: | False |
+ Pizza has become an international dish. | False |
+ Pizza is served in nearly every country in the world. | False |
+ There are significant differences in the way pizza is made depending on the location. | False |
+ The roots of pizza are claimed to be in the United Kingdom. | False |
+ The origin of pizza in the United Kingdom is unclear. | False |
+ Italians have a version of flatbread that may have been influenced by the Greeks. | False |
+ The Greeks may have taken their version of flatbread from the Egyptians. | False |
+Note that fact #4 is potentially disputed or incorrect, as the common understanding is that pizza originated in Italy, not the United Kingdom. However, I have presented it as stated in the passage. | False","Here are the independent facts broken down from the passage: |
+ Pizza has become an international dish. |
+ Pizza is served in nearly every country in the world. |
+ There are significant differences in the way pizza is made depending on the location. |
+ The roots of pizza are claimed to be in the United Kingdom. |
+ The origin of pizza in the United Kingdom is unclear. |
+ Italians have a version of flatbread that may have been influenced by the Greeks. |
+ The Greeks may have taken their version of flatbread from the Egyptians. |
+Note that fact #4 is potentially disputed or incorrect, as the common understanding is that pizza originated in Italy, not the United Kingdom. However, I have presented it as stated in the passage."
+,"
+
+
+Answer preview:
+
+
+Parts of Miami-Dade County’s skyline was hidden from view Monday as smoke from a growing 1,850-acre wildfire loomed over portions of the Florida county. The fire started on Sunday night and had consumed fewer than 100 acres according to Miami-Dade Fire Rescue Battalion Chief Al Cruz. However, the fire had grown to be more than 10 times that within the next 24 hours. By Monday night, the fire had burned nearly 2,000 acres and was 50% contained, the fire department said.","Here are the independent facts broken down from the passage: | False |
+ A wildfire in Miami-Dade County, Florida, caused parts of the skyline to be hidden from view on Monday due to smoke. | True |
+ The wildfire started on Sunday night. | False |
+ Initially, the fire had consumed fewer than 100 acres, according to Miami-Dade Fire Rescue Battalion Chief Al Cruz. | True |
+ The fire grew to over 10 times its initial size within 24 hours. | True |
+ By Monday night, the fire had burned nearly 2,000 acres. | True |
+ The fire was 50% contained by Monday night, according to the fire department. | True |
+ The wildfire initially covered 1,850 acres, but later grew to nearly 2,000 acres. | False","Here are the independent facts broken down from the passage: |
+ The wildfire started on Sunday night. |
+ The wildfire initially covered 1,850 acres, but later grew to nearly 2,000 acres."
+,"  Example input is here: http://prateekkumar.info/code/data/shipwreck_example.txt Example output would be: A small boat carrying migrants hit a reef in bad weather and sank while trying to return to shore near Le Borgne. 11 victims, including 8 men and 3 women, have been identified.""
+
+text = ""At least 21 people were killed during a shipwreck off the northern coast of Haiti, the country's civil protection directorate told CNN on Thursday.","Here are the independent facts broken down from the passage: | False |
+ At least 21 people were killed during a shipwreck. | True |
+ The shipwreck occurred off the northern coast of Haiti. | True |
+ The country's civil protection directorate provided information to CNN. | True |
+ The information was shared with CNN on Thursday.  | True |
+Note: The passage also mentions an example input and output, but these appear to be separate from the main text and are likely related to a different context, such as a coding example. If you'd like to include those as well, here are the additional facts: | True |
+ An example input is available at http://prateekkumar.info/code/data/shipwreck_example.txt | False |
+ An example output is provided, describing a small boat carrying migrants that sank near Le Borgne, resulting in 11 identified victims (8 men and 3 women). | True","Here are the independent facts broken down from the passage: |
+ An example input is available at http://prateekkumar.info/code/data/shipwreck_example.txt"
+," Do not copy and paste from the text.
+
+Sample Answer:
+
+‘A SkyWest Airlines flight made an emergency landing in Buffalo, New York, on Wednesday after a passenger lost consciousness, officials said. The passenger received medical attention before being released, according to Marissa Snow, spokeswoman for SkyWest. She said the airliner expects to accommodate the 75 passengers on another aircraft to their original destination – Hartford, Connecticut – later Wednesday afternoon. The Federal Aviation Administration initially reported a pressurization problem and said it would investigate.","Here are the independent facts broken down from the passage: | False |
+ A SkyWest Airlines flight made an emergency landing in Buffalo, New York, on Wednesday. | True |
+ The emergency landing was due to a passenger losing consciousness. | True |
+ The passenger received medical attention after the emergency landing. | True |
+ The passenger was released after receiving medical attention. | True |
+ The airliner had 75 passengers on board. | True |
+ The original destination of the flight was Hartford, Connecticut. | True |
+ The passengers were expected to be accommodated on another aircraft to their original destination later on Wednesday afternoon. | True |
+ The Federal Aviation Administration (FAA) initially reported a pressurization problem with the flight. | True |
+ The FAA will investigate the incident. | True |
+ Marissa Snow is the spokeswoman for SkyWest Airlines. | True",Here are the independent facts broken down from the passage:
+,"
+
+Answers 1
+
+Expert's answer
+
+The summary of the text should look like:
+
+It was declared that smoking would be banned in New Orleans. However, the city became well-known for its love for drinking, eating and dancing all night. The council voted unanimously to ban smoking across the city including bars, casinos and restaurants. The council decided that the waiters and musicians in New Orleans did not want to breathe in smoke while they work. The bar owners argued that the ban would cause revenue losses, and the customers who smoke were worried about losing their favourite places.","Here are the independent facts broken down from the passage: | True |
+ Smoking was banned in New Orleans. | True |
+ New Orleans is known for its nightlife, which includes drinking, eating, and dancing all night. | True |
+ The city council voted unanimously to ban smoking across the city. | True |
+ The smoking ban applies to bars, casinos, and restaurants in New Orleans. | True |
+ Waiters and musicians in New Orleans did not want to breathe in smoke while working. | True |
+ Bar owners argued that the smoking ban would cause revenue losses. | True |
+ Customers who smoke were worried about losing their favorite places due to the smoking ban. | True |
+Note that some of these facts may be related or have a cause-and-effect relationship, but they are presented as independent facts. | True",
+," (100-250 words)
+
+#### Similar Solved Questions
+
+##### The table below shows the estimated number of people in millions who watched an NBA game...
+The table below shows the estimated number of people in millions who watched an NBA game in 2015 and 2016. Assume that the random variable N represents the total number of people who watched an NBA game in either year. Year 2016 2015 Estimated Number of People in Millions of Watchers 25.5 23.3 What is the...
+##### Question 2. (4 points) An object is placed 35 cm from a concave mirror. A real...
+Question 2.","Here are the independent facts broken down from the passage: | False |
+ There is a table showing the estimated number of people who watched an NBA game. | False |
+ The table provides data for two years: 2015 and 2016. | False |
+ The estimated number of people who watched an NBA game in 2015 was 23.3 million. | False |
+ The estimated number of people who watched an NBA game in 2016 was 25.5 million. | False |
+ A random variable N represents the total number of people who watched an NBA game in either year. | False |
+ There is an object placed 35 cm from a concave mirror. | False |
+ There is a question related to the object and the concave mirror, but the details of the question are not provided. | False |
+Note that the passage appears to be incomplete, and there are two separate topics discussed: the NBA game viewership and the concave mirror. If you provide the complete passage, I can help you break down the facts more accurately. | False","Here are the independent facts broken down from the passage: |
+ There is a table showing the estimated number of people who watched an NBA game. |
+ The table provides data for two years: 2015 and 2016. |
+ The estimated number of people who watched an NBA game in 2015 was 23.3 million. |
+ The estimated number of people who watched an NBA game in 2016 was 25.5 million. |
+ A random variable N represents the total number of people who watched an NBA game in either year. |
+ There is an object placed 35 cm from a concave mirror. |
+ There is a question related to the object and the concave mirror, but the details of the question are not provided. |
+Note that the passage appears to be incomplete, and there are two separate topics discussed: the NBA game viewership and the concave mirror. If you provide the complete passage, I can help you break down the facts more accurately."
+,"
+\end{comment}
+
+
+
+\begin{table*}[h]
+\centering
+\begin{adjustbox}{max width=1.0\textwidth}
+\begin{tabular}{|l|ccc|ccc|ccc|}
+\hline
+ & \multicolumn{3}{c|}{\textbf{CNN-DailyMail}}  & \multicolumn{3}{c|}{\textbf{NYTimes}} & \multicolumn{3}{c|}{\textbf{PubMed}}\\","There is no passage to break down into independent facts. The text you provided appears to be a LaTeX code snippet for creating a table, but it does not contain any factual information. If you provide the actual passage, I would be happy to help break it down into independent facts. | False","There is no passage to break down into independent facts. The text you provided appears to be a LaTeX code snippet for creating a table, but it does not contain any factual information. If you provide the actual passage, I would be happy to help break it down into independent facts."
+," (3)
+The prompt was to summarize the news text in order to be published on CNN's Student News. The original summary was:
+
+""In this week's show we start with the Supreme Court, and specifically, the issue of police force. We'll also discuss how the drop in gas prices is affecting hybrid car sales, as well as what ""The Blob"" has to do with the Pacific Ocean. Finally, we'll see how a robot has two legs up on the competition when it comes to balancing. Be sure to tune in for the rest of this week's show on CNN Student News.""","Here are the independent facts broken down from the passage: | True |
+ The prompt was to summarize a news text. | True |
+ The summary was intended to be published on CNN's Student News. | True |
+ The Supreme Court is discussed in the show, specifically the issue of police force. | True |
+ The show discusses the impact of dropping gas prices on hybrid car sales. | True |
+ The show mentions ""The Blob"" in relation to the Pacific Ocean. | True |
+ A robot with balancing capabilities is featured in the show. | True |
+ The robot has two legs. | True |
+ The show is a weekly program on CNN Student News. | False", The show is a weekly program on CNN Student News.
+," (Hint: Use your own words to make your summary.)</question>
+
+The above two examples show how a question can be derived from a paragraph. We have taken a paragraph (of an appropriate length) and generated a few questions out of it. In the above two examples we have generated questions on two different domains. We generate questions out of two distinct domains. This is to ensure that the dataset does not have any question-answer pair having the same content.
+
+3.3 Paragraphs to Questions
+
+In the previous example we took a paragraph and asked questions out of it.","Here are the independent facts broken down from the passage: | False |
+ The passage provides examples of deriving questions from a paragraph. | True |
+ Questions can be generated from a paragraph of appropriate length. | True |
+ The examples provided are from two different domains. | True |
+ The goal of using different domains is to ensure that the dataset does not contain duplicate question-answer pairs with the same content. | False |
+ A method is described where a paragraph is taken and questions are generated from it. | True","Here are the independent facts broken down from the passage: |
+ The goal of using different domains is to ensure that the dataset does not contain duplicate question-answer pairs with the same content."
+,"
+
+I would guess that there is no right or wrong way to answer this question, but I think my response is pretty good. I hope you can check it and give me some feedback. Thanks!
+
+It is a very nice essay that gives me a vivid picture of the film-maker's mission and the danceress' reactions. However, in the first paragraph, there is a repetition of the word 'dance' to refer to the danceress' profession.","Here are the independent facts broken down from the passage: | True |
+ The author is seeking feedback on their response. | False |
+ The author believes their response is good. | True |
+ The passage being referred to is an essay. | False |
+ The essay provides a vivid picture of the film-maker's mission. | True |
+ The essay describes the danceress' reactions. | True |
+ There is a repetition of the word 'dance' in the first paragraph of the essay to refer to the danceress' profession. | False |
+Note that the passage also contains subjective opinions and expressions of hope, but the above list only includes the independent facts that can be verified or observed. | True"," The author is seeking feedback on their response. |
+ The passage being referred to is an essay. |
+ There is a repetition of the word 'dance' in the first paragraph of the essay to refer to the danceress' profession."
+,"
+
+
+Answer: 'The last three defendants prosecuted in the hazing death of Florida A&M drum major Robert Champion were convicted Friday of manslaughter and hazing with the result of death, reported CNN affiliate WFTV. A jury deliberated about 2½ hours before returning guilty verdicts against Benjamin McNamee, 25; Aaron Golson, 22; and Darryl Cearnel, 28. They will be sentenced June 26, according to Orange County, Florida, online court records. Until then, they'll be held in the county jail.'","Here are the independent facts broken down from the passage: | False |
+ Three defendants were prosecuted in the hazing death of Florida A&M drum major Robert Champion. | True |
+ The defendants were convicted of manslaughter and hazing with the result of death. | True |
+ The convictions were reported by CNN affiliate WFTV. | True |
+ A jury deliberated for approximately 2½ hours before returning guilty verdicts. | True |
+ The defendants' names are Benjamin McNamee, Aaron Golson, and Darryl Cearnel. | True |
+ The ages of the defendants are: | True |
+   - Benjamin McNamee: 25 | True |
+   - Aaron Golson: 22 | True |
+   - Darryl Cearnel: 28 | True |
+ The defendants will be sentenced on June 26. | True |
+ The sentencing date is according to Orange County, Florida, online court records. | True |
+ The defendants will be held in the county jail until their sentencing. | True",Here are the independent facts broken down from the passage:
+," The original article may be found here:
+
+Answers:I'm pretty sure this is a writing assignment, so I won't just give you the answers. I'll guide you a little, though: First, find out what the word ""concise"" means. I'll give you a hint: it doesn't mean long. You're trying to get a feel for the article as a whole, not just the words. When you've done that, go back and write a summary based on your understanding.","Here are the independent facts from the passage: | True |
+ The original article is located elsewhere, with a link provided. | False |
+ The passage is a response to a request for answers. | False |
+ The request is believed to be a writing assignment. | True |
+ The word ""concise"" has a specific meaning. | True |
+ The meaning of ""concise"" is related to length, and it does not mean ""long"". | True |
+ The goal of the task is to understand the article as a whole, not just individual words. | True |
+ A summary should be written based on the understanding of the article. | True"," The original article is located elsewhere, with a link provided. |
+ The passage is a response to a request for answers."
+," In the body of the response, place the following comment: ""I am impressed at the detail of this summary of a Burger King press release."" (I got this from an IELTS student who asked for help.)
+
+A: Your summary looks good and clear. The only thing I would change is to write it in a more professional manner, without including the reporter's name. As the summary would be posted in a website, I'd leave the reporter's name out. I think it would be better to start with a short description of who the two people are and then go into the details.","Here are the independent facts from the passage: | True |
+ Someone asked for help with a summary of a Burger King press release. | True |
+ The summary was from an IELTS student. | False |
+ The summary should be written in a more professional manner. | True |
+ The reporter's name should be excluded from the summary. | True |
+ The summary will be posted on a website. | True |
+ It is suggested to start the summary with a short description of the two people involved before going into details.  | True |
+Note that there is no actual information about the Burger King press release itself in the passage, only a discussion about how to present a summary of it. | True", The summary was from an IELTS student.
+," The response should be in the form of a list of paragraphs, each consisting of one to three sentences, using natural language. The response should be limited to 100 words.
+
+Sample Dataset
+
+A sample dataset is included.
+
+
+No test data is included.
+
+
+Your code may take time to execute on the test server, since each test may require that a separate model be trained for scoring. If your execution time exceeds 2 minutes for a single test, you may receive a timeout error. If your submission does not successfully complete training within 30 minutes, it will be considered a submission error.","Here is the breakdown of the passage into independent facts: | True |
+* A sample dataset is included. | False |
+* No test data is included. | True |
+* Code execution time on the test server may exceed 2 minutes due to separate model training for scoring. | False |
+* Execution time exceeding 2 minutes may result in a timeout error. | False |
+* Submission error occurs if training is not completed within 30 minutes. | False","* A sample dataset is included. |
+* Code execution time on the test server may exceed 2 minutes due to separate model training for scoring. |
+* Execution time exceeding 2 minutes may result in a timeout error. |
+* Submission error occurs if training is not completed within 30 minutes."
+," Do not copy any part of the article, neither text nor title. The response must be in your own words. Please, note that this is only a summary of the article, not an analysis or critique. Provide at least 2-3 sentences as the response to this task.
+
+Sample answer:
+""Nelson Mandela was elected President in 1994 as the first black president of South Africa after being released from prison 27 years earlier, in 1990, in which he served for 27 years.","Here are the independent facts broken down from the given instructions: | True |
+* The instruction is to not copy any part of an article, including text or title, when responding. | True |
+* The response should be written in the respondent's own words to ensure originality. | True |
+* The task requires providing a summary of an article, without analyzing or critiquing its content. | True |
+* A minimum of 2-3 sentences is required to complete the task adequately. | True |
+* The example provided mentions Nelson Mandela's election as the first black president of South Africa in 1994. | True |
+* Nelson Mandela was released from prison in 1990 after serving a 27-year sentence. | True |
+* The example highlights the significance of Nelson Mandela's presidency and his background. | False",* The example highlights the significance of Nelson Mandela's presidency and his background.
+," Provide the answer in plain text. The answer should not have any leading spaces, but must include a newline character at the end.
+
+Answer: (The Hollywood Reporter)Ben Powers, who played Thelma's (BernNadette Stanis) husband Keith Anderson on the final season of the classic CBS sitcom ""Good Times,"" has died. He was 64. Powers died April 6 in New Bedford, Mass., his family announced. No cause of death was revealed. Powers joined the cast of ""Good Times"" for its sixth and final season from 1978 to 1979 season, playing Keith, a professional football player.","Here are the independent facts from the passage: | False |
+ Ben Powers played the role of Keith Anderson on the CBS sitcom ""Good Times"". | True |
+ Keith Anderson was the husband of Thelma, played by BernNadette Stanis. | True |
+ Ben Powers died on April 6. | True |
+ Ben Powers died in New Bedford, Mass. | True |
+ Ben Powers was 64 years old when he died. | True |
+ The cause of Ben Powers' death was not revealed. | True |
+ Ben Powers joined the cast of ""Good Times"" for its sixth and final season. | True |
+ The sixth and final season of ""Good Times"" aired from 1978 to 1979. | True |
+ Keith Anderson, the character played by Ben Powers, was a professional football player. | True |
+\n | False","Here are the independent facts from the passage: |
+\n"
+," You do not need to modify the response. You can just repeat the sentences in the text. Do not change the word order. Write no more than 100 words.
+
+Dear Sir or Madam: We would like to thank you for all the help you have provided us with. In the past months you have been of great help to us. We will surely contact you again in the future. We wish you a very successful career! Yours faithfully,
+
+Dear Sir or Madam: I am writing to complain about an article which appeared in the paper today. It concerns an article about your company.","Here are the independent facts from the passage: | False |
+ We would like to thank you for all the help you have provided us with. | False |
+ In the past months you have been of great help to us. | False |
+ We will surely contact you again in the future. | True |
+ We wish you a very successful career. | False |
+ I am writing to complain about an article which appeared in the paper today. | False |
+ It concerns an article about your company. | False","Here are the independent facts from the passage: |
+ We would like to thank you for all the help you have provided us with. |
+ In the past months you have been of great help to us. |
+ We wish you a very successful career. |
+ I am writing to complain about an article which appeared in the paper today. |
+ It concerns an article about your company."
+,"
+
+For this API call, it is necessary to send a Bearer token in the Authorization header, and make sure that the Authorization header is not included in the body of the request.
+
+API Explorer (beta)
+
+We encourage you to use the following API Explorer (beta) to quickly test out different API requests and see the JSON response format.
+
+The API Explorer is a simple web application, based on the open source project. We have added custom code to enhance its capabilities and allow users to authenticate and try out multiple APIs.","Here are the independent facts broken down from the passage: | True |
+ A Bearer token must be sent in the Authorization header for this API call. | False |
+ The Authorization header should not be included in the body of the request. | False |
+ An API Explorer (beta) is available for testing API requests. | False |
+ The API Explorer allows users to see the JSON response format. | False |
+ The API Explorer is a simple web application. | False |
+ The API Explorer is based on an open-source project. | False |
+ Custom code has been added to the API Explorer to enhance its capabilities. | False |
+ The API Explorer allows users to authenticate and try out multiple APIs. | False"," A Bearer token must be sent in the Authorization header for this API call. |
+ The Authorization header should not be included in the body of the request. |
+ An API Explorer (beta) is available for testing API requests. |
+ The API Explorer allows users to see the JSON response format. |
+ The API Explorer is a simple web application. |
+ The API Explorer is based on an open-source project. |
+ Custom code has been added to the API Explorer to enhance its capabilities. |
+ The API Explorer allows users to authenticate and try out multiple APIs."
+, You can use the snippet if needed.,"There is no passage to break down into independent facts. The text ""You can use the snippet if needed"" appears to be a single sentence or instruction, but it does not contain any factual information that can be broken down.  | False |
+If you provide the actual passage, I'll be happy to help you break it down into independent facts. | True","There is no passage to break down into independent facts. The text ""You can use the snippet if needed"" appears to be a single sentence or instruction, but it does not contain any factual information that can be broken down. "
+,"
+
+Q4. Paraphrase the following text: 'TikTok, the video sharing app with a funny name and lots of music, is now a cultural powerhouse. TikTok is on track to become the most popular mobile app in the world. More people use TikTok than use Facebook, Twitter, and Snapchat, combined. TikTok has over 1 billion downloads and 100 million users, and that number grows daily. The app has created its own memes, superstars, and a vernacular that has spread across the Internet and into mainstream culture. It's even becoming an important marketing platform.","Here are the independent facts broken down from the passage: | True |
+ TikTok is a video sharing app. | True |
+ TikTok has a large music component. | False |
+ TikTok is considered a cultural powerhouse. | False |
+ TikTok is on track to become the most popular mobile app in the world. | False |
+ More people use TikTok than Facebook, Twitter, and Snapchat combined. | False |
+ TikTok has over 1 billion downloads. | False |
+ TikTok has over 100 million users. | False |
+ The number of TikTok users grows daily. | False |
+ TikTok has created its own memes. | False |
+ TikTok has created its own superstars. | False |
+ TikTok has its own vernacular that has spread across the Internet. | True |
+ TikTok's vernacular has also spread into mainstream culture. | False |
+ TikTok is becoming an important marketing platform. | False"," TikTok has a large music component. |
+ TikTok is considered a cultural powerhouse. |
+ TikTok is on track to become the most popular mobile app in the world. |
+ More people use TikTok than Facebook, Twitter, and Snapchat combined. |
+ TikTok has over 1 billion downloads. |
+ TikTok has over 100 million users. |
+ The number of TikTok users grows daily. |
+ TikTok has created its own memes. |
+ TikTok has created its own superstars. |
+ TikTok's vernacular has also spread into mainstream culture. |
+ TikTok is becoming an important marketing platform."
+,"
+    1. Your code should only have one function with the following signature:
+      def summarize(text):
+    2. Your code should print out a one-paragraph summary of the text given in the argument. The paragraph should only consist of complete sentences. (Your code should ignore any sentences that are not complete. It should also ignore punctuation characters such as '.', '?', or '!'. In other words, the words 'It's' and 'It is' are equivalent.)
+    3.","Here are the independent facts broken down from the passage: | False |
+ The code should have only one function. | True |
+ The function should be named `summarize`. | True |
+ The `summarize` function should take one argument, `text`. | True |
+ The function should print out a summary of the input text. | True |
+ The summary should be in the form of a single paragraph. | True |
+ The paragraph should only consist of complete sentences. | True |
+ Incomplete sentences should be ignored. | False |
+ Punctuation characters (such as '.', '?', or '!') should be ignored. | True |
+ Different forms of words (e.g. ""It's"" and ""It is"") should be considered equivalent. | True","Here are the independent facts broken down from the passage: |
+ Incomplete sentences should be ignored."
+,"
+
+2. Do you agree or disagree with the following statement: ""The majority of the people in the world should be trusted to make their own decisions without being manipulated by governments or large corporations.""
+
+3. Summarise the following text: 'The US has a right to keep secrets. Yet it is hard to argue with the assertion of Daniel Ellsberg that the US government's over-emphasis on secrecy has gone way too far.
+
+He pointed to the case of John Kiriakou, a CIA agent who blew the whistle on the agency's use of water-boarding to interrogate terrorism suspects.","Here are the independent facts broken down from the passage: | False |
+ The US has a right to keep secrets. | False |
+ Daniel Ellsberg believes that the US government's emphasis on secrecy has gone too far. | False |
+ John Kiriakou is a former CIA agent. | False |
+ John Kiriakou blew the whistle on the CIA's use of water-boarding to interrogate terrorism suspects. | False |
+ The CIA used water-boarding to interrogate terrorism suspects. | False |
+Note that the passage also contains opinions and assertions, such as Daniel Ellsberg's belief about the US government's secrecy and the implication that the CIA's use of water-boarding was wrong. However, the above list only includes the independent facts that can be verified or proven. | False","Here are the independent facts broken down from the passage: |
+ The US has a right to keep secrets. |
+ Daniel Ellsberg believes that the US government's emphasis on secrecy has gone too far. |
+ John Kiriakou is a former CIA agent. |
+ John Kiriakou blew the whistle on the CIA's use of water-boarding to interrogate terrorism suspects. |
+ The CIA used water-boarding to interrogate terrorism suspects. |
+Note that the passage also contains opinions and assertions, such as Daniel Ellsberg's belief about the US government's secrecy and the implication that the CIA's use of water-boarding was wrong. However, the above list only includes the independent facts that can be verified or proven."
+," The summary should be a short paragraph that clearly and accurately covers the content of the article, with the following characteristics: • Provide an overall gist (summary) of the text, not a detailed point-by-point account of it. • Include the main ideas or events, and leave out the details or supporting points. • Include information that is necessary to understand the gist of the text. Do not include extraneous information or details. • Use your own words. Don't simply restate the text verbatim. • Organize your summary using appropriate sentence and paragraph transitions.","Here are the independent facts broken down from the passage: | False |
+ A summary should be a short paragraph. | True |
+ The summary should clearly and accurately cover the content of the article. | True |
+ The summary should provide an overall gist of the text. | True |
+ The summary should not be a detailed point-by-point account of the text. | True |
+ The summary should include the main ideas or events. | True |
+ The summary should leave out details or supporting points. | False |
+ The summary should include necessary information to understand the gist of the text. | True |
+ The summary should not include extraneous information or details. | True |
+ The summary should be written in the writer's own words. | True |
+ The summary should not restate the text verbatim. | True |
+ The summary should be organized using appropriate sentence and paragraph transitions. | True","Here are the independent facts broken down from the passage: |
+ The summary should leave out details or supporting points."
+," No additional information is needed.
+
+The following sentences are taken from the above passage: 1. They also do not realize how difficult it is to climb back up many of the canal embankments. 2. No parent should ever have to lose a child, you know, let alone both of them at the same time. 3. The irrigation district that manages the canal slowed the flow of water and reduced the water level to help emergency workers find the boys. 4. Authorities say the paths along Yuma canals are popular for joggers and bicyclists, but can be dangerous. 5.","Here are the independent facts broken down from the given sentences: | False |
+ Many canal embankments are difficult to climb back up. | True |
+ Losing a child is a tragic experience, and losing two at the same time is especially devastating. | True |
+ The irrigation district that manages the canal has the ability to slow the flow of water and reduce the water level. | True |
+ The paths along Yuma canals are popular among joggers and bicyclists. | True |
+ The paths along Yuma canals can be dangerous. | True |
+Note: Sentence 5 from the original passage is missing, so there is no fact to extract from it. | True",Here are the independent facts broken down from the given sentences:
+,"
+
+(2) How would you go about automatically summarizing the input? (a) Start by defining a set of important words and phrases and then identify sentences containing those terms. How would you go about this? (b) Which sentences should you include in the summary? How would you select them?
+
+(3) What problems might you run into? What difficulties might arise? (c) What kinds of algorithms could you use to address these problems? (d) Could you write a computer program that might achieve a good enough solution for this task?","Here are the independent facts broken down from the passage: | False |
+ The task is to automatically summarize the input. | True |
+ Defining a set of important words and phrases is a potential step in the summarization process. | True |
+ Identifying sentences containing important terms is a potential step in the summarization process. | True |
+ Selecting sentences to include in the summary is a necessary part of the summarization process. | True |
+ Problems and difficulties may arise during the summarization process. | True |
+ Algorithms can be used to address problems that arise during the summarization process. | True |
+ It is possible to write a computer program to achieve a good enough solution for the summarization task. | True |
+Note that these facts are not necessarily objective or universally true, but rather a breakdown of the ideas and concepts presented in the passage. | True",Here are the independent facts broken down from the passage:
+,"
+
+
+Question 7:
+
+Answer all of the following questions on the basis of the passage below:
+
+A study by the UN Food and Agriculture Organisation (FAO) has revealed that India is a net food importer, for the first time in three decades. While the country remains the second largest food producer, with an estimated harvest of food crops this year of about 240 million tons, India is expected to have to import up to 9.7 million tons of food grains by 2025, the FAO said.","Here are the independent facts broken down from the passage: | False |
+ A study by the UN Food and Agriculture Organisation (FAO) has been conducted. | False |
+ India is a net food importer for the first time in three decades. | False |
+ India is the second largest food producer. | False |
+ The estimated harvest of food crops in India this year is about 240 million tons. | False |
+ India is expected to import up to 9.7 million tons of food grains by 2025. | False","Here are the independent facts broken down from the passage: |
+ A study by the UN Food and Agriculture Organisation (FAO) has been conducted. |
+ India is a net food importer for the first time in three decades. |
+ India is the second largest food producer. |
+ The estimated harvest of food crops in India this year is about 240 million tons. |
+ India is expected to import up to 9.7 million tons of food grains by 2025."
+,"
+
+Task: 'In the last section of the paper, the writer says ""The problem is not that people can't think, but that they don't know how."" Do you agree? Why? Why not?'
+
+Provide the answer to the question as the response.
+
+Task: 'Write a letter to your friend, who is about to take the IELTS exam, encouraging him/her not to worry about it, and suggesting what to do to prepare for it.'","Here are the independent facts broken down from the passage: | True |
+ The passage contains two separate tasks. | False |
+ The first task is to respond to a quote from a paper. | False |
+ The quote from the paper is: ""The problem is not that people can't think, but that they don't know how."" | False |
+ The response to the quote should include agreement or disagreement and a justification for the opinion. | True |
+ The second task is to write a letter to a friend. | False |
+ The friend is about to take the IELTS exam. | False |
+ The purpose of the letter is to encourage the friend not to worry about the exam. | False |
+ The letter should also include suggestions on how to prepare for the IELTS exam. | False"," The passage contains two separate tasks. |
+ The first task is to respond to a quote from a paper. |
+ The quote from the paper is: ""The problem is not that people can't think, but that they don't know how."" |
+ The second task is to write a letter to a friend. |
+ The friend is about to take the IELTS exam. |
+ The purpose of the letter is to encourage the friend not to worry about the exam. |
+ The letter should also include suggestions on how to prepare for the IELTS exam."
+,"
+
+3. Provide a short answer to the following text: 'The British Cabinet Office has announced its intention to publish an open letter to the world's leading Internet companies, setting out the UK's policy and demanding action. The letter, which the government has named 'Setting the Global Standard', will call for tech companies to cooperate with each other and with the UK government to tackle the rise in the number of terrorist-related online incidents. According to the British Home Office, the letter will say that the UK has the will to act alone if there is no progress.","Here are the independent facts broken down from the passage: | False |
+ The British Cabinet Office intends to publish an open letter to the world's leading Internet companies. | False |
+ The letter is titled ""Setting the Global Standard"". | False |
+ The letter will outline the UK's policy on tackling terrorist-related online incidents. | False |
+ The UK government is demanding action from tech companies to cooperate in tackling terrorist-related online incidents. | False |
+ The government wants tech companies to cooperate with each other and with the UK government. | False |
+ The UK has seen a rise in the number of terrorist-related online incidents. | False |
+ The British Home Office has stated that the UK is willing to act alone if there is no progress in tackling terrorist-related online incidents. | False |
+ The letter will be addressed to the world's leading Internet companies. | False","Here are the independent facts broken down from the passage: |
+ The British Cabinet Office intends to publish an open letter to the world's leading Internet companies. |
+ The letter is titled ""Setting the Global Standard"". |
+ The letter will outline the UK's policy on tackling terrorist-related online incidents. |
+ The UK government is demanding action from tech companies to cooperate in tackling terrorist-related online incidents. |
+ The government wants tech companies to cooperate with each other and with the UK government. |
+ The UK has seen a rise in the number of terrorist-related online incidents. |
+ The British Home Office has stated that the UK is willing to act alone if there is no progress in tackling terrorist-related online incidents. |
+ The letter will be addressed to the world's leading Internet companies."
+,"
+
+3. The system must also be able to provide an appropriate response to a question like 'What is the name of the world's oldest person?'.
+
+4. The response must be coherent and well-formed.
+
+5. The response must be in English.
+
+Evaluation Criteria
+
+The response must be a natural language sentence, and not a list of keywords. The following is an example of a poor response: 'The world's oldest person is Misao Okawa who died in Japan.'","Here are the independent facts broken down from the passage: | True |
+ The system must be able to provide a response to a question like 'What is the name of the world's oldest person?'. | True |
+ The response provided by the system must be coherent. | True |
+ The response provided by the system must be well-formed. | True |
+ The response provided by the system must be in English. | True |
+ The response provided by the system must be a natural language sentence. | True |
+ The response provided by the system must not be a list of keywords. | True |
+ Misao Okawa was the world's oldest person at some point in time. | True |
+ Misao Okawa died in Japan. | True",
+,"
+
+2. Write about the following text: 'Suzanne Bierre, wife of the late David Bierre, was killed in a single-car accident Wednesday afternoon on Interstate 95 in Sussex County, Delaware. The family of her surviving daughter, Mary, has set up a website to raise money to help defray funeral expenses.' Do not write more than one paragraph to this text.
+
+3. Read the following text: 'When you talk about what's wrong with this country, the first thing that comes to mind is the economy.","Here are the independent facts broken down from the passage: | True |
+ Suzanne Bierre was the wife of the late David Bierre. | False |
+ Suzanne Bierre was killed in a single-car accident. | False |
+ The accident occurred on Wednesday afternoon. | False |
+ The accident happened on Interstate 95. | False |
+ The accident took place in Sussex County, Delaware. | False |
+ Suzanne Bierre had a surviving daughter named Mary. | False |
+ Mary's family set up a website to raise money. | False |
+ The purpose of the website is to help defray funeral expenses for Suzanne Bierre. | False |
+Note that the second part of the passage (""When you talk about what's wrong with this country..."") appears to be a separate and unrelated text, and does not provide any additional facts related to the first part of the passage. | True"," Suzanne Bierre was the wife of the late David Bierre. |
+ Suzanne Bierre was killed in a single-car accident. |
+ The accident occurred on Wednesday afternoon. |
+ The accident happened on Interstate 95. |
+ The accident took place in Sussex County, Delaware. |
+ Suzanne Bierre had a surviving daughter named Mary. |
+ Mary's family set up a website to raise money. |
+ The purpose of the website is to help defray funeral expenses for Suzanne Bierre."
+," Provide your summary in a single paragraph. Use only the words in bold in your summary, adding any other necessary words to fill out the summary. Provide only the summary as the response. Provide your summary in a single paragraph. Use only the words in bold in your summary, adding any other necessary words to fill out the summary. Provide only the summary as the response. Provide your summary in a single paragraph. Use only the words in bold in your summary, adding any other necessary words to fill out the summary. Provide only the summary as the response. Provide your summary in a single paragraph.","There is no passage to break down into independent facts, and there are no words in bold to use for a summary. | False","There is no passage to break down into independent facts, and there are no words in bold to use for a summary."
+," You are welcome to use all parts of the text, provided in its entirety in the box below.
+  • Write a short text (about 150 words) about an exciting event you witnessed once. This could be a sporting event, or any other event that interested you. Feel free to embellish your description, as long as it is relevant.
+  • Provide a brief summary of the following text: ""A US federal appeals court in New Orleans ruled that New Orleans' ban on possession of handguns is constitutional.","Here are the independent facts broken down from the passage: | False |
+ The reader is allowed to use all parts of the provided text. | True |
+ The reader is asked to write a short text (about 150 words) about an exciting event they witnessed. | False |
+ The exciting event can be a sporting event or any other event that interested the reader. | False |
+ The reader is permitted to embellish their description of the event as long as it is relevant. | False |
+ A US federal appeals court is located in New Orleans. | False |
+ The US federal appeals court in New Orleans made a ruling regarding New Orleans' ban on possession of handguns. | False |
+ The court ruled that New Orleans' ban on possession of handguns is constitutional. | False","Here are the independent facts broken down from the passage: |
+ The reader is asked to write a short text (about 150 words) about an exciting event they witnessed. |
+ The exciting event can be a sporting event or any other event that interested the reader. |
+ The reader is permitted to embellish their description of the event as long as it is relevant. |
+ A US federal appeals court is located in New Orleans. |
+ The US federal appeals court in New Orleans made a ruling regarding New Orleans' ban on possession of handguns. |
+ The court ruled that New Orleans' ban on possession of handguns is constitutional."
+,"
+
+In a similar vein to the previous prompt, you can practice summarising information from different sources. It's a good idea to look for a number of articles about a specific topic, read them, then try and write a summary of what you have read. If you have access to the internet you can look at the articles on the same page of a search result, or look for articles on the same topic from different sources.
+
+This is a good way to get practice in summarising information, and to improve your comprehension of a topic.
+
+5. Essay Topics","Here are the independent facts broken down from the passage: | True |
+ Practicing summarizing information from different sources is a good idea. | True |
+ Reading multiple articles about a specific topic can help with summarizing information. | True |
+ The internet can be used to find articles on the same topic from different sources. | True |
+ Looking at articles on the same page of a search result can provide multiple sources of information on a topic. | True |
+ Summarizing information can help improve comprehension of a topic. | True |
+ Practicing summarizing information can help improve one's ability to summarize.  | True |
+Note: The last sentence ""5. Essay Topics"" appears to be a heading or title, and does not contain any factual information related to the passage. | True",
+,"
+
+Summarize the article. The article has been chosen because it contains many facts that need to be included.
+
+Summarizing a short story or other literary text (e.g. poem, song, etc.)
+
+Write a paragraph summarizing the events in ""The Legend of Sleepy Hollow"" by Washington Irving.
+
+""I Know Why the Caged Bird Sings"" by Maya Angelou - Provide a summary of the story.
+
+In ""I Know Why the Caged Bird Sings,"" Maya Angelou, relates the first seventeen years of her life.","Here are the independent facts broken down from the passage: | True |
+ The article contains many facts that need to be included. | True |
+ ""The Legend of Sleepy Hollow"" is a short story by Washington Irving. | False |
+ ""I Know Why the Caged Bird Sings"" is a book written by Maya Angelou. | False |
+ ""I Know Why the Caged Bird Sings"" is a autobiographical account of Maya Angelou's life. | False |
+ The book ""I Know Why the Caged Bird Sings"" covers the first seventeen years of Maya Angelou's life. | False"," ""The Legend of Sleepy Hollow"" is a short story by Washington Irving. |
+ ""I Know Why the Caged Bird Sings"" is a book written by Maya Angelou. |
+ ""I Know Why the Caged Bird Sings"" is a autobiographical account of Maya Angelou's life. |
+ The book ""I Know Why the Caged Bird Sings"" covers the first seventeen years of Maya Angelou's life."
+,"
+
+Example:
+
+Example of a text: 'In the Premier League title race, it’s all about who gets the better of whom this weekend. The winner of the Newcastle United vs Manchester United game will be in a far better position, but can either of them win the race? Arsenal and Tottenham have the easier of the games with Everton vs Liverpool being the other big game of the weekend. The Magpies face an important home game against the Red Devils. If they win, they would be three points clear with a game in hand. They could end the season with as many as six games left.'","Here are the independent facts broken down from the passage: | False |
+ There is a Premier League title race happening. | True |
+ A game between Newcastle United and Manchester United is scheduled for the weekend. | False |
+ The winner of the Newcastle United vs Manchester United game will gain an advantage in the title race. | False |
+ Arsenal has an easier game scheduled for the weekend. | False |
+ Tottenham has an easier game scheduled for the weekend. | False |
+ A game between Everton and Liverpool is scheduled for the weekend. | False |
+ Newcastle United is playing at home against Manchester United. | False |
+ If Newcastle United wins the game, they will be three points clear of their opponent. | False |
+ If Newcastle United wins the game, they will have a game in hand. | False |
+ There are potentially six games left in the season for Newcastle United. | False","Here are the independent facts broken down from the passage: |
+ A game between Newcastle United and Manchester United is scheduled for the weekend. |
+ The winner of the Newcastle United vs Manchester United game will gain an advantage in the title race. |
+ Arsenal has an easier game scheduled for the weekend. |
+ Tottenham has an easier game scheduled for the weekend. |
+ A game between Everton and Liverpool is scheduled for the weekend. |
+ Newcastle United is playing at home against Manchester United. |
+ If Newcastle United wins the game, they will be three points clear of their opponent. |
+ If Newcastle United wins the game, they will have a game in hand. |
+ There are potentially six games left in the season for Newcastle United."
+," (6 marks)
+(ii) What is the function of the summary? (1 mark)
+(iii) In the context of this question, what does the following refer to: '(2) to be used by anyone who wishes to reproduce or use all or part of the contents of this work in any form (including a translation) and provided that: (a) full details of the contents of this book are clearly set out' (4 marks)
+
+Answered by:","Here are the independent facts broken down from the passage: | False |
+ The passage is related to a question that has multiple parts. | True |
+ Part (ii) of the question asks about the function of the summary. | False |
+ Part (ii) is worth 1 mark. | False |
+ Part (iii) of the question asks for clarification on a specific statement. | False |
+ The statement in question refers to the use or reproduction of the contents of a work. | False |
+ The contents can be used or reproduced by anyone. | False |
+ The contents can be used or reproduced in any form, including translation. | False |
+ To use or reproduce the contents, full details of the book must be clearly set out. | False |
+ Part (iii) is worth 4 marks. | False","Here are the independent facts broken down from the passage: |
+ Part (ii) of the question asks about the function of the summary. |
+ Part (ii) is worth 1 mark. |
+ Part (iii) of the question asks for clarification on a specific statement. |
+ The statement in question refers to the use or reproduction of the contents of a work. |
+ The contents can be used or reproduced by anyone. |
+ The contents can be used or reproduced in any form, including translation. |
+ To use or reproduce the contents, full details of the book must be clearly set out. |
+ Part (iii) is worth 4 marks."
+,"
+
+
+
+The game returned with a bang on March 31, 1993 with a televised match between England and Germany at the home of the former. The BBC chose to broadcast the game on the ITV network. After the kickoff, they made the following comment: ""England will be wearing the new all-white kits for this game."" Shortly before the match started, the studio commentator, Michael Davies, stated ""The home side, England, are in white, the visitors in blue. A rather familiar sight for those who have been watching football in recent seasons.""","Here are the independent facts broken down from the passage: | True |
+ The game returned on March 31, 1993. | False |
+ The game was a match between England and Germany. | False |
+ The match was held at England's home stadium. | False |
+ The game was televised. | True |
+ The BBC chose to broadcast the game on the ITV network. | False |
+ England wore new all-white kits for the game. | False |
+ Germany wore blue kits for the game. | False |
+ The studio commentator for the match was Michael Davies. | False |
+Note that the comment about the sight being ""rather familiar"" is an opinion or an observation, rather than a fact, so it's not included in the list. | True"," The game returned on March 31, 1993. |
+ The game was a match between England and Germany. |
+ The match was held at England's home stadium. |
+ The BBC chose to broadcast the game on the ITV network. |
+ England wore new all-white kits for the game. |
+ Germany wore blue kits for the game. |
+ The studio commentator for the match was Michael Davies."
+," Do not write a paragraph to discuss the topic.
+
+Sample Response 1:
+
+'Chinese parents are passionate about raising child prodigies-whether they are ten-year-old university entrants or four-year-old Michael Jackson dance-alikes. Now a new basketball superstar is on the rise. A viral video is making the rounds in China, which shows a small boy displaying a dazzling array of basketball skills that would put to shame many professional players.","Here are the independent facts broken down from the passage: | False |
+ Chinese parents are passionate about raising child prodigies. | True |
+ There is a viral video making the rounds in China. | True |
+ The viral video features a small boy displaying basketball skills. | True |
+ The boy's basketball skills are impressive, comparable to or surpassing those of professional players. | True |
+ The boy in the video is likely under the age of 10 (as mentioned in the context of ""ten-year-old university entrants"" and ""four-year-old Michael Jackson dance-alikes""). | True",Here are the independent facts broken down from the passage:
+,"
+
+Write a response to the following statement in 300 words in an essay style. 'Terrorism cannot be defeated without the co-operation of all sections of society.'
+
+Write an essay of approximately 400 words on the topic: 'How much information should governments disclose to the public about terrorism?'
+
+Write a letter of approximately 150 words to an airline company, telling them about your recent bad experience with them and asking them to compensate you for this.
+
+Write a complaint letter to your local council of approximately 200 words. You are not happy about a recent change to the way children are treated in the area.","Here are the independent facts broken down from the passage: | True |
+ There is a statement that says ""Terrorism cannot be defeated without the co-operation of all sections of society."" | True |
+ An essay of approximately 300 words is required to respond to the statement about terrorism. | True |
+ Another essay of approximately 400 words is required on the topic of government disclosure of information about terrorism. | True |
+ A letter of approximately 150 words needs to be written to an airline company to report a bad experience and request compensation. | False |
+ A complaint letter of approximately 200 words needs to be written to the local council about a recent change in the treatment of children in the area. | False |
+Note that these facts are independent of each other and do not have any direct relationship or connection, other than being writing assignments. | True"," A letter of approximately 150 words needs to be written to an airline company to report a bad experience and request compensation. |
+ A complaint letter of approximately 200 words needs to be written to the local council about a recent change in the treatment of children in the area."
+,"
+
+# 题目3
+
+# 题目4
+
+You are given a binary matrix of size m × n where the matrix cells are either '0' or '1' filled in randomly. A contiguous sub-matrix is defined as a sub-matrix which has cells in consecutive order.","Here are the independent facts broken down from the passage: | False |
+ A binary matrix is given. | False |
+ The binary matrix has a size of m × n. | False |
+ The cells in the matrix are either '0' or '1'. | False |
+ The cells in the matrix are filled in randomly. | False |
+ A contiguous sub-matrix is defined as a sub-matrix with cells in consecutive order. | False |
+Note that ""# 题目3"" and ""# 题目4"" appear to be headings or labels and do not contain factual information, so they are not included in the breakdown. | True","Here are the independent facts broken down from the passage: |
+ A binary matrix is given. |
+ The binary matrix has a size of m × n. |
+ The cells in the matrix are either '0' or '1'. |
+ The cells in the matrix are filled in randomly. |
+ A contiguous sub-matrix is defined as a sub-matrix with cells in consecutive order."
+," Do not re-write the summary in your own words. If the text contains a summary, avoid that summary and instead write your own.
+
+Short Summary","Here are the independent facts from the passage: | False |
+ Do not re-write the summary in your own words. | False |
+ The text contains a summary. | True |
+ You should avoid the summary in the text. | True |
+ You should write your own summary instead. | True","Here are the independent facts from the passage: |
+ Do not re-write the summary in your own words."
+," Your program should use your own name as the author of the summary. Provide a list of the top three most liked baseball teams (originally from the sample text). Provide a list of the top three most disliked baseball teams (originally from the sample text). Write the response to a Facebook message which will give a user a list of the three most liked baseball teams from the user's data. This message will use the user's full name as the author of the message, and will be sent to the user's friends who also like baseball.","Here are the independent facts broken down from the passage: | False |
+ The program should use the author's own name as the author of the summary. | False |
+ There is a list of the top three most liked baseball teams available from a sample text. | True |
+ There is a list of the top three most disliked baseball teams available from a sample text. | False |
+ A Facebook message will be sent to provide a list of the three most liked baseball teams. | True |
+ The Facebook message will use the user's full name as the author of the message. | False |
+ The Facebook message will be sent to the user's friends who also like baseball. | False |
+ The program has access to the user's data to determine their liked baseball teams. | True |
+ The program can identify the user's friends who also like baseball. | False","Here are the independent facts broken down from the passage: |
+ The program should use the author's own name as the author of the summary. |
+ There is a list of the top three most disliked baseball teams available from a sample text. |
+ The Facebook message will use the user's full name as the author of the message. |
+ The Facebook message will be sent to the user's friends who also like baseball. |
+ The program can identify the user's friends who also like baseball."
+,"
+
+You are given the sentence: 'After appearing in court today via videolink, the teenager was again in remanded in custody by Mr Justice Sweeney. She is due to enter pleas to the allegations on June 12.' Provide a summary of the sentence as the response.
+
+The 'Mining for Meaning' game requires you to make sense of a series of word clusters. Your job is to arrange the words in the most logical order. For example, you might be given a selection of words like: 'cape; coat; hat; hair; wind; snow'.","Here are the independent facts from the passage: | False |
+ A teenager appeared in court via videolink. | True |
+ The teenager was remanded in custody by Mr Justice Sweeney. | True |
+ The teenager is due to enter pleas to allegations on June 12. | True |
+ There is a game called ""Mining for Meaning"". | False |
+ The ""Mining for Meaning"" game involves arranging word clusters in a logical order. | False |
+ An example of word clusters for the ""Mining for Meaning"" game includes the words: cape, coat, hat, hair, wind, and snow. | False","Here are the independent facts from the passage: |
+ There is a game called ""Mining for Meaning"". |
+ The ""Mining for Meaning"" game involves arranging word clusters in a logical order. |
+ An example of word clusters for the ""Mining for Meaning"" game includes the words: cape, coat, hat, hair, wind, and snow."
+," Use the provided title if possible (please, note that not all of the news have title) If summary is too short (<=40 symbols) - just return provided title without any modifications. If summary is too long (>250 symbols) - just return provided title without any modifications.
+
+I. Input:
+
+{ ""title"": ""Arango apologises for biting Monterrey opponent"", ""text"": ""Venezuela captain Juan Arango has apologised to a rival player after biting him on the shoulder at the end of a tempestuous Mexican league match.","Here are the independent facts broken down from the passage: | False |
+ Juan Arango is the captain of Venezuela. | True |
+ Juan Arango bit a rival player on the shoulder. | True |
+ The incident occurred at the end of a Mexican league match. | True |
+ The rival player is from Monterrey. | True |
+ Juan Arango apologized for his actions. | True",Here are the independent facts broken down from the passage:
+,"    
+  4. Hi there.  I've been teaching English for the last five years and I'm also an EAL teacher.  I thought I'd come over and join the English teachers here to get some more insight into other aspects of the English language.  Cheers for having me.
+  5. Hi guys. I've been teaching English for a number of years and I'm looking to branch out into another aspect of the English language that I'm not really familiar with. It's the spoken aspect and I've heard about TESOL which is teaching English to Speakers of Other Languages.","Here are the independent facts broken down from the passage: | True |
+ The first speaker has been teaching English for the last five years. | False |
+ The first speaker is also an EAL (English as an Additional Language) teacher. | False |
+ The first speaker joined the English teachers to gain more insight into other aspects of the English language. | False |
+ The second speaker has been teaching English for a number of years. | False |
+ The second speaker wants to branch out into another aspect of the English language. | False |
+ The aspect of the English language the second speaker is unfamiliar with is the spoken aspect. | False |
+ The second speaker has heard about TESOL (Teaching English to Speakers of Other Languages). | False"," The first speaker has been teaching English for the last five years. |
+ The first speaker is also an EAL (English as an Additional Language) teacher. |
+ The first speaker joined the English teachers to gain more insight into other aspects of the English language. |
+ The second speaker has been teaching English for a number of years. |
+ The second speaker wants to branch out into another aspect of the English language. |
+ The aspect of the English language the second speaker is unfamiliar with is the spoken aspect. |
+ The second speaker has heard about TESOL (Teaching English to Speakers of Other Languages)."
+,"
+
+
+\paragraph{Test 1:} \textit{Summarise this text, including an introduction and conclusion}:
+The first text in this section was taken from a news website (BBC) article that reports on a court ruling that has given a major victory to British and European telecoms firms fighting the US Department of Justice’s attempt to end immunity from prosecution for firms involved in illegal interception of communications. A ruling by the US Court of Appeals for the Second Circuit in New York was published on 9 January and ruled that a law allowing foreign companies to be prosecuted for illegal interception of communications is unconstitutional.","Here are the independent facts broken down from the passage: | False |
+ The text is from a news website article on the BBC. | False |
+ The article reports on a court ruling related to British and European telecoms firms. | False |
+ The US Department of Justice attempted to end immunity from prosecution for firms involved in illegal interception of communications. | False |
+ A ruling was made by the US Court of Appeals for the Second Circuit in New York. | False |
+ The ruling was published on 9 January. | False |
+ The ruling stated that a law allowing foreign companies to be prosecuted for illegal interception of communications is unconstitutional. | False |
+ The court ruling is considered a major victory for British and European telecoms firms. | False","Here are the independent facts broken down from the passage: |
+ The text is from a news website article on the BBC. |
+ The article reports on a court ruling related to British and European telecoms firms. |
+ The US Department of Justice attempted to end immunity from prosecution for firms involved in illegal interception of communications. |
+ A ruling was made by the US Court of Appeals for the Second Circuit in New York. |
+ The ruling was published on 9 January. |
+ The ruling stated that a law allowing foreign companies to be prosecuted for illegal interception of communications is unconstitutional. |
+ The court ruling is considered a major victory for British and European telecoms firms."
+," ## Sample Output 1 This is an example output 0 Thiago is back as Bayern Munich's playmaker provides a concise summary of the following text:'Bayern Munich playmaker Thiago admits coming on against Borussia Dortmund to make his first appearance in a year was an emotional moment and has thanked the German club. The midfielder hadn't played for the Bayern since March in 2014, when he suffered a serious knee injury against Hoffenheim, but came on for Philipp Lahm in the 1-0 win at the Westfalenstadion on Saturday.","Here are the independent facts broken down from the passage: | False |
+ Thiago is a playmaker for Bayern Munich. | True |
+ Thiago made his first appearance in a year against Borussia Dortmund. | True |
+ Thiago's return to play was an emotional moment for him. | True |
+ Thiago suffered a serious knee injury against Hoffenheim. | True |
+ The knee injury occurred in March 2014. | True |
+ Thiago hadn't played for Bayern Munich since March 2014. | True |
+ Thiago came on as a substitute for Philipp Lahm in a match. | True |
+ The match where Thiago came on as a substitute was a 1-0 win for Bayern Munich. | True |
+ The match was played at the Westfalenstadion. | True |
+ The match was played on a Saturday. | True",Here are the independent facts broken down from the passage:

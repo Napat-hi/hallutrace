@@ -1,0 +1,1186 @@
+response,list,list_condition,count,generation_id
+"
+
+A:
+
+You can use a dictionary to store the results.
+>>> import itertools
+>>> letters = 'abcdefghijklmnopqrstuvwxyz'
+>>> z = {i:i for i in range(26)}
+>>> for i in itertools.permutations(letters, 2):
+...     if i in z:
+...         print(i)
+... 
+a
+b
+c
+d
+e
+f
+g
+h
+i
+j
+k
+l
+m
+n
+o
+p
+q
+r",,"['aries', 'taurus', 'cancer', 'libra', 'sagittarius', 'capricorn', 'aquarius']",7,pythia-69b|rationalization_numerical-00702|0
+"
+
+A:
+
+You can use a list comprehension:
+>>> [i for i in range(1, 10) if i in 'd']
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+A:
+
+You can use a list comprehension:
+>>> [i for i in range(1, 10) if i in 'd']
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+A:
+
+You can use a list comprehension:",,[],0,pythia-69b|rationalization_numerical-00705|0
+"
+
+A:
+
+You can use a generator expression to get the numbers, and then use a list comprehension to get the items:
+>>> import itertools
+>>> [i for i in itertools.combinations(range(1,13), 3) if i[0] == 'e']
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+
+A:
+
+You can use itertools.combinations to get all the combinations of 3 numbers from 1 to 13.
+>>> import itertools",,"['aries', 'gemini', 'cancer', 'leo', 'pisces']",5,pythia-69b|rationalization_numerical-00706|0
+"
+
+A:
+
+Python, 50 bytes
+lambda s:s.count('g')
+
+Try it online!
+
+A:
+
+Jelly, 6 bytes
+ḟṖṖ
+
+Try it online!
+How it works
+ḟṖṖ  Main link. Argument: s (string)
+
+ḟṖ  Count the number of occurrences of g in s.
+ṖṖ  Take the maximum of the two results.
+
+A:
+
+Jelly, 6 bytes
+ḟṖṖ
+
+Try it online!",,"['gemini', 'virgo', 'sagittarius']",3,pythia-69b|rationalization_numerical-00708|0
+"
+
+A:
+
+You can use a list comprehension:
+>>> [i for i in range(1, 10) if i.isalnum()]
+[1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+A:
+
+You can use a list comprehension:
+>>> [i for i in range(1, 10) if i.isalnum()]
+[1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+A:
+
+You can use a list comprehension:",,[],0,pythia-69b|rationalization_numerical-00711|0
+"
+
+A:
+
+You can use a list comprehension:
+>>> [i for i in range(1, 10) if i in 'abcdefghijklmnopqrstuvwxyz']
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+A:
+
+You can use a list comprehension:
+>>> [i for i in range(1, 10) if i in 'abcdefghijklmnopqrstuvwxyz']",,[],0,pythia-69b|rationalization_numerical-00712|0
+"
+
+A:
+
+You can use a list comprehension to generate the list of zodiac signs:
+>>> import itertools
+>>> zodiac_signs = [zodiac_sign for zodiac_sign in itertools.product('abcdefghijklmnopqrstuvwxyz', repeat=4) if zodiac_sign.startswith('m')]
+>>> zodiac_signs",,['gemini'],1,pythia-69b|rationalization_numerical-00714|0
+"
+
+A:
+
+Python 2.7, 
+def zodiac(s):
+    return [i for i in s if i.isdigit()]
+
+print zodiac('Aries')
+
+Output:",,"['leo', 'virgo', 'scorpio', 'capricorn']",4,pythia-69b|rationalization_numerical-00716|0
+"
+
+A:
+
+You can use a generator expression to generate all the possible combinations of the letters in the string.
+>>> import itertools
+>>> letters = 'abcdefghijklmnopqrstuvwxyz'
+>>> for letter in letters:
+...     for combination in itertools.product(letters, repeat=2):
+...         if letter in combination:
+...             print(letter, combination)
+... 
+a a
+a b
+a c
+a d
+a e
+a f
+a g
+a h
+a i
+a j
+a k
+",,"['scorpio', 'capricorn', 'pisces']",3,pythia-69b|rationalization_numerical-00717|0
+"
+
+A:
+
+Python 2, 78 bytes
+lambda s:s.count('q')%2
+
+Try it online!
+
+A:
+
+Jelly, 6 bytes
+Œḟḟ
+
+Try it online!
+How?
+Œḟḟ - Main link: full program
+Œḟḟ - Main link: full program, with argument s
+Œḟ - Main link: full program, with argument s
+ḟ - Main link: full program, with argument s
+ḟ - Main link: full program, with argument s
+",,['aquarius'],1,pythia-69b|rationalization_numerical-00718|0
+"
+
+A:
+
+You can use a list comprehension:
+>>> [i for i in range(1, 10) if i in 'rr']
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+A:
+
+You can use a list comprehension:
+>>> [i for i in range(1, 10) if i in 'rr']
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+A:
+
+You can use a list comprehension:",,"['aries', 'taurus', 'cancer', 'virgo', 'libra', 'scorpio', 'sagittarius', 'capricorn', 'aquarius']",9,pythia-69b|rationalization_numerical-00719|0
+"
+
+A:
+
+You can use a list comprehension:
+>>> [i for i in range(1, 10) if i in 'S']
+[1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+A:
+
+You can use a list comprehension:
+>>> [i for i in range(1, 10) if i in 'S']
+[1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+A:
+
+You can use a list comprehension:",,"['aries', 'taurus', 'scorpio', 'sagittarius', 'aquarius', 'pisces']",6,pythia-69b|rationalization_numerical-00720|0
+"
+
+A:
+
+You can use a list comprehension:
+>>> [i for i in range(1, 10) if i in '0123456789']
+[1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+A:
+
+You can use a list comprehension:
+>>> [i for i in range(1, 10) if i in '0123456789']
+[1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+A:
+
+You can use a list comprehension:",,"['taurus', 'sagittarius']",2,pythia-69b|rationalization_numerical-00721|0
+"
+
+A:
+
+Python 2, 78 bytes
+lambda s:s.count('v')%2<1
+
+Try it online!
+
+A:
+
+Jelly, 6 bytes
+ŒṖḊ
+
+Try it online!
+How?
+ŒṖḊ - Main link: argument: string
+ŒṖḊ - Main link: argument: string, n
+ŒṖḊ - Main link: argument: string, n, k
+ŒṖḊ - Main link: argument: string, n, k, m
+",,['virgo'],1,pythia-69b|rationalization_numerical-00723|0
+"
+
+A:
+
+You can use a list comprehension:
+>>> [i for i in range(1, 13) if i in 'w']
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+
+A:
+
+You can use a list comprehension:
+>>> [i for i in range(1, 13) if i in 'w']
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+
+A:",,[],0,pythia-69b|rationalization_numerical-00724|0
+"
+
+A:
+
+You can use a list comprehension:
+>>> [i for i in range(1, 10) if i in 'x' for x in 'abcdefghijklmnopqrstuvwxyz']
+[1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+A:
+
+You can use a list comprehension:
+>>> [i for i in range(1, 10) if i in 'x' for x in 'abcdefghijklmnopqrstuvwxyz']",,[],0,pythia-69b|rationalization_numerical-00725|0
+"
+
+A:
+
+Python, 50 bytes
+lambda s:s.count('y')
+
+Try it online!
+
+A:
+
+Jelly, 6 bytes
+Œḟḟ
+
+Try it online!
+How it works
+Œḟḟ  Main link. Argument: s (string)
+
+Œḟḟ  Compute the number of ys in s.
+
+ḟḟ  Count the number of ys in the result.
+
+A:
+
+Javascript, 50 bytes",,[],0,pythia-69b|rationalization_numerical-00726|0
+"
+
+A:
+
+You can use a generator expression to get the first letter of each word in the string:
+>>> import re
+>>> s = ""The quick brown fox jumps over the lazy dog""
+>>> re.findall(r'\w+', s)
+['quick', 'brown', 'fox', 'jumps', 'over', 'lazy', 'dog']
+
+Then you can use a list comprehension to get the first letter of each word:
+>>> [x[0] for x in re.findall(r'\w+', s)]",,"['aries', 'aquarius']",2,pythia-69b|rationalization_numerical-00728|0
+"
+
+A:
+
+You can use a generator expression to get the first letter of each word in the string:
+>>> import re
+>>> s = 'The quick brown fox jumps over the lazy dog'
+>>> re.findall(r'\b\w*[a-z]', s)
+['The', 'quick', 'brown', 'fox', 'jumps', 'over', 'the', 'lazy', 'dog']
+
+Then you can use a list comprehension to get the first letter of each word:",,[],0,pythia-69b|rationalization_numerical-00731|0
+"
+
+A:
+
+You can use a generator expression to get the first letter of each word in the string:
+>>> s = ""The quick brown fox jumps over the lazy dog""
+>>> for i in s:
+...     print(i[0])
+... 
+T
+e
+h
+i
+k
+o
+r
+b
+r
+o
+w
+n
+f
+o
+x
+j
+s
+p
+o
+e
+l
+l
+y
+d
+
+A:
+
+You can use a list comprehension:",,[],0,pythia-69b|rationalization_numerical-00732|0
+"
+
+A:
+
+You can use a generator expression to generate the list of zodiac signs:
+>>> import itertools
+>>> letters = 'abcdefghijklmnopqrstuvwxyz'
+>>> for sign in itertools.product(letters, repeat=3):
+...     print(sign)
+... 
+a
+b
+c
+d
+e
+f
+g
+h
+i
+j
+k
+l
+m
+n
+o
+p
+q
+r
+s
+t
+u
+v
+w
+x
+y
+z",,['gemini'],1,pythia-69b|rationalization_numerical-00734|0
+"
+
+A:
+
+You can use a generator expression to generate the list of zodiac signs:
+>>> import itertools
+>>> for sign in itertools.combinations(('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'), 2):
+...     print(sign)
+... 
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+
+A:
+
+You can use itertools.combinations:
+>>> import itertools",,[],0,pythia-69b|rationalization_numerical-00737|0
+"
+
+A:
+
+You can use a list comprehension to generate the list of zodiac signs:
+>>> import itertools
+>>> zodiac_signs = [zodiac_sign for zodiac_sign in itertools.permutations(range(12), 2) if zodiac_sign[0] == zodiac_sign[1]]
+>>> zodiac_signs",,[],0,pythia-69b|rationalization_numerical-00738|0
+"
+
+A:
+
+You can use a generator expression:
+>>> from itertools import product
+>>> for s in product(('m',), repeat=3):
+...     print(s)
+... 
+('m', 'm', 'm')
+('m', 'm', 'm')
+('m', 'm', 'm')
+('m', 'm', 'm')
+('m', 'm', 'm')
+('m', 'm', 'm')
+('m', 'm', 'm')
+('m', 'm', 'm')",,[],0,pythia-69b|rationalization_numerical-00740|0
+"
+
+A:
+
+You can use a generator expression to generate the list of zodiac signs:
+>>> import itertools
+>>> for sign in itertools.product(range(1, 13), repeat=2):
+...     print(sign)
+... 
+O
+O
+O
+O
+O
+O
+O
+O
+O
+O
+O
+O
+O
+O
+O
+O
+O
+O
+O
+O
+O
+O
+O
+O
+O
+O
+O
+O
+O
+O
+O
+O
+O
+O
+",,[],0,pythia-69b|rationalization_numerical-00742|0
+"
+
+A:
+
+You can use a generator expression to get the first letter of each word in the string:
+>>> import re
+>>> s = ""The quick brown fox jumps over the lazy dog""",,['pisces'],1,pythia-69b|rationalization_numerical-00743|0
+"
+
+A:
+
+Python 2, 67 bytes
+lambda s:s.count('q')%2
+
+Try it online!
+
+A:
+
+Jelly, 6 bytes
+ŒṖḊ
+
+Try it online!
+How it works
+ŒṖḊ  Main link. Argument: s (string)
+
+ŒṖḊ  Compute the number of occurrences of 'q' in s.
+
+A:
+
+J, 13 bytes
+'q'~'q'
+
+Try it online!
+Explanation",,[],0,pythia-69b|rationalization_numerical-00744|0
+"
+
+A:
+
+You can use a generator expression to get the first letter of each word in the string, and then use a list comprehension to filter the words that start with that letter.
+>>> import re
+>>> s = ""The quick brown fox jumps over the lazy dog""",,[],0,pythia-69b|rationalization_numerical-00745|0
+"
+
+A:
+
+You can use a list comprehension:
+>>> s = 's'
+>>> [i for i in 'abcdefghijklmnopqrstuvwxyz' if i[0] == s]",,"['scorpio', 'sagittarius']",2,pythia-69b|rationalization_numerical-00746|0
+"
+
+A:
+
+Python 2, 78 bytes
+lambda s:s.count('t')%2
+
+Try it online!
+
+A:
+
+Jelly, 6 bytes
+ŒṖṖ
+
+Try it online!
+How it works
+ŒṖṖ  Main link. Argument: s (string)
+
+ŒṖ  Count the number of occurrences of t in s.
+ṖṖ  Modulo 2.
+
+A:
+
+Jelly, 6 bytes
+ŒṖṖ
+
+Try it online!",,['taurus'],1,pythia-69b|rationalization_numerical-00747|0
+"
+
+A:
+
+Python 2, 78 bytes
+lambda s:s.count('v')
+
+Try it online!
+
+A:
+
+Jelly, 6 bytes
+VṪ
+
+Try it online!
+How it works
+VṪ  Main link. Argument: s (string)
+
+ VṪ  Count the number of occurrences of 'v' in s.
+
+A:
+
+Jelly, 6 bytes
+VṪ
+
+Try it online!
+How it works
+VṪ  Main link. Argument: s (string)",,['virgo'],1,pythia-69b|rationalization_numerical-00749|0
+"
+
+A:
+
+You can use a list comprehension:
+>>> [i for i in range(1, 13) if i not in ('w', 'x', 'y', 'z')]
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+
+A:
+
+You can use a list comprehension:
+>>> [i for i in range(1, 13) if i not in ('w', 'x', 'y', 'z')]",,[],0,pythia-69b|rationalization_numerical-00750|0
+"
+
+A:
+
+Python 2, 78 bytes
+lambda s:s.count('x')%2
+
+Try it online!
+
+A:
+
+Jelly, 6 bytes
+Œḟḟ
+
+Try it online!
+How it works
+Œḟḟ  Main link. Argument: s (string)
+
+Œḟḟ  Main link. Argument: s (string)
+
+ḟ  Count the number of occurrences of x in s.
+
+ḟ  Count the number of occurrences of x in s.",,[],0,pythia-69b|rationalization_numerical-00751|0
+"
+
+A:
+
+Python 2, 78 bytes
+lambda s:s.count('y')
+
+Try it online!
+
+A:
+
+Jelly, 6 bytes
+Œḟḟ
+
+Try it online!
+How?
+Œḟḟ - Main link: list of zodiac signs
+Œḟḟ - Main link: list of zodiac signs, first argument
+ḟ - filter
+
+A:
+
+Python 2, 67 bytes
+f=lambda s:s.count('y')
+
+Try it online!",,[],0,pythia-69b|rationalization_numerical-00752|0
+"
+
+A:
+
+You can use a generator expression to get the first letter of the string, and then use a list comprehension to get the items that have the first letter as the first character.
+>>> import re
+>>> s = 'a'
+>>> [i for i in s if i.startswith(s[0])]
+['a']
+
+A:
+
+You can use a list comprehension:
+>>> [i for i in 'a' if i.startswith('a')]
+['a']
+
+A:
+
+You can use a list comprehension:",,['libra'],1,pythia-69b|rationalization_numerical-00754|0
+"
+
+A:
+
+You can use a generator expression to get the list of items:
+>>> import itertools
+>>> list(itertools.combinations(('a', 'b', 'c', 'd'), 3))",,[],0,pythia-69b|rationalization_numerical-00757|0
+"
+
+A:
+
+You can use a list comprehension:
+>>> [i for i in range(1, 10) if i % 3 == 0]
+[1, 3, 5, 7, 9]
+
+A:
+
+You can use a list comprehension:
+>>> [i for i in range(1, 10) if i % 3 == 0]
+[1, 3, 5, 7, 9]
+
+A:
+
+You can use a list comprehension:
+>>> [i for i in range(1, 10) if i % 3 == 0]",,[],0,pythia-69b|rationalization_numerical-00758|0
+"
+
+A:
+
+Python 2, 67 bytes
+lambda s:s.count('g')%2
+
+Try it online!
+
+A:
+
+Jelly, 6 bytes
+R2Q
+
+Try it online!
+How it works
+R2Q  Main link. Argument: s (string)
+
+ R     Range. Returns the indices of the characters in s that are in the range [0, s.length - 1].
+  2Q   Take the product of the indices.
+
+A:
+
+Jelly, 6 bytes
+R2Q
+
+Try it online!",,[],0,pythia-69b|rationalization_numerical-00760|0
+"
+
+A:
+
+You can use a generator expression to get the items that end with j:
+>>> import re
+>>> s = 'Aries, Taurus, Gemini, Cancer, Leo, Virgo, Libra, Scorpio, Sagittarius, Capricorn, Aquarius, Pisces'
+>>> [i for i in s.split(' ') if re.search(r'\b\w{2}\b', i)]",,[],0,pythia-69b|rationalization_numerical-00763|0
+"
+
+A:
+
+You can use a generator expression to get the first item that matches the condition:
+>>> from itertools import izip
+>>> letters = 'abcdefghijklmnopqrstuvwxyz'
+>>> letters
+'abcdefghijklmnopqrstuvwxyz'
+>>> letters[::2]
+'abcd'
+>>> letters[::2] + letters[1::2]
+'abcdabcd'
+>>> letters[::2] + letters[1::2] + letters[2::2]",,[],0,pythia-69b|rationalization_numerical-00764|0
+"
+
+A:
+
+Python 2, 78 bytes
+lambda s:s.count('m')%2
+
+Try it online!
+
+A:
+
+Jelly, 6 bytes
+RµṖ
+
+Try it online!
+How it works
+RµṖ  Main link. Argument: s (string)
+
+R       Range; yield the indices of the characters in s that are in the range [0, s.len()]
+ µ     Map; yield the characters in the range [0, s.len()]",,[],0,pythia-69b|rationalization_numerical-00766|0
+"
+
+A:
+
+Python 2, 78 bytes
+lambda s:s.count('o')
+
+Try it online!
+
+A:
+
+Jelly, 6 bytes
+OṖ
+
+Try it online!
+Explanation
+OṖ  Main link. Argument: s (string)
+
+O     Count the number of o-s in s.
+ Ṗ   Take the maximum of the result and the number of o-s in s.
+
+A:
+
+Jelly, 6 bytes
+OṖ
+
+Try it online!
+Explanation",,"['leo', 'virgo', 'scorpio']",3,pythia-69b|rationalization_numerical-00768|0
+"
+
+A:
+
+Python 2, 67 bytes
+lambda s:s.count('p')%2
+
+Try it online!
+
+A:
+
+Jelly, 6 bytes",,[],0,pythia-69b|rationalization_numerical-00769|0
+"
+
+A:
+
+Python 2, 67 bytes
+lambda s:s.count('q')
+
+Try it online!
+
+A:
+
+Jelly, 6 bytes
+Œḟḟḟ
+
+Try it online!
+How it works
+Œḟḟḟ  Main link. Argument: s (string)
+
+Œḟḟḟ  Compute the number of occurrences of 'q' in s.
+
+ḟḟ  Group the characters of s, yielding a list of characters.",,[],0,pythia-69b|rationalization_numerical-00770|0
+"
+
+A:
+
+You can use a list comprehension:
+>>> [i for i in range(1, 10) if i % 3 == 0]
+[1, 3, 5, 7, 9]
+
+A:
+
+You can use a list comprehension:
+>>> [i for i in range(1, 10) if i % 3 == 0]
+[1, 3, 5, 7, 9]
+
+A:
+
+You can use a list comprehension:
+>>> [i for i in range(1, 10) if i % 3 == 0]",,['cancer'],1,pythia-69b|rationalization_numerical-00771|0
+"
+
+A:
+
+Python 2, 78 bytes
+lambda s:s.count('s')%2
+
+Try it online!
+
+A:
+
+Jelly, 6 bytes
+ŒṖḊ
+
+Try it online!
+How?
+ŒṖḊ - Main link: list of integers
+ŒṖḊ - Main link: integer
+ṖḊ - Main link: integer divisible by 2
+
+A:
+
+Python 2, 67 bytes
+lambda s:s.count('s')%2
+
+Try it online!",,"['aries', 'taurus', 'sagittarius', 'aquarius', 'pisces']",5,pythia-69b|rationalization_numerical-00772|0
+"
+
+A:
+
+You can use a generator expression to get the list of zodiac signs:
+>>> import itertools
+>>> for sign in itertools.combinations(('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'), 2):
+...     print(sign)
+",,[],0,pythia-69b|rationalization_numerical-00773|0
+"
+
+A:
+
+Python 2, 78 bytes
+lambda s:s.count('v')
+
+Try it online!
+
+A:
+
+Jelly, 6 bytes
+Vṗṗ
+
+Try it online!
+How it works
+Vṗṗ  Main link. Argument: s (string)
+
+Vṗṗ  Compute the number of occurrences of 'v' in s.
+
+A:
+
+Jelly, 6 bytes
+Vṗṗ
+
+Try it online!
+How it works
+Vṗṗ  Main link.",,[],0,pythia-69b|rationalization_numerical-00775|0
+"
+
+A:
+
+You can use a generator expression to get the list of zodiac signs:
+>>> import itertools
+>>> for sign in itertools.combinations(('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'), 2):
+...     print(sign)
+",,[],0,pythia-69b|rationalization_numerical-00776|0
+"
+
+A:
+
+Python 2, 78 bytes
+lambda s:s.count('x')
+
+Try it online!
+
+A:
+
+Jelly, 6 bytes
+ḟṖ€
+
+Try it online!
+How it works
+ḟṖ€  Main link. Argument: s (string)
+
+ ḟ     Count the number of occurrences of 'x' in s.
+  Ṗ    Take the first.
+   €   Yield the first element of the list of all elements of s that are equal to the first.
+
+A:",,[],0,pythia-69b|rationalization_numerical-00777|0
+"
+
+A:
+
+Python 2, 67 bytes
+lambda s:s.count('y')
+
+Try it online!
+
+A:
+
+Jelly, 6 bytes
+Œḟḟ
+
+Try it online!
+How?
+Œḟḟ - Main link: string, list of characters
+Œḟḟ - Main link: list of characters
+Œḟḟ - Main link: list of characters
+Œḟḟ - Main link: list of characters
+
+A:
+
+J, 17 bytes
+'y'@.",,[],0,pythia-69b|rationalization_numerical-00778|0
+"
+
+A:
+
+Python 2, 78 bytes
+lambda a,b:a+b*a*b
+
+Try it online!
+
+A:
+
+Jelly, 6 bytes
+Œḟḟ
+
+Try it online!
+How?
+Œḟḟ - Main link: argument: a, b
+
+Œḟ - Cartesian product of a and b
+ḟ - Multiplies a and b
+
+A:
+
+Jelly, 6 bytes
+Œḟḟ
+
+Try it online!
+How?",,['hanging gardens of babylon'],1,pythia-69b|rationalization_numerical-00781|0
+"
+
+A:
+
+JavaScript (ES6),  90  88 bytes
+Takes input as a string.
+s=>s.replace(/c/g,c=>s.match(c))
+
+Try it online!
+
+A:
+
+Jelly,  90  88 bytes",,"['mausoleum at halicarnassus', 'colossus of rhodes']",2,pythia-69b|rationalization_numerical-00782|0
+"
+
+A:
+
+JavaScript (ES6),  106  101 bytes
+Takes input as a string.
+s=>[...s.match(/e/g)].map(e=>e.length)
+
+Try it online!
+How?
+The regex /e/g matches e at the beginning of a string.
+
+A:
+
+Javascript (ES6),  106  101 bytes
+s=>[...s.match(/e/g)].map(e=>e.length)
+
+Try it online!
+How?",,"['great pyramid of giza', 'hanging gardens of babylon', 'statue of zeus at olympia', 'temple of artemis at ephesus', 'mausoleum at halicarnassus', 'colossus of rhodes', 'lighthouse of alexandria']",7,pythia-69b|rationalization_numerical-00784|0
+"
+
+A:
+
+JavaScript (ES6),  89  77 bytes
+Takes input as a string.
+f=(s,n=0)=>s.replace(/\d/g,n++%26)==='H'&&f(s,n)
+
+Try it online!
+
+A:
+
+Jelly,  31  28 bytes",,"['hanging gardens of babylon', 'temple of artemis at ephesus', 'mausoleum at halicarnassus', 'colossus of rhodes', 'lighthouse of alexandria']",5,pythia-69b|rationalization_numerical-00787|0
+"
+
+A:
+
+Python 2, 67 bytes
+f=lambda n,s=0:n<2or(s<n and f(n-1,s+1))or[s,n]
+
+Try it online!
+
+A:
+
+Jelly, 6 bytes
+Œḟḟ
+
+Try it online!
+How it works
+Œḟḟ  Main link. Argument: n (integer)
+
+Œḟḟ  Compute the list of all integers n such that n is a multiple of the input.",,"['great pyramid of giza', 'hanging gardens of babylon', 'statue of zeus at olympia', 'temple of artemis at ephesus', 'mausoleum at halicarnassus', 'lighthouse of alexandria']",6,pythia-69b|rationalization_numerical-00788|0
+"
+
+A:
+
+Python 2, 78 bytes
+f=lambda n:n<2or(n%2and f(n/2))
+
+Try it online!
+
+A:
+
+Jelly, 6 bytes
+ŒḢḢ
+
+Try it online!
+How it works
+ŒḢḢ  Main link. Argument: n
+
+ŒḢḢ  Compute the remainder of the division of n by 2.
+
+Ḣ  Take the remainder.
+
+Ḣ  Take the remainder of the remainder.",,"['hanging gardens of babylon', 'statue of zeus at olympia', 'temple of artemis at ephesus', 'mausoleum at halicarnassus', 'colossus of rhodes', 'lighthouse of alexandria']",6,pythia-69b|rationalization_numerical-00791|0
+"
+
+A:
+
+JavaScript (ES6),  89  77 bytes
+Takes input as a string.
+a=>[...a].map(c=>(c=='o'&&a.includes(c))||c=='o'||a.includes(c))
+
+Try it online!
+How?
+The idea is to use the fact that the string 'o' is a character that is not in the string 'o'.
+
+A:
+
+Jelly,  72  71 bytes",,"['great pyramid of giza', 'hanging gardens of babylon', 'statue of zeus at olympia', 'temple of artemis at ephesus', 'mausoleum at halicarnassus', 'colossus of rhodes', 'lighthouse of alexandria']",7,pythia-69b|rationalization_numerical-00794|0
+"
+
+A:
+
+Python 2, 67 bytes
+f=lambda n,s=0:s+n*len(s)if n<len(s)else[s]+f(n,s+s)
+
+Try it online!
+
+A:
+
+Jelly, 6 bytes",,"['great pyramid of giza', 'hanging gardens of babylon', 'temple of artemis at ephesus', 'mausoleum at halicarnassus', 'colossus of rhodes', 'lighthouse of alexandria']",6,pythia-69b|rationalization_numerical-00797|0
+"
+
+A:
+
+Python 2, 78 bytes",,"['great pyramid of giza', 'statue of zeus at olympia', 'temple of artemis at ephesus', 'mausoleum at halicarnassus', 'lighthouse of alexandria']",5,pythia-69b|rationalization_numerical-00799|0
+"
+
+A:
+
+JavaScript (ES6),  106  101 bytes
+Takes input as a string.
+f=(s,n,p=0)=>s.replace(/([a-z])([A-Z])/g,c=>c[n]?p++:c[n]?f(s,n+1,p):c)
+
+Try it online!
+How?
+The regex matches a letter followed by a capital letter, and replaces it with the capital letter.
+
+A:
+
+Jelly,  91  86 bytes
+",,[],0,pythia-69b|rationalization_numerical-00801|0
+"
+
+A:
+
+JavaScript (ES6),  89  77 bytes
+Takes input as a string, e.g. ""abcdefghijklmnopqrstuvwxyz"".
+Returns an array of strings.",,['lighthouse of alexandria'],1,pythia-69b|rationalization_numerical-00803|0
+"
+
+A:
+
+Python 2, 78 bytes
+lambda n:n%2*[n/2]
+
+Try it online!
+
+A:
+
+Jelly, 6 bytes
+ŒṖḊ
+
+Try it online!
+How it works
+ŒṖḊ  Main link. Argument: n (integer)
+
+ŒṖḊ  Compute the list of all even numbers that are multiples of 2.
+
+ŒṖḊ  Compute the list of all even numbers that are multiples of 2.",,[],0,pythia-69b|rationalization_numerical-00807|0
+"
+
+A:
+
+Jelly, 6 bytes
+ṗḊ€
+
+Try it online!
+How it works
+ṗḊ€  Main link. Argument: A (array)
+
+ṗḊ€  Compute the cartesian product of A.
+  Ḋ€  Filter the cartesian product of A, keeping only those elements that are in A.
+
+A:
+
+Jelly, 6 bytes
+ṗḊ€
+
+Try it online!
+How it works
+ṗḊ€  Main link. Argument: A (array)
+
+",,['colossus of rhodes'],1,pythia-69b|rationalization_numerical-00808|0

@@ -1,0 +1,440 @@
+prompt,response
+," Your summary should consist of 3-4 sentences, each with its own coherent idea. The summary should:  Contain no extraneous information  be free of errors in grammar, spelling, and mechanics.
+
+Question 2
+
+Write a letter to a close friend explaining the rules of the sport of American football. As with any sports team, the American football team will have a coach. In this case, your coach will be the person to whom you are writing your letter. You will need to explain the game in such a way that your friend will be able to follow and appreciate the game."
+," Do not include the question, quotations, or any other parts of the text. (1) #### Question 8 Provide a concise summary of the following text: 'After a series of high-profile sexual assaults on women in New Delhi, India's president, Pranab Mukherjee, has suggested that women should be banned from bars and clubs at night. Mukherjee, who is also the country's former defence and finance minister, reportedly made the remarks in a speech to the national convention of the Indian Youth Congress in the western city of Bhavnagar."
+,"
+
+2. The University of Connecticut baseball team has welcomed its newest member: 5-year-old Grayson Hand of Sturbridge, Massachusetts. Hand, who is battling leukemia, joins the Huskies with the help of Team IMPACT, an organization that matches children with life-threatening and chronic illness to college sports teams. The Hartford Courant reports seniors Carson Cross and Blake Davey were inspired to get involved with the Boston-based organization after hearing positive stories from the UConn men's hockey team, which also welcomed a youngster to their team."
+," (Note: it is the only task that asks to provide a summary as the response).
+
+Example of text:
+
+'The new era of the Premier League is upon us, with Liverpool and Manchester City becoming the first teams to kick off the new campaign. Manchester United’s first league game will be against Arsenal on Saturday, with the clash coming a day later than previously announced."
+,"
+    7. Read the text: 'A Brazilian fan has been given a lifetime ban from watching matches after admitting that he used a laser to cause an incident in which a Chilean player lost his vision. The 33-year-old fan, named as Ricardo Pereira, was attending a match between the country's two top clubs, Flamengo and Palmeiras, in which Palmeiras were playing the final game of a three-match unbeaten run."
+, The full text can be found here: http://www.dailymail.co.uk/news/article-2725358/A-dog-splashing-like-a-child-in-public-water-fountain-goes-viral-YouTube.html.
+,"  
+
+This challenge can be viewed as an extension of the \textit{text summarization} task, in which a model is required to summarize a piece of text while being restricted to the task of generating the first $k$ sentences, without knowledge of the rest of the text. While many sentence ordering models have been developed for the text summarization task (see Section \ref{section:sentence-order-models} below), they are designed to operate on a single document, and the challenge of \textit{abstractive extractive summarization} is not the same."
+,"
+
+\vspace{0.1in}
+
+\noindent
+{\bf Question 4} \\
+Given the following two questions: \\
+1. What is the name of the man holding the red bat? \\
+2. What is the name of the person holding the yellow bat? \\
+Create a query (using the \texttt{Query} function) which combines the answers to both questions (e.g., \texttt{Answer 1} and \texttt{Answer 2}) into a single sentence.
+
+\vspace{0.1in}
+
+\noindent"
+,"
+
+Ans:- Provide only the summary as the response."
+,"
+  4. Provide a brief summary of the following text: 'It was a wonderful night for the men in blue as they triumphed at home for the first time in three months on Wednesday. With just seven minutes remaining and a three-goal lead to preserve, the Uruguayans were left reeling following Luis Suarez's bizarre red card for handball. A second yellow card was also issued to the striker's teammate Edinson Cavani. But from the rubble emerged a man with an unquestionable ability to take control of a game."
+,"
+
+Sample Input
+Sample Output
+
+The open workout will stream live on YouTube on Tuesday 2nd March at 12 am.
+
+Follow Us"
+," • Provide a summary of the source by paraphrasing the source material • Avoid quoting or repeating any key words from the source • Avoid copying or duplicating sentences or phrases that appear in the source material • Include your own opinion if appropriate. Provide a summary of the source by paraphrasing the source material. Avoid quoting or repeating any key words from the source material. Avoid copying or duplicating sentences or phrases that appear in the source material. Include your own opinion if appropriate. The referee of Floyd Mayweather's clash with Manny Pacquiao in Las Vegas next month will earn$10,000."
+,"
+
+
+\textbf{Text 8:} \textbf{Input text:} 'Ahead of the World Cup opening ceremony in Russia on June 14, we look at how previous hosts have spent the lead up to their home matches.'\textbf{ Summary:} 'World Cup 2018: Germany open their tournament with a 0-0 draw against Mexico at the Kazan Arena on Thursday. The world champions go in search of their sixth triumph in the showpiece event with the opening game in Russia.' Provide the summary as the response."
+,"
+
+#### Input Example 2:
+
+""Manchester City's goalkeeper Joe Hart has praised team-mate Yaya Toure after the latter's display in the 4-2 win over Southampton. The former Barcelona and Manchester United midfielder was heavily criticised in recent months after joining the Premier League champions for a fee of £24 million from the Etihad Stadium in August. However, the 31-year-old proved his critics wrong after a dominant display as he picked up his first ever Premier League clean sheet on Saturday. 'The whole back line was amazing today, we did our job and we helped Joe a lot."
+,"
+
+Summarize an article on the topic:
+
+'The Guardian: Nazi war criminal Erich Priebke dies aged 100'. Provide only the summary as the response.
+
+Summarize an article on the topic:
+
+'The Guardian: Nazi war criminal Erich Priebke dies aged 100'. Provide only the summary as the response.
+
+Summary of the following article:
+
+The article 'New York is the most unequal place on Earth' starts with a summary of the current social situation in New York and its citizens' reaction to this situation."
+,"
+
+Model answer:
+
+An elderly man, who fell from his wheelchair on the subway platform in Washington, DC, was rescued by two men who were on the platform at the time. The man was on his electric wheelchair when he tumbled over the edge of the platform. His face suffered minor injuries as a result of the fall. No trains were due in the area for several minutes after the man fell, and two men went down to the tracks and pulled him up. It is unclear what caused the wheelchair to roll over the edge."
+,"
+
+Solution:
+
+## Preprocessing
+
+In the first step, we remove the stop words. As we are predicting the summary of the text, we don’t need to have the Stop Words. We also remove all the punctuations.
+
+In [4]:
+from nltk.corpus import stopwords
+
+def remove_stopwords(text):
+stop_words = set(stopwords.words('english'))
+text =''.join(token for token in text.split() if token not in stop_words)
+text = text.lower()"
+," The summary should not contain the quoted text or any of the original author's own opinions. (For this example, it may be necessary to edit the summary for grammar, spelling and punctuation.) Answer: Provide only the summary as the response. The summary should not contain the quoted text or any of the original author's own opinions. (For this example, it may be necessary to edit the summary for grammar, spelling and punctuation.)"
+,"
+
+### 5
+
+Summarize the following text and provide a response: 'It was a huge night for Manchester United on Wednesday night, but it was one that their fans will not want to remember. The Old Trafford side, and Sir Alex Ferguson, were the big winners on Wednesday night when they ended the Manchester derby with a 1-0 win thanks to a last-minute goal from Wayne Rooney."
+," Please do not provide a new article on the same topic, but instead make a summary based on the above article. Thank you for your cooperation!
+  8. Hi, I just came back to learn Spanish, and now I need some good resources for that, I know some Spanish but I want to learn it more, thanks for your help.
+  9. The following exercise is from Cambridge English: Keys Stage 6.1 A: I've found the words for some of the sentences but not for the others. 1. the teacher asks students to look at the board 2. she asks them to listen carefully 3."
+,"
+
+(A) Extract 2
+
+Read the following text and provide a concise summary:
+
+""Sergio Aguero was the hero as Manchester City beat Stoke 3-1 in a Premier League thriller on Wednesday night. The striker opened the scoring with a sublime solo goal just after the half hour before adding a second late on to secure the points for City. Pablo Zabaleta scored the third in the 87th minute as Roberto Martinez's side came from a goal down to win their second game in a row and make it 12 wins in their last 13 league games."
+," 
+
+The system will not be accepting any more answers so this will close shortly. Thanks for your interest. 
+
+
+In Progress...
+
+Answers (0)"
+," Please also use the response given in the example answer below as a reference.
+
+Please login to make comment on this entry
+
+You are the first one to comment on this!"
+,"
+
+### Image processing in Python
+
+I am doing some image processing in Python. I have used the OpenCV library for processing. So, I am using the image object of the library. I am just trying to rotate an image by 30 degrees. I want to use the image object of the library, I don't want to save the image into any file and then do the processing. How do I rotate a Image object by an angle in OpenCV?
+
+### What is the best way to make a large number of different small changes to a SQL Server database?"
+,"
+
+## Example:
+
+> Summary(""Jordon Ibe is poised to sign a new five-year contract with Liverpool by the end of the week. The 19-year-old has agreed terms on a deal which will keep him at Anfield until 2020. Ibe spent the first half of this season on loan at Derby County but returned to Liverpool in January and has made a notable impact in his eight appearances. Jordon Ibe has impressed since returning to Liverpool this season and will sign a new contract this week."
+," If a response is not required, leave it blank.
+
+The template is as follows:
+
+# Provide a title here (optional)
+# Use this to indicate a heading in the article
+# Use the following to indicate a paragraph. Use empty lines to separate paragraphs.
+
+Use this to provide your response.
+
+Use this to provide the summary (optional).
+
+# Use this to indicate an unordered list. Use empty lines to separate list items.
+- item 1
+- item 2
+
+# Use this to indicate an ordered list. Use empty lines to separate list items.
+1."
+,"
+
+There are other types of question, such as Multiple Choice Questions (MCQ) and Short Answer Questions (SAQ) which you can learn more about in the link below:
+
+Here are some more example questions:
+
+1. Provide the summary: 'This year’s U.S. Open will be held at the Chambers Bay golf course in Seattle, Washington. The course has a rating of 73.1, making it the fifth hardest of the five major championships."
+," You are allowed a maximum of 30 words in your summary. You should spend 20 minutes on this task. (Approximately 100 words)
+
+How to Answer this IELTS Speaking Question:
+
+The answer will have to be concise but precise. You should only list the main points of the article in your answer. Do not repeat anything from the question and do not provide any personal comment. In addition, you should aim to speak between 150 and 200 words.
+
+To give a good summary you need to do the following:
+
+  • Skim and scan to get a broad understanding of the article"
+," I want my system to take only key phrases and summarize. How can I do it?
+
+
+2 Answers
+
+0 votes
+Best answer
+
+You can use IBM Watson API for summarization in Python. The summary can be obtained by using extract function. This will take the summary in the form of text and returns a json object.
+
+Please see the below link for more information.
+
+answered by (28.4k points)
+selected by
+0 votes
+
+Yes you are right. In this you need to use the extract function to find the summary."
+,"
+
+### How to make this program faster and more robust?
+
+I would like to know if there is a more efficient way to code this. The objective is to identify the closest values to a range of interest."
+," I need it in a couple of hours. I will provide the data in a separate text file and in the end I need to compare the provided summary with the actual article from a web page.
+
+    €23 (Avg Bid)
+    €23 Ortalama Teklif
+    19 teklifler
+
+    I have a set of data with more than 40 columns that are populated with values. All the values are numeric. I need a data visualization (3D pie graph, 2D bar graph, etc.) on a daily basis based on these data and I need to know how to generate it automatically.
+
+"
+,"
+
+Answer: John Goodwin, 75, who was accused of sexual assault of a minor, killed himself outside a courthouse as a jury deliberated his guilt or innocence. He was not in custody.
+
+3. Which of the following is NOT an example of an effective email message subject line?
+
+Answer: #5
+
+4. Which of the following is NOT true regarding your social media presence?
+
+Answer: #2
+
+5. Which of the following statements about writing is NOT true?
+
+Answer: #5
+
+6. Which of the following statements about communication is NOT true?
+"
+,"
+
+The above question can be solved with the help of the following sample code:
+
+# coding:utf-8
+import keras
+import numpy as np
+from keras.preprocessing import text
+from keras.preprocessing.sequence import pad_sequences
+from keras.models import Sequential
+from keras.layers import Dense, LSTM
+from keras.callbacks import ModelCheckpoint
+from keras.layers import Embedding, SpatialDropout1D
+from keras.layers.convolutional import Conv1D, MaxPooling1D"
+,"
+
+\section{Dataset}
+\label{sec:data}
+
+In our experiments we have used the first 2 years of the \emph{Telegraph} dataset that includes 812,975 news articles~\cite{baird_sequence_2017}.
+The training set contains 813,062 articles with each article containing between 4 and 1000 sentences, with the average article length being 30.3 sentences.
+The test set contains 9,822 articles with each article containing between 5 and 100 sentences, with the average article length being 25.5 sentences."
+,"
+
+• What is the main idea of the text?
+• What is the main idea of the last sentence?
+• What does the phrase'stick to' in the last sentence mean?
+• What is the relationship between the text and the summary?
+
+#### Similar Solved Questions
+
+##### 1. Which of the following statements is most consistent with microeconomic theory? a. A firm can...
+1. Which of the following statements is most consistent with microeconomic theory? a. A firm can be profitable even if it is a price taker in the market for its output. b."
+,"
+
+There is no answer for the previous question
+
+Do you know the correct answer?
+
+Leave your answer in comments below and don't forget to like this question to track it.
+
+
+You have no rights to post comments"
+,"
+
+  • 0.4: Write the following as a paragraph. 'There is no chance of us giving up,' said Alistair Cook, the England captain. 'We just don't have that in our team. The whole dressing room is behind us, the coaches are behind us, and we're all backing each other to the hilt. We were delighted to get a wicket like that in the second innings. It was a very important moment, and our bowlers were able to turn it round from there.' Provide only the summary as the response."
+,"
+
+Example 3
+
+Select the passage which best explains the following.
+
+""If you can't get an answer from your doctor, try speaking to a pharmacist or other member of your healthcare team."" - Medical Expert
+
+A. Pharmacists know what medicines can be prescribed by a doctor or only be purchased from a pharmacy.
+
+B. Pharmacists can offer a variety of advice and suggestions.
+
+C. Pharmacists can advise on the best treatment for your problem.
+
+D. Pharmacists can be very helpful when it comes to providing medical information.
+
+E."
+,"
+
+A.
+
+You are provided with a set of text sequences that are split into pairs. A text sequence contains a set of sentences and each sentence contains a set of words.
+
+Your task is to predict the next sentence that will follow the given sentence in the text sequence.
+
+Input Format
+
+The first line of the input will contain the sequence number and the number of pairs to be processed in the sequence.
+
+The next line will contain the sentence that will start the text sequence. Each subsequent line will contain a pair of sentences, one of which will be the answer to the previous sentence.
+
+"
+," You will be penalized if you include extra text from the passage or your own ideas and thoughts. Note: This task can be quite difficult for some non-native English speakers, so if your English isn’t strong, you may need to focus on reading the text very carefully to understand exactly what the key ideas are.
+
+3. Now, answer the following question as fully as you can. Your answer can be in complete sentences, but you do not need to write a full paragraph. Provide only ONE answer per line.
+
+4."
+,"
+
+### Question
+
+Provide a concise summary of the following text: 'Dietmar Hamann believes Bastian Schweinsteiger should leave Bayern Munich at the end of the season after losing his place to Xabi Alonso in Pep Guardiola's side. The World Cup winner was an unused substitute in Bayern's 6-1 Champions League win over Porto on Tuesday. And former Germany international Hamann thinks Schweinsteiger faces an uncertain future at the Allianz Arena, with Alonso viewed as Guardiola's preferred midfield choice."
+,"
+
+4. Convert a string into a list. Provide the list as the response.
+
+Input: 'Manchester, Oxford, London, Newcastle, Sheffield'
+
+5. Provide the list of integers as the response.
+
+Input: '2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41'
+
+6. Provide a list of words as the response. Input: 'I'm a man'
+
+7."
+,"
+
+Provide an abstract of the following text: 'Manchester United manager Louis van Gaal has named his starting line-up for the Champions League quarter-final first leg with Galatasaray. The match is at Old Trafford on Tuesday night, and van Gaal has opted for his strongest XI, with Juan Mata preferred to Adnan Januzaj as his number 10. Shinji Kagawa makes a return to the side, with his place on the wing given to Angel Di Maria. Anthony Martial misses out after picking up a knock, while Wayne Rooney is unavailable due to suspension."
+,"
+
+There are more examples on the examples page."
+," The model answer for this is the text.
+
+The task of paraphrasing this text in summary form might be very difficult for a person who doesn’t have any experience of it. There is a lot of information to include here and it would be nearly impossible to get all of it across if the person didn’t have the experience to know how to condense it. What is more important, is that the paraphrasing also has to be very accurate. If it isn’t, then this will affect the mark that the individual gets for the assignment."
+," Note that this will be an out-of-the-box prediction, without any training or fine-tuning. The model is free to produce any text, as it tries to generate the best possible summary.
+
+This approach can be easily adapted to many other applications. For example, for the ""Question Answering"" task we can provide an article, and generate summaries of different parts of the article. Each part is represented as a highlighted sentence, and the model is asked to summarize the sentences within the highlighted area. The highlighted area itself is included within the prediction."
+," It may contain some additional information but should not contain irrelevant details (e.g. other text than the one given as the response).
+• QA-Multi-Span
+
+Question-Answer Multi-Span Paragraph Dataset.
+
+• Provide the answer to the question provided.
+• It is allowed to span across sentences (e.g. for multi-sentence answers).
+• Provide a concise summary of the following text: 'A former police officer has been convicted of murder for fatally shooting his wife, the wife of his former sergeant, and another police officer in northern France."
+,"
+
+How to do it?
+
+The idea is quite simple - you are given a passage and you have to summarize it in a few words. This is very important in terms of language proficiency. You should try to understand how the passage is written. It is good if you take notes of the main points of the passage and then write a concise summary on the basis of the main points.
+
+Here are few steps to help you solve this type of exercise:
+
+Step 1: Read the passage carefully, identify the main points and jot them down. It is better to read the passage first and then the questions."
+," *This is just an example of the type of question*
+
+Answers:1. Manchester City have decided to listen to offers for Yaya Toure and Samir Nasri this summer as the Barclays Premier League champions look to repair the damage of a disastrous title defence. 2. Toure will be made available before his value in the market dwindles. Nasri, meanwhile, has barely played since his lame showing in the Champions League at Barcelona. 3."
+,"
+
+Question: Write an algorithm which can be used to check if two numbers are the same or not, in ascending order. The numbers are given as input.
+
+Question: In a team meeting, a manager and his team discuss the strategy for the game. If the manager does not speak, then it is possible that the team is less likely to succeed. If the manager does speak, then he can have a good influence on the team, making it more likely for the team to succeed."
+," 2. (1 marks) Provide only the summary as the response. 3. (1 marks) The topic sentence of the paragraph is: 'The public interest surrounding the two fighters is going to be unprecedented.' 4. (2 marks) The topic sentence of the paragraph is: 'The prospect of boxing fans attending the weigh-in was too much for organisers.' 5. (2 marks) The topic sentence of the paragraph is: 'Pacquiao is the most dangerous fighter that Mayweather has ever faced.'
+
+Answers:1."
+,"
+
+Task 2
+
+Given the following passage of text, identify the type of text, identify the features of the text type, and write a 100 word summary of the text.
+
+'Hurricanes are dangerous tropical storms that can produce extremely powerful winds and flooding rains.
+
+'Hurricanes are huge areas of rapidly spinning clouds that form over the ocean."
+,"
+
+
+Task 4: Fill in the Blanks
+
+Fill in the following blanks using appropriate words:
+
+1. We need to ensure that we have the right number of ______ when we start.
+
+2. The most important ______ is to not get distracted and stay focused on the task.
+
+3. I like the ___________ that my manager has given me this year.
+
+4. I ____________ the time and energy on doing the task that is of the highest priority.
+
+5. We have a ___________ to finish the project on time.
+
+6."
+,"
+
+This is an example output of the response for the above input:
+
+The 22-year-old is currently ranked World No 520 as she looks to make her ascent up the table.
+
+3) Now we have our code prepared, we need to create a function in order to fetch the output from our code using the HTTP GET request.
+
+Here's our example function to perform the HTTP GET request:"
+,"
+    
+    \end{itemize}
+    
+    \item \textbf{Prompt:} \textit{You will now be provided with a list of short news headlines. You have a task to summarize each headline into a maximum of five sentences in a concise and coherent manner.}\\
+    \textbf{Input:} \\
+    1. A man who claimed to have been abducted by aliens in the 1990s has won his five-year battle to have the British government release documents detailing his experience.\\
+    2."
+," This text is written by a human and it should be read as it is to detect the summary.  (3) (4) (5) (6) (7) (8) (9) (10)
+4 (5 minutes)
+A. Read the following passage and choose the most appropriate answers.
+
+When I was young, I always wanted to go on the seas. My grandparents lived on a farm and we spent the summer with them when I was young. I loved their home and the farm. We had to get up early and go to bed late."
+," • Add the following code below the text you want to extract information from. (The above text will be used as an example) $extracted = preg_match_all(""/Jimmy Butler did ([0-9]+) points/"",$text,$matches); print_r($matches);
+
+• Run your script. The output you see will be
+Array
+(
+[0] => Jimmy Butler did 31 points
+[1] => 31
+[2] => Jimmy Butler did 25 points
+[3] => 25
+[4] => Jimmy Butler did 14 points
+[5] => 14
+)
+"
+,"
+
+Answer:
+
+Provide a concise summary of the following text: 'Leroy Fer is set to be rushed back from a knee injury to give Queens Park Rangers a boost in the relegation fight. Fer is back in training and manager Chris Ramsey hopes to have him in the squad for Saturday's London derby at home to West Ham. The 25-year-old Dutch midfielder has not appeared since he damaged medial ligaments in his knee during in a 2-0 win at Sunderland in mid-February, when he opened the scoring."
+," Do not give a detailed response or a critique of the writing.
+
+Task B.
+
+Read the texts below and choose the best summary (A-D) for each of the texts. Write the corresponding letter A-D next to each text.
+
+Text 1.
+
+'There are only three things you can rely on. Taxes, death, and the fact that every so often we see a new study warning of some terrible new health risk we’d all be foolish to ignore.'"
+,"
+
+Question 4
+
+Please answer each of the following questions, giving a response where appropriate. a. You are an HR director for a large UK based food manufacturing business. You are currently employing approximately 1,500 workers from which 50% are based within the United Kingdom and the other 50% based within European Union Countries. You have been tasked by your Managing Director to look at any potential legal requirements within both the UK and the European Union that may need to be implemented in order to ensure that your business is compliant and in turn the business can sustain current and future growth strategies.
+
+  1."
+," You are only allowed to use the following Python modules: numpy, scipy and sklearn. In case you don't have any of the modules, use the ones provided in the resources/ directory of this assignment. You are not allowed to import any additional modules and you are not allowed to use any additional modules/code that we have provided with the assignment. The summary should be generated by a sequence-to-sequence (seq2seq) model that is implemented in the provided file, which contains the implementation of an encoder-decoder with attention and the accompanying data generation utilities."

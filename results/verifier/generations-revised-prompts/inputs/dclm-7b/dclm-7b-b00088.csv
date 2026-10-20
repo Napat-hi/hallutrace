@@ -1,0 +1,644 @@
+prompt,response
+,"
+
+We're providing more context here:
+
+In 1991, Soundgarden, then the most popular band on the Seattle music scene, took a left turn into more experimental, darker territory with their sophomore album Badmotorfinger, and this shift in style caused a rift between Soundgarden and its traditional audience.
+
+Note: the model's answer would ideally be a one-sentence response that is grammatically correct and in the same style as the original paragraph.
+
+Prompt Examples
+
+Text simplification in general:"
+,"
+
+The simplification process is challenging because the task is open-ended. Different readers have different levels of prior knowledge of the subject, their language competence may differ, and there may be varying expectations regarding the style of the simplified text. However, it is possible to evaluate the extent to which the simplified text is faithful to the source by automatically comparing the two. This may be done by comparing the similarity between the two texts in terms of their surface form (for example, using WordNet or Wikipedia categories for automatic concept extraction), or by automatically computing a similarity measure over the texts using a metric such as Levenshtein distance."
+,"
+
+\subsection{The Task of Summarisation}
+Summarisation in NLP is defined as the process of generating a concise and fluent representation of the input text \cite{mani2019survey}. The main goal of summarisation systems is to generate the summary with fluent and accurate content and preserve the essence of the input text. 
+There are two main summarisation categories: abstractive summarisation and extractive summarisation. An extractive summarisation aims to generate a summary by extracting the most important sentences from the input text."
+,"
+
+Please be aware that while your response to the challenge is a single text, it should be represented by a single JSON object whose format is as follows:
+
+    ""text"": ""The core meaning is preserved by the simplification of 'in the teamed up' to 'tandem'. This makes the text easier to read for people who are unfamiliar with the jargon of the 'into the cauldron' album.""
+
+Please also be aware that you will need to make a GET request to a web endpoint provided by your mentor to receive the challenge text."
+,"
+
+(b) (ii) [25 marks]
+A method was devised to train neural networks to produce good English prose:
+The network consists of a two-dimensional grid of
+cells, with each cell capable of holding a number and
+displaying a letter. The network is initialized to hold
+random letters, but when given a word in input it adjusts the numbers in the grid, according to the following rules: if the two letters at the bottom left and top right of the cell match those in the input word, the number in that cell is incremented by one."
+,"
+""""""
+
+import os
+from typing import Tuple, List, Dict, Any
+from pathlib import Path
+from typing import TYPE_CHECKING
+from copy import deepcopy
+
+import numpy as np
+import torch
+import transformers
+from tensorflow.python.framework.errors import OpAttributeError
+from torch.nn.modules.rnn import LSTM
+from sklearn.feature_extraction.text import CountVectorizer
+
+from gensim.models import KeyedVectors
+from tqdm import tqdm"
+,"
+
+\paragraph{Sample Input}
+\texttt{nazi}
+
+\paragraph{Sample Output}
+\texttt{fascist, racist}
+
+\subsubsection{Simplifying Text}
+\paragraph{Format}
+This format is a sub-task of the simplifying text task. There is one sub-task.
+\paragraph{Train}
+The dataset for training contains a list of input-output pairs of text. The input text will be passed through the model, and it should generate the output text. Each input and output is separated by an empty line."
+," (Note that the answer has no commas, full stops, or capital letters, even though they are used in the question.)
+
+In order to simplify a text without altering its meaning, the simplification should be done in such a way that the grammar structure and vocabulary remains as close as possible to that of the source text. In this question, the correct response is: 'true crabs are decapod crustaceans with short projecting tails or hidden abdomens.'"
+,"
+
+
+\item
+
+Read the following text and answer the question as to who the person in the text was. Provide only the answer (e.g. \emph{Johnny Unitas}) as the response:
+\emph{Johnny Unitas was born on February 16, 1933. He died on March 8, 2002. Unitas was a quarterback who played for the Baltimore Colts. He also played for the San Diego Chargers and the Arizona Cardinals.}
+
+\end{enumerate}
+\subsubsection*{Baseline Model Architecture}"
+,"
+
+To answer a question, click on the correct option. Click Done when you have answered all questions correctly.
+
+Please, click Next to continue"
+,"
+
+Hint: 'However, when William had to go to the military, she governed alone.'
+
+Answer: 'However, when William had to go to the military, she governed alone.'
+
+#18. Complete the following text: 'if you like this recipe, it's a great way to use up all those leftover ______.' Provide only the missing ingredient as the response.
+
+Answer: 'if you like this recipe, it's a great way to use up all those leftover onions'
+
+#19."
+,"
+
+• 'trilobites lrb pronounced as three lobes rrb are a well known fossil group of extinct marine arthropods that form the class trilobita.'
+• 'trilobites pronounced as three lobes are a well known fossil group of extinct marine arthropods that form the class trilobita.'
+• 'trilobites pronounced as three lobes are a well known fossil group of extinct marine arthropods that form the class trilobite.'"
+,"
+
+Data Format
+
+All input is in lower case and is in the following format:
+
+[1]   line_number word
+[2]   line_number 1 2 word
+[3]   line_number 1 2 3 word
+...
+[4]   line_number word
+
+
+A single line of input will contain the following information:
+
+1. line_number (an integer between 1 and N)
+2. word (a word from the text)
+
+There may be a single line of input containing only the number N, indicating the end of the input."
+,"
+
+IELTS Essay writing task 2
+
+  • Should university students take full responsibility for their academic performance, or is the responsibility for their learning also with teachers?
+  • What are the consequences for children if one parent works and the other stays at home?
+  • As our cities become more crowded, the number of cars has been increasing. What is the best way for government to improve city life for all residents?
+  • Some people believe that a career is the most important thing in life, others believe that personal life should come first. Discuss both these views and give your own opinion."
+,"
+
+The example uses the following:
+
+The solution uses the following:
+
+A good solution for this is:
+
+tlso (thallium sulfate) or tl2so4 (thallium(ii) sulfate)
+
+
+The text is processed as follows:
+
+  1. Remove the outer (curly) braces { }. These should be used to highlight sections which the answer should be contained in, or in which the answer may be contained. In this case, the outer braces are not required.
+  2. Remove any words contained in parentheses ( )."
+,"
+
+\textbf{Explanation}: In the given example, it is clearly visible that the input text is lengthy and has a high level of noise in it, hence a human cannot make sense of the input text easily. In addition, the input text includes the information of the location of the city, but a human can not understand the location clearly from the text due to the presence of noise. Therefore, our proposed solution can simplify the text by removing the noise in it and also provides a clear representation of the location of the city in it.  
+
+
+\subsection{Evaluation Results}"
+,"
+
+Sample output for input'simplify ""mario basler lrb born december in neustadt an der weinstra e germany rrb is a german former football winger who is now manager of wacker burghausen.""'
+
+The output should be formatted as in the question, including the quotes and the comma.
+
+If the text already contains simplified text, then do not change the text.
+
+Please note the text has no commas in it, but the output does have commas in it.
+
+The test cases were constructed with an AI."
+,"
+
+The best solution to this question, which will be discussed in detail below, is to transform the input text (the question) into an equivalent question that has a simple, unambiguous answer. For instance, given a question ""What countries border Poland?"", an acceptable response would be ""Germany, Czech Republic, and Austria."" This type of answer is preferable to the type in which the text is broken down into individual countries (e.g."
+,"
+    Example: The response may be ""media local media independent newspaper valley radio mo radio ggg"" or other equivalent text.
+
+  4. Find and replace
+    Given a block of text containing named locations, countries and towns, find and replace all occurrences of 'US' with the USA.
+    Example: The response may be ""USA""
+
+  5. Sentence completion
+    Given a question such as 'what is the name of the largest lake in Africa?', provide the most suitable response from among 'Lake Victoria, Lake Chad and Lake Victoria', i.e. 'Lake Victoria'
+    "
+,"
+
+Example 2:
+
+Input:'michael stipe is an american singer-songwriter and musician best known as the lead singer of american band r.e.m.'
+
+Output: 'american singer and musician best known for r.e.m.'
+
+Explanation:
+
+Example 3:
+
+Input: 'a short story or prose fiction is a story written for reading that fits on one page.'
+
+Output: 'fiction written for reading.'
+
+Example 4:"
+,"
+
+\end{multicols}
+
+\item[]
+\item \begin{multicols}{2}
+
+Simplify the following text to improve its readability, ensuring its core meaning remains intact: 'the film s animation technique combines traditional hand drawn animation and extensive use of computer generated imagery.' Provide only the simplified text as the response.
+
+\end{multicols}
+
+\item[]
+\item \begin{multicols}{2}"
+," Do not provide other details. The text is taken from the Wikipedia article 'Potential_difference#Bioelectricity'.
+
+Answer the following question: What is the voltage measured by an electrocardiograph?
+
+Answer the following question: What does an electrocardiogram record?
+
+Answer the following question: A cardiac event monitor is a:
+
+Answer the following question: What does a Tensilon test measure?
+
+Answer the following question: An EEG records what?
+
+Answer the following question: Which of the following is a signal measured by an electrocardiograph?"
+,"
+    Example: 'tonetto born in trieste.'
+  • Simplifying a Paragraph:
+
+    Given a text, simplify it such that the meaning of the original text remains the same. Provide the simplified text as the response.
+    Example: Consider the input text to be 'A dog is a member of the genus Canis of the Canidae family of mammals.' The system should output the simplified text 'Dogs are mammals.'
+  • Factoid-to-Text:"
+,"
+    (2) Extract information that can be classified as numbers. Provide the simplified and classified version of the text as the response.
+    The output of the above two tasks should be formatted such that any information extracted is printed under the given label (number or not number), which should be separated by at least one space from the rest of the text, and printed only on its own line (with or without empty lines above/below it)."
+,"
+
+Solution
+
+The following is the simplified text that maintains the core meaning: ""a vector space is a set of vectors that has a notion of addition and scalar multiplication"".
+
+Explainable AI
+
+You are provided with a trained classification model. Each row of the input data represents a loan application and columns represent features such as income, credit score, etc. The output column represents the loan's status such as approved or rejected. The data for the test input is given in the response.
+
+Your task is to explain the prediction of the model on the input data by generating a set of rules."
+,"
+
+A. Mozart Haydn Schumann Wagner and Carl orff
+
+B. Bach Beethoven Brahms Mozart Haydn Schumann Wagner and Carl orff
+
+C. Bach Beethoven Brahms and Mozart Haydn Schumann Wagner and Carl orff
+
+D. Brahms Beethoven and Carl orff
+
+E. Haydn Beethoven and Mozart Schumann Wagner
+
+• A firm offers a one year policy that offers to insure a building for up to $100,000."
+," If the text does not contain a proper name, replace it with the text 'no proper name'. [text] #### Sample Input 1: cordes in cordes received its charter to become a bastide lrb fortified town rrb from the count of toulouse. #### Sample Output 1: cordes received its charter from the count of toulouse.  #### Sample Input 2: la rochelle received its charter to become a bastide lrb fortified town rrb from the count of toulouse. #### Sample Output 2: la rochelle received its charter from the count of toulouse."
+,"
+
+\section{Dataset}
+
+We construct the dataset from the `Fiction' dataset of the ROCStories corpus \cite{Mostafazadeh2017}, which contains 98,581 five-sentence `stories' (see \citet{Mostafazadeh2016} for a discussion of this genre) of the form: \textit{[P] was a [A]. One day, [B]. Instead of [C], [D]. As a result, [E].}
+
+To obtain a dataset of single sentences with simple and direct continuations, we create two datasets:
+"
+,"
+
+What are the restrictions?
+
+  1. This API is restricted to a maximum of 100 queries a day. You are strongly advised to limit the number of requests you make to this API as they are not refundable.
+  2. You are responsible for any costs you incur from using the API and you must adhere to all API Terms and Conditions.
+
+What type of response will I get?
+
+This API will return a JSON response. See the 'Try it out' button above for an example response.
+
+Search Content
+
+The Content API enables you to search a collection of content."
+,"
+
+\textbf{Instruction}: \textit{You are to select the correct answer from a list of four options.}
+
+\textbf{Example}: 'the village of bricqueville is located in calvados, a commune in the normandy region in france.' The correct answer is 'The village of bricqueville is located in calvados, a commune in the basse normandie region in northwestern france.'
+
+\textbf{Dataset Statistics}: The BERT-based model was trained on 50,000 samples of the simplified text data."
+,"
+'''
+
+'''
+# test_2 - test the text input to see if it follows proper format
+test_text = 'nancy patricia d alesandro pelosi lrb born march rrb is the speaker of the united states house of representatives.'
+if test_text == 'nancy patricia d alesandro pelosi lrb born march rrb is the speaker of the united states house of representatives.':
+    
+    '''
+    # test_3 - test the text input to see if it is too short
+    short_text ='speaker'"
+," You do not need to output the response with leading whitespace.
+
+Example Input
+
+gordon david strachan obe lrb born february in edinburgh rrb is a scottish football manager and former player.
+
+Example Output
+
+Gordon David Strachan was born in February in Edinburgh. He is a Scottish football manager and former player.
+
+Example Input
+
+william william william william william william william william william william william william william william william william william
+
+Example Output"
+,"
+
+Hint: 'dolores hidalgo cuna de la independencia nacional' => 'dolores hidalgo mexico'
+
+• #### Question 45
+
+Write a script that simulates the following scenario: A bank clerk is asked to record an array of deposit and withdrawal transactions, along with the balance of a bank account.
+
+Each transaction will be stored in a text file of the following form:
+
+deposit: 20
+balance: 200
+
+or
+
+withdrawal: 50
+balance: 150"
+,"
+
+\item \textit{Cloze}~\citep{marcus1993penn}: Provide the original sentence as the input, and replace words with a ``[MASK]'' token. The goal is to predict these masked tokens based on their contextual information in the input sentence.
+
+\item \textit{Next Sentence Prediction (NSP)}~\citep{devlin2019bert}: Similar to the Cloze task, the objective is to predict the relationship between a sentence pair (i.e., whether they are consecutive sentences).
+\end{itemize}"
+,"
+
+\paragraph{Results and discussion}
+
+We trained a seq2seq model for this task and the results are shown in Table~\ref{table:simplification}.  This task requires simplifying long, multi-clause sentences into a simple form that retains the essential information, but without changing the meaning of the sentence. It is not a simple translation task since words can change to more complex words in the translated sentence, and the new sentence will be more complex than the source sentence."
+,"
+
+# Solution
+
+The above question contains two tasks: 1) converting a sentence to its most simple form, and 2) extracting the most important part of a sentence.
+
+Our approach is to use the following steps:
+
+1. Convert the text to tokens.
+2. For each token in the text, check if the token can be removed. If so, remove the token and recursively convert the simplified text to tokens.
+3. Repeat step 2 until no more tokens can be removed.
+4. Select the most important part of the sentence using the following heuristics:"
+,"
+
+This task has a small vocabularly and is similar to a cloze task.
+
+You are given a passage as input, and you need to predict the words in the passage in order to form a cohesive text.
+
+You will be given a sentence of a few words along with the words that follow it, but some of the words in between are missing. Your task is to select the word from the choices that fits in the middle of the sentence.
+
+This task is a cloze task in which you have to predict a missing word in the middle of a given sentence."
+,"
+\label{q:simple_simplify_text}
+\end{question}
+
+\begin{question}
+Given a question: 'Can you help me write a table to answer this question: ""For each category of the dataset, calculate the mean of the feature \textit{B}.""', provide the code required to perform the task.
+\label{q:table_with_code}
+\end{question}
+
+\begin{question}
+Given a question: 'Describe the difference between the two data distributions."
+,"
+
+For example, a text of ""the danube flows into the black sea within romania's territory forming the danube delta the second largest and the best preserved delta in europe and a biosphere reserve and a biodiversity world heritage site"" should return ""the danube forms the danube delta within romania, a biosphere reserve and a biodiversity world heritage site."""
+,"
+
+    • You can also test for text simplification using the TextBlob library, with the simplify method as follows:
+
+    import textblob
+    simpler = textblob.TextBlob(text)
+
+    Q16: Translate the following English sentence to its corresponding German sentence. The sentence should be in proper German grammar.
+
+    • The correct answer should be: 'Das Kind lacht.' (The kid laughs.)
+
+    • If you are unsure about the correct German grammar, you can use the Google Translate API to translate the given English sentence to German."
+,"
+
+\noindent\textit{Sample 2:}
+
+Given the following text: 'the municipality is located in the locarno district the village is the is the last village on the paved road through the valley verzasca.' Simplify the following text to improve its readability, ensuring its core meaning remains intact. Provide only the simplified text as the response.
+
+\noindent\textit{Sample 3:}
+
+Given the following text: 'the municipality is located in the locarno district the village is the is the last village on the paved road through the valley verzasca.'"
+," Note that the simplification might involve the elimination of certain sentences or even the whole paragraph. For example, if a whole paragraph is redundant, then it should be removed in the simplified text.
+
+The sentence should be returned with a JSON containing a single string field called output, which contains the simplified version of the input text, or an empty JSON object if no simplification is found (null or empty string is not allowed).
+
+In order to answer this challenge, you will need to use the NLTK language model and the Levenshtein algorithm, implemented in Chapter 12."
+,"
+
+Solution Preview
+
+You would need to identify the following concepts in the sentence:
+Lula Bowlegs
+Seminole Chief Billy Bowlegs
+
+You would have to simplify the sentence using the above terms in the new sentence. Here is one possible simplified sentence:
+
+Billy Bowlegs is the name of the Seminole Chief.
+
+This sentence is simple enough. If you simplify the...
+
+Solution Summary"
+,"
+
+## Output
+
+Maya Lin designed the memorial wall.
+
+Sample Input 1 Sample Output 1
+A young Maya Lin, a native of California, was raised by her parents, both architects, and was often exposed to the creative process as a child. She studied architecture at Princeton University and graduated in 1980, but had no interest in becoming an architect herself. She traveled through Asia for two years, where she learned the principles of feng shui, a traditional Chinese art that combines architecture and geomancy."
+,"
+
+Question 7
+
+You have been asked to create a website to sell your client’s product. The product is a new kind of toothbrush, which is currently the only product of its kind on the market. The client would like the site to include details of the toothbrush and encourage customers to purchase the product. The website is going to be a personal website and the client does not have their own domain name.
+
+You have already designed the layout for the website, which you have displayed on a white background, with a white border, which appears as shown below:
+
+Toothbrush website design"
+,"
+
+
+1 Answer
+
+0 votes
+
+Hello dear,
+
+Thank you for sharing this question.
+
+This is a difficult question and unfortunately we do not have such a specific question in our Q&A section. 
+
+Our recommendation is to read and practice the following topics which might help you:
+
+Topic 4: Political and Social Context:
+
+Topic 4.1: Nationalism and Internationalism
+
+Topic 4.4: International Organisations
+
+Topic 5: International Law:
+
+Topic 5.3: International Law and the Rule of Law
+
+We hope this helps you. 
+"
+,"
+
+This dataset contains over 2.8 million text-based training examples and an evaluation set of 100,000 examples. The full training data is a concatenation of all the training examples in the source files: train_data.txt, train_data_hard.txt, train_data_easy.txt, train_data_unseen.txt. The development dataset is a concatenation of dev_data.txt and dev_data_unseen.txt. The evaluation dataset is eval_data.txt."
+,"
+
+### Examples
+
+Input:
+other near by towns or locations are crooked corner peelwood redground wheeo narrawa north history the origin of the name is thought to be from the gandangara aboriginal word for deep water.
+
+Output:
+crooked peelwood wheeo deep water
+
+Input:"
+,"
+
+I'm quite impressed with your use of ""fair"" as a verb, though I'm not sure that's the correct word.
+
+Anonymous said...
+
+This is so fascinating to me! Do you think the machine could have made its own text from scratch for this?
+
+A few things:
+
+The machine thinks there's no such thing as a marble technology fair?
+
+Also, it's really funny to me that it kept the phrase ""academies of sculpture and fine arts"" in the output, despite it being in the input!
+
+Anonymous said..."
+,"
+
+(This question uses a 'Text Simplification' dataset from the QMUL Datasets Repository.)
+
+• Input:
+'he was the director of antiquities in egypt during the th century who was who in egyptology... page by warren royal dawson and excavated in memphis and dashur providing many drawings of many egyptian pyramids.'
+• Output:
+'egyptian pyramids'
+• Input:
+'john mcclenaghan served as an advisor to the department of defense for three years from his retirement from the marine corps."
+," You may use the pre-processing functions defined earlier to help with pre-processing.
+
+Test Set
+
+Sample of the test set:
+
+
+Sentence compression is an important subfield of Natural Language Processing, and has recently been the subject of a number of shared tasks and competitions (Callison-Burch et al., 2007; Katsipadis et al., 2015), but is still an area of active research.
+
+This task addresses several challenges:
+
+  1."
+,"
+
+A: Other items had washed down gullies and some others had lain beneath the water offshore.
+
+
+Which of the following is the correct word usage?
+
+A: The student was so excited that she couldn't keep her hands to herself.
+B: The student was so excited that he couldn't keep his hands to himself.
+
+A: My friend and I ate at a new restaurant last night.
+B: My friend and me ate at a new restaurant last night.
+
+
+You are a news reporter. You have just finished writing the article shown below."
+,"
+
+Question 2
+
+Which of the following is not an example of how the brain processes sensory input?
+
+Question 3
+
+What are the effects of the use of drugs?
+
+Question 4
+
+A young man is unable to distinguish between an apple and a banana; he is unable to identify the names of the fruits in writing. What cognitive disorder does the young man have?
+
+Question 5
+
+What is the result of the activity of the cerebral cortex?
+
+Question 6
+
+What is the difference between a hallucination and an illusion?
+
+Question 7"
+,"
+
+We would be looking for something like:
+
+'roquebrune is a commune in the department of the gironde in the region of aquitaine in south western france.'
+
+You do not need to worry about the specific structure of this response, but it should contain the key information from the original sentence. You will need to do this in a single line, so you need to reduce the word count to something more manageable.
+
+You should use your own dictionary and other resources to find suitable synonyms for the source text."
+,"
+
+The first step is to identify the subject of the text. We assume that the subject is the flag. Now, you can focus on the words that describe the flag, and ignore everything else. So, the words ‘the only flag’ are describing the flag. In this case, it is clear that the flag is being talked about. Now, you will need to check what is important about this flag. It is clear that its importance lies in the fact that it is the only flag that has had so many different forms. This is the most important idea, so you should ensure this comes across in the response."
+,"
+
+This problem has several constraints, most of which have been removed to simplify the example:
+
+  • The text that needs to be simplified is provided in one request
+  • Simplification requests must be kept short for performance reasons
+  • The text provided may be in any language.
+
+To solve this task, you would first need to train a custom simplification model with some training data and then invoke it by passing your input text.
+
+You can download an example dataset to train your own custom model."
+," (The text is taken from the NIST dataset.)
+
+\begin{tabularx}{\textwidth}{ l X }
+    \textbf{Original Text}: &the newly built general motors place lrb now rogers arena rrb shared with the vancouver canucks of the national hockey league lrb nhl rrb would serve as the grizzlies home arena for their entire stay in vancouver. \\
+    \textbf{Answer}: &the newly built general motors place would serve as the grizzlies home arena for their entire stay in vancouver.
+\end{tabularx}
+
+\item
+"
+,"
+
+Solution: (cup, Apollo)
+
+The most common and effective method for identifying entities is Named Entity Recognition (NER) in which we identify the entity names as well as the boundaries of each entity in a text. For example, for the following sentence, the word `Paris' is identified as a `Person'.
+
+The capital of France is Paris.
+
+NER is generally regarded as one of the most successful Natural Language Processing applications due to its extensive use in many applications including Search engines, Question Answering, Machine Translation, Information Retrieval, etc."
+,"
+
+Example input:
+mclean was born in west palm beach florida to his mother denise fernandez and father bob mclean.
+
+Example output:
+mcLean was born in West Palm Beach, florida, to his mother, denise fernandez, and father, bob mclean.
+
+
+## Input
+
+A single line of text to be simplified.
+
+## Output
+
+The simplified text.
+
+## Constraints
+
+• The input and output will contain only printable ASCII characters.
+
+## Scoring
+
+This is, so the shortest entry in bytes wins."
+,"
+
+Question 3 (Answer either question 2 or 3): Describe two ways that information from a phylogenetic tree can be used to help a scientist learn about the evolution of a particular organism.
+
+Question 4: Explain the relationship between the following three items: homology, synapomorphy and monophyletic group. Your answer should include all three items.
+
+
+Examine the phylogenetic tree below and answer the questions:
+
+Figure 8. Phylogenetic tree relating a sample of organisms.
+  1. What is the most recent common ancestor of D and E?
+  2."
+," (P.S. This is not homework and the solution provided by the question is correct, as far as I am concerned).
+
+Thanks!
+
+• Can you give us the problem statement from the source? Are you expected to use NLTK? – Danny Jan 29 at 19:50
+• @Danny Please find the full question here – Coding_for_Food Jan 29 at 20:04
+
+I am using the tokenizer from the NLTK package.
+
+First, tokenize:
+
+tokenized = tokenizer.tokenize(text)"
+,"
+
+Note: Do not include a title in your answer.
+
+Input
+
+Input will be given from standard input. The first line will be a string of at most 1000 characters with no spaces, and each character will be one of the 26 letters a-z. The second line will be an integer N with 1 ≤ N ≤ 20. Following this will be N lines, each containing a string of at most 100 characters.
+
+Output
+
+Output will be given to standard output. It will be a string of at most 1000 characters with no spaces.
+
+Example Input"

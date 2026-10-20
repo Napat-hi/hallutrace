@@ -1,0 +1,174 @@
+{
+  "task": "rationalization_binary",
+  "measure": "extractor_accuracy",
+  "items": 50,
+  "labelled": 50,
+  "sampling": {
+    "natural_base_rate": 0.3085,
+    "sampling_ratio": 0.54,
+    "drawn_flagged": 27,
+    "drawn": 50
+  },
+  "all_rows": {
+    "inter_annotator": {
+      "n": 50,
+      "kappa": 0.486,
+      "agreement": 0.78,
+      "ci95": [
+        0.2079,
+        0.7164
+      ],
+      "matrix": {
+        "rows": "annotator_A",
+        "cols": "annotator_B",
+        "labels": [
+          "hallucinated",
+          "supported",
+          "unverifiable"
+        ],
+        "cells": [
+          [
+            10,
+            5,
+            0
+          ],
+          [
+            6,
+            29,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ]
+      }
+    },
+    "extractor": {
+      "n": 50,
+      "gold_missing": 0,
+      "accuracy": 0.7,
+      "ci95": [
+        0.5625,
+        0.809
+      ],
+      "edge_crossing": true,
+      "edges_crossed": [
+        0.8
+      ],
+      "gold_counts": {
+        "hallucinated": 15,
+        "supported": 35,
+        "unverifiable": 0
+      },
+      "gate": "quarantine",
+      "gate_note": "band 0.90 / 0.80, fixed before annotation",
+      "natural": {
+        "accuracy": 0.6981,
+        "note": "reweighted to the verifier's natural flag rate; an estimate"
+      }
+    }
+  },
+  "tag_source": "tag column",
+  "tags": {
+    "not a claim": {
+      "A": 0,
+      "B": 0,
+      "both": 0
+    },
+    "exaggerated": {
+      "A": 0,
+      "B": 0,
+      "both": 0
+    },
+    "no article": {
+      "A": 0,
+      "B": 0,
+      "both": 0
+    }
+  },
+  "gold_tags": {
+    "not a claim": 0,
+    "exaggerated": 0,
+    "no article": 0
+  },
+  "not_a_claim": {
+    "n": 0,
+    "rule": "dropped when both annotators tagged it; for the verifier's numbers also when adjudication settled it as not a claim",
+    "marked_by_one": 0,
+    "claim_rows": 50,
+    "settled_not_a_claim": [],
+    "verifier_rows": 50,
+    "mentions_not_a_claim": [],
+    "without": {
+      "inter_annotator": {
+        "n": 50,
+        "kappa": 0.486,
+        "agreement": 0.78,
+        "ci95": [
+          0.2079,
+          0.7164
+        ],
+        "matrix": {
+          "rows": "annotator_A",
+          "cols": "annotator_B",
+          "labels": [
+            "hallucinated",
+            "supported",
+            "unverifiable"
+          ],
+          "cells": [
+            [
+              10,
+              5,
+              0
+            ],
+            [
+              6,
+              29,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ]
+        }
+      },
+      "extractor": {
+        "n": 50,
+        "gold_missing": 0,
+        "accuracy": 0.7,
+        "ci95": [
+          0.5625,
+          0.809
+        ],
+        "edge_crossing": true,
+        "edges_crossed": [
+          0.8
+        ],
+        "gold_counts": {
+          "hallucinated": 15,
+          "supported": 35,
+          "unverifiable": 0
+        },
+        "gate": "quarantine",
+        "gate_note": "band 0.90 / 0.80, fixed before annotation",
+        "natural": {
+          "accuracy": 0.6981,
+          "note": "reweighted to the verifier's natural flag rate; an estimate"
+        }
+      }
+    }
+  },
+  "thresholds": {
+    "accept": 0.8,
+    "tentative": 0.667
+  },
+  "accuracy_thresholds": {
+    "accept": 0.9,
+    "tentative": 0.8
+  }
+}

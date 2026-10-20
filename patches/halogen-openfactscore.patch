@@ -1,0 +1,65 @@
+diff --git a/verifiers/biographies.py b/verifiers/biographies.py
+index ac6cb26..62ad9c4 100644
+--- a/verifiers/biographies.py
++++ b/verifiers/biographies.py
+@@ -3,6 +3,20 @@ import pandas as pd
+ from factscore.factscorer import FactScorer
+ import nltk
+ 
++# HALoGEN called FActScore, whose atomic fact generator (InstructGPT) is retired,
++# so the released code cannot run. OpenFActScore (arXiv:2507.05965) is a drop-in
++# replacement: same package, FactScorer class and get_score output.
++#
++# Its authors pair OLMo-2-1124-7B-SFT as generator with Gemma 3 4B as validator.
++# OLMo 2 7B is one of our subject models, so Gemma 3 4B takes both roles; in their
++# Table 1 the two score alike as generators (BERTScore F1 0.867 and 0.864).
++#
++# OpenFActScore's absolute scores sit below the original's, so these Biographies
++# numbers are not comparable to HALoGEN's published ones.
++AFG_MODEL = os.environ.get("HALLUTRACE_AFG_MODEL", "google/gemma-3-4b-it")
++AFV_MODEL = os.environ.get("HALLUTRACE_AFV_MODEL", "google/gemma-3-4b-it")
++FACTSCORE_DIR = os.environ.get("HALLUTRACE_FACTSCORE_DIR", ".cache/factscore")
++
+ class BiographiesEvaluator:
+     def __init__(self):
+         nltk.download('punkt')
+@@ -36,16 +50,27 @@ class BiographiesEvaluator:
+ 
+         return pd.DataFrame(rows)
+ 
+-    def evaluate(self, key_path, csv_path, output_dir="./"):
++    def evaluate(self, csv_path, output_dir="./"):
+         """
+-        Evaluate biographies based on key path and CSV path.
++        Evaluate biographies. No API key: both models are local.
++
++        The first argument used to be the path to a file holding an OpenAI key.
++        OpenFActScore needs none here, so the signature matches the other verifiers.
+         """
+         df = self._read_csv(csv_path)
+         #df = df.head(2)
+         topics = df['name'].tolist()
+         generations = df['response'].tolist()
+ 
+-        fact_scorer = FactScorer(openai_key=key_path)
++        # is_npm defaults to True in the library; the npm ensemble is not used
++        fact_scorer = FactScorer(
++            afg_model=AFG_MODEL,
++            afv_model=AFV_MODEL,
++            is_npm=False,
++            data_dir=FACTSCORE_DIR,
++            model_dir=FACTSCORE_DIR,
++            cache_dir=FACTSCORE_DIR,
++        )
+         out = fact_scorer.get_score(topics, generations, gamma=10)
+ 
+         df_decisions = self._process_decisions(topics, out)
+@@ -74,7 +99,7 @@ if __name__ == "__main__":
+     evaluator = BiographiesEvaluator()
+ 
+     # Example usage
+-    filepath = evaluator.evaluate(key_path="", csv_path="./responses/biographies/gpt_3.5_turbo_0125_biographies.csv")
++    filepath = evaluator.evaluate(csv_path="./responses/biographies/gpt_3.5_turbo_0125_biographies.csv")
+     print("Output file path:")
+     print(filepath)
+ 

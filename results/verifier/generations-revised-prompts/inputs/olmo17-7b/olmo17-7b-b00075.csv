@@ -1,0 +1,724 @@
+response,list,list_condition,count,generation_id
+"
+Solution:
+Trivial: print_planets(""b"", ""abcdefg"", ""abcdefg"") == ['b', 'C', 'f', 'h']
+
+Write a function which has two strings as input.
+The function will return the number of characters in the first string.
+If the first string is greater than the second, the function should return -1.
+If the first string is smaller than the second, the function should return 1.
+I'm really stuck with this, I have no clue on how to implement a function that can compare strings and return either -1 or 1.",,[],0,olmo17-7b|rationalization_numerical-00001|1
+"
+
+Ans:3
+-----
+Ques:Write a number, that is two more than the number that is three times the last number.
+
+Find a number whose
+
+Ans:3
+-----
+Ques:Write a number, so it is four less than four times a number.
+
+Multiply the last number by three. Add four.
+
+Ans:6
+-----
+Ques:Write a number, that is three times a number and one more than the third number.
+
+Subtract the third number by four.
+
+Ans:4
+-----",,['mercury'],1,olmo17-7b|rationalization_numerical-00002|1
+" But the strange thing is when I run the code, it says ""One or more errors occurred.""
+# Program to count the number of letters in a string.
+#and output the number.
+#count number of letters in the name variable.
+print ""The name has"",n,""letter(s).""
+
+
+A: A nicer way to write that code would be:
+n = len(name)
+if n < 1:
+    print ""Error: name is an empty string""
+else:
+    print ""The name has"",n,""letter(s).""",,[],0,olmo17-7b|rationalization_numerical-00005|1
+"
+
+For example:
+LettersA =
+g
+r
+b
+v
+
+R = for g
+L = for r
+D = for b
+U = for v
+LettersB =
+l
+
+LettersB has 1 planet that contains letter l.
+LetterD =
+b
+v
+LettersD =
+v
+
+LetterD has 1 planet that contains letter v.
+R5Output: 1 letter v
+
+For each input, output a number and a list that contains planets.
+
+Problem Source
+The Dominating Color - TOPCoder",,[],0,olmo17-7b|rationalization_numerical-00006|1
+" The number is obtained in the following way:
+
+```
+x = [item for item in planets if item.find(""h"") != -1]
+print(len(x))
+```
+
+- ```find``` returns the position where the substring is located.
+- If the position is not found, it will return ```-1```.
+- If the position is found, it returns the position.
+
+2. How many planets in the solar system contains letter h. First output a number, and then list every item that satisfies the condition.",,['earth'],1,olmo17-7b|rationalization_numerical-00007|1
+" You can define a condition, that the planets must have the 'i' only once in their name, e.g.:
+
+ [venus, mercury, earth, jupiter, uranus] => 1 [earth, venus, mercury, jupiter, uranus] => 2
+
+
+Hint: A list can be iterated with every, and a condition can be tested by filter_input, which lets you check the amount of arguments after the main callback.
+
+Then I thought the next type of exercise was checking and comparing files and directories and I solved the following problems:",,['jupiter'],1,olmo17-7b|rationalization_numerical-00008|1
+"
+Solution:
+2",,[],0,olmo17-7b|rationalization_numerical-00010|1
+" 
+SELECT COUNT (*) as num,
+       *
+FROM planet
+WHERE p_name LIKE 'm%'
+
+the results should look like this. 
+num = 6
+m=mercury
+m=mars
+m=moon
+m=mercury
+m=mars
+m=moon
+
+
+A: You can simply remove the count and use group by p_name
+SELECT p_name, count (*) 
+FROM planet
+WHERE p_name LIKE 'm%'
+group by p_name",,"['mercury', 'mars']",2,olmo17-7b|rationalization_numerical-00012|1
+"
+My input:
+The planets in the solar system are: Mercury Venus Earth,
+Mars Jupiter Saturn Uranus Neptune Pluto
+3, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune, Pluto
+I think the question want us to output 3 Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune, Pluto
+Any help would be appreciated!
+
+A: I'm not sure this is the simplest way, but it works.
+str=""The planets in the solar system are: Mercury Venus Earth,",,[],0,olmo17-7b|rationalization_numerical-00014|1
+" As previously mentioned, almost every column in the solar system is circular and, with the exception of Pluto, planets are in large ...
+read more
+
+### Get the human-readable version of a map/set
+
+I have a map/set that I call map. map is a map of two distinct keys and a single value. By convention the keys are a type and a name. For example, suppose that I want to make a map of species and names ...
+read more
+
+### Bifurcation patterns in population models
+
+The following model describes the behaviour of a population of cells.",,"['jupiter', 'neptune']",2,olmo17-7b|rationalization_numerical-00015|1
+"
+
+  ```shell
+  $ ruby q.rb
+  2
+
+  $ echo ""nasa|"" | ruby q.rb
+  nasa
+  ```
+
+## Facts and Trivia
+
+A meteor is the spectacular fireball visible when a meteoroid enters the Earth's atmosphere. Once in the atmosphere, the meteors fusion in the gas produces flash and cloud, giving the appearance of a fireball. Meteoroids are a separate branch of celestial phenomena from meteorites and are defined as objects smaller than about 1 kilometer in diameter.",,[],0,olmo17-7b|rationalization_numerical-00016|1
+"
+
+ Example(s) Input: 'FF'
+
+FF
+
+FF
+
+Output: '1:2'
+
+For this problem I think you need to loop through the letters (maybe nested loop) and then add a word array to your class. If you need any further help, let me know.
+
+A: import java.util.*;
+
+public class SolarSystem {
+
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+
+        String planetName;
+        String[] nameList = new String[3];",,"['venus', 'mars', 'saturn', 'uranus']",4,olmo17-7b|rationalization_numerical-00018|1
+"
+4
+
+#### Solve the linear equation algebraically
+
+Solve the linear equation algebraically
+2
+
+#### How many boxes have I got?
+
+Write an algorithm to determine how many boxes I got.
+4
+
+#### Erase (remove) all symbols which does not have its preimage (invert)
+
+Erase all symbols which does not have its preimage (invert). Given a list of symbols and a dictionary with their inverses. Examples for Symbols: ""A"", ""B"", ""C"", ...",,['venus'],1,olmo17-7b|rationalization_numerical-00021|1
+"
+
+sol = [2, 8, 3, 15, 4, 12, 6, 7, 11, 1]
+
+print(""There are "", sol.count(""x""), ""x in the solar system"")
+print(sol[sol.index(""x"")])
+
+There are 3 x in the solar system
+x
+
+### Question 10.5:
+
+Write a function get_list(iterable) to return a new list by removing the first two items of iterable.
+
+def get_list(iterable):
+
+items = list(iterable)",,[],0,olmo17-7b|rationalization_numerical-00023|1
+"
+
+Output
+Number of planets with 'y' in their name: 0
+The name of the planets are:
+Mercur
+Venus
+Earth
+Mars
+
+But the program outputs the actual output and the expected output at the same time. Is there a way to make it output expected output then actual output?
+
+A: The way I would tackle this is to call count() on a condition which is expected to not be met, to make sure that if there are no planets matching your condition, then there will not be an output.",,['mercury'],1,olmo17-7b|rationalization_numerical-00024|1
+"
+
+One example: [20, 20, 7, 14, 15, 11, 20, 17, 10]
+
+I'm doing this question and I just can't figure out how to do it, any suggestions or help would be greatly appreciated.
+
+• Could you give a few examples of the outputs you expect for the various inputs? – Abyer Jan 17 '16 at 22:59",,[],0,olmo17-7b|rationalization_numerical-00027|1
+" As each planet has a different letter, you can not compare the letters of two planets. The output should be a list of commaseparated items.
+Q: check the symbol of planet
+A:
+check.planet",,[],0,olmo17-7b|rationalization_numerical-00028|1
+"
+
+Problem: Assign number 2 and number 5 to one and three, and three and four to two. Output a number.
+
+[EX Q]: what are all the possible 4-letter codes, if each code contains the same letters?
+[EX A]:
+What are all the possible 4-letter codes?
+
+[EX Q]: Print the English word for each number, from 1 to 20. Use at least two loops.
+[EX A]:
+Print the English word for each number, from 1 to 20.",,[],0,olmo17-7b|rationalization_numerical-00031|1
+"
+
+The first line contains the number of test cases to follow, n. For each test case, the first line contains the number of planets in the solar system. Following that, each planet is listed individually, with a planet name and type (""Satellite"" or ""Star"") on a new line. Then you can write as many lines as you want of the form ""g is a planet."" If you output one number for each test case, that is fine, but the output must be on a new line.
+
+### Input
+
+2
+1
+Saturn
+Satellite
+2
+Saturn
+Star
+",,[],0,olmo17-7b|rationalization_numerical-00032|1
+" If there is none, output ""None"".
+Problem:number of notes for every person that attends to a party. output the result table in any order.
+Solution:
+select count(*) ,  people from Attendee group by people",,[],0,olmo17-7b|rationalization_numerical-00033|1
+"
+
+A: planets = [ 'mercur', 'venus', 'earth', 'mars', 'jupiter', 'saturn', 'uranus', 'neptune', 'pluto']
+
+for item in planets:
+    if item[0] == 'i':
+        print(item)
+
+
+A: List comprehension
+[x for x in planets if x[0] == 'i']
+
+
+A: *
+
+*Generate a list of all the planets whose first letter is 'i':",,[],0,olmo17-7b|rationalization_numerical-00034|1
+" A parser is a function that takes as input a possibly infinite sequence of symbols from a regular language and constructs a regular tree as output. EXERCISE 26: Finite automata (FA) A finite automata is a finite-state machine. It accepts a language if there exists a word in the language that is not in L' e. So we need to put a 0 in the right-hand side of the interpretation table. Draw the DFA for language L = {a,b}. Dec 31, 2021 · Explanation of 0-1 JEE Main Sample Paper with solutions online test 2021-22.",,[],0,olmo17-7b|rationalization_numerical-00036|1
+"
+Problem:How many elements are there in Set A(A set contains all the letters of the word FRIDAY)?
+Solution:
+12",,"['mercury', 'mars']",2,olmo17-7b|rationalization_numerical-00038|1
+"
+#include <iostream>
+#include <vector>
+#include <string>
+#include <fstream>
+#include <algorithm>
+using namespace std;
+
+int main()
+{
+    vector <string> planet_vector;
+
+    // Open file
+    ifstream file (""data.txt"");
+
+    string planet;
+
+    while(getline(file, planet))
+    {
+        // Split string into vector
+        vector <string> planet_vector = split(planet, "","");
+
+        // Check if vector contains letter ""o""",,[],0,olmo17-7b|rationalization_numerical-00040|1
+"
+• Count the Fractions
+
+There are two integers K and N on the first line, N > K > 0.
+
+In the next K lines, the i-th of which contains two numbers A_i and B_i, and A_i < B_i.
+
+The result of the calculation for each integer value L = 1, …, N is required to calculate C_l = N * (N-1)/2 - ∑_m=1_l * A_m, which has two integer part.",,[],0,olmo17-7b|rationalization_numerical-00041|1
+"
+
+Write code that uses the class Node to count the amount of times you find the string ""waffle"" in a text. If the text contains multiple words you find the string as many times as it occurs in the text.
+
+Write a program to calculate a new password. Let the user enter a number between 1-100. Your program should then write a new password consisting of 6 numbers (i.e., characters from 0-9).
+
+Write a program to count how many palindromes in a string you find.",,[],0,olmo17-7b|rationalization_numerical-00042|1
+"
+I am trying to make a program to find the planets in the solar system.
+First I tried making a array called planets with all the planets in the solar system (only 9 planets) and I tried creating a function that loops through the array using 'for' but that didn't work for some reason.
+for(int i = 0; i < 9; i++)
+{
+    cout << planets[i] << "" "";
+}
+
+Next I tried using a boolean and a while loop, but that didn't work either.
+bool isIn = false;
+while(isIn = false)
+",,['saturn'],1,olmo17-7b|rationalization_numerical-00044|1
+" But if the starting character is vowel, then just output the number of vowels in the name of the planet
+v=vi,
+u=uo,
+e=ei,
+a=ai,
+o=io,
+i=ii,
+l=li,
+d=di,
+n=ni,
+r=ri,
+s=si,
+t=ti,
+c=ci,
+q=qi,
+p=pi,
+f=fi,
+g=gi,
+h=hi,
+j=ji,
+k=ki,",,['venus'],1,olmo17-7b|rationalization_numerical-00047|1
+"
+
+```?- names(X, L).
+L = ['xenon', 'xylophile', 'xanthine', 'x-ray', 'x-particle'].
+?- X in names(X, L).
+true ;
+false.
+?- names(X, L), X in [alpha, beta].
+L = ['xenon', 'xylophile', 'xanthine', 'x-ray', 'x-particle'] ;
+false.
+?- names(X, L), X in 1..2.",,[],0,olmo17-7b|rationalization_numerical-00049|1
+"
+
+Ex Output:
+x",,[],0,olmo17-7b|rationalization_numerical-00050|1
+" (planet1 $ 9 & system & 1) = 3 (sun $ ""mercury venus earth mars jupiter"" & system & 1) = 3 (sun $ ""mercury venus earth mars jupiter"" & system & 5) = 2 (sun $ ""mercury venus earth mars jupiter"" & system & 4) = 4  The function «(name & expr) is in system terms but not in procedural terms. The operator « = n will repeatedly do expr, and stop when it meets a value of n.",,[],0,olmo17-7b|rationalization_numerical-00054|1
+"
+I tried writing a recursive function that would look at the current letter and check the number and do the following: if the letter is f and the number of items already outputted is less than 9 then it would output another item and recurse back into the function but when i do that I just get a stack overflow error. I tried keeping a list and checking if that had more letters with that letter in it and then moving on, but I just end up checking the same thing over and over again. I'm sure that it can be done with recursion but I am quite stuck.",,[],0,olmo17-7b|rationalization_numerical-00057|1
+"
+
+Examples:
+
+Input:
+5 4 2 2 5
+
+Output:
+2
+
+Explanation:
+The two planets that end with letter g are Jupiter and Neptune.
+
+
+**Constraints**
+
+* 1 ≤ planets.length ≤ 50
+* 1 ≤ k ≤ 10^9
+* 1 ≤ planets[i] ≤ 10^9
+* planets[i] does not end with the letter g
+
+---
+
+```python
+class Solution:
+    def countPlanets(self, planets, k):
+        # Write your code here
+        ans = 0
+        ",,[],0,olmo17-7b|rationalization_numerical-00058|1
+" You have to generate a total of 80 items. 
+Input:[""j"", ""P"", ""q"", ""V"", ""w"", ""l"", ""i"", ""Q"", ""Y"", ""a"", ""J"", ""I"", ""s"", ""B"", ""N"", ""s"", ""J"", ""p"", ""z"", ""f"", ""l""]
+Output:
+[0]",,['earth'],1,olmo17-7b|rationalization_numerical-00059|1
+"
+
+Question: How many times does the letter 'a' appear in the name of the current president of the USA, Barack Obama? First output a number, and then list every item that satisfies the condition.
+
+### Interpretation.
+
+At the beginning of this example, the alphabetical position of the word ""Obama"" in the set of letters 'A' to 'Z' is 10.
+
+Because of this, the line marked with 2 displays the number ""2"", because that's the 2nd word that appears in the name ""Obama"".",,[],0,olmo17-7b|rationalization_numerical-00060|1
+"
+• Break-lock game
+Write a program or function that breaks the locks of the board, giving each board a number.
+• Name tags
+Assign name tags in the restaurant to the employees. Write a program that reads the number of restaurant tables and names, generates name tags and outputs them on a web page.
+• A table
+For a table for 50 people write name tags on each of the lines.
+• University
+University had to provide a statement to the students of the history of the university.",,[],0,olmo17-7b|rationalization_numerical-00062|1
+"
+
+A:
+Code:
+import sys
+
+a = sys.stdin.read()
+b = list(map(str, sys.stdin.readlines()))
+a = map(lambda x: x[-1], a)
+b = map(lambda x: x[-1], b)
+
+output = sum(1 for i in a if i in b)
+print(output)
+
+for i in b:
+    if i.endswith(""m""):
+        print(i)
+
+Time Complexity: O(n^2)",,[],0,olmo17-7b|rationalization_numerical-00064|1
+"
+
+Hint: use a tuple as return value.
+
+**Input format**
+
+On first line, an integer n denotes the number of planets in the solar system. On the second line, n numbers are given. Every number is an integer, smaller than 100.
+
+**Output format**
+
+Output n lines. The first number in each line denotes the number of planets that end with a letter o. Every next number in each line denotes a planet’s name that ends with o.
+
+**Constraints**
+
+1 ≤ n ≤ 100
+
+**Sample tests**",,[],0,olmo17-7b|rationalization_numerical-00066|1
+" Answer the question. Find all the planets with ""p"" at the end of the name and then print them.
+Problem:Suppose we have a sample of mass 5 gm from a population whose standard deviation is 3 gm. Then the z-score that corresponds to 3.5 gm is
+Solution:
+z-score
+Problem:Suppose that sales, S, in dollars, are modeled by the equation S = 0.005x^2 + 2.5x - 12000 where x is the number of months that pass.",,[],0,olmo17-7b|rationalization_numerical-00067|1
+"
+The code to do it is below. However, this produces a slight oddity. In your last test case, why are the answers jupiter and mars? 
+It should only be jupiter, since mars has the same letter count as other elements that come after it (for example, the next element after jupiter is pluto, which also has 11 letters).
+How can I avoid this slight oddity?
+#!/usr/bin/env python3
+from collections import defaultdict
+
+class Counter:
+    def __init__(self):",,[],0,olmo17-7b|rationalization_numerical-00068|1
+"
+I don't know how to do this.
+
+A: int sPlanets = 0;
+foreach(string planet in myPlanetArray)
+{
+    if(planet.EndsWith(""s""))
+        sPlanets++;
+}
+
+Result:
+11
+
+
+A: int total = myPlanetArray.Count(x => x.EndsWith(""s""));
+
+If you need a collection of planets, use:
+List<string> planets = myPlanetArray.Where(x => x.EndsWith(""s""))",,"['venus', 'mars', 'uranus']",3,olmo17-7b|rationalization_numerical-00070|1
+"
+(Rule #1: The subject of a question sentence must be preceded by the adverb ‘the’. )
+
+|options:
+|count –Number of answers
+|write –Output mode
+|end
+|answer –The planet name (and letter).
+|end
+
+${count} |write-file planet-no-v.txt |while ($count -lt 2) {
+  |answer -Next planet
+  |count +1
+}
+
+${count} |write-file planet-v.txt
+
+
+A: the below is my answer
+@echo off",,[],0,olmo17-7b|rationalization_numerical-00073|1
+"
+
+First output a number, and then list every item that satisfies the condition.",,[],0,olmo17-7b|rationalization_numerical-00075|1
+" I've seen some answers on using dict, but I'm trying to not use dicts and instead use native functions only.
+print('How many planets in the solar system ends with letter y. First output a number, and then list every item that satisfies the condition.')
+planet_names = []
+n_of_planets = input('How many planets in the solar system?')
+n_of_planets = int(n_of_planets)
+for i in range(n_of_planets):
+    planet_name = input('planet name: ')
+    ",,['mercury'],1,olmo17-7b|rationalization_numerical-00076|1
+" The thing is I want the output to be like this:
+4
+Fe
+K
+Sc
+
+but I am still new at Python and I can't seem to figure out how to do this. The code that I have so far is this:
+from numpy import array, *
+import operator
+import itertools
+import math
+import time
+
+def print_periodic_table():
+    f=open('db_all.csv','r')
+    g=open('list.csv','r')
+    print(f)
+    f1=f.readlines()",,"['hydrogen', 'boron', 'carbon', 'nitrogen', 'oxygen', 'fluorine', 'neon', 'magnesium', 'aluminum', 'silicon', 'chlorine', 'argon', 'scandium', 'titanium', 'vanadium', 'manganese', 'iron', 'nickel', 'zinc', 'germanium', 'arsenic', 'selenium', 'bromine', 'krypton', 'strontium', 'zirconium', 'niobium', 'molybdenum', 'technetium', 'ruthenium', 'indium', 'tin', 'antimony', 'iodine', 'xenon', 'lanthanum', 'neodymium', 'gadolinium', 'hafnium', 'tantalum', 'tungsten', 'rhenium', 'platinum', 'polonium', 'astatine', 'francium', 'actinium', 'protactinium', 'uranium', 'neptunium', 'plutonium', 'californium', 'einsteinium', 'mendelevium', 'nobelium', 'lawrencium', 'dubnium', 'meitnerium', 'roentgenium', 'copernicium', 'nihonium', 'tennessine', 'oganesson']",63,olmo17-7b|rationalization_numerical-00091|1
+"
+Student:
+What is the first item in the periodic table that starts with the letter g. After that, output all items that start with the letter g.
+Student:
+[20, Oxygen]
+Number of elements that start with letter c.
+Student:
+What is the first element in the periodic table that starts with the letter c. Then output all items that starts with the letter c.
+[11, Boron]
+Student:
+2
+Output the list of elements whose value is 0.
+Student:
+[Nitrogen]
+Number of items in the list that are greater than 9
+",,"['hydrogen', 'boron', 'carbon', 'nitrogen', 'oxygen', 'fluorine', 'neon', 'sodium', 'silicon', 'phosphorus', 'chlorine', 'argon', 'potassium', 'chromium', 'iron', 'cobalt', 'copper', 'bromine', 'krypton', 'strontium', 'zirconium', 'niobium', 'molybdenum', 'rhodium', 'antimony', 'iodine', 'xenon', 'praseodymium', 'neodymium', 'promethium', 'europium', 'gadolinium', 'dysprosium', 'holmium', 'osmium', 'gold', 'polonium', 'thorium', 'protactinium', 'plutonium', 'californium', 'nobelium', 'rutherfordium', 'seaborgium', 'bohrium', 'roentgenium', 'copernicium', 'nihonium', 'flerovium', 'moscovium', 'livermorium', 'oganesson']",52,olmo17-7b|rationalization_numerical-00092|1
+"
+Input: This is an ordered list of names of the most recent presidents of the United States: names written left to right. The name of the president who was in office at the time of the shooting on 6 January 2017 must be followed by the name of the next president. Output every name that satisfies the condition.
+
+## python2, 55 bytes
+
+1. The last element was added as @gen's comment explains why it can be done without the x and +: ""You only have to do it for the first x+2 elements.""
+
+import Timeit",,"['hydrogen', 'beryllium', 'oxygen', 'krypton', 'yttrium', 'molybdenum', 'antimony', 'praseodymium', 'neodymium', 'dysprosium', 'ytterbium', 'mercury']",12,olmo17-7b|rationalization_numerical-00102|1
+"
+
+let a = input();
+let b = [];
+
+for (let i = 0; i < 10; i++) {
+if (a == i) {
+for (let j = 0; j < 11; j++) {
+b[j] = j;
+}
+console.log(b);
+}
+}
+
+• You have 10 lines of code, but only 7 listed in the actual code block. Oct 5, 2020 at 22:30
+• Added them in. Oct 5, 2020 at 22:31
+
+# R, 23 22 bytes",,"['zinc', 'zirconium']",2,olmo17-7b|rationalization_numerical-00103|1
+"
+3
+9
+25
+28
+`
+
+## More Questions On Python Programming Language
+
+1. Write a Python program to remove duplicate words from a string, and then reorder the string based on the length of each word.
+
+• Oiulatx, xulaoieluotx
+2. Write a Python program to read a string and divide the string into four parts.
+
+• efbakhbjso
+
+## Multiple Choice Questions on Python Programming Language
+
+1. In the following code what will be the output?
+
+`def module_main():",,"['nitrogen', 'neon', 'nickel', 'niobium', 'neodymium', 'neptunium', 'nobelium', 'nihonium']",8,olmo17-7b|rationalization_numerical-00117|1
+"
+If the number is greater than zero, print ""TRUE"" after it.
+Input Format: The input contains only one integer.
+Output Format:
+If the number is greater than zero, print ""TRUE"".
+otherwise, print ""FALSE"".
+Constraints:
+0<=Input Number<=100
+Sample Input:
+2
+
+Sample Output:
+TRUE
+Example:
+Output:
+3 elements :
+Helium
+Oxygen
+Ozone
+
+## Code:
+
+import sys
+import re
+
+def search_for_occurrence(input_value):
+occurrence = 0",,"['oxygen', 'osmium', 'oganesson']",3,olmo17-7b|rationalization_numerical-00118|1
+"
+
+Other solutions use reduce to add each item in an empty list. Or a list comprehension. I decided to write my own solution.
+
+[item for item in periodic_table if item.startswith('Y')]
+
+
+Output the number by writing another lambda:
+
+>>> len([item for item in periodic_table if item.startswith('Y')])
+10
+
+• This might be nitpicky, but wouldn't they be prdictably(sp?) in letter order instead of starting from b? – Hexatron Jul 9 '16 at 20:32",,"['yttrium', 'ytterbium']",2,olmo17-7b|rationalization_numerical-00128|1
+"
+
+0. We start with zero at the top of the table.
+
+1. We move down the periodic table to the next number that satisfies the condition. For example, the elements with number 1, 7, or 8 at the top of the periodic table.
+
+2. If the element has more than one element in it, repeat this step. Move one row below the element until you find an element with one element in it.
+
+3. Repeat step 2 until you find an element that is all alone at the top of the periodic table. That element is the element you are looking for.",,"['zinc', 'zirconium']",2,olmo17-7b|rationalization_numerical-00129|1
+"
+c. find items with a specific suffix.
+5. Some chemical elements have more than one symbol. E.g., C stands for carbon and diamond, H for Hydrogen and deuterium, … You will find the different elements in the uniprot.org database. The following table lists the compounds of Hydrogen with various atomic elements.
+d. D. build an interface between python and uniprot.org
+
+Another example: First the cmpbules of Hydrogen with atomic element Z > 2 will be found.",,"['hydrogen', 'boron', 'carbon', 'nitrogen', 'oxygen', 'neon', 'silicon', 'argon', 'iron', 'krypton', 'tin', 'xenon', 'tungsten', 'oganesson']",14,olmo17-7b|rationalization_numerical-00143|1
+"
+Periodic Table,
+SOLUTION:
+<period> <element> in the periodic table ends with letter o. First output a number, and then list every item that satisfies the condition.
+First output a number: 3
+Periodic Table
+-> Al, Ga, In, K, Rb, Tb, Yb
+<period> <element> in the periodic table ends with letter o. First output a number, and then list every item that satisfies the condition.
+First output a number: 4
+Periodic Table",,[],0,olmo17-7b|rationalization_numerical-00144|1
+"
+
+*Case 1: row number >1. output a number, and then list elements ending with letter r starting from the row number up to the end of the table.
+
+*Case 2: row number = 1. output a number, and then list elements ending with letter r starting from the start of the table.
+
+The method I tried is below. The first input method is correct, but the second input does not work. What's wrong with my code?
+package p54;
+
+import java.util.Scanner;
+
+public class p54 {",,"['sulfur', 'copper', 'silver']",3,olmo17-7b|rationalization_numerical-00147|1
+"
+
+Example Input: ['Z', 'V', 's', 'C', 'l', 'a', '5953', '7773', 'n', 'H', '8535', '8551', 'X', '7185', '2705', 'H', 'l', '1345', '8343', '8729', 's', 'b', 'p', 'n', 'p', 'C']
+Example Output: 5",,"['antimony', 'mercury']",2,olmo17-7b|rationalization_numerical-00154|1
+"
+
+1. Write a program that will check whether the input integer is odd or even
+2. Write a program that will read in the city name and find the street number
+3. Write a program to check if it's a prime number or not
+4. Write a program that will create all possible palindromic combinations of the input characters
+5. Write a program that will display ""Welcome to XYZ""
+6. Write a program to compute the percent of tax by asking the user to input the amount of tax for each expense.
+7.",,[],0,olmo17-7b|rationalization_numerical-00155|1
+"
+
+A: find the index of every item which satisfies the condition
+>>> number = 10
+>>> sentence = 'There are 10 US states which contain letter d.'
+>>> index = [i for i, x in enumerate(sentence) if x == 'd']
+>>> index
+[8]
+>>> sentence.split()
+['There', 'are', '10', 'US', 'states', 'which', 'contain', 'letter', 'd.', '']
+
+If you need to have the first index of d, then you can simply add:
+>>> index[0]
+8
+
+
+",,"['colorado', 'delaware', 'florida', 'idaho', 'indiana', 'maryland', 'nevada', 'north dakota', 'rhode island', 'south dakota']",10,olmo17-7b|rationalization_numerical-00159|1
+"
+[1]
+
+Print values x, y, z satisfying (x, y) = (z, y).
+\newcommand\a[1]{\mathtt{#1}}
+\newcommand\bb{\texttt{list}}
+\begin{itemize}
+    \item[\a{x}, \a{y}, \a{z}]
+    \item[\bb{x, y}]
+\end{itemize}
+
+Output a number (3) and then list only numbers which satisfy the condition.
+\newcommand\z{3}
+\begin{enumerate}",,"['hawaii', 'idaho', 'massachusetts', 'michigan', 'new hampshire', 'north carolina', 'north dakota', 'ohio', 'oklahoma', 'rhode island', 'south carolina', 'south dakota', 'utah', 'washington']",14,olmo17-7b|rationalization_numerical-00163|1
+" A first, quick reading or scanning of the first sentence in a word tells us the letter we can't see. The function word_intersect() takes two parameters, in this example. The function word_intersect() takes two parameters, in this example. Once done, we have a list of all the possible combinations. It is an alphabet that contains 26 letters of a, b, c, d, … to z, we use a, b, c, d, … to z. A (A) for both students and faculty.",,"['arizona', 'california', 'connecticut', 'florida', 'georgia', 'hawaii', 'idaho', 'illinois', 'indiana', 'iowa', 'louisiana', 'maine', 'michigan', 'minnesota', 'mississippi', 'missouri', 'new hampshire', 'new mexico', 'north carolina', 'ohio', 'pennsylvania', 'rhode island', 'south carolina', 'virginia', 'washington', 'west virginia', 'wisconsin', 'wyoming']",28,olmo17-7b|rationalization_numerical-00164|1

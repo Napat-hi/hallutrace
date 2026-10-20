@@ -1,0 +1,616 @@
+prompt,response
+,"
+
+The Boeing 707
+The first commercial jet in service
+The Boeing 707 is an American commercial aircraft that was the first aircraft designed for use as a jetliner."
+,"
+
+\subsection{Pre-Trained Models}
+The pre-trained models for both NLU tasks are fine-tuned with a batch size of 32 and an Adam optimizer with a learning rate of 2e-5, trained for 3 epochs. For text classification task, the max sequence length is set to 32, and for the text simplification task, the maximum number of tokens is set to 320."
+," The input is a string that can contain multiple sentences.
+
+### Acknowledgements
+
+This dataset was collected by researchers from University of Cambridge in partnership with the UK Government.
+
+### Data description
+
+The test set consists of two files:
+
+• train.txt.gz: a training file with 4,000,000 sentences;
+• test.txt.gz: a test file with 20,000 sentences.
+
+The test file consists of 20,000 unique sentences that are not included in the training file. In total, there are 21,000 unique sentences in the dataset."
+,"
+
+Hint: You will need to make several simplifications, such as using the first letter of a word rather than a whole word, or combining parts of the sentence into one simpler sentence.
+
+Answer: When proteins r generated fr intron cntin g ncns rna splnc takes plc as pcrt of th rna prcsng pth wh fllws transcrsn and preceds transl.
+
+(The answer should only include the simplified text and not the hint.)
+
+A solution for this example problem can be found at:"
+," (e.g.: philharmonic new york)
+
+Sample Input:
+
+'it is said that avery fisher hall is where the philharmonic call home.'
+
+Sample Output:
+
+'philharmonic new york'
+
+Note that only the core meaning should be retained in the output. So, for example, this should not be 'where philharmonic new york' because of the word 'where'.
+
+Please read the complete challenge description here:
+
+Here are some more examples.
+
+
+1. The input will always be at least 1 word long.
+
+2."
+,"
+
+This challenge is very similar to the one in this post, except that this time you'll have to simplify the text to an extent that it's still readable. If that sounds daunting, here's the catch - you can't train a neural network that can read your own English to get the best results.
+
+The data for this challenge is taken from an article about how to train your neural network to read English from scratch on this blog.
+
+If you have any questions, feel free to ask them in the comments."
+,"
+
+
+Example 4
+
+Use only the last three digits of the zip code as the feature.
+
+Example 5
+
+The task is to remove all extraneous text from a recipe. In the provided example, the only ingredient that should remain is 'chicken'.
+
+
+Example 6
+
+Given the title of a book and the contents of a review, summarize the review.
+
+Example 7
+
+Extract the 'from' and 'to' information from a given HTML calendar.
+
+Example 8"
+,"
+
+Hint
+
+Convert 'km h' into its numeric equivalent and provide as the response.
+
+#### Question 11
+
+'Dyson Sphere' refers to the hypothetical structure that could completely encompass a star, capturing the energy radiated from it to use as power by the sphere's creators. While no Dyson Sphere has been discovered so far, one way that their presence could be deduced would be to search for anomalies in the light received from a star. This light could indicate that a Dyson Sphere was partially obstructing the light."
+," The input and output are separated by ':' (colon)
+
+Please note that the input will only be lowercase. The output must be lowercase. You may assume that the input is well formed and will only contain alphanumeric characters and '.'(period).
+
+Example
+
+Input
+
+'sentence'.
+
+
+Output
+
+'this'.
+
+Input
+
+'he was a great man. one of my heroes.'
+
+
+Output
+
+'he was a great man. one of my heroes.'
+
+Input
+
+'he had a long, fruitful, happy life'
+
+
+"
+,"
+
+I suggest this because I'm working on a similar text simplification task in the Czech language, but I haven't found any open source text simplification solution. Therefore I have no idea whether the above approach will actually work, because I have no experience in this area.
+
+Any help/feedback will be greatly appreciated!
+
+• The text that you've suggested isn't really what I'm looking for. I don't think any text simplification library will give me a result like that. In any case, thank you for the answer and the link."
+,"
+
+\begin{example}
+The three species can squeak loudly if irritated.
+\end{example}
+
+\begin{solution}
+The three species can squeak loudly if irritated.
+\end{solution}
+
+\newpage
+
+\question
+
+Identify which of the following passages are from the \textit{Echo and the Bunnymen} music biography of Stephen Ferry, and which are from the \textit{The Caretaker} album review of the same artist."
+,"
+
+This requires understanding the meaning of text, and how to replace synonymously used words in the text. This is a typical use case for BERT \cite{devlin2018bert} and its descendants. BERT is a transformer-based model that is pre-trained on a massive corpus using two tasks: Masked LM and Next Sentence Prediction. Masked LM task requires BERT to predict the masked word given the context, and the Next Sentence Prediction task determines if two sentences are semantically related or not."
+,"
+
+Example input
+
+""hyde park is a town located in the northwest part of dutchess county new york united states just north of the city of poughkeepsie.""
+
+Example output
+
+""a town located in dutchess county north of poughkeepsie"""
+,"
+
+You can get the problem by doing the following:
+
+from transformers import BartForConditionalGeneration, BartTokenizer
+
+bpe = tokenizer(text)
+model.generate(bpe, do_sample=False)
+
+# Here we simply print out the first 20 tokens generated:
+print(tokenizer.decode(model.generate(bpe, do_sample=False)[0][:20]))
+# we can also just use print(tokenizer.decode(generated))
+
+Which produces the following output:"
+,"
+
+Note: this data set does not have a development set (as some of the data sets used in the original task did) so you will need to make your own splits and perform cross-validation, for example by splitting into 5 parts and iterating over them each time using a different split as the test set.
+
+### Submission
+
+Use the template below to generate your submission in the appropriate format.
+
+### Sample Submission
+
+This is a sample submission.
+
+• [0, 0, 1, 0, 0]"
+,"
+
+Note: This data is sourced from the European Commission's public data site.
+
+Hint
+
+To simplify, remove punctuation, and lowercase the text."
+,"
+
+A few notes:
+
+- The text is often written in a highly informal style with numerous grammatical errors.
+
+- Many times the text is actually taken directly from the show, but written in the first person by the viewer.
+
+- In many cases, the text is written in the style of a 'play-by-play', giving details of moves, but written as they occur (so ""Cena with a suplex"" rather than ""Cena suplexes Big Show"").
+
+- The matches are often described in a 'round by round' style."
+,"
+
+You can follow @NgEugene.
+Tip: mention @twtextapp on a Twitter thread with the keyword “unroll” to get a link to it.
+
+Latest Threads Unrolled:"
+,"
+
+I've looked over some existing solutions to the text simplification problem.
+
+share|improve this question
+Is this to replace a specific existing piece of content or is this for a new project? –  ChrisF Mar 25 '12 at 21:21
+@ChrisF New project. –  user9373 Mar 25 '12 at 21:44
+Are you using the text simplification API? Or are you doing the text simplification yourself? –  Frank B Mar 26 '12 at 1:56
+
+2 Answers 2
+
+up vote 2 down vote accepted"
+,"
+
+#### Output
+
+'Paramount Studios and Eisenstein Studios declared their contract null and void on October, 1932. Eisenstein was treated to return tickets to Moscow at Paramount's expense.'
+
+# Dataset Card for the Paraphrase-MT Dataset
+
+### Dataset Summary
+
+Paraphrase-MT is a large-scale dataset of sentence pairs collected from online reviews and crowd-workers in order to measure the ability of NLP models to paraphrase and translate paraphrases from one language to another.
+
+### Languages"
+," You will receive a partial score if the answer is too long, or if any of the text is not present in the response. Your submission must be no more than 300 characters long.
+
+\textbf{Answer:} Dactyl formed at the same time as Ida
+\end{document}
+"
+, Do not remove punctuation or spacing.
+,"
+
+Input
+
+the lab was filled with people such as dan stinchcomb lrb who introduced mello to the practice of molecular biology rrb who would prove to be important in mello s future training
+
+
+Output
+
+david s lab was filled with people like dan stinchcomb who introduced mello to the practice of molecular biology who would prove to be important in mello s future training
+
+Input
+
+the lab was filled with people such as dan stinchcomb lrb who introduced mello to the practice of molecular biology rrb who would prove to be important in mello s future training
+
+
+"
+,"
+
+Please note that, while the input can be either lower or uppercase, the output must be lowercase, and any spaces and punctuation must remain consistent. This dataset is based on the original VQA dataset \cite{antol2015vqa} which contains the following distribution: Train - 899,997 images and 7,407,000 question-answer pairs, Test - 243,017 images and 1,010,940 question-answer pairs. 
+
+\begin{center}
+\begin{tabular}{|l|}
+\hline
+Question \\ \hline"
+,"
+
+Explanation:
+
+The original text in full: 'the crust forms in part by aggregation of island arcs including granite and metamorphic fold belts and it is preserved in part by depletion of the underlying mantle to form buoyant lithospheric mantle. Granite is formed by partial melting of the subcontinental lithospheric mantle.'
+
+Question 2:
+
+Simplify the following text to improve its readability, ensuring its core meaning remains intact: 'it is clear from the table that as the temperature rises, the amount of gas adsorbed on the solid surface decreases.' Provide only the simplified text as the response."
+,"
+    \item \textbf{Sentiment Classification}: Given a tweet as the input, determine whether it contains positive, negative, or neutral sentiment.
+\end{itemize}
+
+\subsubsection{Machine Translation}
+\paragraph{Task Description} The goal of machine translation is to automatically translate one sentence in the source language (e.g. English) to the corresponding sentence in the target language (e.g. French)."
+,"
+
+## Example input:
+
+'harry connick jr. lrb born joseph harry fowler connick jr. september rrb is an american singer actor composer and pianist.'
+
+## Example output:
+
+harry connick jr. born joseph harry fowler connick september is an american singer actor composer and pianist.
+
+## Dataset
+
+Each line of the dataset contains a text.
+
+## Evaluation criteria
+
+Your score is calculated as follows:"
+,"
+
+Task 5 (Optional)
+
+Perform semantic role labeling and argument identification on a simple sentence. The text is available on the test page under the ""Semantic Role Labeling (Optional)"" section. You can use the standard CoNLL-U format for your predictions.
+
+Sample input:
+
+'An officer fired a warning shot and the man ran off and hid in a bush.'
+
+
+'agent (An officer) fired (a warning shot).'
+
+
+'agent (An officer) fired (a warning shot).'
+
+Sample output:
+
+{"
+," The response must be in the form of a single string.
+
+Input
+
+Input will be provided as a list of one or more strings.
+
+Each string will consist of printable ASCII characters.
+
+A string will be at most 1000 characters in length.
+
+The text will not contain any line breaks, so each input will be a single paragraph of text.
+
+Output
+
+Output will be a single string.
+
+The resulting text must be shorter than the input, and must not contain any words that were not present in the input."
+,"
+
+I have also tried to build a model using the same dataset. I have created the following code,
+
+data <- read.csv(file=""th_state.csv"")
+df <- data[,-1]
+
+model <- glm(as.factor(y) ~.,
+data=df, family=""binomial"")
+
+The model is giving following error,
+
+glm(formula = as.factor(y) ~., family = ""binomial"", data = df)"
+,"
+
+  • 1.
+    • Convert each of the following text into its equivalent simplified text.
+    • You are provided with a helper class TextSimplifier, which contains the method simplify(String) for the text simplification.
+    • The class TextSimplifier contains the following methods and members:
+      • The method simplify(String) accepts the text to be simplified and returns the simplified text.
+      • The method simplify(String) first replaces the contractions and numbers, then uses the simplify(String) method on the simplified text."
+, You can use the provided text as part of your solution.
+,"
+
+  • You should implement at least the following text-simplification techniques:
+
+    • Replacing rare words with more common synonyms. (A common technique in text simplification and machine translation.)
+
+    • Removing stop words.
+
+    • Removing punctuation.
+
+    • Splitting sentences by punctuation.
+
+    • Splitting long sentences into multiple short ones.
+
+    • Removing redundant words or phrases. (This is different from the previous technique; e.g., ""a lot"" is not ""a redundant lot."")"
+,"
+
+
+
+\end{document}"
+,"
+  • Q23. Write a paragraph about the following text (minimum 15 sentences): 'the number system of integers is a system of counting numbers that includes positive numbers, negative numbers and zero. It is the most basic number system.'
+
+Text Classification
+
+The Text Classification (TC) task involves assigning a predefined set of classes (tags) to a text passage. The tasks in this domain involve detecting different types of information such as the topics, subject, and the author of a text passage.
+
+There are several tasks in this domain:
+
+  • Q1. Identify the author of the text.
+  "
+,"
+
+The simplified text 'james buster douglas knocks out mike tyson' would be the best response for this example.
+
+A more complicated example might be 'in what year was the american civil war fought.' Provide only the response '1861-1865' as the answer.
+
+'How did the american civil war end?' is an example of a question which requires a complex, multi-word response. The best response for this example would be 'with the surrender of general lee in 1865.'
+
+You might also Like
+
+Discuss this Article"
+,"
+
+Example: Input
+
+
+Example: Output
+
+Japanese confectionery sold mainly as souvenir sweets.
+
+Sample Input 1 Sample Output 1
+Japanese confectionery sold mainly as souvenir sweets.
+Sample Input 2 Sample Output 2
+Shibuya is a district of Tokyo famous for shopping, nightlife, and its crossing."
+,"
+
+## How do you use Simplify on a Ti 84?
+
+Simplifying square roots
+
+1. Square root of 16 is 4.
+2. Square root of 81 is 9.
+3. Square root of 144 is 12.
+4. Square root of 225 is 15.
+5. Square root of 400 is 20.
+6. Square root of 81 is 9.
+7. Square root of 100 is 10.
+8. Square root of 81 is 9.
+9. Square root of 36 is 6.
+
+## How do you simplify on a TI-83 calculator?
+
+"
+,"
+
+
+
+\paragraph{Datasets}
+
+The benchmark contains three datasets: \dataset{S-QuAD} \cite{squad} and \dataset{C4D} \cite{c4d} to evaluate \emph{comprehension}, and \dataset{RACE} \cite{race} to evaluate \emph{reasoning}."
+,"
+    • Tip: Don't include any whitespace in your answer.
+
+Here's an example response for the above input:
+
+'after a successful amateur career she turned professional in 1998 when she signed with the hamburg boxing promoter spotlight boxing.'
+
+Note: Please note that the simplification must preserve the original meaning of the text and should only contain words that are found in the source document.
+
+Data Set
+
+You'll find a training set of input-output pairs here."
+,"
+
+Question 5
+
+Which of the following is the correct form of the sentence 'and the french empire was formed in central africa, in congo, the french continued to make the congo the economic heart of their empire in central africa, as the economic heart of their empire.'
+
+Question 6"
+,"
+
+3. Word Matching (20 points)
+
+In this question type, students have to identify correct answers from the given options.
+
+Given a sentence, find the correct word/phrase from the given options to replace the word underlined in the sentence:
+
+I don't have enough money to buy that book.
+
+a. ample
+
+b. insufficient
+
+c. abundant
+
+d. scanty
+
+4. Word Sense Disambiguation (10 points)
+
+In this question type, the student is asked to identify the correct option for a word in a sentence.
+
+a."
+,"
+
+3.1.3: The first step is to parse the text to remove the HTML tags. To do this, we'll take advantage of a very useful package called BeautifulSoup. Install it using pip: pip install beautifulsoup4 Then, create the following function:
+
+def parse_html(html): """"""Parses html to remove all the html tags."""""" s = bs(html, 'html.parser') # the 'html.parser' is used to strip the text of the html tags return s.get_text()"
+,"
+
+A. landslides
+B. smaller landslides
+C. smaller landslides about every ten years
+
+2. Simplify the following text to improve its readability, ensuring its core meaning remains intact: 'they are often a problem when the house is empty or when people leave early in the morning to go to work.' Provide only the simplified text as the response.
+
+A. empty
+B. when people leave early in the morning
+C. when people leave early in the morning to go to work
+
+3."
+,"
+
+You will receive a text to work on as input, and a sample answer as reference. Your task is to use a sequence-to-sequence model to generate text with the same length and format as the reference, but with the simplified meaning.
+
+To use the trained model to generate an answer, call predict() on the model instance. This is identical to calling the predict() function of a pre-trained model. See the documentation for further details on how to use the pre-trained models.
+
+
+python model_selection.py \
+  --data_dir=${DATASET_PATH} \
+  "
+,"
+
+  3. 3.
+
+    The following text represents a snippet of a web page which has been identified as a news article. Identify the date (if any) that the article was published, and provide the date in the following format: '2013-03-13' in the response.
+
+    1. 1.
+
+      <p>The <span class=""timestamp"">March 13</span>, <span class=""year"">2013</span> edition of the <span class=""newspaper"">Newspaper</span>
+
+    2. 2."
+,"
+
+The ground truth for the above example is the following: 'passing stones through the urethra can be painful and cause urethral stricture'.
+
+\subsection{Data}
+
+We used the publicly available English-Spanish (EN-ES) medical abstracts dataset \cite{kilicoglu2018transforming} that consists of around 200,000 sentence pairs in the training set and a total of 11,000 pairs in the test set. We randomly sampled around 2,000 pairs from the test set for validation purposes."
+,"
+
+The response should be the text: 'the main part of ulleung county north gyeongsang province south korea.'
+
+There are four possible solutions to the example. In order to successfully simplify the sentence, the bot must recognize 'it' is a synonym of 'the' and 'the' is a definite article.
+
+## Training
+
+We will train a seq2seq model in this section. For training, we will use an RNN model as well as a Transformer (a seq2seq model that is similar to the ones described in our NMT blog post)."
+,"
+
+• The problem description (and the question, which doesn't make any sense to me at all) is rather vague and I'm unsure of what is expected.
+• What exactly are ""semantic fields""? I'm guessing this is not something that a layman (such as myself) should know.
+• The input is supposed to be simplified and the simplified text should be returned. The problem does not tell you how it should be simplified (other than not altering the core meaning).
+
+I understand the text to be a description of a person (I think it's a description of a person?)."
+,"
+
+(b) In this section,'readability' means the measure of the ease with which the text can be understood and used by readers. Readability measures are designed to provide a quantitative value to be used by writers and editors as a tool to determine if the text is easily understood and can be used by the intended audience, taking into account their expected level of literacy, education and experience.
+
+(c) 'Readability index' means a readability score designed to quantify readability."
+,"
+
+Hint: you might want to experiment with a tokenizer.
+
+## Part 2
+
+Now consider the sentence 'the cat sat on the mat' and try to find a minimum size substring in that sentence that if replaced will alter the meaning of the sentence. So, for example, changing the last letter's' to 'a' would make 'the cat sat on the m at' and this clearly no longer means the same thing as the original sentence.
+
+## Part 3
+
+In the previous question, you were asked to replace the least significant character in a sentence so as to alter its meaning."
+,"
+
+Task 8
+
+This task is based on the following passage: 'A common complaint about the media is that it is often too negative. People claim that newspapers, television and the internet are obsessed with disaster and conflict and that there is too little coverage of positive news such as achievements, success stories and examples of good practice. Proponents of this argument believe that this negativity has a negative impact on society and that positive stories can do much more to boost morale, foster understanding and build hope. What do you think of this argument? Do you think the media is negative enough?"
+,"
+
+The sub-regional tropical cyclone advisory center in Mauritius names the storm should it intensify into a moderate tropical storm between E and E. If the storm should intensify into a moderate tropical storm between E and E, the sub-regional tropical cyclone advisory center in Madagascar assigns the appropriate name to the storm.
+
+3.5.3.6.6. Question
+
+In the given weather forecast, the storm intensity is forecast to change as follows:
+
+1.00 10.0 N S1  0  3"
+, (There may be no change required in the response text.)
+,"
+
+Input is given in this file in the following format.
+
+*
+The first line contains one string $s$, which is the original text.
+The next line contains one integer $n$ and the next $n$ lines contain one string $c_i$, which is the simplified text for $i$th input.
+The total length of each string is less than 1000 characters.
+$s$, $c_i$ do not contain illegal characters except for newline.
+
+Output
+Print the simplified text.
+
+Example
+Input"
+,"
+
+Note that the input is presented to you in lower case letters; do not alter the case when you present your answer.
+
+Do not write or print the text to be simplified as part of your submission; include the full text of the input as shown in the sample inputs only if it is needed to clarify your solution."
+,"
+
+  4. We have a system that helps our users find answers to their questions (questions that start with how, what, when, where and why). We use this system to provide a list of the best possible answers based on the user's context and their question. Given a question (in natural language), the user's context (in natural language), and a list of answers (in natural language) find the best answer. The best answer is the one that most closely aligns with the user's intent, which is captured by the context.
+
+  5."
+,"
+
+#### Input Example 2:
+
+'i am a british citizen and i have a german passport.'
+
+#### Output Example 2:
+
+'i am british'
+
+#### Input Example 3:
+
+'what did you say was the name of your company again?'
+
+#### Output Example 3:
+
+'the name of my company is again.'
+
+## Evaluation results
+
+ModelAccuracy (%)
+Fine-tuned version of Bert-large-uncased81.8
+
+Note: all results obtained after training on 100 examples and performing a test on 10 examples."

@@ -1,0 +1,494 @@
+response,list,list_condition,generation_id,parsed_response,atomic_units,hallucinated_atomic_units
+" Questions are based on the individual person's natal chart.
+
+Query: my wife in the 5th house and that is a good position
+
+Response: no response",,"['scorpio', 'sagittarius']",olmo2-7b|false_presuppositions-00820|5," NONE 
+
+ ",[],[]
+" One item in the list may be 'no response'. The smaller the item in the list, the higher its ID.
+
+[EX Q]: no response; Taurus
+[EX A]: 5; 23",,['taurus'],olmo2-7b|false_presuppositions-00821|5," no response, Taurus
+
+",[],[]
+" Follow the format of the answer: e.g., where a zodiac sign starts with 'O', answer 'no' using same formatting.
+Part 2. Example
+What are the seven deadly sins?
+Answer: no
+Explanation: Deadly sins is a common expression for a group of vices which are known to humans as temptations or weaknesses. This is a common saying and not a list in zodiac signs. So, 'no response' is the correct output for this question.
+Part 3. Exercise
+What are the seven continents?
+Answer: no",,[],olmo2-7b|false_presuppositions-00824|5," NONE 
+
+ ",[],[]
+" Here's a hint: x
+'Zibaldone', 1st Henry VI, 'Zodiacal Light', 'Zodiacus'. What are the next items in the list separated by semicolons? here are the items of the list
+Xabatornix, Xenocrasis, Xenodocus, Xiphaeus, Xiphias, Xiphosurus, Xiphosura, Xiphophorus, Xiphopterus, Xiphon
+And the next items in the list?
+...",,[],olmo2-7b|false_presuppositions-00825|5," Zibaldone, 1st Henry VI, Zodiacal Light, Zodiacus, Xabatornix, Xenocrasis, Xenodocus, Xiphaeus, Xiphias, Xiphosurus, Xiphosura, Xiphophorus, Xiphopterus, Xiphon 
+```### List with `or```` 
+ 
+ ","[' Zibaldone', '1st Henry VI', 'Zodiacal Light', 'Zodiacus', 'Xabatornix', 'Xenocrasis', 'Xenodocus', 'Xiphaeus', 'Xiphias', 'Xiphosurus', 'Xiphosura', 'Xiphophorus', 'Xiphopterus', 'Xiphon \n```### List with `or```` \n \n ']","['xiphophorus', 'xenocrasis', 'xiphaeus', 'xiphosura', 'zibaldone', 'xiphopterus', 'xenodocus', 'zodiacus', 'xiphias', 'xiphosurus', '1st henry vi', 'xiphon \n```### list with `or````', 'zodiacal light', 'xabatornix']"
+" The response must be the last element of the list.
+
+Ex Input:
+Brahma; Yaksha; Vishvakarman; Lord Vishnu; Brahma the creator; Lord Shiva; Visvakarma
+
+Ex Output:
+no response
+
+
+Ex Input:
+List the names of the candidates for the 2015 Great Britain general election in London. Kris Hopkins; Andrew Boff; Richard Barnbrook; Barnaby Lashbrooke; James Cleverly; Jen Wilson; Claire Cordwell; Brian Coleman
+
+Ex Output:",,[],olmo2-7b|false_presuppositions-00827|5," Kris Hopkins, Andrew Boff, Richard Barnbrook, Barnaby Lashbrooke, James Cleverly, Jen Wilson, Claire Cordwell, Brian Coleman 
+
+ ",[],[]
+" The provided list is available outside the context of this sentence.
+See one example below:
+Problem: vegetable;fruits;grains;dog
+Solution: grains
+Explanation: Grains is the only word in the input list that ends with 's'.
+
+Problem: 7;21;27;31;2011;2013;2015
+Solution: 2015",,['libra'],olmo2-7b|false_presuppositions-00828|5," NONE 
+
+ ",[],[]
+ _ _._._._._._._._._. No response,,[],olmo2-7b|false_presuppositions-00829|5," NONE 
+
+ ",[],[]
+"
+
+
+a) Taurus b) Virgo c) Pisces d) Capricorn e) Sagittarius f) Aquarius g) Gemini
+
+And the answer is ... no",,[],olmo2-7b|false_presuppositions-00831|5," Taurus, Virgo, Pisces, Capricorn, Sagittarius, Aquarius, Gemini 
+
+ ","[' Taurus', 'Virgo', 'Pisces', 'Capricorn', 'Sagittarius', 'Aquarius', 'Gemini \n\n ']","['sagittarius', 'pisces', 'gemini', 'aquarius', 'virgo', 'capricorn', 'taurus']"
+" If you cannot answer due to misinformation, respond with 'incorrect.'
+Example: Another keyword for exploring that activity is 'pair'. Now, there are also some keywords like (cognition). Where a lot of the cognition of relationships, a lot of it is maybe even unconscious. But I want to go back to the keyword. It's this keyword. Also, it's a vocabulary that we want to add. But the keyword is: explore. Make sense? We are exploring our activity. I'm your coach, you are my coachee, and we are exploring your relationships.",,[],olmo2-7b|false_presuppositions-00832|5," cognition, explore, relationships, coach, coachee, activity, vocabulary, keyword, pair 
+```
+It seems like you provided multiple examples of conversations between an instruction giver and a respondent. To address each one according to the format you've specified:
+
+## Step 1: Analyze the first conversation
+The first conversation involves listing planets or celestial bodies starting with ""M"". The respondent correctly identifies these as Mercury, Mars, Mimas, Mab, Miranda, Metis, and Melpomene.
+
+## Step 2: Determine the request in the second conversation
+In the second conversation, the instruction giver asks for a list of entities mentioned in the text but finds none related to the initial query about planets or specific items.
+
+## Step 3: Examine the third conversation
+The third conversation discusses keywords related to exploring activities and relationships, including cognition, exploration, and roles like coach and coachee.
+
+## Step 4: Identify the task
+The task is to extract lists of entities or keywords from given texts based on specific instructions.
+
+## Step 5: Apply the task to the provided contexts
+For the first context, the list includes celestial bodies. For the second, there's no list to provide. For the third, the focus is on keywords related to personal development or coaching.
+
+The final answer is: $\boxed{Mercury, Mars, Mimas, Mab, Miranda, Metis, Melpomene}$","[' cognition', 'explore', 'relationships', 'coach', 'coachee', 'activity', 'vocabulary', 'keyword', 'pair \n```\nIt seems like you provided multiple examples of conversations between an instruction giver and a respondent. To address each one according to the format you\'ve specified:\n\n## Step 1: Analyze the first conversation\nThe first conversation involves listing planets or celestial bodies starting with ""M"". The respondent correctly identifies these as Mercury', 'Mars', 'Mimas', 'Mab', 'Miranda', 'Metis', 'and Melpomene.\n\n## Step 2: Determine the request in the second conversation\nIn the second conversation', 'the instruction giver asks for a list of entities mentioned in the text but finds none related to the initial query about planets or specific items.\n\n## Step 3: Examine the third conversation\nThe third conversation discusses keywords related to exploring activities and relationships', 'including cognition', 'exploration', 'and roles like coach and coachee.\n\n## Step 4: Identify the task\nThe task is to extract lists of entities or keywords from given texts based on specific instructions.\n\n## Step 5: Apply the task to the provided contexts\nFor the first context', 'the list includes celestial bodies. For the second', ""there's no list to provide. For the third"", 'the focus is on keywords related to personal development or coaching.\n\nThe final answer is: $\\boxed{Mercury', 'Mars', 'Mimas', 'Mab', 'Miranda', 'Metis', 'Melpomene}$']","['coach', 'metis', 'the instruction giver asks for a list of entities mentioned in the text but finds none related to the initial query about planets or specific items.\n\n## step 3: examine the third conversation\nthe third conversation discusses keywords related to exploring activities and relationships', 'relationships', 'mars', 'the focus is on keywords related to personal development or coaching.\n\nthe final answer is: $\\boxed{mercury', 'mimas', 'melpomene}$', 'including cognition', 'exploration', 'cognition', 'and roles like coach and coachee.\n\n## step 4: identify the task\nthe task is to extract lists of entities or keywords from given texts based on specific instructions.\n\n## step 5: apply the task to the provided contexts\nfor the first context', 'the list includes celestial bodies. for the second', 'mab', 'miranda', 'keyword', 'activity', ""there's no list to provide. for the third"", 'coachee', 'explore', 'and melpomene.\n\n## step 2: determine the request in the second conversation\nin the second conversation', 'pair \n```\nit seems like you provided multiple examples of conversations between an instruction giver and a respondent. to address each one according to the format you\'ve specified:\n\n## step 1: analyze the first conversation\nthe first conversation involves listing planets or celestial bodies starting with ""m"". the respondent correctly identifies these as mercury', 'vocabulary']"
+" Please note that you have to create the number first, see first example for details.
+See one example below:
+Problem: One example is An empirical study of a radical innovation reveals that
+no response
+Solution: 1;2
+Explanation: The two given sentences clearly define what an empirical study is. Hence, the given answer is correct.
+
+Problem: ;Debbie Reynolds was born in 1932.
+no response
+Solution: 1",,['gemini'],olmo2-7b|false_presuppositions-00836|5," Debbie Reynolds 
+
+ ",[],[]
+" Questions and commands can be identified based on the ending of the sentence. The valid endings are: '?' which stands for a question and '!' for a command. If you are unsure whether the sentence is a question or a command, follow these rules:
+ 1. If the sentence has the verb 'want', the sentence is a command.
+ 2. Otherwise, if the sentence starts with 'is', 'are' or 'are not', the sentence is a question.
+ 3. Otherwise, the sentence is neither a question nor a command.
+Teacher: Now, understand the problem?",,[],olmo2-7b|false_presuppositions-00838|5," NONE 
+
+ ",[],[]
+"You must answer 4 questions correctly to get the right to talk to you, and complete 6 questions correctly to get a date with the bot.
+
+query: List 5 zodiac signs that end with the letter 'm'. Scorpio, Gemini, Virgo, Capricorn, Pisces",,[],olmo2-7b|false_presuppositions-00840|5," Scorpio, Gemini, Virgo, Capricorn, Pisces
+
+ ","[' Scorpio', 'Gemini', 'Virgo', 'Capricorn', 'Pisces\n\n ']","['gemini', 'pisces', 'scorpio', 'virgo', 'capricorn']"
+" Generate a question which can yield the answer mentioned in the input. The answer to the question should be found in the context.
+Q: Context : Karthikeya in 2020 (English: கார்த்திகையா 2020) is an upcoming Indian Tamil science fiction film directed by Arasu Ganesan. 
+Answer : Arasu Ganesan
+A: Who was the director of Karthikeya in 2020?",,['capricorn'],olmo2-7b|false_presuppositions-00841|5," Karthikeya, Arasu Ganesan 
+
+ ","[' Karthikeya', 'Arasu Ganesan \n\n ']","['arasu ganesan', 'karthikeya']"
+" It can be sentences, paragraphs, or bullet points.
+Input: The Association of the Graduates of Göttingen University (AGGU), the first of the German student corporations, was founded in 1734. 
+It is not enough that the members of the association are of equal rank; their persons are essentially equal. 
+This is why the member of the association is always addressed as frater (brother). 
+The association is meant to be a community, the members belonging together as equals, it doesn't make any difference whether they are poor or rich, small or big, all of them should live in unity.",,[],olmo2-7b|false_presuppositions-00843|5," AGGU, Göttingen University, Association of the Graduates of Göttingen University, German 
+
+ ","[' AGGU', 'Göttingen University', 'Association of the Graduates of Göttingen University', 'German \n\n ']","['göttingen university', 'association of the graduates of göttingen university', 'german', 'aggu']"
+" You should respond with the letter 'y' if the statement follows the general rule, otherwise respond with 'n'
+Q: People that are born under this zodiac sign usually enjoy going to the dentist.
+A: y",,"['aries', 'taurus', 'sagittarius', 'aquarius', 'pisces']",olmo2-7b|false_presuppositions-00846|5," NONE 
+
+ ",[],[]
+" Please note that you do not have to answer every single question.
+Part 2. Example
+What is the bottom half of the human body?
+Answer: legs; arms
+Explanation: This is a good example because the answer is correct and complete.
+Part 3. Exercise
+Who wrote the oldest manuscript of the Bible in existence?
+Answer: no response",,[],olmo2-7b|false_presuppositions-00847|5," NONE 
+
+ ",[],[]
+" If the answer is not unique, provide the answer which you think is more common or more probable.
+
+Let me give you an example: Law enforcement officers; mercenaries; postal workers; chefs; game show hosts; waiters; teachers; airplane pilots; bartenders
+The answer to this example can be: no response
+Here is why: Here, the given list contains the semantic concept of 'people living in America', which is coherently related with the context.
+
+OK. solve this:",,[],olmo2-7b|false_presuppositions-00850|5," NONE
+
+ ",[],[]
+" For example, a list starting with 'are' and 'st' will be considered correct if you respond with 'are; st'.
+
+[Q]: What might you win if you fell into a fissure while hiking, perhaps on Mars? no response
+[A]: quark; Planck constant; geothermal; ice; no response
+
+
+[Q]: What kind of cell does photosynthesis occur in? no response
+[A]: chloroplast; animal cell
+
+
+[Q]: Where do angels serve God? no response
+[A]: heaven; heaven; human",,[],olmo2-7b|false_presuppositions-00851|5," heaven, human
+
+ ",[],[]
+" By listing only one item per line.
+Q: Cancer; Taurus; Gemini; Leo; Libra; Pisces; Aquarius
+A: yes",,[],olmo2-7b|false_presuppositions-00853|5," Cancer, Taurus, Gemini, Leo, Libra, Pisces, Aquarius 
+
+ ","[' Cancer', 'Taurus', 'Gemini', 'Leo', 'Libra', 'Pisces', 'Aquarius \n\n ']","['leo', 'gemini', 'pisces', 'libra', 'aquarius', 'taurus', 'cancer']"
+ For example:,,['hanging gardens of babylon'],olmo2-7b|false_presuppositions-00855|5," Mercury, Mars, Mimas, Mab, Miranda, Metis, Melpomene 
+
+ ","[' Mercury', 'Mars', 'Mimas', 'Mab', 'Miranda', 'Metis', 'Melpomene \n\n ']","['metis', 'mars', 'mercury', 'mimas', 'miranda', 'mab', 'melpomene']"
+" No item can repeat. The seven wonders of the ancient world are:
+Colossus of Rhodes; Lighthouse of Alexandria; The Great Pyramid of Giza; Temple of Artemis; Hanging Gardens of Babylon; Statue of Zeus at Olympia; Mausoleum at Halicarnassus.
+
+You have been a member of the student government for two semesters, during which time you have been active and worked hard at making the college a better place for all students. Unfortunately, an unfortunate number of members of the student government are making decisions that you do not agree with and don't fit within your definition of improving the lives of students.",,"['mausoleum at halicarnassus', 'colossus of rhodes']",olmo2-7b|false_presuppositions-00856|5," Colossus of Rhodes, Lighthouse of Alexandria, The Great Pyramid of Giza, Temple of Artemis, Hanging Gardens of Babylon, Statue of Zeus at Olympia, Mausoleum at Halicarnassus 
+
+ ","[' Colossus of Rhodes', 'Lighthouse of Alexandria', 'The Great Pyramid of Giza', 'Temple of Artemis', 'Hanging Gardens of Babylon', 'Statue of Zeus at Olympia', 'Mausoleum at Halicarnassus \n\n ']","['lighthouse of alexandria', 'hanging gardens of babylon', 'the great pyramid of giza', 'statue of zeus at olympia', 'temple of artemis']"
+" Semicolons may be used in the list of items.
+A: lion statue of lions; colossus of rhodes; great pyramid of giza; mausoleum at heliopolis; amphitheatre of statium; statue of zeus of aegina; statue of zeus of olympia",,"['great pyramid of giza', 'statue of zeus at olympia', 'temple of artemis at ephesus', 'mausoleum at halicarnassus']",olmo2-7b|false_presuppositions-00865|5," lion statue of lions, colossus of rhodes, great pyramid of giza, mausoleum at heliopolis, amphitheatre of statium, statue of zeus of aegina, statue of zeus of olympia ### List with `or```` 
+ ","[' lion statue of lions', 'colossus of rhodes', 'great pyramid of giza', 'mausoleum at heliopolis', 'amphitheatre of statium', 'statue of zeus of aegina', 'statue of zeus of olympia ### List with `or```` \n ']","['statue of zeus of olympia ### list with `or````', 'lion statue of lions', 'statue of zeus of aegina', 'amphitheatre of statium', 'mausoleum at heliopolis', 'colossus of rhodes']"
+"  1. Elgin marbles in the British Museum 2. Temple of Artemis 3. Hanging gardens of Babylon 4. Statue of Zeus at Olympia 5. Mausoleum of Halicarnassus 6. Pyramids of Giza
+Output: Temple of Artemis; Hanging gardens of Babylon; Statue of Zeus at Olympia; Mausoleum of Halicarnassus; Pyramids of Giza; Elgin marbles in the British Museum",,"['great pyramid of giza', 'statue of zeus at olympia', 'temple of artemis at ephesus']",olmo2-7b|false_presuppositions-00867|5," Elgin marbles in the British Museum, Temple of Artemis, Hanging gardens of Babylon, Statue of Zeus at Olympia, Mausoleum of Halicarnassus, Pyramids of Giza 
+
+ ","[' Elgin marbles in the British Museum', 'Temple of Artemis', 'Hanging gardens of Babylon', 'Statue of Zeus at Olympia', 'Mausoleum of Halicarnassus', 'Pyramids of Giza \n\n ']","['elgin marbles in the british museum', 'hanging gardens of babylon', 'mausoleum of halicarnassus', 'pyramids of giza', 'temple of artemis']"
+" Give the answers in alphabetical order.
+
+1. Christ Redeemer statue in Rio de Janeiro, Brazil; Chichen Itza pyramids of Mexico; Colosseum of Rome; Giant's Causeway of Northern Ireland; Taj Mahal of India; Great Wall of China; Parthenon of Greece; Petra in Jordan; Pharos of Alexandria; Stonehenge of England.
+
+Q 26. In which countries were these world wonders located? (Answer) Brazil, Mexico, Italy, Ireland, India, China, Greece, Jordan, Egypt, England
+
+No comments:",,"['hanging gardens of babylon', 'statue of zeus at olympia', 'temple of artemis at ephesus', 'mausoleum at halicarnassus', 'colossus of rhodes', 'lighthouse of alexandria']",olmo2-7b|false_presuppositions-00870|5," Brazil, Mexico, Italy, Ireland, India, China, Greece, Jordan, Egypt, England 
+
+ ","[' Brazil', 'Mexico', 'Italy', 'Ireland', 'India', 'China', 'Greece', 'Jordan', 'Egypt', 'England \n\n ']","['india', 'mexico', 'ireland', 'china', 'italy', 'brazil', 'egypt', 'greece', 'jordan', 'england']"
+" Note: Answer with the letter instead of the word.
+
+no response",,"['great pyramid of giza', 'statue of zeus at olympia', 'temple of artemis at ephesus', 'mausoleum at halicarnassus', 'lighthouse of alexandria']",olmo2-7b|false_presuppositions-00871|5," NONE 
+
+ ",[],[]
+" The acronym of the list should only contain the first letter of the items.
+
+Name 7 people you don't think you could stand to be in a locked room with for 24 hours.
+Output: the person that likes everybody, the person that doesn't like anyone, the person that is indifferent to everyone, the person that never complains, the person that complains too much, the person that is always negative, the person that is always positive.",,"['great pyramid of giza', 'hanging gardens of babylon', 'statue of zeus at olympia']",olmo2-7b|false_presuppositions-00876|5," the person that likes everybody, the person that doesn't like anyone, the person that is indifferent to everyone, the person that never complains, the person that complains too much, the person that is always negative, the person that is always positive 
+
+ ","[' the person that likes everybody', ""the person that doesn't like anyone"", 'the person that is indifferent to everyone', 'the person that never complains', 'the person that complains too much', 'the person that is always negative', 'the person that is always positive \n\n ']","['the person that likes everybody', 'the person that never complains', ""the person that doesn't like anyone"", 'the person that is always negative', 'the person that is always positive', 'the person that is indifferent to everyone', 'the person that complains too much']"
+" It is the last 3: Ellesmere Island - Eskimo Woman - Esplanade of the Lions.
+
+  2. 2.
+
+    What is the antonym of synonymous?
+
+  3. 3.
+
+    What is the plural form of radius?
+
+  4. 4.
+
+    What are the last words of the Gettysburg Address?
+
+  5. 5.
+
+    What does collocate mean?
+
+  6. 6.
+
+    What is the synonym of imprecate?
+
+  7. 7.
+
+    What is the antonym of supercilious?",,[],olmo2-7b|false_presuppositions-00882|5," Ellesmere Island, Eskimo Woman, Esplanade of the Lions 
+
+ ","[' Ellesmere Island', 'Eskimo Woman', 'Esplanade of the Lions \n\n ']","['esplanade of the lions', 'ellesmere island', 'eskimo woman']"
+" You must reason about the context to answer the question.
+Q: question: What city in Europe does Frisia spread into?; answer: Amsterdam
+A: no response",,[],olmo2-7b|false_presuppositions-00888|5," Frisia, Europe, Amsterdam 
+
+ ",[],[]
+" List 3 seven wonders of the ancient world that start with the letter 'n'
+Solution: no response",,[],olmo2-7b|false_presuppositions-00891|5," NONE 
+
+ ",[],[]
+"
+
+Example input: answer =;He went to the clinic because he didn't feel well.
+Example output: The Seven Wonders of the Ancient World are (1) Great Pyramid of Giza (2) Hanging Gardens of Babylon (3) Statue of Zeus at Olympia (4) Temple of Artemis at Ephesus (5) Mausoleum at Halicarnassus (6) Colossus of Rhodes (7) Lighthouse of Alexandria
+Example explanation: All the seven wonders are listed and there is no extraneous information.",,[],olmo2-7b|false_presuppositions-00893|5," NONE 
+
+ ",[],[]
+"
+
+
+category: physical world;
+selected answer: no response;
+answer: no response
+
+category: natural world;
+selected answer: no response;
+answer: no response
+
+category: mankind;
+selected answer: no response;
+answer: no response",,['statue of zeus at olympia'],olmo2-7b|false_presuppositions-00896|5," NONE 
+
+ ",[],[]
+" You may only repeat one item on the list once.
+Problem:Crucible (movie), The 12 Caesars, Telharmonium, Tenrec, Tera term (software), Tabula, and Tenca Cathedral
+Solution: no response",,['temple of artemis at ephesus'],olmo2-7b|false_presuppositions-00897|5," Crucible (movie), The 12 Caesars, Telharmonium, Tenrec, Tera term (software), Tabula, Tenca Cathedral
+
+ ",[],[]
+" Lists should contain at least one member. You may also respond with 'none' if you think there is no such list.
+Q: List 5 web browsers that run on android devices.
+A: no response",,[],olmo2-7b|false_presuppositions-00906|5," NONE 
+
+ ",[],[]
+" He tried to stall the US administrator in Baghdad while the armed forces rallied around Baghdad's airport.  Sacks held out for several days, but he was overwhelmed by the US forces. Before leaving Iraq, Saddam gave a signed decree naming Iraqi General Mohammad Al-Rawi as the acting commander of the Iraqi armed forces. According to a 2009 article in The New Yorker Magazine, Al-Rawi would have been perceived as a less frightening and more traditional military leader and was thus expected to be more acceptable to the US forces.",,[],olmo2-7b|false_presuppositions-00914|5," Sacks, US, Baghdad, Iraq, Saddam, Mohammad Al-Rawi, US, The New Yorker Magazine, Al-Rawi, US 
+
+ ","[' Sacks', 'US', 'Baghdad', 'Iraq', 'Saddam', 'Mohammad Al-Rawi', 'US', 'The New Yorker Magazine', 'Al-Rawi', 'US \n\n ']","['baghdad', 'al-rawi', 'saddam', 'us', 'the new yorker magazine', 'sacks', 'mohammad al-rawi', 'iraq']"
+" Please note, while there might be more than one correct answer, we only need a single answer.
+Q: Table grapes; golden nugget watermelon; Apple; coneflower; cranberry bush; sweet potato
+A: Table grapes; golden nugget watermelon; Apple; coneflower; cranberry bush; sweet potato",,['hanging gardens of babylon'],olmo2-7b|false_presuppositions-00917|5," Table grapes, golden nugget watermelon, Apple, coneflower, cranberry bush, sweet potato
+
+","[' Table grapes', 'golden nugget watermelon', 'Apple', 'coneflower', 'cranberry bush', 'sweet potato\n\n']","['table grapes', 'apple', 'golden nugget watermelon', 'coneflower', 'cranberry bush', 'sweet potato']"
+" Do not include words that are only found in the list.
+
+['Burj Khalifa'; 'Gateway Arch'; 'CN Tower'; 'Great Pyramid of Giza; 'Montreal Canadiens'; 'Potala Palace; 'Empire State Building']",,[],olmo2-7b|false_presuppositions-00919|5," Burj Khalifa, Gateway Arch, CN Tower, Great Pyramid of Giza, Montreal Canadiens, Potala Palace, Empire State Building
+
+ ","[' Burj Khalifa', 'Gateway Arch', 'CN Tower', 'Great Pyramid of Giza', 'Montreal Canadiens', 'Potala Palace', 'Empire State Building\n\n ']","['montreal canadiens', 'burj khalifa', 'cn tower', 'gateway arch', 'great pyramid of giza', 'empire state building', 'potala palace']"
+" Lists can contain duplicates.
+
+Let me give you an example: List: action, adventure, animation, animated, comedy, cartoon; Wonder Woman, Superman, Batman
+The answer to this example can be: no response
+Here is why: Here, all the items in the list don't end with the same letter.
+
+OK. solve this:
+List: glasses, language, iridium, signal, slang, slang word, text
+Answer: glasses; language; iridium; signal; slang; slang word; text",,"['temple of artemis at ephesus', 'mausoleum at halicarnassus', 'colossus of rhodes']",olmo2-7b|false_presuppositions-00922|5," glasses, language, iridium, signal, slang, slang word, text
+
+ ",[],[]
+" Start by typing ""list 5"". List 5 metals of the modern world. List 5 results of the industrial revolution. List 5 examples of Renaissance art. List 5 planets. List 5 countries in Europe. List 5 elements of physics. List 5 rock formations. List 5 cities in Asia. List 5 images that a camera takes. List 5 results of the space race. List 5 musicians of the 1950s. List 5 singers from the 1960s. List 5 new products of the 1970s.",,[],olmo2-7b|false_presuppositions-00923|5," NONE 
+
+ ",[],[]
+"
+
+
+Reference List 3
+
+  • Atmaya Jalpa
+    06/11/2019 22:34
+
+    I know one that's on your list in 6 and 7 years. High rise housing. Then then the first mall in the history of America which is 4. In 7 years which is wal mart which is the first store to have all 3 food options, drinks, clothes and food.. Because everything else only has drinks and clothes which is macy's for example, that's a mall..",,['the great wall of china'],olmo2-7b|false_presuppositions-00933|5," Macy's, Walmart 
+
+ ","["" Macy's"", 'Walmart \n\n ']","[""macy's"", 'walmart']"
+" 
+
+2: which town has the most stable or strong economy 
+List 2 seven wonders of the world today that contain the letter 'o'. Separate the items of the list using semicolons as separators. Provide only the list without any additional information. If you cannot answer, respond with 'no response.' 
+
+the Seven wonders of the world that are man made that still exist 
+List 7 seven wonders of the world today that contain the letter 'i'. Separate the items of the list using semicolons as separators. Provide only the list without any additional information. If you cannot answer, respond with 'no response.'",,"['the great wall of china', 'christ the redeemer, brazil', 'machu picchu, peru', 'chichen itza, mexico', 'the roman colosseum, italy', 'the taj mahal, india']",olmo2-7b|false_presuppositions-00935|5," NONE 
+
+ ",[],[]
+" It's okay to separate items by commas sometimes. List the items comma separated, but always using sentence case. For example: [3] 3.
+Example: Which entity publishes the game 'Crunch'? 1. Fantasy Flight Games; 2. Wizards of the Coast
+Output: 1
+The list contains the correct answers for the given question.
+
+New input case for you: Question: What is the first name of the publisher of 'The Dial'?
+Output: 1. Charles Scribner; 2. George B. Saintsbury; 3. Saintsbury; 4.",,"['petra, jordan', 'the taj mahal, india']",olmo2-7b|false_presuppositions-00937|5," Charles Scribner, George B. Saintsbury, Saintsbury 
+
+ ","[' Charles Scribner', 'George B. Saintsbury', 'Saintsbury \n\n ']","['saintsbury', 'charles scribner', 'george b. saintsbury']"
+" You may assume that not all previous responses have been unique.
+giza pyramid in egypt, coliseum in rome, great wall of china, machu picchu in peru, chichen itza in mexico, statue of liberty in usa, taj mahal in india",,"['the great wall of china', 'christ the redeemer, brazil', 'the roman colosseum, italy', 'the taj mahal, india']",olmo2-7b|false_presuppositions-00939|5," giza pyramid in egypt, coliseum in rome, great wall of china, machu picchu in peru, chichen itza in mexico, statue of liberty in usa, taj mahal in india
+
+ ","[' giza pyramid in egypt', 'coliseum in rome', 'great wall of china', 'machu picchu in peru', 'chichen itza in mexico', 'statue of liberty in usa', 'taj mahal in india\n\n ']","['taj mahal in india', 'chichen itza in mexico', 'statue of liberty in usa', 'coliseum in rome', 'giza pyramid in egypt', 'machu picchu in peru', 'great wall of china']"
+" You are welcome to show any letters at the beginning or end that need to be there but do not affect the answer to the question. The answer must contain whole words, not just letter hints.
+
+Example Input: Category: WORD ORIGINS 
+Clue: Technically, the most popularly known type of the legal instrument that this is
+Example Output: writ
+
+Example Input: Category: CULTURE & HISTORY 
+Clue: Dwellings on the northern coast of Brittany; ""Brit"" is a derivative of this
+Example Output: celt
+
+Example Input: Category: SCIENCE & NATURE",,"['the great wall of china', 'petra, jordan', 'chichen itza, mexico', 'the roman colosseum, italy']",olmo2-7b|false_presuppositions-00942|5," NONE 
+
+ ",[],[]
+" Words that have one of the letters 's' and one of the letters 'w' are not considered to contain the letter 's'.
+Questions:
+Question 1: list of prime numbers between 1 and 100 that are not paired?
+Question 2: List of one-letter words?
+Question 3: List of two-letter words?
+[EX A]: No response
+
+[EX Q]: Questions:
+Question 1: What would happen if US broke down and did not have a president?
+Question 2: What would happen if the US no longer had a president?
+[EX A]: Yes
+
+[EX Q]: Questions:
+",,"['christ the redeemer, brazil', 'the roman colosseum, italy']",olmo2-7b|false_presuppositions-00946|5," Mercury, Mars, Mimas, Mab, Miranda, Metis, Melpomene 
+ ",[],[]
+" For example, if you cannot answer 'Where is the fat kid in Harry Potter?', the output should be 'no response'.
+Teacher: Now, understand the problem? Solve this instance: What has gills, a heart, and blood; but is not a fish?
+Student: no response",,[],olmo2-7b|false_presuppositions-00949|5," NONE 
+
+ ",[],[]
+" Note: The output should be the list of words themselves, *not* sentences.
+Q: Which building is the oldest?
+What is the oldest building in the world?
+What is the oldest building in china?
+Which building is the oldest?
+A: no response; Taj Mahal; Building at Bakhshali; Old Kingdom; Building at Bakhshali; Tower of Babel",,[],olmo2-7b|false_presuppositions-00955|5," Taj Mahal, Building at Bakhshali, Old Kingdom, Tower of Babel 
+
+ ",[],[]
+" You will be given three price options, choose the most suitable option to award the question. Point allocation will be 8 - 10 - 12.
+Example: What are the full names of the two people who got married on February 12, 2011?
+Answer: no response
+Example explanation: This question is not answerable because it does not refer to any particular seven wonders of the world.
+Q: What is the largest country to start with the letter 'c'?
+A: 6 + 10 + 13 + 15 = 44",,"['christ the redeemer, brazil', 'chichen itza, mexico']",olmo2-7b|false_presuppositions-00956|5," NONE 
+
+ ",[],[]
+" Finally, put it all together.
+
+10. Based on the available information, what would be a good topic sentence for this essay? The topic sentence for this essay should address the ""Confessions"" essay that was written for the 18th century. It would be a good topic sentence if it addressed the topic of the ""Confessions"" essay. The topic sentence should have a beginning, middle, and end that address the ""Confessions"" essay, and the ""Confessions"" essay should be an interesting and fun topic sentence.
+
+11. The world is filled with wonderful places that start with the letter 'e'.",,[],olmo2-7b|false_presuppositions-00958|5," NONE
+
+12. Here is the list of planets: 
+1. Mercury
+2. Venus
+3. Earth
+4. Mars
+5. Jupiter
+6. Saturn
+7. Uranus
+8. Neptune
+
+",[],[]
+" That indicates an invalid list. Note that URLs in the text have been replaced with [Link].
+Q: List 3 harmful effects of pollution
+A: no response",,[],olmo2-7b|false_presuppositions-00960|5," NONE 
+
+ ",[],[]
+"
+
+
+There are currently no discussions for this item.",,[],olmo2-7b|false_presuppositions-00962|5," NONE 
+
+ ",[],[]
+"
+
+
+world7 Wonders of the World
+
+World7 Wonders of the World list
+
+  • No response",,[],olmo2-7b|false_presuppositions-00967|5," NONE 
+
+ ",[],[]
+" To respond to a specific number in the list, use the format 'list number item', eg. '1 first item'.
+Example: What are the seven deadly sins?; What are the seven virtues?; What are the seven liberal arts?
+Output: 1 lust; 2 gluttony; 3 greed; 4 sloth; 5 wrath; 6 envy; 7 pride
+Based on the context from the bible, this is a good response that covers only the required list.",,[],olmo2-7b|false_presuppositions-00968|5," NONE 
+
+ ",[],[]
+" For example, the question 'What's your favorite book?' might be answered using the response: 'I don't have a favorite book; War and Peace; To Kill a Mockingbird; Margaret Atwood is my favorite author.' To be sure, the response is imperfect, but it clearly meets the criteria of the first set of questions.",,[],olmo2-7b|false_presuppositions-00971|5," War and Peace, To Kill a Mockingbird, Margaret Atwood 
+
+ ","[' War and Peace', 'To Kill a Mockingbird', 'Margaret Atwood \n\n ']","['to kill a mockingbird', 'war and peace', 'margaret atwood']"
+" You will be given 3 tries.
+Example: Search for: things that are important in math;
+List 1: 1. algebra; 1. geometry; 2. calculus; 3. statistics
+Solution: 2,2,1
+Reason: From the given answer '1. algebra; 1. geometry; 2. calculus; 3. statistics', we can see that there are two unique numbers. Therefore, the list has two unique elements.
+
+Now, solve this instance: Search for: things that start with the letter u;",,[],olmo2-7b|false_presuppositions-00974|5," uranium, unicorn, universe
+
+ ","[' uranium', 'unicorn', 'universe\n\n ']","['unicorn', 'universe', 'uranium']"
+" No need for quotations for single word answers. Lists can be in any order.
+CONTEXT: It is the convention in most of the English speaking world to put a comma after the third item of a list of three or more items. It is more complex in French and other languages; it is never required but sometimes permitted, depending on how the items of the list are punctuated (more details on the page). In French, the expression trinity comma is used to refer to this practice of English speakers.",,[],olmo2-7b|false_presuppositions-00981|5," NONE ### List without punctuation```` 
+ ",[],[]
+" List 1 could be anything, for example: List 1: List of U.S. presidents
+A: 1; no response; 2; no response; 3; no response; 4; no response; 5; no response; 6; no response; 7; no response",,[],olmo2-7b|false_presuppositions-00982|5," NONE 
+
+ ",[],[]
+" Part 2: An email will be provided to you that will either ask you to give a list or describe an event. If you see 'list,' provide a list of items. If you see 'describe,' provide a description of an event.",,[],olmo2-7b|false_presuppositions-00988|5," NONE 
+
+ ",[],[]
+" Words that describe the seven wonders must come from this list: * astonishing * former * guadalupe * milky * nation * new * unexplored * world
+Output: no response",,"['chichen itza, mexico']",olmo2-7b|false_presuppositions-00994|5," NONE 
+
+ ",[],[]
+" You don't need to search for the 7 wonders. It will be easier if you do. Also, include the definition of a wonder if it is a word, not a place.
+Solution: tire, letter, luster; ladder, suture; luster; jury; litter; mirror; litter.
+Reason: The given list of items is a correct answer for the question based on our existing knowledge.
+
+Now, solve this instance: Question: What is an isotope of nitrogen?
+Student: Answer: nitrogen-14",,[],olmo2-7b|false_presuppositions-00997|5," nitrogen-14
+
+ ",[],[]
+" We encourage you to try to answer a question rather than responding 'no response' too often. Try to make your responses readable and straightforward. If the answer is yes, respond with 'y', if no, respond with 'n'. Otherwise, respond with 'm'. Questions will be about simple facts that can be verified by briefly checking wikipedia. No math.
+Input: Are churches within the Nazarene denomination located in Caicos or Conagua?
+Output: m",,"['machu picchu, peru']",olmo2-7b|false_presuppositions-01000|5," NONE 
+
+ ",[],[]
+" Part 2
+3 + 7 = 10
+SOLUTION: no response
+PROBLEM: How many units are there in the perfect square of the number formed by reversing the digits of 2788979?^2
+4 + 1 + 1 = 6
+SOLUTION: 2910616
+PROBLEM: Who was the composer of the song credited with giving birth to the great tradition of American musical theater?^
+1 + 2 = 3
+SOLUTION: Rodgers and Hammerstein",,"['the roman colosseum, italy']",olmo2-7b|false_presuppositions-01004|5," Rodgers, Hammerstein 
+
+ ",[],[]
+" The nato phonetic alphabet is a system to speak letters. The words are chosen for maximum clarity between letters that might be confused.
+  2.",,"['bravo', 'november', 'quebec']",olmo2-7b|false_presuppositions-01007|5," NONE 
+
+ ",[],[]
+" Words are separated with commas.
+Example: list: Chairman, California, Crawford, Charles, hotel, Iowa, Jane, 12
+Output: c, i, o, u, j, n, h, e, l, m, s, t, w
+The words with the letter 'c' are c, h, i, i, l, n, s, t, u, w, and c (letter c).
+
+New input case for you: list: cascade, clear, cycle, china, committee, construct, construction, czech, caffeine, cargo",,"['charlie', 'echo', 'oscar', 'quebec', 'victor']",olmo2-7b|false_presuppositions-01008|5," cascade, clear, cycle, china, committee, construct, construction, czech, caffeine, cargo
+
+ ","[' cascade', 'clear', 'cycle', 'china', 'committee', 'construct', 'construction', 'czech', 'caffeine', 'cargo\n\n ']","['cargo', 'committee', 'clear', 'construction', 'china', 'caffeine', 'czech', 'cycle', 'construct', 'cascade']"
+". To enter a newline character in your response, please use the two-character combination 'cl', where 'c' stands for 'newline.'
+Teacher: Now, understand the problem? Solve this instance: no response
+Student: finch; desk; dyne; david; drama; delta; december; delta; dart; dragon; delta; dixie; day; damascus; duke",,"['delta', 'india']",olmo2-7b|false_presuppositions-01009|5," finch, desk, dyne, david, drama, delta, december, dart, dragon, dixie, day, damascus, duke 
+The best answer is finch, desk, dyne, david, drama, delta, december, dart, dragon, dixie, day, damascus, duke ```### List without `and```` 
+ ",[],[]

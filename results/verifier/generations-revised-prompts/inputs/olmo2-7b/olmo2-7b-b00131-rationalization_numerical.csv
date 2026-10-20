@@ -1,0 +1,116 @@
+response,list,list_condition,count,generation_id
+" All output should be separated by comma.
+
+2, Octal, Oscar, Olive, Oboe, One, Orange, Orlan, Ota
+2, Octal, Oscar, Olive, Oboe, One, Orange, Orlan, Ota
+
+Input:
+Output:
+1, Iota, India, Indigo
+
+Input:
+Output:
+1, India, Indigo
+
+Input:
+Output:
+2, Odessa, Oscar, Omega",,['oscar'],1,olmo2-7b|rationalization_numerical-00976|2
+" There is only one line with a list of words. Words in the list are separated by spaces. A word ends with end of line.
+one hundred four
+Item 2 is phonetic papa
+Input: first output a number, and then list every item that satisfies the condition
+Output: 2
+One hundred four is a correct answer. However, the number starts with 1.",,['papa'],1,olmo2-7b|rationalization_numerical-00977|2
+" Separate multiple outputs with a comma, but only put a comma at the end of the list if the last element is not the last element of the output list.
+Example: Sentences: A, AA, A1. Words: A, AAA, A1, A2, A3.
+Example solution: 4, A, AAA, A1, A2, A3
+Example explanation: A and AAA are in sentence 1. A1, A2 and A3 are in sentence 2.",,['sierra'],1,olmo2-7b|rationalization_numerical-00980|2
+" Separate multiple items with a comma. If there is no item that satisfies the condition, output ""Nothing"".
+
+Number of words in the NATO phonetic alphabet starts with letter t. 13, Alpha, Bravo, Charlie, Delta, Echo, Foxtrot, Golf, Hotel, India, Juliet, Kilo, Lima",,['victor'],1,olmo2-7b|rationalization_numerical-00983|2
+" Separate multiple outputs with a comma ("", ""). E.g. If the output is 2,3,5,7, output is correct.
+b, bravo
+A: 1",,[],0,olmo2-7b|rationalization_numerical-00989|2
+" Separate multiple answers with a comma. In the NATO phonetic alphabet, the English word for each letter is given. The letters C, K and W have no phonetic equivalent in the alphabet. The letter C is always read as ""charlie"", the letter K is always read as ""kilo"" and the letter W is always read as ""whiskey"".
+
+The number of letters in the NATO phonetic alphabet that ends with letter c is 5. The letters are - charlie, golf, uniform, whiskey, zulu.",,['quebec'],1,olmo2-7b|rationalization_numerical-00990|2
+" If no words can be listed then output ""No Words"" .
+
+No Words",,"['charlie', 'mike', 'yankee']",3,olmo2-7b|rationalization_numerical-00992|2
+" If there are no item in the list, just output ""-"". Use a newline character (or a carriage return) to separate every answer in the list. If the answer is only a single item, you do not need to add a comma after it (but you can add it if you want).
+
+25, whiskey, foxtrot, foxtrot, india, fiat, sally
+
+25 is just 25 and a list, where 25 is the number of words ending with f, and then a comma separated list of all words that ends with f.
+
+For the second example:",,['golf'],1,olmo2-7b|rationalization_numerical-00993|2
+" If there is no item that satisfies the condition, output No items matched. The letter `g` is being used as a wildcard. A wildcard is a symbol used to represent one or more other symbols. In this case, it can represent every letter.
+
+9. No items matched
+Output:",,[],0,olmo2-7b|rationalization_numerical-00994|2
+" The answer must be sorted ascending by the first number output. If there are multiple answers with the same first number, output them as a set.
+
+Output should look like this:
+
+3: alpha, zulu, papa, yankee, bravo, kilo, foxtrot, uniform, golf, november
+4: lima, sierra, mike, charlie, echo, roger, nato, india, hotel, two, victor",,['hotel'],1,olmo2-7b|rationalization_numerical-00999|2
+" There are a lot of such words, so you just need to output the first 10.
+I’m tempted to answer “Four: mike, mike mike, mike mike.” But there are more. Well, five.
+
+As of January 1, 2012 the NATO phonetic alphabet is in full effect (I have no idea how this happens), so it's time for a new list.",,['uniform'],1,olmo2-7b|rationalization_numerical-01000|2
+" Set up a loop to output the results
+Important Note: You should not use brackets (e.g. ()) as your output.
+
+Programming language used:
+
+JAVA code:
+
+
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		String input = sc.nextLine();
+		char[] alpha = input.toCharArray();
+		for (int i = 0; i < alpha.length; i++) {
+			char c = alpha[i];
+			if (c == 'n') {
+
+		count(0, 0, 26);
+		return 0;",,[],0,olmo2-7b|rationalization_numerical-01001|2
+" You may create a list with _ as a placeholder.
+
+Hint: there are 26 items.
+
+for each number from 1 to 26 inclusive:
+   add the number to the variable n
+   append the item in the NATO phonetic alphabet that starts with letter n
+   print every letter in the phonetic alphabet item
+
+Next, determine the four longest items that are not palindromes. They are
+
+Admiral_Bay, Whiskey_Uniform, Golf_Nine_Niner, Hotel_Arrow
+
+Python Solution
+
+# alphabet items that start with a vowel and that are not palindromes",,"['bravo', 'echo', 'kilo', 'romeo', 'tango']",5,olmo2-7b|rationalization_numerical-01002|2
+" Separate multiple outputs with a comma ("", ""). E.g. For the input ""What foods can you eat during a lacto vegetarian diet?"", possible outputs include ""milk, cheese, yogurt, butter, ghee"", or ""milk items"".
+
+[Q]: Who was the mother of Heiress Augusta of Queen?
+[A]: 7, Augusta, Aurora
+
+
+[Q]: Where was the Battle of the Plate River fought?
+[A]: 2, Blanco, Uruguay
+
+
+[Q]: What is the highest mountain in Spain?
+[A]: 5, Montserrat, Mulhacen",,[],0,olmo2-7b|rationalization_numerical-01003|2
+" There are 5 items that satisfy the condition.
+B, C, G, M, S, X
+[Q]: Which consonant comes after letter i in the NATO phonetic alphabet?
+[A]: i, j, k",,[],0,olmo2-7b|rationalization_numerical-01006|2
+" The number you output should be the answer to the question. If there is no such item in the list, output -1.
+Q: cyan, delta, echo, seven, union
+A: 1",,[],0,olmo2-7b|rationalization_numerical-01009|2

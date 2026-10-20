@@ -1,0 +1,516 @@
+prompt,response
+,"
+
+Model Answer 1:
+The article I read discusses Floyd Mayweather Jr’s preparation for his upcoming mega-fight against Manny Pacquiao, which is being billed as the richest fight in boxing history, with both boxers aiming for a pay-per-view record of $150 million. Floyd Mayweather Jr and his trainer have been training for the fight with exercises and routines that were previously unseen and unheard of in the boxing world. As per the article, Floyd Mayweather Jr did some underwater resistance training and testing of his muscles in a swimming pool."
+,"
+
+Show Example Output
+
+The text you've entered has a total of 12 words. You are allowed a maximum of 80 characters. Your response is:
+As the countdown continues to Floyd Mayweather's mega-fight with Manny Pacquiao in Las Vegas on May 2, The Money Man's daughter Iyanna Mayweather has shared her thoughts about life in training with her champion father.
+
+The text you've entered has a total of 12 words. You are allowed a maximum of 80 characters. Your response is:
+
+The text you've entered has a total of 12 words."
+,"
+
+Task 2. (25 marks)
+
+Create a simple 'Twitter-like' program in Java that uses hashtags. For example, when a user writes:
+
+The hashag #java is very useful
+
+It should convert the sentence to:
+
+The hashag #java is very useful
+
+That is, it should only keep hashtags. Words between two hashtags should be kept only if they contain a hashtag as a substring (a substring is a portion of a string). For example:
+
+The hashag #java is very useful, but #c++ is better.
+"
+," 
+
+\section{Approach}
+
+\subsection{Task Description}
+The task consists of a long text in the form of a news article. The goal is to predict a summary for the text. We are using the ROUGE \cite{rouge} score to assess the quality of a candidate summary.
+
+\subsection{Data pre-processing}
+\label{subsec:preprocessing}
+
+We start by performing the basic pre-processing steps. We lowercase the text, remove all punctuation characters and tokens having a length below 2."
+," You may use this summary anywhere in the text (preferably towards the end), but you should not cut or remove any text from this summary, and you should not repeat any text from this summary in your text. The solution text should include a response from a real human, and should not include any markup tags. The solution text should be at least 100 words long. The solution text may not include more than 2,000 characters. The solution text may not include more than 30 punctuation characters."
+,"
+
+In order to provide a good summary, we have to focus on the topic sentences of each paragraph. The first paragraph is about the release of the merchandise and its price. So, it is about the release of merchandises. The topic sentence is 'Provide a concise summary of the following text: “Manny Pacquiao has promoted a range of t-shirts commemorating his impending bout with Floyd Mayweather in Las Vegas on May 2”.'. The second paragraph is about the design of the merchandises. The third paragraph is also about the merchandises."
+," Please do not provide a link to the article, as it is the summary that is required here.
+
+Answers:Suarez was referring to nutmegging two defenders by threading the ball between their legs during Wednesday's game. Suarez has scored 17 goals this season and 11 in his last 11 games. Suarez says the PSG game isn't over.
+
+Question:I have to write an essay on a character of my choice from a book, and I chose the main character from Gone with the wind by Margaret Mitchell. I need some quotes of hers so i can write this essay."
+,"
+
+
+The problem with the summary above is that it is almost entirely made up of nouns. If you have a string of nouns like that, it makes the summary sound more like a list than an article, and therefore Google sees it as less valuable. A summary has to be written using full sentences and not in the form of bullet points or numbers, and as I have just written, it shouldn’t be full of nouns. The best summaries are short and precise and they need to sound like they have been written as one full piece rather than a bullet point list."
+,"
+
+Sample Question:
+
+What is the main message of the following article?
+
+'The first-class list is the best in the country and England can thank their lucky stars for that, but there's been a fall in the standard of second-class county cricket over the last decade. In the 1980s and early 1990s, you'd be hard-pushed to find a county who were worse than fourth in second-class cricket but now the drop in standards has led to several counties being in the bottom four in their groups. I don't see any reason why that can't be addressed."
+,"
+
+1 comment:
+
+Anonymous said...
+
+The response can be the same as the response for the summary task for the second extract. It is just an alternative one."
+," Do not give a full answer as the response. Provide a succinct, detailed response to the question in full. Give reasons for your answer and include any relevant examples from your own knowledge or experience. Do not include any information from the text. Give a detailed and clear response. Provide an answer to the question, giving reasons and including any relevant examples. Include any relevant information from the text as evidence. Give reasons and include relevant examples.
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+7
+
+8
+
+9
+
+10
+
+11
+
+12
+
+"
+," It is important for the student to be able to identify the important ideas and details in the text and include them in the response. This response does not include every important detail, nor does it fully develop the response. It also does not provide an answer to the question.
+Full transcript"
+,"
+  2. If I have a response (summary) to a citation, how do I send it to the tournament disciplinary officer (TDO)?
+  3. How long does a disciplinary hearing usually last?
+  4. When I receive a copy of the written reasons, where can I find the decision?
+  5. The club has not received an e-mail notification that a disciplinary hearing has been arranged for the player. How can I get more information?
+  6. Can an individual player be excluded from a disciplinary hearing?
+  7."
+,"
+
+Example 3:
+
+A: 'Why did you eat the entire thing? I need a sandwich.'
+B: 'You have got to be kidding. I am just a human vending machine.'
+A: 'I know, but why a whole cake? I can't deal with you like this!'
+B: 'It's not a big deal.'
+A: 'You are going to have to stop eating sweets.'
+B: 'You are a bit of a health freak.'
+A: 'You don't even like cakes. Do you know how many calories it is?!'"
+," The user's text must not be included.
+
+Test: Write a program to read the given text file and print each line followed by a newline, and then each line followed by its second-last character (right before the newline). Use a for loop to read the file, but do not use any external library functions, such as System.IO.File or String.Split. Your code must only use built-in.NET methods."
+,"
+
+### The dataset¶
+
+As you saw in the previous section, there are three types of question and answers. It is therefore a multilingual dataset. The three languages involved are:
+
+• English
+• Spanish
+• Portuguese
+
+Note: As of the time of this writing, there were a total of 7,939,968 examples. This number can change with time as the dataset continues to grow.
+
+## Preprocessing¶
+
+### Dataset format¶
+
+Since this dataset has three types of questions, you will need three models in total, one for each type of question."
+,"
+
+Question 3:
+You are given a text about the problems that might be created by the UK leaving the European Union. (Read the text and choose the correct answer to each of the following questions.) Write a short letter to the editor of your local newspaper. In your letter give your reasons for disagreeing with the writer. Write your letter in 80-100 words.
+
+Question 4:
+Write a short text about a person, place or thing.
+
+Don't Miss A Single Updates
+
+Remember to check your email account to confirm your subscription.
+
+Post a comment ➜"
+,"
+
+Task 2: Reading Comprehension
+
+Read the following text and answer the questions that follow.
+
+The British Museum has a lot of stories and the people who tell them. With more than 10 million visitors a year it has been the destination for more than 250 million in its 250 year history. But it is changing. Its current Director, Sir Martin Rees, told BBC News that it has been the museum of the past. 'We've been the museum that tells you about what other people have done and we're moving towards becoming a museum that tells you more about what you can do.'"
+,"
+
+Question 6:
+
+Write a Python program which would implement the following logic to provide a response for the following question:
+
+The sentence 'A train travels to Liverpool from London every day' should be converted to the following logic:"
+," You have only one minute to complete this task.
+
+• Sample output:
+
+PSG striker Cavani visits a zoo after defeat in the Champions League.
+
+• You have one minute.
+
+### Task 1.3:
+
+Provide a concise summary of the following text: 'The New Zealand Prime Minister John Key has declared the country's Rugby World Cup final against Australia 'will be a big f***ing embarrassment' if they don't win."
+,"
+
+### Question 5
+
+Q. Use the following text:
+
+In the following text:
+
+""An army of young people are now being trained as'superheroes' and will patrol the streets of London. The new group of community volunteers will wear bright costumes and attempt to prevent crime. The aim is for the group to make people feel more safe and secure in the capital. The group, which has been dubbed 'The Sentinels', will work in partnership with the Metropolitan Police to protect the capital's citizens."
+," Do not include the question.
+
+Hint: To make life easier, you may want to split the task into two steps. First extract information from the text and store it in variables. Then compose a response based on the variables.
+
+Question:
+
+1. Find a sentence that talks about Barcelona and summarize it.
+
+Hint: Look for the word Barcelona.
+
+Question:
+
+2. Find a sentence that talks about the wife of Rakitic and summarize it.
+
+Question:
+
+3. Find a sentence that talks about the daughter of Rakitic and summarize it."
+," The above text describes the personal and professional life of Ivan Rakitic and Lionel Messi. Provide a concise summary of the following text: 'The new version of the Xbox One video game console will be called the Xbox One X. And, in the future, the Xbox One will simply be called Xbox One S. Those are two of the revelations to come out of Microsoft’s E3 2017 event today. The other is that Microsoft is dropping the price on the original Xbox One, which will now sell for $249.99."
+," The summary should be within 30 words.
+
+### Summary of a text
+
+The ability to provide a summary of a text requires the following skills:
+• Recognizing the main ideas of the text
+• Recognizing subordinate ideas of the text
+• Organizing the main ideas in an appropriate order
+• Rephrasing the ideas in the summary
+• Truncating the summary to the required length
+
+## Example 1
+
+An earthquake in Nepal that killed thousands of people has been called the worst natural disaster the country has seen in 100 years."
+,"
+
+Answer: Cpl. William Benn manned a gun during the 1941 attack on Pearl Harbor. He was awarded the Silver Star for shooting down several Japanese aircraft the next year as a tail gunner on a B-17 bomber at the Battle of Midway. Benn died in 2002. Purple Hearts Reunited says it will use the money from the Military Order of the Purple Heart Service Foundation to cover the 'purchase or rescue' of Purple Heart medals, the cost of framing, travel expenses and event and presentation costs.
+
+Q.6) Given the following text, provide a summary of the following text."
+,"
+
+This is a tricky one to write about.
+
+There are some key terms to mention (such as the fighters, what's at stake and location) but it is important that you do not just simply 'copy and paste' a short paragraph that you find online.
+
+You may use words from the text to help you write the summary but it should not be a carbon copy.
+
+Your summary should focus on the main points and this is an ideal time to use your own words.
+
+Here's my summary:"
+," There are no marks for the response.
+
+Question 3:
+
+
+1. The students write a 300-word article using the text in the PDF file.
+
+2. Students must not plagiarise any part of the article they write. They must write the entire article themselves. If they use any text from the source document, they must put that text in quotes and provide a citation (as shown below). If a sentence or two from the source document is used, they must put a reference at the end of the paragraph.
+
+3."
+," Do not rewrite the whole passage and copy the questions.  No copying and pasting from web.
+    The main idea is that the writer says how the stars get their body shape. Then how Judy Murray got her body shape. Finally, how you can get your body shape. 
+    So just copy the introduction, main body and conclusion and you are done. 
+    Good luck! 
+
+
+    Write an opinion piece on one of the following topics:
+
+    ·         A recent survey found that most young people who are addicted to computer games suffer poor mental health."
+," This can be done in a few lines of code. A complete working solution to this task is provided in the following code box.
+
+from bs4 import BeautifulSoup 
+from urllib.request import urlopen
+
+url = 'http://www.bbc.com/sport/0/football/36254070' 
+html = urlopen(url) 
+
+soup = BeautifulSoup(html, 'html.parser') 
+
+# get the content with paragraphs
+p = soup.find_all('p')[0].findAll('span')"
+," Do not include any quotes from the text, but do include the summary in your own words and in full sentences.
+
+### Solution
+
+We will read the article from top to bottom. The main idea is given in the last line. It is mentioned that Schurrle and Gotze got together with their girlfriends to celebrate their side's victories. The other information is only mentioned to give a better insight into the main idea.
+
+The summary consists of 2 sentences."
+,"
+
+There is an alternative approach to solving this. Rather than summarise in English, we could summarise in an equivalent representation of the source. For example, we could summarise the text using a network or a plot:
+
+You could use a word cloud to summarise the text, but this would not really summarise the meaning:
+
+# Plot summary
+library(network)
+library(magrittr)
+
+# Load and parse text
+sp.text <- url_fetch(""https://www.bbc.com/sport/football/49052970"")"
+, Provide an answer with a full set of supporting evidence for the following question: Why do the majority of Irish supporters dislike Brian Kerr? Provide an answer that uses the provided answer to the question: How has the Irish economy changed since the early 1980s? Provide an answer that uses the provided answer to the question: Why are many people of Irish origin in the US and UK? Provide an answer that uses the provided answer to the question: Why are there many people of Irish descent in the US and UK?
+," It must be written in your own words. You should spend about 40 minutes on this task. Write at least 150 words.
+
+Task Achievement: 8
+Coherence and Cohesion: 8
+Lexical Resource: 7
+Grammatical Range and Accuracy: 8
+
+Total Score: 34
+
+The question asks you to provide a concise summary of the information presented in the text. The first thing you should do is highlight the most important points. You may need to skim the text a few times.
+
+Next you should highlight the minor points or the details."
+,"  Note that the above text is the article content.
+
+The article content can be accessed using the following code:
+
+articleContent = article.articleContent
+
+We need to pass a URL for the above to work, and we can get that by using the following code:
+
+url = url_base + article.url
+
+Note: we need to import Beautiful Soup to use the above code.
+
+We will use this to find our summary text:
+
+summary = article.summary
+
+Using the above code we can get the title of the article to use for testing using the following code:
+"
+,"
+
+\end{itemize}
+
+\end{enumerate}
+
+
+
+\section{Conclusion}
+\label{sec:concl}
+
+We have presented the BART system architecture, which unifies the architectures of three recent sequence-to-sequence models. In addition, we have shown how BART can be used to improve the performance of sequence-to-sequence models.
+
+\section{Experiments}
+\label{sec:experiments}
+
+\subsection{Experimental Setup}
+\label{sec:expsetup}"
+," Sample output: [CLS] It's not just humans who have a tendency to nod off in front of the TV as this comical clip shows. Sam the German Shepherd was filmed at home in Pennsylvania as he struggled to keep his eyes open while lying on the couch. Footage shows his head slowly dipping down before he suddenly wakes up and refocuses his energy on the screen. However, he keeps repeating the same action before finally giving up and pulling a big yawn. He then sleepily rolls over and snuggles up against his owner."
+,"
+
+Step 2: The next step is to prepare for the input-output mapping. The input consists of the text, and the output is the summary that you are required to generate. Now, in order to generate the output, you have to map out the input elements to the output. You need to see the important points, and the way the information is presented in the article.
+
+Step 3: Next, try to formulate your thoughts. Think of the things you’d like to write about the article. This will prepare your mind for the task, and also help you remember the things you’re supposed to write."
+,"
+
+
+What are your views about the new Audi TT Roadster 2.0 TFSI S line Quattro, and is it a good choice? Do not worry about your writing style.
+
+What are your views about the new Audi TT Roadster 2.0 TFSI S line Quattro, and is it a good choice? Do not worry about your writing style.
+
+The car itself is good for a drive in the country when you’re going on holidays, but the interior is a bit too luxurious for a small car like that."
+," You are given 60 minutes for this task. You should write no more than 350 words. Example of a summary: 'Provide a summary of the following text: 'The UK Parliament has voted to reject a motion to extend the powers of the Government to carry out airstrikes against Islamic State in Syria. The result has stunned many MPs, who saw the measure passed comfortably in the House of Commons on Wednesday. The vote came as David Cameron was due to meet Barack Obama at the White House."
+,"
+
+
+Input: 'Provide a summary of the following text: ""Stoke City are challenging West Ham for Sampdoria midfielder Pedro Obiang. Chief executive Tony Scholes was understood to be in the stands as Sampdoria played out a 1-1 draw with Verona on Wednesday night. The 23-year-old Spaniard, who started out at Atletico Madrid, is available for around £6m. Sampdoria midfielder Pedro Obiang (right) celebrates scoring for the Serie A club against Udinese."
+,"
+
+The summary is generated through the use of a sentence selection approach: The system learns to select sentences from the original text and presents them as the final summary.
+
+The system is evaluated on how good the final summary is in terms of both accuracy and fluency (i.e. how grammatically correct it is).
+
+The data set contains three domains: sports, politics and science. There is a total of 15,000 text/summary pairs. Each text is associated with a summary that contains exactly 8 sentences and the task is to generate a summary containing at least 5 sentences from the input text."
+,"
+
+Expected Output:
+'Carl Froch, WBA super-middleweight champion, said he is open to fighting Julio Cesar Chavez Jr.'
+
+Sample Input #16:
+
+http://www.google.com/search?q=carl+froch&ie=utf-8&oe=utf-8&client=safari
+
+Expected Output:
+'Carl Froch was born in Nottingham, the son of an Italian mother, Francesca, and a Nigerian father, Chuks."
+,"
+
+### The input may also contain:
+
+1. A short text (up to 100 characters long).
+2. A list of links to other documents (links will be extracted from the text by the bot).
+
+## Input
+
+A list of links to other documents.
+
+• [https://en.wikipedia.org/wiki/Wolfsburg_04](https://en.wikipedia.org/wiki/Wolfsburg_04)"
+,"
+
+### Acknowledgements
+
+Thanks are due to the contributors who generously provided datasets and data analysis resources in building the package. Specifically, I wish to thank Dr. Lior Pachter for his permission to use the Genomes_and_Exons dataset; Dr. Stephen McQuillan for his help in generating the Toxicology dataset; and Dr. Dirk Kroonenberg for help in the production of the MIMIC-III dataset.
+
+Thanks are also due to many others who contributed their time and effort toward the construction of this package."
+,"
+
+This model is available to GOV.UK data holders.
+
+Output available:
+
+JSON, CSV, TXT
+
+This dataset is, like all of our datasets, available under a CC0 Public Domain Dedication and Contributor License Agreement v1.0 (Creative Commons CC0 License)."
+," 
+
+\subsubsection{Answer Sentence:}
+Answer: Provide only the summary as the response.  
+\end{comment}
+
+
+
+
+\bibliographystyle{acl_natbib}
+
+"
+," You must not copy any part of the original text.
+
+
+The response to this instruction is below:
+
+A huge brawl erupted between several hundred patrons of a bar opening at a casino in Queens, New York, which involved chairs, punches and casino props as weapons. The fight broke out after around 10 pm. Four hundred people fought with each other.
+
+The paragraph contains key information that answers the question: the number of people involved, the time of the fight, its duration and the types of weapons that were used."
+,"
+
+In the example above, the text to be summarized is very short, so it is not hard to get a good score for the task.
+
+Here are three example sentences (a) to (c), together with possible summary sentences (d), which you can use to help you prepare for this task. Note that the summary sentences in (d) are not perfect summaries, and that they vary in length. (a) A new study suggests that the vast majority of people who suffer from depression also have an imbalance of gut bacteria."
+," Do not include any other information in the response, such as your opinion on the topic. Do not include the URL of the source website in your response.
+  4. Summarise the following text: 'In recent years, the role of robots has become more central in the military, with robot'mules' helping with transport and other chores. They also can be used to spy on the enemy, gather data, or even engage in battle. At present, robots are still not able to carry out such tasks without human supervision. In fact, humans have to be able to control every single movement of the robots."
+,"
+
+## Step 2: Highlight the summary sentences
+
+Highlight only the summary sentences.
+
+## Step 3: Enter the summary text in the summary box
+
+Fill out the summary box with the highlighted text.
+
+## Step 4: Check the results
+
+Check the results and copy the text to your clipboard.
+
+# Create an overview of a news article
+
+## Step 1: Find a news article
+
+Find a news article, preferably from The Guardian, to summarize. In this example, we’ll use the following article.
+
+## Step 2: Highlight the summary sentences
+
+"
+,"
+
+You can help your essay stand out by making it clear and concise.
+
+
+As mentioned above, there are many things to consider when you want to be a successful medical writer, and you must put in the work to ensure you are on the right track.
+
+For more information on this career, you can visit the CareerOne website.
+
+Related Articles"
+," The original text is available here:
+
+    Category: College and University
+
+    Subcategory: College and University
+
+    Number of pages: 2"
+," It has been observed that BERT is capable of understanding natural language and performing tasks such as summarization. It is a bidirectional language model that is pre-trained to use the context of each word in a sentence and predict the words that come before and after it. BERT can then be fine-tuned using a dataset that is related to the downstream task to achieve a higher accuracy. The original BERT model uses a large corpus consisting of over 100 billion words and has 110 million parameters. However, it is extremely large, and thus requires a significant amount of resources to train."
+,"
+
+\paragraph{Example 5.}
+
+Provide a concise summary of the following text: 'At a time when social distancing rules have kept people isolated from each other and from work and play, the coronavirus crisis has shown us the extraordinary resilience of humanity and a spirit that will never give up. This is the remarkable story of two people whose bravery and determination have helped to save lives and inspired the nation in their fight against the pandemic.' The couple met at the Royal London Hospital when they were both working as doctors and were married last July."
+,"
+
+\end{minted}
+
+\newpage
+\subsection{QA2: Wikipedia QA Dataset}
+This dataset contains three tasks on a large Wikipedia QA dataset.
+\paragraph{Question-only Summary}
+The task is to generate a question summary from a single question in the dataset. The questions are asked about Wikipedia articles with more than 300 words in them. The summaries of the questions are generated without any reference. 
+\paragraph{Answer-only Summary}
+The task is to generate a summary of an answer to a question, given the question and the answer. "
+,"
+
+Sample Question: A new study says that people who own more than five pairs of shoes are more successful than their counterparts with fewer shoes. Based on the following article, write a response in 150-200 words: 'People with large shoe collections are more likely to be successful in their careers, a new study claims. The study, published in the Journal of Applied Psychology, looked at over 40,000 people and found that those who owned more shoes were more likely to be employed and make more money. The study also found that people with more shoes were less likely to be depressed."
+,"
+
+
+\section{Conclusion}
+
+In conclusion, we propose a novel model for generating an abstractive summary. Our model uses an attention mechanism in combination with a self-attention mechanism to produce an abstractive summary. Our model is evaluated using two metrics, ROUGE-L and BLEU, and is shown to be superior to several other state-of-the-art models, including the Bi-LSTM model and the Transformer model. 
+
+\section*{Acknowledgments}
+
+We would like to thank the anonymous reviewers for their comments and suggestions."
+," 
+We propose to tackle this task using a combination of pre-trained language models and attention-based classifiers. The following section discusses these in turn.
+\begin{figure*}
+    \centering
+    \includegraphics[width=1\textwidth]{figures/architecture_v3.png}
+    \caption{The proposed classification architecture, adapted from \cite{wang2017bilateral}}
+    \label{fig:arch}
+\end{figure*}
+
+
+\section{Proposed Methodology}"
+," Note that in case of an incomplete text, your summary should be limited to only the available text, and should not include text that is not given in the question.""
+    if (summary) {
+      text = summary
+    let text_split = text.split("" "")
+    let summary_split = summary.split("" "")
+    let num_words = text_split.length
+    let num_words_summary = summary_split.length
+    let words_removed = 0
+    let is_summary = false"
+,"
+
+
+  1. Write a summary of the following text: 'I'm a big proponent of the concept of positive thinking, and I can definitely relate to the adage, ""Fake it 'til you make it."" I've spent a lot of my career trying to make sure that the people I work with are feeling happy and comfortable. You don't always need a reason to be happy—sometimes you need to be happy in order to have a reason. I think the only reason I'm not totally happy right now is because I'm worried I won't be happy later."

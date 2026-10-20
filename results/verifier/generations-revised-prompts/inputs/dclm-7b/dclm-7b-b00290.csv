@@ -1,0 +1,671 @@
+prompt,response
+,"
+
+## Input
+
+The input will consist of a number of test cases. Each test case will be specified on a single line and consist of four space-separated integers j (0 ≤ j ≤ 10 000), nk (0 ≤ nk ≤ 10 000), ping (0 ≤ ping ≤ 10 000), and vttern (0 ≤ vttern ≤ 10 000), each corresponding to a word.
+
+The last test case will be followed by a line with four zeros.
+
+## Output
+
+For each test case, output the text simplified to improve its readability on a single line."
+,"
+
+
+
+There are no comments yet.
+
+
+Page navigation:
+
+Page load: 0.065 seconds. Last modified: January 2018"
+," For instance, if the above was simplified to 'the larger number of votes wins', this would be an acceptable answer.
+
+Hint: you can use the edit() function, as described in Section 6.6.1, for this task.
+
+For example:
+
+>>> from nltk.corpus import macbeth
+>>> text = macbeth.saga.text
+>>> text.lower()"
+,"
+
+• a. The sixteenth century was a protestant city.
+
+• b. The sixteenth century became a protestant city.
+
+• c. The sixteenth century became a protestant city.
+
+• d. It became a protestant city in the sixteenth century.
+
+• e. The sixteenth century was a protestant city.
+
+• f. The sixteenth century became a protestant city.
+
+• g. In the sixteenth century the city became protestant.
+
+• h. The sixteenth century was a protestant city.
+
+• i."
+,"
+
+For example:
+
+input: 'even when constantine dedicated the new capital of constantinople which became the seat of byzantine christianity for a millennium he did so wearing the apollonian sun rayed diadem.'
+output: 'constantine dedicated capital of byzantine christianity.'
+
+Note that there may be multiple correct responses to a single input, and that the responses should be as concise as possible.
+
+Note: The answer is not available. You need to answer it to get the full access to the course content."
+,"
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=\linewidth]{sample_data_image.png}
+    \caption{Example of the sample input.}
+    \label{fig:sample_data}
+\end{figure}
+
+\section{Task Description}
+The task is to reduce the following sentence to a sentence that contains the same information as the original, with only minimal redundancy, and at the same time is easy to read."
+,"
+
+3.5.9 (Medium)
+Given a set of strings and their lengths, determine the average length of all the strings in the set. Provide only the average string length as the response.
+
+3.5.10 (Medium)
+Given an integer, determine the number of its binary digits (i.e., the number of 1's) in its binary representation. Provide only the answer as the response.
+
+3.5.11 (Easy)
+Given a set of words, determine the first word in the set that begins with the letter's'."
+,"
+
+# Test Input
+Input Data #1
+the municipality is bordered to the southwest by grimstad to the northwest by froland and to the northeast by tvedestrand.
+
+# Test Output
+Output for Input Data #1
+the municipality is bordered to the southwest by grimstad to the northwest by froland and to the northeast by tvedestrand"
+,"
+
+(8 points)5. The Trivia Machine
+
+The Trivia Machine is a new feature of the Daily Planet website, which provides users with interesting and diverse pieces of information. It is an automated device, powered by an advanced AI system, that was developed by two brilliant programmers from Mars University and is capable of producing interesting and relevant trivia. Each day, it uses a variety of information sources including the internet, books, newspaper articles, television programs, movies, interviews, personal experience, and the Daily Planet archives, to select topics and facts."
+," The input text contains only words (no numbers or other special characters).
+
+
+
+Input Format
+
+One line of input containing the given text
+
+Output Format
+
+One line of output containing the simplified text
+
+
+10  12
+10  2  3
+
+Sample Input 0
+
+haseena atom bomb is a cult pakistani film directed by saeed ali khan
+
+Sample Output 0
+
+
+Sample Input 1
+
+pankaj kapoor loves to eat murgh makhni
+
+Sample Output 1
+
+
+Sample Input 2"
+,"
+
+To solve this task we used a few methods:
+
+1) For the sentence ‘chongqing became a municipality’ we first transformed all words into lower case, removed all punctuation characters, transformed all the letters to the small format.
+
+2) Then, we took the words ‘chongqing’ and ‘became’ and checked how many matches exist for each word in the dictionary. The dictionary had over 30,000 entries. In this case we had a perfect match for ‘became’ but ‘chongqing’ was not matched."
+,"
+
+
+```python
+from tqdm import tqdm
+import numpy as np
+import string
+
+from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.metrics.pairwise import cosine_similarity
+
+def cosine_distance(vector_one, vector_two):
+    return 1.0 - cosine_similarity(vector_one, vector_two)
+
+
+def sentence_embedding(text, tokenizer=None, vectorizer=None):
+    """"""Calculate the BERT sentence embedding.
+    Args:"
+,"
+  • Simplifying is an important skill for people with disabilities. This task requires a neural network to learn the difference between a correct and incorrect text.
+
+
+Provide only the simplified text as the response.
+
+How to get started
+
+Check out the official repository for more details on how to use this dataset.
+
+
+The dataset is distributed under the following license:"
+,"
+
+A single paragraph contains more than 60 words and the text includes acronyms and technical terms. The text also contains spelling mistakes.
+
+The following paragraphs are in English, but contain spelling and grammatical errors. Simplify the text, ensuring its core meaning remains intact, and provide only the simplified text as the response.
+
+1. It is generally assumed that the primary cause of the decline in the American newspaper industry is the rise of the Internet."
+,"
+
+A hint might be useful for some challenges: the hint should be used to guide the solution in the right direction, not provide the complete solution.
+
+Here is a sample of a challenge-hint pair:
+
+Challenge:
+
+'He has been the subject of various tributes."
+,"
+
+Test Case 1: In the sentence, the word 'their' is used incorrectly, replacing the word 'they' instead.
+
+
+Test Case 2: The word 'embarked' is used incorrectly, replacing the word 'embark'.
+
+
+Test Case 3: The word 'gazette' is used incorrectly, replacing the word 'gazetteer'.
+
+
+Test Case 4: The word 'in' is used incorrectly, replacing the word 'on'.
+
+
+Test Case 5: The word 'in' is used incorrectly, replacing the word 'on'."
+,"
+
+The model should only be tested on Barbadians, and I only plan on using Barbados National Team (Bajan Pride) Nicknames for the training set.
+
+The simplified text should have a maximum length of 30 characters, and it should be lowercase.
+
+I hope this works for the forum, if I need to change something in this post to make it acceptable, I'm happy to do so.
+
+• What have you tried? What results do you get from the most obvious approaches? – Ben Reiniger Jun 3 at 23:12"
+,"
+
+Q20 - Fossils
+
+What type of organism is represented by the following fossil: 'a single large fossil consisting of numerous mineral-infused rings deposited along a single axis that may represent a stem of a coral reef community'
+
+Q21 - Fossils
+
+Fossils of which of the following organisms are represented by the following fossil: 'a single large fossil consisting of numerous mineral-infused rings deposited along a single axis that may represent a stem of a coral reef community'
+
+Q22 - Fossils
+
+The following text contains information about two types of organism:
+
+"
+,"
+
+Note that this task requires not only paraphrasing, but also the simplification of the text (e.g. removing the possessive pronouns in the input sentence).
+
+## Dataset Creation
+
+### Curation Rationale
+
+This task is similar to the ones described in:
+
+1. R. Grangier and Y. Nadejde. Learning to simplify natural language. In EMNLP 2018, pages 722–737, 2018.
+2. R. Grangier and Y. Nadejde. A large-scale dataset for natural language simplification."
+,"
+
+A) lafayette ronald hubbard was born on march in tilden nebraska. he was the only child of harry ross hubbard, a former united states navy sailor, and ledora may waterbury who had originally trained as a teacher.
+
+• [H3] Given a set of news stories with headlines, identify the headline for a news story provided as text. The headline is always a single line of text, consisting of no more than 75 characters and not more than 10 words. The input text is the body of a news story and will be provided in the test set."
+,"
+
+Input:
+danestal is a commune in the d partement of calvados in the basse normandie region of france.
+
+Output:
+""commune""
+
+• Note that the task is to ""simplify the following text to improve its readability"" and not to ""shorten a piece of text"". So, the simplified text is not necessarily the shortest text. For example, the following text ""commune"" would be an acceptable solution for the above test. Sep 7 at 8:30"
+,"
+
+The text is presented as:
+
+> <s>from then onwards it was a centre of mining and metallurgy until the end of the th century particularly focussed on the iron and copper industries.</s>
+
+This is an example where an answer contains multiple parts:
+
+  • The <s> tag around 'the th century' indicates that this is part of the correct answer but it's not the entire answer."
+," You can use additional text after your response, including the original text or a short description. For the purposes of this challenge, you can assume that the original text will be a string of length 100 and will be drawn from a common english vocabulary (e.g., will contain only letters, spaces, punctuation, etc.).""""""
+
+# %%
+import numpy as np
+import pandas as pd
+import re
+from nltk import word_tokenize, FREQUENCY_THRESHOLD
+from textblob import TextBlob
+
+import plotly.graph_objs as go
+from plotly."
+,"
+
+'Applied mechanics examines the response of bodies to external forces.'
+
+
+Short Answer
+
+Question 1.
+The maximum depth of an ocean diver is limited by the effect of:
+
+
+Question 2.
+A particle is moving with constant speed in a straight line. Which of the following quantities can be changed?
+
+
+Question 3.
+If you start at a height of 6 m and throw a ball straight up in the air with an initial speed of 15 m/s, what will the height of the ball be when its velocity is 7.5 m/s?"
+,"
+
+2. Shorten the following text without changing its meaning or removing the key information it conveys: 'a man who loves to travel to many different locations can use an online booking service to easily find an affordable hotel room to stay in, as well as tickets to popular shows and restaurants, so he has many options to choose from.'
+
+3. Rewrite the following text to shorten it to fit the 140 character limit of Twitter: 'we use natural language processing, artificial intelligence, and machine learning to deliver smart and powerful text summarization and content analysis for our clients.'
+
+4."
+,"
+
+\noindent
+\textbf{Output}:'mikhail vasilyevich nesterov was a russian painter and printmaker who was associated with religious symbolism.'
+
+\noindent
+\textbf{Input}: Simplify the following text to improve its readability, ensuring its core meaning remains intact: 'kissing is a social greeting, social signal or expression of affection, et cetera, between people, which may or may not be romantic in nature.'
+
+\noindent
+\textbf{Output}: 'a kiss is a social greeting between people.'"
+,"
+
+Note: The answer to this challenge is 'conlie commune in sarthe department pays de la loire region in northwestern france'
+
+Note: The answer is 'conlie commune in sarthe department pays de la loire region in northwestern france'
+
+This challenge is based on a real world problem where information is often presented in an obfuscated form. In this case we are dealing with text data that is not easily understandable to a human and requires some form of manipulation to transform the data."
+,"
+
+
+A simple linear classifier is used for this task. The classifier is a binary classifier, so it is trained using only positive and negative examples.
+
+The input to the classifier is a single string, the text to be simplified. The input is encoded using a combination of pre-trained embedding and character n-gram embeddings.
+
+The output is a binary prediction: is the input a simple English sentence, or is it a complex English sentence.
+
+More detail on the data and model will be released shortly.
+
+Note: This model does not handle special punctuation characters (such as ellipses)."
+," You may write the simplified text in the same format as the text in the testcase.
+
+(2) ""the audit committee is one of the most important committees of a publicly traded company because it is charged with the responsibility of assuring the shareholders that the financial statements of the company are accurate""
+
+The audit committee should be the most important committee because of its role in the financial statements of the company.
+
+(3) ""this will ensure that we are fully prepared when the event occurs.""
+
+(4) ""this will ensure we are prepared for this event."""
+,"
+
+Input: The original text: ""She was accepted to the George Washington University in Washington D.C. and Suffolk University in Boston where her mother serves as professor of government and previously served as dean of the campus in Dakar Senegal.""
+
+Output: ""she accepted the George Washington University and Suffolk University in Boston where her mother is a professor of government.""
+
+### Submission
+
+• Please submit a PDF of your solution to the online judge’s submission page.
+• Please write your solution using Java.
+• You may also submit your solution using C++."
+,"
+
+A stroke is a medical emergency. It can cause neurological damage and death.
+
+How the test will be used
+
+This test was originally developed for use in a range of different use cases including:
+
+For these use cases, the test is intended to help content creators (website and app developers) identify poor quality writing. It is primarily designed to address two main issues:
+
+  • Low-quality text written by non-experts. There is no formal qualification required to write for the web, but not all writers are good writers."
+,"
+
+Data set:
+
+Input:
+The credited writer of Speed was Graham Yost. According to Yost, the dialogue in the film was largely written by Joss Whedon.
+
+Output:
+‘According to Graham Yost, the dialogue in Speed was largely written by Joss Whedon.’
+
+This dataset is provided as a Google Sheet. It contains over 1,200,000 lines of text containing an input and an output. The number of input and output lines is provided as the ‘train.txt’, ‘dev.txt’ and ‘test.txt’ files in the directory."
+,"
+
+Question 2
+
+Identify and correct the common error(s) in the following text: 'the genome of an organism may be referred to as the set of genetic material present in each of its cells. For example, in plants, the term is used to refer to the genetic material of an individual organism. In humans, it is used to refer to the genetic material present in any cell, including those that are not involved in sexual reproduction. 'The term may also be used to refer to the sum total of genetic material in an individual organism, including those parts of the genome that are not transcribed into proteins."
+,"
+
+Hint
+If you get multiple answers, please provide a comma-separated list of strings.
+
+#### Sample Input
+
+''
+she immediately began to take on the role as co hostess of the white house along with the president s niece emily donelson who had served as white house hostess and unofficial first lady since the beginning of the president s term in office.
+
+#### Sample Output
+
+'co hostess of the white house along with the president s niece emily donelson who had served as white house hostess and unofficial first lady since the beginning of the president s term in office.'"
+, The context information is not necessary for your model to produce meaningful output text and is provided for reference only.
+,"
+
+What are the rules for acceptable responses?
+
+You are welcome to take this quiz multiple times and to discuss your experiences during the quiz on the Talk page. However, please follow the rules listed below.
+
+  • The response boxes have been created using <textarea></textarea> tags. The size of the box reflects the length of the expected response. Responses shorter than the expected length will be cut off; responses longer than the expected length will wrap but without any additional line-breaks. Please use only lower-case letters and avoid excessive punctuation."
+,"
+
+Example input
+
+Example output
+
+The freeway runs along a viaduct through the Hōlawa valley and through the Tetsuo Harano tunnels through the Koʻolau mountains.
+The viaduct is in the Hōlawa valley, and the tunnels are in the Koʻolau mountains.
+
+All Submissions
+Best Solutions
+
+Point Value: 10
+Time Limit: 2.00s
+Memory Limit: 16M
+Added: Jan 17, 2015
+Author: SourSpinach
+
+Languages Allowed:
+
+Comments (Search)
+
+"
+," For more information see https://en.wikipedia.org/wiki/Robert_Cecil,_Viscount_Cranborne"
+,"
+
+
+Note that the following testcases are provided to serve as an example, not as the complete list of possible inputs.
+
+Sample Input
+
+
+Sample Output
+
+
+  • You may write a full program or function to receive the input text and output the simplified text.
+  • Input text will consist of the original text, separated from the simplified text with a blank line, and will not exceed 1KB in length.
+  • The only changes to the input text allowed are:
+    • Removal of excess whitespace."
+," The above text would be returned as: 'while the term usually implies a driver of an elegant passenger vehicle especially a limousine, those who operate buses are generally referred to as drivers.' The above text contains all the words present in the original text, but it is now readable, unambiguous and clear, and is a better answer.
+
+Task 3: Identify Named Entities (NER)
+
+Given a document consisting of sentences containing names of persons and/or places, correctly identify each person or place name. For example, given the following text: 'I like Bill Clinton's book.'"
+,"
+
+• weedy seadragons are named for the weed-like projections on their bodies that camouflage them as they move among the seaweed beds where they are usually found.
+
+• weedy seadragons are named for the projections on their bodies that camouflage them among the seaweed beds where they are usually found.
+
+• seadragons are named for the weed-like projections on their bodies that camouflage them among the seaweed beds where they are usually found."
+,"
+
+For example:
+
+Input text: 'bagnator is situated on the abbottabad nathi gali road some kilometres away from abbottabad.'
+
+Output text: 'bagnator is on the road from abbottabad.'
+
+Source code
+
+You can download all the code used in this tutorial here:
+
+Using the code
+
+To use the solution, download and unzip the code for this tutorial. This will create a new folder called Tutorial_SimpleTextEnhancer."
+,"
+• For the chemical reaction, provide only the product names as the response.
+• When there are no chemical reactions in the text, provide the full text as the response.
+• The names of chemicals are expected to be in 'IUPAC nomenclature' (in-case of chemical element, IUPAC name of the corresponding chemical) format, which is case sensitive.
+• The text in the question could be in a mixture of different languages.
+
+## Dataset
+
+• The dataset can be accessed from this GitHub repository.
+• The dataset contains two files:"
+," You can assume that there are no capital letters.
+
+
+\section{Model}
+
+We design our system based on the BERT model \citep{devlin2019bert}, which we modify to output the simplified text instead of the original text.
+
+The structure of the modified model is shown in figure 1. First, the original text is input into the pre-trained BERT encoder to extract the encoded input sequences. The first half of the model is then composed of a bidirectional LSTM, a residual network, and a softmax layer."
+,"
+
+
+For training data, the challenge uses the dataset by Aude et al. It contains a large set of documents, each with a title and a text. In the context of this task, the title will be the prompt and the document will be the context.
+
+Data Preprocessing
+
+
+Title is a short text that contains the prompt, i.e. the context that the model should use to generate the response. The title and the response should not overlap, except for short sequences such as ‘Cape Verde' in the prompt and the corresponding ‘Cape Verde' in the response."
+,"
+
+## How to interpret the above question?
+
+We need to remove some redundant text from the given text and convert it to an understandable text. For example:
+
+Input:
+pepe real name jos macia lrb born february in santos rrb is a brazilian former football player and manager
+
+Output:
+Jos Macia is a Brazilian former football player and manager born in February
+
+## Approach 1:
+
+We can do this using regular expressions. We will use the following steps:
+
+• Remove any words that start with LRB and end with RBR."
+,"
+
+• Q11: Which of the following statements describes the content of the paragraph?
+
+(a)
+
+Pietro di Guido was a painter from Italy during the renaissance period.
+
+(b)
+
+Pietro di Guido was born in Italy. He was an early renaissance painter who had rare and perfect talent.
+
+(c)
+
+Guido di Pietro was an early renaissance painter who had a rare and perfect talent.
+
+(d)"
+," (Points: 5)
+
+Answers: (x)"
+," The original text is provided for information only.
+
+The simplified text will typically be shorter than the original text.
+
+
+The user has to rewrite the paragraph using simpler text. The rewrite has to be shorter than the original paragraph and must retain the original meaning."
+,"
+
+\begin{itemize}
+\item
+  \texttt{simple\ text:} \textcolor{blue}{\textbf{The\ inch\ single\ (often\ called\ a\ 45) \ is\ a\ type\ of\ gramophone\ record\ that\ has\ wider\ groove\ spacing\ compared\ to\ other\ types\ of\ records.}}
+\item"
+,"
+
+You are not allowed to use any sort of dictionaries, glossaries, thesauruses or any other similar aids.
+
+The maximum length of your solution is 100 characters.
+
+Example inputs
+
+Example 1
+
+
+Example 2"
+,"
+
+I have created this dataset from the following link
+
+The link is given for reference, please do not use this dataset as your reference dataset.
+
+Example:
+
+{""question"": ""He fought in the Gallipoli campaign that started on April when his new division landed at Anzac Cove on the 15th in the Dardanelles fighting against Turkish defenders on a narrow beach."", ""id"": ""1"", ""title"": ""Sample Question""}
+
+
+Reference:"
+," For example, given the input text:
+
+""New York City is the largest city in the United States.""
+
+You should return:
+
+""New York City is a large city in the U.S.""
+
+
+The word ""is"" should be retained as a core part of the sentence. In the case where the contraction ""doesn't"" is used, you may either:
+
+  • Contract to ""doesn't"", or
+  • Expand to ""does not""
+
+As long as the expanded version is readable, and follows the rest of the guidelines.
+
+Test Cases
+
+Input Text
+"
+," The simplified text should be between 2 and 100 words in length.
+
+#4. The topic of an essay is whether the internet is making it easier to make friends. You disagree with the idea, write your essay.
+
+#5. Write an essay on the topic 'Is it easy to lose or gain weight' and how to make it difficult?
+
+#6. The essay question is about the advantages and disadvantages of being the head of the family. Write about it.
+
+#7. What is your opinion on the statement 'Technology is changing the way we live'? Do you agree or disagree?"
+,"
+
+\end{task}
+
+\textbf{Description of Outputs:} 
+
+The following output is expected:
+
+\textbf{Example 1:}
+
+\textit{The Scottish Chief Engineer was one of the most recognisable characters in the Star Trek franchise.}
+
+\textbf{Example 2:}
+
+\textit{One of the most recognisable elements in the Star Trek franchise was doohan's characterization of the Scottish Chief Engineer.}
+
+
+\subsection{Subtask 2 - Answer Type Classification}
+
+\begin{task}"
+,"
+
+Note that:
+
+• The text may contain non-alphanumeric characters such as ""'"".
+• The answer must be in a sentence format. For example, ""mickey's house of villains"" is an acceptable answer, while ""mickey's house of villains is"" or ""mickey s house of villains"" is not.
+
+Sample Input 1:
+
+Input: mickey\'s house of villains
+Output: mickey's house of villains is a direct to video film produced by the walt disney company.
+
+Sample Input 2:
+
+"
+,"
+
+\subsubsection{Entity-Based Named Entity Recognition}
+
+Named entity recognition (NER) is a common information extraction task in which the goal is to identify a sequence of tokens in a document that represent named entities. This task can be considered as a sequence labeling problem in which the input is a sequence of tokens and the output is a sequence of labels representing the named entities. In this task, the dataset contains a series of sentences where each sentence contains one or more named entities. The named entities are labeled as either PERSON, LOCATION, ORG, MONEY, or TIME."
+,"
+
+\begin{example}\textit{Example:}
+\texttt{\#simplify
+{\color{RoyalBlue}the} bodies of tsar nicholas ii {\color{RoyalBlue}tsarina} alexandra and three of {\color{RoyalBlue}their} daughters were finally interred at st. peter and paul cathedral in st. petersburg on july eighty years after they were murdered. \textrightarrow{} bodies tsar nicholas ii alexandra three daughters finally interred st. peter paul cathedral st. petersburg eighty years murdered}"
+,"
+
+Hint
+The text contains terms that can be further simplified, and the answer should only include terms that are in the text.
+'councillors were elected by the electorate and county aldermen were chosen by councillors'.
+county council
+county councils
+Suggest an appropriate title for the following text: 'The first edition was published in May 1998 and has been issued annually since. A number of other editions of the book have been produced in other languages and some of the titles were published in multiple languages.'"
+,"
+
+Input: 'in june july it was the site of the colossal and meticulously choreographed arirang gymnastic and artistic performance lrb often referred to elsewhere as mass games rrb.'
+Output: 'arirang gymnastic and artistic performance'
+
+
+## Input:
+
+'in june july it was the site of the colossal and meticulously choreographed arirang gymnastic and artistic performance lrb often referred to elsewhere as mass games rrb.'
+
+
+## Output:
+
+'arirang gymnastic and artistic performance'"
+,"
+
+Question #3
+
+Which of the following is an accurate rewording of the following text: 'in the us, the national weather service issues a windstorm watch whenever the possibility of a windstorm exceeding wind speed threshold is expected in the next 36 hours.'
+
+Question #4
+
+What is the simplest way to say: 'a tropical cyclone is a rotating weather system with thunderstorms that develop over warm oceans.'?
+
+Question #5
+
+Write the following text into simple English. 'a large number of tropical cyclones have winds of less than 75 km per hour."
+,"
+
+To generate text, use the generate() method, supplying it with one or more paragraphs:
+
+>>> from whoosh.analysis import fulltext
+>>> myindex = index.Index(path=""index.wt"")
+>>> mytext = ""it was an instant bestseller spending six weeks on the new york times best seller list.""
+>>> fulltext.generate(mytext)
+'instant bestseller spending six weeks on the new york times best seller list.'
+
+There are some differences in the output text:"

@@ -1,0 +1,735 @@
+response,category,prompt,generation_id
+" If no, explain why not.
+
+A: No, there is not.
+
+A: As there is a series of flights that goes from city H to city E, and then from city E to city D, the answer would be no.
+The flights from City L to City J, City I to City H, and City K to City H do not form a series of flights.
+
+A: Because each of the mentioned flights is not part of a series of flights (there is no next-in-line flight to connect them) the answer would be ""no"".",graph,,redpajama-7b|rationalization_binary-01253|1
+" If no, explain why.
+
+A:
+
+{  
+    yes, City K to City A
+    City A - City L - City K
+    City K - City D
+    City K - City C
+    City K - City G
+    City K - City I
+    City K - City F
+    City K - City B
+    City K - City M
+    City K - City E
+    City K - City H
+    City K - City N
+    City K - City J
+    City K - City E
+    City K - City I",graph,,redpajama-7b|rationalization_binary-01255|1
+" If no, then respond with some other question to identify which flight goes where.
+
+E.g. You are required to answer this question: Is there a series of flights that goes from city D to city I? No. There is a flight from city D to city I.
+
+Answer: Yes, there is a series of flights that goes from city D to city I.
+
+* The solution depends on whether the question is explicitly allowed to be answered with ""no"", or if the statement ""No there is not..."" is not allowed. In this situation, the solution is:",graph,,redpajama-7b|rationalization_binary-01257|1
+" You can start by providing the first one, which will be one-way only, then the second one, which will be one-way only, and so on.
+
+A: First, there is a flight from city D to city I. Next, there is a flight from city K to city L. Next, there is a flight from city I to city N.
+
+A: There is a series of flights that goes from city D to city I:
+
+A: The first flight is from city D to city I.
+
+A: The second flight is from city K to city L.
+
+",graph,,redpajama-7b|rationalization_binary-01263|1
+" If no, provide the series of flights from city J to city F.
+
+A: Yes, you can take the flights from city J to city H:
+J -> H  ---> N -> I -> H
+
+B: Yes, you can take the flights from city J to city F:
+J -> F  ---> N -> I -> F
+
+C: No, you can't take the flights from city J to city F:
+J -> F  ---> N -> H
+
+D: Yes, you can take the flights from city D to city F:",graph,,redpajama-7b|rationalization_binary-01270|1
+"
+
+A: Yes, there is a series of flights that goes from city D to city H:
+
+- Flight from city D to city L
+- Flight from city L to city H
+
+A: No, there is no series of flights that goes from city D to city H. 
+
+A: No, there is no series of flights that goes from city D to city H. 
+
+A: No, there is no series of flights that goes from city D to city H. 
+
+A: No, there is no series of flights that goes from city D to city H.",graph,,redpajama-7b|rationalization_binary-01274|1
+"
+
+A: The correct answer is yes, but as follows:
+
+There is a flight from city D to city M.
+There is a flight from city M to city H.
+There is a flight from city M to city A.
+There is a flight from city D to city H.
+There is a flight from city H to city B.
+There is a flight from city H to city E.
+There is a flight from city B to city F.
+There is a flight from city B to city K.
+There is a flight from city B to city I.",graph,,redpajama-7b|rationalization_binary-01277|1
+" If no, then provide the answer to the original question.
+
+A: There is a series of flights that goes from city J to city F.
+
+A: There is a series of flights that goes from city J to city F.
+
+A: There is a series of flights that goes from city J to city F.
+
+A: There is a series of flights that goes from city J to city F.
+
+A: There is a series of flights that goes from city J to city F.
+
+A: There is a series of flights that goes from city J to city F.
+
+",graph,,redpajama-7b|rationalization_binary-01279|1
+"
+
+
+A: No:
+The problem does not mention that the flights are from the same airport. Even if it does, there are multiple airports that could be in B, so the answer would be: No.
+
+A: No, there is no series of flights. 
+The problem is trying to find a route that goes from B to I, which means that there can be multiple different routes, each one starting in a different city and ending in a different city.
+A: A series of flights will not always be implied.",graph,,redpajama-7b|rationalization_binary-01280|1
+" 
+Solution:
+If you answered yes, that there is a series of flights from city M to city B, please click here.
+The flight from city H to city C includes city C, city F, city J, city K, city I, city H, city G, city M, and city B.
+The flight from city H to city J includes city J, city K, city I, city H, city G, city M, city N, city F, city E, city C, city A, and city H.",graph,,redpajama-7b|rationalization_binary-01290|1
+"  If no, explain why not.
+
+**Hint:**
+>
+
+
+>A>|C|
+>B|D|
+>E|F|
+>G|H|
+>H|I|
+>I|J|
+
+
+**Code:**
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import Link from 'grommet/components/Link';
+import { graphql, useContext } from 'react-relay';
+import { statesByLeg } from '../../relay/graphql';",graph,,redpajama-7b|rationalization_binary-01294|1
+" If no, explain why not.
+
+A: Yes, because of this:
+\begin{center}
+\begin{tabular}{ccccccc}
+\hline
+City &  \shortstack{City\\Distance}  &  \shortstack{Train\\From\\City\\Distance}  &  \shortstack{Train\\Distance}  &  \shortstack{Train\\Destination\\City}  &  \shortstack{Train\\From\\Destination\\City}  &  \shortstack{Train\\Time\\Duration}  \\",graph,,redpajama-7b|rationalization_binary-01295|1
+" If no, then explain why there is no such series of flights.
+
+Is there a series of flights from city D to city G?
+
+No. First, respond with yes or no. If no, then explain why.
+
+No, there is no series of flights from city D to city G.
+The following flights are not included:
+
+---
+
+The flight from city A to city B: there is no series of flights from city A to city B
+
+The flight from city D to city E: there is no series of flights from city D to city E",graph,,redpajama-7b|rationalization_binary-01311|1
+" If no, then describe the series of flights that should be taken. Note: the solution cannot contain only one flight.
+
+Solution:
+A series of flights from City K to City L:
+K to J  
+J to M
+M to G
+G to A
+
+Since there is a series of flights that goes from City K to City L, the answer is yes. And the answer to the question is ""A series of flights from City K to City L: K to J, J to M, M to G, G to A.""
+
+Example of a problem with an incorrect solution:",graph,,redpajama-7b|rationalization_binary-01313|1
+" If no, then do the same for N to M.
+The flight from city N to city M has:
+A flight from city N to city G
+A flight from city G to city D
+A flight from city G to city C
+A flight from city C to city N
+
+Solution:
+Yes, there is a series of flights that goes from city L to city M.
+First, respond with yes or no. If yes, then provide the series of flights. If no, then do the same for N to M.
+From city L to city M there are flights from:",graph,,redpajama-7b|rationalization_binary-01314|1
+" If no, explain why the answer is no.  
+
+A: No.
+
+A:
+
+
+*There is a flight from city F to city E
+*There is a flight from city F to city H
+*There is a flight from city E to city J
+*There is a flight from city H to city I
+*There is a flight from city I to city B
+*There is a flight from city B to city L
+*There is a flight from city H to city J
+
+*There is a flight from city J to city D",graph,,redpajama-7b|rationalization_binary-01317|1
+" If no, then respond with no. 
+
+A: Yes, there is a series of flights:
+There is a flight from city G to city B
+There is a flight from city H to city D
+There is a flight from city E to city D
+
+A: Yes, there is a series of flights:
+There is a flight from city G to city B
+There is a flight from city H to city D
+There is a flight from city E to city D
+
+A: Yes, there is a series of flights:
+There is a flight from city G to city B",graph,,redpajama-7b|rationalization_binary-01319|1
+"
+
+If not, then show the series of flights for each of the four options that the city N - city F flights does NOT contain.
+First, provide the set of all non-series of flights from the above table that do not fit with each other in a contiguous, numbered sequence (the sequence is determined by the first number on the list, with number 2 being next after number 1, and number 3 being after number 2).",graph,,redpajama-7b|rationalization_binary-01321|1
+"
+
+A: There is a series of flights from city K to city L.
+
+B: No, there is no series of flights.
+
+C: Yes, there is a series of flights from city K to city L.
+
+Question: Are there two flights that connect cities N and M?
+
+A: Yes, there are two flights from city N to city M.
+
+B: No, there are no flights from city N to city M.
+
+C: Yes, there are two flights from city N to city M.",graph,,redpajama-7b|rationalization_binary-01323|1
+" If no, what is the next step you need to take to obtain the series of flights?
+
+A. Find the departure airports and their dates.
+B. Find the arrival airports and their dates.
+C. Calculate the distances from one airport to the next.
+D. Calculate the average time taken for each flight.
+
+Key:
+H
+8.43-hour flight
+C
+1.25-hour flight
+I
+2-hour flight
+G
+2.5-hour flight
+K
+1.5-hour flight
+J
+6-hour flight
+
+Step 1 is correct.",graph,,redpajama-7b|rationalization_binary-01329|1
+"
+
+There is a series of flights that goes from city M to city B, but it is not a series of flights that goes from city M to city B, and it is not a series of flights that goes from city B to city M.
+
+### Question:
+
+Questions can only be answered with Yes or No.
+
+Question: There is a series of flights that goes from city X to city Y.",graph,,redpajama-7b|rationalization_binary-01333|1
+"
+
+A: Yes, there is. There is a series of flights from city E to city D:
+
+There is a flight from city E to city F
+
+There is a flight from city F to city G
+
+There is a flight from city G to city I
+
+There is a flight from city G to city H
+
+There is a flight from city J to city K
+
+There is a flight from city J to city L
+
+There is a flight from city L to city N
+
+There is a flight from city L to city B",graph,,redpajama-7b|rationalization_binary-01335|1
+"
+Yes: There is a series of flights that goes from city H to city B.
+First, there is a flight from city H to city J.
+Then, there is a flight from city J to city C.
+Finally, there is a flight from city C to city B.
+
+Question: What is the total number of flights that must travel from city H to city B? First, respond with a whole number from 1 to infinity. If you say 1, then your answer is incorrect. If you say 2, then your answer is correct.",graph,,redpajama-7b|rationalization_binary-01344|1
+" If no, then repeat the first three steps for the following flights:
+
+
+A: Yes, in the following order:
+
+
+a) from city A to city F
+b) from city F to city B
+c) from city B to city G
+d) from city G to city E
+e) from city E to city J
+f) from city J to city H
+g) from city H to city K
+
+
+Note: The answer in this question is ""YES"", even though there's a question mark, because there is only one possible correct answer.",graph,,redpajama-7b|rationalization_binary-01345|1
+"
+
+A: Yes:
+
+There is a flight from city N to city D
+There is a flight from city K to city D
+
+B: No:
+
+There is a flight from city E to city D
+There is a flight from city K to city D
+
+C: Maybe:
+
+There is a flight from city E to city D
+There is a flight from city A to city M
+There is a flight from city E to city M
+There is a flight from city K to city M
+There is a flight from city A to city G",graph,,redpajama-7b|rationalization_binary-01351|1
+" If no, then provide the conclusion.
+A) Yes, but the flights must first go through city M, then city N, then city D, then city K, then city C, then city N, then city I.
+Q: I'm not completely sure if these are correct, but they sound right. Thanks in advance!
+Interstate 40 leaves its starting point in ________.
+A) Tupelo
+B) Chattanooga
+C) St. Louis
+D) Indianapolis
+
+If you travel east on Interstate 40, what is the next city you come to?
+A) Memphis
+",graph,,redpajama-7b|rationalization_binary-01360|1
+" If no, provide an explanation of why there are no flights.
+
+* * *
+
+> The way you can represent a series of flights from city B to city G is to say the first flight is a flight from city B to city H and then the second flight is a flight from city D to city J and then the third flight is a flight from city A to city G and the final flight is a flight from city H to city L. There is no other flight that is a series from city B to city G.
+
+* * *",graph,,redpajama-7b|rationalization_binary-01367|1
+" If no, then provide any other series of flights that goes from city I to city H.
+
+A: Yes. The first flight is from city D to city I. The second flight is from city I to city G. The third flight is from city I to city H. There is a connection between each flight in this series. The fourth flight is from city G to city H. There is a connection between the second and fourth flights in this series. Therefore, there is a series of flights that goes from city I to city H.",graph,,redpajama-7b|rationalization_binary-01368|1
+" If no, then describe the series of flights.
+
+Answer:
+Yes, the series of flights is:
+There is a flight from city C to city E
+There is a flight from city E to city D
+There is a flight from city D to city B
+
+Question: Is there a series of flights that goes from city F to city A? First, respond with yes or no. If yes, then provide the series of flights. If no, then describe the series of flights.
+
+Answer:
+Yes, the series of flights is:
+There is a flight from city F to city I
+",graph,,redpajama-7b|rationalization_binary-01371|1
+" Second, respond with yes or no. If yes, then describe the series of flights.
+
+Solution:
+Yes:
+There is a flight from city A to city G.
+There is a flight from city G to city K.
+There is a flight from city H to city N.
+There is a flight from city D to city H.
+There is a flight from city B to city J.
+There is a flight from city A to city B.
+Yes:
+There is a flight from city A to city G.
+There is a flight from city G to city K.",graph,,redpajama-7b|rationalization_binary-01372|1
+" If no, then try the second method of logical reasoning.
+
+Method 2: Statements and Information
+This method uses the information given in the problem to attempt to arrive at a conclusion by attempting to test each statement against each of the givens.
+
+There is a flight from city H to city M
+This is an implied statement because it is provided by the problem and not by the givens of the problem. Because of this, the givens of the problem may be used to support or disprove this statement.
+There is a flight from city N to city M",graph,,redpajama-7b|rationalization_binary-01379|1
+"
+
+If no, respond with no.
+
+
+A: there is:
+
+A> Yes, there is a series of flights from G to F. First, I will say that it is a one-way journey. So, you should try to find the flight from G to F, that means we look at G first. I also did a flight from G to L, and then a flight from L to C, then I did a flight from C to E and from E to H. So, it is a route between city G and city F, which is called route 1.",graph,,redpajama-7b|rationalization_binary-01384|1
+" For example, if the correct answer is yes, then you would say: ""Yes, flight K from city C to city E"". If no, then say: ""No, there is no series of flights from city C to city E"". Finally, if you are not sure, then say: ""I'm not sure about this. Maybe... [skipping the word I]... the... [skipping the word is]... no... [skipping the word all]... the... [skipping the word there]... I am not sure... [skipping the word about]...",graph,,redpajama-7b|rationalization_binary-01385|1
+"
+
+A: There is a series of flights that goes from city N to city L.
+
+A: There is a series of flights that goes from city N to city L, and the flights from city J to city C.
+
+A: There is a series of flights that goes from city N to city L, and the flights from city J to city C, and the flights from city H to city L, and the flights from city K to city H, and the flights from city H to city M, and the flights from city B to city A.",graph,,redpajama-7b|rationalization_binary-01387|1
+"
+
+A: There is a series of flights from city E to city F, and those flights are the following:
+
+There is a flight from city E to city H
+There is a flight from city H to city I
+There is a flight from city H to city J
+There is a flight from city I to city A
+There is a flight from city J to city K
+There is a flight from city K to city D
+There is a flight from city N to city K
+There is a flight from city N to city I
+There is a flight from city C to city J",graph,,redpajama-7b|rationalization_binary-01397|1
+"
+Note: If you check ""No"", provide the list of cities where there are flights, as well as the fares of each flight. (you can find the information for each of the cities above)
+
+A: The first response is yes, so select F. The second response is yes, so select H. Since there are 2 out of 3 successful flights, so answer to question is yes, which means no.
+Note: I don't have enough information to help with the rest of the question. So I will ignore it.
+
+A:",graph,,redpajama-7b|rationalization_binary-01401|1
+" If no, then respond with no and write two numbers and why not: 1 and 2.
+
+A: There is no series of flights from city J to city F. There are six flights between cities J and F, but no series of flights from J to F.
+There are four flights from city J to city L, two flights from city J to city E, two flights from city L to city E, and two flights from city E to city D. There are two flights from city E to city D. The first is with code E-D and it goes from J to D.",graph,,redpajama-7b|rationalization_binary-01404|1
+" If no, then respond with the first possible series of flights to answer this question.
+A: There is a flight from city I to city J
+*Yes, because there are flights
+A: There is a series of flights that goes from city I to city J. The following is the first possible series of flights:
+*First, respond with yes or no. If yes, then provide the series of flights. If no, then respond with the first possible series of flights to answer this question.
+The following are the possible series of flights:
+First, respond with yes or no.",graph,,redpajama-7b|rationalization_binary-01406|1
+" For example: ""yes"" would be ""There is a series of flights that goes from city C to city L; the first flight is flight D from city C to city K; the second flight is flight K to city A; the third flight is flight I from city A to city M; the fourth flight is flight M to city F; the fifth flight is flight F to city E"".
+
+Question: Is there a series of flights that goes from city M to city I? First, respond with yes or no. If yes, then provide the series of flights.",graph,,redpajama-7b|rationalization_binary-01408|1
+" If no, then explain why not.
+
+A: YES
+
+Practice:
+
+
+## Try it yourself
+
+**Try a practice problem.** The next question will ask you to explain why certain data is or isn't relevant.
+
+
+<div style=""width:30%; text-align:center"">
+  <figure style=""width:25%;display:inline"">",graph,,redpajama-7b|rationalization_binary-01414|1
+"
+Question: Is there a series of flights that goes from city G to city M? If yes, then provide the series of flights. If no, then answer yes to the following two questions.
+Question: Is there a series of flights that goes from city G to city M, then to city L? If yes, then provide the series of flights. If no, then answer yes to the following two questions.
+Question: Is there a series of flights that goes from city G to city K, then to city C? If yes, then provide the series of flights.",graph,,redpajama-7b|rationalization_binary-01416|1
+"
+
+For questions of this form, there are two different approaches. The first way is to use the specified information:
+
+1. If it's necessary to find one flight in the series (a situation which should be handled in all of the previous questions), then you can use the information to the previous questions. For example, if there is a flight from city C to city I and there is a flight from city L to city J, then there is a flight from city C to city I followed by a flight from city L to city J.
+
+2. The other way is to use the defined relations:
+
+",graph,,redpajama-7b|rationalization_binary-01418|1
+"
+
+Here is a quick way to do this:
+We know there are two flights available to each city (in this case: there are two flights available from each city to each city). That means there are a total of 2*4 = 8 possible flights that can be formed.
+We know we need four of these series to be completed. We have three.
+
+The first two possible series are (2*,2,0) and (2,2,0)
+
+Which means they form two different series (as you can see).",graph,,redpajama-7b|rationalization_binary-01430|1
+"
+
+So we can conclude that in the airport, a person with a question mark badge can find one-way flights from one airport to another. (If they needed to, they could move from a to b and b to c and c to d etc and figure out what all the inbound flights are to figure out the correct route back to their own airport. The final series will never be exactly one-way, but will be on the shortest route to their final destination.)
+
+A: Yes, the series is from E -> F -> G -> H -> I -> J.",graph,,redpajama-7b|rationalization_binary-01431|1
+" If no, then provide the city and flights that make up that series. You will also be given the cities, and a partial series of flights from one of the cities. Answer all but the missing city and flights. You may only use one previous answer to form a new one.
+
+Note: it is possible to continue one series of flights, but there must be a separation point in which to continue the series.
+
+(A) No, and you will be given the last city in the series: C, F, G, H",graph,,redpajama-7b|rationalization_binary-01432|1
+" If no, then what is the correct answer?
+
+
+A: 
+There is a flight from city N to city M: 1, 2, 3, 4, 5, 6, 7, 8, 9
+There is no series of flights: 8, 9, 6, 7, 5, 4, 3, 2, 1
+
+A:",graph,,redpajama-7b|rationalization_binary-01434|1
+" 
+
+A: Yes
+
+A: Yes
+
+A: No
+
+A: No
+
+A: No
+
+A: No
+
+A: No
+
+A: No
+
+A: No
+
+A: No
+
+A: No
+
+A: No
+
+A: No
+
+A: No
+
+A: No
+
+A: No
+
+A: No
+
+A: No
+
+A: No
+
+A: No
+
+A: No
+
+A: No
+
+A: No
+
+A: No
+
+A: No",graph,,redpajama-7b|rationalization_binary-01435|1
+" Otherwise, provide an explanation why the question cannot be answered.
+
+#### Answer
+
+### yes
+
+A series of flights exists. For example:
+
+*
+
+*Flight N -> Flight I -> Flight G
+
+*Flight I -> Flight H -> Flight K
+
+*Flight F -> Flight A -> Flight E
+
+### no
+
+No series of flights exists. For example:
+
+*
+
+*Flight I -> Flight E -> Flight K
+
+*Flight G -> Flight N -> Flight D
+
+*Flight A -> Flight D -> Flight H",graph,,redpajama-7b|rationalization_binary-01437|1
+"
+Question: Is there a series of flights that goes from city H to city G? First, respond with yes or no. If yes, then provide the series of flights.
+Question: Is there a series of flights that goes from city H to city D? First, respond with yes or no. If yes, then provide the series of flights.
+Question: Is there a series of flights that goes from city M to city H? First, respond with yes or no. If yes, then provide the series of flights.
+Question: Is there a series of flights that goes from city I to city D?",graph,,redpajama-7b|rationalization_binary-01440|1
+"
+
+Problem
+(1) 'A' has to go from city F to city B.
+(2) 'B' has to go from city F to city K.
+(3) 'F' has to go from city K to city H.
+(4) 'H' has to go from city K to city J.
+(5) 'J' has to go from city K to city L.
+(6) 'L' has to go from city K to city M.
+(7) 'M' has to go from city K to city N.",graph,,redpajama-7b|rationalization_binary-01441|1
+"
+Answer: Yes. First, there is a flight from city A to city G. Then there is a flight from city G to city E. Then there is a flight from city E to city N. Then there is a flight from city N to city B. Then there is a flight from city B to city H. Then there is a flight from city H to city F.
+
+A: Yes, starting from G, E, N, B, H, F:
+G -> E
+E -> N
+N -> B
+B -> H
+H -> F
+F -> G",graph,,redpajama-7b|rationalization_binary-01446|1
+" 
+
+A: There is no series of flights that goes from city D to city I.
+
+A: No, there is no series of flights that goes from city D to city I.
+
+A: Yes, there is a series of flights that goes from city D to city I.
+
+A: No, there is no series of flights that goes from city D to city I.
+
+A: No, there is no series of flights that goes from city D to city I.
+
+A: Yes, there is a series of flights that goes from city D to city I.",graph,,redpajama-7b|rationalization_binary-01449|1
+" If no, respond with no series of flights, but provide the next series of flights that meets your criteria. (If there is no such series, respond with ""no such series of flights."")
+
+You may refer to the next flight in this series in your answer, or you may refer to the previous one in the series, and so forth. Also, the answer may consist of more than one sentence.
+
+Note: Do not respond by ""I don't know"" if there is a series of flights.",graph,,redpajama-7b|rationalization_binary-01450|1
+"
+
+A: The series is given below:
+There is a flight from city E to city K
+There is a flight from city I to city H
+There is a flight from city C to city B
+There is a flight from city A to city N
+There is a flight from city N to city M
+There is a flight from city I to city N
+There is a flight from city B to city H
+There is a flight from city A to city L
+There is a flight from city C to city E
+There is a flight from city N to city G",graph,,redpajama-7b|rationalization_binary-01455|1
+"
+
+A: Yes.
+A: No.
+A: The only flight available between these two cities is from E to F.
+A: This is a case of whether or not there is a series of flights. As you can see, there is no flight series.
+
+See also
+Transitive closure
+
+References
+
+Counterfactual conditional logic
+Logic programmingDonald Matthews (born 12 September 1949) is a Scottish former football player and manager.",graph,,redpajama-7b|rationalization_binary-01457|1
+" If no, say what is wrong with this problem and how we can correct it.
+
+
+A: There is no series of flights that goes from city D to city M.
+
+You do have an answer but it is not the correct answer. You've classified the flights in the incorrect order.
+By sorting the flights in the desired order (north to south), you see:
+There is a flight from city D to city I
+There is a flight from city I to city L
+There is a flight from city D to city L
+There is a flight from city I to city A",graph,,redpajama-7b|rationalization_binary-01463|1
+"
+
+Letters on one line:
+
+2 2 4 5 4 5 5 1 1 4
+
+2 6 3 2 1 3
+
+4 4 3 2
+
+4 4 1 2 1
+
+1 4 4 3 3 2
+
+Question: Is there a series of flights that goes from city N to city M? First, respond with yes or no. If yes, then provide the series of flights.
+
+Letters on one line:
+
+1 2 1 1 2 1 1 2 2
+
+4 2 2 4 2 1 1 2 1
+
+4 1 2 2 1 2",graph,,redpajama-7b|rationalization_binary-01468|1
+"
+A: Yes: 1F-N-L-A-C-N-K-F-N-L-E-A-C-F-G-L-H-A-N-C-I-M-I-N-C-L-L-H-F-H-J-K-L-K-F-G-J-N-M
+
+# Bézier curve gradient
+Question: A Bézier curve has a gradient of 1 at one endpoint, and a gradient of 0.5 at the other.",graph,,redpajama-7b|rationalization_binary-01470|1
+" If no, then provide an alternate way of going from city C to city A.
+
+The following are valid series of flights:
+
+## Answer (with explanation)
+
+<pre>
+   Yes:
+   {{ 1, 2, 3, 4 }}
+
+   No:
+   {{ 0, 3, 1 }}
+</pre>
+
+{{ 1, 2, 3, 4 }} is a valid series of flights as we can travel from City C to City A in the following sequence:
+
+{{ 1, 2, 3, 4 }}",graph,,redpajama-7b|rationalization_binary-01485|1
+" If no, then provide an explanation as to why there is not a series of flights from city D to city G.
+
+
+A: Consider:
+First, respond with yes or no. If yes, then provide the series of flights. If no, then provide an explanation as to why there is not a series of flights from city D to city G.
+
+A: Consider:
+First, respond with yes or no. If yes, then provide the series of flights. If no, then provide an explanation as to why there is not a series of flights from city D to city G.",graph,,redpajama-7b|rationalization_binary-01486|1
+" For instance,
+
+A flight from city L to city K is needed;
+
+Next, say whether or not any of the flights above are indirect flights. If there is a direct flight, say so, then provide the name of the airport at which the flight departs. If there is not a direct flight, say so, then provide the name of the city at which the flight departs and the names of the two airports at which it makes stops.
+
+A direct flight is needed from city A to city C;
+
+Next, say whether or not there is a flight from city B to city D.",graph,,redpajama-7b|rationalization_binary-01490|1
+"
+
+A: Yes, there is a series of flights that goes from city K to city F. They are:
+K-F
+
+Question: Explain why the answer to this question must be yes.
+
+A: Because there are a series of flights that goes from city K to city F, there is a series of flights that goes from city J to city F. Therefore, the answer to the first question must be yes.
+
+Question: Provide a series of flights that goes from city J to city F.",graph,,redpajama-7b|rationalization_binary-01494|1
+" Then respond yes or no with whether there is a series of flights that goes from city E to city K. If yes, then respond with the series of flights. If no, respond with whether there is a series of flights that goes from city E to city A.
+
+A: 
+""There is a series of flights that goes from city E to city L"" is true.
+
+""There is a series of flights that goes from city E to city K"" is true.
+
+""There is a series of flights that goes from city E to city A"" is false.
+
+A:",graph,,redpajama-7b|rationalization_binary-01497|1
+" If no, then provide an explanation of how to prove there are no flights.
+
+A: Yes, there is a series of flights that goes from city E to city C:
+
+F to C
+F to H
+F to L
+F to H
+H to C
+
+Q: In how many different ways can you make three sets of 4 distinct positive integers from a set of 20 positive integers with only two of the integers divisible by the sum of the other two integers?
+
+A: We assume $20$ is not a power of 2 (i.e.",graph,,redpajama-7b|rationalization_binary-01498|1

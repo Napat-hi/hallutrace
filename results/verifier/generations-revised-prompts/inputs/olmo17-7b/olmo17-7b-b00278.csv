@@ -1,0 +1,482 @@
+response,list,list_condition,count,generation_id
+"
+
+## 5.5 Exercises on 9.7 Code execution
+
+* Input-output is a major part of programming. In the first few exercises we will learn more about how input and output works. Input-output often involves “string” values and we will see how these are used.
+
+• Study the code in Problem 1 (and solve it, if you haven’t yet). How is string value used?
+
+• A basic piece of input-output involves reading a value from user and printing the value that user has input.",,['march'],1,olmo17-7b|rationalization_numerical-00527|5
+"
+
+x=int(input())
+i=0
+for i in range(x):
+temp=0
+for j in range(i):
+temp+=int(input())
+if temp%5==0:
+print(temp/5)
+i+=1
+
+
+Try it online!
+
+The number of months with one letter followed by an ""s""
+
+For every natural number n, print all elements of set {mn.0}, where m is the smallest positive integer such that mn mod 5 is divisible by 5.
+
+• Could you elaborate on your program?",,[],0,olmo17-7b|rationalization_numerical-00530|5
+"
+
+30th and 31st day of January is Leap year. 
+Output:
+First -1, and then list every month between 1 and leap with day equal 30 or 31.",,['april'],1,olmo17-7b|rationalization_numerical-00531|5
+"
+
+With var last_season_month = (1..12 | Sum) (4) i = M (Var), wert Jahresmonat i ist letzter Monat der Sezon von Saison wert i
+Answer:
+0..1 { var M = (1..12 | Sum) (4) i = M (Var) } ? wert Jahresmonat i ist letzter Monat der Sezon von Saison wert i",,[],0,olmo17-7b|rationalization_numerical-00536|5
+" So we do. $months.endsWith(str => str.length) a. First of all, every month ends with the letter ""s"". \s+|(\S+? (January|February|March|April|May|June|July|August|September|October|November|December)) +?|(\s+(December|March|April|May|June|July|August|September|October|November|January))? \s+|$ (a number containing ""y"" | the last character) ?$
+
+b. Find out where the month end, and delete it",,[],0,olmo17-7b|rationalization_numerical-00538|5
+"
+Outputs: 12
+Code:
+library(purrr)
+lapply(seq(1,12,1), function(x) {
+  sum(mdy(""12/31/2020"", ""1/31/""+sprintf(""%02d"",x))==""1/31/""+sprintf(""%02d"",x))
+})
+
+* by data.table
+library(data.table)
+lapply(seq(1,12,1), function(x) {",,[],0,olmo17-7b|rationalization_numerical-00540|5
+"
+Output: 
+How many months of the year ends with letter v. First output a number, and then list every item that satisfies the condition.
+Output:
+Print the number of months (excluding the given month) that ends with letter ""v"", followed by listing every item that satisfies the condition.
+Implementation: I created a list consisting of string version of the months, and did the following:
+
+
+*
+
+*Used a for loop with the month variable (called input) to compare against the list string version and save the index in a variable, called i",,[],0,olmo17-7b|rationalization_numerical-00541|5
+" Let us look at a few examples:
+
+nth() to get the nth month
+
+>>> from dateutil import rrule
+>>> month_list = rrule.rrule(rrule.MONTHLY, dtstart=datetime(2012, 1, 1), until=datetime(2013, 1, 1))
+>>> month_list",,[],0,olmo17-7b|rationalization_numerical-00545|5
+"
+First the computer says 'Yes'.",,[],0,olmo17-7b|rationalization_numerical-00548|5
+"
+One example: 
+i want to use only small letters in words
+
+After that, don't input anything else like -lft (or anything like that)
+The answer should be
+2
+
+
+Since the first element that contains letter e is i in ire , The second element that contains letter e is c in cci .
+
+The output of second part of the program is 2.
+Example Output: A
+
+Example Input: i want to use only small letters in words
+
+After that, don't input anything else like -lft (or anything like that)",,"['red', 'orange', 'yellow', 'green', 'blue', 'violet']",6,olmo17-7b|rationalization_numerical-00550|5
+"
+
+Example Input: [""a"", ""f"", ""f"", ""g"", ""g"", ""z"", ""t"", ""e"", ""z"", ""g""]
+Example Output: 1, 2, 3, 4, 5, 6, 7, 9, 10",,[],0,olmo17-7b|rationalization_numerical-00553|5
+" Output:
+i, E, P, E, O, O, A, A, E, R, R, D, N, O, U
+i
+8. Let's find all non-negative integers in a list of lists. In the last two examples, how many elements satisfied the conditions.
+J-std (or J-student), for example, is a list containing students of a J-std grade.
+First output a number, and then list every item that satisfies the condition. Output:
+0
+0
+1
+2
+i
+3.",,"['indigo', 'violet']",2,olmo17-7b|rationalization_numerical-00554|5
+"
+
+Now, solve this: How many letters are in 'mt' if they are on a single row?
+Solution:
+2",,[],0,olmo17-7b|rationalization_numerical-00555|5
+"
+Now that I got the idea to use list comprehension, how would I implement it?
+
+A: What do you mean ""how would I implement it""? You know exactly what you want to do.
+colours = ['red', 'yellow', 'green', 'blue', 'purple']
+if letter == 'k':
+    for colour in colours:
+        if colour.startswith('k'):
+            print(colour)
+
+If you're trying to practice list comprehensions, then that's fine, but this is a simple enough question that there's no reason to.",,[],0,olmo17-7b|rationalization_numerical-00556|5
+"
+
+*Rainbow
+
+## Example
+
+- Rainbow 1 1 R G B
+=> G
+
+- Rainbow 1 5 A Z X Y
+=> A B C
+
+- Rainbow 7 7 A G B X R
+=> A G B
+
+- Rainbow 8 A G B X Y Z W
+=> A B C
+
+## Input/Output
+
+- **[execution time limit] 5 seconds (js)**
+
+- **[input] array.integer rainbow**
+
+A list of integers. The size of the list is from 1 to 100,000.",,"['orange', 'green', 'indigo']",3,olmo17-7b|rationalization_numerical-00559|5
+"
+q. ## or q. list
+q.",,[],0,olmo17-7b|rationalization_numerical-00562|5
+"
+Problem:How many dollars is four thousand dollars less than the maximum number of dollars?
+Solution:
+Answer is '$4'",,['blue'],1,olmo17-7b|rationalization_numerical-00566|5
+"
+Example Input: All of the vehicles.
+Example Output:
+Sort cars by model number. Then remove all of the ones that don't have a v in their model number.
+Example Output:
+Put total of all scores.
+Example Input: Say hello to your family. Then say goodnight to your family.
+Example Output:
+Select second item of every pair of items.",,['violet'],1,olmo17-7b|rationalization_numerical-00567|5
+" - [Instructor] So here's a rainbow. And it shows all the different colors, all the wavelengths of light. And they start with violet. And they're quite short. And then they just keep going from violet up to red. And I wonder how many different colors we have in the rainbow. So in the rainbow, I can see three colors here. We have red, yellow, and blue. And then I see another one right here. This one right here, violet. So there's four. If we count all the colors in the rainbow, there's five.",,[],0,olmo17-7b|rationalization_numerical-00574|5
+"
+[2, 4, 8, 11, 13, 15, 16, 21, 22, 23, 24]
+
+In the game of Snakes and Ladders, if you land on the 3rd spot of the first ladder, where do you end up?",,[],0,olmo17-7b|rationalization_numerical-00576|5
+"
+Color is a value and the color values are defined in the code. The comparison is done using the colors.match().",,[],0,olmo17-7b|rationalization_numerical-00579|5
+"
+[RED, YELLOW, ORANGE, BLUE, VIOLET]
+A:
+6",,['indigo'],1,olmo17-7b|rationalization_numerical-00580|5
+"
+## BENCHMARK
+# | JPG | UPLOADED
+-- | -- | --
+1 | Black Swan| 85.31%
+2 | Neap Tides| 76.32%
+3 | Leffler Sea Grass| 74.57%
+4 | Incoming Flood Tide| 66.79%
+5 | Incoming Tide| 55.94%
+6 | Over the Spoiled Ground| 46.62%
+7 | Over the Spoiled Ground| 45.47%
+8 | Snows of Niagara| 43.96%",,[],0,olmo17-7b|rationalization_numerical-00581|5
+"
+
+
+i just don't know how i can use ""for"" statement for this?
+
+A: Let's go by steps:
+
+*
+
+*List colors of the rainbow that start with ""k"":
+red, violet, cherry
+
+
+*Convert a string to number in python can be done like this:
+int(""k"", base=26)
+returns 2.
+
+
+*Take the length of rainbow:
+26
+In order to print the result you could use a for loop:
+for i in range(len(rainbow)):",,[],0,olmo17-7b|rationalization_numerical-00582|5
+" See the pen html-beginners-colors-and-letters-q.html for an example of the desired output.
+So that means I should have 
+    4
+    RED
+    YELLOW
+    GREEN
+    BLUE
+
+But my result is 
+    0
+    red
+    green
+    blue
+    yellow
+
+the 0 value comes from 
+length = selected_value.length;
+
+How can I get the desired output? 
+Jsfiddle: https://jsfiddle.net/kewp7yb2/",,[],0,olmo17-7b|rationalization_numerical-00588|5
+"
+
+[""d"", ""r"", ""n""]
+Output:
+[D, R, N]",,[],0,olmo17-7b|rationalization_numerical-00592|5
+" (Hint: Use as.numeric.)
+
+# Challenge
+
+(Don't worry about the version number.) Create an R function (called uniq_rainbow) that takes a single vector of character items, and returns a vector of the same length as the input vector that is a unique copy of the input vector, with the repeated values removed. So the vector
+
+c(1,1,2,2,3,3,3,4)
+
+
+would have the output vector
+
+c(1,2,3,4)
+
+
+A possible solution is",,['violet'],1,olmo17-7b|rationalization_numerical-00593|5
+"
+
+Example Input: ""The sum of the ages of 8 and 7th century is 600, whose highest of age is from then to present times and his age is twice than his next highest number.""
+
+Example Output: [19, 78, 39, 88, 28, 37, 52, 64, 58, 81, 70, 72, 53, 53, 84, 75, 91]
+
+Example Input: output from the previous group: 256
+
+Example Output: [86, 98, 100, 116, 120, 132, 184]
+
+Example Input: output from the previous group: 4",,[],0,olmo17-7b|rationalization_numerical-00600|5
+" Put your output into the [] for each item.
+Input
+Take as input number and a string.
+Output
+Print each number from 1 to the input number that has the longest common substring with the input string.
+Sample Input/Output
+Number:4 Input string: horse
+Output: 4
+2
+1
+
+# DNA Sequencing in C
+
+Bioinformatics is the study of how genes interact and work. DNA sequencing is a process that allows us to determine the exact order of nucleotides (A,T,C,G) in a genome.",,"['orange', 'blue']",2,olmo17-7b|rationalization_numerical-00602|5
+" Please enter the string: ""rainbow"" The number of ""rainbow"" that ends with ""h"" is: 5 ""rainbow"", ""a"", ""rainbow"", ""n"", ""rainbow"", ""h"" ""rainbow"", ""i"", ""rainbow"", ""e"", ""rainbow"", ""y"" ""rainbow"", ""a"", ""n"", ""h"", ""rainbow"", ""h""
+
+1. Use Range function to get the alphabets in the text
+2. Use List.Characters to get the substring at the specific positions.",,[],0,olmo17-7b|rationalization_numerical-00605|5
+"
+19 colors in the rainbow ends with letter i",,[],0,olmo17-7b|rationalization_numerical-00606|5
+" I do not know how to make it finish after all numbers are outputted. 
+rainbow = [""red"", ""orange"", ""yellow"", ""green"", ""blue"", ""indigo"", ""violet""]
+
+length = rainbow.length
+
+result = length.times do
+  item = rainbow[rand(length)]
+  puts item
+end
+
+Now, how can I add to this to list every item that satisfies the condition? The condition is: The rainbow has only 7 colors from the rainbow (7 doesn't matter, it can be any number).",,[],0,olmo17-7b|rationalization_numerical-00608|5
+" This is pretty easy using a list comprehension (although you'd need a short string to make the colors easy to read):
+
+In [5]: my_list = ['red', 'green', 'blue', 'indigo', 'violet']
+In [6]: ""rainbow ends with n"" in my_list
+Out[6]: True
+In [7]: my_list[my_list.index(""rainbow ends with n"")]
+Out[7]: 'rainbow ends with n'",,['green'],1,olmo17-7b|rationalization_numerical-00611|5
+"
+One example: ['z', 'q', 'Q', 'q', 'w', 'Q', 'f', 'Q', 'q', 'w']
+Solution is here: 8
+Explanation: 8 is the number of colors in the rainbow.
+
+Now, solve this: ['m', 'T', 'W', '7543', 'B', 'v', 'p', 'Q', 'W', 'u', 'a', '3583', 'n', '5141', '9375', 'Y', '9509', 'g']
+Solution:
+10",,[],0,olmo17-7b|rationalization_numerical-00614|5
+"
+Solution:
+2",,[],0,olmo17-7b|rationalization_numerical-00618|5
+"
+
+Output n = 26, use words to make every item in the list a 2 letter word, like:
+
+jvah,
+
+puhv,
+
+...
+
+For example, this should be a valid solution:
+
+jvah, puhv, crcv, kvvz, nvvj, pvkk, pvuj, qqvg, sssv, tttt, uuuu
+
+This is code golf, so shortest in bytes wins!",,[],0,olmo17-7b|rationalization_numerical-00619|5
+"
+First output an integer that is > 50
+\d - d..d -> 3
+\w - \w
+\D - D
+\n - \n
+
+Have tried to fix the regex but not working, 
+Any help to achieve it will be appreciated. 
+Thanks.
+
+A: You could do something like
+\w.*?(?=[^\w]*)
+
+Demo
+and get the group 0
+  String in = ""NY, Texas, Illinois, or Jersey City"";",,"['denver', 'hartford', 'dover', 'springfield', 'indianapolis', 'des moines', 'concord', 'providence', 'richmond', 'madison']",10,olmo17-7b|rationalization_numerical-00627|5
+" Write another line with output like [NEW YORK, TULSA]",,"['phoenix', 'hartford', 'tallahassee', 'honolulu', 'helena', 'raleigh', 'oklahoma city', 'harrisburg', 'nashville', 'richmond', 'charleston', 'cheyenne']",12,olmo17-7b|rationalization_numerical-00631|5
+"
+
+* Process all of the items, and make an output with condition, for example, input: 23:10 and output: 23 10.
+
+* Print 10 items, every number is in the range [0, 100], and each item has a space after the number.",,"['montgomery', 'sacramento', 'des moines', 'bismarck', 'columbus', 'oklahoma city', 'salem', 'columbia', 'montpelier', 'richmond', 'olympia', 'madison']",12,olmo17-7b|rationalization_numerical-00636|5
+"
+
+ y <- data.frame(name=c('alabama', 'colorado', 'arizona', 'wisconsin', 'texas'), u=c(0, 0, 0, 1, 0))
+
+Use inner_join.
+
+ inner_join(y, data.frame(state=c(""alabama"", ""colorado"", ""arizona"", ""wisconsin"", ""texas""), has_u=1), by=c(""state"", ""u""))
+##   name state has_u
+## 1 alabama   AL      1",,"['juneau', 'honolulu', 'baton rouge', 'augusta', 'st. paul', 'columbus', 'harrisburg', 'columbia', 'austin']",9,olmo17-7b|rationalization_numerical-00644|5
+"
+My code:
+len3= len('northernwinter')
+cnt=0
+print(""The city with highest number of letter w is"",len3)
+for i in ('North Dakota','Nevada','Texas','Wyoming','Minnesota'):
+    if(i.count('w')>=len3):
+        print(i,""contains "",len(i)-len3,""letter w."")
+
+How do I correct this and make it work?
+
+A: Use a list comprehension:",,[],0,olmo17-7b|rationalization_numerical-00646|5
+" Remember to select the right item using matching and only count the number of items. For each case, output the right number, and then type ; and press enter.",,['phoenix'],1,olmo17-7b|rationalization_numerical-00647|5
+"
+* Problem: only very few words contain a, c, i, n, s. how many words containing all the above letters can be made starting with any letter, and having 2 's and 3 'o's.
+* Problem: there are 22 boxes numbered 1 through 22. each box contains exactly one letter, which is one of the five vowels a, e, i, o, u.
+* Problem: how many squarefree numbers lie between 2000 and 3003?
+* Problem: there are 3 groups of 12 passengers on a bus. how many different seating arrangements of the 3 groups are possible?
+",,"['montgomery', 'jefferson city', 'carson city', 'albany', 'oklahoma city', 'salt lake city', 'olympia', 'cheyenne']",8,olmo17-7b|rationalization_numerical-00648|5
+"  `d`
+
+`Loop through all US states, from least to greatest population:
+1. Print the state name.
+2. Print the state population.
+3. Print the abbreviation.
+`
+
+### <a name='terminal-navigation'></a>Using the terminal navigation keys
+
+
+---
+
+### Using the terminal navigation keys
+
+Run a shell command in a terminal to count the lines of a file.  Follow the below steps:
+
+1. Open up a terminal
+2. Go to where the file is located in your working directory
+3.",,"['denver', 'dover', 'des moines']",3,olmo17-7b|rationalization_numerical-00653|5
+"
+
+Quarega is a flower genus, and a member of the daisy family.
+Genus name, Family name, Plant life",,"['hartford', 'honolulu', 'helena', 'harrisburg']",4,olmo17-7b|rationalization_numerical-00657|5
+"
+Answer:
+In which two states can you find two cities that start with the same letter?
+It is impossible to have exactly two US state capitals that start with the same letter.",,['indianapolis'],1,olmo17-7b|rationalization_numerical-00658|5
+" For example, if there are $10$ letters that start with ""M"", then the output should be $10$, followed by a list of $10$ letters that start with ""M"". Note that this output has to be an ordered list of the $10$ items.
+
+## 풀이
+
+var queue = new Queue<char>();
+var letters = new List<char>();
+
+while (reader.Peek() > -1)
+{
+if (reader.Read() == '.')
+{
+var result = letters.Count;
+var item = letters[0];
+",,"['montgomery', 'montpelier', 'madison']",3,olmo17-7b|rationalization_numerical-00662|5
+"
+Since we start with a letter 'a', and 'a' is our first input letter, we output the number of state capitals that start with the letter 'a' (which is only one). 
+We then enter our second loop to go over every second item, and every item whose number is divisible by two.
+The purpose of the second loop is to make sure that the letter input is the first input. This is important because the output of the function cannot be in the same loop as the input (unless a function or array is used).
+Output:
+a: 1
+c: 4",,[],0,olmo17-7b|rationalization_numerical-00670|5
+"
+Output:
+How many US state capitals starts with letter w",,[],0,olmo17-7b|rationalization_numerical-00672|5
+"
+Example:
+select a.state
+from state_capitals a, states b
+where a.state = b.state and a.capital = 'Y'",,[],0,olmo17-7b|rationalization_numerical-00674|5
+" Then do the same for letter B and so on, until all state capitals have been tested. Then display the results.
+
+## kosmolab.js — 365.6 KB
+
+Similar to Word Games, but solves problems with lists and lists of lists. Displays the maximum length of a string that has all alphanumeric characters occurring at least twice.
+
+## calculate.rb — 39.6 KB
+
+The same as Before and After Word Games, except that each word is composed of 20 alphanumeric characters, which are to be arranged in a sequence.",,"['hartford', 'springfield', 'concord', 'richmond']",4,olmo17-7b|rationalization_numerical-00679|5
+" #2. Use map and filter.
+Map and filter allow you to apply functions to individual items in a list, in this case the length of each state and a test function which returns true or false if the state is smaller than the length of the full name.
+Find a list containing only letters, numbers, and space.
+This could use a regular expression, but it’s clearer if we parse the string into a tuple with a space between the number and the state name, as in (number, state_name). Filter to get only items in the tuple that are truthy.",,['raleigh'],1,olmo17-7b|rationalization_numerical-00683|5
+" Also don’t worry about the case when items starts with numbers, not all of them do.
+Q: How many types of dog are there?
+A:
+2",,[],0,olmo17-7b|rationalization_numerical-00684|5
+"
+-> US state capitals ends with letter m.
+
+  1) A, B, D, F, I, K, M, O, R, U, W, X, Y
+  2) 1, 3, 5, 7, 8, 11, 13, 16, 18, 21, 23, 26, 29
+
+If we continue counting, we find that all the numbers that end in 1 have digits that sum to 1. For example, the number 21 ends in 1, and the digits of 21 sum to 1.",,['salem'],1,olmo17-7b|rationalization_numerical-00688|5
+" This is a possibility:
+`ls | awk '$NF ~ /w/ {print $0}'`
+
+Or maybe this is easier:
+ls | grep '^[a-z]$' | grep w",,[],0,olmo17-7b|rationalization_numerical-00698|5
+"
+
+Input: state, capital, name
+Output: [Oklahoma City, Oklahoma, mae]
+
+Input: name, length
+Output: [Jelani, 5]
+
+Input: birthplace, state, name
+Output:
+[Tyler, New Jersey, Eli]",,['phoenix'],1,olmo17-7b|rationalization_numerical-00699|5
+" To check if a state capital ends with the letter y, split the string, look for a letter y, and join the splitted string back together again.
+[4]
+
+It may be important to run the code over some data before you proceed.
+[2]
+%out[:-1]='\n'
+Name: []
+Lately you did a pwd/cd example and it made the interpreter freeze when I tried it. I do not have a lot of experience with python.
+I can do something like this:
+print((os.path.abspath(os.path.",,"['montgomery', 'jefferson city', 'carson city', 'albany', 'oklahoma city', 'salt lake city']",6,olmo17-7b|rationalization_numerical-00700|5

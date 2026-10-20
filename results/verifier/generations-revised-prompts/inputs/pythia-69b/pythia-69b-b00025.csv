@@ -1,0 +1,843 @@
+response,list,list_condition,count,generation_id
+"
+
+A:
+
+JavaScript (ES6),  90  88 bytes
+Takes input as a number.
+f=(n,p=0)=>n?f(n-1,p+1):p?f(n-1,p-1):n
+
+Try it online!
+How?
+We start with the base case, which is the number of planets.
+f=(n,p=0)=>n?f(n-1,p+1):p?f(n-1,p-1):n",,[],0,pythia-69b|rationalization_numerical-00001|0
+"
+
+A:
+
+Python 2, 78 bytes",,['mercury'],1,pythia-69b|rationalization_numerical-00002|0
+"
+
+A:",,[],0,pythia-69b|rationalization_numerical-00005|0
+"
+
+A:
+
+JavaScript (ES6),  90  87 bytes
+Takes input as a string.
+f=(s,p=0)=>s.replace(/\w/g,p=p<3?p+1:p)&&f(s,p+1)
+
+Try it online!
+How?
+We can use the fact that the string contains at least one letter to determine the number of letters in the string.
+
+A:
+
+Jelly,  26  24 bytes",,[],0,pythia-69b|rationalization_numerical-00006|0
+"
+
+A:",,['earth'],1,pythia-69b|rationalization_numerical-00007|0
+"
+
+A:
+
+Python 2, 67 bytes
+lambda s:s.count('i')
+
+Try it online!
+
+A:
+
+Jelly, 6 bytes
+ŒṖḊ
+
+Try it online!
+How it works
+ŒṖḊ  Main link. Argument: s (string)
+
+ŒṖḊ  Main link. Argument: s (string)
+
+ŒṖḊ  Main link. Argument: s (string)
+
+ŒṖḊ  Main link. Argument: s (string)
+
+",,['jupiter'],1,pythia-69b|rationalization_numerical-00008|0
+"
+
+A:
+
+JavaScript (ES6),  106  101 bytes
+Takes input as a string.
+f=(s,n=0)=>s.match(/\d+/g)?n++:s.match(/[kK][eE][sS][tT][rR][iI][nN][oO][dD][fF][aA][sS][tT][rR][iI][nN][oO][dD]/g)?f(s,n):s
+
+Try it online!
+How?",,[],0,pythia-69b|rationalization_numerical-00010|0
+"
+
+A:
+
+JavaScript (ES6),  90  89 bytes
+Takes input as a string.
+f=(s,p,r=0)=>s.replace(/\w/g,c=>r?c+r:c)
+
+Try it online!
+
+A:
+
+Jelly,  90  89 bytes",,"['mercury', 'mars']",2,pythia-69b|rationalization_numerical-00012|0
+"
+
+A:",,[],0,pythia-69b|rationalization_numerical-00014|0
+"
+
+A:
+
+JavaScript (ES6),  ~ 100 ms
+
+var n=prompt();
+var p=[];
+for(var i=0;i<n;i++){
+  if(i%2==0){
+    p.push(i);
+  }
+}
+document.write(p.join('\n'));
+
+A:
+
+Javascript (ES6), ~100ms
+
+var n=prompt();
+var p=[];
+for(var i=0;i<n;i++){
+  ",,"['jupiter', 'neptune']",2,pythia-69b|rationalization_numerical-00015|0
+"
+
+A:
+
+Python 2, 78 bytes",,[],0,pythia-69b|rationalization_numerical-00016|0
+"
+
+A:
+
+JavaScript (ES6),  89  77 bytes
+Takes input as a string.
+s=>[...s].map(c=>s.includes(c))
+
+Try it online!
+
+A:
+
+Jelly,  72  71 bytes",,"['venus', 'mars', 'saturn', 'uranus']",4,pythia-69b|rationalization_numerical-00018|0
+"
+
+A:
+
+JavaScript (ES6),  89  77 bytes
+Takes input as a string, e.g. ""v"".
+Returns an array of strings.
+a=>[...a.match(/v/g)||[...a.match(/v/g).map(c=>c.toUpperCase())].filter(c=>c.length)]
+
+Try it online!
+
+A:
+
+Javascript (ES6),  89  77 bytes
+Takes input as a string, e.g. ""v"".
+Returns an array of strings.",,['venus'],1,pythia-69b|rationalization_numerical-00021|0
+"
+
+A:
+
+JavaScript (ES6),  89  77 bytes
+Takes input as a string, e.g. ""abcdefghijklmnopqrstuvwxyz"".
+Returns an array of strings.
+a=>[...a.match(/\w/g)||[...a.match(/\w/g).map(c=>c.toUpperCase())].filter(c=>c.length>1)]
+
+Try it online!
+
+A:
+
+Python 2, 87 bytes",,[],0,pythia-69b|rationalization_numerical-00023|0
+"
+
+A:
+
+Python 2, 78 bytes",,['mercury'],1,pythia-69b|rationalization_numerical-00024|0
+"
+
+A:
+
+JavaScript (ES6),  89  77 bytes
+Takes input as a string.
+f=(s,n,p=0)=>s.replace(/\b(?=.*\d)/g,p+=1)&&f(s,n-p,p)
+
+Try it online!
+How?
+The regex matches a word that starts with a number, and then matches a word that starts with a letter.
+
+A:
+
+Jelly,  72  71 bytes",,[],0,pythia-69b|rationalization_numerical-00027|0
+"
+
+A:
+
+JavaScript (ES6),  89  77 bytes
+Takes input as a string.
+a=>a.match(/c/g).map(c=>c.charCodeAt(0))
+
+Try it online!
+
+A:
+
+Jelly,  77  74 bytes",,[],0,pythia-69b|rationalization_numerical-00028|0
+"
+
+A:
+
+Python, 9 bytes
+lambda n:n and n.startswith('f')
+
+Try it online!
+
+A:
+
+Jelly, 4 bytes
+Fṗṗ
+
+Try it online!
+How it works
+Fṗṗ  Main link. Argument: n (integer)
+
+",,[],0,pythia-69b|rationalization_numerical-00031|0
+"
+
+A:
+
+JavaScript (ES6),  90  87 bytes
+Takes input as a string.
+f=(s,n=0)=>s.replace(/(.)\1*/g,c=>n++?c:c.charAt(1))
+
+Try it online!
+How?
+The idea is to use a regex to match every character that is followed by itself.
+The regex is /(.)\1*/g, which means:
+
+(.): Match any character.
+\1: Match the same character.",,[],0,pythia-69b|rationalization_numerical-00032|0
+"
+
+A:
+
+JavaScript (ES6),  89  86 bytes
+Takes input as a string, e.g. ""h"".
+Returns an array of strings.
+a=>[...a.match(/[h]/g).map(c=>c.charAt(0))]
+
+Try it online!
+
+A:
+
+Jelly,  85  84 bytes",,[],0,pythia-69b|rationalization_numerical-00033|0
+"
+
+A:
+
+JavaScript (ES6),  89  77 bytes
+Takes input as a string.
+f=(s,n,r=...s.split`...`)=>r.some(c=>(n--,c=='i'&&f(s,n,r.map(c=>c.slice(1)))))
+
+Try it online!
+How?
+The idea is to split the string into a list of strings, and then filter the list for the desired string.
+
+f = (s, n, r = ...",,[],0,pythia-69b|rationalization_numerical-00034|0
+"
+
+A:
+
+JavaScript (ES6),  90  89 bytes
+Takes input as a string, e.g. ""abcdefg"".
+Returns an array of strings.
+a=>[...a.match(/[a-z]/g).map(x=>x.charAt(0))]
+
+Try it online!
+How?
+The regex matches all letters, and the first character of each string is the first letter of the string.
+
+A:
+
+Jelly,  90  89 bytes",,[],0,pythia-69b|rationalization_numerical-00036|0
+"
+
+A:
+
+JavaScript (ES6),  89  88 bytes
+Takes input as a string.
+m=>m.match(/m/g).map(n=>n.length)
+
+Try it online!
+
+A:
+
+Jelly,  32  31 bytes",,"['mercury', 'mars']",2,pythia-69b|rationalization_numerical-00038|0
+"
+
+A:
+
+JavaScript (ES6),  90  87 bytes
+Takes input as a string.
+f=(s,n=0)=>s.replace(/([a-z])([A-Z])/g,m=>n++?m[1]+m[2]:m[1]+m[2]+m[0])
+
+Try it online!
+How?
+The regex matches a lowercase letter followed by an uppercase letter, and replaces it with the number of occurrences of the lowercase letter.
+
+A:",,[],0,pythia-69b|rationalization_numerical-00040|0
+"
+
+A:
+
+Python 2, 78 bytes
+lambda n:n and all(n%i<1for i in range(1,n+1))
+
+Try it online!
+
+A:
+
+Jelly, 6 bytes
+ŒḊḊḊ
+
+Try it online!
+How it works
+ŒḊḊḊ  Main link. Argument: n (integer)
+
+",,[],0,pythia-69b|rationalization_numerical-00041|0
+"
+
+A:
+
+JavaScript (ES6),  89  77 bytes
+Takes input as a string.
+f=(s,p=0)=>s.replace(/\w/g,x=>p+=x.charCodeAt(0))
+
+Try it online!
+How?
+We can use the fact that the first letter of a word is always a vowel, and the first letter of a word is always a consonant.
+
+A:
+
+Python 2, 92 bytes",,[],0,pythia-69b|rationalization_numerical-00042|0
+"
+
+A:
+
+JavaScript (ES6),  90  88 bytes
+Takes input as a string.",,['saturn'],1,pythia-69b|rationalization_numerical-00044|0
+"
+
+A:
+
+Python 2, 
+def v(n):
+    return [i for i in range(1, n+1) if i%2==0]
+
+print v(10)
+
+Output:
+[2, 4, 6, 8, 10]
+
+A:
+
+Python 2,
+def v(n):
+    return [i for i in range(1, n+1) if i%2==0]
+
+print v(10)
+
+Output:
+[2, 4, 6, 8, 10]
+
+A:
+",,['venus'],1,pythia-69b|rationalization_numerical-00047|0
+"
+
+A:
+
+JavaScript (ES6),  90  89 bytes
+Takes input as a string, e.g. ""abcdef"".
+Returns an array of strings.
+a=>[...a.match(/[a-z]/g)||[...a.match(/[a-z]/g).filter(c=>c.length>1)]]
+
+Try it online!
+How?
+The first part of the code is a recursive function that takes a string and returns an array of strings.
+The second part is a filter that removes all strings that are not letters.",,[],0,pythia-69b|rationalization_numerical-00049|0
+"
+
+A:
+
+Python 2, 78 bytes
+f=lambda n,k=1:n and f(n,k+1)or[n,f(n,k+1)]or[n,n]
+
+Try it online!
+
+A:
+
+Jelly, 6 bytes
+ṗḟḟ
+
+Try it online!
+How?
+ṗḟḟ - Main link: integer n
+ṗ       - filter: keep all integers that are multiples of n
+ ḟ      - last link: integer k
+
+A:
+
+",,[],0,pythia-69b|rationalization_numerical-00050|0
+"
+
+A:
+
+JavaScript (ES6),  89  77 bytes
+Takes input as a string, e.g. ""abcdefg"".
+Returns an array of strings, e.g. [""a"", ""b"", ""c"", ""d"", ""e"", ""f"", ""g""].
+m=>m.replace(/b/g,x=>x.match(/[bcd]|[efg]/g).map(y=>y.charAt(0)))
+
+Try it online!
+How?
+The regex matches bcd or efg.",,[],0,pythia-69b|rationalization_numerical-00053|0
+"
+
+A:
+
+JavaScript (ES6),  90  87 bytes
+Takes input as a string.
+f=(s,n=0)=>s.replace(/\d/g,c=>n++>c.length?c:c.charAt(n++))
+
+Try it online!
+
+A:
+
+Jelly,  90  87 bytes",,[],0,pythia-69b|rationalization_numerical-00054|0
+"
+
+A:
+
+JavaScript (ES6),  89  77 bytes
+Takes input as a number.
+f=(n,p=0)=>n?[...Array(n)].map((_,i)=>p+=n%i,p=p%i)?p:n%i:p
+
+Try it online!
+How?
+The idea is to iterate over the numbers from 1 to n, and for each number, we add the number of times it appears in the input to the total.
+
+A:
+
+Jelly,  80  77 bytes",,[],0,pythia-69b|rationalization_numerical-00057|0
+"
+
+A:
+
+JavaScript (ES6),  89  77 bytes
+Takes input as a string, e.g. ""g""
+Returns an array of strings.
+f=(s,p=0)=>s.match(/\d+/g)?[...s.match(/\d+/g)].map((c,i)=>p=i?c+p:c):p
+
+Try it online!
+How?
+The first step is to convert the input string to a number.",,[],0,pythia-69b|rationalization_numerical-00058|0
+"
+
+A:
+
+JavaScript (ES6),  89  88 bytes
+Takes input as a string, e.g. ""abcdefghijklmnopqrstuvwxyz"".
+Returns an array of strings.
+a=>[...a.match(/[h]/g).map(c=>a.slice(0,c).replace(c,c+'h'))]
+
+Try it online!
+
+A:
+
+Jelly,  32  31 bytes",,['earth'],1,pythia-69b|rationalization_numerical-00059|0
+"
+
+A:
+
+JavaScript (ES6),  89  77 bytes
+Takes input as a string, e.g. ""abcdefg"".
+Returns an array of strings, e.g. [""a"", ""b"", ""c"", ""d"", ""e"", ""f"", ""g""].
+f=(s,p=0)=>s.replace(/\d/g,p=p+1)&&f(s,p)
+
+Try it online!
+How?",,[],0,pythia-69b|rationalization_numerical-00060|0
+"
+
+A:
+
+JavaScript (ES6),  67  66 bytes
+Takes input as a string.
+f=(s,n,p=0)=>s.replace(/([a-z])([A-Z])/g,c=>c.match(/([A-Z])([A-Z])/g)?p++:c)
+
+Try it online!
+How?
+The regex matches a letter followed by a lowercase letter, followed by a letter.
+
+A:
+
+Jelly,  32  31 bytes",,[],0,pythia-69b|rationalization_numerical-00062|0
+"
+
+A:
+
+JavaScript (ES6),  65  65 bytes
+Takes input as a string.
+f=(s,n,r=0)=>s.replace(/m/g,n?n+r:r)
+
+Try it online!
+How?
+The string is split into an array of strings, and the number of occurrences of m is added to the result.
+
+A:
+
+Javascript (ES6),  65  65 bytes
+Saved 1 byte thanks to @Neil",,[],0,pythia-69b|rationalization_numerical-00064|0
+"
+
+A:
+
+JavaScript (ES6),  90  87 bytes
+Takes input as a string, e.g. ""a b c d e f g h i j k l m n o p q r s t u v w x y z"".
+Returns an array of strings.",,[],0,pythia-69b|rationalization_numerical-00066|0
+"
+
+A:
+
+JavaScript (ES6),  89  86 bytes
+Takes input as a string.
+a=>[...a].map(c=>c.match(/p/i)?c.replace(/p/i,''):c)
+
+Try it online!
+How?
+The idea is to use a regular expression to match all occurrences of p in the string, and then replace them with nothing.
+
+A:
+
+Jelly,  85  84 bytes",,[],0,pythia-69b|rationalization_numerical-00067|0
+"
+
+A:
+
+JavaScript (ES6),  106  101 bytes
+Takes input as a string, e.g. ""abcdefg"".
+Returns an array of strings, e.g. [""a"", ""b"", ""c"", ""d"", ""e"", ""f"", ""g""].
+m=>(s=>(r=s.match(/[q]/g)||[])[0]?r.slice(1):r.join`q`)[0]?m(s.replace(/[q]/g,r)):m(s)",,[],0,pythia-69b|rationalization_numerical-00068|0
+"
+
+A:
+
+JavaScript (ES6),  90  88 bytes
+Takes input as a string.
+f=(s,p=0)=>s.replace(/([a-z])([A-Z])/g,c=>c.replace(/s/g,p++?c.charAt(0).toUpperCase()+c.slice(1):''))
+
+Try it online!
+How?
+The regex matches a lowercase letter followed by an uppercase letter.
+
+A:",,"['venus', 'mars', 'uranus']",3,pythia-69b|rationalization_numerical-00070|0
+"
+
+A:
+
+JavaScript (ES6),  131  131 bytes
+Takes input as a string, e.g. ""a b c d e f"".
+Returns an array of strings.
+a=>a.split`v`.filter(x=>x.length>1)
+
+Try it online!
+How?
+
+a => a.split`v`.filter(x => x.length > 1)
+
+This splits the input string into an array of strings, and filters the array for strings that have more than one letter.
+
+A:",,[],0,pythia-69b|rationalization_numerical-00073|0
+"
+
+A:
+
+JavaScript (ES6),  90  87 bytes
+Takes input as a string, e.g. ""abcdefg"".
+Returns an array of strings.
+a=>[...a.match(/[aeiou]/g).map(c=>a.slice(0,c).replace(c,c+'x'))]
+
+Try it online!
+How?
+The regex matches all vowels, and then we slice the string at the vowel positions.
+
+A:
+
+Python 2,  87 bytes",,[],0,pythia-69b|rationalization_numerical-00075|0
+"
+
+A:
+
+JavaScript (ES6),  90  89 bytes
+Takes input as a string, e.g. ""abcdefghijklmnopqrstuvwxyz"".
+Returns an array of strings.
+a=>[...a.match(/[a-z]/g)||[...a.match(/[a-z]/g).filter(c=>c.length>1)]]
+
+Try it online!
+
+A:
+
+Python 2,  90  89 bytes",,['mercury'],1,pythia-69b|rationalization_numerical-00076|0
+"
+
+A:
+
+JavaScript (ES6),  89  77 bytes
+Takes input as a string.
+a=>[...a].map(c=>c=='n'&&a.indexOf(c)+1)
+
+Try it online!
+
+A:
+
+Jelly,  25  22 bytes",,"['hydrogen', 'boron', 'carbon', 'nitrogen', 'oxygen', 'fluorine', 'neon', 'magnesium', 'aluminum', 'silicon', 'chlorine', 'argon', 'scandium', 'titanium', 'vanadium', 'manganese', 'iron', 'nickel', 'zinc', 'germanium', 'arsenic', 'selenium', 'bromine', 'krypton', 'strontium', 'zirconium', 'niobium', 'molybdenum', 'technetium', 'ruthenium', 'indium', 'tin', 'antimony', 'iodine', 'xenon', 'lanthanum', 'neodymium', 'gadolinium', 'hafnium', 'tantalum', 'tungsten', 'rhenium', 'platinum', 'polonium', 'astatine', 'francium', 'actinium', 'protactinium', 'uranium', 'neptunium', 'plutonium', 'californium', 'einsteinium', 'mendelevium', 'nobelium', 'lawrencium', 'dubnium', 'meitnerium', 'roentgenium', 'copernicium', 'nihonium', 'tennessine', 'oganesson']",63,pythia-69b|rationalization_numerical-00091|0
+"
+
+A:
+
+JavaScript (ES6),  89  86 bytes
+Takes input as a string.
+f=(n,s='o',t=n=>n.match(s))=>n?f(n-1,s,t):t(n)
+
+Try it online!
+
+A:
+
+Jelly,  85  84 bytes",,"['hydrogen', 'boron', 'carbon', 'nitrogen', 'oxygen', 'fluorine', 'neon', 'sodium', 'silicon', 'phosphorus', 'chlorine', 'argon', 'potassium', 'chromium', 'iron', 'cobalt', 'copper', 'bromine', 'krypton', 'strontium', 'zirconium', 'niobium', 'molybdenum', 'rhodium', 'antimony', 'iodine', 'xenon', 'praseodymium', 'neodymium', 'promethium', 'europium', 'gadolinium', 'dysprosium', 'holmium', 'osmium', 'gold', 'polonium', 'thorium', 'protactinium', 'plutonium', 'californium', 'nobelium', 'rutherfordium', 'seaborgium', 'bohrium', 'roentgenium', 'copernicium', 'nihonium', 'flerovium', 'moscovium', 'livermorium', 'oganesson']",52,pythia-69b|rationalization_numerical-00092|0
+"
+
+A:
+
+JavaScript (ES6),  89  77 bytes
+Saved 2 bytes thanks to @Neil
+Takes input as a string.",,"['hydrogen', 'beryllium', 'boron', 'carbon', 'nitrogen', 'fluorine', 'phosphorus', 'sulfur', 'chlorine', 'argon', 'chromium', 'iron', 'copper', 'germanium', 'arsenic', 'bromine', 'krypton', 'rubidium', 'strontium', 'yttrium', 'zirconium', 'ruthenium', 'rhodium', 'silver', 'tellurium', 'barium', 'cerium', 'praseodymium', 'promethium', 'samarium', 'europium', 'terbium', 'dysprosium', 'erbium', 'ytterbium', 'rhenium', 'iridium', 'mercury', 'francium', 'radium', 'thorium', 'protactinium', 'uranium', 'americium', 'curium', 'berkelium', 'californium', 'fermium', 'lawrencium', 'rutherfordium', 'seaborgium', 'bohrium', 'meitnerium', 'darmstadtium', 'roentgenium', 'copernicium', 'flerovium', 'livermorium']",58,pythia-69b|rationalization_numerical-00095|0
+"
+
+A:
+
+JavaScript (ES6),  89  88 bytes
+Takes input as a string.
+f=(n,p=0)=>n?f(n-1,p+1):p?f(n-1,p-1):p
+
+Try it online!
+How?
+We can use the fact that the number of elements in the periodic table is a multiple of 3, and that the elements are arranged in a 3x3 grid.
+
+A:
+
+Jelly,  80  77 bytes",,"['hydrogen', 'beryllium', 'oxygen', 'krypton', 'yttrium', 'molybdenum', 'antimony', 'praseodymium', 'neodymium', 'dysprosium', 'ytterbium', 'mercury']",12,pythia-69b|rationalization_numerical-00102|0
+"
+
+A:
+
+JavaScript (ES6),  89  87 bytes
+Takes input as a string.
+a=>[...new Set(a.match(/[a-z]/g).map(x=>x.charCodeAt(0)))].map(x=>x+x)
+
+Try it online!
+How?
+The input is a string, and we want to get the number of elements in the periodic table that contain the letter z.
+The first step is to convert the string to a Set of characters.",,"['zinc', 'zirconium']",2,pythia-69b|rationalization_numerical-00103|0
+"
+
+A:
+
+JavaScript (ES6),  89  88 bytes
+Takes input as a string.
+f=(n,r=0)=>n?f(n-1,r+1):r
+
+Try it online!
+How?
+We can use the fact that the first element of the periodic table is the element with atomic number 1.
+f=(n,r=0)=>n?f(n-1,r+1):r
+
+f(n,r) → n?f(n-1,r+1):r
+
+n?",,"['nitrogen', 'neon', 'nickel', 'niobium', 'neodymium', 'neptunium', 'nobelium', 'nihonium']",8,pythia-69b|rationalization_numerical-00117|0
+"
+
+A:
+
+JavaScript (ES6),  89  88 bytes
+Takes input as a string.
+a=>[...a].filter(c=>c.startsWith(""o""))
+
+Try it online!
+
+A:
+
+Jelly,  80  79 bytes",,"['oxygen', 'osmium', 'oganesson']",3,pythia-69b|rationalization_numerical-00118|0
+"
+
+A:
+
+JavaScript (ES6),  89  88 bytes
+Takes input as a string.
+a=>[...Array(a)].map((_,i)=>i<a?a:i)
+
+Try it online!
+
+A:
+
+Jelly,  75  74 bytes",,"['rubidium', 'ruthenium', 'rhodium', 'rhenium', 'radium', 'rutherfordium', 'roentgenium']",7,pythia-69b|rationalization_numerical-00121|0
+"
+
+A:
+
+JavaScript (ES6),  89  87 bytes
+Takes input as a string.
+f=(n,x='y')=>n?f(n-1,x+n+x.match(/\d/g)[0]||'y')+f(n-1,x+n+x.match(/\d/g)[1]||'y'):[x]
+
+Try it online!
+How?
+We can use the same approach as in the other answer, but with a different approach to the problem.",,"['yttrium', 'ytterbium']",2,pythia-69b|rationalization_numerical-00128|0
+"
+
+A:",,"['zinc', 'zirconium']",2,pythia-69b|rationalization_numerical-00129|0
+"
+
+A:",,"['hydrogen', 'boron', 'carbon', 'nitrogen', 'oxygen', 'neon', 'silicon', 'argon', 'iron', 'krypton', 'tin', 'xenon', 'tungsten', 'oganesson']",14,pythia-69b|rationalization_numerical-00143|0
+"
+
+A:
+
+JavaScript (ES6),  89  77 bytes
+Takes input as a string.
+a=>[...Array(a+1).keys()].map(x=>x.match(/o/g).map(y=>y.length))
+
+Try it online!
+How?
+The first step is to generate all the possible strings of length 1 to a given length.
+The second step is to filter out the strings that don't contain the letter o.
+The third step is to count the number of letters in each string.
+
+A:",,[],0,pythia-69b|rationalization_numerical-00144|0
+"
+
+A:
+
+JavaScript (ES6),  89  77 bytes
+Takes input as a string.",,"['sulfur', 'copper', 'silver']",3,pythia-69b|rationalization_numerical-00147|0
+"
+
+A:
+
+JavaScript (ES6),  89  77 bytes
+Takes input as a string.
+a=>[...Array(a)].map(x=>x.slice(-1)==='y')
+
+Try it online!
+How?
+The idea is to use the fact that the last character of a string is the same as the last character of the string after the first character has been removed.
+
+A:
+
+Jelly,  80  77 bytes",,"['antimony', 'mercury']",2,pythia-69b|rationalization_numerical-00154|0
+"
+
+A:",,[],0,pythia-69b|rationalization_numerical-00155|0
+"
+
+A:
+
+Python 2, 78 bytes
+lambda s:s.count('d')
+
+Try it online!
+
+A:
+
+Jelly, 6 bytes
+Œḟḟ
+
+Try it online!
+How?
+Œḟḟ - Main link: string, list of characters
+Œḟḟ - Main link: string, list of characters, list of characters
+Œḟḟ - Main link: string, list of characters, list of characters",,"['colorado', 'delaware', 'florida', 'idaho', 'indiana', 'maryland', 'nevada', 'north dakota', 'rhode island', 'south dakota']",10,pythia-69b|rationalization_numerical-00159|0
+"
+
+A:
+
+You can use a recursive function to do this.
+def h(n):
+    if n == 0:
+        return [0]
+    else:
+        return [h(n-1) + [n] + h(n-1)]
+
+print(h(4))
+
+Output:
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+A:
+
+You can use a list comprehension:
+>>> [i for i in range(10) if i % 2 == 0]",,"['hawaii', 'idaho', 'massachusetts', 'michigan', 'new hampshire', 'north carolina', 'north dakota', 'ohio', 'oklahoma', 'rhode island', 'south carolina', 'south dakota', 'utah', 'washington']",14,pythia-69b|rationalization_numerical-00163|0
+"
+
+A:
+
+Python 2.7, 
+import itertools
+
+def find_states(word):
+    states = []
+    for i in range(len(word)):
+        if word[i] == 'i':
+            states.append(i)
+    return states
+
+print(list(itertools.chain.from_iterable(find_states(word))))
+
+A:
+
+Python 2.7,
+import itertools
+
+def find_states(word):
+    states = []",,"['arizona', 'california', 'connecticut', 'florida', 'georgia', 'hawaii', 'idaho', 'illinois', 'indiana', 'iowa', 'louisiana', 'maine', 'michigan', 'minnesota', 'mississippi', 'missouri', 'new hampshire', 'new mexico', 'north carolina', 'ohio', 'pennsylvania', 'rhode island', 'south carolina', 'virginia', 'washington', 'west virginia', 'wisconsin', 'wyoming']",28,pythia-69b|rationalization_numerical-00164|0
+"
+
+A:
+
+You can use a recursive function to do this.
+def find_m(s):
+    if s.isdigit():
+        return 1
+    else:
+        return find_m(s[:-1]) + 1
+
+print(find_m('abcdefg'))
+
+Output:
+1
+
+A:
+
+You can use a list comprehension:
+>>> [i for i in range(1, len(s)) if s[i] == 'm']
+[1]
+
+A:
+
+You can use a list comprehension:
+",,"['alabama', 'maine', 'maryland', 'massachusetts', 'michigan', 'minnesota', 'mississippi', 'missouri', 'montana', 'new hampshire', 'new mexico', 'oklahoma', 'vermont', 'wyoming']",14,pythia-69b|rationalization_numerical-00168|0

@@ -1,0 +1,1115 @@
+passage,response,atomic_units,hallucinated_atomic_units
+,"
+
+Problem type
+
+You are given a text (e.g. news article) and a set of questions over the text, each of which may have multiple parts. The questions are generally factoid (single-word answer) or short-answer. You must return a response to each question. The response is a text (possibly short), which may be generated from scratch or based on the original text. In the example above, we want a short summary.
+
+The task is more structured than general abstractive summarisation and also more complex than question answering.","Here are the independent facts broken down from the passage: | False |
+ You are given a text, such as a news article. | True |
+ You are also given a set of questions over the text. | True |
+ Each question may have multiple parts. | True |
+ The questions are generally either factoid (single-word answer) or short-answer. | True |
+ You must return a response to each question. | True |
+ The response can be a text, which may be generated from scratch or based on the original text. | True |
+ The task is more structured than general abstractive summarisation. | True |
+ The task is more complex than question answering. | True",Here are the independent facts broken down from the passage:
+, It is not necessary to make reference to any specific words.,"Here is the breakdown of the passage into an independent fact: | True |
+ It is not necessary to make reference to any specific words. | True",
+,"
+
+3. Find the following: 'Manchester United have agreed to sign 18-year-old Australian Luke Tingey on a three-month loan deal, it has been revealed. The youngster is to join United on Monday (April 27) for the first leg of their UEFA Youth League tie against Bordeaux. The defender has already impressed this season with MK Dons as he made a cameo appearance for them in their pre-season friendly against Tottenham in August.","Here are the independent facts broken down from the passage: | False |
+ Manchester United have agreed to sign Luke Tingey. | False |
+ Luke Tingey is 18 years old. | True |
+ Luke Tingey is Australian. | False |
+ The deal between Manchester United and Luke Tingey is a loan deal. | False |
+ The loan deal is for three months. | False |
+ Luke Tingey will join Manchester United on Monday, April 27. | False |
+ Manchester United have a UEFA Youth League tie against Bordeaux. | False |
+ The first leg of the UEFA Youth League tie against Bordeaux will take place after April 27 (since Luke Tingey joins on this date). | False |
+ Luke Tingey plays as a defender. | True |
+ Luke Tingey has played for MK Dons. | True |
+ Luke Tingey made a cameo appearance for MK Dons in a pre-season friendly against Tottenham. | False |
+ The pre-season friendly between MK Dons and Tottenham took place in August. | False","Here are the independent facts broken down from the passage: |
+ Manchester United have agreed to sign Luke Tingey. |
+ Luke Tingey is Australian. |
+ The deal between Manchester United and Luke Tingey is a loan deal. |
+ The loan deal is for three months. |
+ Luke Tingey will join Manchester United on Monday, April 27. |
+ Manchester United have a UEFA Youth League tie against Bordeaux. |
+ The first leg of the UEFA Youth League tie against Bordeaux will take place after April 27 (since Luke Tingey joins on this date). |
+ Luke Tingey made a cameo appearance for MK Dons in a pre-season friendly against Tottenham. |
+ The pre-season friendly between MK Dons and Tottenham took place in August."
+,"
+
+In your summary, include the following:
+- A list of the key points
+- A few details that illustrate or support the key points
+
+Remember to start your summary with a thesis and make sure your thesis is included at the end of your summary.
+
+In this example, the key points in the summary are:
+
+* It's usually children that enjoy the water fountains at playgrounds.
+* A dog was seen having lots of fun in one.
+* It was captured on video.
+* People laughed as they watched it.
+
+Sample Answer:","Here is a breakdown of the passage into independent facts: | True |
+ The passage provides guidelines on how to write a summary. | False |
+ The guidelines include making a list of key points. | True |
+ The guidelines also include providing details to support the key points. | True |
+ The passage provides an example of a summary. | True |
+ The example summary is about a dog having fun in a water fountain at a playground. | True |
+ The key points in the example summary include: | True |
+   * Children usually enjoy water fountains at playgrounds. | True |
+   * A dog was seen having fun in a water fountain. | True |
+   * The dog's fun was captured on video. | True |
+   * People laughed while watching the dog. | True |
+ The passage instructs the reader to start and end their summary with a thesis statement. | False |
+Note that there is no actual event or story being described in the passage, but rather a set of guidelines on how to write a summary, accompanied by an example. | False"," The passage provides guidelines on how to write a summary. |
+ The passage instructs the reader to start and end their summary with a thesis statement. |
+Note that there is no actual event or story being described in the passage, but rather a set of guidelines on how to write a summary, accompanied by an example."
+," (Hint: You can use any Python library of your choice, not only NLTK.)
+
+My current implementation is as follows:
+
+from nltk.tokenize import RegexpTokenizer
+from nltk.corpus import wordnet as wn
+from nltk.tag.pos import pos_tag
+
+# Text preprocessing functions.
+def get_summary_from_tagged_words(tagged_words):
+    summary = []
+    for word in tagged_words:","Here are the independent facts broken down from the passage: | True |
+ The passage mentions the use of Python libraries. | False |
+ The passage suggests that any Python library can be used, not just NLTK. | False |
+ The code imports the `RegexpTokenizer` from the `nltk.tokenize` module. | False |
+ The code imports the `wordnet` corpus from the `nltk.corpus` module and assigns it the alias `wn`. | False |
+ The code imports the `pos_tag` function from the `nltk.tag.pos` module. | False |
+ The code defines a section for text preprocessing functions. | False |
+ The code defines a function named `get_summary_from_tagged_words` that takes one argument: `tagged_words`. | False |
+ The `get_summary_from_tagged_words` function initializes an empty list called `summary`. | True |
+ The `get_summary_from_tagged_words` function iterates over each word in the `tagged_words` list. | True"," The passage mentions the use of Python libraries. |
+ The passage suggests that any Python library can be used, not just NLTK. |
+ The code imports the `RegexpTokenizer` from the `nltk.tokenize` module. |
+ The code imports the `wordnet` corpus from the `nltk.corpus` module and assigns it the alias `wn`. |
+ The code imports the `pos_tag` function from the `nltk.tag.pos` module. |
+ The code defines a section for text preprocessing functions. |
+ The code defines a function named `get_summary_from_tagged_words` that takes one argument: `tagged_words`."
+,"
+
+Answer: 'Caster Semenya won in 2 minutes, 5.05 seconds. She is the former 800 world title-holder and 2012 Olympic silver medalist.'
+
+Question: 'Summarize the following text: ""Caster Semenya won the 800-meter title on Saturday and said she's injury-free and looking to qualify for the World Championships.","Here are the independent facts broken down from the passage: | False |
+ Caster Semenya won the 800-meter title. | True |
+ Caster Semenya's winning time was 2 minutes, 5.05 seconds. | True |
+ Caster Semenya is the former 800 world title-holder. | True |
+ Caster Semenya is a 2012 Olympic silver medalist. | True |
+ Caster Semenya won the title on a Saturday. | True |
+ Caster Semenya is injury-free. | True |
+ Caster Semenya is looking to qualify for the World Championships. | True",Here are the independent facts broken down from the passage:
+," Use the key words and phrases in the text to help you. Your summary should be no longer than 90 words.
+
+Exercise 2 - Write an answer:  Write a short answer to the following question. Write no more than 100 words. What are the key differences between the different types of sport?","Here are the independent facts from the passage: | True |
+ The task is to write a short answer. | True |
+ The answer should be no more than 100 words. | True |
+ The question is about the key differences between types of sport. | False |
+ There is an exercise (Exercise 2) that requires a written answer. | True |
+ A previous instruction mentioned a summary with a 90-word limit, but it is not directly related to Exercise 2. | False"," The question is about the key differences between types of sport. |
+ A previous instruction mentioned a summary with a 90-word limit, but it is not directly related to Exercise 2."
+," Your summary should contain around 125 words.
+
+Write a report to describe an important issue that will help people in the community, e.g. recycling/pollution/energy usage/energy efficiency/sustainable development, etc. You should explain why this issue is important and how people can help to solve this issue. Include specific examples and details to support your answer. You should write approximately 350 words.
+
+Write a report for a university lecturer describing a book, article or website that you have recently read or used. Include your comments about its usefulness and value. You should write approximately 350 words.","Here are the independent facts broken down from the passage: | True |
+ A summary should be around 125 words. | True |
+ A report should be written to describe an important community issue. | False |
+ The community issue can be related to topics such as recycling, pollution, energy usage, energy efficiency, or sustainable development. | False |
+ The report should explain why the issue is important. | False |
+ The report should include ways for people to help solve the issue. | False |
+ Specific examples and details should be included to support the report. | True |
+ The report on the community issue should be approximately 350 words. | False |
+ A separate report should be written for a university lecturer. | True |
+ The report for the lecturer should describe a book, article, or website that has been recently read or used. | False |
+ The report should include comments on the usefulness and value of the book, article, or website. | False |
+ The report for the lecturer should be approximately 350 words. | False"," A report should be written to describe an important community issue. |
+ The community issue can be related to topics such as recycling, pollution, energy usage, energy efficiency, or sustainable development. |
+ The report should explain why the issue is important. |
+ The report should include ways for people to help solve the issue. |
+ The report on the community issue should be approximately 350 words. |
+ The report for the lecturer should describe a book, article, or website that has been recently read or used. |
+ The report should include comments on the usefulness and value of the book, article, or website. |
+ The report for the lecturer should be approximately 350 words."
+," The response is limited to 160 characters.
+
+Sample Input
+
+Sample Output
+
+Sample Input
+
+Sample Output
+
+
+The summary can only consist of complete words. A word is considered complete if it does not start with an uppercase character and if it does not end with a space character. Spaces are not permitted anywhere in the summary.
+
+
+In the given example, the summary of the first input will be Floyd + Mayweather + fight + in + Las + Vegas + 2.","Here are the independent facts broken down from the passage: | True |
+ The response is limited to 160 characters. | False |
+ The summary can only consist of complete words. | True |
+ A word is considered complete if it does not start with an uppercase character. | False |
+ A word is considered complete if it does not end with a space character. | True |
+ Spaces are not permitted anywhere in the summary. | False |
+ The example provided shows a summary of an input, with the result being ""Floyd + Mayweather + fight + in + Las + Vegas + 2"".  | False |
+Note that fact 6 is more of an illustration of the rules, rather than a standalone fact. However, it can be broken down further into: | False |
+ The input is summarized by splitting it into individual words. | True |
+ The words in the summary are separated by a ""+"" character. | False"," The response is limited to 160 characters. |
+ A word is considered complete if it does not start with an uppercase character. |
+ Spaces are not permitted anywhere in the summary. |
+ The example provided shows a summary of an input, with the result being ""Floyd + Mayweather + fight + in + Las + Vegas + 2"".  |
+Note that fact 6 is more of an illustration of the rules, rather than a standalone fact. However, it can be broken down further into: |
+ The words in the summary are separated by a ""+"" character."
+,"
+
+Summarize text
+
+Task type:
+
+Summarize text
+
+
+How long should you spend on this task?
+
+Average time to complete this task is 3 minutes and 5 seconds.
+
+How is the task scored?
+
+This task has an average accuracy score of 2.6 out of 3 marks per question.
+
+The average time to answer the question is: 3 minutes and 5 seconds
+
+The average time to answer the question is 3 minutes and 5 seconds.
+
+You can use the following key:","Here are the independent facts broken down from the passage: | False |
+ The task type is to summarize text. | True |
+ The average time to complete the task is 3 minutes and 5 seconds. | False |
+ The task has an average accuracy score of 2.6 out of 3 marks per question. | False |
+ The average time to answer the question is 3 minutes and 5 seconds (note: this fact is repeated, but it's still an independent fact). | False |
+Note that the last sentence ""You can use the following key:"" is not an independent fact, as it's an instruction and not a statement of fact. Also, the first two sentences ""Summarize text"" and ""Task type: Summarize text"" are redundant and not providing any new information, so they are not included as independent facts. | True","Here are the independent facts broken down from the passage: |
+ The average time to complete the task is 3 minutes and 5 seconds. |
+ The task has an average accuracy score of 2.6 out of 3 marks per question. |
+ The average time to answer the question is 3 minutes and 5 seconds (note: this fact is repeated, but it's still an independent fact)."
+,"
+
+## Training a CNN to Predict Sentiment on Emojis
+
+We will look at how to train a CNN to predict the sentiment of a post, given the emoji used in that post.
+
+The CNN will take in a 28x28 representation of the emojis, and output a 1D array (i.e. a single number, which can be interpreted as an integer from 0 to 5).
+
+The data can be loaded with the following line:
+
+training_data = load_data()
+
+
+The following plot shows a random sample of emojis and their sentiment.
+","Here are the independent facts broken down from the passage: | False |
+ The goal is to train a Convolutional Neural Network (CNN) to predict sentiment based on emojis used in a post. | False |
+ The CNN will take a 28x28 representation of an emoji as input. | False |
+ The output of the CNN will be a 1D array, which represents a single number. | False |
+ The output number can be interpreted as an integer ranging from 0 to 5. | False |
+ The training data can be loaded using the function `load_data()`. | False |
+ A plot is available that shows a random sample of emojis along with their corresponding sentiment. | False","Here are the independent facts broken down from the passage: |
+ The goal is to train a Convolutional Neural Network (CNN) to predict sentiment based on emojis used in a post. |
+ The CNN will take a 28x28 representation of an emoji as input. |
+ The output of the CNN will be a 1D array, which represents a single number. |
+ The output number can be interpreted as an integer ranging from 0 to 5. |
+ The training data can be loaded using the function `load_data()`. |
+ A plot is available that shows a random sample of emojis along with their corresponding sentiment."
+," The text is used for validation and is not passed back to the student.
+
+This item appears in the following book(s):
+
+Teaching Materials (4,769)
+
+Teaching Materials (2,750)
+
+Teaching Materials (2,746)
+
+Teaching Materials (2,746)
+
+Teaching Materials (4,765)
+
+Teaching Materials (2,770)
+
+Teaching Materials (4,744)
+
+Teaching Materials (4,755)
+
+Teaching Materials (2,751)","Here are the independent facts broken down from the passage: | False |
+ The text is used for validation. | True |
+ The text is not passed back to the student. | True |
+ The item appears in multiple books titled ""Teaching Materials"". | False |
+ There are at least 9 different versions or editions of ""Teaching Materials"" (as indicated by the different numbers in parentheses). | False |
+ The numbers in parentheses associated with each ""Teaching Materials"" book are:  | False |
+   - 4,769 | False |
+   - 2,750 | False |
+   - 2,746 (appears twice) | False |
+   - 4,765 | False |
+   - 2,770 | False |
+   - 4,744 | False |
+   - 4,755 | False |
+   - 2,751 | False","Here are the independent facts broken down from the passage: |
+ The item appears in multiple books titled ""Teaching Materials"". |
+ There are at least 9 different versions or editions of ""Teaching Materials"" (as indicated by the different numbers in parentheses). |
+ The numbers in parentheses associated with each ""Teaching Materials"" book are:  |
+   - 4,769 |
+   - 2,750 |
+   - 2,746 (appears twice) |
+   - 4,765 |
+   - 2,770 |
+   - 4,744 |
+   - 4,755 |
+   - 2,751"
+,"
+
+This is a good question for testing the students' understanding of the text. Students are required to focus on the main idea and purpose of the text. The question requires summarising of the text which is one of the ways of showing understanding of the text. The question is testing the students' ability to synthesise the information into a concise paragraph. It is also testing the ability of the students to paraphrase the main idea and use their own words.
+
+Question 8
+
+The following are two different ways in which a sentence can be written in English. Which sentence is a direct quote?","Here are the independent facts broken down from the passage: | False |
+ The question is designed to test students' understanding of the text. | True |
+ The question requires students to focus on the main idea and purpose of the text. | True |
+ Summarizing the text is a way to show understanding of the text. | True |
+ The question tests students' ability to synthesize information into a concise paragraph. | True |
+ The question tests students' ability to paraphrase the main idea. | True |
+ Students are required to use their own words when paraphrasing the main idea. | True |
+ There are two different ways a sentence can be written in English (as mentioned in Question 8). | True |
+ One of the sentences in Question 8 is a direct quote. | False","Here are the independent facts broken down from the passage: |
+ One of the sentences in Question 8 is a direct quote."
+, The first line of the first paragraph of the summary is the first sentence of the source text.,"Here is the breakdown of the passage into independent facts: | True |
+ There is a summary. | True |
+ The summary has at least one paragraph. | True |
+ The first paragraph of the summary has at least one line. | True |
+ The first line of the first paragraph of the summary is also a sentence. | True |
+ This sentence is the first sentence of the source text. | True",
+," You may use any data from the original text to generate the response. If no suitable summary exists, you must provide a suitable answer string. • Your submission should be a Python function that takes two parameters • The function should return a single string response • The function can make HTTP requests to an external API. If you use an external API, the response from your API must be entirely generated by that API, and may not be generated by your code. • The function must generate the response within 10 seconds. Your function should generate its response without writing any output to the console.","Here are the independent facts broken down from the passage: | False |
+ **Function Requirements**: The submission should be a Python function. | True |
+ **Function Parameters**: The function should take two parameters. | True |
+ **Function Return Type**: The function should return a single string response. | True |
+ **External API Usage**: The function can make HTTP requests to an external API. | False |
+ **API Response Generation**: If an external API is used, the response from the API must be entirely generated by that API, without any modification by the code. | False |
+ **Response Time Limit**: The function must generate its response within 10 seconds. | True |
+ **Console Output**: The function should not write any output to the console while generating its response. | True","Here are the independent facts broken down from the passage: |
+ **External API Usage**: The function can make HTTP requests to an external API. |
+ **API Response Generation**: If an external API is used, the response from the API must be entirely generated by that API, without any modification by the code."
+," For example, the sample response might be: 'The writer has a clear summary of the article, making it easy to read for the examiner.'
+
+IELTS Writing: Band 7.5 Sample 1
+
+IELTS Writing: Band 7.5 Sample 1","Here are the independent facts broken down from the passage: | False |
+ There is a sample response provided. | True |
+ The sample response describes the writer's summary of an article. | True |
+ The writer's summary is clear. | True |
+ The clarity of the summary makes the article easy to read. | True |
+ The article is being read by an examiner. | True |
+ The passage is related to IELTS Writing. | False |
+ The IELTS Writing sample is labeled as ""Band 7.5 Sample 1"". | False |
+ There are multiple samples of IELTS Writing, as indicated by ""Sample 1"". | False","Here are the independent facts broken down from the passage: |
+ The passage is related to IELTS Writing. |
+ The IELTS Writing sample is labeled as ""Band 7.5 Sample 1"". |
+ There are multiple samples of IELTS Writing, as indicated by ""Sample 1""."
+,"
+  9. I'm not very sure how it is done with Python. I tried to do it with some JS code, and it turned out ok with the help of the following sites. I used their functions and called them as per the need and that's how it worked out: http://www.tutorials.mathsgee.com/calculus/integral-calculator/online-integral-calculator/ http://www.mathworks.com/help/matlab/ref/int.html
+  10. Thank you so much for your inputs, I'm definitely going to try them out.","Here are the independent facts broken down from the passage: | True |
+ The author is not very sure how to accomplish a task with Python. | False |
+ The author tried to accomplish the task using JavaScript (JS) code. | False |
+ The author received help from two websites to accomplish the task. | False |
+ The two websites used by the author are: | False |
+   - http://www.tutorials.mathsgee.com/calculus/integral-calculator/online-integral-calculator/ | False |
+   - http://www.mathworks.com/help/matlab/ref/int.html | False |
+ The author used functions from the websites and called them as needed to accomplish the task. | False |
+ The task was accomplished successfully with the help of the websites. | False |
+ The author received inputs (possibly suggestions or advice) from someone or somewhere. | True |
+ The author plans to try out the inputs they received. | False"," The author is not very sure how to accomplish a task with Python. |
+ The author tried to accomplish the task using JavaScript (JS) code. |
+ The author received help from two websites to accomplish the task. |
+ The two websites used by the author are: |
+   - http://www.tutorials.mathsgee.com/calculus/integral-calculator/online-integral-calculator/ |
+   - http://www.mathworks.com/help/matlab/ref/int.html |
+ The author used functions from the websites and called them as needed to accomplish the task. |
+ The task was accomplished successfully with the help of the websites. |
+ The author plans to try out the inputs they received."
+," Do not provide any further details.
+
+Question 5:
+
+Answer the following questions about the following text: 'Hampshire County Council has ordered a consultation into a £300m plan to revitalise and redevelop its leisure facilities in Southampton. Plans include the construction of a new leisure and swimming centre which would house a 2,000-seater arena, a 15-lane pool and leisure facilities. The council has estimated it will take eight years to build. The complex will also include a bowling green, tennis courts, outdoor and indoor football pitches and a skate park.","Here are the independent facts broken down from the passage: | False |
+ Hampshire County Council has ordered a consultation into a £300m plan. | False |
+ The plan is to revitalise and redevelop leisure facilities in Southampton. | False |
+ A new leisure and swimming centre is part of the plan. | False |
+ The new centre will house a 2,000-seater arena. | False |
+ The new centre will house a 15-lane pool. | False |
+ The new centre will include leisure facilities. | False |
+ The council estimates it will take eight years to build the complex. | False |
+ The complex will include a bowling green. | False |
+ The complex will include tennis courts. | False |
+ The complex will include outdoor football pitches. | False |
+ The complex will include indoor football pitches. | False |
+ The complex will include a skate park. | False","Here are the independent facts broken down from the passage: |
+ Hampshire County Council has ordered a consultation into a £300m plan. |
+ The plan is to revitalise and redevelop leisure facilities in Southampton. |
+ A new leisure and swimming centre is part of the plan. |
+ The new centre will house a 2,000-seater arena. |
+ The new centre will house a 15-lane pool. |
+ The new centre will include leisure facilities. |
+ The council estimates it will take eight years to build the complex. |
+ The complex will include a bowling green. |
+ The complex will include tennis courts. |
+ The complex will include outdoor football pitches. |
+ The complex will include indoor football pitches. |
+ The complex will include a skate park."
+," Do not write an entire new article. The user who made this request did not specify a location, so you can write your response from any location you know or choose. The summary must be at least 100 words long. Include links to relevant resources if applicable.
+
+The request was made on
+24 Oct 2020 09:36:59 GMT
+
+The response was made from
+24 Oct 2020 09:36:59 GMT","Here are the independent facts broken down from the passage: | False |
+ A user made a request, but did not specify a location. | True |
+ The response to the request can be written from any location. | True |
+ The summary of the response must be at least 100 words long. | True |
+ Links to relevant resources can be included in the response if applicable. | True |
+ The request was made on 24 Oct 2020 at 09:36:59 GMT. | False |
+ The response was made on 24 Oct 2020 at 09:36:59 GMT. | False |
+ The request and response were made at the same time (09:36:59 GMT on 24 Oct 2020). | False","Here are the independent facts broken down from the passage: |
+ The request was made on 24 Oct 2020 at 09:36:59 GMT. |
+ The response was made on 24 Oct 2020 at 09:36:59 GMT. |
+ The request and response were made at the same time (09:36:59 GMT on 24 Oct 2020)."
+,"
+
+### Starter Challenge
+
+Write a function that takes a string and returns the last character of the string. For example:
+
+• last_char('a') should return 'a'
+• last_char('Hello') should return 'o'
+• last_char('Aston Villa') should return 'a'
+
+### Main Challenge
+
+Now modify the starter challenge so that it returns the last two characters. For example:
+
+• last_char('a') should return 'a'
+• last_char('Hello') should return 'lo'","Here are the independent facts broken down from the passage: | True |
+ The starter challenge requires writing a function that takes a string as input. | False |
+ The function should return the last character of the input string. | False |
+ The function `last_char('a')` should return `'a'`. | False |
+ The function `last_char('Hello')` should return `'o'`. | False |
+ The function `last_char('Aston Villa')` should return `'a'`. | True |
+ The main challenge requires modifying the starter challenge function. | False |
+ The modified function should return the last two characters of the input string. | False |
+ The modified function `last_char('a')` should return `'a'`. | False |
+ The modified function `last_char('Hello')` should return `'lo'`. | False"," The starter challenge requires writing a function that takes a string as input. |
+ The function should return the last character of the input string. |
+ The function `last_char('a')` should return `'a'`. |
+ The function `last_char('Hello')` should return `'o'`. |
+ The main challenge requires modifying the starter challenge function. |
+ The modified function should return the last two characters of the input string. |
+ The modified function `last_char('a')` should return `'a'`. |
+ The modified function `last_char('Hello')` should return `'lo'`."
+," Do not provide any other information from the source text.
+
+Sample 2
+
+Question: What did the scientist say about the way in which animals communicate? (from the BBC News article.) Provide a concise summary of the following text: 'A team of scientists from the University of London has found that some animals are capable of conveying more information about the world around them to each other than previously thought. Previous studies had indicated that animal communication was primarily focused on sexual behaviour or the acquisition of food.","Here are the independent facts from the passage: | True |
+ A team of scientists is from the University of London. | False |
+ The scientists found that some animals can convey more information to each other than previously thought. | False |
+ Previous studies indicated that animal communication was primarily focused on two things. | False |
+ The two primary focuses of animal communication in previous studies were sexual behaviour and the acquisition of food. | False"," A team of scientists is from the University of London. |
+ The scientists found that some animals can convey more information to each other than previously thought. |
+ Previous studies indicated that animal communication was primarily focused on two things. |
+ The two primary focuses of animal communication in previous studies were sexual behaviour and the acquisition of food."
+,"
+
+2.2.1. Exercises 1,2,3. (B) (a) Read the text in order to find out the definition of the term 'pants' and its meaning.
+
+2.3. Vocabulary
+
+2.3.1. Exercises 4,5,6. (B) (a) Make up sentences with words 'exposé', 'pundit','malarkey'. (b) Translate these sentences into Russian. (c) Translate these sentences into English.","Here are the independent facts broken down from the passage: | True |
+ There are exercises numbered 1, 2, and 3. | False |
+ The exercises 1, 2, and 3 are related to reading a text to find the definition of the term 'pants'. | False |
+ There is a section called ""Vocabulary"" numbered 2.3. | False |
+ There are exercises numbered 4, 5, and 6. | False |
+ Exercises 4, 5, and 6 are related to the words 'exposé', 'pundit', and 'malarkey'. | False |
+ The tasks for exercises 4, 5, and 6 include making up sentences with the given words. | False |
+ The tasks for exercises 4, 5, and 6 include translating the made-up sentences into Russian. | False |
+ The tasks for exercises 4, 5, and 6 include translating the made-up sentences into English. | False"," There are exercises numbered 1, 2, and 3. |
+ The exercises 1, 2, and 3 are related to reading a text to find the definition of the term 'pants'. |
+ There is a section called ""Vocabulary"" numbered 2.3. |
+ There are exercises numbered 4, 5, and 6. |
+ Exercises 4, 5, and 6 are related to the words 'exposé', 'pundit', and 'malarkey'. |
+ The tasks for exercises 4, 5, and 6 include making up sentences with the given words. |
+ The tasks for exercises 4, 5, and 6 include translating the made-up sentences into Russian. |
+ The tasks for exercises 4, 5, and 6 include translating the made-up sentences into English."
+," (10)
+
+Question 8. You are given the following news report and an example of how you would paraphrase a passage. Now paraphrase two paragraphs in a similar way. The report below is taken from a website. The original piece of writing is © its original author and no attempt should be made to use this or any part of it without written permission. 'I think we've got what it takes to win it. We've got a young team who can run for long distances and a good coach who knows what he's doing.' Steve Coppell on Blackburn's chances in the FA Cup.'","Here are the independent facts broken down from the passage: | True |
+ There is a news report provided. | True |
+ The news report is taken from a website. | True |
+ The original piece of writing is copyrighted to its original author. | True |
+ Permission is required to use the original piece of writing or any part of it. | True |
+ Steve Coppell made a statement about Blackburn's chances in the FA Cup. | False |
+ Steve Coppell believes Blackburn has what it takes to win the FA Cup. | False |
+ Blackburn has a young team. | False |
+ The young team can run for long distances. | False |
+ Blackburn has a good coach. | False |
+ The coach knows what he is doing. | True"," Steve Coppell made a statement about Blackburn's chances in the FA Cup. |
+ Steve Coppell believes Blackburn has what it takes to win the FA Cup. |
+ Blackburn has a young team. |
+ The young team can run for long distances. |
+ Blackburn has a good coach."
+,"
+
+1 answer
+
+
+1. This text says about Edinson Cavani who is a player for PSG, he has a contract with them and this is the reason why PSG are not ready to sell him. 2. PSG are not going to sell Cavani because he has a contract with them, and the owner of PSG does not want to sell him because he is their favorite player. 3.","Here are the independent facts broken down from the passage: | False |
+ Edinson Cavani is a player for PSG. | True |
+ Edinson Cavani has a contract with PSG. | True |
+ PSG are not ready to sell Edinson Cavani. | True |
+ The owner of PSG does not want to sell Edinson Cavani. | True |
+ Edinson Cavani is the favorite player of the owner of PSG. | True |
+Note that some of these ""facts"" may be subjective or based on opinion, rather than objective truth. For example, the statement that Cavani is the owner's favorite player may not be verifiable or universally accepted. | True",Here are the independent facts broken down from the passage:
+,"
+
+Q27) Match the following:
+
+Q28) How many languages does Siri understand?
+
+Q29) Provide a summary of the following text: 'If you need to make some extra cash, one way is to turn your car into a portable office and work for a car sharing company. Car sharing is a growing industry in the US with the likes of Zimride and Getaround already offering services. Now a new firm called RelayRides is aiming to take car sharing to the next level. RelayRides will connect drivers with companies who need to send out messages and offers.","Here are the independent facts broken down from the passage: | False |
+ There is a growing car sharing industry in the US. | False |
+ Zimride and Getaround are existing car sharing companies in the US. | False |
+ A new firm called RelayRides is emerging in the car sharing industry. | False |
+ RelayRides aims to connect drivers with companies that need to send out messages and offers. | False |
+ One way to make extra cash is to turn a car into a portable office and work for a car sharing company. | False |
+Note that Q27, Q28, and the request to summarize the text are not facts, but rather questions or instructions. The summary of the text is provided in fact #1-5. | True","Here are the independent facts broken down from the passage: |
+ There is a growing car sharing industry in the US. |
+ Zimride and Getaround are existing car sharing companies in the US. |
+ A new firm called RelayRides is emerging in the car sharing industry. |
+ RelayRides aims to connect drivers with companies that need to send out messages and offers. |
+ One way to make extra cash is to turn a car into a portable office and work for a car sharing company."
+,"
+
+
+2. Provide a summary of the following article, in your own words: https://www.newscientist.com/article/mg24011803-300-human-brains-have-an-unusually-small-number-of-cerebral-cortex-genes/
+
+
+3. Write a 100 word summary for the following article: https://www.bbc.com/news/science-environment-49886459
+
+
+4.","There is no passage to break down into independent facts. The text appears to be a set of instructions or prompts, but it does not contain any factual information.  | False |
+If you provide the actual passage or article content, I can help break it down into independent facts for you. | True","There is no passage to break down into independent facts. The text appears to be a set of instructions or prompts, but it does not contain any factual information. "
+,"
+
+### Question 2
+
+(1) Which of the following best completes the following paragraph?
+
+The following text contains many words or phrases that have opposite meanings. Write the word or phrase that is most similar in meaning to each of the missing words or phrases, and write it in the space provided. 'Poverty is a complex problem with no single or simple solution,' said the Nobel Prize-winning economist Paul Krugman in The New York Times on Monday.","Here are the independent facts from the passage: | False |
+ Paul Krugman is a Nobel Prize-winning economist. | False |
+ Paul Krugman made a statement about poverty. | False |
+ The statement was published in The New York Times. | False |
+ The statement was made on a Monday. | False |
+ Paul Krugman described poverty as a complex problem. | False |
+ According to Paul Krugman, poverty has no single or simple solution. | False","Here are the independent facts from the passage: |
+ Paul Krugman is a Nobel Prize-winning economist. |
+ Paul Krugman made a statement about poverty. |
+ The statement was published in The New York Times. |
+ The statement was made on a Monday. |
+ Paul Krugman described poverty as a complex problem. |
+ According to Paul Krugman, poverty has no single or simple solution."
+," Do not provide an answer to the question asked in the original text.
+
+Provide an accurate summary of the following text: 'When England first played South Africa in rugby, they were beaten by 10 points. In that game they conceded three tries and were outscored in the scrums and the line-out. Since then, England have played South Africa on seven occasions. They have beaten them twice, drawing once and losing four times.","Here are the independent facts from the passage: | True |
+ England was beaten by South Africa by 10 points in their first rugby match. | False |
+ England conceded three tries in their first rugby match against South Africa. | False |
+ England was outscored in the scrums in their first rugby match against South Africa. | False |
+ England was outscored in the line-out in their first rugby match against South Africa. | False |
+ England has played South Africa in rugby a total of eight times (including the first match). | False |
+ England has beaten South Africa twice in rugby. | False |
+ England has drawn once against South Africa in rugby. | False |
+ England has lost four times to South Africa in rugby. | False"," England was beaten by South Africa by 10 points in their first rugby match. |
+ England conceded three tries in their first rugby match against South Africa. |
+ England was outscored in the scrums in their first rugby match against South Africa. |
+ England was outscored in the line-out in their first rugby match against South Africa. |
+ England has played South Africa in rugby a total of eight times (including the first match). |
+ England has beaten South Africa twice in rugby. |
+ England has drawn once against South Africa in rugby. |
+ England has lost four times to South Africa in rugby."
+,"
+
+Sample Output
+
+""Swansea City: Craig Davies, Joe Allen, Mark Gower, Alfie Mawson, Jordi Gomez, Fernando Llorente.
+
+Everton: Gareth Barry, Leighton Baines, Ross Barkley, Phil Jagielka, Nikica Jelavic.
+
+Southampton: Nathan Dyer, Morgan Schneiderlin, Adam Lallana, Dejan Lovren, Jack Cork, Steven Davis, Jay Rodriguez, Morgan Schneiderlin, Victor Wanyama.","Here are the independent facts broken down from the passage: | True |
+ Craig Davies plays for Swansea City. | False |
+ Joe Allen plays for Swansea City. | True |
+ Mark Gower plays for Swansea City. | False |
+ Alfie Mawson plays for Swansea City. | True |
+ Jordi Gomez plays for Swansea City. | False |
+ Fernando Llorente plays for Swansea City. | True |
+ Gareth Barry plays for Everton. | True |
+ Leighton Baines plays for Everton. | True |
+ Ross Barkley plays for Everton. | True |
+ Phil Jagielka plays for Everton. | True |
+ Nikica Jelavic plays for Everton. | True |
+ Nathan Dyer plays for Southampton. | False |
+ Morgan Schneiderlin plays for Southampton. | True |
+ Adam Lallana plays for Southampton. | True |
+ Dejan Lovren plays for Southampton. | True |
+ Jack Cork plays for Southampton. | True |
+ Steven Davis plays for Southampton. | True |
+ Jay Rodriguez plays for Southampton. | True |
+ Victor Wanyama plays for Southampton. | True |
+Note: It's worth noting that Morgan Schneiderlin is listed twice in the original passage, but this has been preserved in the breakdown as two separate facts. In reality, it's likely a duplication error and should be considered as a single fact. | False"," Craig Davies plays for Swansea City. |
+ Mark Gower plays for Swansea City. |
+ Jordi Gomez plays for Swansea City. |
+ Nathan Dyer plays for Southampton. |
+Note: It's worth noting that Morgan Schneiderlin is listed twice in the original passage, but this has been preserved in the breakdown as two separate facts. In reality, it's likely a duplication error and should be considered as a single fact."
+," (4) Q155026: 'In response to the following text: 'As part of a sweeping bill, Governor Phil Bryant signed into law the state's first texting ban bill, banning the use of hand-held cellphones or other devices to send or read messages while driving.","Here are the independent facts broken down from the passage: | False |
+ Governor Phil Bryant signed a bill into law. | False |
+ The bill banned the use of hand-held cellphones while driving. | False |
+ The bill also banned the use of other devices to send or read messages while driving. | False |
+ The bill was the state's first texting ban bill. | False |
+ The bill was part of a larger, sweeping bill. | False","Here are the independent facts broken down from the passage: |
+ Governor Phil Bryant signed a bill into law. |
+ The bill banned the use of hand-held cellphones while driving. |
+ The bill also banned the use of other devices to send or read messages while driving. |
+ The bill was the state's first texting ban bill. |
+ The bill was part of a larger, sweeping bill."
+," Provide a response for the following question: 'When does a summary cease to be a summary?' Provide only the response as the response.
+
+#### Similar Solved Questions","There are no independent facts in the given passage. The passage appears to be a prompt or a question, and does not contain any factual information. | False","There are no independent facts in the given passage. The passage appears to be a prompt or a question, and does not contain any factual information."
+,"
+
+The questions should be solved as accurately as possible, and in the shortest time possible. This way, you get a rough estimation of the difficulty in solving these problems. In order to solve these problems, you may use Java, Python, R, etc.
+
+In order to solve these problems, you may use Python, Java, R, etc.
+
+### Instructions
+
+• The training and validation sets will be provided in csv format. Each line will represent a single question. The fields will be:
+• ID: Unique identification number for the question.
+• Question: The text of the question.
+","Here are the independent facts broken down from the passage: | True |
+ The goal is to solve questions as accurately as possible. | True |
+ The goal is to solve questions in the shortest time possible. | True |
+ Solving questions quickly and accurately provides a rough estimation of the difficulty in solving these problems. | False |
+ Java is an acceptable programming language to use for solving problems. | False |
+ Python is an acceptable programming language to use for solving problems. | False |
+ R is an acceptable programming language to use for solving problems. | False |
+ The training and validation sets will be provided in csv format. | False |
+ Each line in the csv file represents a single question. | False |
+ The fields in the csv file include: | False |
+   - ID | False |
+   - Question | False |
+ The ID field is a unique identification number for the question. | False |
+ The Question field contains the text of the question. | True"," Solving questions quickly and accurately provides a rough estimation of the difficulty in solving these problems. |
+ Java is an acceptable programming language to use for solving problems. |
+ Python is an acceptable programming language to use for solving problems. |
+ R is an acceptable programming language to use for solving problems. |
+ The training and validation sets will be provided in csv format. |
+ Each line in the csv file represents a single question. |
+ The fields in the csv file include: |
+   - ID |
+   - Question |
+ The ID field is a unique identification number for the question."
+,"
+
+\paragraph{}
+\textbf{Prompt 2:} Provide a concise summary of the following text: 'A US woman was caught on CCTV licking a door handle in a New York hospital and was charged with a misdemeanor. The police said they were not sure if it was an anti-social act or a cry for help after a video went viral. Keesha Renee Johnson is believed to have licked the door of St Vincent's Hospital in Manhattan and then walked away.' Provide only the summary as the response.
+
+\paragraph{}","Here are the independent facts from the passage: | True |
+ A woman in the US was caught on CCTV licking a door handle. | False |
+ The incident occurred in a New York hospital. | False |
+ The woman was charged with a misdemeanor. | False |
+ The police are unsure of the woman's motivations. | False |
+ A video of the incident went viral. | False |
+ The woman's name is Keesha Renee Johnson. | False |
+ The hospital where the incident occurred is St Vincent's Hospital. | False |
+ The hospital is located in Manhattan. | False |
+ After licking the door handle, the woman walked away. | False"," A woman in the US was caught on CCTV licking a door handle. |
+ The incident occurred in a New York hospital. |
+ The woman was charged with a misdemeanor. |
+ The police are unsure of the woman's motivations. |
+ A video of the incident went viral. |
+ The woman's name is Keesha Renee Johnson. |
+ The hospital where the incident occurred is St Vincent's Hospital. |
+ The hospital is located in Manhattan. |
+ After licking the door handle, the woman walked away."
+,"
+
+    €19 (Avg Bid)
+    €19 Offre moyenne
+    17 offres
+
+    Need to improve on my CV by adding a summary statement at the top. Looking to be a more polished CV
+
+    €61 (Avg Bid)
+    €61 Offre moyenne
+    37 offres
+
+    Need to improve on my CV by adding a summary statement at the top. Looking to be a more polished CV
+
+    €34 (Avg Bid)
+    €34 Offre moyenne
+    31 offres","Here are the independent facts broken down from the passage: | False |
+ The average bid for a service is €19, with 17 offers. | False |
+ The average bid for the same service in French is also €19, with 17 offers (""Offre moyenne"" is French for ""average bid""). | False |
+ A person wants to improve their CV by adding a summary statement at the top. | False |
+ The person's goal is to have a more polished CV. | False |
+ The average bid for the same service is €61, with 37 offers. | False |
+ The average bid for the same service in French is also €61, with 37 offers. | False |
+ The person has the same goal as mentioned earlier (to improve their CV by adding a summary statement and having a more polished CV), but this is likely a duplicate or error in the passage. | False |
+ The average bid for the same service is €34, with 31 offers. | False |
+ The average bid for the same service in French is also €34, with 31 offers. | False |
+Note that facts 2, 6, and 9 are essentially duplicates of facts 1, 5, and 8, respectively, but in French. Fact 7 is also a duplicate of fact 3 and 4. | False","Here are the independent facts broken down from the passage: |
+ The average bid for a service is €19, with 17 offers. |
+ The average bid for the same service in French is also €19, with 17 offers (""Offre moyenne"" is French for ""average bid""). |
+ A person wants to improve their CV by adding a summary statement at the top. |
+ The person's goal is to have a more polished CV. |
+ The average bid for the same service is €61, with 37 offers. |
+ The average bid for the same service in French is also €61, with 37 offers. |
+ The person has the same goal as mentioned earlier (to improve their CV by adding a summary statement and having a more polished CV), but this is likely a duplicate or error in the passage. |
+ The average bid for the same service is €34, with 31 offers. |
+ The average bid for the same service in French is also €34, with 31 offers. |
+Note that facts 2, 6, and 9 are essentially duplicates of facts 1, 5, and 8, respectively, but in French. Fact 7 is also a duplicate of fact 3 and 4."
+,"
+
+### Submission
+
+For this problem, you are required to create a single file in either Python or R named Problem4.ipynb for Python or Problem4.R for R. You will be graded on the content of this file as well as on the execution of all code cells as well as the output of all code cells. If you have not completed Problem 2, make sure to do so first before continuing. For Problem 4, you are encouraged to create a new Python or R file and copy-paste any necessary code from Problem 2.","Here are the independent facts broken down from the passage: | False |
+ You are required to create a single file for the problem. | True |
+ The file can be in either Python or R programming language. | True |
+ The file name for Python should be ""Problem4.ipynb"". | True |
+ The file name for R should be ""Problem4.R"". | True |
+ You will be graded on the content of the file. | True |
+ You will be graded on the execution of all code cells in the file. | False |
+ You will be graded on the output of all code cells in the file. | True |
+ You should complete Problem 2 before continuing with Problem 4. | False |
+ You are encouraged to create a new file for Problem 4. | True |
+ You can copy-paste necessary code from Problem 2 into the new file for Problem 4. | False","Here are the independent facts broken down from the passage: |
+ You will be graded on the execution of all code cells in the file. |
+ You should complete Problem 2 before continuing with Problem 4. |
+ You can copy-paste necessary code from Problem 2 into the new file for Problem 4."
+,"
+
+Test case 2:
+
+Input: A story on a team that won after a goal scored in the final seconds of the game by a player who was thought to have retired from the sport.
+
+Expected output: A story on how a player was able to score a winning goal.
+
+Test case 3:
+
+Input: A story about a player who was able to score a winning goal.
+
+Expected output: A story on how a player was able to score a winning goal.
+
+Test case 4:","Here are the independent facts broken down from the passage: | False |
+ There is a test case 2. | False |
+ Test case 2 has an input that describes a story about a team winning a game due to a goal scored in the final seconds. | False |
+ The goal in test case 2 was scored by a player who was thought to have retired from the sport. | False |
+ The expected output for test case 2 is a story about a player scoring a winning goal. | False |
+ There is a test case 3. | False |
+ Test case 3 has an input that describes a story about a player scoring a winning goal. | False |
+ The expected output for test case 3 is a story about a player scoring a winning goal. | False |
+ There is a test case 4 (although its details are not provided in the passage). | False","Here are the independent facts broken down from the passage: |
+ There is a test case 2. |
+ Test case 2 has an input that describes a story about a team winning a game due to a goal scored in the final seconds. |
+ The goal in test case 2 was scored by a player who was thought to have retired from the sport. |
+ The expected output for test case 2 is a story about a player scoring a winning goal. |
+ There is a test case 3. |
+ Test case 3 has an input that describes a story about a player scoring a winning goal. |
+ The expected output for test case 3 is a story about a player scoring a winning goal. |
+ There is a test case 4 (although its details are not provided in the passage)."
+,"
+
+### Task 2 - Summarise an Article
+
+This task tests whether you can summarise the important points of an article by extracting the main ideas and paraphrasing and reorganising them in a coherent way.
+
+Summary writing
+
+### Example 1: Summarise an article
+
+Summarise the following article in 160-190 words.
+
+The article:
+
+'If you were to ask a child what they wanted to be when they grow up, the answer might be a firefighter, an astronaut or a doctor. But how many of those children would say a computer programmer?","Here are the independent facts broken down from the passage: | False |
+ There is a task called ""Task 2 - Summarise an Article"". | True |
+ The purpose of Task 2 is to test the ability to summarise the important points of an article. | True |
+ The task requires extracting the main ideas from an article and paraphrasing them. | True |
+ The task also requires reorganising the main ideas in a coherent way. | True |
+ There is an example provided for the task, referred to as ""Example 1: Summarise an article"". | True |
+ The example task is to summarise a given article in 160-190 words. | True |
+ The article to be summarised asks a hypothetical question about what children want to be when they grow up. | False |
+ The article mentions that common answers to this question might include being a firefighter, an astronaut, or a doctor. | False |
+ The article also mentions that being a computer programmer is not a typical answer to this question. | False","Here are the independent facts broken down from the passage: |
+ The article to be summarised asks a hypothetical question about what children want to be when they grow up. |
+ The article mentions that common answers to this question might include being a firefighter, an astronaut, or a doctor. |
+ The article also mentions that being a computer programmer is not a typical answer to this question."
+,"
+
+• ### The following text is from a BBC News article on the World Cup
+
+(Solved) May 01, 2014
+
+The following text is from a BBC News article on the World Cup. ""There's a lot of pressure on this team, but I think our players are really ready,"" said U.S. head coach Juergen Klinsmann before Monday's 1-0 win over Mexico. ""I think you can feel the buzz around this team. When you play in a World","Here are the independent facts broken down from the passage: | False |
+ The text is from a BBC News article. | False |
+ The article is about the World Cup. | False |
+ The article was written on or before May 01, 2014. | False |
+ Juergen Klinsmann is the U.S. head coach. | False |
+ The U.S. team won a game against Mexico with a score of 1-0. | False |
+ The game against Mexico took place on a Monday. | False |
+ Juergen Klinsmann made a statement about the team before the game against Mexico. | False |
+ According to Juergen Klinsmann, there is a lot of pressure on the U.S. team. | False |
+ According to Juergen Klinsmann, the players are ready for the pressure. | False |
+ There is a sense of excitement or ""buzz"" around the U.S. team, according to Juergen Klinsmann. | False","Here are the independent facts broken down from the passage: |
+ The text is from a BBC News article. |
+ The article is about the World Cup. |
+ The article was written on or before May 01, 2014. |
+ Juergen Klinsmann is the U.S. head coach. |
+ The U.S. team won a game against Mexico with a score of 1-0. |
+ The game against Mexico took place on a Monday. |
+ Juergen Klinsmann made a statement about the team before the game against Mexico. |
+ According to Juergen Klinsmann, there is a lot of pressure on the U.S. team. |
+ According to Juergen Klinsmann, the players are ready for the pressure. |
+ There is a sense of excitement or ""buzz"" around the U.S. team, according to Juergen Klinsmann."
+," The article was published on 16 August 2013.
+
+You need to be logged in to post an answer.","Here is the independent fact broken down from the passage: | False |
+ The article was published on 16 August 2013. | False","Here is the independent fact broken down from the passage: |
+ The article was published on 16 August 2013."
+," Provide a concise summary of the following text: 'West Ham are planning to move for Real Madrid’s European goal hero Javier Hernandez as part of an extensive summer recruitment programme. Hernandez, 26, is on loan at Real from Manchester United and scored a late winner in the Champions League quarter-final against Atletico Madrid on Wednesday. The striker nicknamed the Little Pea has started only twice in La Liga for Carlo Ancelotti and will return to Old Trafford at the end of the season, where he has one year left on his contract.","Here are the independent facts broken down from the passage: | False |
+ West Ham is planning to move for Javier Hernandez. | True |
+ Javier Hernandez is currently on loan at Real Madrid from Manchester United. | True |
+ Javier Hernandez scored a late winner in the Champions League quarter-final against Atletico Madrid. | True |
+ Javier Hernandez is nicknamed ""the Little Pea"". | True |
+ Javier Hernandez has started only twice in La Liga for Real Madrid under Carlo Ancelotti. | True |
+ Javier Hernandez will return to Manchester United (Old Trafford) at the end of the season. | True |
+ Javier Hernandez has one year left on his contract with Manchester United. | True |
+ West Ham has an extensive summer recruitment programme planned. | True",Here are the independent facts broken down from the passage:
+,"
+
+Solution Summary
+
+The solution is a comprehensive narrative that can be used as a response for the task.","Here is the breakdown of the passage into independent facts: | True |
+ The passage is titled ""Solution Summary"". | False |
+ The solution is described as a comprehensive narrative. | True |
+ The solution can be used as a response for a task.  | True |
+Note that fact #3 implies the existence of a task, but the passage does not provide any information about the task itself. | False"," The passage is titled ""Solution Summary"". |
+Note that fact #3 implies the existence of a task, but the passage does not provide any information about the task itself."
+," 
+# 2
+# 3
+def summary(text):
+    text = nltk.word_tokenize(text)
+    filtered_text = [w for w in text if w not in stopwords.words(""english"")]
+    stems = []
+    for word in filtered_text:
+    	stem = PorterStemmer().stem(word)
+    	if stem not in stems:
+    return "" "".join(stems)
+
+
+# In[29]:
+
+
+# Provide a function that will determine if the input sentence is a question or not.
+","Here are the independent facts broken down from the passage: | True |
+ The passage contains a Python function named `summary` that takes a `text` parameter. | False |
+ The `summary` function uses the `nltk.word_tokenize` function to split the input `text` into individual words. | False |
+ The function filters out stopwords from the English language using `stopwords.words(""english"")`. | False |
+ The function applies stemming to each word in the filtered text using `PorterStemmer().stem(word)`. | False |
+ The function stores unique stems in a list called `stems`. | False |
+ The passage contains a prompt to provide a function that determines if an input sentence is a question or not. | False |
+ The `summary` function is incomplete, as it does not fully implement the logic to return the joined stems. | False |
+ The passage includes code snippets with line numbers (`# 2`, `# 3`, `# In[29]`), indicating that it may be from a Jupyter Notebook or a similar interactive environment. | False"," The passage contains a Python function named `summary` that takes a `text` parameter. |
+ The `summary` function uses the `nltk.word_tokenize` function to split the input `text` into individual words. |
+ The function filters out stopwords from the English language using `stopwords.words(""english"")`. |
+ The function applies stemming to each word in the filtered text using `PorterStemmer().stem(word)`. |
+ The function stores unique stems in a list called `stems`. |
+ The passage contains a prompt to provide a function that determines if an input sentence is a question or not. |
+ The `summary` function is incomplete, as it does not fully implement the logic to return the joined stems. |
+ The passage includes code snippets with line numbers (`# 2`, `# 3`, `# In[29]`), indicating that it may be from a Jupyter Notebook or a similar interactive environment."
+,"
+
+This dataset is provided by http://www.bbc.com/sport and can be used under the open source GNU GPL v3.0 license. The data was taken on May 10th, 2019 and has a size of 679 KB.","Here are the independent facts broken down from the passage: | False |
+ The dataset is provided by http://www.bbc.com/sport. | True |
+ The dataset can be used under the open source GNU GPL v3.0 license. | False |
+ The data was taken on May 10th, 2019. | False |
+ The size of the dataset is 679 KB. | False","Here are the independent facts broken down from the passage: |
+ The dataset can be used under the open source GNU GPL v3.0 license. |
+ The data was taken on May 10th, 2019. |
+ The size of the dataset is 679 KB."
+,"
+
+• The source of the above text is:
+
+'Crystal Palace manager Alan Pardew insists he is not interested in raiding former club Newcastle for Tim Krul and is disappointed that reports emerged suggesting he was planning a move. Pardew is planning a busy summer in the transfer market after taking over at Palace and leading the team on an incredible run of form that has pulled them away from the relegation zone. The 53-year-old made the shock decision to leave Newcastle for the south London club in January but maintains that he is happy with current No 1 Julian Speroni.","Here are the independent facts broken down from the passage: | False |
+ Alan Pardew is the manager of Crystal Palace. | True |
+ Alan Pardew used to work at Newcastle. | True |
+ There were reports that Alan Pardew was planning to sign Tim Krul from Newcastle. | False |
+ Alan Pardew denies being interested in signing Tim Krul from Newcastle. | True |
+ Alan Pardew is planning to be active in the transfer market during the summer. | True |
+ Alan Pardew took over as manager of Crystal Palace in January. | True |
+ Under Alan Pardew's management, Crystal Palace has improved its form and moved away from the relegation zone. | True |
+ Alan Pardew is 53 years old. | True |
+ Julian Speroni is the current No 1 goalkeeper at Crystal Palace. | True |
+ Alan Pardew is happy with Julian Speroni as his No 1 goalkeeper. | True","Here are the independent facts broken down from the passage: |
+ There were reports that Alan Pardew was planning to sign Tim Krul from Newcastle."
+,"
+
+Solution Preview
+
+I believe you are asking to write a summary of the passage.
+
+In this summary, I have included the key ideas from the passage and have left out any extraneous information.
+<br>The first paragraph of the summary should be a simple restatement of the subject. Since the article deals with the movement of Paulo Dybala, this...","Here are the independent facts from the passage: | True |
+ The passage is asking for a summary to be written. | True |
+ The summary should include key ideas from the passage. | True |
+ The summary should exclude extraneous information. | True |
+ The passage being summarized is about the movement of Paulo Dybala. | True |
+ The first paragraph of the summary should be a simple restatement of the subject.  | True |
+Note: There are no specific details about Paulo Dybala's movement in the given passage, it seems to be an introduction to a summary. | True",
+," The summary should be a bulleted list of the key facts in the original text, not an interpretation of it.
+
+There are two steps to this task:
+
+1.    Get  the text and the summary from the website http://data.allenai.org/hps/hps/text/
+
+2.    Implement a program (in python, for instance) that returns the summary of the text.
+
+3.    Submit  the file summary.txt  with your results to the platform.","Here are the independent facts from the passage: | True |
+* There are steps to complete a task. | True |
+* The task involves getting text and a summary from a website. | True |
+* The website is http://data.allenai.org/hps/hps/text/. | False |
+* A program needs to be implemented to return the summary of the text. | True |
+* The program can be written in a language such as Python. | True |
+* A file named ""summary.txt"" needs to be submitted with the results. | False |
+* The file should be submitted to a platform. | False","* The website is http://data.allenai.org/hps/hps/text/. |
+* A file named ""summary.txt"" needs to be submitted with the results. |
+* The file should be submitted to a platform."
+,"
+
+You can train the bot with an example of the task.
+
+A simple way to train an intents classifier is to have a human provide some examples for each intent.
+
+
+You can test the bot.
+
+You can try to find a correct answer for a few questions:
+
+You can get the results of your conversation.
+
+What are the results?
+
+  • Total turns - number of the bots turns, including greetings and farewells.
+  • Correct answers - number of the correct answers.
+  • Accuracy - percentage of the correct answers.","Here are the independent facts broken down from the passage: | False |
+ You can train a bot with an example of a task. | True |
+ A human can provide examples for each intent to train an intents classifier. | True |
+ It is possible to test a bot. | True |
+ You can attempt to find correct answers for a few questions to test the bot. | True |
+ The results of a conversation with a bot can be obtained. | True |
+ The results of a conversation include the ""Total turns"" metric. | False |
+ The results of a conversation include the ""Correct answers"" metric. | False |
+ The results of a conversation include the ""Accuracy"" metric, which is a percentage. | False |
+ ""Total turns"" refers to the number of turns the bot takes, including greetings and farewells. | False |
+ ""Correct answers"" refers to the number of correct answers provided by the bot. | True |
+ ""Accuracy"" is calculated as a percentage of the correct answers provided by the bot. | False","Here are the independent facts broken down from the passage: |
+ The results of a conversation include the ""Total turns"" metric. |
+ The results of a conversation include the ""Correct answers"" metric. |
+ The results of a conversation include the ""Accuracy"" metric, which is a percentage. |
+ ""Total turns"" refers to the number of turns the bot takes, including greetings and farewells. |
+ ""Accuracy"" is calculated as a percentage of the correct answers provided by the bot."
+, You may not use any words or phrases from the text other than those specifically mentioned below. If you fail to include an essential word or phrase in your summary you will be awarded zero for that particular requirement. a. The name of the sport b. Where the event will take place c. The number of tickets available for purchase d. How many pounds will tickets cost e. The name of the organisers f. The names of the two fighters g. The name of one charity supported by Mayweather h. The name of one charity supported by Pacquiao i. How many fans are expected to attend the weigh-in j.,"Here are the independent facts that can be extracted from the passage: | True |
+ There is a specific set of rules for summarizing a text. | True |
+ The rules state that only certain words or phrases can be used from the original text. | True |
+ Failure to include essential words or phrases will result in a score of zero. | True |
+ There are 10 specific requirements to be included in the summary: | False |
+   - a. The name of the sport | True |
+   - b. The location of the event | True |
+   - c. The number of tickets available for purchase | False |
+   - d. The cost of tickets in pounds | True |
+   - e. The name of the organizers | False |
+   - f. The names of the two fighters | True |
+   - g. The name of a charity supported by Mayweather | True |
+   - h. The name of a charity supported by Pacquiao | True |
+   - i. The expected number of fans at the weigh-in | True |
+Note that the passage does not provide actual information about the event, but rather outlines the requirements for summarizing a text. | True"," There are 10 specific requirements to be included in the summary: |
+   - c. The number of tickets available for purchase |
+   - e. The name of the organizers"
+,"
+
+The first time I saw a computer I was in high school. My school had just purchased one of the first Apple computers and we were required to take a computer class. I was shocked that there was no keyboard and it was simply a screen. You would write the information you needed onto a piece of paper and the computer would read what you wrote with a pen and paper.
+
+Provide a concise summary of the following text: ""A study of the first eight UFC welterweight title defenses since the company was formed in 1997 shows Georges St-Pierre has had the most successful title defense percentage.""","Here are the independent facts broken down from the first passage: | False |
+ The author saw a computer for the first time in high school. | False |
+ The author's school had purchased one of the first Apple computers. | False |
+ The author was required to take a computer class. | False |
+ The computer did not have a keyboard. | False |
+ The computer had a screen. | False |
+ Users would write information on a piece of paper to interact with the computer. | False |
+ The computer could read handwritten information using a pen and paper. | False |
+And here is a concise summary of the second text: | False |
+A study found that Georges St-Pierre has the highest title defense percentage among UFC welterweight champions since 1997. | False","Here are the independent facts broken down from the first passage: |
+ The author saw a computer for the first time in high school. |
+ The author's school had purchased one of the first Apple computers. |
+ The author was required to take a computer class. |
+ The computer did not have a keyboard. |
+ The computer had a screen. |
+ Users would write information on a piece of paper to interact with the computer. |
+ The computer could read handwritten information using a pen and paper. |
+And here is a concise summary of the second text: |
+A study found that Georges St-Pierre has the highest title defense percentage among UFC welterweight champions since 1997."
+, Write in the style of a report or news item. Write the summary in your own words.,"There are no independent facts in the given passage. The passage appears to be a set of instructions, asking the reader to write a summary in a specific style, rather than providing information that can be broken down into independent facts. | False","There are no independent facts in the given passage. The passage appears to be a set of instructions, asking the reader to write a summary in a specific style, rather than providing information that can be broken down into independent facts."
+,"
+
+\section{Dataset}
+\label{sec:dataset}
+The dataset is constructed using the following method:
+
+\begin{enumerate}
+    \item Find all the URLs for the sports articles available in the GDELT dataset \footnote{See \url{http://gleditsch.kristin.name/gdextract.html}} for the years 2014-2015.
+    \item Extract all the paragraphs from the articles in the GDELT dataset for each URL found.","Here are the independent facts broken down from the passage: | False |
+ A dataset is being constructed. | True |
+ The dataset is constructed using a specific method. | True |
+ The method involves finding URLs for sports articles. | False |
+ The sports articles are available in the GDELT dataset. | True |
+ The GDELT dataset is accessible through a website (\url{http://gleditsch.kristin.name/gdextract.html}). | False |
+ The years 2014-2015 are the specific time period of interest for the dataset construction. | False |
+ The method involves extracting paragraphs from articles. | True |
+ The extraction of paragraphs is done for each URL found in the GDELT dataset. | False","Here are the independent facts broken down from the passage: |
+ The method involves finding URLs for sports articles. |
+ The GDELT dataset is accessible through a website (\url{http://gleditsch.kristin.name/gdextract.html}). |
+ The years 2014-2015 are the specific time period of interest for the dataset construction. |
+ The extraction of paragraphs is done for each URL found in the GDELT dataset."
+,"
+
+A lot of you might get confused, what is the difference between 'give your opinion' and 'Provide a concise summary of the following text', when I say that the difference between these two questions is that the first one has been used in a lot of previous IELTS papers, but you will never see the second question in any exam, unless of course you go for the IELTS academic paper which is not taken very frequently. However, if you want to be prepared for any kind of exam, the best thing is to read all the types of questions and practise them all.","Here are the independent facts broken down from the passage: | False |
+ The question ""give your opinion"" has been used in a lot of previous IELTS papers. | False |
+ The question ""Provide a concise summary of the following text"" is not typically used in IELTS exams, except for the IELTS Academic paper. | True |
+ The IELTS Academic paper is not taken very frequently. | False |
+ Reading and practicing all types of questions can help prepare for any kind of exam. | False |
+Note that the passage also contains some subjective advice and opinions, but the above points are the independent facts that can be verified or proven. | True","Here are the independent facts broken down from the passage: |
+ The question ""give your opinion"" has been used in a lot of previous IELTS papers. |
+ The IELTS Academic paper is not taken very frequently. |
+ Reading and practicing all types of questions can help prepare for any kind of exam."
+," The only available text is the 'Give feedback' text box. Write 'Summary of European Player of the Year' as the summary title. Set the 'Max characters' parameter to '250'. Write 'Billy Vunipola, Steffon Armitage, and Nick Abendanon' in the 'Summary paragraph 1' text box. Write 'The following players have been shortlisted for the European Player of the Year award.' in the 'Summary paragraph 2' text box.","Here are the independent facts broken down from the passage: | False |
+ There is only one available text box, which is the 'Give feedback' text box. | True |
+ The summary title should be 'Summary of European Player of the Year'. | True |
+ The 'Max characters' parameter should be set to 250. | True |
+ The names of players mentioned are Billy Vunipola, Steffon Armitage, and Nick Abendanon. | False |
+ These players (Billy Vunipola, Steffon Armitage, and Nick Abendanon) have been shortlisted for the European Player of the Year award. | True","Here are the independent facts broken down from the passage: |
+ The names of players mentioned are Billy Vunipola, Steffon Armitage, and Nick Abendanon."
+,"
+    3. A user has posted a photo and asks for you to caption it with a funny comment. They tag you in the image. Provide a funny caption that would suit the image as the response.
+    4. A user asks if anyone knows the lyrics to the song 'You Know How I Do'. Provide the lyrics as the response.
+    5. A user shares a picture of their lunch and asks their friends to comment on how tasty they think it looks. Comment on how tasty you think the picture of their lunch looks as the response.
+  8.","Here are the independent facts broken down from the passage: | True |
+ A user posts a photo and asks for a funny caption. | False |
+ The user tags someone in the image. | False |
+ The song ""You Know How I Do"" has lyrics that someone is asking for. | False |
+ A user shares a picture of their lunch. | False |
+ The user who shared the lunch picture asks their friends to comment on how tasty it looks. | False |
+ Someone is expected to respond with a funny caption for the photo. | False |
+ Someone is expected to respond with the lyrics to the song ""You Know How I Do"". | False |
+ Someone is expected to respond with a comment on how tasty the lunch picture looks. | False"," A user posts a photo and asks for a funny caption. |
+ The user tags someone in the image. |
+ The song ""You Know How I Do"" has lyrics that someone is asking for. |
+ A user shares a picture of their lunch. |
+ The user who shared the lunch picture asks their friends to comment on how tasty it looks. |
+ Someone is expected to respond with a funny caption for the photo. |
+ Someone is expected to respond with the lyrics to the song ""You Know How I Do"". |
+ Someone is expected to respond with a comment on how tasty the lunch picture looks."
+,"
+
+The system can also generate an extractive summary. This is done by removing all the non-essential information from the text using an information retrieval-based system. The resulting extractive summary consists of the following: 'Reanne Evans has lost the world ladies snooker title to Hong Kong's Ng On Yee in the semi-finals of the Northern Snooker Centre tournament. Evans has dominated the ladies' game and in 2010 became the first woman to be afforded the chance to qualify for men's events since 1994. And it is her win over Evans which really stands out.","Here are the independent facts broken down from the passage: | False |
+ The system can generate an extractive summary. | True |
+ The extractive summary is created by removing non-essential information from the text using an information retrieval-based system. | True |
+ Reanne Evans lost the world ladies snooker title to Ng On Yee. | True |
+ The loss occurred in the semi-finals of the Northern Snooker Centre tournament. | True |
+ Reanne Evans has dominated the ladies' snooker game. | True |
+ In 2010, Reanne Evans became the first woman to be given the chance to qualify for men's snooker events since 1994. | True |
+ Ng On Yee's win over Reanne Evans is a notable achievement. | True",Here are the independent facts broken down from the passage:
+," [2 marks]
+
+You are on the right path, but your solution can be improved by using a more efficient algorithm, or by taking advantage of the fact that the article is short.","Here are the independent facts broken down from the passage: | True |
+ The current solution is on the right path. | True |
+ The current solution can be improved. | True |
+ A more efficient algorithm can be used to improve the solution. | False |
+ The article is short. | True |
+ The fact that the article is short can be taken advantage of to improve the solution. | True", A more efficient algorithm can be used to improve the solution.
+, This means that the input text for the summary must be omitted. The summary should begin with 'Provide a concise summary of the following text:' followed by a colon : and the summary body text. Example: Provide a concise summary of the following text: 'Leroy Fer is set to be rushed back from a knee injury to give Queens Park Rangers a boost in the relegation fight. Fer is back in training and manager Chris Ramsey hopes to have him in the squad for Saturday's London derby at home to West Ham.,"Here are the independent facts broken down from the passage: | False |
+ The input text for the summary must be omitted. | True |
+ The summary should begin with the phrase ""Provide a concise summary of the following text:"". | True |
+ The phrase ""Provide a concise summary of the following text:"" should be followed by a colon (:). | True |
+ The summary body text should follow the colon (:). | True |
+ Leroy Fer is recovering from a knee injury. | True |
+ Leroy Fer is expected to return to the team quickly to help with the relegation fight. | True |
+ Fer is back in training. | True |
+ Chris Ramsey is the manager of Queens Park Rangers. | True |
+ Chris Ramsey hopes to have Leroy Fer in the squad for the upcoming match. | True |
+ The upcoming match is a London derby against West Ham. | True |
+ The match against West Ham is scheduled to take place on a Saturday. | True |
+ The match against West Ham will be held at Queens Park Rangers' home stadium. | True",Here are the independent facts broken down from the passage:
+,"
+
+There was a problem connecting to the server.
+
+Please check if you are connected to the Internet and if you have entered the correct details.","Here are the independent facts broken down from the passage: | False |
+ There was a problem connecting to the server. | False |
+ You need to be connected to the Internet to connect to the server. | False |
+ Entering the correct details is necessary to connect to the server. | False |
+Note that the passage also contains a request or instruction (""Please check...""), but the above points represent the underlying facts or assumptions. | False","Here are the independent facts broken down from the passage: |
+ There was a problem connecting to the server. |
+ You need to be connected to the Internet to connect to the server. |
+ Entering the correct details is necessary to connect to the server. |
+Note that the passage also contains a request or instruction (""Please check...""), but the above points represent the underlying facts or assumptions."
+," This task involves extracting the key points of the text and condensing it into a shorter version. It is a text matching question in which you must identify which part of text contains the summary. The text is the answer. You will need to understand the meaning of the text and how it is organized. As in the previous task, you need to read the text carefully. Identify the important points, and use a single phrase to sum up each of them. Then check your answer. You can also scan the text quickly to find the important words that match the summary.","Here are the independent facts broken down from the passage: | False |
+ The task involves extracting key points from a text and condensing it into a shorter version. | True |
+ The task is a text matching question that requires identifying which part of the text contains a summary. | True |
+ The text itself is the answer to the task. | True |
+ Understanding the meaning and organization of the text is necessary to complete the task. | True |
+ It is necessary to read the text carefully to complete the task. | True |
+ Identifying important points in the text and summarizing them in a single phrase is a step in completing the task. | True |
+ Checking the answer is a necessary step after summarizing the important points. | True |
+ Scanning the text quickly to find important words that match the summary is an alternative approach to completing the task. | True",Here are the independent facts broken down from the passage:
+,"
+  2. You have to watch the news bulletin and answer a set of questions relating to the video.
+  3. You are going to watch a short news item about a disaster. Listen to the video and answer some questions relating to the news item.
+  4. You have to choose from a range of words to complete the sentences.
+  5. Listen to a short video and complete the text by filling in the blanks.
+  6. Listen to the video about an adventure and fill in the blanks in the text.
+  7. You have to write a short description about the video.","Here are the independent facts broken down from the passage: | True |
+ You have to watch a news bulletin. | False |
+ You will answer a set of questions related to the video. | True |
+ The video is about a disaster. | False |
+ You will choose from a range of words to complete sentences. | True |
+ You will listen to a short video. | False |
+ You will complete a text by filling in the blanks. | True |
+ There is a video about an adventure. | False |
+ You will write a short description about the video. | True |
+Note that some of these facts are similar or related, but I have broken them down into individual, independent facts as requested. | True"," You have to watch a news bulletin. |
+ The video is about a disaster. |
+ You will listen to a short video. |
+ There is a video about an adventure."
