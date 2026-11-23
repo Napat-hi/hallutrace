@@ -219,9 +219,9 @@ python scripts/year_judge_packet.py results/verifier/generations --out outputs/y
 python scripts/bio_year_claims.py results/verifier/generations
 python scripts/bio_conflation.py
 python scripts/bio_conflation.py --select wikidata
+python scripts/bio_counts.py merge
 # the subsample check -> results/subsample_check/
 python scripts/subsample_check.py --force
-python scripts/bio_counts.py merge
 # the generation run, and the generation plan (from data/prompts.csv, which scripts/draw_sample.py writes)
 python scripts/validate_generations.py results/generations
 python scripts/build_generation_plan.py
