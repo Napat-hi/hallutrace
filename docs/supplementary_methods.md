@@ -228,7 +228,8 @@ within 100 characters of the name, within 40 characters after a cue such as "bor
 or in a lifespan. On a blind hand check of 60 pilot snippets, the rule's weighted precision on
 correct years is 0.93 (`results/counting_pilot/`). n_c is the number of documents that state the
 person's Wikidata year, n_h the number that state the slot's most frequent wrong year (ties to
-the earliest), and rho = n_h / (n_h + n_c); for a sampled name the counts are estimated
+the earliest; only years from claims the Biographies verifier called hallucinated are searched,
+which leaves out 18 of the 1,851 year claims Wikidata marks wrong), and rho = n_h / (n_h + n_c); for a sampled name the counts are estimated
 mentions. A sampled pool with no match is unknown, never 0 (`results/bio_counts/merged/`).
 
 **Tau.** For each model, tau is the 10th percentile of n_c over the correct years of Historical
@@ -249,7 +250,8 @@ Wikidata year; silent samples are left out, and the greedy pass is not used. A s
 states the Wikidata year is right even if it also states another year. A slot is S1 if any
 sample is right. Otherwise c is the share of wrong samples that state the most frequent wrong
 year: S2 if c >= 0.8, S3 below. c needs at least two wrong samples, so a slot with one wrong
-sample is a single mention. S2 is rare but not chance: a slot's first two wrong samples state
+sample is a single mention. S2 is rare, but wrong years repeat within a slot more often than
+across slots: a slot's first two wrong samples state
 exactly the same years in 12 of the 220 S2 and S3 slots (5.5%), against 1.03% (120 of 11,652 pairs)
 when the first wrong sample of each slot is paired with the second wrong sample of every other
 S2 or S3 slot of the same model and kind (`scripts/s2_agreement.py`,
