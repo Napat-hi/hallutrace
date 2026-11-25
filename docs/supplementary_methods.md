@@ -235,15 +235,16 @@ never 0 (`results/bio_counts/merged/`). An unknown count for a birth year is tak
 when an exact phrase search (such as "{name} was born in {year}") finds that year
 (`results/slot_types/untyped_phrase.csv`).
 
-**Tau.** For each model, tau is the 10th percentile of n_c over the correct years of Historical
-Events with n_c > 0, counted in documents and fixed before labelling: one document for OLMo 2,
+**Tau.** For each model, tau is the 10th percentile of n_c over the reference years in Historical
+Events' metadata with n_c > 0, counted in documents and fixed before labelling: one document for OLMo 2,
 DCLM-7B and OLMo 1.7, two for RedPajama-INCITE and three for Pythia
 (`results/slot_types/he_tau.csv`). The sweep from the 5th to the 20th percentile and Biographies'
 own tau are checks (`results/intervention_points/labels_sweep.csv`, `labels_bio_tau.csv`).
 
 **Types.** Both in data (n_h > 0, n_c > 0, split at rho = 0.5), Wrong in data (n_h > 0,
 n_c = 0), Fabrication (n_h = n_c = 0), Long tail (n_h = 0, 0 < n_c <= tau) and Recall failure
-(n_h = 0, n_c > tau). When n_c > 0 is counted but n_h is unknown, the slot gets a merged type:
+(n_h = 0, n_c > tau). When every Wikidata year of the slot is counted, n_c > 0 and n_h is unknown,
+the slot gets a merged type:
 Both in data (rho < 0.5) or the type that n_h = 0 would give. Any other slot with an unknown
 count is untyped. The three types that trace a wrong year to another source (conflation,
 misattribution and overgeneralisation) are not assigned.
