@@ -95,6 +95,48 @@ eq((out["observed"]["claims"], out["inputs"]["namesake_years_fetched_at"]), (40,
    "results and the fetch date of the namesake years")
 check(os.path.exists(os.path.join(d, "out_candidates.csv")), "the candidates file next to it")
 
+print("6. the Wikidata-only selection")
+cs = [claim("A", 1901, namesakes="QA1"),                                   # in both
+      claim("A", 1800, match="True", namesakes="QA1"),                     # own year: in neither
+      claim("A", 1960, kind="death", label="supported", namesakes="QA1"),  # wrong by Wikidata, marked supported: enters
+      claim("B", 1950, namesakes=""),                                      # no namesakes: in neither
+      claim("C", 1700, match="", namesakes="QC1 QC2", own_years="")]       # no Wikidata year: leaves
+ents = {"QA1": {"p569": [1901], "p570": [1960]}, "QC1": {"p569": [1700]}, "QC2": {"p570": [1777]}}
+eq([(c["name"], c["stated_years"]) for c in bc.population(cs)], [("A", "1901"), ("C", "1700")],
+   "the default selection is unchanged")
+eq([(c["name"], c["stated_years"]) for c in bc.population(cs, "wikidata")], [("A", "1901"), ("A", "1960")],
+   "wikidata: match False whatever the label; no Wikidata year is out")
+eq([(r["change"], r["name"], r["label"], r["namesake_hit"]) for r in bc.selection_diff(cs, ents)],
+   [("enters", "A", "supported", True), ("leaves", "C", "hallucinated", True)], "the claims that enter and leave, with why")
+try:
+    bc.population(cs, "other")
+    check(False, "an unknown selection is refused")
+except ValueError:
+    check(True, "an unknown selection is refused")
+eq([r["name"] for r in bc.candidates(cs, ents, select="wikidata")], ["A", "A"], "candidates follow the selection")
+ents40 = {"Q%02d" % i: {"p569": [1700 + 5 * i]} for i in range(40)}
+eq(bc.test(planted, ents40, n_perm=200, seed=7, select="wikidata"), bc.test(planted, ents40, n_perm=200, seed=7),
+   "the same claims in both selections: the same result, so the same permutations")
+with open(os.path.join(d, "claims6.csv"), "w", encoding="utf-8", newline="") as f:
+    w = csv.DictWriter(f, fieldnames=list(planted[0]))
+    w.writeheader()
+    w.writerows(planted + [claim("N00", 1999, match="", namesakes="Q00", own_years=""),
+                           claim("N01", 1705, label="supported", namesakes="Q01")])
+with open(os.path.join(d, "ns6.json"), "w", encoding="utf-8") as f:
+    json.dump({"fetched_at": "2026-10-04T00:00:00+00:00", "entities": ents40}, f)
+with redirect_stdout(io.StringIO()):
+    code = cli.main(["--claims", os.path.join(d, "claims6.csv"), "--namesake-years", os.path.join(d, "ns6.json"),
+                     "--out", os.path.join(d, "wd.json"), "--n-perm", "200", "--select", "wikidata"])
+out6 = json.load(open(os.path.join(d, "wd.json"), encoding="utf-8"))
+eq((code, out6["population"]["claims"], out6["observed"]["claims"]), (0, 41, 41),
+   "--select wikidata: the 40 planted and the supported wrong year")
+s6 = out6["selection"]
+eq((s6["verifier_selection_claims"], s6["enter"], s6["enter_hits"], s6["leave"], s6["leave_hits"]), (41, 1, 1, 1, 0),
+   "the selection block counts what entered and left")
+check(os.path.exists(os.path.join(d, "wd_selection_diff.csv")) and os.path.exists(os.path.join(d, "wd_candidates.csv")),
+      "the selection diff and candidates files next to it")
+check("selection" not in out, "the default output has no selection block")
+
 print()
 if failures:
     print("%d FAILED" % len(failures))

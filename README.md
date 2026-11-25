@@ -4,7 +4,7 @@ Code, data and supplementary material for **HalluTrace**, which estimates where 
 an open language model most likely starts: the training data, the training process or
 inference, with the knowledge boundary (the corpus holds neither fact) counted on its own. The
 paper studies one error whose answer and corpus evidence can both be checked: wrong birth and
-death years in biographies, judged against Wikidata. The pipeline runs eight HALoGEN tasks (3,200 prompts) on five 7B-scale models whose pretraining
+death years in biographies, checked exactly against Wikidata. The pipeline runs eight HALoGEN tasks (3,200 prompts) on five 7B-scale models whose pretraining
 corpora are searchable (OLMo 2, DCLM, OLMo 1.7, RedPajama-INCITE and Pythia), with one greedy and
 five sampled answers per prompt, checks each task's verifier against human labels, and counts the
 wrong and the correct fact in each model's own corpus.
@@ -13,7 +13,8 @@ Paper: AIESC 2027.
 
 ## Status
 
-This is the release the paper cites, tagged `aiesc2027-submission`. It holds:
+This is the release the camera-ready paper cites, tagged `aiesc-2027`. The version cited by the
+submitted paper is tagged `aiesc2027-submission`. This release holds:
 
 - the code for every stage, with its tests;
 - the sampled prompt ids and seeds, and the generation plan (seeds, batches, settings);
@@ -54,6 +55,7 @@ with the patches in `patches/` applied, and the prompts are referenced by id.
 | `scripts/agreement.py`, `hallutrace/agreement.py` | Agreement: annotator kappa, verifier kappa or extractor accuracy against gold, confusion matrices, intervals and the adjudication file |
 | `scripts/hand_decomposition_score.py`, `hallutrace/hand_decomposition_score.py` | The hand decomposition check: the decomposer's atoms against a person's, precision, recall and F1 |
 | `scripts/stability.py`, `hallutrace/stability.py` | h per item over the five samples on all eight tasks, and the regime per Biographies birth and death year |
+| `scripts/subsample_check.py`, `hallutrace/subsample.py`, `results/subsample_check/` | The regimes recomputed on every subset of three or four samples and on five plus the greedy pass, the held-out sample and the held-out greedy pass, and exact year matches against a chance baseline |
 | `hallutrace/claim_key.py`, `hallutrace/relations.py`, `data/relation_vocabulary.json` | When two differently worded claims are one claim, the relation vocabulary loader, and the vocabulary itself: 30 relations with synonyms and Wikidata properties |
 | `scripts/fetch_windows.py`, `hallutrace/fetch_names.py`, `hallutrace/fetch_sampling.py`, `hallutrace/infinigram.py` | The infini-gram search: query strings from prompt names, which occurrences to download, and the rate-limited client with its window cache (corpus text, kept local and never released) |
 | `hallutrace/fact_match.py`, `hallutrace/pilot_counts.py`, `scripts/pilot_counts.py`, `scripts/pilot_rule_check.py` | Year matching in a window, counts of correct birth and death years near a name, and the check of the counting rule |
@@ -61,10 +63,11 @@ with the patches in `patches/` applied, and the prompts are referenced by id.
 | `results/counting_pilot/pilot_counts.csv`, `pilot_summary.md`, `pilot_packet_strata.csv`, `pilot_precision.md`, `pilot_rule_check.md` | The 20-name counting pilot: correct-year counts per name, fact, corpus and matcher (7,200 rows) with a summary, the strata the 60 hand-labelled matches were drawn from, the precision of those matches, and the check of the chosen counting rule (precision 0.93). Rebuilt from a clean clone of this repository |
 | `scripts/build_alias_table.py`, `data/alias_table.json`, `data/alias_overrides.json`, `data/alias_build/` | Prompt names to Wikidata items: the snapshot, the hand overrides and the table built from both |
 | `scripts/bio_year_claims.py`, `hallutrace/bio_years.py`, `scripts/fetch_namesake_years.py` | Biographies birth and death year claims judged against Wikidata, with the years of each name's namesakes |
-| `scripts/bio_conflation.py`, `hallutrace/bio_conflation.py` | Whether wrong years come from a namesake, against two chance baselines |
+| `scripts/bio_conflation.py`, `hallutrace/bio_conflation.py` | Whether wrong years come from a namesake, against two chance baselines; `--select wikidata` takes the claims wrong by Wikidata alone, with no verifier label |
 | `scripts/bio_counts.py`, `hallutrace/bio_counts.py` | Biographies corpus counts per fetch shard, the merge's checks, and tau per model |
 | `results/bio_year_claims.csv`, `results/bio_year_claims_summary.json` | Every Biographies birth and death year claim, with the Wikidata year and the namesake check |
 | `results/bio_conflation.json`, `results/bio_conflation_candidates.csv` | The namesake test: observed matches against both chance baselines, and the candidate claims |
+| `results/bio_conflation_wikidata_only.json`, `_candidates.csv`, `_selection_diff.csv` | The same test on the claims wrong by Wikidata alone (the paper's figures), and the claims that enter or leave against the verifier-label selection |
 | `results/bio_other_person_sample.csv` | 50 wrong-year claims checked by hand for whether the year belongs to someone else |
 | `results/bio_counts/` | Corpus counts per fetch shard (`shard_<i>_of_3/`, numbers only) and the merge of all three (`merged/`: the counts, tau per model and the run's checks) |
 | `scripts/he_tau.py`, `hallutrace/he_tau.py`, `results/slot_types/he_tau.csv` | Historical-events tau per model, at every cutoff from the 5th to the 20th percentile |
@@ -124,6 +127,8 @@ pipeline figure as Fig. 1 and F5 as Fig. 2.
 | Corpus counts | Correct and wrong year counts per name in each model's corpus, and tau per model | `results/bio_counts/merged/` (Biographies), `results/slot_types/he_counts.csv` and `he_tau.csv` (Historical Events) |
 | Deviations | Every change to HALoGEN's released code | `docs/DEVIATIONS.md` |
 | S2 check | A slot's first two wrong samples agree, against a chance baseline | `results/supplementary/s2_agreement.json` (`scripts/s2_agreement.py`) |
+| Subsample check | The share at inference on every subset of three or four samples, and the left-out fifth sample | `results/subsample_check/subsets.csv`, `held_out_sample.csv` (`scripts/subsample_check.py`) |
+| Namesake check | Wrong years that match a namesake's year, against chance, on the claims wrong by Wikidata | `results/bio_conflation_wikidata_only.json` (`scripts/bio_conflation.py --select wikidata`) |
 | Methods | Sample, models, generation, reproducibility, verification, attribution (types, regimes, the point rule and the five fragility checks behind confidence) and compute in full | `docs/supplementary_methods.md` |
 
 **Quarantined tasks.** Each task's verifier was checked against 50 human-labelled units before
@@ -144,7 +149,9 @@ are quarantined, so the h of each appears only here, with its gate number beside
 
 The Biographies year claims behind T5 and F5 are judged by Wikidata, not by the Biographies
 verifier, and that judge was checked separately: kappa 0.79 (0.64 to 0.92), tentative
-(`annotation/verifier_check/biographies_years/agreement.json`).
+(`annotation/verifier_check/biographies_years/agreement.json`). The verifier's label enters in
+one place: wrong years are searched for n_h only in claims it called hallucinated, which leaves
+out 18 of the 1,851 year claims Wikidata marks wrong.
 
 ## Setup
 
@@ -211,7 +218,10 @@ python scripts/year_judge_packet.py results/verifier/generations --out outputs/y
 # Biographies year claims, the namesake test and the merged corpus counts -> results/
 python scripts/bio_year_claims.py results/verifier/generations
 python scripts/bio_conflation.py
+python scripts/bio_conflation.py --select wikidata
 python scripts/bio_counts.py merge
+# the subsample check -> results/subsample_check/
+python scripts/subsample_check.py --force
 # the generation run, and the generation plan (from data/prompts.csv, which scripts/draw_sample.py writes)
 python scripts/validate_generations.py results/generations
 python scripts/build_generation_plan.py

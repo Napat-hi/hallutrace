@@ -24,6 +24,13 @@ Verdict: "excess over chance" only when both p values are at most ALPHA. Otherwi
 distinguishable from chance". The excess over each baseline's
 mean is reported either way, as a lower bound on CONFLATION among these claims; nothing
 here sees the corpus.
+
+Selection: the default population, "verifier", takes its claims by the Biographies
+verifier's `hallucinated` label, so it keeps hallucinated claims with no Wikidata year to
+compare and leaves out wrong years the verifier marked `supported`. "wikidata" uses no
+verifier label: every claim whose stated year is not the person's Wikidata year
+(`wikidata_match` False), whatever its label. Names, namesake sets, baselines and seed are
+the same for both, so the permutations drawn are the same too.
 """
 from __future__ import annotations
 
@@ -35,10 +42,19 @@ N_PERM = 10000
 SEED = 20261004
 OFFSETS = tuple(d for d in range(-10, 11) if d)
 ALPHA = 0.05
+SELECTIONS = ("verifier", "wikidata")
 
 
-def population(claims: Iterable[dict]) -> List[dict]:
-    """Hallucinated claims with a wrong year, from names that have namesakes."""
+def population(claims: Iterable[dict], select: str = "verifier") -> List[dict]:
+    """Claims with a wrong year, from names that have namesakes.
+
+    "verifier": labelled hallucinated and not the person's own year (no Wikidata year stays in).
+    "wikidata": wrong by Wikidata alone (`wikidata_match` False), whatever the verifier's label.
+    """
+    if select not in SELECTIONS:
+        raise ValueError("select must be one of %s" % (SELECTIONS,))
+    if select == "wikidata":
+        return [c for c in claims if c["wikidata_match"] == "False" and c["namesake_qids"].strip()]
     return [c for c in claims
             if c["label"] == "hallucinated" and c["wikidata_match"] != "True" and c["namesake_qids"].strip()]
 
@@ -79,9 +95,10 @@ def _quantile(sorted_vals: List[int], q: float) -> int:
     return sorted_vals[min(len(sorted_vals) - 1, int(q * len(sorted_vals)))]
 
 
-def test(claims: Iterable[dict], entities: dict, n_perm: int = N_PERM, seed: int = SEED) -> dict:
+def test(claims: Iterable[dict], entities: dict, n_perm: int = N_PERM, seed: int = SEED,
+         select: str = "verifier") -> dict:
     claims = list(claims)
-    pop = population(claims)
+    pop = population(claims, select)
     sets = namesake_sets(claims)
     names = sorted(sets)
     observed = count_hits(pop, sets, entities)
@@ -112,10 +129,32 @@ def test(claims: Iterable[dict], entities: dict, n_perm: int = N_PERM, seed: int
     }
 
 
-def candidates(claims: Iterable[dict], entities: dict) -> List[dict]:
+def selection_diff(claims: Iterable[dict], entities: dict) -> List[dict]:
+    """The claims in one selection and not the other, one row each, with why and whether it hits."""
+    claims = list(claims)
+    sets = namesake_sets(claims)
+    ver = {id(c) for c in population(claims, "verifier")}
+    wd = {id(c) for c in population(claims, "wikidata")}
+    out = []
+    for c in claims:
+        if (id(c) in ver) == (id(c) in wd):
+            continue
+        if id(c) in wd:
+            change, why = "enters", "wrong by Wikidata, verifier label %s" % c["label"]
+        else:
+            change, why = "leaves", "labelled hallucinated, no Wikidata year to compare"
+        out.append({"change": change, "why": why, "name": c["name"], "kind": c["kind"],
+                    "label": c["label"], "stated_years": c["stated_years"], "own_qid": c["own_qid"],
+                    "own_years": c["wikidata_years"], "wikidata_match": c["wikidata_match"],
+                    "namesake_hit": hit(c, sets[c["name"]], entities),
+                    "model": c["model"], "generation_id": c["generation_id"], "atom": c["atom"]})
+    return out
+
+
+def candidates(claims: Iterable[dict], entities: dict, select: str = "verifier") -> List[dict]:
     """The observed hits, one row per claim, with the namesakes it matched."""
     out = []
-    for c in population(claims):
+    for c in population(claims, select):
         qids = [q for q in c["namesake_qids"].split() if hit(c, [q], entities)]
         if qids:
             out.append({"name": c["name"], "kind": c["kind"], "stated_years": c["stated_years"],

@@ -222,37 +222,44 @@ Wikidata (`results/bio_year_claims.csv`). A **year slot** is one model's birth o
 one Biographies prompt.
 
 **Corpus counts.** A slot's years are counted in the model's own pretraining corpus with
-infini-gram, over an 800-token window around every mention of the person; a name with more
-than 200 mentions is sampled to 50 windows. A document counts for a year when the year lies
-within 100 characters of the name, within 40 characters after a cue such as "born" or "died",
-or in a lifespan. On a blind hand check of 60 pilot snippets, the rule's weighted precision on
-correct years is 0.93 (`results/counting_pilot/`). n_c is the number of documents that state the
+infini-gram, over an 800-token window around every mention of the person; a name with more than
+200 mentions is sampled to 50 windows. A document counts for a year when the year lies within
+100 characters of the name, within 40 characters after a cue such as "born" or "died", or in a
+lifespan. On a blind hand check of 60 pilot snippets, the rule's weighted precision on correct
+years is 0.93 (`results/counting_pilot/`). n_c is the number of documents that state the
 person's Wikidata year, n_h the number that state the slot's most frequent wrong year (ties to
-the earliest), and rho = n_h / (n_h + n_c); for a sampled name the counts are estimated
-mentions. A sampled pool with no match is unknown, never 0 (`results/bio_counts/merged/`).
+the earliest; only years from claims the Biographies verifier called hallucinated are searched,
+which leaves out 18 of the 1,851 year claims Wikidata marks wrong), and rho = n_h / (n_h + n_c);
+for a sampled name the counts are estimated mentions. A sampled pool with no match is unknown,
+never 0 (`results/bio_counts/merged/`). An unknown count for a birth year is taken as above 0
+when an exact phrase search (such as "{name} was born in {year}") finds that year
+(`results/slot_types/untyped_phrase.csv`).
 
-**Tau.** For each model, tau is the 10th percentile of n_c over the correct years of Historical
-Events with n_c > 0, counted in documents and fixed before labelling: one document for OLMo 2,
+**Tau.** For each model, tau is the 10th percentile of n_c over the reference years in Historical
+Events' metadata with n_c > 0, counted in documents and fixed before labelling: one document for OLMo 2,
 DCLM-7B and OLMo 1.7, two for RedPajama-INCITE and three for Pythia
 (`results/slot_types/he_tau.csv`). The sweep from the 5th to the 20th percentile and Biographies'
 own tau are checks (`results/intervention_points/labels_sweep.csv`, `labels_bio_tau.csv`).
 
 **Types.** Both in data (n_h > 0, n_c > 0, split at rho = 0.5), Wrong in data (n_h > 0,
 n_c = 0), Fabrication (n_h = n_c = 0), Long tail (n_h = 0, 0 < n_c <= tau) and Recall failure
-(n_h = 0, n_c > tau). When n_c > 0 is counted but n_h is unknown, the slot gets a merged type:
+(n_h = 0, n_c > tau). When every Wikidata year of the slot is counted, n_c > 0 and n_h is unknown,
+the slot gets a merged type:
 Both in data (rho < 0.5) or the type that n_h = 0 would give. Any other slot with an unknown
 count is untyped. The three types that trace a wrong year to another source (conflation,
 misattribution and overgeneralisation) are not assigned.
 
 **Regimes.** Each of a slot's five sampled generations is right, wrong or silent against the
-Wikidata year; silent samples are left out, and the greedy pass is not used. A sample that
-states the Wikidata year is right even if it also states another year. A slot is S1 if any
-sample is right. Otherwise c is the share of wrong samples that state the most frequent wrong
-year: S2 if c >= 0.8, S3 below. c needs at least two wrong samples, so a slot with one wrong
-sample is a single mention. S2 is rare but not chance: a slot's first two wrong samples state
-exactly the same years in 12 of the 220 S2 and S3 slots (5.5%), against 1.03% (120 of 11,652 pairs)
-when the first wrong sample of each slot is paired with the second wrong sample of every other
-S2 or S3 slot of the same model and kind (`scripts/s2_agreement.py`,
+Wikidata year (where Wikidata gives two years of one kind, either counts); silent samples are
+left out, and the greedy pass is not used. A sample that states the Wikidata year is right even
+if it also states another year. A slot is S1 if any sample is right, so the count of S1 slots is
+a lower bound on the slots where the model can produce the right year. Otherwise c is the share
+of wrong samples that state the most frequent wrong year: S2 if c >= 0.8, S3 below. c needs at
+least two wrong samples, so a slot with one wrong sample is a single mention. S2 is rare, but
+wrong years repeat within a slot more often than across slots: a slot's first two wrong samples
+state exactly the same years in 12 of the 220 S2 and S3 slots (5.5%), against 1.03% (120 of
+11,652 pairs) when the first wrong sample of each slot is paired with the second wrong sample of
+every other S2 or S3 slot of the same model and kind (`scripts/s2_agreement.py`,
 `results/supplementary/s2_agreement.json`).
 
 **Intervention points.** The 175 of 233 S1 slots that never state a wrong year get no point.
